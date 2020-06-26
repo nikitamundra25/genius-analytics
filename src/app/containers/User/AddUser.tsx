@@ -1,26 +1,35 @@
-import React, { Component } from 'react';
-import { Button, Card, Row, Col, Form, InputGroup } from 'react-bootstrap';
-import { connect } from 'react-redux';
-import { Dispatch } from 'redux';
-import { IAddUserState, IAddUserProps, IRootState, IUserData } from '../../../interfaces';
-import { AppRoutes } from '../../../config';
-import { addUserRequest, userInfoRequest, updateUserRequest } from '../../../actions';
-import { userValidator } from '../../../validator';
+import React, { Component } from "react";
+import { Button, Card, Row, Col, Form, InputGroup } from "react-bootstrap";
+import { connect } from "react-redux";
+import { Dispatch } from "redux";
+import {
+  IAddUserState,
+  IAddUserProps,
+  IRootState,
+  IUserData,
+} from "../../../interfaces";
+import { AppRoutes } from "../../../config";
+import {
+  addUserRequest,
+  userInfoRequest,
+  updateUserRequest,
+} from "../../../actions";
+import { userValidator } from "../../../validator";
 
 class AddUser extends Component<IAddUserProps, IAddUserState> {
   constructor(props: IAddUserProps) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
+      firstName: "",
+      lastName: "",
+      email: "",
       errors: {
-        firstName: '',
-        lastName: '',
-        email: '',
+        firstName: "",
+        lastName: "",
+        email: "",
       },
       isEditable: false,
-      id: '',
+      id: "",
     };
   }
 
@@ -40,18 +49,13 @@ class AddUser extends Component<IAddUserProps, IAddUserState> {
       this.props.userReducer.userInfo
     ) {
       const { userInfo } = this.props.userReducer;
-      const {
-        firstName,
-        lastName,
-        email,
-        _id,
-      } = userInfo;
+      const { firstName, lastName, email, _id } = userInfo;
 
       this.setState({
         firstName,
         lastName,
         email,
-        id:_id ? _id : '',
+        id: _id ? _id : "",
       });
     }
   };
@@ -63,7 +67,7 @@ class AddUser extends Component<IAddUserProps, IAddUserState> {
       [name]: value,
       errors: {
         ...this.state.errors,
-        [name]: '',
+        [name]: "",
       },
     });
   };
@@ -71,20 +75,14 @@ class AddUser extends Component<IAddUserProps, IAddUserState> {
   handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const { location } = this.props;
-    const { state } = location;
-    const {
-      firstName,
-      lastName,
-      email,
-      isEditable,
-      id,
-    } = this.state;
+    const { state }: any = location;
+    const { firstName, lastName, email, isEditable, id } = this.state;
 
     const data = {
       firstName,
       lastName,
-      email: email ? email.trim().toLowerCase() : '',
-      _id:id,
+      email: email ? email.trim().toLowerCase() : "",
+      _id: id,
     };
 
     // To validate form fields
@@ -93,7 +91,10 @@ class AddUser extends Component<IAddUserProps, IAddUserState> {
     });
     if (isValid) {
       if (isEditable) {
-        this.props.updateUser({ ...data, currentPage: state && state.currentPage ? state.currentPage : 1, });
+        this.props.updateUser({
+          ...data,
+          currentPage: state && state.currentPage ? state.currentPage : 1,
+        });
       } else {
         this.props.addUser(data);
       }
@@ -106,13 +107,7 @@ class AddUser extends Component<IAddUserProps, IAddUserState> {
   };
 
   render() {
-    const {
-      firstName,
-      lastName,
-      email,
-      errors,
-      isEditable,
-    } = this.state;
+    const { firstName, lastName, email, errors, isEditable } = this.state;
 
     return (
       <div className='cr-page px-3 min-height650 my-profile-section'>
@@ -122,7 +117,7 @@ class AddUser extends Component<IAddUserProps, IAddUserState> {
               <Card.Header>
                 <h4>
                   <i className='icon-note' />
-                  &nbsp;{!isEditable ? 'Add' : 'Update'} User
+                  &nbsp;{!isEditable ? "Add" : "Update"} User
                 </h4>
               </Card.Header>
               <Card.Body>
@@ -131,60 +126,60 @@ class AddUser extends Component<IAddUserProps, IAddUserState> {
                     <Form onSubmit={this.handleSubmit} className='row'>
                       <Form.Group className='col-sm-6'>
                         <Form.Label className='floating-label'>
-                          First Name<span className={'mandatory'}>*</span>
+                          First Name<span className={"mandatory"}>*</span>
                           &nbsp;
                         </Form.Label>
                         <InputGroup>
                           <input
-                            type={'text'}
-                            name={'firstName'}
+                            type={"text"}
+                            name={"firstName"}
                             value={firstName}
-                            className={'form-control floating-input'}
-                            placeholder={' '}
+                            className={"form-control floating-input"}
+                            placeholder={" "}
                             onChange={this.handleChange}
                           />
                         </InputGroup>
-                        <div className={'text-danger error-text'}>
+                        <div className={"text-danger error-text"}>
                           {errors && errors.firstName}
                         </div>
                       </Form.Group>
 
                       <Form.Group className='col-sm-6'>
                         <Form.Label className='floating-label'>
-                          Last Name<span className={'mandatory '}>*</span>
+                          Last Name<span className={"mandatory "}>*</span>
                           &nbsp;
                         </Form.Label>
                         <InputGroup>
                           <input
-                            type={'text'}
-                            name={'lastName'}
+                            type={"text"}
+                            name={"lastName"}
                             value={lastName}
-                            className={'form-control floating-input'}
-                            placeholder={' '}
+                            className={"form-control floating-input"}
+                            placeholder={" "}
                             onChange={this.handleChange}
                           />
                         </InputGroup>
-                        <div className={'text-danger error-text'}>
+                        <div className={"text-danger error-text"}>
                           {errors && errors.lastName}
                         </div>
                       </Form.Group>
 
                       <Form.Group className='col-sm-6'>
                         <Form.Label className='floating-label'>
-                          Email Address<span className={'mandatory'}>*</span>
+                          Email Address<span className={"mandatory"}>*</span>
                           &nbsp;
                         </Form.Label>
                         <InputGroup>
                           <input
-                            type={'text'}
-                            name={'email'}
+                            type={"text"}
+                            name={"email"}
                             value={email}
-                            className={'form-control floating-input'}
-                            placeholder={' '}
+                            className={"form-control floating-input"}
+                            placeholder={" "}
                             onChange={this.handleChange}
                           />
                         </InputGroup>
-                        <div className={'text-danger error-text'}>
+                        <div className={"text-danger error-text"}>
                           {errors && errors.email}
                         </div>
                       </Form.Group>
@@ -194,18 +189,16 @@ class AddUser extends Component<IAddUserProps, IAddUserState> {
                           className='btn btn-cancel'
                           onClick={() => {
                             this.props.history.push(AppRoutes.USER);
-                          }}
-                        >
-                          {' '}
+                          }}>
+                          {" "}
                           Cancel
                         </Button>
                         &nbsp;
                         <Button
                           variant='link'
-                          type={'submit'}
-                          className=' btn-submit'
-                        >
-                          {!isEditable ? 'Save' : 'Update'}
+                          type={"submit"}
+                          className=' btn-submit'>
+                          {!isEditable ? "Save" : "Update"}
                         </Button>
                       </Col>
                     </Form>
@@ -238,7 +231,4 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(AddUser);
+export default connect(mapStateToProps, mapDispatchToProps)(AddUser);
