@@ -3,7 +3,7 @@ const express = require("express"),
   http = require("http"),
   path = require("path");
 
-app.use(express.static(path.join(__dirname, "dist")));
+app.use(express.static(path.join(__dirname, "build")));
 
 app.use("/", (req, res) =>
   res.sendFile(path.join(__dirname, "build", "index.html"))
