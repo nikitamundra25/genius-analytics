@@ -5,34 +5,34 @@ export default {
     {
       name: "Dashboard",
       url: AppRoutes.HOME,
-      icon: "fa fa-dashboard"
+      icon: "icon-home"
     },
     {
-      name: "Users",
-      icon: "fa fa-users",
+      name: "Pickup",
+      icon: "icon-briefcase",
       url: AppRoutes.USER
     },
     {
-      name: "Email Templates",
-      icon: "fa fa-envelope",
+      name: "Charts",
+      icon: "icon-pie-chart",
       url: AppRoutes.EMAILTEMPLATE
     },
-    {
-      name: "Content management",
-      icon: "icon-grid",
-      url: AppRoutes.ADD_HOME_PAGE,
-      children: [
-        {
-          name: "Home Page",
-          url: AppRoutes.ADD_HOME_PAGE,
-          icon: "icon-home"
-        }, 
-        {
-          name: "FAQ",
-          url: AppRoutes.ADD_HOME_PAGE,
-          icon: "icon-home"
-        }
-      ]
-    }
+    // {
+    //   name: "Content management",
+    //   icon: "icon-grid",
+    //   url: AppRoutes.ADD_HOME_PAGE,
+    //   children: [
+    //     {
+    //       name: "Home Page",
+    //       url: AppRoutes.ADD_HOME_PAGE,
+    //       icon: "icon-home"
+    //     }, 
+    //     {
+    //       name: "FAQ",
+    //       url: AppRoutes.ADD_HOME_PAGE,
+    //       icon: "icon-home"
+    //     }
+    //   ]
+    // }
   ]
 };

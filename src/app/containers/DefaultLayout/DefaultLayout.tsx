@@ -43,30 +43,7 @@ class DefaultLayout extends Component<
     };
   }
 
-  componentDidMount() {
-    console.log('gggggggggggggggggggggggggggg');
-    console.log(localStorage.getItem('token'));
-    if (!localStorage.getItem('token')) {
-      console.log('ggggggggggggggggg');
-      this.props.redirectTo({ path: AppRoutes.LOGIN });
-    } else {
-      console.log('fdfgjdfjgdskfj');
-      this.props.profileInfo();
-    }
-  }
-
-  componentDidUpdate = async (prevProps: RouteComponentProps) => {
-    const { location } = this.props;
-    const { pathname } = location;
-    const { profileInfoReducer } = this.props;
-    if (
-      prevProps.location.pathname !== pathname &&
-      profileInfoReducer &&
-      localStorage.getItem('token')
-    ) {
-      this.props.profileInfo();
-    }
-  };
+ 
 
   render() {
     return (
@@ -77,7 +54,7 @@ class DefaultLayout extends Component<
           </Suspense>
         </AppHeader>
         <div className='app-body'>
-          <AppSidebar fixed display='lg'>
+          <AppSidebar fixed minimized display='lg' >
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense fallback={<Loader />}>
@@ -87,7 +64,7 @@ class DefaultLayout extends Component<
             <AppSidebarMinimizer />
           </AppSidebar>
           <main className='main'>
-            <AppBreadcrumb appRoutes={routes} />
+            {/* <AppBreadcrumb appRoutes={routes} /> */}
             <Container fluid>
               <Suspense fallback={<Loader />}>
                 <Switch>
