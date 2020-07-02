@@ -597,7 +597,7 @@ class HomeComponent extends Component<any, any> {
       </Col>
       <Col  xs={12} md={7}>
         <div className="main-title">Key Business Metrics</div>
-        <Row>
+        <Row className="row-inner">
           <Col  xs={12} md={3}>
             <Card >
               <Card.Header>
@@ -715,7 +715,7 @@ class HomeComponent extends Component<any, any> {
 
       <Col  xs={12} md={5}>
         <div className="main-title">Pick up Since Yesterday</div>
-      <Row>
+      <Row className="row-inner">
           <Col  xs={12} md={4}>
             <Card >
               <Card.Header>

@@ -10,12 +10,12 @@ export default {
     {
       name: "Pickup",
       icon: "icon-briefcase",
-      url: AppRoutes.HOME,
+      url: "#",
     },
     {
       name: "Charts",
       icon: "icon-pie-chart",
-      url: AppRoutes.HOME,
+      url: "#",
     },
     // {
     //   name: "Content management",

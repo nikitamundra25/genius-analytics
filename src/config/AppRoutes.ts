@@ -5,7 +5,7 @@ export const AppRoutes: IAppRoutes = {
   LOGIN: '/login',
   HOME: '/dashboard',
   MY_PROFILE: '/my-profile',
-  USER: '/user',
+  USER: '#',
   ADD_USER: '/user/add',
   EDIT_USER: '/user/edit/:id',
   EMAILTEMPLATE: '/email-template',
