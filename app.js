@@ -6,10 +6,10 @@ const express = require("express"),
 app.use(express.static(path.join(__dirname, "dist")));
 
 app.use("/", (req, res) =>
-  res.sendFile(path.join(__dirname, "dist", "index.html"))
+  res.sendFile(path.join(__dirname, "build", "index.html"))
 );
 app.use("/*", (req, res) =>
-  res.sendFile(path.join(__dirname, "dist", "index.html"))
+  res.sendFile(path.join(__dirname, "build", "index.html"))
 );
 
 const server = http.createServer(app);
