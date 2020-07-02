@@ -24,7 +24,9 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
   }
-
+  .cursor-pointer{
+    cursor: pointer;
+  }
   .app-header{
     box-shadow: 0 4px 20px 0 rgba(0,0,0,.05);
     border-bottom: 0px;
@@ -125,10 +127,10 @@ body {
       color: #626262;
       // display: flex;
       // align-items: center;
-      padding: 16px 16px;
+      padding: 14px 16px;
       font-size: 15px;
       .nav-icon{
-        font-size: 18px;
+        font-size: 16px;
       }
       &.active{
         color: $white;
@@ -165,24 +167,24 @@ body {
       &.sidebar-minimized{
         &.sidebar-fixed {
           .sidebar{
-            width: 100px;
+            width: 90px;
           }
           .app-footer{
             
-            width: calc(100% - 105px);
+            width: calc(100% - 95px);
           }
         }
       }
       &.sidebar-minimized{
           .sidebar{
             .sidebar-nav{
-              width: 100px;
+              width: 90px;
             }
             .nav{
-              width: 100px;
+              width: 90px;
             }
             .nav-item{
-              width: 100px;
+              width: 90px;
               &:hover{
                 width: 270px;
                 overflow: visible;
@@ -196,13 +198,13 @@ body {
             .nav-link {
               margin: 0px 20px;
               .nav-icon {
-                width: 60px;
+                width: 50px;
                 margin-right: 20px;
               }
             }
             .sidebar-minimizer {
               background-color: $theme-color;
-              width: 100px;
+              width: 90px;
             }
           }
         
@@ -248,10 +250,13 @@ body {
 
 .main-title{
   font-weight: 500;
-  color: #2c2c2c;
+  color: #ffffff;
   font-size: 18px;
- text-align:center;
-margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  background: $theme-color;
+  padding: 4px 0px;
+  border-radius: 5px;
 }
   
   
@@ -262,11 +267,11 @@ margin-bottom: 20px;
   
 }
 html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .main, html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .app-footer, html:not([dir="rtl"]) .sidebar-show.sidebar-fixed.sidebar-minimized .main, html:not([dir="rtl"]) .sidebar-show.sidebar-fixed.sidebar-minimized .app-footer {
-  margin-left: 100px;
+  margin-left: 90px;
 }
 @media (min-width: 992px){
   html:not([dir="rtl"]) .sidebar-minimized .sidebar {
-    margin-left: -100px;
+    margin-left: -90px;
   }
   html:not([dir="rtl"]) .sidebar-lg-show .sidebar, html:not([dir="rtl"]) .sidebar-show .sidebar {
     margin-left: 0;

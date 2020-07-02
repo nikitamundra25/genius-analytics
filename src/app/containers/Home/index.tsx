@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-import { Card, Col, Row, Table } from "react-bootstrap";
+import { Card, Col, Row, Table, Form } from "react-bootstrap";
 // import { Pie, Line, } from 'react-chartjs-2';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import {
-  ResponsiveContainer, PieChart, Pie, Legend, ReferenceLine, Cell, Tooltip,   BarChart, Bar, XAxis, YAxis, CartesianGrid,
+  ResponsiveContainer, PieChart, Pie, Legend, ReferenceLine, Cell, Tooltip,   BarChart, Bar, XAxis, YAxis, CartesianGrid, LineChart, Line, AreaChart, Area,ComposedChart, Scatter,
 } from 'recharts';
+
+
+
 
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
@@ -381,6 +384,75 @@ class HomeComponent extends Component<any, any> {
         }],
     };
 
+    const linedata = [
+      {
+        name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
+      },
+      {
+        name: 'Page B', uv: 3000, pv: 1398, amt: 2210,
+      },
+      {
+        name: 'Page C', uv: 2000, pv: 9800, amt: 2290,
+      },
+      {
+        name: 'Page D', uv: 2780, pv: 3908, amt: 2000,
+      },
+      {
+        name: 'Page E', uv: 1890, pv: 4800, amt: 2181,
+      },
+      {
+        name: 'Page F', uv: 2390, pv: 3800, amt: 2500,
+      },
+      {
+        name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
+      },
+    ];
+
+    const areadata = [
+      {
+        name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
+      },
+      {
+        name: 'Page B', uv: 3000, pv: 1398, amt: 2210,
+      },
+      {
+        name: 'Page C', uv: 2000, pv: 9800, amt: 2290,
+      },
+      {
+        name: 'Page D', uv: 2780, pv: 3908, amt: 2000,
+      },
+      {
+        name: 'Page E', uv: 1890, pv: 4800, amt: 2181,
+      },
+      {
+        name: 'Page F', uv: 2390, pv: 3800, amt: 2500,
+      },
+      {
+        name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
+      },
+    ];
+
+    const compdata = [
+      {
+        name: 'Page A', uv: 590, pv: 800, amt: 1400, cnt: 490,
+      },
+      {
+        name: 'Page B', uv: 868, pv: 967, amt: 1506, cnt: 590,
+      },
+      {
+        name: 'Page C', uv: 1397, pv: 1098, amt: 989, cnt: 350,
+      },
+      {
+        name: 'Page D', uv: 1480, pv: 1200, amt: 1228, cnt: 480,
+      },
+      {
+        name: 'Page E', uv: 1520, pv: 1108, amt: 1100, cnt: 460,
+      },
+      {
+        name: 'Page F', uv: 1400, pv: 680, amt: 1700, cnt: 380,
+      },
+    ];
+
     return (
       <div className="animated fadeIn">
         <Row>
@@ -420,13 +492,21 @@ class HomeComponent extends Component<any, any> {
 
               <Col  xs={12} md={5}>
         <Card >
-          <Card.Header>
+          <Card.Header className="d-flex align-items-center justify-content-between">
             <Card.Title>Business on the Books</Card.Title>
+            <Form.Check 
+              type="switch"
+              id="custom-switch"
+              label=""
+              className="cursor-pointer"
+            />
           </Card.Header>
           <Card.Body>
           {/* <Table striped bordered hover>
           <thead>
             <tr>
+              <th></th>
+              <th></th>
               <th></th>
               <th></th>
               <th></th>
@@ -439,25 +519,79 @@ class HomeComponent extends Component<any, any> {
               <th>LY</th>
               <th>STLY</th>
               <th>Vs.BUD</th>
+              <th>Vs.LY</th>
+              <th>Vs.STLY</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-             
+              <td>Room Nights</td>
+              <td>3454</td>
+              <td>43543</td>
+              <td>54345</td>
+              <td>43543</td>
+              <td>15</td>
+              <td>-25</td>
+              <td>55</td>
             </tr>
             <tr>
-              <td>2</td>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
+              <td>OCC</td>
+              <td>3454</td>
+              <td>43543</td>
+              <td>54345</td>
+              <td>43543</td>
+              <td>15</td>
+              <td>-25</td>
+              <td>55</td>
             </tr>
             <tr>
-              <td>3</td>
-              <td >Larry the Bird</td>
-              <td>@twitter</td>
+              <td>Revenue</td>
+              <td>3454</td>
+              <td>43543</td>
+              <td>54345</td>
+              <td>43543</td>
+              <td>15</td>
+              <td>-25</td>
+              <td>55</td>
+            </tr>
+            <tr>
+              <td>ADR</td>
+              <td>3454</td>
+              <td>43543</td>
+              <td>54345</td>
+              <td>43543</td>
+              <td>15</td>
+              <td>-25</td>
+              <td>55</td>
+            </tr>
+            <tr>
+              <td>RevPar</td>
+              <td>3454</td>
+              <td>43543</td>
+              <td>54345</td>
+              <td>43543</td>
+              <td>15</td>
+              <td>-25</td>
+              <td>55</td>
             </tr>
           </tbody>
         </Table> */}
+         <LineChart
+        width={500}
+        height={300}
+        data={linedata}
+        margin={{
+          top: 5, right: 30, left: 20, bottom: 5,
+        }}
+      >
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
+        <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+      </LineChart>
           </Card.Body>
         </Card>
       </Col>
@@ -511,7 +645,7 @@ class HomeComponent extends Component<any, any> {
                   
                   barSize={20}
                 >
-                  <CartesianGrid strokeDasharray="1 1" />
+                  {/* <CartesianGrid strokeDasharray="1 1" /> */}
                   <XAxis type="number"/>
                   <YAxis type="category" dataKey="name" />
                   <Tooltip />
@@ -538,7 +672,7 @@ class HomeComponent extends Component<any, any> {
                   
                   barSize={20}
                 >
-                  <CartesianGrid strokeDasharray="1 1" />
+                  {/* <CartesianGrid strokeDasharray="1 1" /> */}
                   <XAxis type="number"/>
                   <YAxis type="category" dataKey="name" />
                   <Tooltip />
@@ -565,7 +699,7 @@ class HomeComponent extends Component<any, any> {
                   
                   barSize={20}
                 >
-                  <CartesianGrid strokeDasharray="1 1" />
+                  {/* <CartesianGrid strokeDasharray="1 1" /> */}
                   <XAxis type="number"/>
                   <YAxis type="category" dataKey="name" />
                   <Tooltip />
@@ -673,7 +807,7 @@ class HomeComponent extends Component<any, any> {
       </Col>
       <Col  xs={12} md={7}>
         <Row>
-          <Col  xs={12} md={6}>
+          {/* <Col  xs={12} md={6}>
             <Card >
               <Card.Header>
                 <Card.Title>Occupacy Statics</Card.Title>
@@ -681,13 +815,35 @@ class HomeComponent extends Component<any, any> {
               <Card.Body>
               </Card.Body>
             </Card>
-          </Col>
-          <Col  xs={12} md={6}>
+          </Col> */}
+          <Col  xs={12} md={12}>
             <Card >
               <Card.Header>
                 <Card.Title>Occupacy Statics</Card.Title>
               </Card.Header>
               <Card.Body>
+              <div style={{ width: '100%', height: 300 }}>
+                  <ResponsiveContainer>
+              <ComposedChart
+        // width={500}
+        height={300}
+        data={compdata}
+        // margin={{
+        //   top: 20, right: 20, bottom: 20, left: 20,
+        // }}
+      >
+        <CartesianGrid stroke="#f5f5f5" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
+        <Bar dataKey="pv" barSize={20} fill="#413ea0" />
+        <Line type="monotone" dataKey="uv" stroke="#ff7300" />
+        {/* <Scatter dataKey="cnt" fill="red" /> */}
+      </ComposedChart>
+      </ResponsiveContainer>
+      </div>
               </Card.Body>
             </Card>
           </Col>
@@ -817,6 +973,24 @@ class HomeComponent extends Component<any, any> {
             <Card.Title>Room Type Statics</Card.Title>
           </Card.Header>
           <Card.Body>
+          <div style={{ width: '100%', height: 300 }}>
+                  <ResponsiveContainer>
+          <AreaChart
+        // width={500}
+        // height={400}
+        data={areadata}
+        // margin={{
+        //   top: 10, right: 30, left: 0, bottom: 0,
+        // }}
+      >
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+      </AreaChart>
+      </ResponsiveContainer>
+      </div>
           </Card.Body>
         </Card>
       </Col>
@@ -828,6 +1002,26 @@ class HomeComponent extends Component<any, any> {
                 <Card.Title>MTD RGI Performance</Card.Title>
               </Card.Header>
               <Card.Body>
+              <div style={{ width: '100%', height: 300 }}>
+                  <ResponsiveContainer>
+              <BarChart
+                  width={400}
+                  height={300}
+                  data={RevenueYsdata}
+                  
+                  barSize={20}
+                >
+                  {/* <CartesianGrid strokeDasharray="3 3" /> */}
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  
+                  <ReferenceLine y={0} stroke="#000" />
+                
+                  <Bar dataKey="uv" fill="#f47926" />
+                </BarChart>
+                </ResponsiveContainer>
+                </div>
               </Card.Body>
             </Card>
           </Col>
@@ -837,6 +1031,26 @@ class HomeComponent extends Component<any, any> {
                 <Card.Title>RGI YoY Variance</Card.Title>
               </Card.Header>
               <Card.Body>
+              <div style={{ width: '100%', height: 300 }}>
+                  <ResponsiveContainer>
+              <BarChart
+                  width={400}
+                  height={300}
+                  data={RevenueYsdata}
+                  
+                  barSize={20}
+                >
+                  {/* <CartesianGrid strokeDasharray="3 3" /> */}
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  
+                  <ReferenceLine y={0} stroke="#000" />
+                
+                  <Bar dataKey="uv" fill="#f47926" />
+                </BarChart>
+                </ResponsiveContainer>
+                </div>
               </Card.Body>
             </Card>
           </Col>
@@ -863,7 +1077,7 @@ class HomeComponent extends Component<any, any> {
 
            
 
-            <Col  xs={12} md={4}>
+            {/* <Col  xs={12} md={4}>
               <Card >
                 <Card.Header>
                   <Card.Title>RGI YoY Variance</Card.Title>
@@ -878,7 +1092,7 @@ class HomeComponent extends Component<any, any> {
                   barSize={20}
                   layout="vertical"
                 >
-                  {/* <CartesianGrid strokeDasharray="3 3" /> */}
+                  
                  
                   <Tooltip />
                   
@@ -889,7 +1103,7 @@ class HomeComponent extends Component<any, any> {
                  
                 </Card.Body>
               </Card>
-            </Col>
+            </Col> */}
            
         </Row>
       </div>

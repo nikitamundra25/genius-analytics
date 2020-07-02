@@ -37,11 +37,11 @@ class DefaultHeader extends Component<
         <AppSidebarToggler className='d-md-down-none' display='lg' />
         <Nav className='ml-auto navbar-nav' navbar-nav>
           
-          <Nav.Link href="#link"><span className="icon"><i className="icon-magnifier"/></span></Nav.Link>
+          {/* <Nav.Link href="#link"><span className="icon"><i className="icon-magnifier"/></span></Nav.Link>
           <Nav.Link href="#home">
             <span className="icon"><i className="icon-bell"/></span>
             <span className="count">2</span>
-          </Nav.Link>
+          </Nav.Link> */}
           <Dropdown className="user-dropdown">
           <Dropdown.Toggle variant="success" id="dropdown-basic1">
             <div className="user-info">
@@ -52,7 +52,7 @@ class DefaultHeader extends Component<
 
           <Dropdown.Menu>
               <Dropdown.Item>
-                  <Link to={AppRoutes.MY_PROFILE}>
+                  <Link to={AppRoutes.HOME}>
                     <i className='fa fa-user' /> Profile
                   </Link>
               </Dropdown.Item>
