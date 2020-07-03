@@ -268,7 +268,31 @@ body {
   padding: 4px 0px;
   border-radius: 5px;
 }
-  
+
+.action-wrap{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  .action-btn{
+    width:35px;
+    height:35px;
+    border-radius: 4px;
+    background:$white;
+    border:1px solid #242424;
+    color:#242424;
+    cursor:pointer;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+    font-size: 16px;
+    transition: all 0.3s ease-in;
+    &.active{
+      background:#242424;
+      color:$white;
+    }
+  }
+}
   
 
   

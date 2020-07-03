@@ -4,9 +4,9 @@ import { Card, Col, Row, Table, Form } from "react-bootstrap";
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import {
-  ResponsiveContainer, PieChart, Pie, Legend, ReferenceLine, Cell, Tooltip,   BarChart, Bar, XAxis, YAxis, CartesianGrid, LineChart, Line, AreaChart, Area,ComposedChart, Scatter,
+  ResponsiveContainer, PieChart, Pie, Legend, ReferenceLine, Cell, Tooltip,   BarChart, Bar, XAxis, YAxis, CartesianGrid, LineChart, Line, AreaChart, Area,ComposedChart, Scatter,LabelList
 } from 'recharts';
-
+import './index.scss';
 
 
 
@@ -112,6 +112,53 @@ const options = {
       y: 2.61
     }]
   }]
+};
+
+const stackchart ={
+  chart: {
+    type: 'bar'
+},
+title: {
+    text: 'OCC'
+},
+xAxis: {
+    categories: ['BOB', 'BUD', 'LY', 'STLY'],
+    title:false,
+    
+},
+yAxis: {
+    min: 0,
+    stackLabels: {
+      enabled: true,
+      style: {
+          fontWeight: 'bold',
+          color:'gray',
+      },
+  }
+    
+},
+
+legend: {
+    reversed: true,
+    enabled: false
+ 
+},
+plotOptions: {
+    series: {
+        stacking: 'normal'
+    },
+    column: {
+      stacking: 'normal',
+      dataLabels: {
+          enabled: true
+      }
+    }
+},
+series: [ {
+    name: 'Joe',
+    data: [76.1, 67.8, 61.0, 71.0]
+}]
+
 };
 
 const OCCdata = [
@@ -231,6 +278,50 @@ const RevenueYsdata = [
   },
   {
     name: 'GROUPS', uv: -1.4, 
+  },
+  
+];
+
+const Businessdata = [
+  {
+    name: 'FIT', uv: 14, 
+  },
+  {
+    name: 'Leisure Group', uv: 13, 
+  },
+  {
+    name: 'Cor Group', uv: 8, 
+  },
+  {
+    name: 'Corporate', uv: 15, 
+  },
+  {
+    name: 'Discount', uv: 27, 
+  },
+  {
+    name: 'BAR', uv: 23, 
+  },
+  
+];
+
+const BusinessADRdata = [
+  {
+    name: 'FIT', uv: 111.00, 
+  },
+  {
+    name: 'Leisure Group', uv: 115.00, 
+  },
+  {
+    name: 'Cor Group', uv: 132.33, 
+  },
+  {
+    name: 'Corporate', uv: 144.32, 
+  },
+  {
+    name: 'Discount', uv: 127.32, 
+  },
+  {
+    name: 'BAR', uv: 150.55, 
   },
   
 ];
@@ -434,24 +525,95 @@ class HomeComponent extends Component<any, any> {
 
     const compdata = [
       {
-        name: 'Page A', uv: 590, pv: 800, amt: 1400, cnt: 490,
+        name: 'Midweek OCC', TY: 73, LY: 71, Var: 73,
       },
       {
-        name: 'Page B', uv: 868, pv: 967, amt: 1506, cnt: 590,
+        name: 'Weekend OCC', TY: 65, LY: 73, Var: 11,
       },
       {
-        name: 'Page C', uv: 1397, pv: 1098, amt: 989, cnt: 350,
+        name: 'Total OCC', TY: 69, LY: 72, Var: 43,
       },
-      {
-        name: 'Page D', uv: 1480, pv: 1200, amt: 1228, cnt: 480,
-      },
-      {
-        name: 'Page E', uv: 1520, pv: 1108, amt: 1100, cnt: 460,
-      },
-      {
-        name: 'Page F', uv: 1400, pv: 680, amt: 1700, cnt: 380,
-      },
+      
     ];
+
+    const compdata1 = [ 
+      {
+        name: 'Mon', OCCTY: 50, OCCLY: 64, ADRLY: 185, ADRTY: 195,
+      },
+      {
+        name: 'Tue', OCCTY: 88, OCCLY: 80, ADRLY: 202,  ADRTY: 207, 
+      },
+      {
+        name: 'Wed', OCCTY: 74, OCCLY: 76, ADRLY: 184,  ADRTY: 194,
+      },
+      {
+        name: 'Thu', OCCTY: 68, OCCLY: 73, ADRLY: 176, ADRTY: 196,
+      },
+      {
+        name: 'Fri', OCCTY: 67, OCCLY: 64, ADRLY: 155, ADRTY: 156,
+      },
+      {
+        name: 'Sat', OCCTY: 74, OCCLY: 76, ADRLY: 143, ADRTY: 150,
+      },
+      {
+        name: 'Sun', OCCTY: 63, OCCLY: 43, ADRLY: 157, ADRTY: 172,
+      },
+      {
+        name: 'Total', OCCTY: 45, OCCLY: 69, ADRLY: 170, ADRTY: 175,
+      },
+      
+    ];
+
+    const compdata2 = [ 
+      {
+        name: '0BRM', OCCTY: 50, OCCLY: 64, ADRLY: 134, ADRTY: 111,
+      },
+      {
+        name: '1BRM', OCCTY: 88, OCCLY: 80, ADRLY: 157,  ADRTY: 169, 
+      },
+      {
+        name: '2BRM', OCCTY: 74, OCCLY: 76, ADRLY: 257,  ADRTY: 231,
+      },
+      
+      
+    ];
+
+    const combi = {
+      title: {
+        text: 'Combination chart'
+    },
+    xAxis: {
+        categories: ['Mon', 'Tue', 'Wed', 'thu', 'Fri', 'Sat', 'Sun', 'Total']
+    },
+    labels: {
+        items: [{
+            html: 'Total fruit consumption',
+            style: {
+                left: '50px',
+                top: '18px',
+                color: 'black'
+            }
+        }]
+    },
+    series: [{
+        type: 'column',
+        name: 'OCC TY',
+        data: [50, 88, 74, 68, 67, 74, 43, 65]
+    }, {
+        type: 'column',
+        name: 'OCC LY',
+        data: [64, 80, 76, 73, 64, 76, 43, 69]
+    }, {
+        type: 'spline',
+        name: 'Average',
+        data: [3, 2.67, 3, 6.33, 3.33],
+        marker: {
+            lineWidth: 2,
+            lineColor: 'red',
+            fillColor: 'white'
+        }
+    }]
+    };
 
     return (
       <div className="animated fadeIn">
@@ -490,93 +652,91 @@ class HomeComponent extends Component<any, any> {
               </Col> */}
 
 
-              <Col  xs={12} md={5}>
+              <Col  xs={12} md={6}>
         <Card >
           <Card.Header className="d-flex align-items-center justify-content-between">
             <Card.Title>Business on the Books</Card.Title>
-            <Form.Check 
-              type="switch"
-              id="custom-switch"
-              label=""
-              className="cursor-pointer"
-            />
+            <div className="action-wrap">
+              <div className="action-btn active"><span className="icon-grid"></span></div>
+              <div className="action-btn"><span className="icon-pie-chart"></span></div>
+            </div>
           </Card.Header>
           <Card.Body>
-          {/* <Table striped bordered hover>
+          <Table  className="business-table">
           <thead>
-            <tr>
+            <tr className="business-top-row">
               <th></th>
               <th></th>
               <th></th>
               <th></th>
               <th></th>
-              <th colSpan={3}>VARIANCES</th>
+              <th colSpan={3} className="variance-col">VARIANCES</th>
             </tr>
             <tr>
               <th></th>
-              <th>BOB</th>
-              <th>BUDGET</th>
-              <th>LY</th>
-              <th>STLY</th>
-              <th>Vs.BUD</th>
-              <th>Vs.LY</th>
-              <th>Vs.STLY</th>
+              <th className="head-col">BOB</th>
+              <th className="head-col">BUDGET</th>
+              <th className="head-col">LY</th>
+              <th className="head-col">STLY</th>
+              <th className="head-col">Vs.BUD</th>
+              <th className="head-col">Vs.LY</th>
+              <th className="head-col">Vs.STLY</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Room Nights</td>
-              <td>3454</td>
-              <td>43543</td>
-              <td>54345</td>
-              <td>43543</td>
-              <td>15</td>
-              <td>-25</td>
-              <td>55</td>
+              <td className="title-col">Room Nights</td>
+              <td className="content-col">3454</td>
+              <td className="content-col">43543</td>
+              <td className="content-col">54345</td>
+              <td className="content-col">43543</td>
+              <td className="content-col bg-2">15</td>
+              <td className="content-col bg-2 text-danger">-25</td>
+              <td className="content-col bg-2">55</td>
+            </tr>
+            <tr >
+              <td  className="title-col">OCC</td>
+              <td className="content-col">3454</td>
+              <td className="content-col">43543</td>
+              <td className="content-col">54345</td>
+              <td className="content-col">43543</td>
+              <td className="content-col bg-2">15</td>
+              <td className="content-col bg-2 text-danger">-25</td>
+              <td className="content-col bg-2">55</td>
             </tr>
             <tr>
-              <td>OCC</td>
-              <td>3454</td>
-              <td>43543</td>
-              <td>54345</td>
-              <td>43543</td>
-              <td>15</td>
-              <td>-25</td>
-              <td>55</td>
+              <td  className="title-col">Revenue</td>
+              <td className="content-col">3454</td>
+              <td className="content-col">43543</td>
+              <td className="content-col">54345</td>
+              <td className="content-col">43543</td>
+              <td className="content-col bg-2">15</td>
+              <td className="content-col bg-2 text-danger">-25</td>
+              <td className="content-col bg-2">55</td>
             </tr>
             <tr>
-              <td>Revenue</td>
-              <td>3454</td>
-              <td>43543</td>
-              <td>54345</td>
-              <td>43543</td>
-              <td>15</td>
-              <td>-25</td>
-              <td>55</td>
+              <td  className="title-col">ADR</td>
+              <td className="content-col">3454</td>
+              <td className="content-col">43543</td>
+              <td className="content-col">54345</td>
+              <td className="content-col">43543</td>
+              <td className="content-col bg-2">15</td>
+              <td className="content-col bg-2 text-danger">-25</td>
+              <td className="content-col bg-2">55</td>
             </tr>
             <tr>
-              <td>ADR</td>
-              <td>3454</td>
-              <td>43543</td>
-              <td>54345</td>
-              <td>43543</td>
-              <td>15</td>
-              <td>-25</td>
-              <td>55</td>
-            </tr>
-            <tr>
-              <td>RevPar</td>
-              <td>3454</td>
-              <td>43543</td>
-              <td>54345</td>
-              <td>43543</td>
-              <td>15</td>
-              <td>-25</td>
-              <td>55</td>
+              <td  className="title-col">RevPar</td>
+              <td className="content-col">3454</td>
+              <td className="content-col">43543</td>
+              <td className="content-col">54345</td>
+              <td className="content-col">43543</td>
+              <td className="content-col bg-2">15</td>
+              <td className="content-col bg-2 text-danger">-25</td>
+              <td className="content-col bg-2">55</td>
             </tr>
           </tbody>
-        </Table> */}
-         <LineChart
+        </Table>
+         {/* <LineChart
         width={500}
         height={300}
         data={linedata}
@@ -591,11 +751,11 @@ class HomeComponent extends Component<any, any> {
         <Legend />
         <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
         <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-      </LineChart>
+      </LineChart> */}
           </Card.Body>
         </Card>
       </Col>
-      <Col  xs={12} md={7}>
+      <Col  xs={12} md={6}>
         <div className="main-title">Key Business Metrics</div>
         <Row className="row-inner">
           <Col  xs={12} md={3}>
@@ -615,16 +775,19 @@ class HomeComponent extends Component<any, any> {
                   //   top: 5, right: 30, left: 20, bottom: 5,
                   // }}
                   barSize={20}
+                  barCategoryGap={40}
                 >
                   {/* <CartesianGrid strokeDasharray="1 1" /> */}
                   <XAxis type="number"/>
-                  <YAxis type="category" dataKey="name" />
+                <YAxis type="category" dataKey="name" />
                   <Tooltip />
-                  <Bar dataKey="uv" fill="#2e75b7"  />
+                  <Bar dataKey="uv" fill="#2e75b7"  >
+                   
+                  </Bar>
                 </BarChart>
                   </ResponsiveContainer>
-                </div>
-               
+    </div>
+                {/* <HighchartsReact highcharts={Highcharts} options={stackchart} /> */}
               </Card.Body>
             </Card>
           </Col>
@@ -646,7 +809,7 @@ class HomeComponent extends Component<any, any> {
                   barSize={20}
                 >
                   {/* <CartesianGrid strokeDasharray="1 1" /> */}
-                  <XAxis type="number"/>
+                  {/* <XAxis type="number"/> */}
                   <YAxis type="category" dataKey="name" />
                   <Tooltip />
                   <Bar dataKey="uv" fill="#5398d9"  />
@@ -673,7 +836,7 @@ class HomeComponent extends Component<any, any> {
                   barSize={20}
                 >
                   {/* <CartesianGrid strokeDasharray="1 1" /> */}
-                  <XAxis type="number"/>
+                  {/* <XAxis type="number"/> */}
                   <YAxis type="category" dataKey="name" />
                   <Tooltip />
                   <Bar dataKey="uv" fill="#1f4e78"  />
@@ -700,7 +863,7 @@ class HomeComponent extends Component<any, any> {
                   barSize={20}
                 >
                   {/* <CartesianGrid strokeDasharray="1 1" /> */}
-                  <XAxis type="number"/>
+                  {/* <XAxis type="number"/> */}
                   <YAxis type="category" dataKey="name" />
                   <Tooltip />
                   <Bar dataKey="uv" fill="#9dc3e7"  />
@@ -713,27 +876,34 @@ class HomeComponent extends Component<any, any> {
         </Row>
       </Col>
 
-      <Col  xs={12} md={5}>
+      <Col  xs={12} md={12}>
         <div className="main-title">Pick up Since Yesterday</div>
       <Row className="row-inner">
           <Col  xs={12} md={4}>
             <Card >
-              <Card.Header>
+              <Card.Header  className="d-flex align-items-center justify-content-between">
                 <Card.Title>Room Nights</Card.Title>
+                <div className="action-wrap">
+                  <div className="action-btn "><span className="icon-grid"></span></div>
+                  <div className="action-btn active"><span className="icon-pie-chart"></span></div>
+                </div>
               </Card.Header>
               <Card.Body>
-              <div style={{ width: '100%', height: 300 }}>
+                <div className="text-success h3">
+                  <i className="cui-arrow-top "></i> 198
+                </div>
+              <div style={{ width: '100%', height: 200 }}>
                   <ResponsiveContainer>
               <BarChart
                   // width={200}
                   // height={300}
                   data={Roomnightsdata}
                   
-                  barSize={20}
+                  barSize={15}
                 >
                   {/* <CartesianGrid strokeDasharray="3 3" /> */}
                   <XAxis dataKey="name" />
-                  <YAxis />
+                  {/* <YAxis /> */}
                   <Tooltip />
                   
                   <ReferenceLine y={0} stroke="#000" />
@@ -747,10 +917,17 @@ class HomeComponent extends Component<any, any> {
           </Col>
           <Col  xs={12} md={4}>
             <Card >
-              <Card.Header>
+              <Card.Header  className="d-flex align-items-center justify-content-between">
                 <Card.Title>ADR</Card.Title>
+                <div className="action-wrap">
+                  <div className="action-btn "><span className="icon-grid"></span></div>
+                  <div className="action-btn active"><span className="icon-pie-chart"></span></div>
+                </div>
               </Card.Header>
               <Card.Body>
+                <div className="text-danger h3">
+                  <i className="cui-arrow-bottom "></i> 2.6
+                </div>
               <div style={{ width: '100%', height: 300 }}>
                   <ResponsiveContainer>
                 <BarChart
@@ -762,7 +939,7 @@ class HomeComponent extends Component<any, any> {
                 >
                   {/* <CartesianGrid strokeDasharray="3 3" /> */}
                   <XAxis dataKey="name" />
-                  <YAxis />
+                  {/* <YAxis /> */}
                   <Tooltip />
                   
                   <ReferenceLine y={0} stroke="#000" />
@@ -776,10 +953,17 @@ class HomeComponent extends Component<any, any> {
           </Col>
           <Col  xs={12} md={4}>
             <Card >
-              <Card.Header>
+              <Card.Header  className="d-flex align-items-center justify-content-between">
                 <Card.Title>Revenue</Card.Title>
+                <div className="action-wrap">
+                  <div className="action-btn "><span className="icon-grid"></span></div>
+                  <div className="action-btn active"><span className="icon-pie-chart"></span></div>
+                </div>
               </Card.Header>
               <Card.Body>
+              <div className="text-danger h3">
+                  <i className="cui-arrow-bottom"></i> 19.4k
+                </div>
               <div style={{ width: '100%', height: 300 }}>
                   <ResponsiveContainer>
               <BarChart
@@ -791,7 +975,7 @@ class HomeComponent extends Component<any, any> {
                 >
                   {/* <CartesianGrid strokeDasharray="3 3" /> */}
                   <XAxis dataKey="name" />
-                  <YAxis />
+                  {/* <YAxis /> */}
                   <Tooltip />
                   
                   <ReferenceLine y={0} stroke="#000" />
@@ -805,21 +989,53 @@ class HomeComponent extends Component<any, any> {
           </Col>
         </Row>
       </Col>
-      <Col  xs={12} md={7}>
+      <Col  xs={12} md={12}>
         <Row>
-          {/* <Col  xs={12} md={6}>
+          <Col  xs={12} md={6}>
             <Card >
-              <Card.Header>
+              <Card.Header  className="d-flex align-items-center justify-content-between">
                 <Card.Title>Occupacy Statics</Card.Title>
+                <div className="action-wrap">
+                  <div className="action-btn "><span className="icon-grid"></span></div>
+                  <div className="action-btn active"><span className="icon-pie-chart"></span></div>
+                </div>
               </Card.Header>
               <Card.Body>
+              <div style={{ width: '100%', height: 300 }}>
+                  <ResponsiveContainer>
+              <ComposedChart
+        // width={500}
+        height={300}
+        data={compdata1}
+        // margin={{
+        //   top: 20, right: 20, bottom: 20, left: 20,
+        // }}
+      >
+        {/* <CartesianGrid stroke="#f5f5f5" /> */}
+        <XAxis dataKey="name" />
+        {/* <YAxis /> */}
+        <Tooltip />
+        <Legend />
+        {/* <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" /> */}
+        <Bar dataKey="OCCTY" barSize={20} fill="#244d81" padding={{ left: 10, right: 10 }}/>
+        <Bar dataKey="OCCLY" barSize={20} fill="#4f81bc" padding={{ left: 10, right: 10 }}/>
+        <Line type="monotone" dataKey="ADRTY" stroke="#202c47" strokeDasharray="2 2"/>
+        <Line type="monotone" dataKey="ADRLY" stroke="#81cbe8" strokeDasharray="25 10"/>
+        {/* <Scatter dataKey="cnt" fill="red" /> */}
+      </ComposedChart>
+      </ResponsiveContainer>
+      </div>
               </Card.Body>
             </Card>
-          </Col> */}
-          <Col  xs={12} md={12}>
+          </Col>
+          <Col  xs={12} md={6}>
             <Card >
-              <Card.Header>
+              <Card.Header  className="d-flex align-items-center justify-content-between">
                 <Card.Title>Occupacy Statics</Card.Title>
+                <div className="action-wrap">
+                  <div className="action-btn "><span className="icon-grid"></span></div>
+                  <div className="action-btn active"><span className="icon-pie-chart"></span></div>
+                </div>
               </Card.Header>
               <Card.Body>
               <div style={{ width: '100%', height: 300 }}>
@@ -832,14 +1048,16 @@ class HomeComponent extends Component<any, any> {
         //   top: 20, right: 20, bottom: 20, left: 20,
         // }}
       >
-        <CartesianGrid stroke="#f5f5f5" />
+        {/* <CartesianGrid stroke="#f5f5f5" /> */}
         <XAxis dataKey="name" />
-        <YAxis />
+        {/* <YAxis /> */}
         <Tooltip />
         <Legend />
-        <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
-        <Bar dataKey="pv" barSize={20} fill="#413ea0" />
-        <Line type="monotone" dataKey="uv" stroke="#ff7300" />
+        {/* <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" /> */}
+        <Bar dataKey="TY" barSize={20} fill="#8293b1" padding={{ left: 10, right: 10 }}/>
+        <Bar dataKey="LY" barSize={20} fill="#3269aa" padding={{ left: 10, right: 10 }}/>
+        <Line type="monotone" dataKey="Var" stroke="#2f5891" strokeDasharray="5 5"/>
+        {/* <Line type="monotone" dataKey="amt" stroke="#ff7300" strokeDasharray="5 5"/> */}
         {/* <Scatter dataKey="cnt" fill="red" /> */}
       </ComposedChart>
       </ResponsiveContainer>
@@ -851,10 +1069,14 @@ class HomeComponent extends Component<any, any> {
       </Col>
 
 
-      <Col  xs={12} md={5}>
+      <Col  xs={12} md={6}>
         <Card >
-          <Card.Header>
+          <Card.Header  className="d-flex align-items-center justify-content-between">
             <Card.Title>Business Mix</Card.Title>
+            <div className="action-wrap">
+                  <div className="action-btn "><span className="icon-grid"></span></div>
+                  <div className="action-btn active"><span className="icon-pie-chart"></span></div>
+                </div>
           </Card.Header>
           <Card.Body>
             <Row>
@@ -864,12 +1086,12 @@ class HomeComponent extends Component<any, any> {
                   <BarChart
                   // width={200}
                   // height={300}
-                  data={OCCdata}
+                  data={Businessdata}
                   layout="vertical"
                   // margin={{
                   //   top: 5, right: 30, left: 20, bottom: 5,
                   // }}
-                  barSize={20}
+                  barSize={15}
                 >
                   {/* <CartesianGrid strokeDasharray="1 1" /> */}
                   <XAxis type="number"/>
@@ -887,12 +1109,12 @@ class HomeComponent extends Component<any, any> {
                   <BarChart
                   // width={200}
                   // height={300}
-                  data={OCCdata}
+                  data={BusinessADRdata}
                   layout="vertical"
                   // margin={{
                   //   top: 5, right: 30, left: 20, bottom: 5,
                   // }}
-                  barSize={20}
+                  barSize={15}
                 >
                   {/* <CartesianGrid strokeDasharray="1 1" /> */}
                   <XAxis type="number"/>
@@ -907,12 +1129,16 @@ class HomeComponent extends Component<any, any> {
           </Card.Body>
         </Card>
       </Col>
-      <Col  xs={12} md={7}>
+      <Col  xs={12} md={6}>
         <Row>
           <Col  xs={12} md={6}>
             <Card >
-              <Card.Header>
+              <Card.Header  className="d-flex align-items-center justify-content-between">
                 <Card.Title>Booking Channel Mix</Card.Title>
+                <div className="action-wrap">
+                  <div className="action-btn "><span className="icon-grid"></span></div>
+                  <div className="action-btn active"><span className="icon-pie-chart"></span></div>
+                </div>
               </Card.Header>
               <Card.Body>
               <div style={{ width: '100%', height: 300 }}>
@@ -945,8 +1171,12 @@ class HomeComponent extends Component<any, any> {
           </Col>
           <Col  xs={12} md={6}>
             <Card >
-              <Card.Header>
+              <Card.Header  className="d-flex align-items-center justify-content-between">
                 <Card.Title>Geographic Origin of Business</Card.Title>
+                <div className="action-wrap">
+                  <div className="action-btn "><span className="icon-grid"></span></div>
+                  <div className="action-btn active"><span className="icon-pie-chart"></span></div>
+                </div>
               </Card.Header>
               <Card.Body>
                 <div style={{ width: '100%', height: 300 }}>
@@ -969,26 +1199,36 @@ class HomeComponent extends Component<any, any> {
 
       <Col  xs={12} md={5}>
         <Card >
-          <Card.Header>
+          <Card.Header  className="d-flex align-items-center justify-content-between">
             <Card.Title>Room Type Statics</Card.Title>
+            <div className="action-wrap">
+                  <div className="action-btn "><span className="icon-grid"></span></div>
+                  <div className="action-btn active"><span className="icon-pie-chart"></span></div>
+                </div>
           </Card.Header>
           <Card.Body>
           <div style={{ width: '100%', height: 300 }}>
                   <ResponsiveContainer>
-          <AreaChart
+              <ComposedChart
         // width={500}
-        // height={400}
-        data={areadata}
+        height={300}
+        data={compdata2}
         // margin={{
-        //   top: 10, right: 30, left: 0, bottom: 0,
+        //   top: 20, right: 20, bottom: 20, left: 20,
         // }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
+        {/* <CartesianGrid stroke="#f5f5f5" /> */}
         <XAxis dataKey="name" />
-        <YAxis />
+        {/* <YAxis /> */}
         <Tooltip />
-        <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
-      </AreaChart>
+        <Legend />
+        {/* <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" /> */}
+        <Bar dataKey="OCCTY" barSize={20} fill="#a1c6d6" padding={{ left: 10, right: 10 }}/>
+        <Bar dataKey="OCCLY" barSize={20} fill="#65adc5" padding={{ left: 10, right: 10 }}/>
+        <Line type="monotone" dataKey="ADRTY" stroke="#1b4479" />
+        <Line type="monotone" dataKey="ADRLY" stroke="#05234e" strokeDasharray="25 10"/>
+        {/* <Scatter dataKey="cnt" fill="red" /> */}
+      </ComposedChart>
       </ResponsiveContainer>
       </div>
           </Card.Body>
@@ -998,8 +1238,12 @@ class HomeComponent extends Component<any, any> {
         <Row>
           <Col  xs={12} md={6}>
             <Card >
-              <Card.Header>
+              <Card.Header  className="d-flex align-items-center justify-content-between">
                 <Card.Title>MTD RGI Performance</Card.Title>
+                <div className="action-wrap">
+                  <div className="action-btn "><span className="icon-grid"></span></div>
+                  <div className="action-btn active"><span className="icon-pie-chart"></span></div>
+                </div>
               </Card.Header>
               <Card.Body>
               <div style={{ width: '100%', height: 300 }}>
@@ -1027,8 +1271,12 @@ class HomeComponent extends Component<any, any> {
           </Col>
           <Col  xs={12} md={6}>
             <Card >
-              <Card.Header>
+              <Card.Header  className="d-flex align-items-center justify-content-between">
                 <Card.Title>RGI YoY Variance</Card.Title>
+                <div className="action-wrap">
+                  <div className="action-btn "><span className="icon-grid"></span></div>
+                  <div className="action-btn active"><span className="icon-pie-chart"></span></div>
+                </div>
               </Card.Header>
               <Card.Body>
               <div style={{ width: '100%', height: 300 }}>
@@ -1062,13 +1310,36 @@ class HomeComponent extends Component<any, any> {
 
             <Col  xs={12} md={4}>
               <Card >
-                <Card.Header>
+                <Card.Header  className="d-flex align-items-center justify-content-between">
                   <Card.Title>Pick up Since Yesterday</Card.Title>
+                  <div className="action-wrap">
+                  <div className="action-btn "><span className="icon-grid"></span></div>
+                  <div className="action-btn active"><span className="icon-pie-chart"></span></div>
+                </div>
                 </Card.Header>
                 <Card.Body>
                   
                 <div>
-                  <HighchartsReact highcharts={Highcharts} options={options} />
+                  <HighchartsReact highcharts={Highcharts} options={stackchart} />
+                </div>
+                 
+                </Card.Body>
+              </Card>
+            </Col>
+
+            <Col  xs={12} md={4}>
+              <Card >
+                <Card.Header  className="d-flex align-items-center justify-content-between">
+                  <Card.Title>Pick up Since Yesterday</Card.Title>
+                  <div className="action-wrap">
+                  <div className="action-btn "><span className="icon-grid"></span></div>
+                  <div className="action-btn active"><span className="icon-pie-chart"></span></div>
+                </div>
+                </Card.Header>
+                <Card.Body>
+                  
+                <div>
+                  <HighchartsReact highcharts={Highcharts} options={combi} />
                 </div>
                  
                 </Card.Body>

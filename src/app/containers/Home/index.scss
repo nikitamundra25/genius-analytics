@@ -1,1 +1,43 @@
+.business-table{
+  border-collapse: separate;
+  th, td {
+    padding: 6px 4px;
+    border: 0px;
+    font-size:14px;
+    text-align:center;
+   }
+  thead{
+    th{
+      border:0px;
+    }
+    .variance-col{
+      background: #6ea0b7;
+      color:#fff;
+      text-align:center;
+      font-weight: 600;
+    }
+    .head-col{
+      background: #0082b3;
+      text-align:center;
+      color:#fff;
+      font-weight: 500;
+      padding:12px 5px;
+    }
+  }
+  .title-col{
+    background: #6ea0b7;
+    color:#fff;
+    text-align:left;
+    font-weight: 600;
+  }
+  .content-col{
+    background: #e1eef4;
+    color:#000;
+    text-align:center;
+    font-weight: 500;
+    &.bg-2{
+      background: #f7f6f2;
 
+    }
+  }
+}
