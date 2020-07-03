@@ -1,6 +1,6 @@
 import React, { Component, Suspense } from 'react';
 import { Route, Switch, Redirect, RouteComponentProps } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { Container, Dropdown } from 'react-bootstrap';
 import {
   IDefaultLayoutProps,
   IDefaultLayoutState,
@@ -65,7 +65,47 @@ class DefaultLayout extends Component<
           </AppSidebar>
           <main className='main'>
             {/* <AppBreadcrumb appRoutes={routes} /> */}
+
             <Container fluid>
+              <div className="main-navbar">
+                <div className="navbar-nav-item">
+                  <div className="year-nav">
+                    <span className="cursor-pointer"><i className="icon-arrow-left "></i></span>
+                    <span className="mx-3">November</span>
+                    <span className="cursor-pointer"><i className="icon-arrow-right "></i></span>
+                  </div>
+                </div>
+                <div className="navbar-nav-item">
+                  <Dropdown className="year-dropdown common-dropdown">
+                    <Dropdown.Toggle variant="success" id="dropdown-year">
+                      2018
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                      <Dropdown.Item href="#/action-1">2017</Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">2016</Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">2015</Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+              
+                </div>
+                <div className="navbar-nav-item">
+                  <Dropdown className="dashboard-dropdown common-dropdown">
+                  <Dropdown.Toggle variant="success" id="dropdown-dasboard">
+                    Dashboard
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item href="#/action-1">Dashboard</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">Dashboard Monthly</Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">Something Yearly</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+
+                </div>
+              
+              
+              </div>
               <Suspense fallback={<Loader />}>
                 <Switch>
                   {routes.map((route, idx) => {

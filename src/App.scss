@@ -224,7 +224,7 @@ body {
   }
   .app-body{
     .main {
-      margin-top: 40px;
+      margin-top: 0px;
     }
   }
   .app-footer{
@@ -291,6 +291,66 @@ body {
       background:#242424;
       color:$white;
     }
+  }
+}
+.main-navbar{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 20px 0px;
+  .navbar-nav-item{
+    padding-left:20px;
+  }
+  .year-nav{
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.common-dropdown{
+  font-size: 15px;
+    font-weight: 500;
+    &.year-dropdown{
+      .dropdown-toggle {
+        background: #007db9;
+        border-color: #007db9;
+        color: #fff;
+        box-shadow: 2px 2px 4px 0px #1d1d1d47;
+      }
+    }
+    &.dashboard-dropdown{
+      .dropdown-toggle {
+        background: #ffffff;
+        border-color: #ffffff;
+        color: #007db9;
+        box-shadow: 2px 2px 4px 0px #1d1d1d47;
+      }
+    }
+  .dropdown-menu {
+    min-width: 10rem;
+    padding: .5rem 0;
+    border:0px;
+    background:#fff;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+    .dropdown-item {
+      display: block;
+      width: 100%;
+      padding: .35rem 1.5rem;
+      clear: both;
+      font-weight: 400;
+      color: #212529;
+      text-align: inherit;
+      white-space: nowrap;
+      background-color: transparent;
+      border: 0;
+      &:hover, &.active {
+        color: #16181b;
+        text-decoration: none;
+        background-color: #eaf6fb;
+      }
+     }
   }
 }
   
