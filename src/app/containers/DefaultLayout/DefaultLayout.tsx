@@ -1,6 +1,6 @@
 import React, { Component, Suspense } from 'react';
-import { Route, Switch, Redirect, RouteComponentProps } from 'react-router-dom';
-import { Container, Dropdown } from 'react-bootstrap';
+import { Route, Switch, Redirect } from 'react-router-dom';
+import { Container, Dropdown} from 'react-bootstrap';
 import {
   IDefaultLayoutProps,
   IDefaultLayoutState,
@@ -13,7 +13,7 @@ import routes from '../../../routes/routes';
 import navigation from '../../../_nav';
 import Loader from '../../components/Loader/Loader';
 import {
-  AppBreadcrumb,
+  // AppBreadcrumb,
   AppFooter,
   AppHeader,
   AppSidebar,
@@ -26,6 +26,9 @@ import {
 import { profileInfoRequest, redirectTo } from '../../../actions';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
+import logo from './../../../assets/img/logo150.png';
+import logosmall from './../../../assets/img/logosmall.png';
+
 
 const DefaultFooter = React.lazy(() => import('./DefaultFooter'));
 const DefaultHeader = React.lazy(() => import('./DefaultHeader'));
@@ -55,6 +58,15 @@ class DefaultLayout extends Component<
         </AppHeader>
         <div className='app-body'>
           <AppSidebar fixed minimized display='lg' >
+            {/* <div className='brand-logo'>
+                <img src={logo} width={120} alt='' className='main-logo' />
+                <img
+                  src={logosmall}
+                  width={40}
+                  alt=''
+                  className='minimized-logo'
+                />
+              </div> */}
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense fallback={<Loader />}>

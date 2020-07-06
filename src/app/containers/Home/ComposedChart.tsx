@@ -1,25 +1,13 @@
 import React from "react";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card, Col } from "react-bootstrap";
 import {
   ResponsiveContainer,
-  PieChart,
-  Pie,
   Legend,
-  ReferenceLine,
-  Cell,
   Tooltip,
-  BarChart,
   Bar,
   XAxis,
-  YAxis,
-  CartesianGrid,
-  LineChart,
   Line,
-  AreaChart,
-  Area,
   ComposedChart,
-  Scatter,
-  LabelList,
 } from "recharts";
 
 export const ComposedChartComponent = (props: any) => {
