@@ -10,12 +10,12 @@ export default {
     {
       name: "Pickup",
       icon: "icon-briefcase",
-      url: "#",
+      url: '#',
     },
     {
       name: "Charts",
       icon: "icon-pie-chart",
-      url: "#",
+      url: '#',
     },
     // {
     //   name: "Content management",
