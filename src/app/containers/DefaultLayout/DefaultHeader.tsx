@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-import { AppHeaderDropdown, AppSidebarToggler } from '@coreui/react';
+import { AppSidebarToggler } from '@coreui/react';
 import {
   IDefaultHeaderProps,
   IDefaultHeaderState,
   IRootState,
-  IProfileInfo,
 } from '../../../interfaces';
 import { Nav, Dropdown } from 'react-bootstrap';
 import { AppRoutes } from '../../../config';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import UserIcon from '../../../assets/avatars/user-default.svg';
 import logo from './../../../assets/img/logo150.png';
 import { LogOutRequest } from '../../../actions';
 import { Dispatch } from 'redux';
@@ -20,14 +18,14 @@ class DefaultHeader extends Component<
   IDefaultHeaderState
 > {
   render() {
-    let profileInfo: IProfileInfo = {
-      firstName: '',
-      lastName: '',
-      email: '',
-    };
-    if (this.props.profileInfoReducer) {
-      profileInfo = this.props.profileInfoReducer.profileInfo;
-    }
+    // let profileInfo: IProfileInfo = {
+    //   firstName: '',
+    //   lastName: '',
+    //   email: '',
+    // };
+    // if (this.props.profileInfoReducer) {
+    //   profileInfo = this.props.profileInfoReducer.profileInfo;
+    // }
     return (
       <React.Fragment>
         <AppSidebarToggler className='d-lg-none' display='md' mobile />

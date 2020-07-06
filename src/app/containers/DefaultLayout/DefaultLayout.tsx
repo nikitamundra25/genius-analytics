@@ -1,5 +1,5 @@
 import React, { Component, Suspense } from 'react';
-import { Route, Switch, Redirect, RouteComponentProps } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import {
   IDefaultLayoutProps,
@@ -13,7 +13,7 @@ import routes from '../../../routes/routes';
 import navigation from '../../../_nav';
 import Loader from '../../components/Loader/Loader';
 import {
-  AppBreadcrumb,
+  // AppBreadcrumb,
   AppFooter,
   AppHeader,
   AppSidebar,

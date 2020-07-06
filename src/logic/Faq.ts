@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { ApiHelper } from "../helper/ApiHelper";
 import { ApiRoutes, AppRoutes } from "../config";
 import { IRootState } from "../interfaces";
-import { FaqActionTypes, showLoader, hideLoader, getFAQSuccess, getFAQFailed, addFAQSuccess, redirectTo, addFAQFailed, FAQStatusSuccess, FAQInfoSuccess, FAQStatusFailed, getFAQRequest, FAQInfoFailed, updateFAQSuccess, updateFAQFailed } from "../actions";
+import { FaqActionTypes, showLoader, hideLoader, getFAQSuccess, getFAQFailed, addFAQSuccess, redirectTo, addFAQFailed, FAQStatusSuccess, FAQInfoSuccess, FAQStatusFailed, getFAQRequest, updateFAQSuccess, updateFAQFailed } from "../actions";
 
 let toastId: any = null;
 

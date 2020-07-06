@@ -1,34 +1,8 @@
 import React, { Component } from "react";
-import { Card, Col, Row, Table, Form } from "react-bootstrap";
+import {  Col, Row } from "react-bootstrap";
 // import { Pie, Line, } from 'react-chartjs-2';
-import { CustomTooltips } from "@coreui/coreui-plugin-chartjs-custom-tooltips";
-import { getStyle, hexToRgba } from "@coreui/coreui/dist/js/coreui-utilities";
-import {
-  ResponsiveContainer,
-  PieChart,
-  Pie,
-  Legend,
-  ReferenceLine,
-  Cell,
-  Tooltip,
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  LineChart,
-  Line,
-  AreaChart,
-  Area,
-  ComposedChart,
-  Scatter,
-  LabelList,
-} from "recharts";
 import "./index.scss";
-import { ReactSortable, Sortable, MultiDrag, Swap } from "react-sortablejs";
-import Highcharts from "highcharts";
-import HighchartsReact from "highcharts-react-official";
-import { AppRoutes } from "../../../config";
+import { ReactSortable } from "react-sortablejs";
 import graphStats from "./GraphStats.json";
 import { TableForm } from "./TableForm";
 import { BarChartComponent } from "./BarChart";
@@ -461,11 +435,6 @@ const stackchart = {
   ],
 };
 
-/* const brandPrimary = getStyle('--primary') */
-const brandSuccess = getStyle("--success");
-const brandInfo = getStyle("--info");
-const brandWarning = getStyle("--warning");
-//const brandDanger = getStyle('--danger')
 
 //Random Numbers
 function random(min: number, max: number) {
@@ -498,7 +467,6 @@ class HomeComponent extends Component<any, any> {
   };
 
   getChart = (chartType: any) => {
-    console.log("chartType", chartType);
     return (
       <>
         {
@@ -593,7 +561,7 @@ class HomeComponent extends Component<any, any> {
               delay={2}
               list={graphList}
               className="w-100"
-              setList={(newState) => this.setState({ graphList: newState })}
+              setList={this.reorderListNew}
               swapThreshold={1}
               forceFallback
             >

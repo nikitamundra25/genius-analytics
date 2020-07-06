@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Table, Button } from "react-bootstrap";
-import { IRootState, IUserProps, IUserState, IUserModel, IUserData } from "../../../interfaces";
+import { IRootState, IUserProps, IUserState, IUserData } from "../../../interfaces";
 import { Dispatch } from "redux";
 import { connect } from "react-redux";
 import { ConfirmBox } from "../../../helper";
