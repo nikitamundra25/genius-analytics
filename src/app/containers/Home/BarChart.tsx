@@ -154,9 +154,9 @@ export const BarChartComponent = (props:any) => {
       const {barChart} = props;
   return (
       <Col xs={12} md={3}>
-        <Card>
+        
           <Card.Header>
-  <Card.Title>{barChart.title}</Card.Title>
+            <Card.Title>{barChart.title}</Card.Title>
           </Card.Header>
           <Card.Body>
             <div style={{ width: "100%", height: 300 }}>
@@ -184,7 +184,7 @@ export const BarChartComponent = (props:any) => {
             </div>
             {/* <HighchartsReact highcharts={Highcharts} options={stackchart} /> */}
           </Card.Body>
-        </Card>
+        
       </Col>
    
   );

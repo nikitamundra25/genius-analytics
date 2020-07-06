@@ -107,7 +107,7 @@ export const ComposedChartComponent = (props: any) => {
   return (
   <>
               <Col xs={12} md={6}>
-                <Card>
+                {/* <Card>
                   <Card.Header className="d-flex align-items-center justify-content-between">
                     <Card.Title>Occupacy Statics</Card.Title>
                     <div className="action-wrap">
@@ -118,7 +118,7 @@ export const ComposedChartComponent = (props: any) => {
                         <span className="icon-pie-chart"></span>
                       </div>
                     </div>
-                  </Card.Header>
+                  </Card.Header> */}
                   <Card.Body>
                     <div style={{ width: "100%", height: 300 }}>
                       <ResponsiveContainer>
@@ -165,10 +165,10 @@ export const ComposedChartComponent = (props: any) => {
                       </ResponsiveContainer>
                     </div>
                   </Card.Body>
-                </Card>
+                {/* </Card> */}
               </Col>
               <Col xs={12} md={6}>
-                <Card>
+                {/* <Card>
                   <Card.Header className="d-flex align-items-center justify-content-between">
                     <Card.Title>Occupacy Statics</Card.Title>
                     <div className="action-wrap">
@@ -179,7 +179,7 @@ export const ComposedChartComponent = (props: any) => {
                         <span className="icon-pie-chart"></span>
                       </div>
                     </div>
-                  </Card.Header>
+                  </Card.Header> */}
                   <Card.Body>
                     <div style={{ width: "100%", height: 300 }}>
                       <ResponsiveContainer>
@@ -221,7 +221,7 @@ export const ComposedChartComponent = (props: any) => {
                       </ResponsiveContainer>
                     </div>
                   </Card.Body>
-                </Card>
+                {/* </Card> */}
               </Col>
            </>
   );

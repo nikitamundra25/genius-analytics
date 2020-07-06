@@ -31,10 +31,11 @@ class DefaultHeader extends Component<
     return (
       <React.Fragment>
         <AppSidebarToggler className='d-lg-none' display='md' mobile />
+        <AppSidebarToggler className='d-md-down-none' display='lg' />
         <div className='brand-logo'>
           <img src={logo} width={120} alt='' />
         </div>
-        <AppSidebarToggler className='d-md-down-none' display='lg' />
+        
         <Nav className='ml-auto navbar-nav' navbar-nav>
           
           {/* <Nav.Link href="#link"><span className="icon"><i className="icon-magnifier"/></span></Nav.Link>

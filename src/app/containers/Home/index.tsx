@@ -506,17 +506,42 @@ class HomeComponent extends Component<any, any> {
             <TableForm />
           ) : chartType.name === "Key Business Metrics" ? (
             <Col xs={12} md={6}>
-              <div className="main-title">Key Business Metrics</div>
+              <Card>
+              <Card.Header className="d-flex align-items-center justify-content-between">
+                <Card.Title>Key Business Metrics</Card.Title>
+                <div className="action-wrap">
+                  <div className="action-btn ">
+                    <span className="icon-grid"></span>
+                  </div>
+                  <div className="action-btn active">
+                    <span className="icon-pie-chart"></span>
+                  </div>
+                </div>
+              </Card.Header>
               <Row className="row-inner">
                 {barChartBusinessMetrics.map((key: any) => {
                   return <BarChartComponent barChart={key} />;
                 })}
               </Row>
+              </Card>
+              
             </Col>
           ) : 
           chartType.name === "Room Nights" ? (
-            <Col xs={12} md={12}>
-            <div className="main-title">Pick up Since Yesterday</div>
+            <Col xs={12} md={6}>
+              <Card>
+              <Card.Header className="d-flex align-items-center justify-content-between">
+                <Card.Title>Pick up Since Yesterday</Card.Title>
+                <div className="action-wrap">
+                  <div className="action-btn ">
+                    <span className="icon-grid"></span>
+                  </div>
+                  <div className="action-btn active">
+                    <span className="icon-pie-chart"></span>
+                  </div>
+                </div>
+              </Card.Header>
+           
             <Row className="row-inner">
           {  BarChartReferenceLine.map((key:any)=>{
              return <Col xs={12} md={4}>
@@ -526,12 +551,27 @@ class HomeComponent extends Component<any, any> {
               </Col>
             })}
             </Row>
+            </Card>
             </Col>
           )  : chartType.name === "Occupacy Statics" ? (
-            <Col xs={12} md={12}>
-            <Row>
+            <Col xs={12} md={6}>
+              <Card>
+              <Card.Header className="d-flex align-items-center justify-content-between">
+                <Card.Title>Occupacy Statics</Card.Title>
+                <div className="action-wrap">
+                  <div className="action-btn ">
+                    <span className="icon-grid"></span>
+                  </div>
+                  <div className="action-btn active">
+                    <span className="icon-pie-chart"></span>
+                  </div>
+                </div>
+              </Card.Header>
+            <Row className="row-inner">
+
             <ComposedChartComponent />
           </Row>
+          </Card>
           </Col>
           )  : chartType.name === "Business Mix" ? (
             <BusinessMixComponent />
@@ -585,14 +625,14 @@ class HomeComponent extends Component<any, any> {
 
     return (
       <div className="animated fadeIn">
-        <Row>
+        
           {graphList && graphList.length ? (
             <ReactSortable
             group="groupName"
             animation={300}
               delay={2}
               list={graphList}
-              className="w-100"
+              className="row"
               setList={(newState) => this.setState({ graphList: newState })}
               swapThreshold={1}
               forceFallback
@@ -602,7 +642,7 @@ class HomeComponent extends Component<any, any> {
               })}
             </ReactSortable>
           ) : null}
-        </Row>
+        
       </div>
     );
   }

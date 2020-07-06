@@ -42,11 +42,16 @@ body {
   .app-header{
     box-shadow: 0 4px 20px 0 rgba(0,0,0,.05);
     border-bottom: 0px;
+    .navbar-toggler{
+      &:focus{
+        outline:none;
+      }
+    }
     .brand-logo{
       display: inline-block;
       min-width: 200px;
       text-align: center;
-      padding: 0px 0px;
+      padding: 0px 5px;
       transition: width 0.25s;
       img{
         // width:100%;

@@ -27,17 +27,10 @@ export const BarChartReferenceLineComponent = (props: any) => {
   return (
     <>
    
-        <Card>
+       
           <Card.Header className="d-flex align-items-center justify-content-between">
             <Card.Title>{chartDetails.title} </Card.Title>
-            <div className="action-wrap">
-              <div className="action-btn ">
-                <span className="icon-grid"></span>
-              </div>
-              <div className="action-btn active">
-                <span className="icon-pie-chart"></span>
-              </div>
-            </div>
+            
           </Card.Header>
           <Card.Body>
             {chartDetails.range ? (
@@ -65,7 +58,7 @@ export const BarChartReferenceLineComponent = (props: any) => {
               </ResponsiveContainer>
             </div>
           </Card.Body>
-        </Card>
+        
     
     </>
   );
