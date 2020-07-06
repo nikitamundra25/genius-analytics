@@ -11,6 +11,8 @@ import { ComposedChartComponent, ComposedChartStatics } from "./ComposedChart";
 import { BusinessMixComponent } from "./BusinessMix";
 import { PieChartComponent } from "./PieChart";
 import { HighChartComponent } from "./HighChart";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const barChartBusinessMetrics = [
   {
@@ -457,6 +459,7 @@ class HomeComponent extends Component<any, any> {
     super(props);
     this.state = {
       graphList: [],
+     startDate:new Date()
     };
   }
 
@@ -549,10 +552,20 @@ class HomeComponent extends Component<any, any> {
   };
 
   render() {
-    const { graphList } = this.state;
+    const { graphList,startDate } = this.state;
 
     return (
       <div className="animated fadeIn">
+        <div className="d-flex justify-content-end" >
+        <DatePicker
+      selected={startDate}
+      onChange={(date:any) => this.setState({startDate:date})}
+      dateFormat="MM/yyyy"
+      showMonthYearPicker = {true}
+      isClearable={true}
+    />
+        </div>
+
         <Row>
           {graphList && graphList.length ? (
             <ReactSortable
