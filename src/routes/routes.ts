@@ -2,6 +2,7 @@ import React from 'react';
 import { AppRoutes } from '../config';
 
 const Home = React.lazy(() => import('../app/containers/Home'));
+const DashboardMonthly = React.lazy(() => import('../app/containers/Home/dashboardmonthly'));
 const Login = React.lazy(() => import('../app/containers/Auth'));
 const MyProfile = React.lazy(() => import('../app/containers/MyProfile'));
 const EmailTemplates = React.lazy(() => import('../app/containers/EmailTemplates'));
@@ -18,6 +19,12 @@ const routes = [
     path: AppRoutes.HOME,
     name: 'Dashboard',
     component: Home,
+    exact: true,
+  },
+  {
+    path: AppRoutes.DASHBOARDMONTHLY,
+    name: 'Dashboard Monthly',
+    component: DashboardMonthly,
     exact: true,
   },
   {

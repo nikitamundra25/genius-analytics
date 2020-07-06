@@ -22,4 +22,5 @@ export interface IAppRoutes {
   ADD_HOME_PAGE: string;
   FAQ:string;
   ADD_FAQ:string;
+  DASHBOARDMONTHLY:string;
 }

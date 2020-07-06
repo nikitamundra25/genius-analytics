@@ -2,8 +2,10 @@ import { IAppRoutes } from '../interfaces/AppRoutes';
 
 export const AppRoutes: IAppRoutes = {
   MAIN: '/',
+ 
   LOGIN: '/login',
   HOME: '/dashboard',
+  DASHBOARDMONTHLY: '/dashboardMonthly',
   MY_PROFILE: '/my-profile',
   USER: '#',
   ADD_USER: '/user/add',
