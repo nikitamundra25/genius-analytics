@@ -283,6 +283,76 @@ class DashbordYearlyComponent extends Component<any, any> {
       { name: '1+', value: 28 },
       { name: 'One Day', value: 14 },
     ];
+
+    const RADIAN = Math.PI / 180;
+    const renderCustomizedLabel = ({
+      cx,
+      cy,
+      midAngle,
+      innerRadius,
+      outerRadius,
+      percent,
+      index,
+    }: any) => {
+      const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+      const x = cx + radius * Math.cos(-midAngle * RADIAN);
+      const y = cy + radius * Math.sin(-midAngle * RADIAN);
+    
+      return (
+        <text
+          x={x}
+          y={y}
+          dy={-5}
+         
+          fill="black"
+          textAnchor={x > cx ? "start" : "end"}
+          dominantBaseline="central"
+        >
+          {`${(percent * 100).toFixed(0)}%`}
+        </text>
+         
+      );
+    };
+
+    const  RGIdata1 = [
+      {
+        name: 'My OCC', uv: 65,
+      },
+      {
+        name: 'Occ Compact', uv: 68, 
+      },
+      {
+        name: 'MPI', uv: 96, 
+      },
+      
+    ];
+
+    const  RGIdata2 = [
+      {
+        name: 'My ARR', uv: 174,
+      },
+      {
+        name: 'ARR Compact', uv: 140, 
+      },
+      {
+        name: 'AR1', uv: 124, 
+      },
+      
+    ];
+
+    const  RGIdata3 = [
+      {
+        name: 'My RevPAR', uv: 115,
+      },
+      {
+        name: 'RevPAR Compact', uv: 96, 
+      },
+      {
+        name: 'RG1', uv: 119, 
+      },
+      
+    ];
+      
    
     return (
       <div className="animated fadeIn">
@@ -463,11 +533,13 @@ class DashbordYearlyComponent extends Component<any, any> {
                       <Legend />
                       <Pie
                         data={leaddata}
-                        innerRadius={60}
-                        // outerRadius={50}
+                        innerRadius={50}
+                        outerRadius={130}
                         fill="#8884d8"
-                        paddingAngle={2}
+                       
                         dataKey="value"
+                        labelLine={false}
+                        label={renderCustomizedLabel}
                       >
                         {
                           leaddata.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
@@ -500,11 +572,13 @@ class DashbordYearlyComponent extends Component<any, any> {
                       <Legend />
                       <Pie
                         data={leaddatasegment}
-                        innerRadius={60}
-                        // outerRadius={100}
+                        innerRadius={50}
+                        outerRadius={130}
                         fill="#8884d8"
-                        paddingAngle={2}
+                       
                         dataKey="value"
+                        labelLine={false}
+                        label={renderCustomizedLabel}
                       >
                         {
                           leaddata.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
@@ -513,6 +587,93 @@ class DashbordYearlyComponent extends Component<any, any> {
                       </PieChart>
                     </ResponsiveContainer>
                   </div>
+                </Card.Body>
+              </Card>
+          </Col>
+          <Col  xs={12} md={6}>
+            <Card >
+                <Card.Header  className="d-flex align-items-center justify-content-between">
+                  <Card.Title>RGI Performance - YTD</Card.Title>
+                  <div className="action-wrap">
+                    <div className="action-btn "><span className="icon-grid"></span></div>
+                    <div className="action-btn active"><span className="icon-pie-chart"></span></div>
+                  </div>
+                </Card.Header>
+                <Card.Body>
+                 <Row className="row-inner"> 
+                   <Col xs={12} sm={4} md={6}>
+                    <div style={{ width: '100%', height: 300 }}>
+                      <ResponsiveContainer>
+                        <BarChart
+                          data={RGIdata1}
+                          layout="vertical"
+                          margin={{
+                            top: 5, right: 30, left: 20, bottom: 5,
+                          }}
+                          barSize={20}
+                          barCategoryGap={40}
+                        >
+                         
+                          <XAxis dataKey="name" />
+                         
+                          
+                          <Tooltip />
+                          <Bar dataKey="uv" fill="#254d7d" />
+                          
+                        </BarChart>
+                      </ResponsiveContainer>
+                    </div>
+                   </Col>
+
+                   <Col xs={12} sm={4} md={6}>
+                    <div style={{ width: '100%', height: 300 }}>
+                      <ResponsiveContainer>
+                        <BarChart
+                          data={RGIdata2}
+                          layout="vertical"
+                          margin={{
+                            top: 5, right: 30, left: 20, bottom: 5,
+                          }}
+                          barSize={20}
+                          barCategoryGap={40}
+                        >
+                         
+                          <XAxis dataKey="name" />
+                         
+                         
+                          <Tooltip />
+                          <Bar dataKey="uv" fill="#3669a9" />
+                          
+                        </BarChart>
+                      </ResponsiveContainer>
+                    </div>
+                   </Col>
+
+                   <Col xs={12} sm={4} md={6}>
+                    <div style={{ width: '100%', height: 300 }}>
+                      <ResponsiveContainer>
+                        <BarChart
+                          data={RGIdata3}
+                          layout="vertical"
+                          margin={{
+                            top: 5, right: 30, left: 20, bottom: 5,
+                          }}
+                          barSize={20}
+                          barCategoryGap={40}
+                        >
+                         
+                          <XAxis dataKey="name" />
+                         
+                          
+                          <Tooltip />
+                          <Bar dataKey="uv" fill="#99c0eb" />
+                          
+                        </BarChart>
+                      </ResponsiveContainer>
+                    </div>
+                   </Col>
+                 </Row>
+
                 </Card.Body>
               </Card>
           </Col>
