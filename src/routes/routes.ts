@@ -2,7 +2,7 @@ import React from 'react';
 import { AppRoutes } from '../config';
 
 const Home = React.lazy(() => import('../app/containers/Home'));
-const DashboardMonthly = React.lazy(() => import('../app/containers/Home/dashboardMonthly'));
+const DashboardMonthly = React.lazy(() => import('../app/containers/Home/dashboardmonthly'));
 const DashboardYearly = React.lazy(() => import('../app/containers/Home/dashboardYearly'));
 const Login = React.lazy(() => import('../app/containers/Auth'));
 const MyProfile = React.lazy(() => import('../app/containers/MyProfile'));
@@ -13,9 +13,16 @@ const User = React.lazy(() => import('../app/containers/User'));
 const AddUser = React.lazy(() => import('../app/containers/User/AddUser'));
 const Faq = React.lazy(() => import('../app/containers/CMS/FAQ'));
 const AddFaq = React.lazy(() => import('../app/containers/CMS/FAQ/AddFaq'));
+const ComingSoon = React.lazy(() => import('../app/containers/ComingSoon'));
 
 const routes = [
   { path: AppRoutes.MAIN, exact: true, name: 'Home' },
+  {
+    path: AppRoutes.COMING_SOON,
+    name: 'Coming soon',
+    component: ComingSoon,
+    exact: true,
+  },
   {
     path: AppRoutes.HOME,
     name: 'Dashboard',
