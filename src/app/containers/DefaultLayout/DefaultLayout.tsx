@@ -58,7 +58,7 @@ class DefaultLayout extends Component<
         </AppHeader>
         <div className='app-body'>
           <AppSidebar fixed minimized display='lg' >
-            {/* <div className='brand-logo'>
+            <div className='brand-logo'>
                 <img src={logo} width={120} alt='' className='main-logo' />
                 <img
                   src={logosmall}
@@ -66,7 +66,7 @@ class DefaultLayout extends Component<
                   alt=''
                   className='minimized-logo'
                 />
-              </div> */}
+              </div>
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense fallback={<Loader />}>

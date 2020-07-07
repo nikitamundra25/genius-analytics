@@ -30,9 +30,9 @@ class DefaultHeader extends Component<
       <React.Fragment>
         <AppSidebarToggler className='d-lg-none' display='md' mobile />
         <AppSidebarToggler className='d-md-down-none' display='lg' />
-        <div className='brand-logo'>
+        {/* <div className='brand-logo'>
           <img src={logo} width={120} alt='' />
-        </div>
+        </div> */}
         
         <Nav className='ml-auto navbar-nav' navbar-nav>
           

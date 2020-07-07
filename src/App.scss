@@ -47,17 +47,7 @@ body {
         outline:none;
       }
     }
-    .brand-logo{
-      display: inline-block;
-      min-width: 200px;
-      text-align: center;
-      padding: 0px 5px;
-      transition: width 0.25s;
-      img{
-        // width:100%;
-        height:auto;
-      }
-    }
+    
     .navbar-nav{
       .nav-link {
         font-size: 20px;
@@ -135,6 +125,28 @@ body {
     color: $black;
     background:$white;
     box-shadow: 0 0 15px 0 rgba(0,0,0,.05);
+    top: 0;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+    .brand-logo{
+      display: inline-flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: 700;
+      border-bottom: 1px solid hsla(0,0%,71%,.3);
+      margin-bottom: 10px;
+      transition: width .25s;
+      height: 55px;
+      img{
+        // width:100%;
+        height:auto;
+      }
+      .minimized-logo {
+        display: none;
+      }
+    }
+    
     .nav-item {
       position: relative;
       padding: 10px 0px;
@@ -162,17 +174,55 @@ body {
       
     }
     .sidebar-minimizer {
-      background-color: $theme-color;
+      background-color: $transparent;
+      position: fixed;
+      top: 0px;
+      margin-left: 200px;
+      height: 55px;
+      width: 60px;
+      transition: margin-left 0.25s, margin-right 0.25s, width 0.25s, flex 0.25s;
       // height: 35px;
       // flex: 0 0 35px;
       &:before {
-        background-image: url('./assets/img/arrow-left.svg');
+        background-image: url('./assets/img/toggle-menu.svg');
+        background-size: 25px;
+        height: 55px;
         // height: 35px;
       }
       &:hover {
-        background-color: $theme-hover-color !important;
+        background-color: $transparent !important;
+        &:before {
+          background-image: url('./assets/img/toggle-menu.svg');
+         
+        }
       }
     }
+    
+  }
+  &.sidebar-minimized {
+    .sidebar {
+     
+      .brand-logo {
+        min-width: unset;
+        .minimized-logo {
+          @media (min-width: 992px) {
+            display: block;
+            margin: auto;
+          }
+        }
+        .main-logo {
+          @media (min-width: 992px) {
+            display: none;
+          }
+        }
+      }
+    }
+    // .main,
+    // .app-footer {
+    //   @media (min-width: 992px) {
+    //     margin-left: 50px !important;
+    //   }
+    // }
   }
   @media (min-width: 992px){
     &.sidebar-fixed {
@@ -223,13 +273,28 @@ body {
               }
             }
             .sidebar-minimizer {
-              background-color: $theme-color;
+              background-color: $transparent;
               width: 90px;
+              top: 0;
+              margin-left: 90px;
+              bottom: unset;
+              height: 55px;
             }
           }
         
       }
       
+    }
+  }
+  &.sidebar-fixed {
+    .app-header {
+     
+      & + .app-body {
+        .sidebar {
+          height: calc(100vh - 0px);
+          z-index: 1020;
+        }
+      }
     }
   }
   .app-body{

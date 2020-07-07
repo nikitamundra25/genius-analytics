@@ -23,4 +23,5 @@ export interface IAppRoutes {
   FAQ:string;
   ADD_FAQ:string;
   DASHBOARDMONTHLY:string;
+  DASHBOARDYEARLY:string;
 }
