@@ -13,9 +13,16 @@ const User = React.lazy(() => import('../app/containers/User'));
 const AddUser = React.lazy(() => import('../app/containers/User/AddUser'));
 const Faq = React.lazy(() => import('../app/containers/CMS/FAQ'));
 const AddFaq = React.lazy(() => import('../app/containers/CMS/FAQ/AddFaq'));
+const ComingSoon = React.lazy(() => import('../app/containers/ComingSoon'));
 
 const routes = [
   { path: AppRoutes.MAIN, exact: true, name: 'Home' },
+  {
+    path: AppRoutes.COMING_SOON,
+    name: 'Coming soon',
+    component: ComingSoon,
+    exact: true,
+  },
   {
     path: AppRoutes.HOME,
     name: 'Dashboard',

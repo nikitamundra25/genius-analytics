@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {  Col, Row , Card} from "react-bootstrap";
+import { Col, Row, Card } from "react-bootstrap";
 // import { Pie, Line, } from 'react-chartjs-2';
 import "./index.scss";
 import { ReactSortable } from "react-sortablejs";
@@ -47,7 +47,7 @@ const barChartBusinessMetrics = [
     fill: "#2e75b7",
     isXAxis: true,
     isYAxis: true,
-    isRTG: false
+    isRTG: false,
   },
   {
     title: "ADR",
@@ -81,7 +81,7 @@ const barChartBusinessMetrics = [
     fill: "#5398d9",
     isXAxis: false,
     isYAxis: true,
-    isRTG: false
+    isRTG: false,
   },
   {
     title: "Revenue",
@@ -115,7 +115,7 @@ const barChartBusinessMetrics = [
     fill: "#1f4e78",
     isXAxis: false,
     isYAxis: true,
-    isRTG: false
+    isRTG: false,
   },
   {
     title: "RevPAR",
@@ -149,10 +149,9 @@ const barChartBusinessMetrics = [
     fill: "#9dc3e7",
     isXAxis: false,
     isYAxis: true,
-    isRTG: false
+    isRTG: false,
   },
 ];
-
 
 const RTGBarChart = [
   {
@@ -184,8 +183,8 @@ const RTGBarChart = [
     isYAxis: true,
     isRTG: true,
     width: 400,
-    height:300,
-    barSize:20
+    height: 300,
+    barSize: 20,
   },
 
   {
@@ -217,10 +216,10 @@ const RTGBarChart = [
     isYAxis: true,
     isRTG: true,
     width: 400,
-    height:300,
-    barSize:20
+    height: 300,
+    barSize: 20,
   },
-]
+];
 
 const BarChartReferenceLine = [
   {
@@ -248,8 +247,8 @@ const BarChartReferenceLine = [
       },
     ],
     range: 198,
-    fill : "#f47926",
-    height:200
+    fill: "#f47926",
+    height: 200,
   },
   {
     title: "ADR",
@@ -276,8 +275,8 @@ const BarChartReferenceLine = [
       },
     ],
     range: 2.6,
-    height:200,
-    fill : "#f47926"
+    height: 200,
+    fill: "#f47926",
   },
   {
     title: "Revenue",
@@ -304,49 +303,48 @@ const BarChartReferenceLine = [
       },
     ],
     range: "19.4k",
-    fill : "#f47926",
-    height:200
+    fill: "#f47926",
+    height: 200,
   },
 ];
 
 const pieChartData = [
   {
-      title:"Booking Channel Mix",
-      data:[
-          { name: "Brand.com", value: 400 },
-          { name: "OTA", value: 300 },
-          { name: "GDS", value: 300 },
-          { name: "Direct", value: 200 },
-        ],
-        color : ["#4d94d4", "#f48138", "#a5a5a5", "#fcc400"]
+    title: "Booking Channel Mix",
+    data: [
+      { name: "Brand.com", value: 400 },
+      { name: "OTA", value: 300 },
+      { name: "GDS", value: 300 },
+      { name: "Direct", value: 200 },
+    ],
+    color: ["#4d94d4", "#f48138", "#a5a5a5", "#fcc400"],
   },
   {
-      title:"Geographic Origin of Business",
-      data: [
-          { name: "United kingdom", value: 500 },
-          { name: "United States", value: 300 },
-          { name: "Australia", value: 200 },
-          { name: "France", value: 200 },
-          { name: "Argentina", value: 100 },
-          { name: "Germany", value: 70 },
-          { name: "Spain", value: 60 },
-          { name: "Switzerland", value: 50 },
-          { name: "Netherlanda", value: 50 },
-        ],
-        color: [
-          "#3a71b4",
-          "#c03c38",
-          "#9bc24b",
-          "#7856a0",
-          "#35a8c5",
-          "#ff932e",
-          "#234d7f",
-          "#872522",
-          "#69862a",
-        ]
-  }
-]
-
+    title: "Geographic Origin of Business",
+    data: [
+      { name: "United kingdom", value: 500 },
+      { name: "United States", value: 300 },
+      { name: "Australia", value: 200 },
+      { name: "France", value: 200 },
+      { name: "Argentina", value: 100 },
+      { name: "Germany", value: 70 },
+      { name: "Spain", value: 60 },
+      { name: "Switzerland", value: 50 },
+      { name: "Netherlanda", value: 50 },
+    ],
+    color: [
+      "#3a71b4",
+      "#c03c38",
+      "#9bc24b",
+      "#7856a0",
+      "#35a8c5",
+      "#ff932e",
+      "#234d7f",
+      "#872522",
+      "#69862a",
+    ],
+  },
+];
 
 const combi = {
   title: {
@@ -390,7 +388,6 @@ const combi = {
     },
   ],
 };
-
 
 const stackchart = {
   chart: {
@@ -437,7 +434,6 @@ const stackchart = {
   ],
 };
 
-
 //Random Numbers
 function random(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -459,7 +455,7 @@ class HomeComponent extends Component<any, any> {
     super(props);
     this.state = {
       graphList: [],
-     startDate:new Date()
+      startDate: new Date(),
     };
   }
 
@@ -472,12 +468,11 @@ class HomeComponent extends Component<any, any> {
   getChart = (chartType: any) => {
     return (
       <>
-        {
-          chartType.name === "Business on the Books" ? (
-            <TableForm />
-          ) : chartType.name === "Key Business Metrics" ? (
-            <Col xs={12} md={6}>
-              <Card>
+        {chartType.name === "Business on the Books" ? (
+          <TableForm />
+        ) : chartType.name === "Key Business Metrics" ? (
+          <Col xs={12} md={6}>
+            <Card>
               <Card.Header className="d-flex align-items-center justify-content-between">
                 <Card.Title>Key Business Metrics</Card.Title>
                 <div className="action-wrap">
@@ -494,13 +489,11 @@ class HomeComponent extends Component<any, any> {
                   return <BarChartComponent barChart={key} />;
                 })}
               </Row>
-              </Card>
-              
-            </Col>
-          ) : 
-          chartType.name === "Room Nights" ? (
-            <Col xs={12} md={6}>
-              <Card>
+            </Card>
+          </Col>
+        ) : chartType.name === "Room Nights" ? (
+          <Col xs={12} md={6}>
+            <Card>
               <Card.Header className="d-flex align-items-center justify-content-between">
                 <Card.Title>Pick up Since Yesterday</Card.Title>
                 <div className="action-wrap">
@@ -512,21 +505,21 @@ class HomeComponent extends Component<any, any> {
                   </div>
                 </div>
               </Card.Header>
-           
-            <Row className="row-inner">
-          {  BarChartReferenceLine.map((key:any)=>{
-             return <Col xs={12} md={4}>
-              <BarChartReferenceLineComponent
-                chartDetails={key}
-              />
-              </Col>
-            })}
-            </Row>
+
+              <Row className="row-inner">
+                {BarChartReferenceLine.map((key: any) => {
+                  return (
+                    <Col xs={12} md={4}>
+                      <BarChartReferenceLineComponent chartDetails={key} />
+                    </Col>
+                  );
+                })}
+              </Row>
             </Card>
-            </Col>
-          )  : chartType.name === "Occupacy Statics" ? (
-            <Col xs={12} md={6}>
-              <Card>
+          </Col>
+        ) : chartType.name === "Occupacy Statics" ? (
+          <Col xs={12} md={6}>
+            <Card>
               <Card.Header className="d-flex align-items-center justify-content-between">
                 <Card.Title>Occupacy Statics</Card.Title>
                 <div className="action-wrap">
@@ -538,93 +531,75 @@ class HomeComponent extends Component<any, any> {
                   </div>
                 </div>
               </Card.Header>
-            <Row className="row-inner">
-
-            <ComposedChartComponent />
-          </Row>
-          </Card>
+              <Row className="row-inner">
+                <ComposedChartComponent />
+              </Row>
+            </Card>
           </Col>
-          )  : chartType.name === "Business Mix" ? (
-            <BusinessMixComponent />
-          ) : chartType.name === "Booking Channel Mix" ? (
-            <Col xs={12} md={6}>
+        ) : chartType.name === "Business Mix" ? (
+          <BusinessMixComponent />
+        ) : chartType.name === "Booking Channel Mix" ? (
+          <Col xs={12} md={6}>
             <Row>
-            {  pieChartData.map((key:any)=>{
-             return <PieChartComponent
-                chartDetails={key}
-              />
-            })}
+              {pieChartData.map((key: any) => {
+                return <PieChartComponent chartDetails={key} />;
+              })}
             </Row>
-            </Col>
-          ) : chartType.name === "Room Type Statics" ?
-          <ComposedChartStatics/>
-          : chartType.name === "MTD RGI Performance" ?
-          <Col xs={12} md={7}>
-          <Row>
-          {  RTGBarChart.map((key:any)=>{
-            return  <Col xs={12} md={6}>
-            <BarChartReferenceLineComponent
-            chartDetails={key}
-          />
           </Col>
-           })}
-           </Row>
-           </Col>
-          : chartType.name === "Pick up Since Yesterday" ?
+        ) : chartType.name === "Room Type Statics" ? (
+          <ComposedChartStatics />
+        ) : chartType.name === "MTD RGI Performance" ? (
+          <Col xs={12} md={7}>
+            <Row>
+              {RTGBarChart.map((key: any) => {
+                return (
+                  <Col xs={12} md={6}>
+                    <BarChartReferenceLineComponent chartDetails={key} />
+                  </Col>
+                );
+              })}
+            </Row>
+          </Col>
+        ) : chartType.name === "Pick up Since Yesterday" ? (
           <HighChartComponent
-          title={"Pick up Since Yesterday"}
-          options={stackchart}
+            title={"Pick up Since Yesterday"}
+            options={stackchart}
           />
-          : chartType.name === "Pick up Since Yesterday1" ?
+        ) : chartType.name === "Pick up Since Yesterday1" ? (
           <HighChartComponent
-          title={"Pick up Since Yesterday"}
-          options={combi}
+            title={"Pick up Since Yesterday"}
+            options={combi}
           />
-          : null
-        }
+        ) : null}
       </>
     );
   };
 
   reorderListNew = (newOrderedList: any) => {
-    console.log("newOrderedListnewOrderedList", newOrderedList);
     this.setState({ graphList: newOrderedList });
   };
 
   render() {
-    const { graphList,startDate } = this.state;
+    const { graphList, startDate } = this.state;
 
     return (
-
       <div className="animated fadeIn">
-        <div className="d-flex justify-content-end" >
-        <DatePicker
-      selected={startDate}
-      onChange={(date:any) => this.setState({startDate:date})}
-      dateFormat="MM/yyyy"
-      showMonthYearPicker = {true}
-      isClearable={true}
-    />
-        </div>
-
-        
-          {graphList && graphList.length ? (
-            <ReactSortable
+        {graphList && graphList.length ? (
+          <ReactSortable
             group="groupName"
             animation={300}
-              delay={2}
-              list={graphList}
-              className="row"
-              setList={this.reorderListNew}
-              swapThreshold={1}
-              forceFallback
-            >
-              {graphList.map((chartConfig: any, index: number) => {
-                return <>{this.getChart(chartConfig)}</>;
-              })}
-            </ReactSortable>
-          ) : null}
-        
+            delay={2}
+            list={graphList}
+            className="row"
+            setList={this.reorderListNew}
+            swapThreshold={1}
+            forceFallback
+          >
+            {graphList.map((chartConfig: any, index: number) => {
+              return <>{this.getChart(chartConfig)}</>;
+            })}
+          </ReactSortable>
+        ) : null}
       </div>
     );
   }

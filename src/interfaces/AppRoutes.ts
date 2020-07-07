@@ -9,6 +9,7 @@ export interface IAppRoutesProps extends RouteProps {
 export interface IAppRoutesState {}
 
 export interface IAppRoutes {
+  COMING_SOON:string
   MAIN: string;
   LOGIN: string;
   HOME: string;
