@@ -9,6 +9,7 @@ export interface IAppRoutesProps extends RouteProps {
 export interface IAppRoutesState {}
 
 export interface IAppRoutes {
+  COMING_SOON:string
   MAIN: string;
   LOGIN: string;
   HOME: string;
@@ -22,4 +23,6 @@ export interface IAppRoutes {
   ADD_HOME_PAGE: string;
   FAQ:string;
   ADD_FAQ:string;
+  DASHBOARDMONTHLY:string;
+  DASHBOARDYEARLY:string;
 }

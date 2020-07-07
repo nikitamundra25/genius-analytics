@@ -8,6 +8,7 @@ declare module "@flag-icon-css";
 declare module "@font-awesome";
 declare module "@simple-line-icons";
 declare module 'js-object-validation';
+declare module 'react-datepicker'
 
 declare interface Array<T> {
   group: (key: string) => Array<T>;

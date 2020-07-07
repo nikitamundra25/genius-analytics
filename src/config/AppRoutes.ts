@@ -2,8 +2,11 @@ import { IAppRoutes } from '../interfaces/AppRoutes';
 
 export const AppRoutes: IAppRoutes = {
   MAIN: '/',
+ 
   LOGIN: '/login',
   HOME: '/dashboard',
+  DASHBOARDMONTHLY: '/dashboardMonthly',
+  DASHBOARDYEARLY: '/dashboardYearly',
   MY_PROFILE: '/my-profile',
   USER: '#',
   ADD_USER: '/user/add',
@@ -14,5 +17,6 @@ export const AppRoutes: IAppRoutes = {
   //Home Page
   ADD_HOME_PAGE: '/homepage',
   ADD_FAQ:'/faq/add',
-  FAQ:'/faq'
+  FAQ:'/faq',
+  COMING_SOON:'/coming-soon'
 };

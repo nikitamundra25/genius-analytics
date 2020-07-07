@@ -1,0 +1,17 @@
+{
+    "graphCard": [
+        {"name":"Business on the Books", "id":1},
+        {"name":"Key Business Metrics", "id":2},
+        {"name":"Room Nights", "id":3},
+    
+        {"name":"Occupacy Statics", "id":4},
+        {"name":"Business Mix", "id":5},
+        {"name":"Booking Channel Mix", "id":6},
+        {"name":"Room Type Statics", "id":7},
+        {"name":"MTD RGI Performance", "id":8},
+        {"name":"Pick up Since Yesterday", "id":9},
+        {"name":"Pick up Since Yesterday1", "id":10}
+    ]
+}
+
+

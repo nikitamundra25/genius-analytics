@@ -41,7 +41,7 @@ class Faq extends Component<any, IFaqState> {
 
   render() {
     const { currentPage, pageLimit } = this.state;
-    const { userReducer } = this.props;
+    // const { userReducer } = this.props;
     let count = (currentPage - 1) * pageLimit + 1;
     return (
       <div>
