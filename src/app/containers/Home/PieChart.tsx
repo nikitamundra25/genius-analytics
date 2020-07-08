@@ -8,42 +8,27 @@ import {
     Cell,
     Tooltip,
   } from "recharts";
+  import {
+    AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective,
+    Inject, AccumulationLegend, PieSeries, AccumulationTooltip, IAccLoadedEventArgs, AccumulationTheme,
+    AccumulationDataLabel
+  } from '@syncfusion/ej2-react-charts';
 
 export const PieChartComponent = (props:any) => {
  
-    const RADIAN = Math.PI / 180;
-    const renderCustomizedLabel = ({
-      cx,
-      cy,
-      midAngle,
-      innerRadius,
-      outerRadius,
-      percent,
-      index,
-    }: any) => {
-      const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-      const x = cx + radius * Math.cos(-midAngle * RADIAN);
-      const y = cy + radius * Math.sin(-midAngle * RADIAN);
-    
-      return (
-        <text
-          x={x}
-          y={y}
-          fill="black"
-          textAnchor={x > cx ? "start" : "end"}
-          dominantBaseline="central"
-        >
-          {`${(percent * 100).toFixed(0)}%`}
-        </text>
-      );
-    };
+  const data1 = [
+    { 'x': 'Brand.com', y: 27, text: '27%' },
+    { 'x': 'OTA', y: 38, text: '38%' },
+    { 'x': 'GDS', y: 20, text: '20%' },
+    { 'x': 'Direct', y: 15, text: '15%' },
+];
       
 const {chartDetails} = props;
   return (
-    <Col xs={12} md={6}>
+   
     <Card>
       <Card.Header className="d-flex align-items-center justify-content-between">
-        <Card.Title>{chartDetails.title} </Card.Title>
+        <Card.Title>Booking Channel Mix </Card.Title>
         <div className="action-wrap">
           <div className="action-btn ">
             <span className="icon-grid"></span>
@@ -54,7 +39,7 @@ const {chartDetails} = props;
         </div>
       </Card.Header>
       <Card.Body>
-        <div style={{ width: "100%", height: 300 }}>
+        {/* <div style={{ width: "100%", height: 300 }}>
           <ResponsiveContainer>
             <PieChart>
               <Tooltip />
@@ -83,10 +68,38 @@ const {chartDetails} = props;
               </Pie>
             </PieChart>
           </ResponsiveContainer>
-        </div>
+        </div> */}
+            <AccumulationChartComponent 
+            id='pie-chart' 
+            // ref={pie => this.pie = pie}
+              // title='Mobile Browser Statistics'
+              // load={this.load.bind(this)}
+              legendSettings={{ visible:  true }}
+              enableSmartLabels={true}
+              enableAnimation={false}
+              center={{x: '50%', y: '50%'}}
+              tooltip={{ enable: true, format: '${point.x} : <b>${point.y}%</b>' }}
+              // loaded={this.onChartLoad.bind(this)}
+            >
+              <Inject services={[AccumulationLegend, PieSeries, AccumulationTooltip, Legend, AccumulationDataLabel]} />
+              <AccumulationSeriesCollectionDirective>
+                <AccumulationSeriesDirective dataSource={data1} name='Browser' xName='x' yName='y'
+                  explode={true} explodeOffset='10%' explodeIndex={0}
+                  dataLabel={{
+                    visible: true,
+                    position: 'Inside', name: 'text',
+                    font: {
+                      fontWeight: '600'
+                    }
+                  }}
+                  radius='70%'
+                >
+                </AccumulationSeriesDirective>
+              </AccumulationSeriesCollectionDirective>
+            </AccumulationChartComponent>
       </Card.Body>
     </Card>
-  </Col>
+ 
    
   );
 }

@@ -21,12 +21,12 @@ import {
 } from "@syncfusion/ej2-react-charts";
 import { Browser } from "@syncfusion/ej2-base";
 
-export const BarChartComponent = (props: any) => {
-  const { barChart } = props;
+export const BarChartColumnComponent = (props: any) => {
+  const { chartDetails1 } = props;
   
 
   return (
-    <Col xs={12} md={3}>
+    <Col xs={12} md={4}>
       {/* <Card.Header>
             <Card.Title>{barChart.title}</Card.Title>
           </Card.Header> */}
@@ -54,7 +54,7 @@ export const BarChartComponent = (props: any) => {
 
         <div>
           <ChartComponent
-            id={`chart${barChart.id}`}
+            id={`chart${chartDetails1.id}`}
             style={{ textAlign: "center" }}
             primaryXAxis={{
               valueType: "Category",
@@ -73,18 +73,18 @@ export const BarChartComponent = (props: any) => {
             }}
             chartArea={{ border: { width: 0 } }}
             width={Browser.isDevice ? "100%" : "100%"}
-            title={barChart.title}
+            title={chartDetails1.title}
             tooltip={{ enable: true }}
           >
             <Inject services={[BarSeries, DataLabel, Category, Tooltip]} />
             <SeriesCollectionDirective>
               <SeriesDirective
-                dataSource={barChart.data}
+                dataSource={chartDetails1.data}
                 xName="x"
                 yName="y"
                 type="Bar"
-                fill= {barChart.color}
-                name={barChart.title}
+                fill= {chartDetails1.color}
+                name={chartDetails1.title}
                 width={1}
                 marker={{
                   dataLabel: {

@@ -2,7 +2,7 @@ import React from 'react';
 import { AppRoutes } from '../config';
 
 const Home = React.lazy(() => import('../app/containers/Home'));
-const DashboardMonthly = React.lazy(() => import('../app/containers/Home/dashboardmonthly'));
+const DashboardMonthly = React.lazy(() => import('../app/containers/Home/dashboardMonthly'));
 const DashboardYearly = React.lazy(() => import('../app/containers/Home/dashboardYearly'));
 const Login = React.lazy(() => import('../app/containers/Auth'));
 const MyProfile = React.lazy(() => import('../app/containers/MyProfile'));
