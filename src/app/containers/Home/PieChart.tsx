@@ -69,34 +69,20 @@ const {chartDetails} = props;
             </PieChart>
           </ResponsiveContainer>
         </div> */}
-            <AccumulationChartComponent 
-            id='pie-chart' 
-            // ref={pie => this.pie = pie}
-              // title='Mobile Browser Statistics'
-              // load={this.load.bind(this)}
-              legendSettings={{ visible:  true }}
-              enableSmartLabels={true}
-              enableAnimation={false}
-              center={{x: '50%', y: '50%'}}
-              tooltip={{ enable: true, format: '${point.x} : <b>${point.y}%</b>' }}
-              // loaded={this.onChartLoad.bind(this)}
-            >
-              <Inject services={[AccumulationLegend, PieSeries, AccumulationTooltip, Legend, AccumulationDataLabel]} />
+         <AccumulationChartComponent id='pie-chart'   legendSettings={{ visible: false }} enableSmartLabels={true} enableAnimation={false} center={{ x: '50%', y: '50%' }} tooltip={{ enable: true, format: '${point.x} : <b>${point.y}%</b>' }} >
+              <Inject services={[AccumulationLegend, PieSeries, AccumulationTooltip, AccumulationDataLabel]}/>
               <AccumulationSeriesCollectionDirective>
-                <AccumulationSeriesDirective dataSource={data1} name='Browser' xName='x' yName='y'
-                  explode={true} explodeOffset='10%' explodeIndex={0}
-                  dataLabel={{
-                    visible: true,
-                    position: 'Inside', name: 'text',
-                    font: {
-                      fontWeight: '600'
-                    }
-                  }}
-                  radius='70%'
-                >
+                <AccumulationSeriesDirective dataSource={data1} name='Browser' xName='x' yName='y' explode={true} explodeAll={true} explodeOffset='5%' explodeIndex={0} dataLabel={{
+            visible: true,
+            position: 'Inside', name: 'text',
+            font: {
+                fontWeight: '600'
+            }
+        }} radius='70%'>
                 </AccumulationSeriesDirective>
               </AccumulationSeriesCollectionDirective>
             </AccumulationChartComponent>
+          
       </Card.Body>
     </Card>
  
