@@ -7,6 +7,7 @@ import graphStats from "./GraphStats.json";
 import { TableForm } from "./TableForm";
 import { BarChartComponent } from "./BarChart";
 import { BarChartReferenceLineComponent } from "./BarChartsReferenceLine";
+import { BarChartColumn } from "./BarChartcolumn";
 import { ComposedChartComponent, ComposedChartStatics } from "./ComposedChart";
 import { BusinessMixComponent } from "./BusinessMix";
 import { PieChartComponent } from "./PieChart";
@@ -16,295 +17,125 @@ import "react-datepicker/dist/react-datepicker.css";
 
 const barChartBusinessMetrics = [
   {
+    id: "1",
     title: "OCC",
-    data: [
-      {
-        name: "BOB",
-        uv: 4000,
-        pv: 2400,
-        amt: 2400,
-      },
-      {
-        name: "BUD",
-        uv: 3000,
-        pv: 1398,
-        amt: 2210,
-      },
-      {
-        name: "LY",
-        uv: 2000,
-        pv: 8,
-        amt: 2290,
-      },
-      {
-        name: "STLY",
-        uv: 2780,
-        pv: 3908,
-        amt: 2000,
-      },
-    ],
-    label: "abc",
-    fill: "#2e75b7",
-    isXAxis: true,
-    isYAxis: true,
-    isRTG: false,
+    color: "#2e75b7",
+    data : [
+      { x: 'STLY', y: 71.0 }, 
+      { x: 'LY', y: 61.0 },
+      { x: 'BUD', y: 67.8 }, 
+      { x: 'BOB', y: 76.1 }
+  ],
   },
   {
+    id: "2",
     title: "ADR",
-    data: [
-      {
-        name: "BOB",
-        uv: 4000,
-        pv: 2400,
-        amt: 2400,
-      },
-      {
-        name: "BUD",
-        uv: 3000,
-        pv: 1398,
-        amt: 2210,
-      },
-      {
-        name: "LY",
-        uv: 2000,
-        pv: 8,
-        amt: 2290,
-      },
-      {
-        name: "STLY",
-        uv: 2780,
-        pv: 3908,
-        amt: 2000,
-      },
-    ],
-    label: "abc",
-    fill: "#5398d9",
-    isXAxis: false,
-    isYAxis: true,
-    isRTG: false,
+    color: "#5398d9",
+    data : [
+      { x: 'STLY', y: 71.0 }, 
+      { x: 'LY', y: 61.0 },
+      { x: 'BUD', y: 67.8 }, 
+      { x: 'BOB', y: 76.1 }
+  ],
   },
   {
+    id: "3",
     title: "Revenue",
-    data: [
-      {
-        name: "BOB",
-        uv: 4000,
-        pv: 2400,
-        amt: 2400,
-      },
-      {
-        name: "BUD",
-        uv: 3000,
-        pv: 1398,
-        amt: 2210,
-      },
-      {
-        name: "LY",
-        uv: 2000,
-        pv: 8,
-        amt: 2290,
-      },
-      {
-        name: "STLY",
-        uv: 2780,
-        pv: 3908,
-        amt: 2000,
-      },
-    ],
-    label: "abc",
-    fill: "#1f4e78",
-    isXAxis: false,
-    isYAxis: true,
-    isRTG: false,
+    color: "#1f4e79",
+    data : [
+      { x: 'STLY', y: 71.0 }, 
+      { x: 'LY', y: 61.0 },
+      { x: 'BUD', y: 67.8 }, 
+      { x: 'BOB', y: 76.1 }
+  ],
   },
   {
-    title: "RevPAR",
-    data: [
-      {
-        name: "BOB",
-        uv: 4000,
-        pv: 2400,
-        amt: 2400,
-      },
-      {
-        name: "BUD",
-        uv: 3000,
-        pv: 1398,
-        amt: 2210,
-      },
-      {
-        name: "LY",
-        uv: 2000,
-        pv: 8,
-        amt: 2290,
-      },
-      {
-        name: "STLY",
-        uv: 2780,
-        pv: 3908,
-        amt: 2000,
-      },
-    ],
-    label: "abc",
-    fill: "#9dc3e7",
-    isXAxis: false,
-    isYAxis: true,
-    isRTG: false,
+    id: "4",
+    title: "Revpar",
+    color: "#9dc3e7",
+    data : [
+      { x: 'STLY', y: 71.0 }, 
+      { x: 'LY', y: 61.0 },
+      { x: 'BUD', y: 67.8 }, 
+      { x: 'BOB', y: 76.1 }
+  ],
   },
+  
 ];
 
 const RTGBarChart = [
   {
-    title: "MTD RGI Performance",
-    data: [
-      {
-        name: "Bar",
-        uv: 15.5,
-      },
-      {
-        name: "COR",
-        uv: 1.3,
-      },
-      {
-        name: "PROMO",
-        uv: -1.2,
-      },
-      {
-        name: "FIT",
-        uv: 2.8,
-      },
-      {
-        name: "GROUPS",
-        uv: -1.4,
-      },
-    ],
-    fill: "#f47926",
-    isXAxis: true,
-    isYAxis: true,
-    isRTG: true,
-    width: 400,
-    height: 300,
-    barSize: 20,
+    id: "r1",
+    title: "RGI",
+    color: "#2e75b7",
+    data : [
+      { x: 'My RevPAR', y: 115.0 }, 
+      { x: 'RevPAR Compact', y: 96.0 },
+      { x: 'RG1', y: 119.8 }, 
+      
+  ],
   },
-
   {
-    title: "RGI YoY Variance",
-    data: [
-      {
-        name: "Bar",
-        uv: 15.5,
-      },
-      {
-        name: "COR",
-        uv: 1.3,
-      },
-      {
-        name: "PROMO",
-        uv: -1.2,
-      },
-      {
-        name: "FIT",
-        uv: 2.8,
-      },
-      {
-        name: "GROUPS",
-        uv: -1.4,
-      },
-    ],
-    fill: "#f47926",
-    isXAxis: true,
-    isYAxis: true,
-    isRTG: true,
-    width: 400,
-    height: 300,
-    barSize: 20,
+    id: "r2",
+    title: "MPI",
+    color: "#5398d9",
+    data : [
+      { x: 'My OCC', y: 65.0 }, 
+      { x: 'OCC Compact', y: 68.0 },
+      { x: 'MP1', y: 96.8 }, 
+  ],
   },
+  {
+    id: "r3",
+    title: "ARI",
+    color: "#1f4e79",
+    data : [
+      { x: 'My ARR', y: 175.0 }, 
+      { x: 'ARR Compact', y: 140.0 },
+      { x: 'AR1', y: 124.8 }, 
+  ],
+  },
+  
 ];
 
 const BarChartReferenceLine = [
   {
+    id: "1",
     title: "Room Nights",
+    color: "#f07623",
     data: [
-      {
-        name: "Bar",
-        uv: 64,
-      },
-      {
-        name: "COR",
-        uv: 32,
-      },
-      {
-        name: "PROMO",
-        uv: 46,
-      },
-      {
-        name: "FIT",
-        uv: 28,
-      },
-      {
-        name: "GROUPS",
-        uv: -12,
-      },
+      { x: "BAR", y: 64 },
+      { x: "COR", y: 32 },
+      { x: "PROMO", y: 46 },
+      { x: "FIT", y: 28 },
+      { x: "GROUPS", y: -12 },
     ],
-    range: 198,
-    fill: "#f47926",
-    height: 200,
   },
   {
+    id: "2",
     title: "ADR",
+    color: "#f07623",
     data: [
-      {
-        name: "Bar",
-        uv: 2.8,
-      },
-      {
-        name: "COR",
-        uv: 1.3,
-      },
-      {
-        name: "PROMO",
-        uv: -2.2,
-      },
-      {
-        name: "FIT",
-        uv: 1.1,
-      },
-      {
-        name: "GROUPS",
-        uv: -1.1,
-      },
+      { x: "BAR", y: 2.8 },
+      { x: "COR", y: 1.2 },
+      { x: "PROMO", y: -2.2 },
+      { x: "FIT", y: 1.1 },
+      { x: "GROUPS", y: -1.2 },
+     
     ],
-    range: 2.6,
-    height: 200,
-    fill: "#f47926",
   },
   {
+    id: "3",
     title: "Revenue",
+    color: "#f07623",
     data: [
-      {
-        name: "Bar",
-        uv: 15.5,
-      },
-      {
-        name: "COR",
-        uv: 1.3,
-      },
-      {
-        name: "PROMO",
-        uv: -1.2,
-      },
-      {
-        name: "FIT",
-        uv: 2.8,
-      },
-      {
-        name: "GROUPS",
-        uv: -1.4,
-      },
+      { x: "BAR", y: 15.5 },
+      { x: "COR", y: 1.3 },
+      { x: "PROMO", y: -1.2 },
+      { x: "FIT", y: 2.8 },
+      { x: "GROUPS", y: -1.4 },
+
     ],
-    range: "19.4k",
-    fill: "#f47926",
-    height: 200,
   },
 ];
 
@@ -318,31 +149,6 @@ const pieChartData = [
       { name: "Direct", value: 200 },
     ],
     color: ["#4d94d4", "#f48138", "#a5a5a5", "#fcc400"],
-  },
-  {
-    title: "Geographic Origin of Business",
-    data: [
-      { name: "United kingdom", value: 500 },
-      { name: "United States", value: 300 },
-      { name: "Australia", value: 200 },
-      { name: "France", value: 200 },
-      { name: "Argentina", value: 100 },
-      { name: "Germany", value: 70 },
-      { name: "Spain", value: 60 },
-      { name: "Switzerland", value: 50 },
-      { name: "Netherlanda", value: 50 },
-    ],
-    color: [
-      "#3a71b4",
-      "#c03c38",
-      "#9bc24b",
-      "#7856a0",
-      "#35a8c5",
-      "#ff932e",
-      "#234d7f",
-      "#872522",
-      "#69862a",
-    ],
   },
 ];
 
@@ -484,11 +290,13 @@ class HomeComponent extends Component<any, any> {
                   </div>
                 </div>
               </Card.Header>
+              
               <Row className="row-inner">
                 {barChartBusinessMetrics.map((key: any) => {
                   return <BarChartComponent barChart={key} />;
                 })}
               </Row>
+              
             </Card>
           </Col>
         ) : chartType.name === "Room Nights" ? (
@@ -538,39 +346,65 @@ class HomeComponent extends Component<any, any> {
           </Col>
         ) : chartType.name === "Business Mix" ? (
           <BusinessMixComponent />
-        ) : chartType.name === "Booking Channel Mix" ? (
+        ) : chartType.name === "Room Type Statics" ? (
+          <ComposedChartStatics />
+        )  : chartType.name === "Booking Channel Mix" ? (
           <Col xs={12} md={6}>
-            <Row>
+            
               {pieChartData.map((key: any) => {
                 return <PieChartComponent chartDetails={key} />;
               })}
-            </Row>
+           
           </Col>
-        ) : chartType.name === "Room Type Statics" ? (
-          <ComposedChartStatics />
-        ) : chartType.name === "MTD RGI Performance" ? (
-          <Col xs={12} md={7}>
-            <Row>
-              {RTGBarChart.map((key: any) => {
+        ) : chartType.name === "Geographic Origin of business" ? (
+          <Col xs={12} md={6}>
+           <Card>
+              <Card.Header className="d-flex align-items-center justify-content-between">
+                <Card.Title>Geographic Origin of business</Card.Title>
+                
+              </Card.Header>
+              <Card.Body></Card.Body>
+            </Card>
+              {/* {pieChartData.map((key: any) => {
+                return <PieChartComponent chartDetails={key} />;
+              })} */}
+            
+          </Col>
+        ): chartType.name === "MTD RGI Performance" ? (
+          <Col xs={12} md={12}>
+            <Card>
+              <Card.Header className="d-flex align-items-center justify-content-between">
+                <Card.Title>MTD RGI Performance</Card.Title>
+                
+              </Card.Header>
+              <Card.Body>
+                <Row>
+                {/* {RTGBarChart.map((key: any) => {
+                  return (
+                    
+                      <BarChartColumn chartDetails1={key} />
+                      // <BarChartReferenceLineComponent chartDetails={key} />
+                    
+                  );
+                })} */}
+              </Row>
+              </Card.Body>
+            </Card>
+            
+          </Col>
+        ) : chartType.name === "RGI YoY Variance" ? (
+          <Col xs={12} md={5}>
+            
+              {/* {RTGBarChart.map((key: any) => {
                 return (
-                  <Col xs={12} md={6}>
-                    <BarChartReferenceLineComponent chartDetails={key} />
-                  </Col>
+                  <></>
+                    // <BarChartReferenceLineComponent chartDetails={key} />
+                  
                 );
-              })}
-            </Row>
+              })} */}
+            
           </Col>
-        ) : chartType.name === "Pick up Since Yesterday" ? (
-          <HighChartComponent
-            title={"Pick up Since Yesterday"}
-            options={stackchart}
-          />
-        ) : chartType.name === "Pick up Since Yesterday1" ? (
-          <HighChartComponent
-            title={"Pick up Since Yesterday"}
-            options={combi}
-          />
-        ) : null}
+        )   : null}
       </>
     );
   };

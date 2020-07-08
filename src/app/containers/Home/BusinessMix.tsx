@@ -1,67 +1,45 @@
 import React from "react";
 import { Card, Row ,Col} from "react-bootstrap";
+// import {
+//     ResponsiveContainer,
+//     Tooltip,
+//     BarChart,
+//     Bar,
+//     XAxis,
+//     YAxis,
+//   } from "recharts";
 import {
-    ResponsiveContainer,
-    Tooltip,
-    BarChart,
-    Bar,
-    XAxis,
-    YAxis,
-  } from "recharts";
+  ChartComponent,
+  SeriesCollectionDirective,
+  SeriesDirective,
+  Inject,
+  DataLabel,
+  BarSeries,
+  Category,
+  Legend,
+  Tooltip,
+} from "@syncfusion/ej2-react-charts";
+import { Browser } from "@syncfusion/ej2-base";
   
 export const BusinessMixComponent = (props:any) => {
     const Businessdata = [
-        {
-          name: "FIT",
-          uv: 14,
-        },
-        {
-          name: "Leisure Group",
-          uv: 13,
-        },
-        {
-          name: "Cor Group",
-          uv: 8,
-        },
-        {
-          name: "Corporate",
-          uv: 15,
-        },
-        {
-          name: "Discount",
-          uv: 27,
-        },
-        {
-          name: "BAR",
-          uv: 23,
-        },
+      { x: "BAR", y: 23 },
+        { x: "Discount", y: 27 },
+        { x: "Corporate", y: 15 },
+        { x: "Cor Group", y: 8 },
+        { x: "Leisure Group", y: 13 },
+        { x: "FIT", y: 14 },
       ];
       
       const BusinessADRdata = [
-        {
-          name: "FIT",
-          uv: 111.0,
-        },
-        {
-          name: "Leisure Group",
-          uv: 115.0,
-        },
-        {
-          name: "Cor Group",
-          uv: 132.33,
-        },
-        {
-          name: "Corporate",
-          uv: 144.32,
-        },
-        {
-          name: "Discount",
-          uv: 127.32,
-        },
-        {
-          name: "BAR",
-          uv: 150.55,
-        },
+        { x: "BAR", y: 150.55 },
+      { x: "Discount", y: 127.32 },
+      { x: "Corporate", y: 144.32 },
+      { x: "Cor Group", y: 132.33 },
+      { x: "Leisure Group", y: 115 },
+      { x: "FIT", y: 111 },
+
+        
       ];
   return (
 
@@ -79,55 +57,112 @@ export const BusinessMixComponent = (props:any) => {
                   </div>
                 </div>
               </Card.Header>
-              <Card.Body>
+              
                 <Row>
                   <Col xs={12} md={6}>
-                    <div style={{ width: "100%", height: 300 }}>
-                      <ResponsiveContainer>
-                        <BarChart
-                          // width={200}
-                          // height={300}
-                          data={Businessdata}
-                          layout="vertical"
-                          // margin={{
-                          //   top: 5, right: 30, left: 20, bottom: 5,
-                          // }}
-                          barSize={15}
-                        >
-                          {/* <CartesianGrid strokeDasharray="1 1" /> */}
-                          <XAxis type="number" />
-                          <YAxis type="category" dataKey="name" />
-                          <Tooltip />
-                          <Bar dataKey="uv" fill="#2e75b7" />
-                        </BarChart>
-                      </ResponsiveContainer>
-                    </div>
+                    <div>
+                  <ChartComponent
+            id={"businesschart1"}
+            style={{ textAlign: "center" }}
+            primaryXAxis={{
+              valueType: "Category",
+              interval: 1,
+              majorGridLines: { width: 0 },
+            }}
+            primaryYAxis={{
+              labelFormat: "{value}%",
+              edgeLabelPlacement: "Shift",
+              majorGridLines: { width: 0 },
+              majorTickLines: { width: 0 },
+              lineStyle: { width: 0 },
+              labelStyle: {
+                color: "transparent",
+              },
+            }}
+            chartArea={{ border: { width: 0 } }}
+            width={Browser.isDevice ? "100%" : "100%"}
+            // title={barChart.title}
+            tooltip={{ enable: true }}
+          >
+            <Inject services={[BarSeries, DataLabel, Category, Tooltip]} />
+            <SeriesCollectionDirective>
+              <SeriesDirective
+                dataSource={Businessdata}
+                xName="x"
+                yName="y"
+                type="Bar"
+                fill= "#5b9cd6"
+                name={"Business Mix %"}
+                width={1}
+                marker={{
+                  dataLabel: {
+                    visible: true,
+                    position: "Top",
+                    font: {
+                      fontWeight: "600",
+                      color: "#ffffff",
+                    },
+                  },
+                }}
+              ></SeriesDirective>
+            </SeriesCollectionDirective>
+          </ChartComponent>
+        </div>
                   </Col>
 
                   <Col xs={12} md={6}>
-                    <div style={{ width: "100%", height: 300 }}>
-                      <ResponsiveContainer>
-                        <BarChart
-                          // width={200}
-                          // height={300}
-                          data={BusinessADRdata}
-                          layout="vertical"
-                          // margin={{
-                          //   top: 5, right: 30, left: 20, bottom: 5,
-                          // }}
-                          barSize={15}
-                        >
-                          {/* <CartesianGrid strokeDasharray="1 1" /> */}
-                          <XAxis type="number" />
-                          <YAxis type="category" dataKey="name" />
-                          <Tooltip />
-                          <Bar dataKey="uv" fill="#2e75b7" />
-                        </BarChart>
-                      </ResponsiveContainer>
-                    </div>
+                   <div>
+                   <ChartComponent
+            id={"businesschart2"}
+            style={{ textAlign: "center" }}
+            primaryXAxis={{
+              valueType: "Category",
+              interval: 1,
+              majorGridLines: { width: 0 },
+            }}
+            primaryYAxis={{
+              labelFormat: "{value}%",
+              edgeLabelPlacement: "Shift",
+              majorGridLines: { width: 0 },
+              majorTickLines: { width: 0 },
+              lineStyle: { width: 0 },
+              labelStyle: {
+                color: "transparent",
+              },
+            }}
+            chartArea={{ border: { width: 0 } }}
+            width={Browser.isDevice ? "100%" : "100%"}
+            
+            tooltip={{ enable: true }}
+          >
+            <Inject services={[BarSeries, DataLabel, Category, Tooltip]} />
+            <SeriesCollectionDirective>
+              <SeriesDirective
+                dataSource={BusinessADRdata}
+                xName="x"
+                yName="y"
+                type="Bar"
+                fill= "#4473c5"
+                name={"Business Mix ADR"}
+                width={1}
+                marker={{
+                  dataLabel: {
+                    visible: true,
+                    position: "Top",
+                    font: {
+                      fontWeight: "600",
+                      color: "#ffffff",
+                    },
+                  },
+                }}
+              ></SeriesDirective>
+            </SeriesCollectionDirective>
+          </ChartComponent>
+        </div>
+                 
                   </Col>
                 </Row>
-              </Card.Body>
+             
             </Card>
           </Col>
           </>

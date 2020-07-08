@@ -244,7 +244,7 @@ export const ComposedChartStatics = (props: any) => {
 
   return (
   <>
-               <Col xs={12} md={5}>
+               <Col xs={12} md={6}>
             <Card>
               <Card.Header className="d-flex align-items-center justify-content-between">
                 <Card.Title>Room Type Statics</Card.Title>
