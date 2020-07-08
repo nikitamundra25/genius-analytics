@@ -125,30 +125,30 @@ class DefaultLayout extends Component<
     let cur_year = checkPrevdate.getFullYear();
 
     let disabledPrevious: boolean =
-      cur_month == activeMonth && activeYear == cur_year ? true : false;
+      cur_month === activeMonth && activeYear === cur_year ? true : false;
 
     let checkNextdate = new Date();
     let next_month = checkNextdate.getMonth();
     let next_year = checkNextdate.getFullYear();
     let disabledNext: boolean =
-      next_month == activeMonth && activeYear == next_year ? true : false;
+      next_month === activeMonth && activeYear === next_year ? true : false;
 
     return (
-      <div className="app">
+      <div className='app'>
         <AppHeader fixed>
           <Suspense fallback={<Loader />}>
             <DefaultHeader {...this.props} />
           </Suspense>
         </AppHeader>
-        <div className="app-body">
-          <AppSidebar fixed minimized display="lg">
-            <div className="brand-logo">
-              <img src={logo} width={120} alt="" className="main-logo" />
+        <div className='app-body'>
+          <AppSidebar fixed minimized display='lg'>
+            <div className='brand-logo'>
+              <img src={logo} width={120} alt='' className='main-logo' />
               <img
                 src={logosmall}
                 width={40}
-                alt=""
-                className="minimized-logo"
+                alt=''
+                className='minimized-logo'
               />
             </div>
             <AppSidebarHeader />
@@ -159,26 +159,25 @@ class DefaultLayout extends Component<
             <AppSidebarFooter />
             <AppSidebarMinimizer />
           </AppSidebar>
-          <main className="main">
+          <main className='main'>
             {/* <AppBreadcrumb appRoutes={routes} /> */}
 
             <Container fluid>
-              <div className="main-navbar">
-                <div className="navbar-nav-item">
-                  <div className="year-nav">
+              <div className='main-navbar'>
+                <div className='navbar-nav-item'>
+                  <div className='year-nav'>
                     {!disabledPrevious ? (
                       <span
-                        className="cursor-pointer"
-                        onClick={() => this.handleMonthNav("previous")}
-                      >
-                        <i className="icon-arrow-left "></i>
+                        className='cursor-pointer'
+                        onClick={() => this.handleMonthNav("previous")}>
+                        <i className='icon-arrow-left '></i>
                       </span>
                     ) : null}
-                    <span className="mx-3">
+                    <span className='mx-3'>
                       <DatePicker
                         selected={startDate}
                         onChange={(date: any) => this.handleDatePicker(date)}
-                        dateFormat="MMMM"
+                        dateFormat='MMMM'
                         showMonthYearPicker={true}
                         minDate={new Date("2010/01/01")}
                         maxDate={new Date()}
@@ -186,36 +185,35 @@ class DefaultLayout extends Component<
                     </span>
                     {!disabledNext ? (
                       <span
-                        className="cursor-pointer"
-                        onClick={() => this.handleMonthNav("next")}
-                      >
-                        <i className="icon-arrow-right "></i>
+                        className='cursor-pointer'
+                        onClick={() => this.handleMonthNav("next")}>
+                        <i className='icon-arrow-right '></i>
                       </span>
                     ) : null}
                   </div>
                 </div>
-                <div className="navbar-nav-item">
+                <div className='navbar-nav-item'>
                   <DropDownListComponent
-                    id="year"
+                    id='year'
                     dataSource={options}
                     change={this.onhandleChange}
-                    placeholder="Select a year"
+                    placeholder='Select a year'
                     value={activeYear}
-                    popupHeight="220px"
+                    popupHeight='220px'
                   />
                 </div>
-                <div className="navbar-nav-item">
-                  <Dropdown className="dashboard-dropdown common-dropdown">
-                    <Dropdown.Toggle variant="success" id="dropdown-dasboard">
+                <div className='navbar-nav-item'>
+                  <Dropdown className='dashboard-dropdown common-dropdown'>
+                    <Dropdown.Toggle variant='success' id='dropdown-dasboard'>
                       Dashboard
                     </Dropdown.Toggle>
 
                     <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Dashboard</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">
+                      <Dropdown.Item href='#/action-1'>Dashboard</Dropdown.Item>
+                      <Dropdown.Item href='#/action-2'>
                         Dashboard Monthly
                       </Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">
+                      <Dropdown.Item href='#/action-3'>
                         Something Yearly
                       </Dropdown.Item>
                     </Dropdown.Menu>

@@ -1,16 +1,15 @@
 import React from "react";
-import { Card } from "react-bootstrap";
-// import {
-//   ResponsiveContainer,
-//   ReferenceLine,
-//   Tooltip,
-//   BarChart,
-//   Bar,
-//   XAxis,
-//   YAxis,
-// } from "recharts";
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Legend, Category, Tooltip, ColumnSeries, DataLabel } from '@syncfusion/ej2-react-charts';
-import { Browser } from '@syncfusion/ej2-base';
+import {
+  ChartComponent,
+  SeriesCollectionDirective,
+  SeriesDirective,
+  Inject,
+  Category,
+  Tooltip,
+  ColumnSeries,
+  DataLabel,
+} from "@syncfusion/ej2-react-charts";
+import { Browser } from "@syncfusion/ej2-base";
 
 export const BarChartReferenceLineComponent = (props: any) => {
   const { chartDetails } = props;
@@ -47,16 +46,15 @@ export const BarChartReferenceLineComponent = (props: any) => {
               </ResponsiveContainer>
             </div>
           </Card.Body> */}
-{chartDetails.range ? (
-              <div className="text-success h3">
-                <i className="cui-arrow-top "></i> {chartDetails.range}
-              </div>
-            ) : null}
+      {chartDetails.range ? (
+        <div className='text-success h3'>
+          <i className='cui-arrow-top '></i> {chartDetails.range}
+        </div>
+      ) : null}
       <div>
         <ChartComponent
-         id={`Ychart${chartDetails.id}`}
+          id={`Ychart${chartDetails.id}`}
           style={{ textAlign: "center" }}
-          
           primaryXAxis={{
             valueType: "Category",
             interval: 1,
@@ -70,20 +68,15 @@ export const BarChartReferenceLineComponent = (props: any) => {
           }}
           chartArea={{ border: { width: 0 } }}
           tooltip={{ enable: true }}
-          width={Browser.isDevice ? "100%" : "100%"}
-         
-         
-        >
-          <Inject
-            services={[ColumnSeries, Tooltip, Category, DataLabel]}
-          />
+          width={Browser.isDevice ? "100%" : "100%"}>
+          <Inject services={[ColumnSeries, Tooltip, Category, DataLabel]} />
           <SeriesCollectionDirective>
             <SeriesDirective
               dataSource={chartDetails.data}
-              xName="x"
-              yName="y"
-              type="Column"
-              fill= {chartDetails.color}
+              xName='x'
+              yName='y'
+              type='Column'
+              fill={chartDetails.color}
               name={chartDetails.title}
               marker={{
                 dataLabel: {
@@ -91,9 +84,7 @@ export const BarChartReferenceLineComponent = (props: any) => {
                   position: "Top",
                   font: { fontWeight: "600", color: "#ffffff" },
                 },
-              }}
-            ></SeriesDirective>
-           
+              }}></SeriesDirective>
           </SeriesCollectionDirective>
         </ChartComponent>
       </div>
