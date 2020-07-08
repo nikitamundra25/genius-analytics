@@ -28,7 +28,7 @@ const {chartDetails} = props;
    
     <Card>
       <Card.Header className="d-flex align-items-center justify-content-between">
-        <Card.Title>{chartDetails.title} </Card.Title>
+        <Card.Title>Booking Channel Mix </Card.Title>
         <div className="action-wrap">
           <div className="action-btn ">
             <span className="icon-grid"></span>
@@ -71,13 +71,15 @@ const {chartDetails} = props;
         </div> */}
             <AccumulationChartComponent 
             id='pie-chart' 
-            
+            // ref={pie => this.pie = pie}
+              // title='Mobile Browser Statistics'
+              // load={this.load.bind(this)}
               legendSettings={{ visible:  true }}
               enableSmartLabels={true}
               enableAnimation={false}
               center={{x: '50%', y: '50%'}}
               tooltip={{ enable: true, format: '${point.x} : <b>${point.y}%</b>' }}
-             
+              // loaded={this.onChartLoad.bind(this)}
             >
               <Inject services={[AccumulationLegend, PieSeries, AccumulationTooltip, Legend, AccumulationDataLabel]} />
               <AccumulationSeriesCollectionDirective>

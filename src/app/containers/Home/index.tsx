@@ -7,7 +7,7 @@ import graphStats from "./GraphStats.json";
 import { TableForm } from "./TableForm";
 import { BarChartComponent } from "./BarChart";
 import { BarChartReferenceLineComponent } from "./BarChartsReferenceLine";
-import { BarChartColumn } from "./BarChartcolumn";
+import { BarChartColumnComponent } from "./BarChartcolumn";
 import { ComposedChartComponent, ComposedChartStatics } from "./ComposedChart";
 import { BusinessMixComponent } from "./BusinessMix";
 import { PieChartComponent } from "./PieChart";
@@ -143,12 +143,12 @@ const pieChartData = [
   {
     title: "Booking Channel Mix",
     data: [
-      { name: "Brand.com", value: 400 },
-      { name: "OTA", value: 300 },
-      { name: "GDS", value: 300 },
-      { name: "Direct", value: 200 },
+        { 'x': 'Brand.com', y: 27, text: '27%' },
+        { 'x': 'OTA', y: 38, text: '38%' },
+        { 'x': 'GDS', y: 20, text: '20%' },
+        { 'x': 'Direct', y: 15, text: '15%' },
     ],
-    color: ["#4d94d4", "#f48138", "#a5a5a5", "#fcc400"],
+    // color: ["#4d94d4", "#f48138", "#a5a5a5", "#fcc400"],
   },
 ];
 
@@ -351,9 +351,10 @@ class HomeComponent extends Component<any, any> {
         )  : chartType.name === "Booking Channel Mix" ? (
           <Col xs={12} md={6}>
             
-              {pieChartData.map((key: any) => {
+            <PieChartComponent  />
+              {/* {pieChartData.map((key: any) => {
                 return <PieChartComponent chartDetails={key} />;
-              })}
+              })} */}
            
           </Col>
         ) : chartType.name === "Geographic Origin of business" ? (
@@ -379,14 +380,14 @@ class HomeComponent extends Component<any, any> {
               </Card.Header>
               <Card.Body>
                 <Row>
-                {/* {RTGBarChart.map((key: any) => {
+                {RTGBarChart.map((key: any) => {
                   return (
                     
-                      <BarChartColumn chartDetails1={key} />
+                      <BarChartColumnComponent chartDetails1={key} />
                       // <BarChartReferenceLineComponent chartDetails={key} />
                     
                   );
-                })} */}
+                })}
               </Row>
               </Card.Body>
             </Card>

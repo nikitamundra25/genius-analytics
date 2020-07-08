@@ -1,14 +1,13 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
 // import {
-//   ResponsiveContainer,
-//   ReferenceLine,
-//   Tooltip,
-//   BarChart,
-//   Bar,
-//   XAxis,
-//   YAxis,
-// } from "recharts";
+//     ResponsiveContainer,
+//     Tooltip,
+//     BarChart,
+//     Bar,
+//     YAxis,
+//     XAxis
+//   } from "recharts";
 import {
   ChartComponent,
   SeriesCollectionDirective,
@@ -22,44 +21,38 @@ import {
 } from "@syncfusion/ej2-react-charts";
 import { Browser } from "@syncfusion/ej2-base";
 
-export const BarChartColumn = (props: any) => {
+export const BarChartColumnComponent = (props: any) => {
   const { chartDetails1 } = props;
+  
+
   return (
-    <>
     <Col xs={12} md={4}>
-      {/*        
-          <Card.Header className="d-flex align-items-center justify-content-between">
-            <Card.Title>{chartDetails.title} </Card.Title>
-            
+      {/* <Card.Header>
+            <Card.Title>{barChart.title}</Card.Title>
           </Card.Header> */}
-      {/* <Card.Body>
-            {chartDetails.range ? (
-              <div className="text-success h3">
-                <i className="cui-arrow-top "></i> {chartDetails.range}
-              </div>
-            ) : null}
-            <div style={{ width: "100%", height: chartDetails.height }}>
+      
+        {/* <div style={{ width: "100%", height: 300 }}>
               <ResponsiveContainer>
                 <BarChart
-                  width={chartDetails.width}
-                  height={chartDetails.height}
-                  data={chartDetails.data}
-                  barSize={chartDetails.barSize ? chartDetails.barSize : 15}
+                  
+                  data={barChart.data}
+                  layout="vertical"
+                 
+                  barSize={20}
+                  barCategoryGap={40}
                 >
                   
-                  <XAxis dataKey="name" />
-                  {chartDetails.isYAxis ? <YAxis /> : null}
+                 {barChart.isXAxis ? 
+                  <XAxis type="number" />
+                  :""}
+                  <YAxis type="category" dataKey="name" />
                   <Tooltip />
-
-                  <ReferenceLine y={0} stroke="#000" />
-
-                  <Bar dataKey="uv" fill={chartDetails.fill} />
+                  <Bar dataKey="uv" fill={barChart.fill}></Bar>
                 </BarChart>
               </ResponsiveContainer>
-            </div>
-          </Card.Body> */}
+            </div> */}
 
-<div>
+        <div>
           <ChartComponent
             id={`chart${chartDetails1.id}`}
             style={{ textAlign: "center" }}
@@ -83,7 +76,7 @@ export const BarChartColumn = (props: any) => {
             title={chartDetails1.title}
             tooltip={{ enable: true }}
           >
-            <Inject services={[ DataLabel, Category, Tooltip]} />
+            <Inject services={[BarSeries, DataLabel, Category, Tooltip]} />
             <SeriesCollectionDirective>
               <SeriesDirective
                 dataSource={chartDetails1.data}
@@ -107,7 +100,7 @@ export const BarChartColumn = (props: any) => {
             </SeriesCollectionDirective>
           </ChartComponent>
         </div>
-      </Col>
-    </>
+      
+    </Col>
   );
 };
