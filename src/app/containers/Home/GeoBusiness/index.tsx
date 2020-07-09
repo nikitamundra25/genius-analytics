@@ -8,7 +8,7 @@ export default (props: any) => {
         <Card.Header className='d-flex align-items-center justify-content-between'>
           <Card.Title>Geographic Origin of business</Card.Title>
         </Card.Header>
-        <Card.Body></Card.Body>
+        <Card.Body>Map Goes Here</Card.Body>
       </Card>
     </>
   );
