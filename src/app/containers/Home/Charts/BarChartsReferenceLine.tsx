@@ -1,27 +1,28 @@
 import React from "react";
-import { Col } from "react-bootstrap";
-
 import {
   ChartComponent,
   SeriesCollectionDirective,
   SeriesDirective,
   Inject,
-  DataLabel,
-  BarSeries,
   Category,
   Tooltip,
+  ColumnSeries,
+  DataLabel,
 } from "@syncfusion/ej2-react-charts";
 import { Browser } from "@syncfusion/ej2-base";
 
-export const BarChartColumnComponent = (props: any) => {
+export default (props: any) => {
   const { chartDetails } = props;
-
   return (
-    <Col xs={12} md={4}>
-      
+    <>
+      {chartDetails.range ? (
+        <div className='text-success h3'>
+          <i className='cui-arrow-top '></i> {chartDetails.range}
+        </div>
+      ) : null}
       <div>
         <ChartComponent
-          id={`chart${chartDetails.id}`}
+          id={`Ychart${chartDetails.id}`}
           style={{ textAlign: "center" }}
           primaryXAxis={{
             valueType: "Category",
@@ -29,42 +30,34 @@ export const BarChartColumnComponent = (props: any) => {
             majorGridLines: { width: 0 },
           }}
           primaryYAxis={{
-            labelFormat: "{value}%",
-            edgeLabelPlacement: "Shift",
             majorGridLines: { width: 0 },
             majorTickLines: { width: 0 },
             lineStyle: { width: 0 },
-            labelStyle: {
-              color: "transparent",
-            },
+            labelStyle: { color: "transparent" },
           }}
           chartArea={{ border: { width: 0 } }}
+          tooltip={{ enable: true }}
           width={Browser.isDevice ? "100%" : "100%"}
-          title={chartDetails.title}
-          tooltip={{ enable: true }}>
-          <Inject services={[BarSeries, DataLabel, Category, Tooltip]} />
+          height={"250px"}>
+          <Inject services={[ColumnSeries, Tooltip, Category, DataLabel]} />
           <SeriesCollectionDirective>
             <SeriesDirective
               dataSource={chartDetails.data}
               xName='x'
               yName='y'
-              type='Bar'
+              type='Column'
               fill={chartDetails.color}
               name={chartDetails.title}
-              width={1}
               marker={{
                 dataLabel: {
                   visible: true,
                   position: "Top",
-                  font: {
-                    fontWeight: "600",
-                    color: "#ffffff",
-                  },
+                  font: { fontWeight: "600", color: "#ffffff" },
                 },
               }}></SeriesDirective>
           </SeriesCollectionDirective>
         </ChartComponent>
       </div>
-    </Col>
+    </>
   );
 };

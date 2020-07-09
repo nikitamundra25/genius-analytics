@@ -11,13 +11,17 @@ import {
   AccumulationDataLabel,
 } from "@syncfusion/ej2-react-charts";
 
-export const PieChartComponent = (props: any) => {
-  const { chartDetails } = props;
-
+const data1 = [
+  { x: "Brand.com", y: 27, text: "27%" },
+  { x: "OTA", y: 38, text: "38%" },
+  { x: "GDS", y: 20, text: "20%" },
+  { x: "Direct", y: 15, text: "15%" },
+];
+export default (props: any) => {
   return (
     <Card>
       <Card.Header className='d-flex align-items-center justify-content-between'>
-        <Card.Title>{chartDetails.title}</Card.Title>
+        <Card.Title>Booking Channel Mix </Card.Title>
         <div className='action-wrap'>
           <div className='action-btn '>
             <span className='icon-grid'></span>
@@ -29,14 +33,12 @@ export const PieChartComponent = (props: any) => {
       </Card.Header>
       <Card.Body>
         <AccumulationChartComponent
-          id={`pie${chartDetails.id}`}
-          legendSettings={{
-            visible: true,
-            position: 'Bottom'
-        }}
+          id='pie-chart'
+          legendSettings={{ visible: false }}
           enableSmartLabels={true}
           enableAnimation={false}
           center={{ x: "50%", y: "50%" }}
+          height={"250px"}
           tooltip={{
             enable: true,
             // eslint-disable-next-line
@@ -48,13 +50,12 @@ export const PieChartComponent = (props: any) => {
               PieSeries,
               AccumulationTooltip,
               AccumulationDataLabel,
-              
             ]}
           />
           <AccumulationSeriesCollectionDirective>
             <AccumulationSeriesDirective
-              dataSource={chartDetails.data}
-              // name='Browser'
+              dataSource={data1}
+              name='Browser'
               xName='x'
               yName='y'
               explode={true}
@@ -64,7 +65,6 @@ export const PieChartComponent = (props: any) => {
               dataLabel={{
                 visible: true,
                 position: "Inside",
-               
                 name: "text",
                 font: {
                   fontWeight: "600",
