@@ -7,9 +7,12 @@ import { TableForm } from "./TableForm";
 import { BarChartComponent } from "./BarChart";
 import { BarChartReferenceLineComponent } from "./BarChartsReferenceLine";
 import { BarChartColumnComponent } from "./BarChartcolumn";
+import { RGIBarChartComponent } from "./RGIBarChart";
+
 import { ComposedChartComponent, ComposedChartStatics } from "./ComposedChart";
 import { BusinessMixComponent } from "./BusinessMix";
 import { PieChartComponent } from "./PieChart";
+// import { MapChartComponent } from "./MapChart";
 
 const barChartBusinessMetrics = [
   {
@@ -66,7 +69,7 @@ const RTGBarChart = [
     data: [
       { x: "My RevPAR", y: 115.0 },
       { x: "RevPAR Compact", y: 96.0 },
-      { x: "RG1", y: 119.8 },
+      { x: "RGI", y: 119.8 },
     ],
   },
   {
@@ -76,7 +79,7 @@ const RTGBarChart = [
     data: [
       { x: "My OCC", y: 65.0 },
       { x: "OCC Compact", y: 68.0 },
-      { x: "MP1", y: 96.8 },
+      { x: "MPI", y: 96.8 },
     ],
   },
   {
@@ -86,11 +89,39 @@ const RTGBarChart = [
     data: [
       { x: "My ARR", y: 175.0 },
       { x: "ARR Compact", y: 140.0 },
-      { x: "AR1", y: 124.8 },
+      { x: "ARI", y: 124.8 },
     ],
   },
 ];
 
+const RGIBarChart = [
+  {
+    id: "RGI1",
+    data: [
+      { x: "MPI", y1: 115.0 , y2: 115.0},
+      { x: "ARI", y1: 96.0,  y2: 115.0},
+      { x: "RGI", y1: 119.8,  y2: 115.0},
+    ],
+  },
+  
+];
+
+
+
+const pieChartData = [
+  {
+    id: "1",
+    title: "Booking Channel Mix",
+    data: [
+      { x: "Brand.com", y: 27, text: "27%" ,  drillColor: "#2A2870" },
+      { x: "OTA", y: 38, text: "38%",  drillColor: "green", },
+      { x: "GDS", y: 20, text: "20%" ,  drillColor: "white",},
+      { x: "Direct", y: 15, text: "15%",  drillColor: "blue", },
+    ],
+    
+  }
+  
+]
 const BarChartReferenceLine = [
   {
     id: "1",
@@ -131,20 +162,20 @@ const BarChartReferenceLine = [
 ];
 
 //Random Numbers
-function random(min: number, max: number) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+// function random(min: number, max: number) {
+//   return Math.floor(Math.random() * (max - min + 1) + min);
+// }
 
-let elements = 27;
-let data1 = [];
-let data2 = [];
-let data3 = [];
+// let elements = 27;
+// let data1 = [];
+// let data2 = [];
+// let data3 = [];
 
-for (let i = 0; i <= elements; i++) {
-  data1.push(random(50, 200));
-  data2.push(random(15000, 25000));
-  data3.push(15000);
-}
+// for (let i = 0; i <= elements; i++) {
+//   data1.push(random(50, 200));
+//   data2.push(random(15000, 25000));
+//   data3.push(15000);
+// }
 
 class HomeComponent extends Component<any, any> {
   constructor(props: any) {
@@ -239,10 +270,10 @@ class HomeComponent extends Component<any, any> {
           <ComposedChartStatics />
         ) : chartType.name === "Booking Channel Mix" ? (
           <Col xs={12} md={6}>
-            <PieChartComponent />
-            {/* {pieChartData.map((key: any) => {
+            
+            {pieChartData.map((key: any) => {
                 return <PieChartComponent chartDetails={key} />;
-              })} */}
+              })}
           </Col>
         ) : chartType.name === "Geographic Origin of business" ? (
           <Col xs={12} md={6}>
@@ -250,39 +281,49 @@ class HomeComponent extends Component<any, any> {
               <Card.Header className='d-flex align-items-center justify-content-between'>
                 <Card.Title>Geographic Origin of business</Card.Title>
               </Card.Header>
-              <Card.Body></Card.Body>
+              <Card.Body>
+                {/* <MapChartComponent /> */}
+              </Card.Body>
             </Card>
+            
             {/* {pieChartData.map((key: any) => {
                 return <PieChartComponent chartDetails={key} />;
               })} */}
           </Col>
         ) : chartType.name === "MTD RGI Performance" ? (
-          <Col xs={12} md={12}>
+          <Col xs={12} md={8}>
+            <Card>
+              <Card.Header className='d-flex align-items-center justify-content-between'>
+                <Card.Title>MTD RGI Performance</Card.Title>
+              </Card.Header>
+              
+                <Row>
+                  {RTGBarChart.map((key: any) => {
+                    return (
+                      <BarChartColumnComponent chartDetails={key} />
+                    
+                    );
+                  })}
+                </Row>
+              
+            </Card>
+          </Col>
+        ) : chartType.name === "RGI YoY Variance" ? (
+          <Col xs={12} md={4}>
             <Card>
               <Card.Header className='d-flex align-items-center justify-content-between'>
                 <Card.Title>MTD RGI Performance</Card.Title>
               </Card.Header>
               <Card.Body>
-                <Row>
-                  {RTGBarChart.map((key: any) => {
+                
+                  {RGIBarChart.map((key: any) => {
                     return (
-                      <BarChartColumnComponent chartDetails1={key} />
-                      // <BarChartReferenceLineComponent chartDetails={key} />
+                      <RGIBarChartComponent chartDetails={key} />
                     );
                   })}
-                </Row>
-              </Card.Body>
+               
+                </Card.Body>
             </Card>
-          </Col>
-        ) : chartType.name === "RGI YoY Variance" ? (
-          <Col xs={12} md={5}>
-            {/* {RTGBarChart.map((key: any) => {
-                return (
-                  <></>
-                    // <BarChartReferenceLineComponent chartDetails={key} />
-                  
-                );
-              })} */}
           </Col>
         ) : null}
       </>

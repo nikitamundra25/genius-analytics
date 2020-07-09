@@ -1,5 +1,4 @@
 import React from "react";
-import { Col } from "react-bootstrap";
 
 import {
   ChartComponent,
@@ -10,14 +9,15 @@ import {
   BarSeries,
   Category,
   Tooltip,
+  Legend
 } from "@syncfusion/ej2-react-charts";
 import { Browser } from "@syncfusion/ej2-base";
 
-export const BarChartColumnComponent = (props: any) => {
+export const RGIBarChartComponent = (props: any) => {
   const { chartDetails } = props;
 
   return (
-    <Col xs={12} md={4}>
+   
       
       <div>
         <ChartComponent
@@ -40,17 +40,35 @@ export const BarChartColumnComponent = (props: any) => {
           }}
           chartArea={{ border: { width: 0 } }}
           width={Browser.isDevice ? "100%" : "100%"}
-          title={chartDetails.title}
+          
           tooltip={{ enable: true }}>
-          <Inject services={[BarSeries, DataLabel, Category, Tooltip]} />
+          <Inject services={[BarSeries, DataLabel, Category, Tooltip, Legend]} />
           <SeriesCollectionDirective>
             <SeriesDirective
               dataSource={chartDetails.data}
               xName='x'
-              yName='y'
+              yName='y1'
               type='Bar'
-              fill={chartDetails.color}
-              name={chartDetails.title}
+              fill={"#3467a6"}
+              name={"HOTEL"}
+              width={1}
+              marker={{
+                dataLabel: {
+                  visible: true,
+                  position: "Bottom",
+                  font: {
+                    fontWeight: "600",
+                    color: "#ffffff",
+                  },
+                },
+              }}></SeriesDirective>
+              <SeriesDirective
+              dataSource={chartDetails.data}
+              xName='x'
+              yName='y2'
+              type='Bar'
+              fill={"#819bc6"}
+              name={"MARKET"}
               width={1}
               marker={{
                 dataLabel: {
@@ -65,6 +83,6 @@ export const BarChartColumnComponent = (props: any) => {
           </SeriesCollectionDirective>
         </ChartComponent>
       </div>
-    </Col>
+    
   );
 };

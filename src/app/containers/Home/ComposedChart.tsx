@@ -1,215 +1,298 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
+// import {
+//   ResponsiveContainer,
+//   Legend,
+//   Tooltip,
+//   Bar,
+//   XAxis,
+//   Line,
+//   ComposedChart,
+// } from "recharts";
 import {
-  ResponsiveContainer,
-  Legend,
+  ChartComponent,
+  SeriesCollectionDirective,
+  SeriesDirective,
+  Inject,
+  DataLabel,
+  ColumnSeries,
+  Category,
   Tooltip,
-  Bar,
-  XAxis,
-  Line,
-  ComposedChart,
-} from "recharts";
+  Legend,
+  LineSeries 
+} from "@syncfusion/ej2-react-charts";
+import { Browser } from "@syncfusion/ej2-base";
 
 export const ComposedChartComponent = (props: any) => {
-  const compdata = [
+  const OCCData1 = [
     {
-      name: "Midweek OCC",
-      TY: 73,
-      LY: 71,
-      Var: 73,
+      x: "Mon",
+      y1: 50,
+      y2: 64,
+      y3: 134,
+      y4: 111,
     },
     {
-      name: "Weekend OCC",
-      TY: 65,
-      LY: 73,
-      Var: 11,
+      x: "Tue",
+      y1: 88,
+      y2: 80,
+      y3: 157,
+      y4: 169,
     },
     {
-      name: "Total OCC",
-      TY: 69,
-      LY: 72,
-      Var: 43,
-    },
-  ];
-  const compdata1 = [
-    {
-      name: "Mon",
-      OCCTY: 50,
-      OCCLY: 64,
-      ADRLY: 185,
-      ADRTY: 195,
+      x: "Wed",
+      y1: 74,
+      y2: 76,
+      y3: 257,
+      y4: 231,
     },
     {
-      name: "Tue",
-      OCCTY: 88,
-      OCCLY: 80,
-      ADRLY: 202,
-      ADRTY: 207,
+      x: "Thu",
+      y1: 50,
+      y2: 64,
+      y3: 134,
+      y4: 111,
     },
     {
-      name: "Wed",
-      OCCTY: 74,
-      OCCLY: 76,
-      ADRLY: 184,
-      ADRTY: 194,
+      x: "Fri",
+      y1: 88,
+      y2: 80,
+      y3: 157,
+      y4: 169,
     },
     {
-      name: "Thu",
-      OCCTY: 68,
-      OCCLY: 73,
-      ADRLY: 176,
-      ADRTY: 196,
+      x: "Sat",
+      y1: 74,
+      y2: 76,
+      y3: 257,
+      y4: 231,
     },
     {
-      name: "Fri",
-      OCCTY: 67,
-      OCCLY: 64,
-      ADRLY: 155,
-      ADRTY: 156,
+      x: "Sun",
+      y1: 88,
+      y2: 80,
+      y3: 157,
+      y4: 169,
     },
     {
-      name: "Sat",
-      OCCTY: 74,
-      OCCLY: 76,
-      ADRLY: 143,
-      ADRTY: 150,
-    },
-    {
-      name: "Sun",
-      OCCTY: 63,
-      OCCLY: 43,
-      ADRLY: 157,
-      ADRTY: 172,
-    },
-    {
-      name: "Total",
-      OCCTY: 45,
-      OCCLY: 69,
-      ADRLY: 170,
-      ADRTY: 175,
+      x: "Total",
+      y1: 74,
+      y2: 76,
+      y3: 257,
+      y4: 231,
     },
   ];
 
+  const OCCData2 = [
+    {
+      x: "Midweek OCC",
+      y1: 50,
+      y2: 64,
+      y3: 134,
+      
+    },
+    {
+      x: "Weekend OCC",
+      y1: 88,
+      y2: 80,
+      y3: 157,
+     
+    },
+    {
+      x: "Total OCC",
+      y1: 74,
+      y2: 76,
+      y3: 257,
+     
+    },
+  ];
  
 
   return (
   <>
-              <Col xs={12} md={6}>
-                {/* <Card>
-                  <Card.Header className="d-flex align-items-center justify-content-between">
-                    <Card.Title>Occupacy Statics</Card.Title>
-                    <div className="action-wrap">
-                      <div className="action-btn ">
-                        <span className="icon-grid"></span>
-                      </div>
-                      <div className="action-btn active">
-                        <span className="icon-pie-chart"></span>
-                      </div>
-                    </div>
-                  </Card.Header> */}
-                  <Card.Body>
-                    <div style={{ width: "100%", height: 300 }}>
-                      <ResponsiveContainer>
-                        <ComposedChart
-                          // width={500}
-                          height={300}
-                          data={compdata1}
-                          // margin={{
-                          //   top: 20, right: 20, bottom: 20, left: 20,
-                          // }}
-                        >
-                          {/* <CartesianGrid stroke="#f5f5f5" /> */}
-                          <XAxis dataKey="name" />
-                          {/* <YAxis /> */}
-                          <Tooltip />
-                          <Legend />
-                          {/* <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" /> */}
-                          <Bar
-                            dataKey="OCCTY"
-                            barSize={20}
-                            fill="#244d81"
-                            padding={{ left: 10, right: 10 }}
-                          />
-                          <Bar
-                            dataKey="OCCLY"
-                            barSize={20}
-                            fill="#4f81bc"
-                            padding={{ left: 10, right: 10 }}
-                          />
-                          <Line
-                            type="monotone"
-                            dataKey="ADRTY"
-                            stroke="#202c47"
-                            strokeDasharray="2 2"
-                          />
-                          <Line
-                            type="monotone"
-                            dataKey="ADRLY"
-                            stroke="#81cbe8"
-                            strokeDasharray="25 10"
-                          />
-                          {/* <Scatter dataKey="cnt" fill="red" /> */}
-                        </ComposedChart>
-                      </ResponsiveContainer>
-                    </div>
-                  </Card.Body>
-                {/* </Card> */}
+              <Col xs={12} md={7}>
+              <div>
+                <ChartComponent
+                  id={"occChart1"}
+                  style={{ textAlign: "center" }}
+                  primaryXAxis={{
+                    valueType: "Category",
+                    interval: 1,
+                    majorGridLines: { width: 0 },
+                  }}
+                  primaryYAxis={{
+                    labelFormat: "{value}%",
+                    edgeLabelPlacement: "Shift",
+                    majorGridLines: { width: 0 },
+                    majorTickLines: { width: 0 },
+                    lineStyle: { width: 0 },
+                    labelStyle: {
+                      color: "transparent",
+                    },
+                  }}
+                  chartArea={{ border: { width: 0 } }}
+                  width={Browser.isDevice ? "100%" : "100%"}
+                 
+                  tooltip={{ enable: true }}>
+                  <Inject services={[ColumnSeries, LineSeries ,DataLabel, Category, Tooltip, Legend]} />
+                  <SeriesCollectionDirective>
+                    <SeriesDirective
+                      dataSource={OCCData1}
+                      xName='x'
+                      yName='y1'
+                      type='Column'
+                      fill={"#96b7c6"}
+                      name={"OCC TY"}
+                      width={1}
+                      marker={{
+                        dataLabel: {
+                          visible: true,
+                          position: "Bottom",
+                          font: {
+                            fontWeight: "600",
+                            color: "#ffffff",
+                          },
+                        },
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={OCCData1}
+                      xName='x'
+                      yName='y2'
+                      type='Column'
+                      fill={"#5fa5bb"}
+                      name={"OCC LY"}
+                      width={1}
+                      marker={{
+                        dataLabel: {
+                          visible: true,
+                          position: "Top",
+                          font: {
+                            fontWeight: "600",
+                            color: "#ffffff",
+                          },
+                        },
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={OCCData1}
+                      xName='x'
+                      yName='y3'
+                      type='Line'
+                      fill={"#204b7d"}
+                      name={"ADR TY"}
+                      width={2}
+                      marker={{
+                        visible: true,
+                        width: 10, 
+                        height: 10, 
+                        border: { width: 2, color: '#F8AB1D' } ,
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={OCCData1}
+                      xName='x'
+                      yName='y4'
+                      type='Line'
+                      fill={"#204b7d"}
+                      name={"ADR LY"}
+                      width={2}
+                      dashArray='5'
+                      
+                      marker={{
+                        visible: true,
+                        width: 10, 
+                        height: 10, 
+                        border: { width: 2, color: '#F8AB1D' } ,
+                      }}
+                      ></SeriesDirective>
+                      {/* <SeriesDirective dataSource={RommTypeData} xName='x' yName='y3' name='Germany'
+                                width={2} marker={{ visible: true, width: 10, height: 10 }} type='Line'>
+                            </SeriesDirective> */}
+                  </SeriesCollectionDirective>
+                </ChartComponent>
+              </div>
+             
               </Col>
-              <Col xs={12} md={6}>
-                {/* <Card>
-                  <Card.Header className="d-flex align-items-center justify-content-between">
-                    <Card.Title>Occupacy Statics</Card.Title>
-                    <div className="action-wrap">
-                      <div className="action-btn ">
-                        <span className="icon-grid"></span>
-                      </div>
-                      <div className="action-btn active">
-                        <span className="icon-pie-chart"></span>
-                      </div>
-                    </div>
-                  </Card.Header> */}
-                  <Card.Body>
-                    <div style={{ width: "100%", height: 300 }}>
-                      <ResponsiveContainer>
-                        <ComposedChart
-                          // width={500}
-                          height={300}
-                          data={compdata}
-                          // margin={{
-                          //   top: 20, right: 20, bottom: 20, left: 20,
-                          // }}
-                        >
-                          {/* <CartesianGrid stroke="#f5f5f5" /> */}
-                          <XAxis dataKey="name" />
-                          {/* <YAxis /> */}
-                          <Tooltip />
-                          <Legend />
-                          {/* <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" /> */}
-                          <Bar
-                            dataKey="TY"
-                            barSize={20}
-                            fill="#8293b1"
-                            padding={{ left: 10, right: 10 }}
-                          />
-                          <Bar
-                            dataKey="LY"
-                            barSize={20}
-                            fill="#3269aa"
-                            padding={{ left: 10, right: 10 }}
-                          />
-                          <Line
-                            type="monotone"
-                            dataKey="Var"
-                            stroke="#2f5891"
-                            strokeDasharray="5 5"
-                          />
-                          {/* <Line type="monotone" dataKey="amt" stroke="#ff7300" strokeDasharray="5 5"/> */}
-                          {/* <Scatter dataKey="cnt" fill="red" /> */}
-                        </ComposedChart>
-                      </ResponsiveContainer>
-                    </div>
-                  </Card.Body>
-                {/* </Card> */}
+              <Col xs={12} md={5}>
+              <div>
+                <ChartComponent
+                  id={"occChart2"}
+                  style={{ textAlign: "center" }}
+                  primaryXAxis={{
+                    valueType: "Category",
+                    interval: 1,
+                    majorGridLines: { width: 0 },
+                  }}
+                  primaryYAxis={{
+                    labelFormat: "{value}%",
+                    edgeLabelPlacement: "Shift",
+                    majorGridLines: { width: 0 },
+                    majorTickLines: { width: 0 },
+                    lineStyle: { width: 0 },
+                    labelStyle: {
+                      color: "transparent",
+                    },
+                  }}
+                  chartArea={{ border: { width: 0 } }}
+                  width={Browser.isDevice ? "100%" : "100%"}
+                 
+                  tooltip={{ enable: true }}>
+                  <Inject services={[ColumnSeries, LineSeries ,DataLabel, Category, Tooltip, Legend]} />
+                  <SeriesCollectionDirective>
+                    <SeriesDirective
+                      dataSource={OCCData2}
+                      xName='x'
+                      yName='y1'
+                      type='Column'
+                      fill={"#96b7c6"}
+                      name={"TY"}
+                      width={1}
+                      marker={{
+                        dataLabel: {
+                          visible: true,
+                          position: "Bottom",
+                          font: {
+                            fontWeight: "600",
+                            color: "#ffffff",
+                          },
+                        },
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={OCCData2}
+                      xName='x'
+                      yName='y2'
+                      type='Column'
+                      fill={"#5fa5bb"}
+                      name={"LY"}
+                      width={1}
+                      marker={{
+                        dataLabel: {
+                          visible: true,
+                          position: "Top",
+                          font: {
+                            fontWeight: "600",
+                            color: "#ffffff",
+                          },
+                        },
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={OCCData2}
+                      xName='x'
+                      yName='y3'
+                      type='Line'
+                      fill={"#204b7d"}
+                      name={"Var"}
+                      width={2}
+                      dashArray='5'
+                      marker={{
+                        visible: true,
+                        width: 10, 
+                        height: 10, 
+                        border: { width: 2, color: '#F8AB1D' } ,
+                      }}></SeriesDirective>
+                      
+                  </SeriesCollectionDirective>
+                </ChartComponent>
+              </div>
+             
               </Col>
            </>
   );
@@ -218,27 +301,27 @@ export const ComposedChartComponent = (props: any) => {
 
 export const ComposedChartStatics = (props: any) => {
 
-  const compdata2 = [
+  const RommTypeData = [
     {
-      name: "0BRM",
-      OCCTY: 50,
-      OCCLY: 64,
-      ADRLY: 134,
-      ADRTY: 111,
+      x: "0BRM",
+      y1: 50,
+      y2: 64,
+      y3: 134,
+      y4: 111,
     },
     {
-      name: "1BRM",
-      OCCTY: 88,
-      OCCLY: 80,
-      ADRLY: 157,
-      ADRTY: 169,
+      x: "1BRM",
+      y1: 88,
+      y2: 80,
+      y3: 157,
+      y4: 169,
     },
     {
-      name: "2BRM",
-      OCCTY: 74,
-      OCCLY: 76,
-      ADRLY: 257,
-      ADRTY: 231,
+      x: "2BRM",
+      y1: 74,
+      y2: 76,
+      y3: 257,
+      y4: 231,
     },
   ];
 
@@ -258,45 +341,104 @@ export const ComposedChartStatics = (props: any) => {
                 </div>
               </Card.Header>
               <Card.Body>
-                <div style={{ width: "100%", height: 300 }}>
-                  <ResponsiveContainer>
-                    <ComposedChart
-                      // width={500}
-                      height={300}
-                      data={compdata2}
-                      // margin={{
-                      //   top: 20, right: 20, bottom: 20, left: 20,
-                      // }}
-                    >
-                      {/* <CartesianGrid stroke="#f5f5f5" /> */}
-                      <XAxis dataKey="name" />
-                      {/* <YAxis /> */}
-                      <Tooltip />
-                      <Legend />
-                      {/* <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" /> */}
-                      <Bar
-                        dataKey="OCCTY"
-                        barSize={20}
-                        fill="#a1c6d6"
-                        padding={{ left: 10, right: 10 }}
-                      />
-                      <Bar
-                        dataKey="OCCLY"
-                        barSize={20}
-                        fill="#65adc5"
-                        padding={{ left: 10, right: 10 }}
-                      />
-                      <Line type="monotone" dataKey="ADRTY" stroke="#1b4479" />
-                      <Line
-                        type="monotone"
-                        dataKey="ADRLY"
-                        stroke="#05234e"
-                        strokeDasharray="25 10"
-                      />
-                      {/* <Scatter dataKey="cnt" fill="red" /> */}
-                    </ComposedChart>
-                  </ResponsiveContainer>
-                </div>
+              <div>
+                <ChartComponent
+                  id={"Room-chart"}
+                  style={{ textAlign: "center" }}
+                  primaryXAxis={{
+                    valueType: "Category",
+                    interval: 1,
+                    majorGridLines: { width: 0 },
+                  }}
+                  primaryYAxis={{
+                    labelFormat: "{value}%",
+                    edgeLabelPlacement: "Shift",
+                    majorGridLines: { width: 0 },
+                    majorTickLines: { width: 0 },
+                    lineStyle: { width: 0 },
+                    labelStyle: {
+                      color: "transparent",
+                    },
+                  }}
+                  chartArea={{ border: { width: 0 } }}
+                  width={Browser.isDevice ? "100%" : "100%"}
+                 
+                  tooltip={{ enable: true }}>
+                  <Inject services={[ColumnSeries, LineSeries ,DataLabel, Category, Tooltip, Legend]} />
+                  <SeriesCollectionDirective>
+                    <SeriesDirective
+                      dataSource={RommTypeData}
+                      xName='x'
+                      yName='y1'
+                      type='Column'
+                      fill={"#96b7c6"}
+                      name={"OCC TY"}
+                      width={1}
+                      marker={{
+                        dataLabel: {
+                          visible: true,
+                          position: "Bottom",
+                          font: {
+                            fontWeight: "600",
+                            color: "#ffffff",
+                          },
+                        },
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={RommTypeData}
+                      xName='x'
+                      yName='y2'
+                      type='Column'
+                      fill={"#5fa5bb"}
+                      name={"OCC LY"}
+                      width={1}
+                      marker={{
+                        dataLabel: {
+                          visible: true,
+                          position: "Top",
+                          font: {
+                            fontWeight: "600",
+                            color: "#ffffff",
+                          },
+                        },
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={RommTypeData}
+                      xName='x'
+                      yName='y3'
+                      type='Line'
+                      fill={"#204b7d"}
+                      name={"ADR TY"}
+                      width={2}
+                      marker={{
+                        visible: true,
+                        width: 10, 
+                        height: 10, 
+                        border: { width: 2, color: '#F8AB1D' } ,
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={RommTypeData}
+                      xName='x'
+                      yName='y4'
+                      type='Line'
+                      fill={"#204b7d"}
+                      name={"ADR LY"}
+                      width={2}
+                      dashArray='5'
+                      
+                      marker={{
+                        visible: true,
+                        width: 10, 
+                        height: 10, 
+                        border: { width: 2, color: '#F8AB1D' } ,
+                      }}
+                      ></SeriesDirective>
+                      {/* <SeriesDirective dataSource={RommTypeData} xName='x' yName='y3' name='Germany'
+                                width={2} marker={{ visible: true, width: 10, height: 10 }} type='Line'>
+                            </SeriesDirective> */}
+                  </SeriesCollectionDirective>
+                </ChartComponent>
+              </div>
               </Card.Body>
             </Card>
           </Col>
