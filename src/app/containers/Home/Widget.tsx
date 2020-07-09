@@ -14,13 +14,13 @@ const getChart = (chartType: any) => {
   switch (chartType.name) {
     case "Business on the Books":
       return (
-        <Col xs={12} md={6}>
+        <Col xs={12} md={5}>
           <BOB />
         </Col>
       );
     case "Key Business Metrics":
       return (
-        <Col xs={12} md={6}>
+        <Col xs={12} md={7}>
           <KeyBusinessMetrics />
         </Col>
       );
@@ -63,13 +63,13 @@ const getChart = (chartType: any) => {
     case "MTD RGI Performance":
       return (
         <Col xs={12} md={6}>
-          <MTDPerformance />
+          <MTDPerformance key={"rgp"} />
         </Col>
       );
     case "RGI YoY Variance":
       return (
-        <Col xs={12} md={6}>
-          <MTDPerformance />
+        <Col xs={12} md={12}>
+          <MTDPerformance key={"rgi"} />
         </Col>
       );
 

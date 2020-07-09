@@ -37,7 +37,7 @@ const RTGBarChart = [
   },
 ];
 
-export const PieChartComponent = (props: any) => {
+export default (props: any) => {
   return (
     <Card>
       <Card.Header className='d-flex align-items-center justify-content-between'>
@@ -58,5 +58,3 @@ export const PieChartComponent = (props: any) => {
     </Card>
   );
 };
-
-export default PieChartComponent;
