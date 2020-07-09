@@ -77,3 +77,5 @@ export const PieChartComponent = (props: any) => {
     </Card>
   );
 };
+
+export default PieChartComponent;
