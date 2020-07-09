@@ -1,17 +1,21 @@
 import React from "react";
-import { Card, Col } from "react-bootstrap";
+import {  Col } from "react-bootstrap";
 import {
-  ResponsiveContainer,
-  Legend,
+  ChartComponent,
+  SeriesCollectionDirective,
+  SeriesDirective,
+  Inject,
+  DataLabel,
+  ColumnSeries,
+  Category,
   Tooltip,
-  Bar,
-  XAxis,
-  Line,
-  ComposedChart,
-} from "recharts";
+  Legend,
+  LineSeries 
+} from "@syncfusion/ej2-react-charts";
+import { Browser } from "@syncfusion/ej2-base";
 
 export default (props: any) => {
-  const compdata = [
+  const OCCData2 = [
     {
       name: "Midweek OCC",
       TY: 73,
@@ -31,7 +35,7 @@ export default (props: any) => {
       Var: 43,
     },
   ];
-  const compdata1 = [
+  const OCCData1 = [
     {
       name: "Mon",
       OCCTY: 50,
@@ -92,103 +96,212 @@ export default (props: any) => {
 
   return (
     <>
-      <Col xs={12} md={6}>
-        <Card.Body>
-          <div style={{ width: "100%", height: 300 }}>
-            <ResponsiveContainer>
-              <ComposedChart height={"250px"} data={compdata1}>
-                {/* <CartesianGrid stroke="#f5f5f5" /> */}
-                <XAxis dataKey='name' />
-                {/* <YAxis /> */}
-                <Tooltip />
-                <Legend />
-                {/* <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" /> */}
-                <Bar
-                  dataKey='OCCTY'
-                  barSize={20}
-                  fill='#244d81'
-                  padding={{ left: 10, right: 10 }}
-                />
-                <Bar
-                  dataKey='OCCLY'
-                  barSize={20}
-                  fill='#4f81bc'
-                  padding={{ left: 10, right: 10 }}
-                />
-                <Line
-                  type='monotone'
-                  dataKey='ADRTY'
-                  stroke='#202c47'
-                  strokeDasharray='2 2'
-                />
-                <Line
-                  type='monotone'
-                  dataKey='ADRLY'
-                  stroke='#81cbe8'
-                  strokeDasharray='25 10'
-                />
-                {/* <Scatter dataKey="cnt" fill="red" /> */}
-              </ComposedChart>
-            </ResponsiveContainer>
-          </div>
-        </Card.Body>
-        {/* </Card> */}
+      <Col xs={12} md={8}>
+      <ChartComponent
+                  id={"occChart1"}
+                  style={{ textAlign: "center" }}
+                  primaryXAxis={{
+                    valueType: "Category",
+                    interval: 1,
+                    majorGridLines: { width: 0 },
+                  }}
+                  primaryYAxis={{
+                    labelFormat: "{value}%",
+                    edgeLabelPlacement: "Shift",
+                    majorGridLines: { width: 0 },
+                    majorTickLines: { width: 0 },
+                    lineStyle: { width: 0 },
+                    labelStyle: {
+                      color: "transparent",
+                    },
+                  }}
+                  chartArea={{ border: { width: 0 } }}
+                  width={Browser.isDevice ? "100%" : "100%"}
+                  height={"250px"}
+                  tooltip={{ enable: true }}>
+                  <Inject services={[ColumnSeries, LineSeries ,DataLabel, Category, Tooltip, Legend]} />
+                  <SeriesCollectionDirective>
+                    <SeriesDirective
+                      dataSource={OCCData1}
+                      xName='name'
+                      yName='OCCTY'
+                      type='Column'
+                      fill={"#244d81"}
+                      name={"OCC TY"}
+                      width={1}
+                      marker={{
+                        dataLabel: {
+                          visible: true,
+                          position: "Middle",
+                          font: {
+                            fontWeight: "600",
+                            color: "#ffffff",
+                          },
+                        },
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={OCCData1}
+                      xName='name'
+                      yName='OCCLY'
+                      type='Column'
+                      fill={"#4f81bc"}
+                      name={"OCC LY"}
+                      width={1}
+                      dashArray='5'
+                      marker={{
+                        dataLabel: {
+                          visible: true,
+                          position: "Middle",
+                          font: {
+                            fontWeight: "600",
+                            color: "#ffffff",
+                          },
+                        },
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={OCCData1}
+                      xName='name'
+                      yName='ADRTY'
+                      type='Line'
+                      fill={"#2bb5ec"}
+                      name={"ADR TY"}
+                      width={2}
+                      dashArray='5'
+                      marker={{
+                        visible: true,
+                        width: 10, 
+                        height: 10, 
+                        border: { width: 2, color: '#2bb5ec' } ,
+                        dataLabel: {
+                          visible: true,
+                          position: "Middle",
+                          font: {
+                            
+                            fontWeight: "600",
+                            color: "#000000",
+                    },
+                      },
+
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={OCCData1}
+                      xName='name'
+                      yName='ADRLY'
+                      type='Line'
+                      fill={"#293046"}
+                      name={"ADR LY"}
+                      width={2}
+                      dashArray='5'
+                      marker={{
+                        visible: true,
+                        width: 10, 
+                        height: 10, 
+                        border: { width: 2, color: '#293046' } ,
+                        dataLabel: {
+                          visible: true,
+                          position: "Middle",
+                          font: {
+                            
+                            fontWeight: "600",
+                            color: "#000000",
+                    },
+                      },
+                      }}
+                      ></SeriesDirective>
+                    
+                  </SeriesCollectionDirective>
+                </ChartComponent>
       </Col>
-      <Col xs={12} md={6}>
-        {/* <Card>
-                  <Card.Header className="d-flex align-items-center justify-content-between">
-                    <Card.Title>Occupacy Statics</Card.Title>
-                    <div className="action-wrap">
-                      <div className="action-btn ">
-                        <span className="icon-grid"></span>
-                      </div>
-                      <div className="action-btn active">
-                        <span className="icon-pie-chart"></span>
-                      </div>
-                    </div>
-                  </Card.Header> */}
-        <Card.Body>
-          <div style={{ width: "100%", height: 300 }}>
-            <ResponsiveContainer>
-              <ComposedChart
-                // width={500}
-                height={300}
-                data={compdata}
-                // margin={{
-                //   top: 20, right: 20, bottom: 20, left: 20,
-                // }}
-              >
-                {/* <CartesianGrid stroke="#f5f5f5" /> */}
-                <XAxis dataKey='name' />
-                {/* <YAxis /> */}
-                <Tooltip />
-                <Legend />
-                {/* <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" /> */}
-                <Bar
-                  dataKey='TY'
-                  barSize={20}
-                  fill='#8293b1'
-                  padding={{ left: 10, right: 10 }}
-                />
-                <Bar
-                  dataKey='LY'
-                  barSize={20}
-                  fill='#3269aa'
-                  padding={{ left: 10, right: 10 }}
-                />
-                <Line
-                  type='monotone'
-                  dataKey='Var'
-                  stroke='#2f5891'
-                  strokeDasharray='5 5'
-                />
-                {/* <Line type="monotone" dataKey="amt" stroke="#ff7300" strokeDasharray="5 5"/> */}
-                {/* <Scatter dataKey="cnt" fill="red" /> */}
-              </ComposedChart>
-            </ResponsiveContainer>
-          </div>
-        </Card.Body>
-        {/* </Card> */}
+      <Col xs={12} md={4}>
+      <ChartComponent
+                  id={"occChart2"}
+                  style={{ textAlign: "center" }}
+                  primaryXAxis={{
+                    valueType: "Category",
+                    interval: 1,
+                    majorGridLines: { width: 0 },
+                  }}
+                  primaryYAxis={{
+                    labelFormat: "{value}%",
+                    edgeLabelPlacement: "Shift",
+                    majorGridLines: { width: 0 },
+                    majorTickLines: { width: 0 },
+                    lineStyle: { width: 0 },
+                    labelStyle: {
+                      color: "transparent",
+                    },
+                  }}
+                  chartArea={{ border: { width: 0 } }}
+                  width={Browser.isDevice ? "100%" : "100%"}
+                  height={"250px"}
+                  tooltip={{ enable: true }}>
+                  <Inject services={[ColumnSeries, LineSeries ,DataLabel, Category, Tooltip, Legend]} />
+                  <SeriesCollectionDirective>
+                    <SeriesDirective
+                      dataSource={OCCData2}
+                      xName='name'
+                      yName='TY'
+                      type='Column'
+                      fill={"#8293b1"}
+                      name={"TY"}
+                      width={1}
+                      marker={{
+                        dataLabel: {
+                          visible: true,
+                          position: "Middle",
+                          font: {
+                            fontWeight: "600",
+                            color: "#ffffff",
+                          },
+                        },
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={OCCData2}
+                      xName='name'
+                      yName='LY'
+                      type='Column'
+                      fill={"#3269aa"}
+                      name={"LY"}
+                      width={1}
+                      marker={{
+                        dataLabel: {
+                          visible: true,
+                          position: "Middle",
+                          font: {
+                            fontWeight: "600",
+                            color: "#ffffff",
+                          },
+                        },
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={OCCData2}
+                      xName='name'
+                      yName='Var'
+                      type='Line'
+                      fill={"#2f5891"}
+                      name={"Var"}
+                      width={2}
+                      dashArray='5'
+                      marker={{
+                        visible: true,
+                        width: 10, 
+                        height: 10, 
+                        border: { width: 2, color: '#2f5891' } ,
+                        dataLabel: {
+                                visible: true,
+                                position: "Middle",
+                                font: {
+                                  
+                                  fontWeight: "600",
+                                  color: "#000000",
+                          },
+                            },
+                      }}></SeriesDirective>
+                      
+                  </SeriesCollectionDirective>
+                </ChartComponent>
+       
+        
       </Col>
     </>
   );

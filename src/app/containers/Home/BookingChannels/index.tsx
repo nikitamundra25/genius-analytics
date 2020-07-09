@@ -9,6 +9,7 @@ import {
   PieSeries,
   AccumulationTooltip,
   AccumulationDataLabel,
+  Legend
 } from "@syncfusion/ej2-react-charts";
 
 const data1 = [
@@ -34,7 +35,7 @@ export default (props: any) => {
       <Card.Body>
         <AccumulationChartComponent
           id='pie-chart'
-          legendSettings={{ visible: false }}
+          legendSettings={{ visible: true, position: "Bottom", }}
           enableSmartLabels={true}
           enableAnimation={false}
           center={{ x: "50%", y: "50%" }}
@@ -50,6 +51,7 @@ export default (props: any) => {
               PieSeries,
               AccumulationTooltip,
               AccumulationDataLabel,
+              Legend
             ]}
           />
           <AccumulationSeriesCollectionDirective>

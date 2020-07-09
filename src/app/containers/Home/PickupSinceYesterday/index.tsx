@@ -15,6 +15,9 @@ const BarChartReferenceLine = [
       { x: "FIT", y: 28 },
       { x: "GROUPS", y: -12 },
     ],
+    range:"198",
+    arrowClass:"cui-arrow-top",
+    textClass:"text-success",
   },
   {
     id: "2",
@@ -27,6 +30,9 @@ const BarChartReferenceLine = [
       { x: "FIT", y: 1.1 },
       { x: "GROUPS", y: -1.2 },
     ],
+    range:"2.6",
+    arrowClass:"cui-arrow-bottom",
+    textClass:"text-danger",
   },
   {
     id: "3",
@@ -39,6 +45,9 @@ const BarChartReferenceLine = [
       { x: "FIT", y: 2.8 },
       { x: "GROUPS", y: -1.4 },
     ],
+    range:"19.4 k",
+    arrowClass:"cui-arrow-top",
+    textClass:"text-success",
   },
 ];
 const PickupSinceYesterday: React.FC = (): JSX.Element => {

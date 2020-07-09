@@ -9,6 +9,7 @@ import {
   PieSeries,
   AccumulationTooltip,
   AccumulationDataLabel,
+  Legend,
 } from "@syncfusion/ej2-react-charts";
 
 export const PieChartComponent = (props: any) => {
@@ -48,7 +49,7 @@ export const PieChartComponent = (props: any) => {
               PieSeries,
               AccumulationTooltip,
               AccumulationDataLabel,
-              
+              Legend
             ]}
           />
           <AccumulationSeriesCollectionDirective>

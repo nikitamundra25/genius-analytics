@@ -16,8 +16,8 @@ export default (props: any) => {
   return (
     <>
       {chartDetails.range ? (
-        <div className='text-success h3'>
-          <i className='cui-arrow-top '></i> {chartDetails.range}
+        <div className={`${chartDetails.textClass} h3 px-3 pt-2`}>
+          <i className={`${chartDetails.arrowClass}`}></i> {chartDetails.range}
         </div>
       ) : null}
       <div>

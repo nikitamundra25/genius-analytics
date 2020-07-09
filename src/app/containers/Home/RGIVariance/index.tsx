@@ -1,4 +1,5 @@
 import React from "react";
+import { Card} from "react-bootstrap";
 
 import {
   ChartComponent,
@@ -13,15 +14,22 @@ import {
 } from "@syncfusion/ej2-react-charts";
 import { Browser } from "@syncfusion/ej2-base";
 
-export const RGIBarChartComponent = (props: any) => {
-  const { chartDetails } = props;
 
+const RGIdata = [
+  { x: "RGI", y1: 2,  y2: -1},
+  { x: "ARI", y1: 2,  y2: 3},
+  { x: "MPI", y1: 2 , y2: 1},
+];
+
+export default (props: any) => {
   return (
-   
-      
-      <div>
-        <ChartComponent
-          id={`chart${chartDetails.id}`}
+    <Card>
+      <Card.Header className='d-flex align-items-center justify-content-between'>
+        <Card.Title>RGI YoY Variance</Card.Title>
+      </Card.Header>
+      <Card.Body>
+      <ChartComponent
+          id={`chartRGI`}
           style={{ textAlign: "center" }}
           primaryXAxis={{
             valueType: "Category",
@@ -40,12 +48,12 @@ export const RGIBarChartComponent = (props: any) => {
           }}
           chartArea={{ border: { width: 0 } }}
           width={Browser.isDevice ? "100%" : "100%"}
-          
+          height={"250px"}
           tooltip={{ enable: true }}>
           <Inject services={[BarSeries, DataLabel, Category, Tooltip, Legend]} />
           <SeriesCollectionDirective>
             <SeriesDirective
-              dataSource={chartDetails.data}
+              dataSource={RGIdata}
               xName='x'
               yName='y1'
               type='Bar'
@@ -63,7 +71,7 @@ export const RGIBarChartComponent = (props: any) => {
                 },
               }}></SeriesDirective>
               <SeriesDirective
-              dataSource={chartDetails.data}
+              dataSource={RGIdata}
               xName='x'
               yName='y2'
               type='Bar'
@@ -82,7 +90,7 @@ export const RGIBarChartComponent = (props: any) => {
               }}></SeriesDirective>
           </SeriesCollectionDirective>
         </ChartComponent>
-      </div>
-    
+      </Card.Body>
+    </Card>
   );
 };

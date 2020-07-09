@@ -1,36 +1,40 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import {
-  ResponsiveContainer,
-  Legend,
+  ChartComponent,
+  SeriesCollectionDirective,
+  SeriesDirective,
+  Inject,
+  DataLabel,
+  ColumnSeries,
+  Category,
   Tooltip,
-  Bar,
-  XAxis,
-  Line,
-  ComposedChart,
-} from "recharts";
+  Legend,
+  LineSeries 
+} from "@syncfusion/ej2-react-charts";
+import { Browser } from "@syncfusion/ej2-base";
 
-const compdata2 = [
+const RommTypeData = [
   {
     name: "0BRM",
     OCCTY: 50,
     OCCLY: 64,
-    ADRLY: 134,
-    ADRTY: 111,
+    ADRTY: 134,
+    ADRLY: 111,
   },
   {
     name: "1BRM",
     OCCTY: 88,
     OCCLY: 80,
-    ADRLY: 157,
-    ADRTY: 169,
+    ADRTY: 157,
+    ADRLY: 169,
   },
   {
     name: "2BRM",
     OCCTY: 74,
     OCCLY: 76,
-    ADRLY: 257,
-    ADRTY: 231,
+    ADRTY: 257,
+    ADRLY: 231,
   },
 ];
 export default (props: any) => {
@@ -49,34 +53,118 @@ export default (props: any) => {
           </div>
         </Card.Header>
         <Card.Body>
-          <div style={{ width: "100%", height: 250 }}>
-            <ResponsiveContainer>
-              <ComposedChart height={"250px"} data={compdata2}>
-                <XAxis dataKey='name' />
-                <Tooltip />
-                <Legend />
-                <Bar
-                  dataKey='OCCTY'
-                  barSize={20}
-                  fill='#a1c6d6'
-                  padding={{ left: 10, right: 10 }}
-                />
-                <Bar
-                  dataKey='OCCLY'
-                  barSize={20}
-                  fill='#65adc5'
-                  padding={{ left: 10, right: 10 }}
-                />
-                <Line type='monotone' dataKey='ADRTY' stroke='#1b4479' />
-                <Line
-                  type='monotone'
-                  dataKey='ADRLY'
-                  stroke='#05234e'
-                  strokeDasharray='25 10'
-                />
-              </ComposedChart>
-            </ResponsiveContainer>
-          </div>
+        <ChartComponent
+                  id={"Room-chart"}
+                  style={{ textAlign: "center" }}
+                  primaryXAxis={{
+                    valueType: "Category",
+                    interval: 1,
+                    majorGridLines: { width: 0 },
+                  }}
+                  primaryYAxis={{
+                    labelFormat: "{value}%",
+                    edgeLabelPlacement: "Shift",
+                    majorGridLines: { width: 0 },
+                    majorTickLines: { width: 0 },
+                    lineStyle: { width: 0 },
+                    labelStyle: {
+                      color: "transparent",
+                    },
+                  }}
+                  chartArea={{ border: { width: 0 } }}
+                  width={Browser.isDevice ? "100%" : "100%"}
+                  height={"250px"}
+                  tooltip={{ enable: true }}>
+                  <Inject services={[ColumnSeries, LineSeries ,DataLabel, Category, Tooltip, Legend]} />
+                  <SeriesCollectionDirective>
+                    <SeriesDirective
+                      dataSource={RommTypeData}
+                      xName='name'
+                      yName='OCCTY'
+                      type='Column'
+                      fill={"#a1c6d6"}
+                      name={"OCC TY"}
+                      width={1}
+                      marker={{
+                        dataLabel: {
+                          visible: true,
+                          position: "Bottom",
+                          font: {
+                            fontWeight: "600",
+                            color: "#ffffff",
+                          },
+                        },
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={RommTypeData}
+                      xName='name'
+                      yName='OCCLY'
+                      type='Column'
+                      fill={"#65adc5"}
+                      name={"OCC LY"}
+                      width={1}
+                      marker={{
+                        dataLabel: {
+                          visible: true,
+                          position: "Top",
+                          font: {
+                            fontWeight: "600",
+                            color: "#ffffff",
+                          },
+                        },
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={RommTypeData}
+                      xName='name'
+                      yName='ADRTY'
+                      type='Line'
+                      fill={"#1b4479"}
+                      name={"ADR TY"}
+                      width={2}
+                      marker={{
+                        visible: true,
+                        width: 10, 
+                        height: 10, 
+                        border: { width: 2, color: '#1b4479' } ,
+                        dataLabel: {
+                          visible: true,
+                          position: "Middle",
+                          font: {
+                            
+                            fontWeight: "600",
+                            color: "#000000",
+                    },
+                      },
+                      }}></SeriesDirective>
+                      <SeriesDirective
+                      dataSource={RommTypeData}
+                      xName='name'
+                      yName='ADRLY'
+                      type='Line'
+                      fill={"#05234e"}
+                      name={"ADR LY"}
+                      width={2}
+                      dashArray='5'
+                      marker={{
+                        visible: true,
+                        width: 10, 
+                        height: 10, 
+                        border: { width: 2, color: '#05234e' } ,
+                        dataLabel: {
+                          visible: true,
+                          position: "Middle",
+                          font: {
+                            
+                            fontWeight: "600",
+                            color: "#000000",
+                    },
+                      },
+                      }}
+                      ></SeriesDirective>
+                     
+                  </SeriesCollectionDirective>
+                </ChartComponent>
+          
         </Card.Body>
       </Card>
     </>

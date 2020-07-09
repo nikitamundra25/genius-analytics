@@ -66,6 +66,7 @@ export default (props: any) => {
                     color: "transparent",
                   },
                 }}
+                title={"Business Mix %"}
                 chartArea={{ border: { width: 0 } }}
                 width={Browser.isDevice ? "100%" : "100%"}
                 height={"250px"}
@@ -115,6 +116,7 @@ export default (props: any) => {
                     color: "transparent",
                   },
                 }}
+                title={"Business Mix ADR"}
                 chartArea={{ border: { width: 0 } }}
                 width={Browser.isDevice ? "100%" : "100%"}
                 height={"250px"}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import WorldMap from "./Charts/WorldMap";
+// import WorldMap from "./Charts/WorldMap";
 const BOB = React.lazy(() => import("./BOB"));
 const KeyBusinessMetrics = React.lazy(() => import("./KeyBusinessMetrics"));
 const PickupSinceYesterday = React.lazy(() => import("./PickupSinceYesterday"));
@@ -10,6 +10,7 @@ const RoomTypeStatics = React.lazy(() => import("./RoomTypeStatics"));
 const BookingChannels = React.lazy(() => import("./BookingChannels"));
 const GeoBusiness = React.lazy(() => import("./GeoBusiness"));
 const MTDPerformance = React.lazy(() => import("./MTDPerformance"));
+const RGIVariance = React.lazy(() => import("./RGIVariance"));
 
 const getChart = (chartType: any) => {
   switch (chartType.name) {
@@ -39,19 +40,19 @@ const getChart = (chartType: any) => {
       );
     case "Business Mix":
       return (
-        <Col xs={12} md={4}>
+        <Col xs={12} md={6}>
           <BusinessMixComponent />
         </Col>
       );
     case "Room Type Statics":
       return (
-        <Col xs={12} md={4}>
+        <Col xs={12} md={6}>
           <RoomTypeStatics />
         </Col>
       );
     case "Booking Channel Mix":
       return (
-        <Col xs={12} md={4}>
+        <Col xs={12} md={6}>
           <BookingChannels />
         </Col>
       );
@@ -63,14 +64,14 @@ const getChart = (chartType: any) => {
       );
     case "MTD RGI Performance":
       return (
-        <Col xs={12} md={6}>
-          <WorldMap />
+        <Col xs={12} md={8}>
+           <MTDPerformance key={"rgi"} />
         </Col>
       );
     case "RGI YoY Variance":
       return (
-        <Col xs={12} md={12}>
-          <MTDPerformance key={"rgi"} />
+        <Col xs={12} md={4}>
+          <RGIVariance  />
         </Col>
       );
 
