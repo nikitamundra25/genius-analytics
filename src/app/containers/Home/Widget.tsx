@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
+import WorldMap from "./Charts/WorldMap";
 const BOB = React.lazy(() => import("./BOB"));
 const KeyBusinessMetrics = React.lazy(() => import("./KeyBusinessMetrics"));
 const PickupSinceYesterday = React.lazy(() => import("./PickupSinceYesterday"));
@@ -63,7 +64,7 @@ const getChart = (chartType: any) => {
     case "MTD RGI Performance":
       return (
         <Col xs={12} md={6}>
-          <MTDPerformance key={"rgp"} />
+          <WorldMap />
         </Col>
       );
     case "RGI YoY Variance":
