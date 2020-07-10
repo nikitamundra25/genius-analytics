@@ -1,7 +1,10 @@
 import React from "react";
 import { Row, Card, Col } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
-const MixedCharts = React.lazy(() => import("../Charts/MixedCharts"));
+import WidgetHeader from "../../../components/WidgetHeader";
+const MixedCharts = React.lazy(() =>
+  import("../../../components/Charts/MixedCharts")
+);
 const OCCData1 = [
   {
     name: "Mon",
@@ -196,17 +199,7 @@ const OccupencyStatitics = () => {
   return (
     <>
       <Card>
-        <Card.Header className='d-flex align-items-center justify-content-between'>
-          <Card.Title>Occupacy Statics</Card.Title>
-          <div className='action-wrap'>
-            <div className='action-btn '>
-              <span className='icon-grid'></span>
-            </div>
-            <div className='action-btn active'>
-              <span className='icon-pie-chart'></span>
-            </div>
-          </div>
-        </Card.Header>
+        <WidgetHeader title={"Occupacy Statics"} activeToggle={"graph"} />
         <Row className='row-inner'>
           <Col sm={6}>
             <React.Suspense fallback={<Loader />}>

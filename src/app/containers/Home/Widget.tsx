@@ -10,6 +10,7 @@ import BookingChannels from "./BookingChannels";
 import GeoBusiness from "./GeoBusiness";
 import MTDPerformance from "./MTDPerformance";
 import RGIVariance from "./RGIVariance";
+import { IDashboardWidgetProps } from "../../../interfaces";
 
 const getChart = (chartType: any) => {
   switch (chartType.name) {
@@ -79,7 +80,7 @@ const getChart = (chartType: any) => {
   }
 };
 
-const DashboardWidget = ({ graphList }: { graphList: any[] }) => {
+const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   return (
     <Row>
       {graphList.map((chartConfig: any, index: number) => {
