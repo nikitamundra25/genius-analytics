@@ -1,82 +1,109 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import {
-  ResponsiveContainer,
-  Legend,
-  Tooltip,
-  Bar,
-  XAxis,
-  Line,
-  ComposedChart,
-} from "recharts";
+import Loader from "../../../components/Loader/Loader";
+import WidgetHeader from "../../../components/WidgetHeader";
+const MixedCharts = React.lazy(() =>
+  import("../../../components/Charts/MixedCharts")
+);
 
-const compdata2 = [
+const RommTypeData = [
   {
     name: "0BRM",
     OCCTY: 50,
     OCCLY: 64,
-    ADRLY: 134,
-    ADRTY: 111,
+    ADRTY: 134,
+    ADRLY: 111,
   },
   {
     name: "1BRM",
     OCCTY: 88,
     OCCLY: 80,
-    ADRLY: 157,
-    ADRTY: 169,
+    ADRTY: 157,
+    ADRLY: 169,
   },
   {
     name: "2BRM",
     OCCTY: 74,
     OCCLY: 76,
-    ADRLY: 257,
-    ADRTY: 231,
+    ADRTY: 257,
+    ADRLY: 231,
+  },
+];
+const Charts = [
+  {
+    dataSource: RommTypeData,
+    xName: "name",
+    yName: "OCCTY",
+    type: "Column",
+    fill: "#a1c6d6",
+    name: "OCC TY",
+    width: 1,
+  },
+  {
+    dataSource: RommTypeData,
+    xName: "name",
+    yName: "OCCLY",
+    type: "Column",
+    fill: "#65adc5",
+    name: "OCC LY",
+    width: 1,
+  },
+  {
+    dataSource: RommTypeData,
+    xName: "name",
+    yName: "ADRLY",
+    type: "Line",
+    fill: "#05234e",
+    name: "ADR LY",
+    width: 2,
+    dashArray: 5,
+    marker: {
+      visible: true,
+      width: 10,
+      height: 10,
+      border: { width: 2, color: "#05234e" },
+      dataLabel: {
+        visible: true,
+        position: "Top",
+        font: {
+          fontWeight: "600",
+          color: "#000000",
+        },
+      },
+    },
   },
 ];
 export default (props: any) => {
   return (
     <>
       <Card>
-        <Card.Header className='d-flex align-items-center justify-content-between'>
-          <Card.Title>Room Type Statics</Card.Title>
-          <div className='action-wrap'>
-            <div className='action-btn '>
-              <span className='icon-grid'></span>
-            </div>
-            <div className='action-btn active'>
-              <span className='icon-pie-chart'></span>
-            </div>
-          </div>
-        </Card.Header>
+        <WidgetHeader title={"Room Type Statics"} activeToggle={"graph"} />
         <Card.Body>
-          <div style={{ width: "100%", height: 250 }}>
-            <ResponsiveContainer>
-              <ComposedChart height={"250px"} data={compdata2}>
-                <XAxis dataKey='name' />
-                <Tooltip />
-                <Legend />
-                <Bar
-                  dataKey='OCCTY'
-                  barSize={20}
-                  fill='#a1c6d6'
-                  padding={{ left: 10, right: 10 }}
-                />
-                <Bar
-                  dataKey='OCCLY'
-                  barSize={20}
-                  fill='#65adc5'
-                  padding={{ left: 10, right: 10 }}
-                />
-                <Line type='monotone' dataKey='ADRTY' stroke='#1b4479' />
-                <Line
-                  type='monotone'
-                  dataKey='ADRLY'
-                  stroke='#05234e'
-                  strokeDasharray='25 10'
-                />
-              </ComposedChart>
-            </ResponsiveContainer>
-          </div>
+          <React.Suspense fallback={<Loader />}>
+            <MixedCharts
+              id='room-type'
+              charts={Charts}
+              chartSettings={{
+                primaryXAxis: {
+                  valueType: "Category",
+                  interval: 1,
+                  majorGridLines: { width: 0 },
+                },
+                primaryYAxis: {
+                  labelFormat: "{value}%",
+                  edgeLabelPlacement: "Shift",
+                  majorGridLines: { width: 0 },
+                  majorTickLines: { width: 0 },
+                  lineStyle: { width: 0 },
+                  labelStyle: {
+                    color: "transparent",
+                  },
+                },
+                tooltip: { enable: true },
+              }}
+            />
+            {/* <SeriesChart data={RommTypeData} /> */}
+          </React.Suspense>
         </Card.Body>
       </Card>
     </>

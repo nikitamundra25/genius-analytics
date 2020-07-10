@@ -1,6 +1,10 @@
 import React from "react";
 import { Col, Card, Row } from "react-bootstrap";
-const BarChartComponent = React.lazy(() => import("../Charts/BarChart"));
+import Loader from "../../../components/Loader/Loader";
+import WidgetHeader from "../../../components/WidgetHeader";
+const BarChartComponent = React.lazy(() =>
+  import("../../../components/Charts/BarChart")
+);
 
 const barChartBusinessMetrics = [
   {
@@ -52,23 +56,35 @@ const barChartBusinessMetrics = [
 const KeyBusinessMetrics: React.FC = (): JSX.Element => {
   return (
     <Card>
-      <Card.Header className='d-flex align-items-center justify-content-between'>
-        <Card.Title>Key Business Metrics</Card.Title>
-        <div className='action-wrap'>
-          <div className='action-btn '>
-            <span className='icon-grid'></span>
-          </div>
-          <div className='action-btn active'>
-            <span className='icon-pie-chart'></span>
-          </div>
-        </div>
-      </Card.Header>
+      <WidgetHeader title={"Key Business Metrics"} activeToggle={"graph"} />
       <Row className='row-inner'>
         {barChartBusinessMetrics.map((key: any, index: number) => {
           return (
             <Col key={index} sm={3} md={3}>
-              {" "}
-              <BarChartComponent barChart={key} />
+              <React.Suspense fallback={<Loader />}>
+                <BarChartComponent
+                  chartSettings={{
+                    primaryXAxis: {
+                      valueType: "Category",
+                      interval: 1,
+                      majorGridLines: { width: 0 },
+                    },
+                    primaryYAxis: {
+                      labelFormat: "{value}%",
+                      edgeLabelPlacement: "Shift",
+                      majorGridLines: { width: 0 },
+                      majorTickLines: { width: 0 },
+                      lineStyle: { width: 0 },
+                      labelStyle: {
+                        color: "transparent",
+                      },
+                    },
+                    title: key.title,
+                    tooltip: { enable: true },
+                  }}
+                  {...key}
+                />
+              </React.Suspense>
             </Col>
           );
         })}

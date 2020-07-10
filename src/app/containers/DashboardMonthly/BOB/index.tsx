@@ -1,27 +1,25 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-const WorldMap = () => {
+// import TableForm from "../Tables/TableForm";
+
+const BOB: React.FC = (): JSX.Element => {
   return (
     <Card>
       <Card.Header className='d-flex align-items-center justify-content-between'>
-        <Card.Title>Booking Channel Mix </Card.Title>
+        <Card.Title>Business on the Books</Card.Title>
         <div className='action-wrap'>
-          <div className='action-btn '>
+          <div className='action-btn active'>
             <span className='icon-grid'></span>
           </div>
-          <div className='action-btn active'>
+          <div className='action-btn'>
             <span className='icon-pie-chart'></span>
           </div>
         </div>
       </Card.Header>
       <Card.Body>
-        <div id='container'>
-          {/* use from here https://ej2.syncfusion.com/react/demos/#/material/maps/legend */}
-          Map Goes Here
-        </div>
+        {/* <TableForm /> */}
       </Card.Body>
     </Card>
   );
 };
-
-export default WorldMap;
+export default BOB;

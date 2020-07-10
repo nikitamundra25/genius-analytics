@@ -1,0 +1,14 @@
+{
+  "graphCard": [
+    { "name": "Business on the Books", "id": 1 },
+    { "name": "Monthly OCC & ADR", "id": 2 },
+    { "name": "Quarterly OCC & ADR", "id": 3 },
+    { "name": "Room Types - YTD", "id": 4 },
+    { "name": "RevPAR Vs. NRevPAR - YTD", "id": 5 },
+    { "name": "Length of Stay & ADR - YTD", "id": 6 },
+    { "name": "Lead Times YTD", "id": 7 },
+    { "name": "Lead Times YTD by Segment", "id": 8 },
+    { "name": "RGI Performance  - YTD", "id": 9 }
+    
+  ]
+}

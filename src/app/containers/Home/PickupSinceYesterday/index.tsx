@@ -1,8 +1,11 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
-const BarChartReferenceLineComponent = React.lazy(() =>
-  import("../Charts/BarChartsReferenceLine")
+import Loader from "../../../components/Loader/Loader";
+import WidgetHeader from "../../../components/WidgetHeader";
+const ColumnChart = React.lazy(() =>
+  import("../../../components/Charts/ColumnChart")
 );
+
 const BarChartReferenceLine = [
   {
     id: "1",
@@ -15,6 +18,9 @@ const BarChartReferenceLine = [
       { x: "FIT", y: 28 },
       { x: "GROUPS", y: -12 },
     ],
+    range: "198",
+    arrowClass: "cui-arrow-top",
+    textClass: "text-success",
   },
   {
     id: "2",
@@ -27,6 +33,9 @@ const BarChartReferenceLine = [
       { x: "FIT", y: 1.1 },
       { x: "GROUPS", y: -1.2 },
     ],
+    range: "2.6",
+    arrowClass: "cui-arrow-bottom",
+    textClass: "text-danger",
   },
   {
     id: "3",
@@ -39,32 +48,45 @@ const BarChartReferenceLine = [
       { x: "FIT", y: 2.8 },
       { x: "GROUPS", y: -1.4 },
     ],
+    range: "19.4 k",
+    arrowClass: "cui-arrow-top",
+    textClass: "text-success",
   },
 ];
 const PickupSinceYesterday: React.FC = (): JSX.Element => {
   return (
     <Card>
-      <Card.Header className='d-flex align-items-center justify-content-between'>
-        <Card.Title>Pick up Since Yesterday</Card.Title>
-        <div className='action-wrap'>
-          <div className='action-btn '>
-            <span className='icon-grid'></span>
-          </div>
-          <div className='action-btn active'>
-            <span className='icon-pie-chart'></span>
-          </div>
-        </div>
-      </Card.Header>
+      <WidgetHeader title={"Pick up Since Yesterday"} activeToggle={"graph"} />
 
-      <Row className='row-inner'>
-        {BarChartReferenceLine.map((key: any, index: number) => {
-          return (
-            <Col xs={12} md={4} key={index}>
-              <BarChartReferenceLineComponent chartDetails={key} />
-            </Col>
-          );
-        })}
-      </Row>
+      <Card.Body>
+        <Row className='row-inner'>
+          {BarChartReferenceLine.map((key: any, index: number) => {
+            return (
+              <Col xs={12} md={4} key={index}>
+                <React.Suspense fallback={<Loader />}>
+                  <ColumnChart
+                    {...key}
+                    chartSettings={{
+                      primaryXAxis: {
+                        valueType: "Category",
+                        interval: 1,
+                        majorGridLines: { width: 0 },
+                      },
+                      primaryYAxis: {
+                        majorGridLines: { width: 0 },
+                        majorTickLines: { width: 0 },
+                        lineStyle: { width: 0 },
+                        labelStyle: { color: "transparent" },
+                      },
+                      tooltip: { enable: true },
+                    }}
+                  />
+                </React.Suspense>
+              </Col>
+            );
+          })}
+        </Row>
+      </Card.Body>
     </Card>
   );
 };

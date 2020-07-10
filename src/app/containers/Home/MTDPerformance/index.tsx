@@ -1,7 +1,9 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
-const BarChartColumnComponent = React.lazy(() =>
-  import("../Charts/BarChartcolumn")
+import Loader from "../../../components/Loader/Loader";
+import WidgetHeader from "../../../components/WidgetHeader";
+const BarChartComponent = React.lazy(() =>
+  import("../../../components/Charts/BarChart")
 );
 
 const RTGBarChart = [
@@ -40,16 +42,38 @@ const RTGBarChart = [
 export default (props: any) => {
   return (
     <Card>
-      <Card.Header className='d-flex align-items-center justify-content-between'>
-        <Card.Title>MTD RGI Performance</Card.Title>
-      </Card.Header>
+      <WidgetHeader title={"MTD RGI Performance"} />
       <Card.Body>
         <Row>
           {RTGBarChart.map((key: any, index: number) => {
             return (
               <Col key={index} sm={4} md={4}>
-                {" "}
-                <BarChartColumnComponent key={index} chartDetails1={key} />
+                <React.Suspense fallback={<Loader />}>
+                <BarChartComponent
+                  chartSettings={{
+                    primaryXAxis: {
+                      valueType: "Category",
+                      interval: 1,
+                      majorGridLines: { width: 0 },
+                    },
+                    primaryYAxis: {
+                      labelFormat: "{value}%",
+                      edgeLabelPlacement: "Shift",
+                      majorGridLines: { width: 0 },
+                      majorTickLines: { width: 0 },
+                      lineStyle: { width: 0 },
+                      labelStyle: {
+                        color: "transparent",
+                      },
+                    },
+                    title: key.title,
+                    tooltip: { enable: true },
+                  }}
+                  key={index}
+                  {...key}
+                />
+                  
+                </React.Suspense>
               </Col>
             );
           })}

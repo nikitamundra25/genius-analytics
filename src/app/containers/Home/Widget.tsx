@@ -1,15 +1,16 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import WorldMap from "./Charts/WorldMap";
-const BOB = React.lazy(() => import("./BOB"));
-const KeyBusinessMetrics = React.lazy(() => import("./KeyBusinessMetrics"));
-const PickupSinceYesterday = React.lazy(() => import("./PickupSinceYesterday"));
-const OccupencyStatitics = React.lazy(() => import("./OccupencyStatitics"));
-const BusinessMixComponent = React.lazy(() => import("./BusinessMix"));
-const RoomTypeStatics = React.lazy(() => import("./RoomTypeStatics"));
-const BookingChannels = React.lazy(() => import("./BookingChannels"));
-const GeoBusiness = React.lazy(() => import("./GeoBusiness"));
-const MTDPerformance = React.lazy(() => import("./MTDPerformance"));
+import BOB from "./BOB";
+import KeyBusinessMetrics from "./KeyBusinessMetrics";
+import PickupSinceYesterday from "./PickupSinceYesterday";
+import OccupencyStatitics from "./OccupencyStatitics";
+import BusinessMixComponent from "./BusinessMix";
+import RoomTypeStatics from "./RoomTypeStatics";
+import BookingChannels from "./BookingChannels";
+import GeoBusiness from "./GeoBusiness";
+import MTDPerformance from "./MTDPerformance";
+import RGIVariance from "./RGIVariance";
+import { IDashboardWidgetProps } from "../../../interfaces";
 
 const getChart = (chartType: any) => {
   switch (chartType.name) {
@@ -39,19 +40,19 @@ const getChart = (chartType: any) => {
       );
     case "Business Mix":
       return (
-        <Col xs={12} md={4}>
+        <Col xs={12} md={6}>
           <BusinessMixComponent />
         </Col>
       );
     case "Room Type Statics":
       return (
-        <Col xs={12} md={4}>
+        <Col xs={12} md={6}>
           <RoomTypeStatics />
         </Col>
       );
     case "Booking Channel Mix":
       return (
-        <Col xs={12} md={4}>
+        <Col xs={12} md={6}>
           <BookingChannels />
         </Col>
       );
@@ -63,14 +64,14 @@ const getChart = (chartType: any) => {
       );
     case "MTD RGI Performance":
       return (
-        <Col xs={12} md={6}>
-          <WorldMap />
+        <Col xs={12} md={8}>
+          <MTDPerformance key={"rgi"} />
         </Col>
       );
     case "RGI YoY Variance":
       return (
-        <Col xs={12} md={12}>
-          <MTDPerformance key={"rgi"} />
+        <Col xs={12} md={4}>
+          <RGIVariance />
         </Col>
       );
 
@@ -79,16 +80,12 @@ const getChart = (chartType: any) => {
   }
 };
 
-const DashboardWidget = ({ graphList }: { graphList: any[] }) => {
+const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   return (
     <Row>
       {graphList.map((chartConfig: any, index: number) => {
         return (
-          <React.Fragment key={index}>
-            <React.Suspense fallback={"Loading.."}>
-              {getChart(chartConfig)}
-            </React.Suspense>
-          </React.Fragment>
+          <React.Fragment key={index}>{getChart(chartConfig)}</React.Fragment>
         );
       })}
     </Row>
