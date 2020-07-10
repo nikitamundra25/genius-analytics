@@ -149,9 +149,10 @@ export default (props: any) => {
                       width={1}
                       dashArray='5'
                       marker={{
+                        visible: false,
                         dataLabel: {
                           visible: true,
-                          position: "Middle",
+                          position: "Bottom",
                           font: {
                             fontWeight: "600",
                             color: "#ffffff",
@@ -168,13 +169,13 @@ export default (props: any) => {
                       width={2}
                       dashArray='5'
                       marker={{
-                        visible: true,
+                        visible: false,
                         width: 10, 
                         height: 10, 
                         border: { width: 2, color: '#2bb5ec' } ,
                         dataLabel: {
                           visible: true,
-                          position: "Middle",
+                          position: "Top",
                           font: {
                             
                             fontWeight: "600",
@@ -286,10 +287,11 @@ export default (props: any) => {
                         visible: true,
                         width: 10, 
                         height: 10, 
-                        border: { width: 2, color: '#2f5891' } ,
+                        fill:'#2f5891',
+                        border: { width: 1, color: '#ddd' } ,
                         dataLabel: {
                                 visible: true,
-                                position: "Middle",
+                                position: "Top",
                                 font: {
                                   
                                   fontWeight: "600",

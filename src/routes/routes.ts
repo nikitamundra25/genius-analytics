@@ -3,7 +3,7 @@ import { AppRoutes } from "../config";
 
 const Home = React.lazy(() => import("../app/containers/Home"));
 const DashboardMonthly = React.lazy(() =>
-  import("../app/containers/Home/DashboardMonthly")
+  import("../app/containers/DashboardMonthly")
 );
 const DashboardYearly = React.lazy(() =>
   import("../app/containers/Home/DashboardYearly")

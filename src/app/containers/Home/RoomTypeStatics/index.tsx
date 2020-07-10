@@ -106,7 +106,7 @@ export default (props: any) => {
                       marker={{
                         dataLabel: {
                           visible: true,
-                          position: "Top",
+                          position: "Bottom",
                           font: {
                             fontWeight: "600",
                             color: "#ffffff",
@@ -128,7 +128,7 @@ export default (props: any) => {
                         border: { width: 2, color: '#1b4479' } ,
                         dataLabel: {
                           visible: true,
-                          position: "Middle",
+                          position: "Top",
                           font: {
                             
                             fontWeight: "600",
@@ -152,15 +152,14 @@ export default (props: any) => {
                         border: { width: 2, color: '#05234e' } ,
                         dataLabel: {
                           visible: true,
-                          position: "Middle",
+                          position: "Top",
                           font: {
                             
                             fontWeight: "600",
                             color: "#000000",
                     },
                       },
-                      }}
-                      ></SeriesDirective>
+                    }} ></SeriesDirective>
                      
                   </SeriesCollectionDirective>
                 </ChartComponent>

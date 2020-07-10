@@ -51,7 +51,7 @@ export const BarChartComponent = (props: any) => {
             marker={{
               dataLabel: {
                 visible: true,
-                position: "Top",
+                position: "Middle",
                 font: {
                   fontWeight: "600",
                   color: "#ffffff",

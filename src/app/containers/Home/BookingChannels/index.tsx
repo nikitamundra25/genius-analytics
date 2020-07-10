@@ -12,7 +12,7 @@ import {
   Legend
 } from "@syncfusion/ej2-react-charts";
 
-const data1 = [
+const data = [
   { x: "Brand.com", y: 27, text: "27%" },
   { x: "OTA", y: 38, text: "38%" },
   { x: "GDS", y: 20, text: "20%" },
@@ -56,7 +56,7 @@ export default (props: any) => {
           />
           <AccumulationSeriesCollectionDirective>
             <AccumulationSeriesDirective
-              dataSource={data1}
+              dataSource={data}
               name='Browser'
               xName='x'
               yName='y'

@@ -63,10 +63,10 @@ export default (props: any) => {
               marker={{
                 dataLabel: {
                   visible: true,
-                  position: "Bottom",
+                  rx: 10, ry: 10,
                   font: {
                     fontWeight: "600",
-                    color: "#ffffff",
+                    color: "#000",
                   },
                 },
               }}></SeriesDirective>
@@ -81,10 +81,10 @@ export default (props: any) => {
               marker={{
                 dataLabel: {
                   visible: true,
-                  position: "Top",
+                  rx: 10, ry: 10,
                   font: {
                     fontWeight: "600",
-                    color: "#ffffff",
+                    color: "#000",
                   },
                 },
               }}></SeriesDirective>
