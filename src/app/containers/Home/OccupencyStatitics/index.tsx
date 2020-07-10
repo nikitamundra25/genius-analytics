@@ -201,7 +201,7 @@ const OccupencyStatitics = () => {
       <Card>
         <WidgetHeader title={"Occupacy Statics"} activeToggle={"graph"} />
         <Row className='row-inner'>
-          <Col sm={6}>
+          <Col sm={7}>
             <React.Suspense fallback={<Loader />}>
               <MixedCharts
                 id={"line-and-column"}
@@ -227,7 +227,7 @@ const OccupencyStatitics = () => {
               />
             </React.Suspense>
           </Col>
-          <Col sm={6}>
+          <Col sm={5}>
             <MixedCharts
               id={"line-and-bar"}
               charts={Charts2}

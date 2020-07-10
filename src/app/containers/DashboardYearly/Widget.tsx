@@ -1,56 +1,68 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 // import WorldMap from "./Charts/WorldMap";
-const BOB = React.lazy(() => import("./BOB"));
-const MonthlyDailyOccupacy = React.lazy(() => import("./MonthlyDailyOccupacy"));
-const DailyOccupacy = React.lazy(() => import("./DailyOccupacy"));
-const RateCodeStatistics = React.lazy(() => import("./RateCodeStatistics"));
-const MarketSegmentation = React.lazy(() => import("./MarketSegmentation"));
-const RoomTypeStatistics = React.lazy(() => import("./RoomTypeStatistics"));
-const BookingChannel = React.lazy(() => import("./BookingChannel"));
+// const BOB = React.lazy(() => import("./BOB"));
+// const MonthlyDailyOccupacy = React.lazy(() => import("./MonthlyDailyOccupacy"));
+// const DailyOccupacy = React.lazy(() => import("./DailyOccupacy"));
+// const RateCodeStatistics = React.lazy(() => import("./RateCodeStatistics"));
+// const MarketSegmentation = React.lazy(() => import("./MarketSegmentation"));
+// const RoomTypeStatistics = React.lazy(() => import("./RoomTypeStatistics"));
+// const BookingChannel = React.lazy(() => import("./BookingChannel"));
 
 const getChart = (chartType: any) => {
   switch (chartType.name) {
     case "Business on the Books":
       return (
         <Col xs={12} md={12}>
-          <BOB />
+          {/* <BOB /> */}
         </Col>
       );
-    case "Monthly Daily Occupacy & ADR":
+    case "Monthly OCC & ADR":
       return (
         <Col xs={12} md={12}>
-          <MonthlyDailyOccupacy />
+          {/* <MonthlyDailyOccupacy /> */}
         </Col>
       );
-    case "Daily Occupacy Vs. BUD Vs. LY":
+    case "Quarterly OCC & ADR":
       return (
         <Col xs={12} md={8}>
-          <DailyOccupacy />
+          {/* <DailyOccupacy /> */}
         </Col>
       );
-    case "Rate Code Statistics":
+    case "Room Types - YTD":
       return (
         <Col xs={12} md={4}>
-          <RateCodeStatistics />
+          {/* <RateCodeStatistics /> */}
         </Col>
       );
-    case "Market Segmentation":
+    case "RevPAR Vs. NRevPAR - YTD":
       return (
         <Col xs={12} md={4}>
-          <MarketSegmentation />
+          {/* <MarketSegmentation /> */}
         </Col>
       );
-    case "Room Type Statistics":
+    case "Length of Stay & ADR - YTD":
       return (
         <Col xs={12} md={4}>
-          <RoomTypeStatistics />
+          {/* <RoomTypeStatistics /> */}
         </Col>
       );
-    case "Booking Channel":
+    case "Lead Times YTD":
       return (
         <Col xs={12} md={4}>
-          <BookingChannel />
+          {/* <BookingChannel /> */}
+        </Col>
+      );
+      case "Lead Times YTD by Segment":
+      return (
+        <Col xs={12} md={4}>
+          {/* <BookingChannel /> */}
+        </Col>
+      );
+      case "RGI Performance  - YTD":
+      return (
+        <Col xs={12} md={4}>
+          {/* <BookingChannel /> */}
         </Col>
       );
     default:

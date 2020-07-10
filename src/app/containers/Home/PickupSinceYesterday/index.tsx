@@ -78,6 +78,7 @@ const PickupSinceYesterday: React.FC = (): JSX.Element => {
                         lineStyle: { width: 0 },
                         labelStyle: { color: "transparent" },
                       },
+                      tooltip: { enable: true },
                     }}
                   />
                 </React.Suspense>
