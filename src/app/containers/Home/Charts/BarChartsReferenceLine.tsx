@@ -11,41 +11,10 @@ import {
 } from "@syncfusion/ej2-react-charts";
 import { Browser } from "@syncfusion/ej2-base";
 
-export const BarChartReferenceLineComponent = (props: any) => {
+export default (props: any) => {
   const { chartDetails } = props;
   return (
     <>
-      {/*        
-          <Card.Header className="d-flex align-items-center justify-content-between">
-            <Card.Title>{chartDetails.title} </Card.Title>
-            
-          </Card.Header> */}
-      {/* <Card.Body>
-            {chartDetails.range ? (
-              <div className="text-success h3">
-                <i className="cui-arrow-top "></i> {chartDetails.range}
-              </div>
-            ) : null}
-            <div style={{ width: "100%", height: chartDetails.height }}>
-              <ResponsiveContainer>
-                <BarChart
-                  width={chartDetails.width}
-                  height={chartDetails.height}
-                  data={chartDetails.data}
-                  barSize={chartDetails.barSize ? chartDetails.barSize : 15}
-                >
-                  
-                  <XAxis dataKey="name" />
-                  {chartDetails.isYAxis ? <YAxis /> : null}
-                  <Tooltip />
-
-                  <ReferenceLine y={0} stroke="#000" />
-
-                  <Bar dataKey="uv" fill={chartDetails.fill} />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-          </Card.Body> */}
       {chartDetails.range ? (
         <div className='text-success h3'>
           <i className='cui-arrow-top '></i> {chartDetails.range}
@@ -68,7 +37,8 @@ export const BarChartReferenceLineComponent = (props: any) => {
           }}
           chartArea={{ border: { width: 0 } }}
           tooltip={{ enable: true }}
-          width={Browser.isDevice ? "100%" : "100%"}>
+          width={Browser.isDevice ? "100%" : "100%"}
+          height={"250px"}>
           <Inject services={[ColumnSeries, Tooltip, Category, DataLabel]} />
           <SeriesCollectionDirective>
             <SeriesDirective
