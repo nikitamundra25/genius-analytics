@@ -11,8 +11,7 @@ import {
 } from "@syncfusion/ej2-react-charts";
 import { Browser } from "@syncfusion/ej2-base";
 
-export const BarChartComponent = (props: any) => {
-  const { barChart } = props;
+export const BarChartComponent = (barChart: any) => {
   return (
     <div>
       <ChartComponent

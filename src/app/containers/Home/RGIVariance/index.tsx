@@ -1,5 +1,5 @@
 import React from "react";
-import { Card} from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 import {
   ChartComponent,
@@ -10,15 +10,14 @@ import {
   BarSeries,
   Category,
   Tooltip,
-  Legend
+  Legend,
 } from "@syncfusion/ej2-react-charts";
 import { Browser } from "@syncfusion/ej2-base";
 
-
 const RGIdata = [
-  { x: "RGI", y1: 2,  y2: -1},
-  { x: "ARI", y1: 2,  y2: 3},
-  { x: "MPI", y1: 2 , y2: 1},
+  { x: "RGI", y1: 2, y2: -1 },
+  { x: "ARI", y1: 2, y2: 3 },
+  { x: "MPI", y1: 2, y2: 1 },
 ];
 
 export default (props: any) => {
@@ -28,7 +27,7 @@ export default (props: any) => {
         <Card.Title>RGI YoY Variance</Card.Title>
       </Card.Header>
       <Card.Body>
-      <ChartComponent
+        <ChartComponent
           id={`chartRGI`}
           style={{ textAlign: "center" }}
           primaryXAxis={{
@@ -50,7 +49,9 @@ export default (props: any) => {
           width={Browser.isDevice ? "100%" : "100%"}
           height={"250px"}
           tooltip={{ enable: true }}>
-          <Inject services={[BarSeries, DataLabel, Category, Tooltip, Legend]} />
+          <Inject
+            services={[BarSeries, DataLabel, Category, Tooltip, Legend]}
+          />
           <SeriesCollectionDirective>
             <SeriesDirective
               dataSource={RGIdata}
@@ -63,14 +64,15 @@ export default (props: any) => {
               marker={{
                 dataLabel: {
                   visible: true,
-                  rx: 10, ry: 10,
+                  rx: 10,
+                  ry: 10,
                   font: {
                     fontWeight: "600",
                     color: "#000",
                   },
                 },
               }}></SeriesDirective>
-              <SeriesDirective
+            <SeriesDirective
               dataSource={RGIdata}
               xName='x'
               yName='y2'
@@ -81,7 +83,8 @@ export default (props: any) => {
               marker={{
                 dataLabel: {
                   visible: true,
-                  rx: 10, ry: 10,
+                  rx: 10,
+                  ry: 10,
                   font: {
                     fontWeight: "600",
                     color: "#000",

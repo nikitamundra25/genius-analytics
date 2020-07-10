@@ -1,16 +1,15 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-// import WorldMap from "./Charts/WorldMap";
-const BOB = React.lazy(() => import("./BOB"));
-const KeyBusinessMetrics = React.lazy(() => import("./KeyBusinessMetrics"));
-const PickupSinceYesterday = React.lazy(() => import("./PickupSinceYesterday"));
-const OccupencyStatitics = React.lazy(() => import("./OccupencyStatitics"));
-const BusinessMixComponent = React.lazy(() => import("./BusinessMix"));
-const RoomTypeStatics = React.lazy(() => import("./RoomTypeStatics"));
-const BookingChannels = React.lazy(() => import("./BookingChannels"));
-const GeoBusiness = React.lazy(() => import("./GeoBusiness"));
-const MTDPerformance = React.lazy(() => import("./MTDPerformance"));
-const RGIVariance = React.lazy(() => import("./RGIVariance"));
+import BOB from "./BOB";
+import KeyBusinessMetrics from "./KeyBusinessMetrics";
+import PickupSinceYesterday from "./PickupSinceYesterday";
+import OccupencyStatitics from "./OccupencyStatitics";
+import BusinessMixComponent from "./BusinessMix";
+import RoomTypeStatics from "./RoomTypeStatics";
+import BookingChannels from "./BookingChannels";
+import GeoBusiness from "./GeoBusiness";
+import MTDPerformance from "./MTDPerformance";
+import RGIVariance from "./RGIVariance";
 
 const getChart = (chartType: any) => {
   switch (chartType.name) {
@@ -65,13 +64,13 @@ const getChart = (chartType: any) => {
     case "MTD RGI Performance":
       return (
         <Col xs={12} md={8}>
-           <MTDPerformance key={"rgi"} />
+          <MTDPerformance key={"rgi"} />
         </Col>
       );
     case "RGI YoY Variance":
       return (
         <Col xs={12} md={4}>
-          <RGIVariance  />
+          <RGIVariance />
         </Col>
       );
 
@@ -85,11 +84,7 @@ const DashboardWidget = ({ graphList }: { graphList: any[] }) => {
     <Row>
       {graphList.map((chartConfig: any, index: number) => {
         return (
-          <React.Fragment key={index}>
-            <React.Suspense fallback={"Loading.."}>
-              {getChart(chartConfig)}
-            </React.Suspense>
-          </React.Fragment>
+          <React.Fragment key={index}>{getChart(chartConfig)}</React.Fragment>
         );
       })}
     </Row>

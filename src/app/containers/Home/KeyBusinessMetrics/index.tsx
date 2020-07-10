@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Card, Row } from "react-bootstrap";
+import Loader from "../../../components/Loader/Loader";
 const BarChartComponent = React.lazy(() => import("../Charts/BarChart"));
 
 const barChartBusinessMetrics = [
@@ -67,8 +68,9 @@ const KeyBusinessMetrics: React.FC = (): JSX.Element => {
         {barChartBusinessMetrics.map((key: any, index: number) => {
           return (
             <Col key={index} sm={3} md={3}>
-              {" "}
-              <BarChartComponent barChart={key} />
+              <React.Suspense fallback={<Loader />}>
+                <BarChartComponent {...key} />
+              </React.Suspense>
             </Col>
           );
         })}

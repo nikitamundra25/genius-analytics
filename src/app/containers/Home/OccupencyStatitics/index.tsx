@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Card } from "react-bootstrap";
+import Loader from "../../../components/Loader/Loader";
 const ComposedChartComponent = React.lazy(() =>
   import("../Charts/ComposedChart")
 );
@@ -20,7 +21,9 @@ const OccupencyStatitics = () => {
           </div>
         </Card.Header>
         <Row className='row-inner'>
-          <ComposedChartComponent />
+          <React.Suspense fallback={<Loader />}>
+            <ComposedChartComponent />
+          </React.Suspense>
         </Row>
       </Card>
     </>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
+import Loader from "../../../components/Loader/Loader";
 const BarChartColumnComponent = React.lazy(() =>
   import("../Charts/BarChartcolumn")
 );
@@ -48,8 +49,9 @@ export default (props: any) => {
           {RTGBarChart.map((key: any, index: number) => {
             return (
               <Col key={index} sm={4} md={4}>
-                {" "}
-                <BarChartColumnComponent key={index} chartDetails1={key} />
+                <React.Suspense fallback={<Loader />}>
+                  <BarChartColumnComponent key={index} chartDetails1={key} />
+                </React.Suspense>
               </Col>
             );
           })}

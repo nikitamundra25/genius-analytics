@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
+import Loader from "../../../components/Loader/Loader";
 const BarChartReferenceLineComponent = React.lazy(() =>
   import("../Charts/BarChartsReferenceLine")
 );
@@ -15,9 +16,9 @@ const BarChartReferenceLine = [
       { x: "FIT", y: 28 },
       { x: "GROUPS", y: -12 },
     ],
-    range:"198",
-    arrowClass:"cui-arrow-top",
-    textClass:"text-success",
+    range: "198",
+    arrowClass: "cui-arrow-top",
+    textClass: "text-success",
   },
   {
     id: "2",
@@ -30,9 +31,9 @@ const BarChartReferenceLine = [
       { x: "FIT", y: 1.1 },
       { x: "GROUPS", y: -1.2 },
     ],
-    range:"2.6",
-    arrowClass:"cui-arrow-bottom",
-    textClass:"text-danger",
+    range: "2.6",
+    arrowClass: "cui-arrow-bottom",
+    textClass: "text-danger",
   },
   {
     id: "3",
@@ -45,9 +46,9 @@ const BarChartReferenceLine = [
       { x: "FIT", y: 2.8 },
       { x: "GROUPS", y: -1.4 },
     ],
-    range:"19.4 k",
-    arrowClass:"cui-arrow-top",
-    textClass:"text-success",
+    range: "19.4 k",
+    arrowClass: "cui-arrow-top",
+    textClass: "text-success",
   },
 ];
 const PickupSinceYesterday: React.FC = (): JSX.Element => {
@@ -69,7 +70,9 @@ const PickupSinceYesterday: React.FC = (): JSX.Element => {
         {BarChartReferenceLine.map((key: any, index: number) => {
           return (
             <Col xs={12} md={4} key={index}>
-              <BarChartReferenceLineComponent chartDetails={key} />
+              <React.Suspense fallback={<Loader />}>
+                <BarChartReferenceLineComponent chartDetails={key} />
+              </React.Suspense>
             </Col>
           );
         })}
