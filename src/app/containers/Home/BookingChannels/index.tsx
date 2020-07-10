@@ -1,7 +1,10 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
-const PieChartComponent = React.lazy(() => import("../Charts/PieChart"));
+import WidgetHeader from "../../../components/WidgetHeader";
+const PieChartComponent = React.lazy(() =>
+  import("../../../components/Charts/PieChart")
+);
 
 const data = [
   { x: "Brand.com", y: 27, text: "27%" },
@@ -12,17 +15,7 @@ const data = [
 export default (props: any) => {
   return (
     <Card>
-      <Card.Header className='d-flex align-items-center justify-content-between'>
-        <Card.Title>Booking Channel Mix </Card.Title>
-        <div className='action-wrap'>
-          <div className='action-btn '>
-            <span className='icon-grid'></span>
-          </div>
-          <div className='action-btn active'>
-            <span className='icon-pie-chart'></span>
-          </div>
-        </div>
-      </Card.Header>
+      <WidgetHeader title={"Booking Channel Mix"} activeToggle={"graph"} />
       <Card.Body>
         <React.Suspense fallback={<Loader />}>
           <PieChartComponent id={"booking-mix"} data={data} />

@@ -1,7 +1,10 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
-const MixedCharts = React.lazy(() => import("../Charts/MixedCharts"));
+import WidgetHeader from "../../../components/WidgetHeader";
+const MixedCharts = React.lazy(() =>
+  import("../../../components/Charts/MixedCharts")
+);
 
 const RommTypeData = [
   {
@@ -74,17 +77,7 @@ export default (props: any) => {
   return (
     <>
       <Card>
-        <Card.Header className='d-flex align-items-center justify-content-between'>
-          <Card.Title>Room Type Statics</Card.Title>
-          <div className='action-wrap'>
-            <div className='action-btn '>
-              <span className='icon-grid'></span>
-            </div>
-            <div className='action-btn active'>
-              <span className='icon-pie-chart'></span>
-            </div>
-          </div>
-        </Card.Header>
+        <WidgetHeader title={"Room Type Statics"} activeToggle={"graph"} />
         <Card.Body>
           <React.Suspense fallback={<Loader />}>
             <MixedCharts

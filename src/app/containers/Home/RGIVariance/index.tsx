@@ -1,7 +1,8 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
-import MixedCharts from "../Charts/MixedCharts";
+import MixedCharts from "../../../components/Charts/MixedCharts";
+import WidgetHeader from "../../../components/WidgetHeader";
 
 const RGIdata = [
   { x: "RGI", y1: 2, y2: -1 },
@@ -53,9 +54,8 @@ const Charts = [
 export default (props: any) => {
   return (
     <Card>
-      <Card.Header className='d-flex align-items-center justify-content-between'>
-        <Card.Title>RGI YoY Variance</Card.Title>
-      </Card.Header>
+      <WidgetHeader title={"RGI YoY Variance"} activeToggle={"graph"} />
+
       <Card.Body>
         <MixedCharts
           id='adfdsf'

@@ -1,7 +1,10 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
-const BarChartComponent = React.lazy(() => import("../Charts/BarChart"));
+import WidgetHeader from "../../../components/WidgetHeader";
+const BarChartComponent = React.lazy(() =>
+  import("../../../components/Charts/BarChart")
+);
 
 const RTGBarChart = [
   {
@@ -39,9 +42,7 @@ const RTGBarChart = [
 export default (props: any) => {
   return (
     <Card>
-      <Card.Header className='d-flex align-items-center justify-content-between'>
-        <Card.Title>MTD RGI Performance</Card.Title>
-      </Card.Header>
+      <WidgetHeader title={"MTD RGI Performance"} />
       <Card.Body>
         <Row>
           {RTGBarChart.map((key: any, index: number) => {

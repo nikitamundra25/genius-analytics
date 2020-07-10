@@ -1,7 +1,10 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
-const ColumnChart = React.lazy(() => import("../Charts/ColumnChart"));
+import WidgetHeader from "../../../components/WidgetHeader";
+const ColumnChart = React.lazy(() =>
+  import("../../../components/Charts/ColumnChart")
+);
 
 const BarChartReferenceLine = [
   {
@@ -53,17 +56,8 @@ const BarChartReferenceLine = [
 const PickupSinceYesterday: React.FC = (): JSX.Element => {
   return (
     <Card>
-      <Card.Header className='d-flex align-items-center justify-content-between'>
-        <Card.Title>Pick up Since Yesterday</Card.Title>
-        <div className='action-wrap'>
-          <div className='action-btn '>
-            <span className='icon-grid'></span>
-          </div>
-          <div className='action-btn active'>
-            <span className='icon-pie-chart'></span>
-          </div>
-        </div>
-      </Card.Header>
+      <WidgetHeader title={"Pick up Since Yesterday"} activeToggle={"graph"} />
+
       <Card.Body>
         <Row className='row-inner'>
           {BarChartReferenceLine.map((key: any, index: number) => {
