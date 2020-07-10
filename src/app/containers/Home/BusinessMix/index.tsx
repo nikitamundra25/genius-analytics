@@ -1,16 +1,6 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
-import {
-  ChartComponent,
-  SeriesCollectionDirective,
-  SeriesDirective,
-  Inject,
-  DataLabel,
-  BarSeries,
-  Category,
-  Tooltip,
-} from "@syncfusion/ej2-react-charts";
-import { Browser } from "@syncfusion/ej2-base";
+import BarChartComponent from "../Charts/BarChart";
 
 const Businessdata = [
   { x: "BAR", y: 23 },
@@ -47,16 +37,15 @@ export default (props: any) => {
 
         <Row>
           <Col xs={12} md={6}>
-            <div>
-              <ChartComponent
-                id={"businesschart1"}
-                style={{ textAlign: "center" }}
-                primaryXAxis={{
+            <BarChartComponent
+              id={"business-card-percent"}
+              chartSettings={{
+                primaryXAxis: {
                   valueType: "Category",
                   interval: 1,
                   majorGridLines: { width: 0 },
-                }}
-                primaryYAxis={{
+                },
+                primaryYAxis: {
                   labelFormat: "{value}%",
                   edgeLabelPlacement: "Shift",
                   majorGridLines: { width: 0 },
@@ -65,48 +54,26 @@ export default (props: any) => {
                   labelStyle: {
                     color: "transparent",
                   },
-                }}
-                title={"Business Mix %"}
-                chartArea={{ border: { width: 0 } }}
-                width={Browser.isDevice ? "100%" : "100%"}
-                height={"250px"}
-                tooltip={{ enable: true }}>
-                <Inject services={[BarSeries, DataLabel, Category, Tooltip]} />
-                <SeriesCollectionDirective>
-                  <SeriesDirective
-                    dataSource={Businessdata}
-                    xName='x'
-                    yName='y'
-                    type='Bar'
-                    fill='#5b9cd6'
-                    name={"Business Mix %"}
-                    width={1}
-                    marker={{
-                      dataLabel: {
-                        visible: true,
-                        position: "Middle",
-                        font: {
-                          fontWeight: "600",
-                          color: "#ffffff",
-                        },
-                      },
-                    }}></SeriesDirective>
-                </SeriesCollectionDirective>
-              </ChartComponent>
-            </div>
+                },
+                title: "Business Mix %",
+                tooltip: { enable: true },
+              }}
+              title={"Business Mix %"}
+              color='#5b9cd6'
+              data={Businessdata}
+            />
           </Col>
 
           <Col xs={12} md={6}>
-            <div>
-              <ChartComponent
-                id={"businesschart2"}
-                style={{ textAlign: "center" }}
-                primaryXAxis={{
+            <BarChartComponent
+              id={"business-card-adr"}
+              chartSettings={{
+                primaryXAxis: {
                   valueType: "Category",
                   interval: 1,
                   majorGridLines: { width: 0 },
-                }}
-                primaryYAxis={{
+                },
+                primaryYAxis: {
                   labelFormat: "{value}%",
                   edgeLabelPlacement: "Shift",
                   majorGridLines: { width: 0 },
@@ -115,35 +82,14 @@ export default (props: any) => {
                   labelStyle: {
                     color: "transparent",
                   },
-                }}
-                title={"Business Mix ADR"}
-                chartArea={{ border: { width: 0 } }}
-                width={Browser.isDevice ? "100%" : "100%"}
-                height={"250px"}
-                tooltip={{ enable: true }}>
-                <Inject services={[BarSeries, DataLabel, Category, Tooltip]} />
-                <SeriesCollectionDirective>
-                  <SeriesDirective
-                    dataSource={BusinessADRdata}
-                    xName='x'
-                    yName='y'
-                    type='Bar'
-                    fill='#4473c5'
-                    name={"Business Mix ADR"}
-                    width={1}
-                    marker={{
-                      dataLabel: {
-                        visible: true,
-                        position: "Middle",
-                        font: {
-                          fontWeight: "600",
-                          color: "#ffffff",
-                        },
-                      },
-                    }}></SeriesDirective>
-                </SeriesCollectionDirective>
-              </ChartComponent>
-            </div>
+                },
+                title: "Business Mix ADR",
+                tooltip: { enable: true },
+              }}
+              title={"Business Mix ADR"}
+              color='#4473c5'
+              data={BusinessADRdata}
+            />
           </Col>
         </Row>
       </Card>

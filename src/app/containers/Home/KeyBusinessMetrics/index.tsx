@@ -69,7 +69,28 @@ const KeyBusinessMetrics: React.FC = (): JSX.Element => {
           return (
             <Col key={index} sm={3} md={3}>
               <React.Suspense fallback={<Loader />}>
-                <BarChartComponent {...key} />
+                <BarChartComponent
+                  chartSettings={{
+                    primaryXAxis: {
+                      valueType: "Category",
+                      interval: 1,
+                      majorGridLines: { width: 0 },
+                    },
+                    primaryYAxis: {
+                      labelFormat: "{value}%",
+                      edgeLabelPlacement: "Shift",
+                      majorGridLines: { width: 0 },
+                      majorTickLines: { width: 0 },
+                      lineStyle: { width: 0 },
+                      labelStyle: {
+                        color: "transparent",
+                      },
+                    },
+                    title: key.title,
+                    tooltip: { enable: true },
+                  }}
+                  {...key}
+                />
               </React.Suspense>
             </Col>
           );

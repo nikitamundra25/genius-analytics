@@ -9,20 +9,22 @@ import {
   Category,
   Tooltip,
 } from "@syncfusion/ej2-react-charts";
-import { Browser } from "@syncfusion/ej2-base";
 
 export const BarChartComponent = (barChart: any) => {
   return (
-    <div>
-      <ChartComponent
-        id={`chart${barChart.id}`}
-        style={{ textAlign: "center" }}
-        primaryXAxis={{
+    <ChartComponent
+      id={`chart${barChart.id}`}
+      style={{ textAlign: "center" }}
+      chartArea={{ border: { width: 0 } }}
+      width={"100%"}
+      height={"250px"}
+      {...(barChart.chartSettings || {
+        primaryXAxis: {
           valueType: "Category",
           interval: 1,
           majorGridLines: { width: 0 },
-        }}
-        primaryYAxis={{
+        },
+        primaryYAxis: {
           labelFormat: "{value}%",
           edgeLabelPlacement: "Shift",
           majorGridLines: { width: 0 },
@@ -31,36 +33,33 @@ export const BarChartComponent = (barChart: any) => {
           labelStyle: {
             color: "transparent",
           },
-        }}
-        chartArea={{ border: { width: 0 } }}
-        width={Browser.isDevice ? "100%" : "100%"}
-        height={"250px"}
-        title={barChart.title}
-        tooltip={{ enable: true }}>
-        <Inject services={[BarSeries, DataLabel, Category, Tooltip]} />
-        <SeriesCollectionDirective>
-          <SeriesDirective
-            dataSource={barChart.data}
-            xName='x'
-            yName='y'
-            type='Bar'
-            fill={barChart.color}
-            name={barChart.title}
-            width={1}
-            marker={{
-              dataLabel: {
-                visible: true,
-                position: "Middle",
-                font: {
-                  fontWeight: "600",
-                  color: "#ffffff",
-                },
+        },
+        title: "Business Mix %",
+        tooltip: { enable: true },
+      })}>
+      <Inject services={[BarSeries, DataLabel, Category, Tooltip]} />
+      <SeriesCollectionDirective>
+        <SeriesDirective
+          dataSource={barChart.data}
+          xName='x'
+          yName='y'
+          type='Bar'
+          fill={barChart.color}
+          name={barChart.title}
+          width={1}
+          marker={{
+            dataLabel: {
+              visible: true,
+              position: "Middle",
+              font: {
+                fontWeight: "600",
+                color: "#ffffff",
               },
-            }}
-          />
-        </SeriesCollectionDirective>
-      </ChartComponent>
-    </div>
+            },
+          }}
+        />
+      </SeriesCollectionDirective>
+    </ChartComponent>
   );
 };
 export default BarChartComponent;

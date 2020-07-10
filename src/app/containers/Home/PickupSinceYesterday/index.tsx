@@ -1,9 +1,8 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
-const BarChartReferenceLineComponent = React.lazy(() =>
-  import("../Charts/BarChartsReferenceLine")
-);
+const ColumnChart = React.lazy(() => import("../Charts/ColumnChart"));
+
 const BarChartReferenceLine = [
   {
     id: "1",
@@ -65,18 +64,34 @@ const PickupSinceYesterday: React.FC = (): JSX.Element => {
           </div>
         </div>
       </Card.Header>
-
-      <Row className='row-inner'>
-        {BarChartReferenceLine.map((key: any, index: number) => {
-          return (
-            <Col xs={12} md={4} key={index}>
-              <React.Suspense fallback={<Loader />}>
-                <BarChartReferenceLineComponent chartDetails={key} />
-              </React.Suspense>
-            </Col>
-          );
-        })}
-      </Row>
+      <Card.Body>
+        <Row className='row-inner'>
+          {BarChartReferenceLine.map((key: any, index: number) => {
+            return (
+              <Col xs={12} md={4} key={index}>
+                <React.Suspense fallback={<Loader />}>
+                  <ColumnChart
+                    {...key}
+                    chartSettings={{
+                      primaryXAxis: {
+                        valueType: "Category",
+                        interval: 1,
+                        majorGridLines: { width: 0 },
+                      },
+                      primaryYAxis: {
+                        majorGridLines: { width: 0 },
+                        majorTickLines: { width: 0 },
+                        lineStyle: { width: 0 },
+                        labelStyle: { color: "transparent" },
+                      },
+                    }}
+                  />
+                </React.Suspense>
+              </Col>
+            );
+          })}
+        </Row>
+      </Card.Body>
     </Card>
   );
 };
