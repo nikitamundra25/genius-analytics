@@ -3,7 +3,7 @@ import { Card, Row, Col } from "react-bootstrap";
 import BarChartComponent from "../Charts/BarChart";
 
 const Businessdata = [
-  { x: "BAR", y: 23 },
+  { x: "BAR1", y: 23 },
   { x: "Discount", y: 27 },
   { x: "Corporate", y: 15 },
   { x: "Cor Group", y: 8 },
