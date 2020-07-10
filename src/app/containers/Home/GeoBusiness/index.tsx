@@ -70,6 +70,7 @@ export default (props: any) => {
                     </MapsComponent> */}
        
         </Card.Body>
+        
       </Card>
     </>
   );
