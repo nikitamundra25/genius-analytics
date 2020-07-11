@@ -185,7 +185,6 @@ const Charts1 = [
     fill: "#2b588f",
     name: "OCC",
     width: 1,
-    
   },
   {
     dataSource: Monthlydailydata,
@@ -228,7 +227,7 @@ const Charts2 = [
     xName: "name",
     yName: "ADR",
     type: "Line",
-    fill: "#e46d09",    
+    fill: "#e46d09",
     name: "ADR",
     width: 2,
     marker: {
@@ -250,26 +249,16 @@ const Charts2 = [
 ];
 
 const MonthlyDailyOccupacy: React.FC = (): JSX.Element => {
-
-  
   return (
     <Card>
-       <WidgetHeader title={"Monthly Daily Occupacy & ADR"} activeToggle={"graph"} />
-      {/* <Card.Header className='d-flex align-items-center justify-content-between'>
-        <Card.Title>Monthly Daily Occupacy & ADR</Card.Title>
-        <div className='action-wrap'>
-          <div className='action-btn active'>
-            <span className='icon-grid'></span>
-          </div>
-          <div className='action-btn'>
-            <span className='icon-pie-chart'></span>
-          </div>
-        </div>
-      </Card.Header> */}
+      <WidgetHeader
+        title={"Monthly Daily Occupacy & ADR"}
+        activeToggle={"graph"}
+      />
       <Card.Body>
-      <Row>
-        <Col xs={12} md={9}>
-        <React.Suspense fallback={<Loader />}>
+        <Row>
+          <Col xs={12} md={9}>
+            <React.Suspense fallback={<Loader />}>
               <MixedCharts
                 id={"line-and-column"}
                 chartSettings={{
@@ -293,72 +282,9 @@ const MonthlyDailyOccupacy: React.FC = (): JSX.Element => {
                 charts={Charts1}
               />
             </React.Suspense>
-        {/* <ChartComponent
-                      id={"occChart1"}
-                      style={{ textAlign: "center" }}
-                      primaryXAxis={{
-                        valueType: "Category",
-                        interval: 1,
-                        majorGridLines: { width: 0 },
-                      }}
-                      primaryYAxis={{
-                        labelFormat: "{value}%",
-                        edgeLabelPlacement: "Shift",
-                        majorGridLines: { width: 0 },
-                        majorTickLines: { width: 0 },
-                        lineStyle: { width: 0 },
-                        labelStyle: {
-                          color: "transparent",
-                        },
-                      }}
-                      chartArea={{ border: { width: 0 } }}
-                      width={Browser.isDevice ? "100%" : "100%"}
-                      height={"250px"}
-                      tooltip={{ enable: true }}>
-                      <Inject services={[ColumnSeries, LineSeries ,DataLabel, Category, Tooltip]} />
-                      <SeriesCollectionDirective>
-                        <SeriesDirective
-                          dataSource={Monthlydailydata}
-                          xName='name'
-                          yName='OCC'
-                          type='Column'
-                          fill={"#2b588f"}
-                          name={"OCC"}
-                          width={1}
-                          marker={{
-                            dataLabel: {
-                              visible: true,
-                              position: "Middle",
-                              font: {
-                                fontWeight: "600",
-                                color: "#ffffff",
-                              },
-                            },
-                          }}></SeriesDirective>
-                         
-                          <SeriesDirective
-                          dataSource={Monthlydailydata}
-                          xName='name'
-                          yName='ADR'
-                          type='Line'
-                          fill={"#e46d09"}
-                          name={"ADR"}
-                          width={2}
-                          marker={{
-                            visible: false,
-                            height: 10, 
-                            width: 10,
-                            // shape: 'Pentagon',
-                            border: { width: 2, color: '#e46d09' } ,
-                            
-                          }}></SeriesDirective>
-                         
-                         
-                      </SeriesCollectionDirective>
-                    </ChartComponent> */}
-        </Col>
-        <Col xs={12} md={3}>
-        <React.Suspense fallback={<Loader />}>
+          </Col>
+          <Col xs={12} md={3}>
+            <React.Suspense fallback={<Loader />}>
               <MixedCharts
                 id={"occChart2"}
                 chartSettings={{
@@ -382,79 +308,9 @@ const MonthlyDailyOccupacy: React.FC = (): JSX.Element => {
                 charts={Charts2}
               />
             </React.Suspense>
-        {/* <ChartComponent
-                      id={"occChart2"}
-                      style={{ textAlign: "center" }}
-                      primaryXAxis={{
-                        valueType: "Category",
-                        interval: 1,
-                        majorGridLines: { width: 0 },
-                      }}
-                      primaryYAxis={{
-                        labelFormat: "{value}%",
-                        edgeLabelPlacement: "Shift",
-                        majorGridLines: { width: 0 },
-                        majorTickLines: { width: 0 },
-                        lineStyle: { width: 0 },
-                        labelStyle: {
-                          color: "transparent",
-                        },
-                      }}
-                      chartArea={{ border: { width: 0 } }}
-                      width={Browser.isDevice ? "100%" : "100%"}
-                      height={"250px"}
-                      tooltip={{ enable: true }}>
-                      <Inject services={[ColumnSeries, LineSeries ,DataLabel, Category, Tooltip]} />
-                      <SeriesCollectionDirective>
-                        <SeriesDirective
-                          dataSource={Monthlydailytotaldata}
-                          xName='name'
-                          yName='OCC'
-                          type='Column'
-                          fill={"#2b588f"}
-                          name={"OCC "}
-                          width={1}
-                          marker={{
-                            dataLabel: {
-                              visible: true,
-                              position: "Bottom",
-                              font: {
-                                fontWeight: "600",
-                                color: "#ffffff",
-                              },
-                            },
-                          }}></SeriesDirective>
-                         
-                          <SeriesDirective
-                          dataSource={Monthlydailytotaldata}
-                          xName='name'
-                          yName='ADR'
-                          type='Line'
-                          fill={"#e46d09"}
-                          name={"ADR "}
-                          width={2}
-                          marker={{
-                            visible: false,
-                            width: 10, 
-                            height: 10, 
-                            border: { width: 2, color: '#e46d09' } ,
-                            dataLabel: {
-                              visible: true,
-                              position: "Bottom",
-                              font: {
-                                fontWeight: "600",
-                                color: "#ffffff",
-                              },
-                            },
-                          }}></SeriesDirective>
-                         
-                         
-                      </SeriesCollectionDirective>
-                    </ChartComponent> */}
-                    
-        </Col>
-      </Row>
-     </Card.Body>
+          </Col>
+        </Row>
+      </Card.Body>
     </Card>
   );
 };

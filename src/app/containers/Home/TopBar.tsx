@@ -3,6 +3,8 @@ import { Dropdown } from "react-bootstrap";
 
 import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
 import moment from "moment";
+import { Link } from "react-router-dom";
+import { AppRoutes } from "../../../config";
 
 const TopBar = () => {
   const currentYear = moment().get("year");
@@ -13,8 +15,8 @@ const TopBar = () => {
 
   useEffect(() => {
     const yearOptions = [];
-    for (let i = 0; i < 10; i++) {
-      yearOptions.push(currentYear - i);
+    for (let i = currentYear; i >= 2010; i--) {
+      yearOptions.push(i);
     }
     setState({
       ...state,
@@ -32,13 +34,17 @@ const TopBar = () => {
   return (
     <>
       <div className='main-navbar'>
-        <div className="navbar-nav-item">
-            <div className="year-nav">
-              <span className="cursor-pointer"><i className="icon-arrow-left "></i></span>
-              <span className="mx-3">November</span>
-              <span className="cursor-pointer"><i className="icon-arrow-right "></i></span>
-            </div>
+        <div className='navbar-nav-item'>
+          <div className='year-nav'>
+            <span className='cursor-pointer'>
+              <i className='icon-arrow-left '></i>
+            </span>
+            <span className='mx-3'>November</span>
+            <span className='cursor-pointer'>
+              <i className='icon-arrow-right '></i>
+            </span>
           </div>
+        </div>
         <div className='navbar-nav-item'>
           <DropDownListComponent
             id='year'
@@ -56,9 +62,15 @@ const TopBar = () => {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item>Dashboard</Dropdown.Item>
-              <Dropdown.Item>Dashboard Monthly</Dropdown.Item>
-              <Dropdown.Item>Dashboard Yearly</Dropdown.Item>
+              <Dropdown.Item>
+                <Link to={AppRoutes.HOME}>Dashboard</Link>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <Link to={AppRoutes.DASHBOARDMONTHLY}>Dashboard Monthly</Link>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <Link to={AppRoutes.DASHBOARDYEARLY}>Dashboard Yearly</Link>
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </div>

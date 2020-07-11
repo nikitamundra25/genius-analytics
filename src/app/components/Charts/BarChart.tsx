@@ -13,11 +13,11 @@ import {
 export const BarChartComponent = (barChart: any) => {
   return (
     <ChartComponent
-      id={`chart${barChart.id}`}
+      id={`chart-${barChart.id}`}
       style={{ textAlign: "center" }}
       chartArea={{ border: { width: 0 } }}
-      width={"100%"}
-      height={"250px"}
+      height={barChart.height || "250px"}
+      width={barChart.width || "100%"}
       {...(barChart.chartSettings || {
         primaryXAxis: {
           valueType: "Category",

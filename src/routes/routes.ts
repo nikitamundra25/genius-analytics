@@ -6,7 +6,7 @@ const DashboardMonthly = React.lazy(() =>
   import("../app/containers/DashboardMonthly")
 );
 const DashboardYearly = React.lazy(() =>
-  import("../app/containers/Home/DashboardYearly")
+  import("../app/containers/DashboardYearly")
 );
 const Login = React.lazy(() => import("../app/containers/Auth"));
 const MyProfile = React.lazy(() => import("../app/containers/MyProfile"));

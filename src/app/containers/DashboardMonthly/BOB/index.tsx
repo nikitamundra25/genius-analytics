@@ -1,6 +1,9 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-// import TableForm from "../Tables/TableForm";
+import Loader from "../../../components/Loader/Loader";
+const TableForm = React.lazy(() =>
+  import("../../../components/Tables/TableForm")
+);
 
 const BOB: React.FC = (): JSX.Element => {
   return (
@@ -17,7 +20,9 @@ const BOB: React.FC = (): JSX.Element => {
         </div>
       </Card.Header>
       <Card.Body>
-        {/* <TableForm /> */}
+        <React.Suspense fallback={<Loader />}>
+          <TableForm />
+        </React.Suspense>
       </Card.Body>
     </Card>
   );

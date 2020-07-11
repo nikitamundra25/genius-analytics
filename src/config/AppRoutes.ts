@@ -1,22 +1,22 @@
-import { IAppRoutes } from '../interfaces/AppRoutes';
+import { IAppRoutes } from "../interfaces/AppRoutes";
 
 export const AppRoutes: IAppRoutes = {
-  MAIN: '/',
- 
-  LOGIN: '/login',
-  HOME: '/dashboard',
-  DASHBOARDMONTHLY: '/dashboardMonthly',
-  DASHBOARDYEARLY: '/dashboardYearly',
-  MY_PROFILE: '/my-profile',
-  USER: '#',
-  ADD_USER: '/user/add',
-  EDIT_USER: '/user/edit/:id',
-  EMAILTEMPLATE: '/email-template',
-  ADD_TEMPLATE: '/email-template/add',
-  EDIT_TEMPLATE: '/email-template/edit/:id',
+  MAIN: "/",
+
+  LOGIN: "/login",
+  HOME: "/dashboard",
+  DASHBOARDMONTHLY: "/dashboard-monthly",
+  DASHBOARDYEARLY: "/dashboard-yearly",
+  MY_PROFILE: "/my-profile",
+  USER: "#",
+  ADD_USER: "/user/add",
+  EDIT_USER: "/user/edit/:id",
+  EMAILTEMPLATE: "/email-template",
+  ADD_TEMPLATE: "/email-template/add",
+  EDIT_TEMPLATE: "/email-template/edit/:id",
   //Home Page
-  ADD_HOME_PAGE: '/homepage',
-  ADD_FAQ:'/faq/add',
-  FAQ:'/faq',
-  COMING_SOON:'/coming-soon'
+  ADD_HOME_PAGE: "/homepage",
+  ADD_FAQ: "/faq/add",
+  FAQ: "/faq",
+  COMING_SOON: "/coming-soon",
 };

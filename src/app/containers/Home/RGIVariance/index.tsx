@@ -55,7 +55,6 @@ export default (props: any) => {
   return (
     <Card>
       <WidgetHeader title={"RGI YoY Variance"} activeToggle={"graph"} />
-
       <Card.Body>
         <MixedCharts
           id='adfdsf'
