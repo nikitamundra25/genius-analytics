@@ -21,16 +21,8 @@ class DefaultHeader extends Component<
       <React.Fragment>
         <AppSidebarToggler className='d-lg-none' display='md' mobile />
         <AppSidebarToggler className='d-md-down-none' display='lg' />
-        {/* <div className='brand-logo'>
-          <img src={logo} width={120} alt='' />
-        </div> */}
 
-        <Nav className='ml-auto navbar-nav' navbar-nav>
-          {/* <Nav.Link href="#link"><span className="icon"><i className="icon-magnifier"/></span></Nav.Link>
-          <Nav.Link href="#home">
-            <span className="icon"><i className="icon-bell"/></span>
-            <span className="count">2</span>
-          </Nav.Link> */}
+        <Nav className='ml-auto navbar-nav' navbar-nav={""}>
           <Dropdown className='user-dropdown'>
             <Dropdown.Toggle variant='success' id='dropdown-basic1'>
               <div className='user-info'>

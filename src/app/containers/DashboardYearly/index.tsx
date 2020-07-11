@@ -8,8 +8,8 @@ const HomeComponent = () => {
   const { graphCard } = graphStats;
   return (
     <>
-      <TopBar />
       <div className='animated fadeIn'>
+        <TopBar />
         {graphCard && graphCard.length ? (
           <DashboardMonthlyWidget graphList={graphCard} />
         ) : null}

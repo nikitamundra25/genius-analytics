@@ -1,68 +1,39 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-// import WorldMap from "./Charts/WorldMap";
-// const BOB = React.lazy(() => import("./BOB"));
-// const MonthlyDailyOccupacy = React.lazy(() => import("./MonthlyDailyOccupacy"));
-// const DailyOccupacy = React.lazy(() => import("./DailyOccupacy"));
-// const RateCodeStatistics = React.lazy(() => import("./RateCodeStatistics"));
-// const MarketSegmentation = React.lazy(() => import("./MarketSegmentation"));
-// const RoomTypeStatistics = React.lazy(() => import("./RoomTypeStatistics"));
-// const BookingChannel = React.lazy(() => import("./BookingChannel"));
+import CumulativeTable from "./Cumulative";
+import MonthlyOCCADR from "./OCCADR/Monthly";
+import QuarterlyOCCADR from "./OCCADR/Quarterly";
+import RoomTypesYTD from "./RoomTypesYTD";
 
 const getChart = (chartType: any) => {
   switch (chartType.name) {
-    case "Business on the Books":
+    case "Cumulative":
       return (
-        <Col xs={12} md={12}>
-          {/* <BOB /> */}
+        <Col sm={12}>
+          {" "}
+          <CumulativeTable />
         </Col>
       );
-    case "Monthly OCC & ADR":
+    case "MOCCADR":
       return (
-        <Col xs={12} md={12}>
-          {/* <MonthlyDailyOccupacy /> */}
+        <Col sm={6}>
+          {" "}
+          <MonthlyOCCADR id='monthly-ofasdfcc-adr' />
         </Col>
       );
-    case "Quarterly OCC & ADR":
+
+    case "QOCCADR":
       return (
-        <Col xs={12} md={8}>
-          {/* <DailyOccupacy /> */}
+        <Col sm={3}>
+          {" "}
+          <QuarterlyOCCADR id='quarterly-occ-adr' />
         </Col>
       );
-    case "Room Types - YTD":
+    case "ROOMTYPES":
       return (
-        <Col xs={12} md={4}>
-          {/* <RateCodeStatistics /> */}
-        </Col>
-      );
-    case "RevPAR Vs. NRevPAR - YTD":
-      return (
-        <Col xs={12} md={4}>
-          {/* <MarketSegmentation /> */}
-        </Col>
-      );
-    case "Length of Stay & ADR - YTD":
-      return (
-        <Col xs={12} md={4}>
-          {/* <RoomTypeStatistics /> */}
-        </Col>
-      );
-    case "Lead Times YTD":
-      return (
-        <Col xs={12} md={4}>
-          {/* <BookingChannel /> */}
-        </Col>
-      );
-      case "Lead Times YTD by Segment":
-      return (
-        <Col xs={12} md={4}>
-          {/* <BookingChannel /> */}
-        </Col>
-      );
-      case "RGI Performance  - YTD":
-      return (
-        <Col xs={12} md={4}>
-          {/* <BookingChannel /> */}
+        <Col sm={3}>
+          {" "}
+          <RoomTypesYTD />
         </Col>
       );
     default:

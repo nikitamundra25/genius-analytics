@@ -1,13 +1,12 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-// import WorldMap from "./Charts/WorldMap";
-const BOB = React.lazy(() => import("./BOB"));
-const MonthlyDailyOccupacy = React.lazy(() => import("./MonthlyDailyOccupacy"));
-const DailyOccupacy = React.lazy(() => import("./DailyOccupacy"));
-const RateCodeStatistics = React.lazy(() => import("./RateCodeStatistics"));
-const MarketSegmentation = React.lazy(() => import("./MarketSegmentation"));
-const RoomTypeStatistics = React.lazy(() => import("./RoomTypeStatistics"));
-const BookingChannel = React.lazy(() => import("./BookingChannel"));
+import BOB from "./BOB";
+import MonthlyDailyOccupacy from "./MonthlyDailyOccupacy";
+import DailyOccupacy from "./DailyOccupacy";
+import RateCodeStatistics from "./RateCodeStatistics";
+import MarketSegmentation from "./MarketSegmentation";
+import RoomTypeStatistics from "./RoomTypeStatistics";
+import BookingChannel from "./BookingChannel";
 
 const getChart = (chartType: any) => {
   switch (chartType.name) {
@@ -63,11 +62,7 @@ const DashboardWidget = ({ graphList }: { graphList: any[] }) => {
     <Row>
       {graphList.map((chartConfig: any, index: number) => {
         return (
-          <React.Fragment key={index}>
-            <React.Suspense fallback={"Loading.."}>
-              {getChart(chartConfig)}
-            </React.Suspense>
-          </React.Fragment>
+          <React.Fragment key={index}>{getChart(chartConfig)}</React.Fragment>
         );
       })}
     </Row>

@@ -9,8 +9,8 @@ import {
   ColumnSeries,
   Category,
   Tooltip,
-  LineSeries ,
-  Legend
+  LineSeries,
+  Legend,
 } from "@syncfusion/ej2-react-charts";
 import { Browser } from "@syncfusion/ej2-base";
 
@@ -80,118 +80,123 @@ const MarketSegmentation: React.FC = (): JSX.Element => {
         </div>
       </Card.Header>
       <Card.Body>
-      <ChartComponent
-                      id={"MarketChart"}
-                      style={{ textAlign: "center" }}
-                      primaryXAxis={{
-                        valueType: "Category",
-                        interval: 1,
-                        majorGridLines: { width: 0 },
-                      }}
-                      primaryYAxis={{
-                        labelFormat: "{value}",
-                        edgeLabelPlacement: "Shift",
-                        majorGridLines: { width: 0 },
-                        majorTickLines: { width: 0 },
-                        lineStyle: { width: 0 },
-                        labelStyle: {
-                          color: "transparent",
-                        },
-                      }}
-                      chartArea={{ border: { width: 0 } }}
-                      width={Browser.isDevice ? "100%" : "100%"}
-                      height={"250px"}
-                      tooltip={{ enable: true }}>
-                      <Inject services={[ColumnSeries, LineSeries ,DataLabel, Category, Tooltip, Legend]} />
-                      <SeriesCollectionDirective>
-                        <SeriesDirective
-                          dataSource={MarketData}
-                          xName='name'
-                          yName='RMS2018'
-                          type='Column'
-                          fill={"#3d78c0"}
-                          name={"RMS 2018"}
-                          width={1}
-                          marker={{
-                            dataLabel: {
-                              visible: true,
-                              position: "Bottom",
-                              font: {
-                                fontWeight: "600",
-                                color: "#ffffff",
-                              },
-                            },
-                          }}></SeriesDirective>
-                         <SeriesDirective
-                          dataSource={MarketData}
-                          xName='name'
-                          yName='RMS2017'
-                          type='Column'
-                          fill={"#98c0e3"}
-                          name={"RMS 2017"}
-                          width={1}
-                          marker={{
-                            dataLabel: {
-                              visible: true,
-                              position: "Bottom",
-                              font: {
-                                fontWeight: "600",
-                                color: "#ffffff",
-                              },
-                            },
-                          }}></SeriesDirective>
-                          <SeriesDirective
-                          dataSource={MarketData}
-                          xName='name'
-                          yName='ADR2018'
-                          type='Line'
-                          fill={"#50aec7"}
-                          name={"ADR 2018"}
-                          width={2}
-                         
-                          marker={{
-                            visible: true,
-                            width: 8, 
-                            height: 8, 
-                            fill: "#50aec7",
-                            border: { width: 0, color: '#50aec7' } ,
-                            dataLabel: {
-                              visible: true,
-                              position: "Top",
-                              font: {
-                                fontWeight: "600",
-                                color: "#000000",
-                              },
-                            },
-                          }}></SeriesDirective>
-                          <SeriesDirective
-                          dataSource={MarketData}
-                          xName='name'
-                          yName='ADR2017'
-                          type='Line'
-                          fill={"#24446e"}
-                          name={"ADR 2017"}
-                          width={2}
-                         
-                          marker={{
-                            visible: true,
-                            width: 8, 
-                            height: 8, 
-                            fill: "#24446e",
-                            border: { width: 0, color: '#24446e' } ,
-                            dataLabel: {
-                              visible: true,
-                              position: "Bottom",
-                              font: {
-                                fontWeight: "600",
-                                color: "#000000",
-                              },
-                            },
-                          }}></SeriesDirective>
-                         
-                      </SeriesCollectionDirective>
-                    </ChartComponent>
-                    
+        <ChartComponent
+          id={"MarketChart"}
+          style={{ textAlign: "center" }}
+          primaryXAxis={{
+            valueType: "Category",
+            interval: 1,
+            majorGridLines: { width: 0 },
+          }}
+          primaryYAxis={{
+            labelFormat: "{value}",
+            edgeLabelPlacement: "Shift",
+            majorGridLines: { width: 0 },
+            majorTickLines: { width: 0 },
+            lineStyle: { width: 0 },
+            labelStyle: {
+              color: "transparent",
+            },
+          }}
+          chartArea={{ border: { width: 0 } }}
+          width={Browser.isDevice ? "100%" : "100%"}
+          height={"250px"}
+          tooltip={{ enable: true }}>
+          <Inject
+            services={[
+              ColumnSeries,
+              LineSeries,
+              DataLabel,
+              Category,
+              Tooltip,
+              Legend,
+            ]}
+          />
+          <SeriesCollectionDirective>
+            <SeriesDirective
+              dataSource={MarketData}
+              xName='name'
+              yName='RMS2018'
+              type='Column'
+              fill={"#3d78c0"}
+              name={"RMS 2018"}
+              width={1}
+              marker={{
+                dataLabel: {
+                  visible: true,
+                  position: "Bottom",
+                  font: {
+                    fontWeight: "600",
+                    color: "#ffffff",
+                  },
+                },
+              }}></SeriesDirective>
+            <SeriesDirective
+              dataSource={MarketData}
+              xName='name'
+              yName='RMS2017'
+              type='Column'
+              fill={"#98c0e3"}
+              name={"RMS 2017"}
+              width={1}
+              marker={{
+                dataLabel: {
+                  visible: true,
+                  position: "Bottom",
+                  font: {
+                    fontWeight: "600",
+                    color: "#ffffff",
+                  },
+                },
+              }}></SeriesDirective>
+            <SeriesDirective
+              dataSource={MarketData}
+              xName='name'
+              yName='ADR2018'
+              type='Line'
+              fill={"#50aec7"}
+              name={"ADR 2018"}
+              width={2}
+              marker={{
+                visible: true,
+                width: 8,
+                height: 8,
+                fill: "#50aec7",
+                border: { width: 0, color: "#50aec7" },
+                dataLabel: {
+                  visible: true,
+                  position: "Top",
+                  font: {
+                    fontWeight: "600",
+                    color: "#000000",
+                  },
+                },
+              }}></SeriesDirective>
+            <SeriesDirective
+              dataSource={MarketData}
+              xName='name'
+              yName='ADR2017'
+              type='Line'
+              fill={"#24446e"}
+              name={"ADR 2017"}
+              width={2}
+              marker={{
+                visible: true,
+                width: 8,
+                height: 8,
+                fill: "#24446e",
+                border: { width: 0, color: "#24446e" },
+                dataLabel: {
+                  visible: true,
+                  position: "Bottom",
+                  font: {
+                    fontWeight: "600",
+                    color: "#000000",
+                  },
+                },
+              }}></SeriesDirective>
+          </SeriesCollectionDirective>
+        </ChartComponent>
       </Card.Body>
     </Card>
   );

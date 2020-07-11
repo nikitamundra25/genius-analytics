@@ -11,14 +11,21 @@ import {
   Legend,
 } from "@syncfusion/ej2-react-charts";
 
-export const PieChartComponent = ({ id, data }: any) => {
+export const PieChartComponent = ({
+  id,
+  data,
+  width = "100%",
+  height,
+}: any) => {
   return (
     <AccumulationChartComponent
       id={`pie${id}`}
       legendSettings={{
-        visible: true,
+        visible: false,
         position: "Bottom",
       }}
+      width={width}
+      height={height}
       enableSmartLabels={true}
       enableAnimation={false}
       center={{ x: "50%", y: "50%" }}
@@ -48,7 +55,6 @@ export const PieChartComponent = ({ id, data }: any) => {
           dataLabel={{
             visible: true,
             position: "Inside",
-
             name: "text",
             font: {
               fontWeight: "600",

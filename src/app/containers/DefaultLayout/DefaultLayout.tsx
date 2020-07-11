@@ -128,7 +128,7 @@ class DefaultLayout extends Component<
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense fallback={<Loader />}>
-              <AppSidebarNav navConfig={navigation} {...this.props} isOpen />
+              <AppSidebarNav navConfig={navigation} isOpen />
             </Suspense>
             <AppSidebarFooter />
             <AppSidebarMinimizer />
