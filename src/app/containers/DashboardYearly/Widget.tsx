@@ -4,6 +4,11 @@ import CumulativeTable from "./Cumulative";
 import MonthlyOCCADR from "./OCCADR/Monthly";
 import QuarterlyOCCADR from "./OCCADR/Quarterly";
 import RoomTypesYTD from "./RoomTypesYTD";
+import REVPARYTD from "./RevparYTD";
+import StayYTD from "./StayYTD";
+import LeadTimesYTD from "./LeadTimesYTD";
+import LeadTimesSegmentYTD from "./LeadTimesSegmentYTD";
+import RGIPerformance from "./RGIPerformance";
 
 const getChart = (chartType: any) => {
   switch (chartType.name) {
@@ -16,7 +21,7 @@ const getChart = (chartType: any) => {
       );
     case "MOCCADR":
       return (
-        <Col sm={6}>
+        <Col sm={5}>
           {" "}
           <MonthlyOCCADR id='monthly-ofasdfcc-adr' />
         </Col>
@@ -31,11 +36,43 @@ const getChart = (chartType: any) => {
       );
     case "ROOMTYPES":
       return (
-        <Col sm={3}>
+        <Col sm={4}>
           {" "}
           <RoomTypesYTD />
         </Col>
       );
+      case "RevPARYTD":
+      return (
+        <Col sm={6}>
+          {" "}
+          <REVPARYTD />
+        </Col>
+      );
+      case "StayYTD":
+      return (
+        <Col sm={6}>
+          
+          <StayYTD />
+        </Col>
+      );
+      case "Lead Times YTD":
+        return (
+          <Col sm={3}>
+            <LeadTimesYTD />
+          </Col>
+        );
+        case "Lead Times YTD by Segment":
+        return (
+          <Col sm={3}>
+            <LeadTimesSegmentYTD />
+          </Col>
+        );
+        case "RGI Performance - YTD":
+        return (
+          <Col sm={6}>
+            <RGIPerformance />
+          </Col>
+        );
     default:
       return null;
   }

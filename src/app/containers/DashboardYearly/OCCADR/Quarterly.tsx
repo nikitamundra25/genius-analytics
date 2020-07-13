@@ -35,24 +35,34 @@ const Charts1 = [
     xName: "name",
     yName: "OCC",
     type: "Column",
-    fill: "#2b588f",
-    name: "OCC",
+    fill: "#3a71b4",
+    name: "OCC %",
     width: 1,
+    marker: {
+      dataLabel: {
+        visible: true,
+        position: "Top",
+        font: {
+          fontWeight: "600",
+          color: "#ffffff",
+        },
+      },
+    },
   },
   {
     dataSource: Monthlydailydata,
     xName: "name",
     yName: "ADR",
     type: "Line",
-    fill: "#e46d09",
+    fill: "#bb423d",
     name: "ADR",
     width: 2,
     marker: {
-      visible: false,
-      width: 10,
-      height: 10,
-      fill: "#2f5891",
-      border: { width: 1, color: "#e46d09" },
+      visible: true,
+      width: 8,
+      height: 8,
+      fill: "#bb423d",
+      border: { width: 0, color: "#bb423d" },
       dataLabel: {
         visible: false,
         position: "Top",
@@ -70,7 +80,7 @@ const QuarterlyOCCADR = ({ id }: any) => {
       {" "}
       <Card>
         <WidgetHeader title={"Quarterly OCC & ADR"} showToggle={false} />
-        <Card.Body>
+        {/* <Card.Body> */}
           <React.Suspense fallback={<Loader />}>
             <MixedCharts
               id={id}
@@ -95,7 +105,7 @@ const QuarterlyOCCADR = ({ id }: any) => {
               charts={Charts1}
             />
           </React.Suspense>
-        </Card.Body>
+        {/* </Card.Body> */}
       </Card>
     </>
   );

@@ -11,6 +11,8 @@ import {
   Legend,
   LineSeries,
   BarSeries,
+  AreaSeries,
+  StackingColumnSeries,
 } from "@syncfusion/ej2-react-charts";
 
 const MixedCharts = ({ charts = [], id, chartSettings = {} }: any) => {
@@ -27,10 +29,12 @@ const MixedCharts = ({ charts = [], id, chartSettings = {} }: any) => {
           BarSeries,
           ColumnSeries,
           LineSeries,
+          AreaSeries,
           DataLabel,
           Category,
           Tooltip,
           Legend,
+          StackingColumnSeries,
         ]}
       />
       <SeriesCollectionDirective>
