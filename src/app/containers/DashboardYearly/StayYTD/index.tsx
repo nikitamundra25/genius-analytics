@@ -161,10 +161,9 @@ const Charts = [
       dataLabel: {
         visible: true,
         position: "Bottom",
-        
         font: {
           fontWeight: "600",
-          color: "#ffffff",
+          color: "#000000",
         
         },
       },

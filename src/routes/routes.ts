@@ -8,6 +8,9 @@ const DashboardMonthly = React.lazy(() =>
 const DashboardYearly = React.lazy(() =>
   import("../app/containers/DashboardYearly")
 );
+const PickupSummary = React.lazy(() =>
+  import("../app/containers/PickupSummary")
+);
 const Login = React.lazy(() => import("../app/containers/Auth"));
 const MyProfile = React.lazy(() => import("../app/containers/MyProfile"));
 const EmailTemplates = React.lazy(() =>
@@ -49,6 +52,13 @@ const routes = [
     component: DashboardYearly,
     exact: true,
   },
+  {
+    path: AppRoutes.PICKUPSUMMARY,
+    name: "Pickup Summary",
+    component: PickupSummary,
+    exact: true,
+  },
+  
   {
     path: AppRoutes.LOGIN,
     name: "",

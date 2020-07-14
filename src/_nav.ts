@@ -10,7 +10,7 @@ export default {
     {
       name: "Pickup",
       icon: "icon-briefcase",
-      url: AppRoutes.COMING_SOON,
+      url: AppRoutes.PICKUPSUMMARY,
     },
     {
       name: "Charts",
