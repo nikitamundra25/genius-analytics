@@ -221,6 +221,16 @@ const Charts2 = [
     fill: "#2b588f",
     name: "OCC",
     width: 1,
+    marker: {
+      dataLabel: {
+        visible: true,
+        position: "Bottom",
+        font: {
+          fontWeight: "600",
+          color: "#ffffff",
+        },
+      },
+    },
   },
   {
     dataSource: Monthlydailytotaldata,
@@ -260,7 +270,7 @@ const MonthlyDailyOccupacy: React.FC = (): JSX.Element => {
           <Col xs={12} md={9}>
             <React.Suspense fallback={<Loader />}>
               <MixedCharts
-                id={"line-and-column"}
+                id={"occChart1"}
                 chartSettings={{
                   primaryXAxis: {
                     valueType: "Category",
@@ -278,6 +288,7 @@ const MonthlyDailyOccupacy: React.FC = (): JSX.Element => {
                     },
                   },
                   tooltip: { enable: true },
+                  Legend: { enable: false },
                 }}
                 charts={Charts1}
               />

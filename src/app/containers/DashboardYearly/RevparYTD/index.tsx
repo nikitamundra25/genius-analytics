@@ -6,76 +6,96 @@ import moment from "moment";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
+
 const format = "MMM";
-const Monthlydailydata = [
+
+const RevParData = [
   {
     name: moment().month(0).format(format),
-    OCC: 50,
-    ADR: 64,
+    OCC: 75,
+    RevPAR: 132,
+    NrevPAR: 115,
   },
   {
     name: moment().month(1).format(format),
-    OCC: 88,
-    ADR: 80,
+    OCC: 86,
+    RevPAR: 133,
+    NrevPAR: 117,
   },
   {
     name: moment().month(2).format(format),
-    OCC: 74,
-    ADR: 76,
+    OCC: 93,
+    RevPAR: 135,
+    NrevPAR: 124,
   },
   {
     name: moment().month(3).format(format),
-    OCC: 50,
-    ADR: 64,
+    OCC: 94,
+    RevPAR: 146,
+    NrevPAR: 122,
   },
   {
     name: moment().month(4).format(format),
-    OCC: 88,
-    ADR: 80,
+    OCC: 89,
+    RevPAR: 154,
+    NrevPAR: 143,
   },
   {
     name: moment().month(5).format(format),
-    OCC: 74,
-    ADR: 76,
+    OCC: 91,
+    RevPAR: 161,
+    NrevPAR: 152,
   },
   {
     name: moment().month(6).format(format),
-    OCC: 50,
-    ADR: 64,
+    OCC: 88,
+    RevPAR: 167,
+    NrevPAR: 157,
   },
   {
     name: moment().month(7).format(format),
-    OCC: 88,
-    ADR: 80,
+    OCC: 85,
+    RevPAR: 144,
+    NrevPAR: 118,
   },
   {
     name: moment().month(8).format(format),
-    OCC: 74,
-    ADR: 76,
+    OCC: 89,
+    RevPAR: 156,
+    NrevPAR: 144,
   },
   {
     name: moment().month(9).format(format),
-    OCC: 50,
-    ADR: 64,
+    OCC: 95,
+    RevPAR: 150,
+    NrevPAR: 142,
   },
   {
     name: moment().month(10).format(format),
-    OCC: 88,
-    ADR: 80,
+    OCC: 91,
+    RevPAR: 143,
+    NrevPAR: 145,
   },
   {
     name: moment().month(11).format(format),
-    OCC: 74,
-    ADR: 76,
+    OCC: 88,
+    RevPAR: 150,
+    NrevPAR: 130,
+  },
+  {
+    name: "Total",
+    OCC: 90,
+    RevPAR: 149,
+    NrevPAR: 135,
   },
 ];
-const Charts1 = [
+const Charts = [
   {
-    dataSource: Monthlydailydata,
+    dataSource: RevParData,
     xName: "name",
     yName: "OCC",
-    type: "Column",
-    fill: "#3a71b4",
+    type: "Area",
+    fill: "#c4e6ef",
     name: "OCC %",
     width: 1,
     marker: {
@@ -84,27 +104,29 @@ const Charts1 = [
         position: "Top",
         font: {
           fontWeight: "600",
-          color: "#ffffff",
+          color: "#000000",
         },
       },
     },
   },
+ 
   {
-    dataSource: Monthlydailydata,
+    dataSource: RevParData,
     xName: "name",
-    yName: "ADR",
+    yName: "RevPAR",
     type: "Line",
-    fill: "#bb423d",
-    name: "ADR",
+    fill: "#76923c",
+    name: "RevPAR",
     width: 2,
+    
     marker: {
-      visible: true,
+      visible: false,
       width: 8,
       height: 8,
-      fill: "#bb423d",
-      border: { width: 0, color: "#bb423d" },
+      fill:"#76923c",
+      border: { width: 0, color: "#76923c" },
       dataLabel: {
-        visible: false,
+        visible: true,
         position: "Top",
         font: {
           fontWeight: "600",
@@ -113,16 +135,43 @@ const Charts1 = [
       },
     },
   },
+  {
+    dataSource: RevParData,
+    xName: "name",
+    yName: "NrevPAR",
+    type: "Line",
+    fill: "#bf0b0b",
+    name: "NrevPAR",
+    width: 2,
+    marker: {
+      visible: false,
+      width: 8,
+      height: 8,
+      fill: "#bf0b0b",
+      border: { width: 0, color: "#bf0b0b" },
+      dataLabel: {
+        visible: true,
+        position: "Bottom",
+        font: {
+          fontWeight: "600",
+          color: "#000000",
+        
+        },
+      },
+    },
+  },
 ];
-const MonthlyOCCADR = ({ id }: any) => {
+
+
+const RevparYTD = () => {
   return (
     <>
       <Card>
-        <WidgetHeader title={"Monthly OCC & ADR"} showToggle={false} />
+        <WidgetHeader title={"RevPAR Vs. NrevPAR - YTD"} showToggle={false} />
         {/* <Card.Body> */}
           <React.Suspense fallback={<Loader />}>
             <MixedCharts
-              id={id}
+              id={"RevPAR"}
               chartSettings={{
                 primaryXAxis: {
                   valueType: "Category",
@@ -130,7 +179,7 @@ const MonthlyOCCADR = ({ id }: any) => {
                   majorGridLines: { width: 0 },
                 },
                 primaryYAxis: {
-                  labelFormat: "{value}%",
+                  labelFormat: "{value}",
                   edgeLabelPlacement: "Shift",
                   majorGridLines: { width: 0 },
                   majorTickLines: { width: 0 },
@@ -141,7 +190,7 @@ const MonthlyOCCADR = ({ id }: any) => {
                 },
                 tooltip: { enable: true },
               }}
-              charts={Charts1}
+              charts={Charts}
             />
           </React.Suspense>
         {/* </Card.Body> */}
@@ -150,4 +199,4 @@ const MonthlyOCCADR = ({ id }: any) => {
   );
 };
 
-export default MonthlyOCCADR;
+export default RevparYTD;

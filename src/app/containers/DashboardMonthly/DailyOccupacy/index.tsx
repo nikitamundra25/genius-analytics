@@ -1,19 +1,10 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import {
-  ChartComponent,
-  SeriesCollectionDirective,
-  SeriesDirective,
-  Inject,
-  DataLabel,
-  ColumnSeries,
-  Category,
-  Tooltip,
-  LineSeries,
-  Legend,
-} from "@syncfusion/ej2-react-charts";
-import { Browser } from "@syncfusion/ej2-base";
-
+import Loader from "../../../components/Loader/Loader";
+import WidgetHeader from "../../../components/WidgetHeader";
+const MixedCharts = React.lazy(() =>
+  import("../../../components/Charts/MixedCharts")
+);
 const DailyOccupacy: React.FC = (): JSX.Element => {
   const dailyocc = [
     {
@@ -204,115 +195,116 @@ const DailyOccupacy: React.FC = (): JSX.Element => {
     },
   ];
 
+  const Charts = [
+    {
+      dataSource: dailyocc,
+      xName: "name",
+      yName: "OCC",
+      type: "Line",
+      fill: "#4176b9",
+      name: "Budget",
+      width: 2,
+      marker: {
+        visible: false,
+        width: 10,
+        height: 10,
+        fill: "#2f5891",
+        border: { width: 1, color: "#4176b9" },
+        dataLabel: {
+          visible: false,
+          position: "Bottom",
+          font: {
+            fontWeight: "600",
+            color: "#ffffff",
+          },
+        },
+      },
+    },
+    {
+      dataSource: dailyocc,
+      xName: "name",
+      yName: "Budget",
+      type: "Line",
+      fill: "#b82f2c",
+      name: "Budget",
+      width: 2,
+      dashArray:'5',
+      marker: {
+        visible: false,
+        width: 10,
+        height: 10,
+        fill: "#b82f2c",
+        border: { width: 1, color: "#b82f2c" },
+        dataLabel: {
+          visible: true,
+          position: "Top",
+          font: {
+            fontWeight: "600",
+            color: "#000000",
+          },
+        },
+      },
+    },
+    {
+      dataSource: dailyocc,
+      xName: "name",
+      yName: "LY",
+      type: "Line",
+      fill: "#94b54e",
+      name: "LY",
+      width: 2,
+      dashArray:'5',
+      marker: {
+        visible: false,
+        width: 10,
+        height: 10,
+        fill: "#94b54e",
+        border: { width: 1, color: "#94b54e" },
+        dataLabel: {
+          visible: true,
+          position: "Bottom",
+          font: {
+            fontWeight: "600",
+            color: "#000000",
+          },
+        },
+      },
+    },
+  ];
+
   return (
     <Card>
-      <Card.Header className='d-flex align-items-center justify-content-between'>
-        <Card.Title>Daily Occupacy Vs. BUD Vs. LY</Card.Title>
-        <div className='action-wrap'>
-          <div className='action-btn active'>
-            <span className='icon-grid'></span>
-          </div>
-          <div className='action-btn'>
-            <span className='icon-pie-chart'></span>
-          </div>
-        </div>
-      </Card.Header>
+       <WidgetHeader
+        title={"Daily Occupacy Vs. BUD Vs. LY"}
+        activeToggle={"graph"}
+      />
+      
       <Card.Body>
-        <ChartComponent
-          id={"dailyocc"}
-          style={{ textAlign: "center" }}
-          primaryXAxis={{
-            valueType: "Category",
-            interval: 1,
-            majorGridLines: { width: 0 },
-          }}
-          primaryYAxis={{
-            labelFormat: "{value}%",
-            edgeLabelPlacement: "Shift",
-            majorGridLines: { width: 0 },
-            majorTickLines: { width: 0 },
-            lineStyle: { width: 0 },
-            labelStyle: {
-              color: "transparent",
-            },
-          }}
-          chartArea={{ border: { width: 0 } }}
-          width={Browser.isDevice ? "100%" : "100%"}
-          height={"250px"}
-          tooltip={{ enable: true }}>
-          <Inject
-            services={[
-              ColumnSeries,
-              LineSeries,
-              DataLabel,
-              Category,
-              Tooltip,
-              Legend,
-            ]}
-          />
-          <SeriesCollectionDirective>
-            <SeriesDirective
-              dataSource={dailyocc}
-              xName='name'
-              yName='OCC'
-              type='Line'
-              fill={"#4176b9"}
-              name={"OCC"}
-              width={2}
-              marker={{
-                visible: false,
-                width: 10,
-                height: 10,
-                border: { width: 2, color: "#4176b9" },
-              }}></SeriesDirective>
-            <SeriesDirective
-              dataSource={dailyocc}
-              xName='name'
-              yName='Budget'
-              type='Line'
-              fill={"#b82f2c"}
-              name={"Budget"}
-              width={2}
-              dashArray='5'
-              marker={{
-                visible: false,
-                width: 10,
-                height: 10,
-                border: { width: 2, color: "#b82f2c" },
-                dataLabel: {
-                  visible: true,
-                  position: "Top",
-                  font: {
-                    fontWeight: "600",
-                    color: "#000000",
+      <React.Suspense fallback={<Loader />}>
+      <MixedCharts
+                id={"dailyocc"}
+                chartSettings={{
+                  primaryXAxis: {
+                    valueType: "Category",
+                    interval: 1,
+                    majorGridLines: { width: 0 },
                   },
-                },
-              }}></SeriesDirective>
-            <SeriesDirective
-              dataSource={dailyocc}
-              xName='name'
-              yName='LY'
-              type='Line'
-              fill={"#94b54e"}
-              name={"LY"}
-              width={2}
-              dashArray='5'
-              marker={{
-                visible: false,
-                width: 10,
-                height: 10,
-                border: { width: 2, color: "#94b54e" },
-                dataLabel: {
-                  visible: true,
-                  position: "Bottom",
-                  font: {
-                    fontWeight: "600",
-                    color: "#000000",
+                  primaryYAxis: {
+                    labelFormat: "{value}%",
+                    edgeLabelPlacement: "Shift",
+                    majorGridLines: { width: 0 },
+                    majorTickLines: { width: 0 },
+                    lineStyle: { width: 0 },
+                    labelStyle: {
+                      color: "transparent",
+                    },
                   },
-                },
-              }}></SeriesDirective>
-          </SeriesCollectionDirective>
-        </ChartComponent>
+                  tooltip: { enable: true },
+                  Legend: { enable: false },
+                }}
+                charts={Charts}
+              />
+       </React.Suspense>
       </Card.Body>
     </Card>
   );
