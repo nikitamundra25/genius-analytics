@@ -23,71 +23,86 @@ const BusinessADRdata = [
   { x: "Leisure Group", y: 115 },
   { x: "FIT", y: 111 },
 ];
+
+const BarChartData = [
+  {
+    id: "business-card-percent",
+    chartSettings: {
+      primaryXAxis: {
+        valueType: "Category",
+        interval: 1,
+        majorGridLines: { width: 0 },
+      },
+      primaryYAxis: {
+        labelFormat: "{value}%",
+        edgeLabelPlacement: "Shift",
+        majorGridLines: { width: 0 },
+        majorTickLines: { width: 0 },
+        lineStyle: { width: 0 },
+        labelStyle: {
+          color: "transparent",
+        },
+      },
+      title: "Business Mix %",
+      tooltip: { enable: true },
+    },
+    title: "Business Mix %",
+    color: "#5b9cd6",
+    data: Businessdata,
+  },
+  {
+    id: "business-card-adr",
+    chartSettings: {
+      primaryXAxis: {
+        valueType: "Category",
+        interval: 1,
+        majorGridLines: { width: 0 },
+      },
+      primaryYAxis: {
+        labelFormat: "{value}%",
+        edgeLabelPlacement: "Shift",
+        majorGridLines: { width: 0 },
+        majorTickLines: { width: 0 },
+        lineStyle: { width: 0 },
+        labelStyle: {
+          color: "transparent",
+        },
+      },
+      title: "Business Mix ADR",
+      tooltip: { enable: true },
+    },
+    title: "Business Mix ADR",
+    color: "#4473c5",
+    data: BusinessADRdata,
+  },
+];
 export default (props: any) => {
   return (
     <>
       <Card>
         <WidgetHeader title={"Business Mix"} activeToggle={"graph"} />
         <Card.Body>
-          <Row>
-            <Col xs={12} md={6}>
-              <React.Suspense fallback={<Loader />}>
-                <BarChartComponent
-                  id={"business-card-percent"}
-                  chartSettings={{
-                    primaryXAxis: {
-                      valueType: "Category",
-                      interval: 1,
-                      majorGridLines: { width: 0 },
-                    },
-                    primaryYAxis: {
-                      labelFormat: "{value}%",
-                      edgeLabelPlacement: "Shift",
-                      majorGridLines: { width: 0 },
-                      majorTickLines: { width: 0 },
-                      lineStyle: { width: 0 },
-                      labelStyle: {
-                        color: "transparent",
-                      },
-                    },
-                    title: "Business Mix %",
-                    tooltip: { enable: true },
-                  }}
-                  title={"Business Mix %"}
-                  color='#5b9cd6'
-                  data={Businessdata}
-                />
-              </React.Suspense>
-            </Col>
-
-            <Col xs={12} md={6}>
-              <BarChartComponent
-                id={"business-card-adr"}
-                chartSettings={{
-                  primaryXAxis: {
-                    valueType: "Category",
-                    interval: 1,
-                    majorGridLines: { width: 0 },
-                  },
-                  primaryYAxis: {
-                    labelFormat: "{value}%",
-                    edgeLabelPlacement: "Shift",
-                    majorGridLines: { width: 0 },
-                    majorTickLines: { width: 0 },
-                    lineStyle: { width: 0 },
-                    labelStyle: {
-                      color: "transparent",
-                    },
-                  },
-                  title: "Business Mix ADR",
-                  tooltip: { enable: true },
-                }}
-                title={"Business Mix ADR"}
-                color='#4473c5'
-                data={BusinessADRdata}
-              />
-            </Col>
-          </Row>
+          <Col md={12} xs={12}>
+            <Row>
+              {BarChartData.map((key: any, index: number) => {
+                return (
+                  <Col xs={12} md={6}>
+                    <div className="w-100">
+                      <React.Suspense fallback={<Loader />}>
+                        <BarChartComponent
+                          id={key.id}
+                          chartSettings={key.chartSettings}
+                          title={key.title}
+                          color={key.color}
+                          data={key.data}
+                        />
+                      </React.Suspense>
+                    </div>
+                  </Col>
+                );
+              })}
+            </Row>
+          </Col>
         </Card.Body>
       </Card>
     </>

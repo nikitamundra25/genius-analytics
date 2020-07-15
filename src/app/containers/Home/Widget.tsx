@@ -16,68 +16,162 @@ const getChart = (chartType: any) => {
   switch (chartType.name) {
     case "Business on the Books":
       return (
-        <div id="one" className="e-panel" data-row="0" data-col="0" data-sizex="1" data-sizey="1">
-              <span id="close" className="e-template-icon e-clear-icon"/>
-              <div className="e-panel-container">
-        <Col xs={12} md={5}>
-          <BOB />
-        </Col>
+        <div
+          id="one"
+          className="e-panel"
+          data-row="0"
+          data-col="0"
+          data-sizex="2"
+          data-sizey="0"
+        >
+          <span id="close" className="e-template-icon e-clear-icon" />
+          <div className="e-panel-container">
+           
+            <BOB />
+          </div>
         </div>
-       </div>
       );
     case "Key Business Metrics":
       return (
-        <Col xs={12} md={7}>
-          <KeyBusinessMetrics />
-        </Col>
+        <div
+          id="two"
+          className="e-panel"
+          data-row="0"
+          data-col="2"
+          data-sizex="2.5"
+          data-sizey="0"
+        >
+          <span id="close" className="e-template-icon e-clear-icon" />
+          <div className="e-panel-container">
+           
+            <KeyBusinessMetrics />
+          </div>
+        </div>
       );
     case "Room Nights":
       return (
-        <Col xs={12} md={6}>
-          <PickupSinceYesterday />
-        </Col>
+        <div
+          id="three"
+          className="e-panel"
+          data-row="1"
+          data-col="0"
+          data-sizex="2"
+          data-sizey="0"
+        >
+          <span id="close" className="e-template-icon e-clear-icon" />
+          <div className="e-panel-container">
+            <PickupSinceYesterday />
+          </div>
+        </div>
       );
     case "Occupacy Statics":
       return (
-        <Col xs={12} md={6}>
-          <OccupencyStatitics />
-        </Col>
+        <div
+          id="four"
+          className="e-panel"
+          data-row="1"
+          data-col="2"
+          data-sizex="2"
+          data-sizey="0"
+        >
+          <span id="close" className="e-template-icon e-clear-icon" />
+          <div className="e-panel-container">
+            <OccupencyStatitics />
+          </div>
+        </div>
       );
     case "Business Mix":
       return (
-        <Col xs={12} md={6}>
-          <BusinessMixComponent />
-        </Col>
+        <div
+          id="five"
+          className="e-panel"
+          data-row="2"
+          data-col="0"
+          data-sizex="2"
+          data-sizey="0"
+        >
+          <span id="close" className="e-template-icon e-clear-icon" />
+          <div className="e-panel-container">
+          
+            <BusinessMixComponent />
+          </div>
+        </div>
       );
     case "Room Type Statics":
       return (
-        <Col xs={12} md={6}>
-          <RoomTypeStatics />
-        </Col>
+        <div
+          id="six"
+          className="e-panel "
+          data-row="2"
+          data-col="2"
+          data-sizex="2"
+          data-sizey="0"
+        >
+          <span id="close" className="e-template-icon e-clear-icon" />
+          <div className="e-panel-container">
+            <RoomTypeStatics />
+          </div>
+        </div>
       );
     case "Booking Channel Mix":
       return (
-        <Col xs={12} md={6}>
+        <div
+        id="seven"
+        className="e-panel "
+        data-row="3"
+        data-col="0" data-sizex="2" data-sizey="2"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
           <BookingChannels />
-        </Col>
+        </div>
+        </div>
       );
     case "Geographic Origin of business":
       return (
-        <Col xs={12} md={6}>
+        <div
+        id="eight"
+        className="e-panel "
+        data-row="3"
+        data-col="2 " data-sizex="2" data-sizey="2"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
           <GeoBusiness />
-        </Col>
+        </div>
+        </div>
       );
     case "MTD RGI Performance":
       return (
-        <Col xs={12} md={8}>
+        <div
+        id="nine"
+        className="e-panel "
+        data-row="4"
+        data-col="0"
+        data-sizex="2"
+        data-sizey="0"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
           <MTDPerformance key={"rgi"} />
-        </Col>
+        </div>
+        </div>
       );
     case "RGI YoY Variance":
       return (
-        <Col xs={12} md={4}>
+        <div
+        id="ten"
+        className="e-panel "
+        data-row="4"
+        data-col="2"
+        data-sizex="2"
+        data-sizey="0"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
           <RGIVariance />
-        </Col>
+        </div>
+        </div>
       );
 
     default:
