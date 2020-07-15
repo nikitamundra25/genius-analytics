@@ -16,9 +16,14 @@ const getChart = (chartType: any) => {
   switch (chartType.name) {
     case "Business on the Books":
       return (
+        <div id="one" className="e-panel" data-row="0" data-col="0" data-sizex="1" data-sizey="1">
+              <span id="close" className="e-template-icon e-clear-icon"/>
+              <div className="e-panel-container">
         <Col xs={12} md={5}>
           <BOB />
         </Col>
+        </div>
+       </div>
       );
     case "Key Business Metrics":
       return (
