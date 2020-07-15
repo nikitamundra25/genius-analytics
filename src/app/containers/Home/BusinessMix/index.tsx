@@ -82,12 +82,12 @@ export default (props: any) => {
       <Card>
         <WidgetHeader title={"Business Mix"} activeToggle={"graph"} />
         <Card.Body>
-          <Col md={12} xs={12}>
-            <Row>
+          
+            <Row className="row-inner">
               {BarChartData.map((key: any, index: number) => {
                 return (
                   <Col xs={12} md={6}>
-                    <div className="w-100">
+                    
                       <React.Suspense fallback={<Loader />}>
                         <BarChartComponent
                           id={key.id}
@@ -97,12 +97,12 @@ export default (props: any) => {
                           data={key.data}
                         />
                       </React.Suspense>
-                    </div>
+                    
                   </Col>
                 );
               })}
             </Row>
-          </Col>
+          
         </Card.Body>
       </Card>
     </>

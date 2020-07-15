@@ -56,7 +56,7 @@ const getChart = (chartType: any) => {
           data-row="1"
           data-col="0"
           data-sizex="2"
-          data-sizey="0"
+          data-sizey="1"
         >
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
@@ -72,7 +72,7 @@ const getChart = (chartType: any) => {
           data-row="1"
           data-col="2"
           data-sizex="2"
-          data-sizey="0"
+          data-sizey="1"
         >
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
@@ -119,7 +119,7 @@ const getChart = (chartType: any) => {
         id="seven"
         className="e-panel "
         data-row="3"
-        data-col="0" data-sizex="2" data-sizey="2"
+        data-col="0" data-sizex="2" data-sizey="1"
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
@@ -133,7 +133,7 @@ const getChart = (chartType: any) => {
         id="eight"
         className="e-panel "
         data-row="3"
-        data-col="2 " data-sizex="2" data-sizey="2"
+        data-col="2" data-sizex="2" data-sizey="1"
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
@@ -148,7 +148,7 @@ const getChart = (chartType: any) => {
         className="e-panel "
         data-row="4"
         data-col="0"
-        data-sizex="2"
+        data-sizex="3"
         data-sizey="0"
       >
         <span id="close" className="e-template-icon e-clear-icon" />
@@ -163,8 +163,8 @@ const getChart = (chartType: any) => {
         id="ten"
         className="e-panel "
         data-row="4"
-        data-col="2"
-        data-sizex="2"
+        data-col="3"
+        data-sizex="1"
         data-sizey="0"
       >
         <span id="close" className="e-template-icon e-clear-icon" />

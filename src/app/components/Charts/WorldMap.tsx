@@ -13,20 +13,23 @@ const WorldMap = ({ data, id = "maps" }: any) => {
   return (
     <MapsComponent
       width={"100%"}
+      height={"280px"}
       id={id}
       zoomSettings={{
         enable: true,
       }}
       legendSettings={{
-        visible: true,
+        visible: false,
         position: "Top",
       }}
-      titleSettings={{
-        text: "Population density (per square kilometer) - 2015",
-        textStyle: {
-          size: "16px",
-        },
-      }}>
+      // titleSettings={{
+      //   visible: false,
+      //   text: "Population density (per square kilometer) - 2015",
+      //   textStyle: {
+      //     size: "16px",
+      //   },
+      // }}
+      >
       <Inject services={[Legend, MapsTooltip]} />
       <LayersDirective>
         <LayerDirective
