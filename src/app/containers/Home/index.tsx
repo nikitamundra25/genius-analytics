@@ -13,6 +13,7 @@ import { PieChartComponent } from "./PieChart";
 import { HighChartComponent } from "./HighChart";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { DashboardLayoutComponent } from '@syncfusion/ej2-react-layouts';
 
 const barChartBusinessMetrics = [
   {
@@ -451,12 +452,23 @@ for (let i = 0; i <= elements; i++) {
 }
 
 class HomeComponent extends Component<any, any> {
+  cellSpacing: number[];
+  panels: { sizeX: number; sizeY: number; row: number; col: number; content: string; }[];
   constructor(props: any) {
     super(props);
     this.state = {
-      graphList: [],
-      startDate: new Date(),
+      graphList: []
     };
+    this.cellSpacing = [5, 5];
+    this.panels = [
+      { "sizeX": 1, "sizeY": 1, "row": 0, "col": 0, content: '<div class="content">0</div>' },
+      { "sizeX": 3, "sizeY": 2, "row": 0, "col": 1, content: '<div class="content">1</div>' },
+      { "sizeX": 1, "sizeY": 3, "row": 0, "col": 4, content: '<div class="content">2</div>' },
+      { "sizeX": 1, "sizeY": 1, "row": 1, "col": 0, content: '<div class="content">3</div>' },
+      { "sizeX": 2, "sizeY": 1, "row": 2, "col": 0, content: '<div class="content">4</div>' },
+      { "sizeX": 1, "sizeY": 1, "row": 2, "col": 2, content: '<div class="content">5</div>' },
+      { "sizeX": 1, "sizeY": 1, "row": 2, "col": 3, content: '<div class="content">6</div>' }
+  ];
   }
 
   componentDidMount = () => {
@@ -580,27 +592,40 @@ class HomeComponent extends Component<any, any> {
   };
 
   render() {
-    const { graphList, startDate } = this.state;
+    const { graphList } = this.state;
 
     return (
-      <div className="animated fadeIn">
-        {graphList && graphList.length ? (
-          <ReactSortable
-            group="groupName"
-            animation={300}
-            delay={2}
-            list={graphList}
-            className="row"
-            setList={this.reorderListNew}
-            swapThreshold={1}
-            forceFallback
-          >
-            {graphList.map((chartConfig: any, index: number) => {
+<div className="control-section">
+<DashboardLayoutComponent id='defaultLayout' cellSpacing={this.cellSpacing} allowResizing={true} columns={5}>
+<div id="one" className="e-panel" data-row="0" data-col="0" data-sizex="1" data-sizey="1">
+              <span id="close" className="e-template-icon e-clear-icon"/>
+              <div className="e-panel-container">
+              {graphList.map((chartConfig: any, index: number) => {
               return <>{this.getChart(chartConfig)}</>;
             })}
-          </ReactSortable>
-        ) : null}
-      </div>
+              </div>
+            </div>
+            <div id="two" className="e-panel" data-row="1" data-col="0" data-sizex="1" data-sizey="2">
+              <span id="close" className="e-template-icon e-clear-icon"/>
+              <div className="e-panel-container">
+                <div className="text-align">1</div>
+              </div>
+            </div>
+  </DashboardLayoutComponent>
+</div>
+
+
+
+      // <div className="animated fadeIn">
+      //   {graphList && graphList.length ? (
+      //      <DashboardLayoutComponent id="default_dashboard" columns={5} 
+      //      cellSpacing={this.cellSpacing} allowResizing={true}  >
+      //       {graphList.map((chartConfig: any, index: number) => {
+      //         return <>{this.getChart(chartConfig)}</>;
+      //       })}
+      //     </DashboardLayoutComponent>
+      //   ) : null}
+      // </div>
     );
   }
 }

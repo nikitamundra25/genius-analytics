@@ -8,6 +8,7 @@
     "@coreui/icons": "^0.3.0",
     "@coreui/react": "^2.5.1",
     "@syncfusion/ej2-react-dropdowns": "^18.2.44",
+    "@syncfusion/ej2-react-layouts": "^18.2.44",
     "@types/axios": "^0.14.0",
     "@types/bootstrap": "^4.3.0",
     "@types/classnames": "^2.2.8",

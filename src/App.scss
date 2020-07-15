@@ -9,6 +9,8 @@
 @import "~simple-line-icons/css/simple-line-icons.css";
 // Import Main styles for this application
 @import "./scss/style.scss";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-layouts/styles/material.css";
 
 body {
   margin: 0;
@@ -935,3 +937,17 @@ html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .main, ht
 //   max-height: 350px;
 //   overflow-x: hidden;
 // }
+#defaultLayout {
+  padding: 10px;
+}
+
+#defaultLayout .e-panel .e-panel-container {
+  vertical-align: middle;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+
+.content {
+  line-height: 90px;
+}
