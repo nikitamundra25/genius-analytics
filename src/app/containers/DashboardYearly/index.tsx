@@ -12,7 +12,7 @@ const DashboardYearly = () => {
     <>
       <div className='animated fadeIn'>
         <TopBar />
-        <DashboardLayoutComponent id='defaultLayout' cellSpacing={cellSpacing} allowResizing={true} columns={4} >
+        <DashboardLayoutComponent id='defaultLayout' cellSpacing={cellSpacing} allowResizing={false} columns={4} >
         {graphCard && graphCard.length ? (
           <DashboardMonthlyWidget graphList={graphCard} />
         ) : null}

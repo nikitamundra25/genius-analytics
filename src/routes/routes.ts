@@ -11,6 +11,10 @@ const DashboardYearly = React.lazy(() =>
 const PickupSummary = React.lazy(() =>
   import("../app/containers/PickupSummary")
 );
+const PickupDetail = React.lazy(() =>
+  import("../app/containers/PickupDetail")
+);
+
 const Login = React.lazy(() => import("../app/containers/Auth"));
 const MyProfile = React.lazy(() => import("../app/containers/MyProfile"));
 const EmailTemplates = React.lazy(() =>
@@ -58,7 +62,12 @@ const routes = [
     component: PickupSummary,
     exact: true,
   },
-  
+  {
+    path: AppRoutes.PICKUPDETAIL,
+    name: "Pickup Detail",
+    component: PickupDetail,
+    exact: true,
+  },
   {
     path: AppRoutes.LOGIN,
     name: "",
