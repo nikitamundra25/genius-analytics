@@ -97,13 +97,14 @@ const Charts = [
 ];
 
 
-const PickupSegment = () => {
+const PickupDOWOCCSegment = (props:any) => {
+  const{index} = props;
   return (
     <>
      
           <React.Suspense fallback={<Loader />}>
             <MixedCharts
-              id={"DOWChart"}
+              id={`DOWChart-${index}`}
               chartSettings={{
                 primaryXAxis: {
                   valueType: "Category",
@@ -130,4 +131,4 @@ const PickupSegment = () => {
   );
 };
 
-export default PickupSegment;
+export default PickupDOWOCCSegment;

@@ -97,13 +97,13 @@ const Charts = [
 ];
 
 
-const BusinessMix = () => {
+const PickupBusinessMix = (props:any) => {
+  const{index} = props;
   return (
     <>
-     
           <React.Suspense fallback={<Loader />}>
             <MixedCharts
-              id={"BusinessChart"}
+              id={`PickupBusinessChart-${index}`}
               chartSettings={{
                 primaryXAxis: {
                   valueType: "Category",
@@ -130,4 +130,4 @@ const BusinessMix = () => {
   );
 };
 
-export default BusinessMix;
+export default PickupBusinessMix;

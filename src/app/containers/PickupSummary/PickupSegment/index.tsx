@@ -98,13 +98,14 @@ const Charts = [
 ];
 
 
-const PickupSegment = () => {
+const PickupSegment = (props: any) => {
+  const{index} = props;
   return (
     <>
      
           <React.Suspense fallback={<Loader />}>
             <MixedCharts
-              id={"PickupChart"}
+              id={`PickupChart-${index}`}
               chartSettings={{
                 primaryXAxis: {
                   valueType: "Category",
