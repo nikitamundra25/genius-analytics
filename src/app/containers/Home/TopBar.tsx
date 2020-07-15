@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Dropdown, Modal } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import { AppRoutes } from "../../../config";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import MonthPickerModal from "../../components/MonthPickerModal";
 
 const TopBar = (props: any) => {
   const currentYear = moment().get("year");
@@ -25,6 +24,7 @@ const TopBar = (props: any) => {
     });
     // eslint-disable-next-line
   }, []);
+  
   const onhandleChange = (e: any) => {
     setState({
       ...state,
@@ -35,7 +35,6 @@ const TopBar = (props: any) => {
 
   const [startDate, setStartDate] = useState(new Date());
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return (
@@ -81,23 +80,12 @@ const TopBar = (props: any) => {
           </Dropdown>
         </div>
       </div>
-      <Modal show={show} onHide={handleClose} size="sm" centered>
-        {/* <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header> */}
-        <Modal.Body>
-        
-        <DatePicker
-            selected={startDate}
-            onChange={(date:any) => setStartDate(date)}
-            dateFormat="MM/yyyy"
-            showMonthYearPicker
-            inline
-            className="custom-datepicker"
-          />
-        </Modal.Body>
-        
-      </Modal>
+     <MonthPickerModal 
+     show={show}
+     startDate={startDate}
+     handleClose={() => setShow(false)}
+     handleChange={(date:any) => setStartDate(date)}
+     />
     </>
   );
 };
