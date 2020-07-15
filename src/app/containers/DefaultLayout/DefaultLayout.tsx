@@ -1,6 +1,6 @@
 import React, { Component, Suspense } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-import { Container, Dropdown } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import {
   IDefaultLayoutProps,
   IDefaultLayoutState,
@@ -28,14 +28,10 @@ import { Dispatch } from "redux";
 import { connect } from "react-redux";
 import logo from "./../../../assets/img/logo150.png";
 import logosmall from "./../../../assets/img/logosmall.png";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
 import moment from "moment";
 const DefaultFooter = React.lazy(() => import("./DefaultFooter"));
 const DefaultHeader = React.lazy(() => import("./DefaultHeader"));
-const minOffset = 0;
-const maxOffset = 60;
+
 class DefaultLayout extends Component<
   IDefaultLayoutProps,
   IDefaultLayoutState
@@ -111,117 +107,34 @@ class DefaultLayout extends Component<
   };
 
   render() {
-    const { startDate, activeMonth, activeYear } = this.state;
-    const options = [];
-    let temp = moment().year();
-    for (let i = minOffset; i <= maxOffset; i++) {
-      const year: any = temp - i;
-      if (year >= "2010") {
-        options.push(year);
-      }
-    }
-    let checkPrevdate = new Date("2010/01/01");
-    let cur_month = checkPrevdate.getMonth();
-    let cur_year = checkPrevdate.getFullYear();
-
-    let disabledPrevious: boolean =
-      cur_month == activeMonth && activeYear == cur_year ? true : false;
-
-    let checkNextdate = new Date();
-    let next_month = checkNextdate.getMonth();
-    let next_year = checkNextdate.getFullYear();
-    let disabledNext: boolean =
-      next_month == activeMonth && activeYear == next_year ? true : false;
-
     return (
-      <div className="app">
+      <div className='app'>
         <AppHeader fixed>
           <Suspense fallback={<Loader />}>
             <DefaultHeader {...this.props} />
           </Suspense>
         </AppHeader>
-        <div className="app-body">
-          <AppSidebar fixed minimized display="lg">
-            <div className="brand-logo">
-              <img src={logo} width={120} alt="" className="main-logo" />
+        <div className='app-body'>
+          <AppSidebar fixed minimized display='lg'>
+            <div className='brand-logo'>
+              <img src={logo} width={120} alt='' className='main-logo' />
               <img
                 src={logosmall}
                 width={40}
-                alt=""
-                className="minimized-logo"
+                alt=''
+                className='minimized-logo'
               />
             </div>
             <AppSidebarHeader />
             <AppSidebarForm />
             <Suspense fallback={<Loader />}>
-              <AppSidebarNav navConfig={navigation} {...this.props} isOpen />
+              <AppSidebarNav navConfig={navigation} isOpen />
             </Suspense>
             <AppSidebarFooter />
             <AppSidebarMinimizer />
           </AppSidebar>
-          <main className="main">
-            {/* <AppBreadcrumb appRoutes={routes} /> */}
-
+          <main className='main'>
             <Container fluid>
-              <div className="main-navbar">
-                <div className="navbar-nav-item">
-                  <div className="year-nav">
-                    {!disabledPrevious ? (
-                      <span
-                        className="cursor-pointer"
-                        onClick={() => this.handleMonthNav("previous")}
-                      >
-                        <i className="icon-arrow-left "></i>
-                      </span>
-                    ) : null}
-                    <span className="mx-3">
-                      <DatePicker
-                        selected={startDate}
-                        onChange={(date: any) => this.handleDatePicker(date)}
-                        dateFormat="MMMM"
-                        showMonthYearPicker={true}
-                        minDate={new Date("2010/01/01")}
-                        maxDate={new Date()}
-                      />
-                    </span>
-                    {!disabledNext ? (
-                      <span
-                        className="cursor-pointer"
-                        onClick={() => this.handleMonthNav("next")}
-                      >
-                        <i className="icon-arrow-right "></i>
-                      </span>
-                    ) : null}
-                  </div>
-                </div>
-                <div className="navbar-nav-item">
-                  <DropDownListComponent
-                    id="year"
-                    dataSource={options}
-                    change={this.onhandleChange}
-                    placeholder="Select a year"
-                    value={activeYear}
-                    popupHeight="220px"
-                  />
-                </div>
-                <div className="navbar-nav-item">
-                  <Dropdown className="dashboard-dropdown common-dropdown">
-                    <Dropdown.Toggle variant="success" id="dropdown-dasboard">
-                      Dashboard
-                    </Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="#/action-1">Dashboard</Dropdown.Item>
-                      <Dropdown.Item href="#/action-2">
-                        Dashboard Monthly
-                      </Dropdown.Item>
-                      <Dropdown.Item href="#/action-3">
-                        Something Yearly
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
-                </div>
-              </div>
               <Suspense fallback={<Loader />}>
                 <Switch>
                   {routes.map((route, idx) => {

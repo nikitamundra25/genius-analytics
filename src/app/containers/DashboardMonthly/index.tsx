@@ -1,8 +1,8 @@
 import React from "react";
 import graphStats from "./GraphStats.json";
-import DashboardWidget from "./Widget";
-import TopBar from "./TopBar";
-import "./index.scss";
+import DashboardMonthlyWidget from "./Widget";
+import TopBar from "../Home/TopBar";
+import "../Home/index.scss";
 
 const HomeComponent = () => {
   const { graphCard } = graphStats;
@@ -11,7 +11,7 @@ const HomeComponent = () => {
       <TopBar />
       <div className='animated fadeIn'>
         {graphCard && graphCard.length ? (
-          <DashboardWidget graphList={graphCard} />
+          <DashboardMonthlyWidget graphList={graphCard} />
         ) : null}
       </div>
     </>
