@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import CumulativeTable from "./Cumulative";
 import MonthlyOCCADR from "./OCCADR/Monthly";
 import QuarterlyOCCADR from "./OCCADR/Quarterly";
@@ -14,64 +14,150 @@ const getChart = (chartType: any) => {
   switch (chartType.name) {
     case "Cumulative":
       return (
-        <Col sm={12}>
-          {" "}
+        <div
+        id="one"
+        className="e-panel"
+        data-row="0"
+        data-col="0"
+        data-sizex="4"
+        data-sizey="4"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
           <CumulativeTable />
-        </Col>
+        </div>
+        </div>
       );
     case "MOCCADR":
       return (
-        <Col sm={5}>
-          {" "}
+        <div
+        id="second"
+        className="e-panel"
+        data-row="1"
+        data-col="0"
+        data-sizex="2"
+        data-sizey="0"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
           <MonthlyOCCADR id='monthly-ofasdfcc-adr' />
-        </Col>
+        </div>
+        </div>
       );
 
     case "QOCCADR":
       return (
-        <Col sm={3}>
-          {" "}
+        <div
+        id="three"
+        className="e-panel"
+        data-row="1"
+        data-col="3"
+        data-sizex="1"
+        data-sizey="0"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
           <QuarterlyOCCADR id='quarterly-occ-adr' />
-        </Col>
+          </div>
+        </div>
       );
     case "ROOMTYPES":
       return (
-        <Col sm={4}>
-          {" "}
+        <div
+        id="four"
+        className="e-panel"
+        data-row="1"
+        data-col="4"
+        data-sizex="1"
+        data-sizey="0"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
           <RoomTypesYTD />
-        </Col>
+          </div>
+        </div>
       );
+
       case "RevPARYTD":
       return (
-        <Col sm={6}>
-          {" "}
+        <div
+        id="five"
+        className="e-panel"
+        data-row="2"
+        data-col="0"
+        data-sizex="2"
+        data-sizey="0"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
           <REVPARYTD />
-        </Col>
+        </div>
+        </div>
       );
       case "StayYTD":
       return (
-        <Col sm={6}>
-          
+        <div
+        id="six"
+        className="e-panel"
+        data-row="2"
+        data-col="2"
+        data-sizex="2"
+        data-sizey="0"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
           <StayYTD />
-        </Col>
+        </div>
+        </div>
       );
+
       case "Lead Times YTD":
         return (
-          <Col sm={3}>
+          <div
+          id="seven"
+          className="e-panel"
+          data-row="3"
+          data-col="0"
+          data-sizex="1"
+          data-sizey="1"
+        >
+          <span id="close" className="e-template-icon e-clear-icon" />
+          <div className="e-panel-container">
             <LeadTimesYTD />
-          </Col>
+          </div>
+          </div>
         );
         case "Lead Times YTD by Segment":
         return (
-          <Col sm={3}>
+          <div
+          id="eight"
+          className="e-panel"
+          data-row="3"
+          data-col="2"
+          data-sizex="1"
+          data-sizey="1"
+        >
+          <span id="close" className="e-template-icon e-clear-icon" />
+          <div className="e-panel-container">
             <LeadTimesSegmentYTD />
-          </Col>
+          </div>
+          </div>
         );
         case "RGI Performance - YTD":
         return (
-          <Col sm={6}>
+          <div
+          id="nine"
+          className="e-panel"
+          data-row="3"
+          data-col="4"
+          data-sizex="2"
+          data-sizey="0"
+        >
+          <span id="close" className="e-template-icon e-clear-icon" />
+          <div className="e-panel-container">
             <RGIPerformance />
-          </Col>
+          </div>
+          </div>
         );
     default:
       return null;
