@@ -29,6 +29,11 @@ body {
   .cursor-pointer{
     cursor: pointer;
   }
+  button{
+    &:focus{
+      outline:none;
+    }
+  }
   .white-nowrap
   {
     white-space: nowrap !important;
@@ -49,7 +54,15 @@ body {
         outline:none;
       }
     }
-    
+    .center-logo{
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      top: 4px;
+      img{
+        width:45px;
+      }
+    }
     .navbar-nav{
       .nav-link {
         font-size: 20px;
@@ -345,6 +358,12 @@ body {
   padding: 4px 0px;
   border-radius: 5px;
 }
+.sub-title{
+  font-weight: 500;
+  color: #2c2c2c;
+  font-size: 1.09375rem;
+  text-align: center;
+}
 
 .action-wrap{
   display:flex;
@@ -378,12 +397,43 @@ body {
   .navbar-nav-item{
     padding-left:20px;
   }
+  .nav-btn{
+    background:$white;
+    padding: 6px 16px;
+    color: $black;
+    font-size: 14px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px 0px rgba(46, 44, 44, 0.29);
+    font-weight: 500;
+    border: 1px solid #ede8e8;
+  }
   .year-nav{
     font-size: 16px;
     font-weight: 600;
     display: flex;
     align-items: center;
+    cursor:pointer;
   }
+}
+.react-datepicker {
+  width: 100%;
+  display: block;
+  .react-datepicker__month-container {
+    float: none;
+  }
+  .react-datepicker__month{
+    .react-datepicker__month-text, .react-datepicker__quarter-text{
+      display: inline-block;
+      width: 82px;
+      padding: 7px 12px;
+      margin: 0px;
+      border: 1px solid #ddd;
+      border-radius: 0px !important;
+    }
+  }
+ .react-datepicker__month--selected, {
+    border-color: #216ba5 !important;
+ }
 }
 
 .common-dropdown{

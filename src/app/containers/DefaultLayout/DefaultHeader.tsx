@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { LogOutRequest } from "../../../actions";
 import { Dispatch } from "redux";
-
+import logosmall from "./../../../assets/img/logosmall.png";
 class DefaultHeader extends Component<
   IDefaultHeaderProps,
   IDefaultHeaderState
@@ -21,7 +21,12 @@ class DefaultHeader extends Component<
       <React.Fragment>
         <AppSidebarToggler className='d-lg-none' display='md' mobile />
         <AppSidebarToggler className='d-md-down-none' display='lg' />
-
+          <div className='center-logo'>
+              <img
+                src={logosmall}
+                alt=''
+              />
+          </div>
         <Nav className='ml-auto navbar-nav' navbar-nav={""}>
           <Dropdown className='user-dropdown'>
             <Dropdown.Toggle variant='success' id='dropdown-basic1'>

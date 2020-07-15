@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
-import { Dropdown } from "react-bootstrap";
-
+import React, { useEffect, useState } from "react";
+import { Dropdown, Modal } from "react-bootstrap";
 import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import { AppRoutes } from "../../../config";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
-const TopBar = () => {
+const TopBar = (props: any) => {
   const currentYear = moment().get("year");
   const [state, setState] = React.useState<any>({
     yearOptions: [],
@@ -31,11 +32,17 @@ const TopBar = () => {
     });
   };
   const { yearOptions: options, activeYear } = state;
+
+  const [startDate, setStartDate] = useState(new Date());
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <div className='main-navbar'>
         <div className='navbar-nav-item'>
-          <div className='year-nav'>
+          <div className='year-nav' onClick={handleShow}>
             <span className='cursor-pointer'>
               <i className='icon-arrow-left '></i>
             </span>
@@ -75,6 +82,23 @@ const TopBar = () => {
           </Dropdown>
         </div>
       </div>
+      <Modal show={show} onHide={handleClose} size="sm" centered>
+        {/* <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header> */}
+        <Modal.Body>
+        
+        <DatePicker
+            selected={startDate}
+            onChange={(date:any) => setStartDate(date)}
+            dateFormat="MM/yyyy"
+            showMonthYearPicker
+            inline
+            className="custom-datepicker"
+          />
+        </Modal.Body>
+        
+      </Modal>
     </>
   );
 };
