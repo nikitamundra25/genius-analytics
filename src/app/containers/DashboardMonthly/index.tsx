@@ -8,6 +8,7 @@ import "../Home/index.scss";
 const DashboardMonthly = () => {
   const { graphCard } = graphStats;
   const cellSpacing = [5,10];
+
   return (
     <>
       <TopBar />
