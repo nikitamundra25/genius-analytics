@@ -70,7 +70,7 @@ export default (props: any) => {
       <WidgetHeader title={"Lead Times YTD"} activeToggle={"graph"} />
       <Card.Body >
         <React.Suspense fallback={<Loader />}>
-          <PieChartComponent id={"leadtimes"} height={"350px"} data={data} />
+          <PieChartComponent id={"leadtimes"} height={"285px"} data={data} />
         </React.Suspense>
       </Card.Body>
     </Card>
