@@ -5,8 +5,8 @@ export const AppRoutes: IAppRoutes = {
 
   LOGIN: "/login",
   HOME: "/dashboard",
-  DASHBOARDMONTHLY: "/dashboard-monthly",
-  DASHBOARDYEARLY: "/dashboard-yearly",
+  DASHBOARDMONTHLY: "/dashboard/monthly",
+  DASHBOARDYEARLY: "/dashboard/yearly",
   PICKUPSUMMARY: "/pickup-summary",
   MY_PROFILE: "/my-profile",
   USER: "#",
