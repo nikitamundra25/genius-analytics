@@ -14,7 +14,7 @@ const RTGBarChart = [
     data: [
       { x: "My RevPAR", y: 115.0 },
       { x: "RevPAR Compact", y: 96.0 },
-      { x: "RG1", y: 119.8 },
+      { x: "RGI", y: 119.8 },
     ],
   },
   {
@@ -24,7 +24,7 @@ const RTGBarChart = [
     data: [
       { x: "My OCC", y: 65.0 },
       { x: "OCC Compact", y: 68.0 },
-      { x: "MP1", y: 96.8 },
+      { x: "MPI", y: 96.8 },
     ],
   },
   {
@@ -34,7 +34,7 @@ const RTGBarChart = [
     data: [
       { x: "My ARR", y: 175.0 },
       { x: "ARR Compact", y: 140.0 },
-      { x: "AR1", y: 124.8 },
+      { x: "ARI", y: 124.8 },
     ],
   },
 ];

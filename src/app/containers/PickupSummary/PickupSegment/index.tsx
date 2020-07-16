@@ -1,88 +1,95 @@
 import React from "react";
-import { Card } from "react-bootstrap";
-import WidgetHeader from "../../../components/WidgetHeader";
 import Loader from "../../../components/Loader/Loader";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
-const Ratecode = [
+const PickupData = [
   {
-    name: "BAR",
-    RoomNts: 250,
-    ARR: 199,
+    name: "Best Flexible Rate",
+    RoomNts: 8,
+    ADR: 100,
   },
   {
-    name: "PRM",
-    RoomNts: 210,
-    ARR: 144,
+    name: "Leisure Break",
+    RoomNts: 17,
+    ADR: 54,
   },
   {
-    name: "COR1",
-    RoomNts: 100,
-    ARR: 168,
+    name: "Corporate Contracted",
+    RoomNts: 63,
+    ADR: 26,
   },
   {
-    name: "COR2",
-    RoomNts: 70,
-    ARR: 154,
+    name: "Consortia",
+    RoomNts: 38,
+    ADR: 56,
+  },
+  {
+    name: "Promotions",
+    RoomNts: 25,
+    ADR: 56,
+  },
+  {
+    name: "Groups",
+    RoomNts: 18,
+    ADR: 46,
+  },
+  {
+    name: "OTAs",
+    RoomNts: 18,
+    ADR: 60,
   },
   {
     name: "FIT",
-    RoomNts: 165,
-    ARR: 149,
-  },
-  {
-    name: "FLS",
-    RoomNts: 50,
-    ARR: 138,
-  },
-  {
-    name: "GRP",
-    RoomNts: 169,
-    ARR: 166,
+    RoomNts: 12,
+    ADR: 59,
   },
 ];
 const Charts = [
   {
-    dataSource: Ratecode,
+    dataSource: PickupData,
     xName: "name",
     yName: "RoomNts",
     type: "Column",
-    fill: "#386fb0",
+    fill: "#4684bd",
     name: "Room Nts",
     width: 1,
     marker: {
       dataLabel: {
         visible: true,
-        position: "Middle",
+        rx: 10,
+        ry: 10,
         font: {
           fontWeight: "600",
-          color: "#ffffff",
+          color: "#000",
         },
       },
     },
   },
+ 
   {
-    dataSource: Ratecode,
+    dataSource: PickupData,
     xName: "name",
-    yName: "ARR",
+    yName: "ADR",
     type: "Line",
-    fill: "#b73632",
-    name: "ARR",
+    fill: "#ee792b",
+    name: "ADR",
     width: 2,
     marker: {
-      visible: true,
+      visible: false,
       width: 8,
       height: 8,
-      fill: "#b73632",
-      border: { width: 0, color: "#b73632" },
+      fill:"#ee792b",
+      border: { width: 0, color: "#ee792b" },
       dataLabel: {
         visible: true,
         position: "Top",
+        fill:"#ee792b",
+        border: { width: 1, color: "#4684bd" },
         font: {
           fontWeight: "600",
-          color: "#000000",
+          color: "#ffffff",
         
         },
       },
@@ -91,18 +98,14 @@ const Charts = [
 ];
 
 
-const RateCodeStatistics = () => {
+const PickupSegment = (props: any) => {
+  const{index} = props;
   return (
     <>
-      <Card>
-      <WidgetHeader
-        title={"Rate Code Statistics"}
-        activeToggle={"graph"}
-      />
-        {/* <Card.Body> */}
+     
           <React.Suspense fallback={<Loader />}>
             <MixedCharts
-              id={"Ratecode"}
+              id={`PickupChart-${index}`}
               chartSettings={{
                 primaryXAxis: {
                   valueType: "Category",
@@ -124,11 +127,9 @@ const RateCodeStatistics = () => {
               charts={Charts}
             />
           </React.Suspense>
-      
-        {/* </Card.Body> */}
-      </Card>
+          <div className="sub-title">Pick up by segment</div>
     </>
   );
 };
 
-export default RateCodeStatistics;
+export default PickupSegment;

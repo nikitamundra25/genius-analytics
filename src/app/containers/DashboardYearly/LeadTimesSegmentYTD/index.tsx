@@ -68,7 +68,7 @@ export default (props: any) => {
   return (
     <Card>
       <WidgetHeader title={"Lead Times YTD by Segment"} activeToggle={"graph"} />
-      <Card.Body>
+      <Card.Body >
         <React.Suspense fallback={<Loader />}>
           <PieChartComponent id={"leadtimesSegment"} height={"350px"} data={data} />
         </React.Suspense>

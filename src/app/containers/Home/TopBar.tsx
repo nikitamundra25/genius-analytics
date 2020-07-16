@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Dropdown } from "react-bootstrap";
-
 import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import { AppRoutes } from "../../../config";
+import MonthPickerModal from "../../components/MonthPickerModal";
 
-const TopBar = () => {
+const TopBar = (props: any) => {
   const currentYear = moment().get("year");
   const [state, setState] = React.useState<any>({
     yearOptions: [],
@@ -24,6 +24,7 @@ const TopBar = () => {
     });
     // eslint-disable-next-line
   }, []);
+  
   const onhandleChange = (e: any) => {
     setState({
       ...state,
@@ -31,11 +32,16 @@ const TopBar = () => {
     });
   };
   const { yearOptions: options, activeYear } = state;
+
+  const [startDate, setStartDate] = useState(new Date());
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <div className='main-navbar'>
         <div className='navbar-nav-item'>
-          <div className='year-nav'>
+          <div className='year-nav' onClick={handleShow}>
             <span className='cursor-pointer'>
               <i className='icon-arrow-left '></i>
             </span>
@@ -60,7 +66,6 @@ const TopBar = () => {
             <Dropdown.Toggle variant='success' id='dropdown-dasboard'>
               Dashboard
             </Dropdown.Toggle>
-
             <Dropdown.Menu>
               <Dropdown.Item>
                 <Link to={AppRoutes.HOME}>Dashboard</Link>
@@ -75,6 +80,12 @@ const TopBar = () => {
           </Dropdown>
         </div>
       </div>
+     <MonthPickerModal 
+     show={show}
+     startDate={startDate}
+     handleClose={() => setShow(false)}
+     handleChange={(date:any) => setStartDate(date)}
+     />
     </>
   );
 };

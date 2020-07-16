@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import BOB from "./BOB";
 import MonthlyDailyOccupacy from "./MonthlyDailyOccupacy";
 import DailyOccupacy from "./DailyOccupacy";
@@ -12,45 +12,117 @@ const getChart = (chartType: any) => {
   switch (chartType.name) {
     case "Business on the Books":
       return (
-        <Col xs={12} md={12}>
+        <div
+          id="one"
+          className="e-panel"
+          data-row="0"
+          data-col="0"
+          data-sizex="4"
+          data-sizey="0"
+        >
+          <span id="close" className="e-template-icon e-clear-icon" />
+          <div className="e-panel-container">
+           
           <BOB />
-        </Col>
+        </div>
+        </div>
       );
     case "Monthly Daily Occupacy & ADR":
       return (
-        <Col xs={12} md={12}>
+        <div
+        id="two"
+        className="e-panel"
+        data-row="1"
+        data-col="0"
+        data-sizex="4"
+        data-sizey="0"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
+         
           <MonthlyDailyOccupacy />
-        </Col>
+          </div>
+        </div>
       );
     case "Daily Occupacy Vs. BUD Vs. LY":
       return (
-        <Col xs={12} md={8}>
+        <div
+        id="three"
+        className="e-panel"
+        data-row="2"
+        data-col="0"
+        data-sizex="2"
+        data-sizey="0"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
           <DailyOccupacy />
-        </Col>
+        </div>
+        </div>
       );
     case "Rate Code Statistics":
       return (
-        <Col xs={12} md={4}>
+        <div
+        id="four"
+        className="e-panel"
+        data-row="2"
+        data-col="2"
+        data-sizex="2"
+        data-sizey="0"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
           <RateCodeStatistics />
-        </Col>
+          </div>
+        </div>
       );
     case "Market Segmentation":
       return (
-        <Col xs={12} md={4}>
+        <div
+        id="five"
+        className="e-panel"
+        data-row="3"
+        data-col="0"
+        data-sizex="2"
+        data-sizey="0"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
           <MarketSegmentation />
-        </Col>
+          </div>
+        </div>
       );
     case "Room Type Statistics":
       return (
-        <Col xs={12} md={4}>
+        <div
+        id="six"
+        className="e-panel"
+        data-row="3"
+        data-col="2"
+        data-sizex="1"
+        data-sizey="0"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
           <RoomTypeStatistics />
-        </Col>
+        </div>
+        </div>
       );
     case "Booking Channel":
       return (
-        <Col xs={12} md={4}>
+        <div
+        id="seven"
+        className="e-panel"
+        data-row="3"
+        data-col="3"
+        data-sizex="1"
+        data-sizey="0"
+      >
+        <span id="close" className="e-template-icon e-clear-icon" />
+        <div className="e-panel-container">
           <BookingChannel />
-        </Col>
+        </div>
+        </div>
       );
     default:
       return null;

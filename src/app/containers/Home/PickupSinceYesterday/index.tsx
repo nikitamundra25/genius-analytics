@@ -63,25 +63,39 @@ const PickupSinceYesterday: React.FC = (): JSX.Element => {
           {BarChartReferenceLine.map((key: any, index: number) => {
             return (
               <Col xs={12} md={4} key={index}>
-                <React.Suspense fallback={<Loader />}>
-                  <ColumnChart
-                    {...key}
-                    chartSettings={{
-                      primaryXAxis: {
-                        valueType: "Category",
-                        interval: 1,
-                        majorGridLines: { width: 0 },
-                      },
-                      primaryYAxis: {
-                        majorGridLines: { width: 0 },
-                        majorTickLines: { width: 0 },
-                        lineStyle: { width: 0 },
-                        labelStyle: { color: "transparent" },
-                      },
-                      tooltip: { enable: true },
-                    }}
-                  />
-                </React.Suspense>
+                <div className="pickup-card">
+                  <div  className="text-left range-text">
+                    <div className="sub-inner-title">{key.title}</div>
+                    {key.range ? (
+                      <div className={`${key.textClass} h3  pt-2`}>
+                        <i className={`${key.arrowClass}`}></i> {key.range}
+                      </div>
+                    ) : null}
+                  </div>
+                
+               
+                
+                  <React.Suspense fallback={<Loader />}>
+                    <ColumnChart
+                      {...key}
+                      chartSettings={{
+                        primaryXAxis: {
+                          valueType: "Category",
+                          interval: 1,
+                          majorGridLines: { width: 0 },
+                        },
+                        primaryYAxis: {
+                          majorGridLines: { width: 0 },
+                          majorTickLines: { width: 0 },
+                          lineStyle: { width: 0 },
+                          labelStyle: { color: "transparent" },
+                        },
+                        tooltip: { enable: true },
+                        //title: key.title,
+                      }}
+                    />
+                  </React.Suspense>
+                </div>
               </Col>
             );
           })}

@@ -57,10 +57,12 @@ const KeyBusinessMetrics: React.FC = (): JSX.Element => {
   return (
     <Card>
       <WidgetHeader title={"Key Business Metrics"} activeToggle={"graph"} />
+      <Card.Body>
       <Row className='row-inner'>
         {barChartBusinessMetrics.map((key: any, index: number) => {
           return (
             <Col key={index} sm={3} md={3}>
+              <div className="w-100">
               <React.Suspense fallback={<Loader />}>
                 <BarChartComponent
                   chartSettings={{
@@ -80,15 +82,17 @@ const KeyBusinessMetrics: React.FC = (): JSX.Element => {
                       },
                     },
                     title: key.title,
-                    tooltip: { enable: true },
+                    tooltip: { enable: true,  position: 'LeftTop' },
                   }}
                   {...key}
                 />
               </React.Suspense>
+              </div>
             </Col>
           );
         })}
       </Row>
+     </Card.Body>
     </Card>
   );
 };

@@ -9,6 +9,8 @@
 @import "~simple-line-icons/css/simple-line-icons.css";
 // Import Main styles for this application
 @import "./scss/style.scss";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-layouts/styles/material.css";
 
 body {
   margin: 0;
@@ -26,6 +28,11 @@ body {
   }
   .cursor-pointer{
     cursor: pointer;
+  }
+  button{
+    &:focus{
+      outline:none;
+    }
   }
   .white-nowrap
   {
@@ -47,7 +54,15 @@ body {
         outline:none;
       }
     }
-    
+    .center-logo{
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      top: 4px;
+      img{
+        width:45px;
+      }
+    }
     .navbar-nav{
       .nav-link {
         font-size: 20px;
@@ -312,14 +327,15 @@ body {
 
 // card css
 .card{
-  background: $white;
+  background: $transparent;
   border-radius: .5rem;
   border:0px;
-  box-shadow: 0 4px 25px 0 rgba(0,0,0,.1);
+  box-shadow: none;
   transition: all .3s ease-in-out;
-  height: calc(100% - 24px);
+  height: 100%;
+  margin-bottom:0px;
   .card-header{
-    padding: 20px 20px 0px;
+    padding: 20px 15px 0px;
     background: $white;
     border-bottom: 0px ;
     .card-title{
@@ -329,7 +345,7 @@ body {
     }
   }
   .card-body{
-    padding: 20px;
+    padding: 15px 15px;
   }
 }
 
@@ -342,6 +358,17 @@ body {
   background: $theme-color;
   padding: 4px 0px;
   border-radius: 5px;
+}
+.sub-title{
+  font-weight: 500;
+  color: #2c2c2c;
+  font-size: 1.09375rem;
+  text-align: center;
+}
+.sub-inner-title{
+  font-size: 15px;
+  font-weight: 500;
+  color: #2c2c2c;
 }
 
 .action-wrap{
@@ -376,12 +403,43 @@ body {
   .navbar-nav-item{
     padding-left:20px;
   }
+  .nav-btn{
+    background:$white;
+    padding: 6px 16px;
+    color: $black;
+    font-size: 14px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px 0px rgba(46, 44, 44, 0.29);
+    font-weight: 500;
+    border: 1px solid #ede8e8;
+  }
   .year-nav{
     font-size: 16px;
     font-weight: 600;
     display: flex;
     align-items: center;
+    cursor:pointer;
   }
+}
+.react-datepicker {
+  width: 100%;
+  display: block;
+  .react-datepicker__month-container {
+    float: none;
+  }
+  .react-datepicker__month{
+    .react-datepicker__month-text, .react-datepicker__quarter-text{
+      display: inline-block;
+      width: 82px;
+      padding: 7px 12px;
+      margin: 0px;
+      border: 1px solid #ddd;
+      border-radius: 0px !important;
+    }
+  }
+ .react-datepicker__month--selected {
+    border-color: #216ba5 !important;
+ }
 }
 
 .common-dropdown{
@@ -409,6 +467,7 @@ body {
     border:0px;
     background:#fff;
     box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+    z-index: 1001;
     .dropdown-item {
       display: block;
       width: 100%;
@@ -428,12 +487,17 @@ body {
      }
   }
 }
-  
-
-  
-
-  
-  
+.pickup-card{
+  padding-top:25px;
+  position: relative;
+  .range-text{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+  }
+}
+   
 }
 html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .main, html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .app-footer, html:not([dir="rtl"]) .sidebar-show.sidebar-fixed.sidebar-minimized .main, html:not([dir="rtl"]) .sidebar-show.sidebar-fixed.sidebar-minimized .app-footer {
   margin-left: 90px;
@@ -935,3 +999,17 @@ html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .main, ht
 //   max-height: 350px;
 //   overflow-x: hidden;
 // }
+#defaultLayout {
+  padding: 10px;
+}
+
+#defaultLayout .e-panel .e-panel-container {
+  vertical-align: middle;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+
+.content {
+  line-height: 90px;
+}

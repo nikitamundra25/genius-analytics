@@ -200,8 +200,10 @@ const OccupencyStatitics = () => {
     <>
       <Card>
         <WidgetHeader title={"Occupacy Statics"} activeToggle={"graph"} />
+        <Card.Body>
         <Row className='row-inner'>
           <Col sm={7}>
+            <div className="w-100">
             <React.Suspense fallback={<Loader />}>
               <MixedCharts
                 id={"line-and-column"}
@@ -226,8 +228,11 @@ const OccupencyStatitics = () => {
                 charts={Charts1}
               />
             </React.Suspense>
+            </div>
           </Col>
           <Col sm={5}>
+          <div className="w-100">
+          <React.Suspense fallback={<Loader />}>
             <MixedCharts
               id={"line-and-bar"}
               charts={Charts2}
@@ -250,8 +255,11 @@ const OccupencyStatitics = () => {
                 tooltip: { enable: true },
               }}
             />
+            </React.Suspense>
+            </div>
           </Col>
         </Row>
+       </Card.Body>
       </Card>
     </>
   );

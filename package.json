@@ -9,6 +9,7 @@
     "@coreui/react": "^2.5.1",
     "@syncfusion/ej2-react-charts": "^18.2.44",
     "@syncfusion/ej2-react-dropdowns": "^18.2.44",
+    "@syncfusion/ej2-react-layouts": "^18.2.44",
     "@syncfusion/ej2-react-maps": "^18.2.44",
     "@syncfusion/ej2-react-pivotview": "^18.2.44",
     "@types/axios": "^0.14.0",

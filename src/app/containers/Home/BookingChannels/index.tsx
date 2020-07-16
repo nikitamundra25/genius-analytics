@@ -18,7 +18,7 @@ export default (props: any) => {
       <WidgetHeader title={"Booking Channel Mix"} activeToggle={"graph"} />
       <Card.Body>
         <React.Suspense fallback={<Loader />}>
-          <PieChartComponent id={"booking-mix"} height={"350px"} data={data} />
+          <PieChartComponent id={"booking-mix"} height={"280px"} data={data} />
         </React.Suspense>
       </Card.Body>
     </Card>
