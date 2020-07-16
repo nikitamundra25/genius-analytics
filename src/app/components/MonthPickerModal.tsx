@@ -2,8 +2,9 @@ import React from "react";
 import { Modal } from "react-bootstrap";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { IMonthPickerProps } from "../../interfaces";
 
-const MonthPickerModal = (props: any) => {
+const MonthPickerModal = (props: IMonthPickerProps) => {
 
   const {show,startDate,handleClose,handleChange} = props;
 
