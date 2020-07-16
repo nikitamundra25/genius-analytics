@@ -9,6 +9,8 @@ import "./index.scss";
 const HomeComponent = () => {
   const { graphCard } = graphStats;
  const cellSpacing = [5,10];
+
+
   return (
     <>
       <TopBar />
