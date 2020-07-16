@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import { IDashboardWidgetProps } from "../../../interfaces";
-// import TableForm from "./MonthlyTable";
+import TableForm from "./MonthlyTable";
 
 const getChart = (chartType: any, index: number) => {
   // switch (chartType.name) {
@@ -24,7 +24,7 @@ const getChart = (chartType: any, index: number) => {
           <Row>
             <Col xs={12} md={12}>
               <div className="sub-title text-left">{chartType.name}</div>
-              {/* <TableForm index={index} /> */}
+              <TableForm index={index} />
             </Col>
           </Row>
         </Card.Body>
