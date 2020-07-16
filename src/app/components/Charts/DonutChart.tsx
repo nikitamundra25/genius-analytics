@@ -26,12 +26,11 @@ export const DonutChartComponent = ({
       }}
       width={width}
       height={height}
-      enableSmartLabels={true}
+      // enableSmartLabels={true}
       enableAnimation={false}
       center={{ x: "50%", y: "50%" }}
       tooltip={{
         enable: true,
-        // eslint-disable-next-line
         format: "${point.x} : <b>${point.y}%</b>",
       }}>
       <Inject
@@ -48,13 +47,11 @@ export const DonutChartComponent = ({
           dataSource={data}
           xName='x'
           yName='y'
-          explode={true}
-          explodeAll={false}
-          explodeOffset='5%'
+          // explode={false}
+          // explodeAll={false}
+          // explodeOffset='0%'
           // explodeIndex={0}
           innerRadius='40%' 
-          // startAngle={0}
-          // endAngle={360} 
           dataLabel={{
             visible: true,
             position: "Inside",
@@ -63,7 +60,9 @@ export const DonutChartComponent = ({
               fontWeight: "600",
             },
           }}
-          radius='70%'></AccumulationSeriesDirective>
+          radius='70%'
+          palettes={['#4f81bc', '#c0504e', '#9bbb58', '#8165a2', '#4cacc5', '#e79645', '#2c4e74']}
+          ></AccumulationSeriesDirective>
       </AccumulationSeriesCollectionDirective>
     </AccumulationChartComponent>
   );

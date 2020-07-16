@@ -31,7 +31,6 @@ export const PieChartComponent = ({
       center={{ x: "50%", y: "50%" }}
       tooltip={{
         enable: true,
-        // eslint-disable-next-line
         format: "${point.x} : <b>${point.y}%</b>",
       }}>
       <Inject
@@ -60,7 +59,9 @@ export const PieChartComponent = ({
               fontWeight: "600",
             },
           }}
-          radius='70%'></AccumulationSeriesDirective>
+          radius='70%'
+          palettes={['#4b90d1', '#f67b2b', '#a5a5a5', '#ffc60a']}
+          ></AccumulationSeriesDirective>
       </AccumulationSeriesCollectionDirective>
     </AccumulationChartComponent>
   );
