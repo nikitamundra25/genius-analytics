@@ -21,7 +21,7 @@ export const PieChartComponent = ({
     <AccumulationChartComponent
       id={`pie${id}`}
       legendSettings={{
-        visible: false,
+        visible: true,
         position: "Bottom",
       }}
       width={width}

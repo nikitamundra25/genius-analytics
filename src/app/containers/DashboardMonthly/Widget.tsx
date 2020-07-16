@@ -66,7 +66,7 @@ const getChart = (chartType: any) => {
         id="four"
         className="e-panel"
         data-row="2"
-        data-col="0"
+        data-col="2"
         data-sizex="2"
         data-sizey="0"
       >

@@ -327,14 +327,15 @@ body {
 
 // card css
 .card{
-  background: $white;
+  background: $transparent;
   border-radius: .5rem;
   border:0px;
-  box-shadow: 0 4px 25px 0 rgba(0,0,0,.1);
+  box-shadow: none;
   transition: all .3s ease-in-out;
-  height: calc(100% - 24px);
+  height: 100%;
+  margin-bottom:0px;
   .card-header{
-    padding: 20px 20px 0px;
+    padding: 20px 15px 0px;
     background: $white;
     border-bottom: 0px ;
     .card-title{
@@ -344,7 +345,7 @@ body {
     }
   }
   .card-body{
-    padding: 20px;
+    padding: 15px 15px;
   }
 }
 
@@ -363,6 +364,11 @@ body {
   color: #2c2c2c;
   font-size: 1.09375rem;
   text-align: center;
+}
+.sub-inner-title{
+  font-size: 15px;
+  font-weight: 500;
+  color: #2c2c2c;
 }
 
 .action-wrap{
@@ -461,6 +467,7 @@ body {
     border:0px;
     background:#fff;
     box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+    z-index: 1001;
     .dropdown-item {
       display: block;
       width: 100%;
@@ -478,6 +485,16 @@ body {
         background-color: #eaf6fb;
       }
      }
+  }
+}
+.pickup-card{
+  padding-top:25px;
+  position: relative;
+  .range-text{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
   }
 }
    
