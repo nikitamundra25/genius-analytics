@@ -3,74 +3,48 @@ import { Card } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
 const PieChartComponent = React.lazy(() =>
-  import("../../../components/Charts/DonutChart")
+  import("../../../components/Charts/PieChart")
 );
 const data = [
-  { x: "90+", y: 35, text: "35%"  },
-  { x: "60+", y: 19 , text: "19%" },
-  { x: "30+", y: 22 , text: "22%" },
-  { x: "14+", y: 3 , text: "3%" },
-  { x: "7+", y: 2 , text: "2%" },
-  { x: "1+", y: 16 , text: "16%" },
-  { x: "One Day", y: 3 , text: "3%" },
+  { x: "90+", y: 35, text: "35%" },
+  { x: "60+", y: 19, text: "19%" },
+  { x: "30+", y: 22, text: "22%" },
+  { x: "14+", y: 3, text: "3%" },
+  { x: "7+", y: 2, text: "2%" },
+  { x: "1+", y: 16, text: "16%" },
+  { x: "One Day", y: 3, text: "3%" },
 ];
-
-// const DonutChart = [
-//   {
-//     dataSource: data,
-//     xName: "x",
-//     yName: "y",
-//     innerRadius:'30%' ,
-//     radius:'70%',
-//     startAngle:0,
-//     endAngle:360,
-//     explodeAll: false,
-//     marker: {
-//       dataLabel: {
-//         visible: true,
-//         position: "Inside",
-//         name: "text",
-//         font: {
-//           fontWeight: "600",
-//           color: "#ffffff",
-//         },
-//       },
-//     },
-//   },
-//   {
-//     dataSource: data,
-//     xName: "name",
-//     yName: "ADR",
-//     type: "Line",
-//     fill: "#bb423d",
-//     name: "ADR",
-//     width: 2,
-//     marker: {
-//       visible: true,
-//       width: 8,
-//       height: 8,
-//       fill: "#bb423d",
-//       border: { width: 0, color: "#bb423d" },
-//       dataLabel: {
-//         visible: false,
-//         position: "Top",
-//         font: {
-//           fontWeight: "600",
-//           color: "#000000",
-//         },
-//       },
-//     },
-//   },
-// ];
-
 
 export default (props: any) => {
   return (
     <Card>
       <WidgetHeader title={"Lead Times YTD"} activeToggle={"graph"} />
-      <Card.Body >
+      <Card.Body>
         <React.Suspense fallback={<Loader />}>
-          <PieChartComponent id={"leadtimes"} height={"285px"} data={data} />
+          <PieChartComponent
+            id={"leadtimes"}
+            height={"285px"}
+            data={data}
+            chartSettings={{
+              SeriesDirective: {
+                innerRadius: "40%",
+                radius: "70%",
+                palettes: [
+                  "#4f81bc",
+                  "#c0504e",
+                  "#9bbb58",
+                  "#8165a2",
+                  "#4cacc5",
+                  "#e79645",
+                  "#2c4e74",
+                ],
+              },
+              chartComponent: {
+                enableAnimation: false,
+                center: { x: "50%", y: "50%" },
+              },
+            }}
+          />
         </React.Suspense>
       </Card.Body>
     </Card>
