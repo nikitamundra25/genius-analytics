@@ -16,6 +16,7 @@ export const PieChartComponent = ({
   data,
   width = "100%",
   height,
+  color
 }: any) => {
   return (
     <AccumulationChartComponent
@@ -61,7 +62,7 @@ export const PieChartComponent = ({
             },
           }}
           radius='70%'
-          palettes={['#4b90d1', '#f67b2b', '#a5a5a5', '#ffc60a']}
+          palettes={color}
           ></AccumulationSeriesDirective>
       </AccumulationSeriesCollectionDirective>
     </AccumulationChartComponent>

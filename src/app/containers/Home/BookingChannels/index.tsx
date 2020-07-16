@@ -12,13 +12,13 @@ const data = [
   { x: "GDS", y: 20, text: "20%" },
   { x: "Direct", y: 15, text: "15%" },
 ];
-export default (props: any) => {
+export default (props:any) => {
   return (
     <Card>
       <WidgetHeader title={"Booking Channel Mix"} activeToggle={"graph"} />
       <Card.Body>
         <React.Suspense fallback={<Loader />}>
-          <PieChartComponent id={"booking-mix"} height={"280px"} data={data} />
+          <PieChartComponent id={"booking-mix"} height={"280px"} data={data}  color= {['#4b90d1', '#f67b2b', '#a5a5a5', '#ffc60a']} />
         </React.Suspense>
       </Card.Body>
     </Card>

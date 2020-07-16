@@ -12,7 +12,7 @@ const TopBar = (props: any) => {
     yearOptions: [],
     activeYear: currentYear,
     activeMonth: moment().month(),
-    startDate: new Date()
+    startDate: new Date(),
   });
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const TopBar = (props: any) => {
     });
     // eslint-disable-next-line
   }, []);
-  
+
   const onhandleChange = (e: any) => {
     setState({
       ...state,
@@ -41,31 +41,31 @@ const TopBar = (props: any) => {
 
   return (
     <>
-      <div className='main-navbar'>
-        <div className='navbar-nav-item'>
-          <div className='year-nav' onClick={handleShow}>
-            <span className='cursor-pointer'>
-              <i className='icon-arrow-left '></i>
+      <div className="main-navbar">
+        <div className="navbar-nav-item">
+          <div className="year-nav" onClick={handleShow}>
+            <span className="cursor-pointer">
+              <i className="icon-arrow-left "></i>
             </span>
-            <span className='mx-3'>{moment(startDate).format("MMMM")} </span>
-            <span className='cursor-pointer'>
-              <i className='icon-arrow-right '></i>
+            <span className="mx-3">{moment(startDate).format("MMMM")} </span>
+            <span className="cursor-pointer">
+              <i className="icon-arrow-right "></i>
             </span>
           </div>
         </div>
-        <div className='navbar-nav-item'>
+        <div className="navbar-nav-item">
           <DropDownListComponent
-            id='year'
+            id="year"
             dataSource={options}
             change={onhandleChange}
-            placeholder='Select a year'
+            placeholder="Select a year"
             value={activeYear}
-            popupHeight='220px'
+            popupHeight="220px"
           />
         </div>
-        <div className='navbar-nav-item'>
-          <Dropdown className='dashboard-dropdown common-dropdown'>
-            <Dropdown.Toggle variant='success' id='dropdown-dasboard'>
+        <div className="navbar-nav-item">
+          <Dropdown className="dashboard-dropdown common-dropdown">
+            <Dropdown.Toggle variant="success" id="dropdown-dasboard">
               Dashboard
             </Dropdown.Toggle>
             <Dropdown.Menu>
@@ -82,12 +82,15 @@ const TopBar = (props: any) => {
           </Dropdown>
         </div>
       </div>
-     <MonthPickerModal 
-     show={show}
-     startDate={startDate}
-     handleClose={() => setShow(false)}
-     handleChange={(date:any) => setStartDate(date)}
-     />
+      <MonthPickerModal
+        show={show}
+        startDate={startDate}
+        handleClose={() => setShow(false)}
+        handleChange={(date: any) => {
+          setStartDate(date);
+          setShow(false);
+        }}
+      />
     </>
   );
 };
