@@ -3,18 +3,20 @@ import { Row, Col, Card } from "react-bootstrap";
 import { IDashboardWidgetProps } from "../../../interfaces";
 import TableForm from "./MonthlyTable";
 
-const getChart = (chartType: any, index: number) => {
+let rowId:number = 0;
+  let colId:number= 0;
+const getChart = (chartType: any, index: number, rowId:number, colId:number) => {
   // switch (chartType.name) {
   //   case "Month":
-  const rowId = index 
+
   return (
     <div
           id={chartType.idNum}
           className="e-panel "
           data-row={rowId}
-          data-col={2}
+          data-col={colId}
           data-sizex="2"
-          data-sizey="2"
+          data-sizey="0"
         >
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
@@ -38,13 +40,26 @@ const getChart = (chartType: any, index: number) => {
   // }
 };
 
+const GetDynamicRowCol = (index:number) => {
+  if( index!==0 ){
+    if(index %3 ===0 ){
+     rowId += 1 
+      colId = 0    
+    }else{
+      colId +=2
+    }
+  }
+}
+
 const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
+  
   return (
     <Row>
       {graphList.map((chartConfig: any, index: number) => {
+         GetDynamicRowCol(index)
         return (
           <React.Fragment key={index}>
-            {getChart(chartConfig, index)}
+            {getChart(chartConfig, index, rowId, colId)}
           </React.Fragment>
         );
       })}
