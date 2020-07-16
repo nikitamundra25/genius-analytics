@@ -47,7 +47,7 @@ const Charts = [
     marker: {
       dataLabel: {
         visible: true,
-        position: "Bottom",
+        position: "Middle",
         font: {
           fontWeight: "600",
           color: "#ffffff",
@@ -76,7 +76,7 @@ const Charts = [
         position: "Top",
         font: {
           fontWeight: "600",
-          color: "#000000",
+          color: "#b73632",
         
         },
       },

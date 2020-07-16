@@ -35,7 +35,7 @@ const getChart = (chartType: any) => {
         className="e-panel"
         data-row="1"
         data-col="0"
-        data-sizex="2"
+        data-sizex="3"
         data-sizey="0"
       >
         <span id="close" className="e-template-icon e-clear-icon" />
@@ -51,8 +51,8 @@ const getChart = (chartType: any) => {
         id="three"
         className="e-panel"
         data-row="1"
-        data-col="3"
-        data-sizex="2"
+        data-col="4"
+        data-sizex="1"
         data-sizey="0"
       >
         <span id="close" className="e-template-icon e-clear-icon" />
