@@ -1,6 +1,6 @@
 export interface IMonthPickerProps  {
     show: boolean;
-    startDate: Date | undefined
+    startDate: Date 
     handleClose : () => void;
     handleChange:(date:any) => void;
 }
