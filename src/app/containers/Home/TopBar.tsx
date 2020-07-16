@@ -11,6 +11,8 @@ const TopBar = (props: any) => {
   const [state, setState] = React.useState<any>({
     yearOptions: [],
     activeYear: currentYear,
+    activeMonth: moment().month(),
+    startDate: new Date()
   });
 
   useEffect(() => {
@@ -45,7 +47,7 @@ const TopBar = (props: any) => {
             <span className='cursor-pointer'>
               <i className='icon-arrow-left '></i>
             </span>
-            <span className='mx-3'>November</span>
+            <span className='mx-3'>{moment(startDate).format("MMMM")} </span>
             <span className='cursor-pointer'>
               <i className='icon-arrow-right '></i>
             </span>

@@ -60,7 +60,8 @@ export const PieChartComponent = ({
               fontWeight: "600",
             },
           }}
-          radius='70%'></AccumulationSeriesDirective>
+          radius='70%'
+          ></AccumulationSeriesDirective>
       </AccumulationSeriesCollectionDirective>
     </AccumulationChartComponent>
   );
