@@ -16,6 +16,8 @@ export const PieChartComponent = ({
   data,
   width = "100%",
   height,
+  color,
+  chartSettings
 }: any) => {
   return (
     <AccumulationChartComponent
@@ -26,14 +28,13 @@ export const PieChartComponent = ({
       }}
       width={width}
       height={height}
-      enableSmartLabels={true}
-      enableAnimation={false}
-      center={{ x: "50%", y: "50%" }}
       tooltip={{
         enable: true,
         // eslint-disable-next-line
         format: "${point.x} : <b>${point.y}%</b>",
-      }}>
+      }}
+      {...chartSettings.chartComponent}
+      >
       <Inject
         services={[
           AccumulationLegend,
@@ -48,10 +49,6 @@ export const PieChartComponent = ({
           dataSource={data}
           xName='x'
           yName='y'
-          explode={true}
-          explodeAll={true}
-          explodeOffset='5%'
-          explodeIndex={0}
           dataLabel={{
             visible: true,
             position: "Inside",
@@ -60,7 +57,8 @@ export const PieChartComponent = ({
               fontWeight: "600",
             },
           }}
-          radius='70%'></AccumulationSeriesDirective>
+          {...chartSettings.SeriesDirective}
+          ></AccumulationSeriesDirective>
       </AccumulationSeriesCollectionDirective>
     </AccumulationChartComponent>
   );

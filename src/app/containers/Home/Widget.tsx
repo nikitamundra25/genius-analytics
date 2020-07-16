@@ -123,7 +123,8 @@ const getChart = (chartType: any) => {
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          <BookingChannels />
+          <BookingChannels 
+          />
         </div>
         </div>
       );

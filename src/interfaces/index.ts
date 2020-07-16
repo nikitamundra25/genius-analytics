@@ -10,3 +10,4 @@ export * from "./User";
 export * from "./CMS";
 export * from "./FAQ";
 export * from "./Widget";
+export * from "./CommonDatePicker";

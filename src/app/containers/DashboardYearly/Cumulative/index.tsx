@@ -205,6 +205,21 @@ const CumulativeTable = () => {
                                     width={"250px"}
                                     id={`${table.name}-${d.type}-${index}-${ind}`}
                                     data={d.data}
+                                    chartSettings={{
+                                      SeriesDirective : {
+                                          explode: true,
+                                          explodeAll: true,
+                                          explodeOffset: '5%',
+                                          explodeIndex: 0,
+                                          radius: "70%",
+                                          palettes: ['#4b90d1', '#f67b2b', '#a5a5a5', '#ffc60a']
+                                  },
+                                      chartComponent: {
+                                        enableSmartLabels:true,
+                                        enableAnimation:false,
+                                        center:{ x: "50%", y: "50%" }
+                                      }
+                                    }}
                                   />
                                 </Col>
                               ) : null}

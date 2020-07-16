@@ -11,7 +11,11 @@ const TopBar = (props: any) => {
   const [state, setState] = React.useState<any>({
     yearOptions: [],
     activeYear: currentYear,
+    activeMonth: moment().month(),
+    startDate: new Date(),
   });
+
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     const yearOptions = [];
@@ -24,46 +28,93 @@ const TopBar = (props: any) => {
     });
     // eslint-disable-next-line
   }, []);
-  
+
+  const handleMonthNav = (str: string) => {
+    const { activeMonth, activeYear } = state;
+    let month: number = str === "previous" ? activeMonth - 1 : activeMonth + 1;
+    let year: number = parseInt(activeYear);
+    if (str === "previous") {
+      // To check if active month is january than set month to december & year to previous year
+      if (activeMonth === 0) {
+        month = 11;
+        year = activeYear - 1;
+      }
+    } else {
+      if (activeMonth === 11) {
+        month = 0;
+        year = activeYear + 1;
+      }
+    }
+    let setMonthForDays: any = new Date(
+      year,
+      parseInt(moment().month(month).format("M"))
+    );
+
+    let setNewDate: any = new Date(
+      setMonthForDays.getFullYear(),
+      setMonthForDays.getMonth() - 1,
+      1
+    );
+
+    setState({
+      ...state,
+      activeMonth: month,
+      activeYear: year,
+      startDate: setNewDate,
+    });
+  };
+
   const onhandleChange = (e: any) => {
     setState({
       ...state,
       activeYear: e.value,
     });
   };
-  const { yearOptions: options, activeYear } = state;
 
-  const [startDate, setStartDate] = useState(new Date());
-  const [show, setShow] = useState(false);
+ const handleDatePicker = (date: Date | any) => {
+    let year: number = date.getFullYear();
+    let month: number = date.getMonth();
+    setState({ startDate: date, activeYear: year, activeMonth: month });
+    setShow(false)
+  };
+  
   const handleShow = () => setShow(true);
+  
+  const { yearOptions: options, activeYear,startDate } = state;
 
   return (
     <>
-      <div className='main-navbar'>
-        <div className='navbar-nav-item'>
-          <div className='year-nav' onClick={handleShow}>
-            <span className='cursor-pointer'>
-              <i className='icon-arrow-left '></i>
+      <div className="main-navbar">
+        <div className="navbar-nav-item">
+          <div className="year-nav" >
+            <span
+              className="cursor-pointer"
+              onClick={() => handleMonthNav("previous")}
+            >
+              <i className="icon-arrow-left "></i>
             </span>
-            <span className='mx-3'>November</span>
-            <span className='cursor-pointer'>
-              <i className='icon-arrow-right '></i>
+            <span className="mx-3" onClick={handleShow}>{moment(startDate).format("MMMM")} </span>
+            <span
+              className="cursor-pointer"
+              onClick={() => handleMonthNav("next")}
+            >
+              <i className="icon-arrow-right "></i>
             </span>
           </div>
         </div>
-        <div className='navbar-nav-item'>
+        <div className="navbar-nav-item">
           <DropDownListComponent
-            id='year'
+            id="year"
             dataSource={options}
             change={onhandleChange}
-            placeholder='Select a year'
+            placeholder="Select a year"
             value={activeYear}
-            popupHeight='220px'
+            popupHeight="220px"
           />
         </div>
-        <div className='navbar-nav-item'>
-          <Dropdown className='dashboard-dropdown common-dropdown'>
-            <Dropdown.Toggle variant='success' id='dropdown-dasboard'>
+        <div className="navbar-nav-item">
+          <Dropdown className="dashboard-dropdown common-dropdown">
+            <Dropdown.Toggle variant="success" id="dropdown-dasboard">
               Dashboard
             </Dropdown.Toggle>
             <Dropdown.Menu>
@@ -80,12 +131,14 @@ const TopBar = (props: any) => {
           </Dropdown>
         </div>
       </div>
-     <MonthPickerModal 
-     show={show}
-     startDate={startDate}
-     handleClose={() => setShow(false)}
-     handleChange={(date:any) => setStartDate(date)}
-     />
+      <MonthPickerModal
+        show={show}
+        startDate={startDate}
+        handleClose={() => setShow(false)}
+        handleChange={(date: any) => 
+          handleDatePicker(date)
+         }
+      />
     </>
   );
 };

@@ -12,7 +12,7 @@ const PickupSummary = () => {
     <>
       <TopBar />
       <div className='animated fadeIn'>
-      <DashboardLayoutComponent id='defaultLayout' cellSpacing={cellSpacing} allowResizing={false} columns={6} >
+      <DashboardLayoutComponent id='defaultLayout' cellSpacing={cellSpacing} allowResizing={false} columns={6} cellAspectRatio ={30/50} >
         {graphCard && graphCard.length ? (
           <DashboardWidget graphList={graphCard} />
         ) : null}

@@ -228,7 +228,7 @@ const DailyOccupacy: React.FC = (): JSX.Element => {
       fill: "#b82f2c",
       name: "Budget",
       width: 2,
-      dashArray:'5',
+      dashArray: "5",
       marker: {
         visible: false,
         width: 10,
@@ -253,7 +253,7 @@ const DailyOccupacy: React.FC = (): JSX.Element => {
       fill: "#94b54e",
       name: "LY",
       width: 2,
-      dashArray:'5',
+      dashArray: "5",
       marker: {
         visible: false,
         width: 10,
@@ -274,37 +274,37 @@ const DailyOccupacy: React.FC = (): JSX.Element => {
 
   return (
     <Card>
-       <WidgetHeader
+      <WidgetHeader
         title={"Daily Occupacy Vs. BUD Vs. LY"}
         activeToggle={"graph"}
       />
-      
+
       <Card.Body>
-      <React.Suspense fallback={<Loader />}>
-      <MixedCharts
-                id={"dailyocc"}
-                chartSettings={{
-                  primaryXAxis: {
-                    valueType: "Category",
-                    interval: 1,
-                    majorGridLines: { width: 0 },
-                  },
-                  primaryYAxis: {
-                    labelFormat: "{value}%",
-                    edgeLabelPlacement: "Shift",
-                    majorGridLines: { width: 0 },
-                    majorTickLines: { width: 0 },
-                    lineStyle: { width: 0 },
-                    labelStyle: {
-                      color: "transparent",
-                    },
-                  },
-                  tooltip: { enable: true },
-                  Legend: { enable: false },
-                }}
-                charts={Charts}
-              />
-       </React.Suspense>
+        <React.Suspense fallback={<Loader />}>
+          <MixedCharts
+            id={"dailyocc"}
+            chartSettings={{
+              primaryXAxis: {
+                valueType: "Category",
+                interval: 1,
+                majorGridLines: { width: 0 },
+              },
+              primaryYAxis: {
+                labelFormat: "{value}%",
+                edgeLabelPlacement: "Shift",
+                majorGridLines: { width: 0 },
+                majorTickLines: { width: 0 },
+                lineStyle: { width: 0 },
+                labelStyle: {
+                  color: "transparent",
+                },
+              },
+              tooltip: { enable: true },
+              Legend: { enable: false },
+            }}
+            charts={Charts}
+          />
+        </React.Suspense>
       </Card.Body>
     </Card>
   );

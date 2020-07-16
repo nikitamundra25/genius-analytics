@@ -9,11 +9,13 @@ import "./index.scss";
 const HomeComponent = () => {
   const { graphCard } = graphStats;
  const cellSpacing = [5,10];
+
+
   return (
     <>
       <TopBar />
       <div className='animated fadeIn'>
-      <DashboardLayoutComponent id='defaultLayout' cellSpacing={cellSpacing} allowResizing={false} columns={4} >
+      <DashboardLayoutComponent id='defaultLayout' cellSpacing={cellSpacing} allowResizing={false} columns={4} cellAspectRatio ={120/140}>
         {graphCard && graphCard.length ? (
           <DashboardWidget graphList={graphCard} />
         ) : null}

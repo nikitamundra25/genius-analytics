@@ -72,9 +72,7 @@ const PickupSinceYesterday: React.FC = (): JSX.Element => {
                       </div>
                     ) : null}
                   </div>
-                
-               
-                
+ 
                   <React.Suspense fallback={<Loader />}>
                     <ColumnChart
                       {...key}

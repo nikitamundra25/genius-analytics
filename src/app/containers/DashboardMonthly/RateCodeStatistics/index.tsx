@@ -71,6 +71,7 @@ const Charts = [
     fill: "#b73632",
     name: "ARR",
     width: 2,
+    dashArray:'5',
     marker: {
       visible: true,
       width: 8,
