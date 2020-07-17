@@ -1,8 +1,6 @@
 import React from "react";
-import { Card } from "react-bootstrap";
 import BOBData  from './BOB.json';
 import Loader from "../../../components/Loader/Loader";
-import WidgetHeader from "../../../components/WidgetHeader";
 const PivotTableComponent = React.lazy(() =>
   import("../../../components/Tables/PivotTable")
 );
