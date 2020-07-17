@@ -1,28 +1,26 @@
 import React from "react";
-import MonthlyPivotData  from './pivot.json';
 import Loader from "../../../components/Loader/Loader";
 const PivotTableComponent = React.lazy(() =>
   import("../../../components/Tables/PivotTable")
 );
 
-// let data = localData.data;
+
+const MonthlyTable = (props:any) => {
+const {index,graphdata} = props;
 
 let dataSourceSettings = {
   enableSorting: false,
   columns: [{ name: 'Title' }],
   valueSortSettings: { headerDelimiter: ' - ' },
   values: [ { name: 'Amount', caption: 'Amount' }],
-  dataSource: MonthlyPivotData.pivotData,
+  dataSource: graphdata,
   rows: [{ name: 'Month' }],
   formatSettings: [{ name: 'Amount', format: '' }],
   expandAll: false,
   filters: []
 };
 
-// let toolbarOptions = ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
-//             'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'ConditionalFormatting', 'NumberFormatting', 'FieldList'];
-const MonthlyTable = (props:{index:number}) => {
-const {index} = props;
+
 const SAMPLE_CSS = `
 .e-pivotview{
   font-size:12px !important;

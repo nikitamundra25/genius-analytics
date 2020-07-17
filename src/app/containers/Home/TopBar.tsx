@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Dropdown } from "react-bootstrap";
-import { DropDownListComponent } from "@syncfusion/ej2-react-dropdowns";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import { AppRoutes } from "../../../config";
@@ -64,12 +63,6 @@ const TopBar = (props: any) => {
     });
   };
 
-  const onhandleChange = (e: any) => {
-    setState({
-      ...state,
-      activeYear: e.value,
-    });
-  };
 
  const handleDatePicker = (date: Date | any) => {
     let year: number = date.getFullYear();
@@ -79,8 +72,7 @@ const TopBar = (props: any) => {
   };
   
   const handleShow = () => setShow(true);
-  
-  const { yearOptions: options, activeYear,startDate } = state;
+  const { startDate } = state;
 
   return (
     <>
