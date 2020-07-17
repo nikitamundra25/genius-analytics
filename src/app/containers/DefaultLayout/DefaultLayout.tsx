@@ -4,7 +4,6 @@ import { Container } from "react-bootstrap";
 import {
   IDefaultLayoutProps,
   IDefaultLayoutState,
-  IRootState,
   IredirectPath,
 } from "../../../interfaces";
 import { AppRoutes } from "../../../config/AppRoutes";
@@ -23,7 +22,7 @@ import {
   AppSidebarMinimizer,
   AppSidebarNav,
 } from "@coreui/react";
-import { profileInfoRequest, redirectTo } from "../../../actions";
+import {  redirectTo } from "../../../actions";
 import { Dispatch } from "redux";
 import { connect } from "react-redux";
 import logo from "./../../../assets/img/logo150.png";
@@ -163,20 +162,14 @@ class DefaultLayout extends Component<
   }
 }
 
-const mapStateToProps: any = (state: IRootState) => ({
-  loginReducer: state.loginReducer,
-  profileInfoReducer: state.profileInfoReducer,
-});
+
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
   return {
-    profileInfo: () => {
-      dispatch(profileInfoRequest());
-    },
     redirectTo: (data: IredirectPath) => {
       dispatch(redirectTo(data));
     },
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(DefaultLayout);
+export default connect(undefined, mapDispatchToProps)(DefaultLayout);

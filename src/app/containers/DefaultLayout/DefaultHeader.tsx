@@ -3,7 +3,6 @@ import { AppSidebarToggler } from "@coreui/react";
 import {
   IDefaultHeaderProps,
   IDefaultHeaderState,
-  IRootState,
 } from "../../../interfaces";
 import { Nav, Dropdown } from "react-bootstrap";
 import { AppRoutes } from "../../../config";
@@ -86,9 +85,6 @@ class DefaultHeader extends Component<
   }
 }
 
-const mapStateToProps: any = (state: IRootState) => ({
-  profileInfoReducer: state.profileInfoReducer,
-});
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
   return {
@@ -98,4 +94,4 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(DefaultHeader);
+export default connect(undefined, mapDispatchToProps)(DefaultHeader);
