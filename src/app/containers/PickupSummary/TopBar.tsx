@@ -23,7 +23,7 @@ const TopBar = () => {
         <div className='navbar-nav-item'>
           <div className="nav-btn">By Month</div>
         </div>
-        <div className='navbar-nav-item'>
+        <div className='navbar-nav-item' >
         <div className="nav-btn">Detail View</div>
         </div>
         <div className='navbar-nav-item'>
