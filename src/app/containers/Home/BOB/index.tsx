@@ -1,6 +1,5 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-import BOBData  from './BOB.json';
 import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
 const PivotTableComponent = React.lazy(() =>
@@ -9,22 +8,25 @@ const PivotTableComponent = React.lazy(() =>
 
 // let data = localData.data;
 
-let dataSourceSettings = {
-  enableSorting: false,
-  columns: [{ name: 'Title' }],
-  valueSortSettings: { headerDelimiter: ' - ' },
-  values: [ { name: 'Amount', caption: 'Amount' }],
-  dataSource: BOBData.pivotData,
-  rows: [{ name: 'Month' }],
-  formatSettings: [{ name: 'Amount', format: '' }],
-  expandAll: false,
-  showGrandTotals: false,
-  filters: []
-};
+
 
 // let toolbarOptions = ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
 //             'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'ConditionalFormatting', 'NumberFormatting', 'FieldList'];
-const BOB = (props:any) => {
+const BOB = ({graphdata=[]}:any) => {
+
+  let dataSourceSettings = {
+    enableSorting: false,
+    columns: [{ name: 'Title' }],
+    valueSortSettings: { headerDelimiter: ' - ' },
+    values: [ { name: 'Amount', caption: 'Amount' }],
+    dataSource: graphdata,
+    rows: [{ name: 'Month' }],
+    formatSettings: [{ name: 'Amount', format: '' }],
+    expandAll: false,
+    showGrandTotals: false,
+    filters: []
+  };
+
 const SAMPLE_CSS = `
 .e-pivotview{
   font-size:12px !important;

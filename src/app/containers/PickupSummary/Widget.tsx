@@ -29,7 +29,9 @@ const getChart = (chartType: any, index: number) => {
                 <div className="sub-title text-left">{chartType.name}</div>
               </Col>
               <Col xs={12} md={8}>
-                <TableForm  index={index} />
+                <TableForm  index={index} 
+                tabledata={chartType.tabledata}
+                />
               </Col>
               <Col xs={12} md={4}>
                 <PickupSegment index={index} 

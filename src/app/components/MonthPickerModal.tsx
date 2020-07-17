@@ -33,6 +33,7 @@ const MonthPickerModal = (props: IMonthPickerProps) => {
             onChange={(date: any) => ondateChange(date)}
             dateFormat="MM/yyyy"
             showMonthYearPicker
+            // showYearPicker
             inline
             className="custom-datepicker"
           />
