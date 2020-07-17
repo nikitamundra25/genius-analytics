@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-// import MonthlyPivotData  from './pivot.json';
+import BOBData  from './BOB.json';
 import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
 const PivotTableComponent = React.lazy(() =>
@@ -14,10 +14,11 @@ let dataSourceSettings = {
   columns: [{ name: 'Title' }],
   valueSortSettings: { headerDelimiter: ' - ' },
   values: [ { name: 'Amount', caption: 'Amount' }],
-  //dataSource: MonthlyPivotData.pivotData,
+  dataSource: BOBData.pivotData,
   rows: [{ name: 'Month' }],
   formatSettings: [{ name: 'Amount', format: '' }],
   expandAll: false,
+  showGrandTotals: false,
   filters: []
 };
 
@@ -68,7 +69,8 @@ const SAMPLE_CSS = `
           height={'300'}
           TableSettings={{
               TableComponent: {
-                gridSettings: {columnWidth: 120 , allowResizing: true },
+                gridSettings: {columnWidth: 85 , allowResizing: true },
+                
                 // showFieldList: true,
                 // allowExcelExport: true ,
                 // allowConditionalFormatting: true ,
