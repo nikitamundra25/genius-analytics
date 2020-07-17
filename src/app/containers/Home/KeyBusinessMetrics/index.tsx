@@ -7,13 +7,43 @@ const BarChartComponent = React.lazy(() =>
 );
 
 const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
+
+  const barChartBusinessMetrics = [
+    {
+      id: "1",
+      title: "OCC",
+      color: "#2e75b7",
+      data: graphdata,
+    },
+    {
+      id: "2",
+      title: "ADR",
+      color: "#5398d9",
+      data: graphdata,
+    },
+    {
+      id: "3",
+      title: "Revenue",
+      color: "#1f4e79",
+      data: graphdata,
+    },
+    {
+      id: "4",
+      title: "Revpar",
+      color: "#9dc3e7",
+      data: graphdata,
+    },
+  ];
+
+
+
   return (
     <Card>
       <WidgetHeader title={"Key Business Metrics"} activeToggle={"graph"} />
       <Card.Body>
       <Row className='row-inner'>
-        {graphdata && graphdata.length ? 
-        graphdata.map((key: any, index: number) => {
+        {barChartBusinessMetrics && barChartBusinessMetrics.length ? 
+        barChartBusinessMetrics.map((key: any, index: number) => {
           return (
             <Col key={index} sm={3} md={3}>
               <div className="w-100">

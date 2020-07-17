@@ -40,7 +40,9 @@ const getChart = (chartType: any) => {
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
          
-          <MonthlyDailyOccupacy />
+          <MonthlyDailyOccupacy 
+          graphdata={chartType.graphdata}
+          />
           </div>
         </div>
       );
@@ -56,7 +58,9 @@ const getChart = (chartType: any) => {
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          <DailyOccupacy />
+          <DailyOccupacy 
+           graphdata={chartType.graphdata}
+          />
         </div>
         </div>
       );
@@ -72,7 +76,9 @@ const getChart = (chartType: any) => {
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          <RateCodeStatistics />
+          <RateCodeStatistics 
+           graphdata={chartType.graphdata}
+          />
           </div>
         </div>
       );
@@ -88,7 +94,9 @@ const getChart = (chartType: any) => {
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          <MarketSegmentation />
+          <MarketSegmentation 
+          graphdata={chartType.graphdata}
+          />
           </div>
         </div>
       );
@@ -104,7 +112,9 @@ const getChart = (chartType: any) => {
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          <RoomTypeStatistics />
+          <RoomTypeStatistics 
+          graphdata={chartType.graphdata}
+          />
         </div>
         </div>
       );
@@ -120,7 +130,9 @@ const getChart = (chartType: any) => {
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          <BookingChannel />
+          <BookingChannel 
+          graphdata={chartType.graphdata}
+          />
         </div>
         </div>
       );

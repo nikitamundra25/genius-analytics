@@ -7,74 +7,55 @@ const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
-const Monthlydailydata = [
-  {
-    name: "Q1",
-    OCC: 50,
-    ADR: 64,
-  },
-  {
-    name: "Q2",
-    OCC: 88,
-    ADR: 80,
-  },
-  {
-    name: "Q3",
-    OCC: 74,
-    ADR: 76,
-  },
-  {
-    name: "Q4",
-    OCC: 74,
-    ADR: 76,
-  },
-];
-const Charts1 = [
-  {
-    dataSource: Monthlydailydata,
-    xName: "name",
-    yName: "OCC",
-    type: "Column",
-    fill: "#3a71b4",
-    name: "OCC %",
-    width: 1,
-    marker: {
-      dataLabel: {
-        visible: true,
-        position: "Top",
-        font: {
-          fontWeight: "600",
-          color: "#ffffff",
+
+
+const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
+
+  const Charts1 = [
+    {
+      dataSource: graphdata,
+      xName: "name",
+      yName: "OCC",
+      type: "Column",
+      fill: "#3a71b4",
+      name: "OCC %",
+      width: 1,
+      marker: {
+        dataLabel: {
+          visible: true,
+          position: "Top",
+          font: {
+            fontWeight: "600",
+            color: "#ffffff",
+          },
         },
       },
     },
-  },
-  {
-    dataSource: Monthlydailydata,
-    xName: "name",
-    yName: "ADR",
-    type: "Line",
-    fill: "#bb423d",
-    name: "ADR",
-    width: 2,
-    marker: {
-      visible: true,
-      width: 8,
-      height: 8,
+    {
+      dataSource: graphdata,
+      xName: "name",
+      yName: "ADR",
+      type: "Line",
       fill: "#bb423d",
-      border: { width: 0, color: "#bb423d" },
-      dataLabel: {
-        visible: false,
-        position: "Top",
-        font: {
-          fontWeight: "600",
-          color: "#000000",
+      name: "ADR",
+      width: 2,
+      marker: {
+        visible: true,
+        width: 8,
+        height: 8,
+        fill: "#bb423d",
+        border: { width: 0, color: "#bb423d" },
+        dataLabel: {
+          visible: false,
+          position: "Top",
+          font: {
+            fontWeight: "600",
+            color: "#000000",
+          },
         },
       },
     },
-  },
-];
-const QuarterlyOCCADR = ({ id }: any) => {
+  ];
   return (
     <>
       {" "}

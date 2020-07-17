@@ -7,85 +7,57 @@ const MixedCharts = React.lazy(() =>
 );
 
 
-const BookingData = [
-  {
-    name: "Direct",
-    RoomNts: 180,
-    ARR: 228,
-  },
-  {
-    name: "GDS",
-    RoomNts: 110,
-    ARR: 203,
-  },
-  {
-    name: "OTAs",
-    RoomNts: 200,
-    ARR: 158,
-  },
-  {
-    name: "Brand Website",
-    RoomNts: 120,
-    ARR: 161,
-  },
-  {
-    name: "Corporate Website",
-    RoomNts: 50,
-    ARR: 198,
-  },
-];
 
-const Charts = [
-  {
-    dataSource: BookingData,
-    xName: "name",
-    yName: "RoomNts",
-    type: "Column",
-    fill: "#4f81bc",
-    name: "Room Nts",
-    width: 1,
-    marker: {
-      dataLabel: {
-        visible: true,
-        position: "Middle",
-        font: {
-          fontWeight: "600",
-          color: "#ffffff",
+
+const BookingChannel = ({ graphdata = [] }:any) => {
+  const Charts = [
+    {
+      dataSource: graphdata,
+      xName: "name",
+      yName: "RoomNts",
+      type: "Column",
+      fill: "#4f81bc",
+      name: "Room Nts",
+      width: 1,
+      marker: {
+        dataLabel: {
+          visible: true,
+          position: "Middle",
+          font: {
+            fontWeight: "600",
+            color: "#ffffff",
+          },
         },
       },
     },
-  },
-  
-  {
-    dataSource: BookingData,
-    xName: "name",
-    yName: "ARR",
-    type: "Line",
-    fill: "#b73632",
-    name: "ARR",
-    width: 2,
-    dashArray:'5',
-    marker: {
-      visible: true,
-      width: 8,
-      height: 8,
+    
+    {
+      dataSource: graphdata,
+      xName: "name",
+      yName: "ARR",
+      type: "Line",
       fill: "#b73632",
-      border: { width: 0, color: "#b73632" },
-      dataLabel: {
+      name: "ARR",
+      width: 2,
+      dashArray:'5',
+      marker: {
         visible: true,
-        position: "Top",
-        font: {
-          fontWeight: "600",
-          color: "#b73632",
-        
+        width: 8,
+        height: 8,
+        fill: "#b73632",
+        border: { width: 0, color: "#b73632" },
+        dataLabel: {
+          visible: true,
+          position: "Top",
+          font: {
+            fontWeight: "600",
+            color: "#b73632",
+          
+          },
         },
       },
     },
-  },
-];
-
-const BookingChannel: React.FC = (): JSX.Element => {
- 
+  ];
   return (
     <Card>
     <WidgetHeader

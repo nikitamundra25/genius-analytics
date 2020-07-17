@@ -40,7 +40,9 @@ const getChart = (chartType: any) => {
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          <MonthlyOCCADR id='monthly-ofasdfcc-adr' />
+          <MonthlyOCCADR id='monthly-ofasdfcc-adr' 
+          graphdata={chartType.graphdata}
+          />
         </div>
         </div>
       );
@@ -57,7 +59,9 @@ const getChart = (chartType: any) => {
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          <QuarterlyOCCADR id='quarterly-occ-adr' />
+          <QuarterlyOCCADR id='quarterly-occ-adr' 
+           graphdata={chartType.graphdata}
+          />
           </div>
         </div>
       );
@@ -73,7 +77,9 @@ const getChart = (chartType: any) => {
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          <RoomTypesYTD />
+          <RoomTypesYTD 
+          graphdata={chartType.graphdata}
+          />
           </div>
         </div>
       );
@@ -90,7 +96,9 @@ const getChart = (chartType: any) => {
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          <REVPARYTD />
+          <REVPARYTD 
+           graphdata={chartType.graphdata}
+          />
         </div>
         </div>
       );
@@ -106,7 +114,9 @@ const getChart = (chartType: any) => {
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          <StayYTD />
+          <StayYTD 
+            graphdata={chartType.graphdata}
+          />
         </div>
         </div>
       );
@@ -123,7 +133,9 @@ const getChart = (chartType: any) => {
         >
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
-            <LeadTimesYTD />
+            <LeadTimesYTD 
+            graphdata={chartType.graphdata}
+            />
           </div>
           </div>
         );
@@ -139,7 +151,9 @@ const getChart = (chartType: any) => {
         >
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
-            <LeadTimesSegmentYTD />
+            <LeadTimesSegmentYTD 
+            graphdata={chartType.graphdata}
+            />
           </div>
           </div>
         );
@@ -155,7 +169,9 @@ const getChart = (chartType: any) => {
         >
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
-            <RGIPerformance />
+            <RGIPerformance 
+            graphdata={chartType.graphdata}
+            />
           </div>
           </div>
         );
