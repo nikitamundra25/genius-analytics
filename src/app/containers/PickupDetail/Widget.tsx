@@ -26,7 +26,9 @@ const getChart = (chartType: any, index: number, rowId:number, colId:number) => 
           <Row>
             <Col xs={12} md={12}>
               <div className="sub-title text-left">{chartType.name}</div>
-              <TableForm index={index} />
+              <TableForm index={index} 
+              graphdata={chartType.pivotData}
+              />
             </Col>
           </Row>
         </Card.Body>

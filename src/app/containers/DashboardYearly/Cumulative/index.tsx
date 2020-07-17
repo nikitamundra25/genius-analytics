@@ -22,6 +22,7 @@ const data = months.map((month: string) => ({
     },
   ],
 }));
+
 const tableData = [
   {
     type: "label",

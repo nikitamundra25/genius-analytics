@@ -30,6 +30,30 @@ export const PickupReducer = handleActions<IPickupModel, any>(
       isError: action.payload.error,
     }),
 
+     //   Pickup detail list 
+     [PickupTypes.PICKUP_DETAIL_REQUEST]: (
+        state = PickupInitialState,
+        action,
+      ): IPickupModel => ({
+        ...state,
+        isLoading: true,
+      }),
+      [PickupTypes.PICKUP_DETAIL_SUCCESS]: (
+        state = PickupInitialState,
+        action,
+      ): IPickupModel => ({
+        ...state,
+        isLoading: false,
+        pickupDetailList: action.payload.pickupDetailList,
+      }),
+      [PickupTypes.PICKUP_DETAIL_FAILURE]: (
+        state = PickupInitialState,
+        action,
+      ): IPickupModel => ({
+        ...state,
+        isLoading: false,
+        isError: action.payload.error,
+      }),
 
   },
   PickupInitialState,
