@@ -1,0 +1,13 @@
+{
+    "data": [
+      { "name": "Business on the Books", "id": 1 },
+      { "name": "Monthly Daily Occupacy & ADR", "id": 2 },
+      { "name": "Daily Occupacy Vs. BUD Vs. LY", "id": 3 },
+      { "name": "Rate Code Statistics", "id": 4 },
+      { "name": "Market Segmentation", "id": 5 },
+      { "name": "Room Type Statistics", "id": 6 },
+      { "name": "Booking Channel", "id": 7 }
+      
+    ]
+  }
+  

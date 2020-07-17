@@ -1,5 +1,5 @@
 import Axios, { AxiosRequestConfig, AxiosResponse, Method } from "axios";
-import { API_ENDPOINT } from "../config/AppConfig";
+import { API_ENDPOINT, BaseUrlForJson } from "../config/AppConfig";
 import { ErrorHandlerHelper } from "./ErrorHandlerHelper";
 import { SuccessHandlerHelper } from "./SuccessHandlerHelper";
 
@@ -9,10 +9,12 @@ import { SuccessHandlerHelper } from "./SuccessHandlerHelper";
 export class ApiHelper {
   _portalGateway: string;
   _apiVersion: string;
+  _baseUrlForJson: string;
 
   constructor() {
     this._portalGateway = API_ENDPOINT;
     this._apiVersion = "";
+    this._baseUrlForJson = BaseUrlForJson
   }
   setHost = (host: string) => {
     this._portalGateway = host;
@@ -156,4 +158,74 @@ export class ApiHelper {
       return errorHelper.error;
     }
   };
+
+
+
+
+  // To fetch JSON data from local public folder
+  async FetchFromLocalJSONFile(
+    folder: string,
+    filePath:string,
+    method: Method,
+    queryOptions?: string,
+    body?: any,
+    responseType?: any
+  ) {
+    let options: AxiosRequestConfig = { method: method };
+    console.log("folderfolder",folder);
+    console.log("filePath",filePath);
+    
+    let url: string =   folder + filePath;
+    options.headers = { "Content-Type": "application/json" };
+    if (responseType === "blob") {
+      options.responseType = "blob";
+    }
+   
+    // html query for "GET", json body for others.
+    if (queryOptions && typeof queryOptions === "object") {
+      let queryParams = [] as string[];
+      Object.keys(queryOptions).map(key => {
+        queryParams.push(`${key}=${(queryOptions as any)[key]}`);
+        return key;
+      });
+      url += `?${queryParams.join("&")}`;
+    }
+
+    if (body) {
+      options.data = body;
+    }
+    try {
+      console.log("url main",url);
+      
+      console.log("urlurlurl",`${this._baseUrlForJson}${url}`);
+      
+      let response: AxiosResponse<any> = await Axios({
+        ...options,
+        url: `${this._baseUrlForJson}${url}`
+      });
+
+      if (response.status < 200 || response.status >= 300) {
+        let errorObject: any = {
+          code: response.status,
+          response: response.data
+        };
+
+        throw errorObject;
+      }
+      const data: SuccessHandlerHelper = new SuccessHandlerHelper(
+        response.data
+      );
+      return data.data;
+    } catch (err) {
+      if (Axios.isCancel(err)) {
+        console.log("%s Req Cancelled", err);
+      }
+      const errorHelper: ErrorHandlerHelper = new ErrorHandlerHelper(
+        err.response
+      );
+      return errorHelper.error;
+    }
+  }
 }
+
+

@@ -86,7 +86,7 @@ export default (props: any) => {
             <Row className="row-inner">
               {BarChartData.map((key: any, index: number) => {
                 return (
-                  <Col xs={12} md={6}>
+                  <Col xs={12} md={6} key={index}>
                     
                       <React.Suspense fallback={<Loader />}>
                         <BarChartComponent

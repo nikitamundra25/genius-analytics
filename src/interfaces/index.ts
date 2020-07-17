@@ -11,3 +11,5 @@ export * from "./CMS";
 export * from "./FAQ";
 export * from "./Widget";
 export * from "./CommonDatePicker";
+export * from "./Dashboard";
+export * from "./Pickup"

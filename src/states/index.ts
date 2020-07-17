@@ -5,3 +5,5 @@ export * from './User';
 export * from './EmailTemplate';
 export * from './CMS';
 export * from './Faq';
+export * from './Dashboard';
+export * from './Pickup';

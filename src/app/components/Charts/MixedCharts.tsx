@@ -39,7 +39,6 @@ const MixedCharts = ({ charts = [], id, chartSettings = {} }: any) => {
       />
       <SeriesCollectionDirective>
         {charts.map(({ marker, ...chart }: any, index: number) => {
-          console.log(charts);
           return (
             <SeriesDirective
               key={index}

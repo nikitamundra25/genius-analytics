@@ -3,6 +3,8 @@ import { IChangePasswordModal, IProfileModal } from './Profile';
 import { IUserModel } from './User';
 import { ITemplateModal } from './EmailTemplate';
 import { IFaqModel } from './FAQ';
+import { IDashboardMainModel } from './Dashboard';
+import { IPickupModel } from './Pickup';
 
 export interface ImainState {
   showLoader: boolean;
@@ -18,4 +20,6 @@ export interface IRootState {
   ProxyLoginReducer:ILoginModal;
   homePageReducer:ILoginModal;
   faqReducer:IFaqModel;
+  DashboardReducer: IDashboardMainModel;
+  PickupReducer: IPickupModel;
 }

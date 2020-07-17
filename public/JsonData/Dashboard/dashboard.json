@@ -1,0 +1,14 @@
+{
+  "data": [
+    { "name": "Business on the Books", "id": 1 },
+    { "name": "Key Business Metrics", "id": 2 },
+    { "name": "Room Nights", "id": 3 },
+    { "name": "Occupacy Statics", "id": 4 },
+    { "name": "Business Mix", "id": 5 },
+    { "name": "Room Type Statics", "id": 6 },
+    { "name": "Booking Channel Mix", "id": 7 },
+    { "name": "Geographic Origin of business", "id": 8 },
+    { "name": "MTD RGI Performance", "id": 9 },
+    { "name": "RGI YoY Variance", "id": 10 }
+  ]
+}

@@ -1,25 +1,40 @@
-import React from "react";
-import graphStats from "./GraphStats.json";
+import React ,{FunctionComponent,useEffect}  from "react";
 import DashboardWidget from "./Widget";
 import TopBar from "./TopBar";
-import { DashboardLayoutComponent } from '@syncfusion/ej2-react-layouts';
+import {useSelector, useDispatch} from 'react-redux'
+import {DashboardMainRequest} from '../../../actions';
+import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
 import "./index.scss";
+import { IRootState } from "../../../interfaces";
 
-
-const HomeComponent = () => {
-  const { graphCard } = graphStats;
- const cellSpacing = [5,10];
-
-
+const HomeComponent : FunctionComponent = () => {
+  // const { graphCard } = graphStats;
+  const cellSpacing = [5, 10];
+  const dispatch = useDispatch()
+  const DashboardReducer = useSelector((state:IRootState) => state.DashboardReducer)
+  
+  useEffect(() => {
+    dispatch(DashboardMainRequest())
+    // eslint-disable-next-line
+  }, [])
+  
+  const {dashboardMainList}= DashboardReducer
+  
   return (
     <>
       <TopBar />
-      <div className='animated fadeIn'>
-      <DashboardLayoutComponent id='defaultLayout' cellSpacing={cellSpacing} allowResizing={false} columns={4} cellAspectRatio ={120/140}>
-        {graphCard && graphCard.length ? (
-          <DashboardWidget graphList={graphCard} />
-        ) : null}
-         </DashboardLayoutComponent>
+      <div className="animated fadeIn">
+        {dashboardMainList && dashboardMainList.length ? (
+        <DashboardLayoutComponent
+          id="defaultLayout"
+          cellSpacing={cellSpacing}
+          allowResizing={false}
+          columns={4}
+          cellAspectRatio={120 / 140}
+        >
+            <DashboardWidget graphList={dashboardMainList} />
+        </DashboardLayoutComponent>
+          ) : null}
       </div>
     </>
   );

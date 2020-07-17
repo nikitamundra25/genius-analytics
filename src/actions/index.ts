@@ -9,6 +9,8 @@ export * from './Report';
 export * from './ProxyLogin';
 export * from './CMS';
 export * from './Faq';
+export * from './Dashboard';
+export * from './Pickup';
 
 //
 export const redirectTo = createAction('REDIRET_TO');

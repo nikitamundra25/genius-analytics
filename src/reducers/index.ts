@@ -9,6 +9,8 @@ import { templateReducer } from './EmailTemplate';
 import { proxyLoginReducer } from './ProxyLogin';
 import { homePageReducer } from './CMS';
 import { faqReducer } from "./Faq";
+import { DashboardReducer } from './Dashboard';
+import { PickupReducer } from './Pickup';
 
 export const mainReducer = handleActions(
   {
@@ -36,4 +38,6 @@ export const RootReducer: Reducer<IRootState, AnyAction> = combineReducers<
   ProxyLoginReducer: proxyLoginReducer as any,
   homePageReducer: homePageReducer as any,
   faqReducer:faqReducer as any,
+  DashboardReducer:DashboardReducer as any,
+  PickupReducer: PickupReducer as any
 });

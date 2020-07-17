@@ -6,6 +6,8 @@ import { ChangePasswordLogics } from './ChangePassword';
 import { userLogics } from './User';
 import { TemplateLogics } from './EmailTemplate';
 import { FaqLogics } from "./Faq";
+import { DashBoardLogics } from "./Dashboard";
+import { PickupLogics } from './Pickup';
 
 export const redirectToLogic = createLogic({
   type: 'REDIRET_TO',
@@ -16,12 +18,14 @@ export const redirectToLogic = createLogic({
   },
 });
 
-export const AllLogics: Logic[] = [
+export const AllLogics: Logic[]|any = [
   ...LoginLogics,
   ...ProfileInfoLogics,
   ...ChangePasswordLogics,
   ...userLogics,
   ...FaqLogics,
   ...TemplateLogics,
+...DashBoardLogics,
+...PickupLogics,
   redirectToLogic,
 ];
