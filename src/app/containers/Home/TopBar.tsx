@@ -103,14 +103,15 @@ const TopBar = (props: any) => {
           </div>
         </div>
         <div className="navbar-nav-item">
-          <DropDownListComponent
+          <span className="cursor-pointer" onClick={handleShow}>{moment(startDate).format("YYYY")} </span>
+          {/* <DropDownListComponent
             id="year"
             dataSource={options}
             change={onhandleChange}
             placeholder="Select a year"
             value={activeYear}
             popupHeight="220px"
-          />
+          /> */}
         </div>
         <div className="navbar-nav-item">
           <Dropdown className="dashboard-dropdown common-dropdown">

@@ -3,7 +3,7 @@ export const ENVEnum: any = {
   PRODUCTION: 'production',
 };
 
-export const BaseUrlForJson: string = "http://localhost:3000/JsonData/";
+export const BaseUrlForJson: string = "http://localhost:3001/JsonData/";
 export const Environment: string = process.env.NODE_ENV || ENVEnum.DEVELOPMENT;
 export const API_ENDPOINT: string =
   Environment === ENVEnum.DEVELOPMENT
