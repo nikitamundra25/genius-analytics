@@ -8,14 +8,45 @@ const ColumnChart = React.lazy(() =>
 
 
 const PickupSinceYesterday = ({ graphdata = [] }:any) => {
+
+  const BarChartReferenceLine = [
+    {
+      id: "1",
+      title: "Room Nights",
+      color: "#f07623",
+      data: graphdata[0].data,
+      range: "198",
+      arrowClass: "cui-arrow-top",
+      textClass: "text-success",
+    },
+    {
+      id: "2",
+      title: "ADR",
+      color: "#f07623",
+      data: graphdata[1].data,
+      range: "2.6",
+      arrowClass: "cui-arrow-bottom",
+      textClass: "text-danger",
+    },
+    {
+      id: "3",
+      title: "Revenue",
+      color: "#f07623",
+      data: graphdata[2].data,
+      range: "19.4 k",
+      arrowClass: "cui-arrow-top",
+      textClass: "text-success",
+    },
+  ];
+
   return (
     <Card>
       <WidgetHeader title={"Pick up Since Yesterday"} activeToggle={"graph"} />
 
       <Card.Body>
         <Row className='row-inner'>
-          {graphdata && graphdata.length ? 
-          graphdata.map((key: any, index: number) => {
+          {BarChartReferenceLine && BarChartReferenceLine.length ? 
+          BarChartReferenceLine.map((key: any, index: number) => {
             return (
               <Col xs={12} md={4} key={index}>
                 <div className="pickup-card">

@@ -9,50 +9,10 @@
       "name": "Key Business Metrics",
       "id": 2,
       "graphdata": [
-        {
-          "id": "1",
-          "title": "OCC",
-          "color": "#2e75b7",
-          "data": [
-            { "x": "STLY", "y": 71.0 },
-            { "x": "LY", "y": 61.0 },
-            { "x": "BUD", "y": 67.8 },
-            { "x": "BOB", "y": 76.1 }
-          ]
-        },
-        {
-          "id": "2",
-          "title": "ADR",
-          "color": "#5398d9",
-          "data": [
-            { "x": "STLY", "y": 71.0 },
-            { "x": "LY", "y": 61.0 },
-            { "x": "BUD", "y": 67.8 },
-            { "x": "BOB", "y": 76.1 }
-          ]
-        },
-        {
-          "id": "3",
-          "title": "Revenue",
-          "color": "#1f4e79",
-          "data": [
-            { "x": "STLY", "y": 71.0 },
-            { "x": "LY", "y": 61.0 },
-            { "x": "BUD", "y": 67.8 },
-            { "x": "BOB", "y": 76.1 }
-          ]
-        },
-        {
-          "id": "4",
-          "title": "Revpar",
-          "color": "#9dc3e7",
-          "data": [
-            { "x": "STLY", "y": 71.0 },
-            { "x": "LY", "y": 61.0 },
-            { "x": "BUD", "y": 67.8 },
-            { "x": "BOB", "y": 76.1 }
-          ]
-        }
+        { "x": "STLY", "y": 71.0 },
+        { "x": "LY", "y": 61.0 },
+        { "x": "BUD", "y": 67.8 },
+        { "x": "BOB", "y": 76.1 }
       ]
     },
     {
@@ -60,49 +20,31 @@
       "id": 3,
       "graphdata": [
         {
-          "id": "1",
-          "title": "Room Nights",
-          "color": "#f07623",
           "data": [
             { "x": "BAR", "y": 64 },
             { "x": "COR", "y": 32 },
             { "x": "PROMO", "y": 46 },
             { "x": "FIT", "y": 28 },
             { "x": "GROUPS", "y": -12 }
-          ],
-          "range": "198",
-          "arrowClass": "cui-arrow-top",
-          "textClass": "text-success"
+          ]
         },
         {
-          "id": "2",
-          "title": "ADR",
-          "color": "#f07623",
           "data": [
             { "x": "BAR", "y": 2.8 },
             { "x": "COR", "y": 1.2 },
             { "x": "PROMO", "y": -2.2 },
             { "x": "FIT", "y": 1.1 },
             { "x": "GROUPS", "y": -1.2 }
-          ],
-          "range": "2.6",
-          "arrowClass": "cui-arrow-bottom",
-          "textClass": "text-danger"
+          ]
         },
         {
-          "id": "3",
-          "title": "Revenue",
-          "color": "#f07623",
           "data": [
             { "x": "BAR", "y": 15.5 },
             { "x": "COR", "y": 1.3 },
             { "x": "PROMO", "y": -1.2 },
             { "x": "FIT", "y": 2.8 },
             { "x": "GROUPS", "y": -1.4 }
-          ],
-          "range": "19.4 k",
-          "arrowClass": "cui-arrow-top",
-          "textClass": "text-success"
+          ]
         }
       ]
     },
@@ -111,405 +53,84 @@
       "id": 4,
       "graphdata": [
         {
-          "id": "line-and-column",
           "data": [
             {
-              "dataSource": [
-                {
-                  "name": "Mon",
-                  "OCCTY": 50,
-                  "OCCLY": 64,
-                  "ADRLY": 185,
-                  "ADRTY": 195
-                },
-                {
-                  "name": "Tue",
-                  "OCCTY": 88,
-                  "OCCLY": 80,
-                  "ADRLY": 202,
-                  "ADRTY": 207
-                },
-                {
-                  "name": "Wed",
-                  "OCCTY": 74,
-                  "OCCLY": 76,
-                  "ADRLY": 184,
-                  "ADRTY": 194
-                },
-                {
-                  "name": "Thu",
-                  "OCCTY": 68,
-                  "OCCLY": 73,
-                  "ADRLY": 176,
-                  "ADRTY": 196
-                },
-                {
-                  "name": "Fri",
-                  "OCCTY": 67,
-                  "OCCLY": 64,
-                  "ADRLY": 155,
-                  "ADRTY": 156
-                },
-                {
-                  "name": "Sat",
-                  "OCCTY": 74,
-                  "OCCLY": 76,
-                  "ADRLY": 143,
-                  "ADRTY": 150
-                },
-                {
-                  "name": "Sun",
-                  "OCCTY": 63,
-                  "OCCLY": 43,
-                  "ADRLY": 157,
-                  "ADRTY": 172
-                },
-                {
-                  "name": "Total",
-                  "OCCTY": 45,
-                  "OCCLY": 69,
-                  "ADRLY": 170,
-                  "ADRTY": 175
-                }
-              ],
-              "xName": "name",
-              "yName": "OCCTY",
-              "type": "Column",
-              "fill": "#244d81",
-              "name": "OCC TY"
+              "name": "Mon",
+              "OCCTY": 50,
+              "OCCLY": 64,
+              "ADRLY": 185,
+              "ADRTY": 195
             },
             {
-              "dataSource": [
-                {
-                  "name": "Mon",
-                  "OCCTY": 50,
-                  "OCCLY": 64,
-                  "ADRLY": 185,
-                  "ADRTY": 195
-                },
-                {
-                  "name": "Tue",
-                  "OCCTY": 88,
-                  "OCCLY": 80,
-                  "ADRLY": 202,
-                  "ADRTY": 207
-                },
-                {
-                  "name": "Wed",
-                  "OCCTY": 74,
-                  "OCCLY": 76,
-                  "ADRLY": 184,
-                  "ADRTY": 194
-                },
-                {
-                  "name": "Thu",
-                  "OCCTY": 68,
-                  "OCCLY": 73,
-                  "ADRLY": 176,
-                  "ADRTY": 196
-                },
-                {
-                  "name": "Fri",
-                  "OCCTY": 67,
-                  "OCCLY": 64,
-                  "ADRLY": 155,
-                  "ADRTY": 156
-                },
-                {
-                  "name": "Sat",
-                  "OCCTY": 74,
-                  "OCCLY": 76,
-                  "ADRLY": 143,
-                  "ADRTY": 150
-                },
-                {
-                  "name": "Sun",
-                  "OCCTY": 63,
-                  "OCCLY": 43,
-                  "ADRLY": 157,
-                  "ADRTY": 172
-                },
-                {
-                  "name": "Total",
-                  "OCCTY": 45,
-                  "OCCLY": 69,
-                  "ADRLY": 170,
-                  "ADRTY": 175
-                }
-              ],
-              "xName": "name",
-              "yName": "OCCLY",
-              "type": "Column",
-              "fill": "#4f81bc",
-              "name": "OCC LY",
-              "width": 1
+              "name": "Tue",
+              "OCCTY": 88,
+              "OCCLY": 80,
+              "ADRLY": 202,
+              "ADRTY": 207
             },
             {
-              "dataSource": [
-                {
-                  "name": "Mon",
-                  "OCCTY": 50,
-                  "OCCLY": 64,
-                  "ADRLY": 185,
-                  "ADRTY": 195
-                },
-                {
-                  "name": "Tue",
-                  "OCCTY": 88,
-                  "OCCLY": 80,
-                  "ADRLY": 202,
-                  "ADRTY": 207
-                },
-                {
-                  "name": "Wed",
-                  "OCCTY": 74,
-                  "OCCLY": 76,
-                  "ADRLY": 184,
-                  "ADRTY": 194
-                },
-                {
-                  "name": "Thu",
-                  "OCCTY": 68,
-                  "OCCLY": 73,
-                  "ADRLY": 176,
-                  "ADRTY": 196
-                },
-                {
-                  "name": "Fri",
-                  "OCCTY": 67,
-                  "OCCLY": 64,
-                  "ADRLY": 155,
-                  "ADRTY": 156
-                },
-                {
-                  "name": "Sat",
-                  "OCCTY": 74,
-                  "OCCLY": 76,
-                  "ADRLY": 143,
-                  "ADRTY": 150
-                },
-                {
-                  "name": "Sun",
-                  "OCCTY": 63,
-                  "OCCLY": 43,
-                  "ADRLY": 157,
-                  "ADRTY": 172
-                },
-                {
-                  "name": "Total",
-                  "OCCTY": 45,
-                  "OCCLY": 69,
-                  "ADRLY": 170,
-                  "ADRTY": 175
-                }
-              ],
-              "xName": "name",
-              "yName": "ADRTY",
-              "type": "Line",
-              "fill": "#2bb5ec",
-              "name": "ADR TY",
-              "dashArray": "5",
-              "width": 2,
-              "marker": {
-                "visible": false,
-                "width": 10,
-                "height": 10,
-                "border": { "width": 2, "color": "#2bb5ec" },
-                "dataLabel": {
-                  "visible": true,
-                  "position": "Top",
-                  "font": {
-                    "fontWeight": "600",
-                    "color": "#000000"
-                  }
-                }
-              }
+              "name": "Wed",
+              "OCCTY": 74,
+              "OCCLY": 76,
+              "ADRLY": 184,
+              "ADRTY": 194
             },
             {
-              "dataSource": [
-                {
-                  "name": "Mon",
-                  "OCCTY": 50,
-                  "OCCLY": 64,
-                  "ADRLY": 185,
-                  "ADRTY": 195
-                },
-                {
-                  "name": "Tue",
-                  "OCCTY": 88,
-                  "OCCLY": 80,
-                  "ADRLY": 202,
-                  "ADRTY": 207
-                },
-                {
-                  "name": "Wed",
-                  "OCCTY": 74,
-                  "OCCLY": 76,
-                  "ADRLY": 184,
-                  "ADRTY": 194
-                },
-                {
-                  "name": "Thu",
-                  "OCCTY": 68,
-                  "OCCLY": 73,
-                  "ADRLY": 176,
-                  "ADRTY": 196
-                },
-                {
-                  "name": "Fri",
-                  "OCCTY": 67,
-                  "OCCLY": 64,
-                  "ADRLY": 155,
-                  "ADRTY": 156
-                },
-                {
-                  "name": "Sat",
-                  "OCCTY": 74,
-                  "OCCLY": 76,
-                  "ADRLY": 143,
-                  "ADRTY": 150
-                },
-                {
-                  "name": "Sun",
-                  "OCCTY": 63,
-                  "OCCLY": 43,
-                  "ADRLY": 157,
-                  "ADRTY": 172
-                },
-                {
-                  "name": "Total",
-                  "OCCTY": 45,
-                  "OCCLY": 69,
-                  "ADRLY": 170,
-                  "ADRTY": 175
-                }
-              ],
-              "xName": "name",
-              "yName": "ADRLY",
-              "type": "Line",
-              "fill": "#293046",
-              "name": "ADR LY",
-              "dashArray": "5",
-              "width": 2,
-              "marker": {
-                "visible": true,
-                "width": 10,
-                "height": 10,
-                "border": { "width": 2, "color": "#293046" },
-                "dataLabel": {
-                  "visible": true,
-                  "position": "Bottom",
-                  "font": {
-                    "fontWeight": "600",
-                    "color": "#000000"
-                  }
-                }
-              }
+              "name": "Thu",
+              "OCCTY": 68,
+              "OCCLY": 73,
+              "ADRLY": 176,
+              "ADRTY": 196
+            },
+            {
+              "name": "Fri",
+              "OCCTY": 67,
+              "OCCLY": 64,
+              "ADRLY": 155,
+              "ADRTY": 156
+            },
+            {
+              "name": "Sat",
+              "OCCTY": 74,
+              "OCCLY": 76,
+              "ADRLY": 143,
+              "ADRTY": 150
+            },
+            {
+              "name": "Sun",
+              "OCCTY": 63,
+              "OCCLY": 43,
+              "ADRLY": 157,
+              "ADRTY": 172
+            },
+            {
+              "name": "Total",
+              "OCCTY": 45,
+              "OCCLY": 69,
+              "ADRLY": 170,
+              "ADRTY": 17
             }
           ]
         },
         {
-          "id": "line-and-bar",
           "data": [
             {
-              "dataSource": [
-                {
-                  "name": "Midweek OCC",
-                  "TY": 73,
-                  "LY": 71,
-                  "Var": 73
-                },
-                {
-                  "name": "Weekend OCC",
-                  "TY": 65,
-                  "LY": 73,
-                  "Var": 11
-                },
-                {
-                  "name": "Total OCC",
-                  "TY": 69,
-                  "LY": 72,
-                  "Var": 43
-                }
-              ],
-              "xName": "name",
-              "yName": "TY",
-              "type": "Column",
-              "fill": "#8293b1",
-              "name": "TY",
-              "width": 1
+              "name": "Midweek OCC",
+              "TY": 73,
+              "LY": 71,
+              "Var": 73
             },
             {
-              "dataSource": [
-                {
-                  "name": "Midweek OCC",
-                  "TY": 73,
-                  "LY": 71,
-                  "Var": 73
-                },
-                {
-                  "name": "Weekend OCC",
-                  "TY": 65,
-                  "LY": 73,
-                  "Var": 11
-                },
-                {
-                  "name": "Total OCC",
-                  "TY": 69,
-                  "LY": 72,
-                  "Var": 43
-                }
-              ],
-              "xName": "name",
-              "yName": "LY",
-              "type": "Column",
-              "fill": "#3269aa",
-              "name": "OCC LY",
-              "width": 1
+              "name": "Weekend OCC",
+              "TY": 65,
+              "LY": 73,
+              "Var": 11
             },
             {
-              "dataSource": [
-                {
-                  "name": "Midweek OCC",
-                  "TY": 73,
-                  "LY": 71,
-                  "Var": 73
-                },
-                {
-                  "name": "Weekend OCC",
-                  "TY": 65,
-                  "LY": 73,
-                  "Var": 11
-                },
-                {
-                  "name": "Total OCC",
-                  "TY": 69,
-                  "LY": 72,
-                  "Var": 43
-                }
-              ],
-              "xName": "name",
-              "yName": "Var",
-              "type": "Line",
-              "fill": "#2f5891",
-              "name": "Var",
-              "dashArray": "5",
-              "width": 2,
-              "marker": {
-                "visible": true,
-                "width": 10,
-                "height": 10,
-                "fill": "#2f5891",
-                "border": { "width": 1, "color": "#ddd" },
-                "dataLabel": {
-                  "visible": true,
-                  "position": "Top",
-                  "font": {
-                    "fontWeight": "600",
-                    "color": "#000000"
-                  }
-                }
-              }
+              "name": "Total OCC",
+              "TY": 69,
+              "LY": 72,
+              "Var": 43
             }
           ]
         }
@@ -520,28 +141,6 @@
       "id": 5,
       "graphdata": [
         {
-          "id": "business-card-percent",
-          "chartSettings": {
-            "primaryXAxis": {
-              "valueType": "Category",
-              "interval": 1,
-              "majorGridLines": { "width": 0 }
-            },
-            "primaryYAxis": {
-              "labelFormat": "{value}%",
-              "edgeLabelPlacement": "Shift",
-              "majorGridLines": { "width": 0 },
-              "majorTickLines": { "width": 0 },
-              "lineStyle": { "width": 0 },
-              "labelStyle": {
-                "color": "transparent"
-              }
-            },
-            "title": "Business Mix %",
-            "tooltip": { "enable": true }
-          },
-          "title": "Business Mix %",
-          "color": "#5b9cd6",
           "data": [
             { "x": "BAR", "y": 23 },
             { "x": "Discount", "y": 27 },
@@ -552,28 +151,6 @@
           ]
         },
         {
-          "id": "business-card-adr",
-          "chartSettings": {
-            "primaryXAxis": {
-              "valueType": "Category",
-              "interval": 1,
-              "majorGridLines": { "width": 0 }
-            },
-            "primaryYAxis": {
-              "labelFormat": "{value}%",
-              "edgeLabelPlacement": "Shift",
-              "majorGridLines": { "width": 0 },
-              "majorTickLines": { "width": 0 },
-              "lineStyle": { "width": 0 },
-              "labelStyle": {
-                "color": "transparent"
-              }
-            },
-            "title": "Business Mix ADR",
-            "tooltip": { "enable": true }
-          },
-          "title": "Business Mix ADR",
-          "color": "#4473c5",
           "data": [
             { "x": "BAR", "y": 150.55 },
             { "x": "Discount", "y": 127.32 },
@@ -590,112 +167,25 @@
       "id": 6,
       "graphdata": [
         {
-          "dataSource": [
-            {
-              "name": "0BRM",
-              "OCCTY": 50,
-              "OCCLY": 64,
-              "ADRTY": 134,
-              "ADRLY": 111
-            },
-            {
-              "name": "1BRM",
-              "OCCTY": 88,
-              "OCCLY": 80,
-              "ADRTY": 157,
-              "ADRLY": 169
-            },
-            {
-              "name": "2BRM",
-              "OCCTY": 74,
-              "OCCLY": 76,
-              "ADRTY": 257,
-              "ADRLY": 231
-            }
-          ],
-          "xName": "name",
-          "yName": "OCCTY",
-          "type": "Column",
-          "fill": "#a1c6d6",
-          "name": "OCC TY",
-          "width": 1
+          "name": "0BRM",
+          "OCCTY": 50,
+          "OCCLY": 64,
+          "ADRTY": 134,
+          "ADRLY": 111
         },
         {
-          "dataSource": [
-            {
-              "name": "0BRM",
-              "OCCTY": 50,
-              "OCCLY": 64,
-              "ADRTY": 134,
-              "ADRLY": 111
-            },
-            {
-              "name": "1BRM",
-              "OCCTY": 88,
-              "OCCLY": 80,
-              "ADRTY": 157,
-              "ADRLY": 169
-            },
-            {
-              "name": "2BRM",
-              "OCCTY": 74,
-              "OCCLY": 76,
-              "ADRTY": 257,
-              "ADRLY": 231
-            }
-          ],
-          "xName": "name",
-          "yName": "OCCLY",
-          "type": "Column",
-          "fill": "#65adc5",
-          "name": "OCC LY",
-          "width": 1
+          "name": "1BRM",
+          "OCCTY": 88,
+          "OCCLY": 80,
+          "ADRTY": 157,
+          "ADRLY": 169
         },
         {
-          "dataSource": [
-            {
-              "name": "0BRM",
-              "OCCTY": 50,
-              "OCCLY": 64,
-              "ADRTY": 134,
-              "ADRLY": 111
-            },
-            {
-              "name": "1BRM",
-              "OCCTY": 88,
-              "OCCLY": 80,
-              "ADRTY": 157,
-              "ADRLY": 169
-            },
-            {
-              "name": "2BRM",
-              "OCCTY": 74,
-              "OCCLY": 76,
-              "ADRTY": 257,
-              "ADRLY": 231
-            }
-          ],
-          "xName": "name",
-          "yName": "ADRLY",
-          "type": "Line",
-          "fill": "#05234e",
-          "name": "ADR LY",
-          "width": 2,
-          "dashArray": 5,
-          "marker": {
-            "visible": true,
-            "width": 10,
-            "height": 10,
-            "border": { "width": 2, "color": "#05234e" },
-            "dataLabel": {
-              "visible": true,
-              "position": "Top",
-              "font": {
-                "fontWeight": "600",
-                "color": "#000000"
-              }
-            }
-          }
+          "name": "2BRM",
+          "OCCTY": 74,
+          "OCCLY": 76,
+          "ADRTY": 257,
+          "ADRLY": 231
         }
       ]
     },
@@ -1919,9 +1409,6 @@
       "id": 9,
       "graphdata": [
         {
-          "id": "r1",
-          "title": "RGI",
-          "color": "#2e75b7",
           "data": [
             { "x": "My RevPAR", "y": 115.0 },
             { "x": "RevPAR Compact", "y": 96.0 },
@@ -1929,9 +1416,6 @@
           ]
         },
         {
-          "id": "r2",
-          "title": "MPI",
-          "color": "#5398d9",
           "data": [
             { "x": "My OCC", "y": 65.0 },
             { "x": "OCC Compact", "y": 68.0 },
@@ -1939,9 +1423,6 @@
           ]
         },
         {
-          "id": "r3",
-          "title": "ARI",
-          "color": "#1f4e79",
           "data": [
             { "x": "My ARR", "y": 175.0 },
             { "x": "ARR Compact", "y": 140.0 },
@@ -1953,55 +1434,10 @@
     {
       "name": "RGI YoY Variance",
       "id": 10,
-      "graphdata": [  
-        {
-          "dataSource": [
-            { "x": "RGI", "y1": 2, "y2": -1 },
-            { "x": "ARI", "y1": 2, "y2": 3 },
-            { "x": "MPI", "y1": 2, "y2": 1 }
-          ],
-          "xName": "x",
-          "yName": "y1",
-          "type": "Bar",
-          "fill": "#3467a6",
-          "name": "HOTEL",
-          "width": 1,
-          "marker": {
-            "dataLabel": {
-              "visible": true,
-              "rx": 10,
-              "ry": 10,
-              "font": {
-                "fontWeight": "600",
-                "color": "#000"
-              }
-            }
-          }
-        },
-        {
-          "dataSource": [
-            { "x": "RGI", "y1": 2, "y2": -1 },
-            { "x": "ARI", "y1": 2, "y2": 3 },
-            { "x": "MPI", "y1": 2, "y2": 1 }
-          ],
-          "xName": "x",
-          "yName": "y2",
-          "type": "Bar",
-          "fill": "#819bc6",
-          "name": "MARKET",
-          "width": 1,
-          "marker": {
-            "dataLabel": {
-              "visible": true,
-              "rx": 10,
-              "ry": 10,
-              "font": {
-                "fontWeight": "600",
-                "color": "#000"
-              }
-            }
-          }
-        }
+      "graphdata": [
+        { "x": "RGI", "y1": 2, "y2": -1 },
+        { "x": "ARI", "y1": 2, "y2": 3 },
+        { "x": "MPI", "y1": 2, "y2": 1 }
       ]
     }
   ]

@@ -8,13 +8,35 @@ const BarChartComponent = React.lazy(() =>
 
 
 export default ({ graphdata = [] }:any) => {
+
+  const RTGBarChart = [
+    {
+      id: "r1",
+      title: "RGI",
+      color: "#2e75b7",
+      data:graphdata[0].data
+    },
+    {
+      id: "r2",
+      title: "MPI",
+      color: "#5398d9",
+      data: graphdata[1].data
+    },
+    {
+      id: "r3",
+      title: "ARI",
+      color: "#1f4e79",
+      data: graphdata[2].data
+    },
+  ];
+
   return (
     <Card>
       <WidgetHeader title={"MTD RGI Performance"} />
       <Card.Body>
         <Row>
-          { graphdata && graphdata.length ? 
-          graphdata.map((key: any, index: number) => {
+          { RTGBarChart && RTGBarChart.length ? 
+          RTGBarChart.map((key: any, index: number) => {
             return (
               <Col key={index} sm={4} md={4}>
                 <React.Suspense fallback={<Loader />}>

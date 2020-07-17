@@ -5,13 +5,57 @@ import MixedCharts from "../../../components/Charts/MixedCharts";
 import WidgetHeader from "../../../components/WidgetHeader";
 
 export default ({ graphdata = [] }:any) => {
+
+  const Charts = [
+    {
+      dataSource: graphdata,
+      xName: "x",
+      yName: "y1",
+      type: "Bar",
+      fill: "#3467a6",
+      name: "HOTEL",
+      width: 1,
+      marker: {
+        dataLabel: {
+          visible: true,
+          rx: 10,
+          ry: 10,
+          font: {
+            fontWeight: "600",
+            color: "#000",
+          },
+        },
+      },
+    },
+    {
+      dataSource: graphdata,
+      xName: "x",
+      yName: "y2",
+      type: "Bar",
+      fill: "#819bc6",
+      name: "MARKET",
+      width: 1,
+      marker: {
+        dataLabel: {
+          visible: true,
+          rx: 10,
+          ry: 10,
+          font: {
+            fontWeight: "600",
+            color: "#000",
+          },
+        },
+      },
+    },
+  ];
+
   return (
     <Card>
       <WidgetHeader title={"RGI YoY Variance"} activeToggle={"graph"} />
       <Card.Body>
         <MixedCharts
           id='adfdsf'
-          charts={graphdata}
+          charts={Charts}
           chartSettings={{
             primaryXAxis: {
               valueType: "Category",

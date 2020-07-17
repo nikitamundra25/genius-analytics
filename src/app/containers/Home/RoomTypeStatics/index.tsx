@@ -8,6 +8,51 @@ const MixedCharts = React.lazy(() =>
 
 
 export default ({ graphdata = [] }:any) => {
+  const Charts = [
+    {
+      dataSource: graphdata,
+      xName: "name",
+      yName: "OCCTY",
+      type: "Column",
+      fill: "#a1c6d6",
+      name: "OCC TY",
+      width: 1,
+    },
+    {
+      dataSource: graphdata,
+      xName: "name",
+      yName: "OCCLY",
+      type: "Column",
+      fill: "#65adc5",
+      name: "OCC LY",
+      width: 1,
+    },
+    {
+      dataSource: graphdata,
+      xName: "name",
+      yName: "ADRLY",
+      type: "Line",
+      fill: "#05234e",
+      name: "ADR LY",
+      width: 2,
+      dashArray: 5,
+      marker: {
+        visible: true,
+        width: 10,
+        height: 10,
+        border: { width: 2, color: "#05234e" },
+        dataLabel: {
+          visible: true,
+          position: "Top",
+          font: {
+            fontWeight: "600",
+            color: "#000000",
+          },
+        },
+      },
+    },
+  ];
+
   return (
     <>
       <Card>
@@ -16,7 +61,7 @@ export default ({ graphdata = [] }:any) => {
           <React.Suspense fallback={<Loader />}>
             <MixedCharts
               id='room-type'
-              charts={graphdata}
+              charts={Charts}
               chartSettings={{
                 primaryXAxis: {
                   valueType: "Category",

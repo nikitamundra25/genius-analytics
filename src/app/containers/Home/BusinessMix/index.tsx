@@ -8,7 +8,61 @@ const BarChartComponent = React.lazy(() =>
 
 export default (props: any) => {
   const {graphdata}= props;
-  
+
+  const BarChartData = [
+    {
+      id: "business-card-percent",
+      chartSettings: {
+        primaryXAxis: {
+          valueType: "Category",
+          interval: 1,
+          majorGridLines: { width: 0 },
+        },
+        primaryYAxis: {
+          labelFormat: "{value}%",
+          edgeLabelPlacement: "Shift",
+          majorGridLines: { width: 0 },
+          majorTickLines: { width: 0 },
+          lineStyle: { width: 0 },
+          labelStyle: {
+            color: "transparent",
+          },
+        },
+        title: "Business Mix %",
+        tooltip: { enable: true },
+      },
+      title: "Business Mix %",
+      color: "#5b9cd6",
+      data: graphdata[0].data,
+    },
+    {
+      id: "business-card-adr",
+      chartSettings: {
+        primaryXAxis: {
+          valueType: "Category",
+          interval: 1,
+          majorGridLines: { width: 0 },
+        },
+        primaryYAxis: {
+          labelFormat: "{value}%",
+          edgeLabelPlacement: "Shift",
+          majorGridLines: { width: 0 },
+          majorTickLines: { width: 0 },
+          lineStyle: { width: 0 },
+          labelStyle: {
+            color: "transparent",
+          },
+        },
+        title: "Business Mix ADR",
+        tooltip: { enable: true },
+      },
+      title: "Business Mix ADR",
+      color: "#4473c5",
+      data: graphdata[1].data,
+    },
+  ];
+
+
   return (
     <>
       <Card>
@@ -16,8 +70,8 @@ export default (props: any) => {
         <Card.Body>
           
             <Row className="row-inner">
-              { graphdata && graphdata.length ? 
-              graphdata.map((key: any, index: number) => {
+              { BarChartData && BarChartData.length ? 
+              BarChartData.map((key: any, index: number) => {
                 return (
                   <Col xs={12} md={6} key={index}>
                     
