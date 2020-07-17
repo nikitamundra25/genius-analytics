@@ -13,6 +13,8 @@ import RGIVariance from "./RGIVariance";
 import { IDashboardWidgetProps } from "../../../interfaces";
 
 const getChart = (chartType: any) => {
+  console.log("chartType",chartType);
+  
   switch (chartType.name) {
     case "Business on the Books":
       return (
@@ -26,8 +28,8 @@ const getChart = (chartType: any) => {
         >
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
-           
-            <BOB />
+            <BOB    
+            />
           </div>
         </div>
       );
@@ -44,7 +46,9 @@ const getChart = (chartType: any) => {
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
            
-            <KeyBusinessMetrics />
+            <KeyBusinessMetrics 
+             graphdata={chartType.graphdata}
+            />
           </div>
         </div>
       );
@@ -60,7 +64,9 @@ const getChart = (chartType: any) => {
         >
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
-            <PickupSinceYesterday />
+            <PickupSinceYesterday 
+            graphdata={chartType.graphdata}
+            />
           </div>
         </div>
       );
@@ -76,7 +82,9 @@ const getChart = (chartType: any) => {
         >
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
-            <OccupencyStatitics />
+            <OccupencyStatitics 
+              graphdata={chartType.graphdata}
+            />
           </div>
         </div>
       );
@@ -92,8 +100,9 @@ const getChart = (chartType: any) => {
         >
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
-          
-            <BusinessMixComponent />
+            <BusinessMixComponent 
+            graphdata={chartType.graphdata}
+            />
           </div>
         </div>
       );
@@ -109,7 +118,9 @@ const getChart = (chartType: any) => {
         >
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
-            <RoomTypeStatics />
+            <RoomTypeStatics 
+              graphdata={chartType.graphdata}
+            />
           </div>
         </div>
       );
@@ -124,6 +135,7 @@ const getChart = (chartType: any) => {
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
           <BookingChannels 
+          graphdata={chartType.graphdata}
           />
         </div>
         </div>
@@ -138,7 +150,9 @@ const getChart = (chartType: any) => {
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          <GeoBusiness />
+          <GeoBusiness
+           graphdata={chartType.graphdata}
+          />
         </div>
         </div>
       );
@@ -154,7 +168,9 @@ const getChart = (chartType: any) => {
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          <MTDPerformance key={"rgi"} />
+          <MTDPerformance key={"rgi"} 
+          graphdata={chartType.graphdata}
+          />
         </div>
         </div>
       );
@@ -170,7 +186,9 @@ const getChart = (chartType: any) => {
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          <RGIVariance />
+          <RGIVariance 
+           graphdata={chartType.graphdata}
+          />
         </div>
         </div>
       );

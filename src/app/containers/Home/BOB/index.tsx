@@ -6,7 +6,7 @@ const TableForm = React.lazy(() =>
   import("../../../components/Tables/TableForm")
 );
 
-const BOB: React.FC = (): JSX.Element => {
+const BOB = () => {
   return (
     <Card>
       <WidgetHeader title={"Business on the Books"} activeToggle={"grid"} />
