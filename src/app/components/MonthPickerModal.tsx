@@ -23,9 +23,9 @@ const MonthPickerModal = (props: IMonthPickerProps) => {
   return (
     <>
       <Modal show={show} onHide={handleClose} size="sm" centered>
-        {/* <Modal.Header closeButton>
-          <Modal.Title></Modal.Title>
-        </Modal.Header> */}
+        <Modal.Header closeButton className="picker-modal-header">
+         
+        </Modal.Header>
 
         <Modal.Body>
           <DatePicker
