@@ -1,5 +1,4 @@
 import { RouteComponentProps } from 'react-router';
-import { IProfileInfo, IProfileModal } from './Profile';
 
 export interface IredirectPath {
   path: string;
@@ -7,8 +6,6 @@ export interface IredirectPath {
 
 export interface IDefaultLayoutProps extends RouteComponentProps {
   redirectTo: (data: IredirectPath) => void;
-  profileInfo: () => void;
-  profileInfoReducer?: IProfileModal;
 }
 
 export interface IDefaultLayoutState {
@@ -23,7 +20,7 @@ export interface IDefaultLayoutState {
 export interface IDefaultHeaderProps extends RouteComponentProps {
   profileInfoReducer?: {
     isLoading: boolean;
-    profileInfo: IProfileInfo;
+    profileInfo: any;
   };
   onLogout: () => void;
 }

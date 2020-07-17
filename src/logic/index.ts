@@ -1,11 +1,5 @@
 import { Logic, createLogic } from 'redux-logic';
 import { push } from 'react-router-redux';
-import { LoginLogics } from './Login';
-import { ProfileInfoLogics } from './ProfileInfo';
-import { ChangePasswordLogics } from './ChangePassword';
-import { userLogics } from './User';
-import { TemplateLogics } from './EmailTemplate';
-import { FaqLogics } from "./Faq";
 import { DashBoardLogics } from "./Dashboard";
 import { PickupLogics } from './Pickup';
 
@@ -19,12 +13,6 @@ export const redirectToLogic = createLogic({
 });
 
 export const AllLogics: Logic[]|any = [
-  ...LoginLogics,
-  ...ProfileInfoLogics,
-  ...ChangePasswordLogics,
-  ...userLogics,
-  ...FaqLogics,
-  ...TemplateLogics,
 ...DashBoardLogics,
 ...PickupLogics,
   redirectToLogic,
