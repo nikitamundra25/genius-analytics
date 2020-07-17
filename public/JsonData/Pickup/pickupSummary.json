@@ -1,17 +1,1588 @@
 {
-    "data": [
-      { "name": "January", "id": 1 ,"idNum":"one"},
-      { "name": "February", "id": 2 ,"idNum": "two"},
-      { "name": "March", "id": 3,"idNum": "three" },
-      { "name": "April", "id": 4 ,"idNum": "four"},
-      { "name": "May", "id": 5,"idNum": "five" },
-      { "name": "June", "id": 6,"idNum": "six" },
-      { "name": "July", "id": 7,"idNum": "seven" },
-      { "name": "August", "id": 8,"idNum": "eigth" },
-      { "name": "September", "id": 9 ,"idNum": "nine" },
-      { "name": "Octobar", "id": 10 ,"idNum": "ten"},
-      { "name": "November", "id": 11 ,"idNum": "eleven"},
-      { "name": "December", "id": 12 ,"idNum": "twelve" }
-    ]
-  }
-  
+  "data": [
+    {
+      "name": "January",
+      "id": 1,
+      "idNum": "one",
+      "tabledata": [],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData":[
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "February",
+      "id": 2,
+      "idNum": "two",
+      "tabledata": [],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData":[
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "March",
+      "id": 3,
+      "idNum": "three",
+      "tabledata": [],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData":[
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "April",
+      "id": 4,
+      "idNum": "four",
+      "tabledata": [],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData":[
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "May",
+      "id": 5,
+      "idNum": "five",
+      "tabledata": [],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData":[
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "June",
+      "id": 6,
+      "idNum": "six",
+      "tabledata": [],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData":[
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "July",
+      "id": 7,
+      "idNum": "seven",
+      "tabledata": [],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData":[
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "August",
+      "id": 8,
+      "idNum": "eigth",
+      "tabledata": [],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData":[
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "September",
+      "id": 9,
+      "idNum": "nine",
+      "tabledata": [],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData":[
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "Octobar",
+      "id": 10,
+      "idNum": "ten",
+      "tabledata": [],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData":[
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "November",
+      "id": 11,
+      "idNum": "eleven",
+      "tabledata": [],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData":[
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "December",
+      "id": 12,
+      "idNum": "twelve",
+      "tabledata": [],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData":[
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    }
+  ]
+}
