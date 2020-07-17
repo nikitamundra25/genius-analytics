@@ -1,16 +1,19 @@
 import React from "react";
-import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
-import MonthlyPivotData  from './pivot.json';
+import Loader from "../../../components/Loader/Loader";
+const PivotTableComponent = React.lazy(() =>
+  import("../../../components/Tables/PivotTable")
+);
 
 
-// let data = localData.data;
+const MonthlyTable = (props:any) => {
+const {index,graphdata} = props;
 
 let dataSourceSettings = {
   enableSorting: false,
   columns: [{ name: 'Title' }],
   valueSortSettings: { headerDelimiter: ' - ' },
-  values: [ { name: 'Amount', caption: 'Sold Amount' }],
-  dataSource: MonthlyPivotData.pivotData,
+  values: [ { name: 'Amount', caption: 'Amount' }],
+  dataSource: graphdata,
   rows: [{ name: 'Month' }],
   formatSettings: [{ name: 'Amount', format: '' }],
   expandAll: false,
@@ -18,8 +21,6 @@ let dataSourceSettings = {
 };
 
 
-const MonthlyTable = (props:{index:number}) => {
-const {index} = props;
 const SAMPLE_CSS = `
 .e-pivotview{
   font-size:12px !important;
@@ -53,17 +54,31 @@ const SAMPLE_CSS = `
   return (
     <>
      
-                <style>{SAMPLE_CSS}</style>
-                    <PivotViewComponent 
-                    id={`PivotView-${index}`}
-                    dataSourceSettings={dataSourceSettings}
-                    width={'100%'} 
-                    height={'300'}
-                    gridSettings={{ columnWidth: 120 , allowResizing: true }} 
-                    >
-                    </PivotViewComponent>
-              
-        
+      <React.Suspense fallback={<Loader />}>
+          <style>{SAMPLE_CSS}</style>
+          <PivotTableComponent
+          id={`PivotView-${index}`}
+          dataSourceSettings={dataSourceSettings}
+          width={'100%'} 
+          height={'300'}
+          TableSettings={{
+              TableComponent: {
+                gridSettings: {columnWidth: 120 , allowResizing: true },
+                // showFieldList: true,
+                // allowExcelExport: true ,
+                // allowConditionalFormatting: true ,
+                // allowNumberFormatting:true,
+                // allowPdfExport:true ,
+                // showToolbar:true,
+                // allowCalculatedField:true ,
+                // displayOption:{ view: 'Both' } ,
+                // toolbar:toolbarOptions ,
+              },
+          }}
+          
+          />
+      </React.Suspense>
+      
     </>
   );
 };

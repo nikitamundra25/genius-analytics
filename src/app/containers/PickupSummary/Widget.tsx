@@ -29,16 +29,24 @@ const getChart = (chartType: any, index: number) => {
                 <div className="sub-title text-left">{chartType.name}</div>
               </Col>
               <Col xs={12} md={8}>
-                <TableForm />
+                <TableForm  index={index} 
+                tabledata={chartType.tabledata}
+                />
               </Col>
               <Col xs={12} md={4}>
-                <PickupSegment index={index} />
+                <PickupSegment index={index} 
+                 segmentData = {chartType.segmentData}
+                />
               </Col>
               <Col xs={12} md={4}>
-                <PickupDOWOCCSegment index={index} />
+                <PickupDOWOCCSegment index={index} 
+                OccData = {chartType.OccData}
+                />
               </Col>
               <Col xs={12} md={4}>
-                <PickupBusinessMix index={index} />
+                <PickupBusinessMix index={index} 
+                DowData = {chartType.DowData}
+                />
               </Col>
             </Row>
           </Card.Body>

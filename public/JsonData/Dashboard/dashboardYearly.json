@@ -1,0 +1,244 @@
+{
+    "data": [
+      { "name": "Cumulative", "id": 1 , "graphdata":[]},
+      { "name": "MOCCADR", "id": 2 , "graphdata":[
+        {
+          "name": "Jan",
+          "OCC": 50,
+          "ADR": 64
+        },
+        {
+          "name": "Feb",
+          "OCC": 88,
+          "ADR": 80
+        },
+        {
+          "name": "Mar",
+          "OCC": 74,
+          "ADR": 76
+        },
+        {
+          "name": "Apr",
+          "OCC": 50,
+          "ADR": 64
+        },
+        {
+          "name": "May",
+          "OCC": 88,
+          "ADR": 80
+        },
+        {
+          "name": "Jun",
+          "OCC": 74,
+          "ADR": 76
+        },
+        {
+          "name": "Jul",
+          "OCC": 50,
+          "ADR": 64
+        },
+        {
+          "name": "Aug",
+          "OCC": 88,
+          "ADR": 80
+        },
+        {
+          "name": "Sep",
+          "OCC": 74,
+          "ADR": 76
+        },
+        {
+          "name": "Oct",
+          "OCC": 50,
+          "ADR": 64
+        },
+        {
+          "name": "Nov",
+          "OCC": 88,
+          "ADR": 80
+        },
+        {
+          "name": "Dec",
+          "OCC": 74,
+          "ADR": 76
+        }
+      ]},
+      { "name": "QOCCADR", "id": 3 , "graphdata":[
+        {
+          "name": "Q1",
+          "OCC": 50,
+          "ADR": 64
+        },
+        {
+          "name": "Q2",
+          "OCC": 88,
+          "ADR": 80
+        },
+        {
+          "name": "Q3",
+          "OCC": 74,
+          "ADR": 76
+        },
+        {
+          "name": "Q4",
+          "OCC": 74,
+          "ADR": 76
+        }
+      ]},
+      { "name": "ROOMTYPES", "id": 4 , "graphdata":[
+        {
+          "name": "0BRM",
+          "OCCTY": 50,
+          "OCCLY": 64,
+          "ADRTY": 134,
+          "ADRLY": 111
+        },
+        {
+          "name": "1BRM",
+          "OCCTY": 88,
+          "OCCLY": 80,
+          "ADRTY": 157,
+          "ADRLY": 169
+        },
+        {
+          "name": "2BRM",
+          "OCCTY": 74,
+          "OCCLY": 76,
+          "ADRTY": 257,
+          "ADRLY": 231
+        }
+      ]},
+      { "name": "RevPARYTD", "id": 5 , "graphdata":[
+        {
+          "name": "Jan",
+          "OCC": 75,
+          "RevPAR": 132,
+          "NrevPAR": 115
+        },
+        {
+          "name": "Feb",
+          "OCC": 86,
+          "RevPAR": 133,
+          "NrevPAR": 117
+        },
+        {
+          "name": "Mar",
+          "OCC": 93,
+          "RevPAR": 135,
+          "NrevPAR": 124
+        },
+        {
+          "name": "Apr",
+          "OCC": 94,
+          "RevPAR": 146,
+          "NrevPAR": 122
+        },
+        {
+          "name": "May",
+          "OCC": 89,
+          "RevPAR": 154,
+          "NrevPAR": 143
+        },
+        {
+          "name": "Jun",
+          "OCC": 91,
+          "RevPAR": 161,
+          "NrevPAR": 152
+        },
+        {
+          "name": "Jul",
+          "OCC": 88,
+          "RevPAR": 167,
+          "NrevPAR": 157
+        },
+        {
+          "name": "Aug",
+          "OCC": 85,
+          "RevPAR": 144,
+          "NrevPAR": 118
+        },
+        {
+          "name": "Sep",
+          "OCC": 89,
+          "RevPAR": 156,
+          "NrevPAR": 144
+        },
+        {
+          "name": "Oct",
+          "OCC": 95,
+          "RevPAR": 150,
+          "NrevPAR": 142
+        },
+        {
+          "name": "Nov",
+          "OCC": 91,
+          "RevPAR": 143,
+          "NrevPAR": 145
+        },
+        {
+          "name": "Dec",
+          "OCC": 88,
+          "RevPAR": 150,
+          "NrevPAR": 130
+        },
+        {
+          "name": "Total",
+          "OCC": 90,
+          "RevPAR": 149,
+          "NrevPAR": 135
+        }
+      ]},
+      { "name": "StayYTD", "id": 6 , "graphdata":[
+        { "x": "Total", "y1": 2.9,  "y2": 175   },
+        { "x": "BAR", "y1": 2.3,  "y2": 201   },
+        { "x": "COR", "y1": 1.9,  "y2": 187  },
+        { "x": "DIS", "y1": 3.3,  "y2": 149  },
+        { "x": "GRP", "y1": 4.1,  "y2": 166  },
+        { "x": "MTG", "y1": 3.5,  "y2": 171   },
+        { "x": "FIT", "y1": 2.8,  "y2": 149  }
+      ]},
+      { "name": "Lead Times YTD", "id": 7 , "graphdata":[
+        { "x": "90+", "y": 35, "text": "35%" },
+        { "x": "60+", "y": 19, "text": "19%" },
+        { "x": "30+", "y": 22, "text": "22%" },
+        { "x": "14+", "y": 3, "text": "3%" },
+        { "x": "7+", "y": 2, "text": "2%" },
+        { "x": "1+", "y": 16, "text": "16%" },
+        { "x": "One Day", "y": 3, "text": "3%" }
+      ]},
+      { "name": "Lead Times YTD by Segment", "id": 8, "graphdata":[
+        { "x": "90+", "y": 2, "text": "2%" },
+        { "x": "60+", "y": 5, "text": "5%" },
+        { "x": "30+", "y": 11, "text": "11%" },
+        { "x": "14+", "y": 17, "text": "17%" },
+        { "x": "7+", "y": 23, "text": "23%" },
+        { "x": "1+", "y": 28, "text": "28%" },
+        { "x": "One Day", "y": 14, "text": "14%" }
+      ] },
+      { "name": "RGI Performance - YTD", "id": 9 , "graphdata":[
+        {
+          "data": [
+            { "x": "My OCC", "y": 65.0 },
+            { "x": "OCC Compact", "y": 68.0 },
+            { "x": "MPI", "y": 96.8 }
+          ]
+      },
+      {
+        "data": [
+          { "x": "My ARR", "y": 175.0 },
+              { "x": "ARR Compact", "y": 140.0 },
+              { "x": "ARI", "y": 124.8 }
+        ]
+      },
+      {
+        "data": [
+          { "x": "My RevPAR", "y": 115.0 },
+          { "x": "RevPAR Compact", "y": 96.0 },
+          { "x": "RGI", "y": 119.8 }
+        ]
+      }
+      ]}
+     
+    ]
+  }
+  

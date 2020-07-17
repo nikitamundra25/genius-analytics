@@ -6,13 +6,8 @@ const PieChartComponent = React.lazy(() =>
   import("../../../components/Charts/PieChart")
 );
 
-const data = [
-  { x: "Brand.com", y: 27, text: "27%" },
-  { x: "OTA", y: 38, text: "38%" },
-  { x: "GDS", y: 20, text: "20%" },
-  { x: "Direct", y: 15, text: "15%" },
-];
-export default (props: any) => {
+
+export default ({ graphdata = [] }:any) => {
   return (
     <Card>
       <WidgetHeader title={"Booking Channel Mix"} activeToggle={"graph"} />
@@ -21,7 +16,7 @@ export default (props: any) => {
           <PieChartComponent
             id={"booking-mix"}
             height={"280px"}
-            data={data}
+            data={graphdata}
             chartSettings={{
               SeriesDirective: {
                 explode: true,

@@ -5,199 +5,11 @@ import WidgetHeader from "../../../components/WidgetHeader";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
-const DailyOccupacy: React.FC = (): JSX.Element => {
-  const dailyocc = [
-    {
-      name: "1",
-      OCC: 50,
-      Budget: 64,
-      LY: 134,
-    },
-    {
-      name: "2",
-      OCC: 88,
-      Budget: 80,
-      LY: 157,
-    },
-    {
-      name: "3",
-      OCC: 74,
-      Budget: 76,
-      LY: 257,
-    },
-    {
-      name: "4",
-      OCC: 50,
-      Budget: 64,
-      LY: 134,
-    },
-    {
-      name: "5",
-      OCC: 88,
-      Budget: 80,
-      LY: 157,
-    },
-    {
-      name: "6",
-      OCC: 74,
-      Budget: 76,
-      LY: 257,
-    },
-    {
-      name: "7",
-      OCC: 50,
-      Budget: 64,
-      LY: 134,
-    },
-    {
-      name: "8",
-      OCC: 88,
-      Budget: 80,
-      LY: 157,
-    },
-    {
-      name: "9",
-      OCC: 74,
-      Budget: 76,
-      LY: 257,
-    },
-    {
-      name: "10",
-      OCC: 50,
-      Budget: 64,
-      LY: 134,
-    },
-    {
-      name: "11",
-      OCC: 88,
-      Budget: 80,
-      LY: 157,
-    },
-    {
-      name: "12",
-      OCC: 74,
-      Budget: 76,
-      LY: 257,
-    },
-    {
-      name: "13",
-      OCC: 50,
-      Budget: 64,
-      LY: 134,
-    },
-    {
-      name: "14",
-      OCC: 88,
-      Budget: 80,
-      LY: 157,
-    },
-    {
-      name: "15",
-      OCC: 74,
-      Budget: 76,
-      LY: 257,
-    },
-    {
-      name: "16",
-      OCC: 50,
-      Budget: 64,
-      LY: 134,
-    },
-    {
-      name: "17",
-      OCC: 88,
-      Budget: 80,
-      LY: 157,
-    },
-    {
-      name: "18",
-      OCC: 74,
-      Budget: 76,
-      LY: 257,
-    },
-    {
-      name: "19",
-      OCC: 50,
-      Budget: 64,
-      LY: 134,
-    },
-    {
-      name: "20",
-      OCC: 88,
-      Budget: 80,
-      LY: 157,
-    },
-    {
-      name: "21",
-      OCC: 74,
-      Budget: 76,
-      LY: 257,
-    },
-    {
-      name: "22",
-      OCC: 74,
-      Budget: 76,
-      LY: 257,
-    },
-    {
-      name: "23",
-      OCC: 50,
-      Budget: 64,
-      LY: 134,
-    },
-    {
-      name: "24",
-      OCC: 88,
-      Budget: 80,
-      LY: 157,
-    },
-    {
-      name: "25",
-      OCC: 74,
-      Budget: 76,
-      LY: 257,
-    },
-    {
-      name: "26",
-      OCC: 50,
-      Budget: 64,
-      LY: 134,
-    },
-    {
-      name: "27",
-      OCC: 88,
-      Budget: 80,
-      LY: 157,
-    },
-    {
-      name: "28",
-      OCC: 74,
-      Budget: 76,
-      LY: 257,
-    },
-    {
-      name: "29",
-      OCC: 50,
-      Budget: 64,
-      LY: 134,
-    },
-    {
-      name: "30",
-      OCC: 88,
-      Budget: 80,
-      LY: 157,
-    },
-    {
-      name: "Total",
-      OCC: 74,
-      Budget: 76,
-      LY: 257,
-    },
-  ];
-
+const DailyOccupacy = ({ graphdata = [] }:any) => {
+ 
   const Charts = [
     {
-      dataSource: dailyocc,
+      dataSource: graphdata,
       xName: "name",
       yName: "OCC",
       type: "Line",
@@ -221,7 +33,7 @@ const DailyOccupacy: React.FC = (): JSX.Element => {
       },
     },
     {
-      dataSource: dailyocc,
+      dataSource: graphdata,
       xName: "name",
       yName: "Budget",
       type: "Line",
@@ -246,7 +58,7 @@ const DailyOccupacy: React.FC = (): JSX.Element => {
       },
     },
     {
-      dataSource: dailyocc,
+      dataSource: graphdata,
       xName: "name",
       yName: "LY",
       type: "Line",

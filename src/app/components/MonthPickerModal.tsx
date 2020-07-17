@@ -23,8 +23,8 @@ const MonthPickerModal = (props: IMonthPickerProps) => {
   return (
     <>
       <Modal show={show} onHide={handleClose} size="sm" centered>
-        <Modal.Header closeButton>
-          <Modal.Title></Modal.Title>
+        <Modal.Header closeButton className="picker-modal-header">
+         
         </Modal.Header>
 
         <Modal.Body>
@@ -33,6 +33,7 @@ const MonthPickerModal = (props: IMonthPickerProps) => {
             onChange={(date: any) => ondateChange(date)}
             dateFormat="MM/yyyy"
             showMonthYearPicker
+            // showYearPicker
             inline
             className="custom-datepicker"
           />

@@ -15,7 +15,6 @@ import { AppRoutes } from '../config';
 const DefaultLayout = React.lazy(() =>
   import('../app/containers/DefaultLayout/DefaultLayout'),
 );
-const Login = React.lazy(() => import('../app/containers/Auth'));
 
 class AppRoutesComponent extends Component<IAppRoutesProps, IAppRoutesState> {
   constructor(props: any) {
@@ -28,11 +27,11 @@ class AppRoutesComponent extends Component<IAppRoutesProps, IAppRoutesState> {
       <>
         {mainState && mainState.showLoader ? <FullPageLoader /> : null}
         <Switch>
-          <Route
+          {/* <Route
             exact
             path={AppRoutes.LOGIN}
             render={props => <Login {...props} {...this.props} />}
-          />
+          /> */}
           <Route
             path={AppRoutes.MAIN}
             render={props => <DefaultLayout {...props} {...this.props} />}

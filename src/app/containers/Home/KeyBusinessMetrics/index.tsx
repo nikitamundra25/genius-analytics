@@ -6,60 +6,44 @@ const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
 
-const barChartBusinessMetrics = [
-  {
-    id: "1",
-    title: "OCC",
-    color: "#2e75b7",
-    data: [
-      { x: "STLY", y: 71.0 },
-      { x: "LY", y: 61.0 },
-      { x: "BUD", y: 67.8 },
-      { x: "BOB", y: 76.1 },
-    ],
-  },
-  {
-    id: "2",
-    title: "ADR",
-    color: "#5398d9",
-    data: [
-      { x: "STLY", y: 71.0 },
-      { x: "LY", y: 61.0 },
-      { x: "BUD", y: 67.8 },
-      { x: "BOB", y: 76.1 },
-    ],
-  },
-  {
-    id: "3",
-    title: "Revenue",
-    color: "#1f4e79",
-    data: [
-      { x: "STLY", y: 71.0 },
-      { x: "LY", y: 61.0 },
-      { x: "BUD", y: 67.8 },
-      { x: "BOB", y: 76.1 },
-    ],
-  },
-  {
-    id: "4",
-    title: "Revpar",
-    color: "#9dc3e7",
-    data: [
-      { x: "STLY", y: 71.0 },
-      { x: "LY", y: 61.0 },
-      { x: "BUD", y: 67.8 },
-      { x: "BOB", y: 76.1 },
-    ],
-  },
-];
+const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
 
-const KeyBusinessMetrics: React.FC = (): JSX.Element => {
+  const barChartBusinessMetrics = [
+    {
+      id: "1",
+      title: "OCC",
+      color: "#2e75b7",
+      data: graphdata,
+    },
+    {
+      id: "2",
+      title: "ADR",
+      color: "#5398d9",
+      data: graphdata,
+    },
+    {
+      id: "3",
+      title: "Revenue",
+      color: "#1f4e79",
+      data: graphdata,
+    },
+    {
+      id: "4",
+      title: "Revpar",
+      color: "#9dc3e7",
+      data: graphdata,
+    },
+  ];
+
+
+
   return (
     <Card>
       <WidgetHeader title={"Key Business Metrics"} activeToggle={"graph"} />
       <Card.Body>
       <Row className='row-inner'>
-        {barChartBusinessMetrics.map((key: any, index: number) => {
+        {barChartBusinessMetrics && barChartBusinessMetrics.length ? 
+        barChartBusinessMetrics.map((key: any, index: number) => {
           return (
             <Col key={index} sm={3} md={3}>
               <div className="w-100">
@@ -90,7 +74,7 @@ const KeyBusinessMetrics: React.FC = (): JSX.Element => {
               </div>
             </Col>
           );
-        })}
+        }): null}
       </Row>
      </Card.Body>
     </Card>

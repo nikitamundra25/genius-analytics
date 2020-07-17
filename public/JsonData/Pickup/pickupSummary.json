@@ -1,0 +1,2165 @@
+{
+  "data": [
+    {
+      "name": "January",
+      "id": 1,
+      "idNum": "one",
+      "tabledata": [
+        { "Amount": "5425", "Month": "Room Nts", "Title": "Pick-up" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "Pick-up" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "Pick-up" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "Pick-up" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "Pick-up" },
+
+        { "Amount": "5425", "Month": "Room Nts", "Title": "BOB" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "BOB" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "BOB" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "BOB" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "BOB" },
+
+        { "Amount": "4836", "Month": "Room Nts", "Title": "BUDGET" },
+        { "Amount": "67.8", "Month": "OCC", "Title": "BUDGET" },
+        { "Amount": "845965", "Month": "Revenue", "Title": "BUDGET" },
+        { "Amount": "174.9", "Month": "ARR", "Title": "BUDGET" },
+        { "Amount": "118.1", "Month": "RevPAR", "Title": "BUDGET" },
+
+        { "Amount": "4347", "Month": "Room Nts", "Title": "LY" },
+        { "Amount": "61.0", "Month": "OCC", "Title": "LY" },
+        { "Amount": "733395", "Month": "Revenue", "Title": "LY" },
+        { "Amount": "168.7", "Month": "ARR", "Title": "LY" },
+        { "Amount": "102.9", "Month": "RevPAR", "Title": "LY" },
+
+        { "Amount": "5120", "Month": "Room Nts", "Title": "STLY" },
+        { "Amount": "71.0", "Month": "OCC", "Title": "STLY" },
+        { "Amount": "852333", "Month": "Revenue", "Title": "STLY" },
+        { "Amount": "166.6", "Month": "ARR", "Title": "STLY" },
+        { "Amount": "118.19", "Month": "RevPAR", "Title": "STLY" },
+
+        { "Amount": "15", "Month": "Room Nts", "Title": "Vs.BUD" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.BUD" },
+        { "Amount": "75965", "Month": "Revenue", "Title": "Vs.BUD" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.BUD" },
+        { "Amount": "8.6", "Month": "RevPAR", "Title": "Vs.BUD" },
+
+        { "Amount": "-25", "Month": "Room Nts", "Title": "Vs.LY" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.LY" },
+        { "Amount": "15965", "Month": "Revenue", "Title": "Vs.LY" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.LY" },
+        { "Amount": "3.6", "Month": "RevPAR", "Title": "Vs.LY" },
+
+        { "Amount": "55", "Month": "Room Nts", "Title": "Vs.STLY" },
+        { "Amount": "5.1", "Month": "OCC", "Title": "Vs.STLY" },
+        { "Amount": "118032", "Month": "Revenue", "Title": "Vs.STLY" },
+        { "Amount": "11.2", "Month": "ARR", "Title": "Vs.STLY" },
+        { "Amount": "17.9", "Month": "RevPAR", "Title": "Vs.STLY" }
+      ],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "February",
+      "id": 2,
+      "idNum": "two",
+      "tabledata": [
+        { "Amount": "5425", "Month": "Room Nts", "Title": "Pick-up" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "Pick-up" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "Pick-up" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "Pick-up" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "Pick-up" },
+
+        { "Amount": "5425", "Month": "Room Nts", "Title": "BOB" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "BOB" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "BOB" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "BOB" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "BOB" },
+
+        { "Amount": "4836", "Month": "Room Nts", "Title": "BUDGET" },
+        { "Amount": "67.8", "Month": "OCC", "Title": "BUDGET" },
+        { "Amount": "845965", "Month": "Revenue", "Title": "BUDGET" },
+        { "Amount": "174.9", "Month": "ARR", "Title": "BUDGET" },
+        { "Amount": "118.1", "Month": "RevPAR", "Title": "BUDGET" },
+
+        { "Amount": "4347", "Month": "Room Nts", "Title": "LY" },
+        { "Amount": "61.0", "Month": "OCC", "Title": "LY" },
+        { "Amount": "733395", "Month": "Revenue", "Title": "LY" },
+        { "Amount": "168.7", "Month": "ARR", "Title": "LY" },
+        { "Amount": "102.9", "Month": "RevPAR", "Title": "LY" },
+
+        { "Amount": "5120", "Month": "Room Nts", "Title": "STLY" },
+        { "Amount": "71.0", "Month": "OCC", "Title": "STLY" },
+        { "Amount": "852333", "Month": "Revenue", "Title": "STLY" },
+        { "Amount": "166.6", "Month": "ARR", "Title": "STLY" },
+        { "Amount": "118.19", "Month": "RevPAR", "Title": "STLY" },
+
+        { "Amount": "15", "Month": "Room Nts", "Title": "Vs.BUD" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.BUD" },
+        { "Amount": "75965", "Month": "Revenue", "Title": "Vs.BUD" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.BUD" },
+        { "Amount": "8.6", "Month": "RevPAR", "Title": "Vs.BUD" },
+
+        { "Amount": "-25", "Month": "Room Nts", "Title": "Vs.LY" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.LY" },
+        { "Amount": "15965", "Month": "Revenue", "Title": "Vs.LY" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.LY" },
+        { "Amount": "3.6", "Month": "RevPAR", "Title": "Vs.LY" },
+
+        { "Amount": "55", "Month": "Room Nts", "Title": "Vs.STLY" },
+        { "Amount": "5.1", "Month": "OCC", "Title": "Vs.STLY" },
+        { "Amount": "118032", "Month": "Revenue", "Title": "Vs.STLY" },
+        { "Amount": "11.2", "Month": "ARR", "Title": "Vs.STLY" },
+        { "Amount": "17.9", "Month": "RevPAR", "Title": "Vs.STLY" }
+      ],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "March",
+      "id": 3,
+      "idNum": "three",
+      "tabledata": [
+        { "Amount": "5425", "Month": "Room Nts", "Title": "Pick-up" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "Pick-up" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "Pick-up" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "Pick-up" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "Pick-up" },
+
+        { "Amount": "5425", "Month": "Room Nts", "Title": "BOB" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "BOB" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "BOB" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "BOB" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "BOB" },
+
+        { "Amount": "4836", "Month": "Room Nts", "Title": "BUDGET" },
+        { "Amount": "67.8", "Month": "OCC", "Title": "BUDGET" },
+        { "Amount": "845965", "Month": "Revenue", "Title": "BUDGET" },
+        { "Amount": "174.9", "Month": "ARR", "Title": "BUDGET" },
+        { "Amount": "118.1", "Month": "RevPAR", "Title": "BUDGET" },
+
+        { "Amount": "4347", "Month": "Room Nts", "Title": "LY" },
+        { "Amount": "61.0", "Month": "OCC", "Title": "LY" },
+        { "Amount": "733395", "Month": "Revenue", "Title": "LY" },
+        { "Amount": "168.7", "Month": "ARR", "Title": "LY" },
+        { "Amount": "102.9", "Month": "RevPAR", "Title": "LY" },
+
+        { "Amount": "5120", "Month": "Room Nts", "Title": "STLY" },
+        { "Amount": "71.0", "Month": "OCC", "Title": "STLY" },
+        { "Amount": "852333", "Month": "Revenue", "Title": "STLY" },
+        { "Amount": "166.6", "Month": "ARR", "Title": "STLY" },
+        { "Amount": "118.19", "Month": "RevPAR", "Title": "STLY" },
+
+        { "Amount": "15", "Month": "Room Nts", "Title": "Vs.BUD" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.BUD" },
+        { "Amount": "75965", "Month": "Revenue", "Title": "Vs.BUD" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.BUD" },
+        { "Amount": "8.6", "Month": "RevPAR", "Title": "Vs.BUD" },
+
+        { "Amount": "-25", "Month": "Room Nts", "Title": "Vs.LY" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.LY" },
+        { "Amount": "15965", "Month": "Revenue", "Title": "Vs.LY" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.LY" },
+        { "Amount": "3.6", "Month": "RevPAR", "Title": "Vs.LY" },
+
+        { "Amount": "55", "Month": "Room Nts", "Title": "Vs.STLY" },
+        { "Amount": "5.1", "Month": "OCC", "Title": "Vs.STLY" },
+        { "Amount": "118032", "Month": "Revenue", "Title": "Vs.STLY" },
+        { "Amount": "11.2", "Month": "ARR", "Title": "Vs.STLY" },
+        { "Amount": "17.9", "Month": "RevPAR", "Title": "Vs.STLY" }
+      ],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "April",
+      "id": 4,
+      "idNum": "four",
+      "tabledata": [
+        { "Amount": "5425", "Month": "Room Nts", "Title": "Pick-up" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "Pick-up" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "Pick-up" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "Pick-up" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "Pick-up" },
+
+        { "Amount": "5425", "Month": "Room Nts", "Title": "BOB" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "BOB" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "BOB" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "BOB" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "BOB" },
+
+        { "Amount": "4836", "Month": "Room Nts", "Title": "BUDGET" },
+        { "Amount": "67.8", "Month": "OCC", "Title": "BUDGET" },
+        { "Amount": "845965", "Month": "Revenue", "Title": "BUDGET" },
+        { "Amount": "174.9", "Month": "ARR", "Title": "BUDGET" },
+        { "Amount": "118.1", "Month": "RevPAR", "Title": "BUDGET" },
+
+        { "Amount": "4347", "Month": "Room Nts", "Title": "LY" },
+        { "Amount": "61.0", "Month": "OCC", "Title": "LY" },
+        { "Amount": "733395", "Month": "Revenue", "Title": "LY" },
+        { "Amount": "168.7", "Month": "ARR", "Title": "LY" },
+        { "Amount": "102.9", "Month": "RevPAR", "Title": "LY" },
+
+        { "Amount": "5120", "Month": "Room Nts", "Title": "STLY" },
+        { "Amount": "71.0", "Month": "OCC", "Title": "STLY" },
+        { "Amount": "852333", "Month": "Revenue", "Title": "STLY" },
+        { "Amount": "166.6", "Month": "ARR", "Title": "STLY" },
+        { "Amount": "118.19", "Month": "RevPAR", "Title": "STLY" },
+
+        { "Amount": "15", "Month": "Room Nts", "Title": "Vs.BUD" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.BUD" },
+        { "Amount": "75965", "Month": "Revenue", "Title": "Vs.BUD" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.BUD" },
+        { "Amount": "8.6", "Month": "RevPAR", "Title": "Vs.BUD" },
+
+        { "Amount": "-25", "Month": "Room Nts", "Title": "Vs.LY" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.LY" },
+        { "Amount": "15965", "Month": "Revenue", "Title": "Vs.LY" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.LY" },
+        { "Amount": "3.6", "Month": "RevPAR", "Title": "Vs.LY" },
+
+        { "Amount": "55", "Month": "Room Nts", "Title": "Vs.STLY" },
+        { "Amount": "5.1", "Month": "OCC", "Title": "Vs.STLY" },
+        { "Amount": "118032", "Month": "Revenue", "Title": "Vs.STLY" },
+        { "Amount": "11.2", "Month": "ARR", "Title": "Vs.STLY" },
+        { "Amount": "17.9", "Month": "RevPAR", "Title": "Vs.STLY" }
+      ],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "May",
+      "id": 5,
+      "idNum": "five",
+      "tabledata": [
+        { "Amount": "5425", "Month": "Room Nts", "Title": "Pick-up" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "Pick-up" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "Pick-up" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "Pick-up" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "Pick-up" },
+
+        { "Amount": "5425", "Month": "Room Nts", "Title": "BOB" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "BOB" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "BOB" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "BOB" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "BOB" },
+
+        { "Amount": "4836", "Month": "Room Nts", "Title": "BUDGET" },
+        { "Amount": "67.8", "Month": "OCC", "Title": "BUDGET" },
+        { "Amount": "845965", "Month": "Revenue", "Title": "BUDGET" },
+        { "Amount": "174.9", "Month": "ARR", "Title": "BUDGET" },
+        { "Amount": "118.1", "Month": "RevPAR", "Title": "BUDGET" },
+
+        { "Amount": "4347", "Month": "Room Nts", "Title": "LY" },
+        { "Amount": "61.0", "Month": "OCC", "Title": "LY" },
+        { "Amount": "733395", "Month": "Revenue", "Title": "LY" },
+        { "Amount": "168.7", "Month": "ARR", "Title": "LY" },
+        { "Amount": "102.9", "Month": "RevPAR", "Title": "LY" },
+
+        { "Amount": "5120", "Month": "Room Nts", "Title": "STLY" },
+        { "Amount": "71.0", "Month": "OCC", "Title": "STLY" },
+        { "Amount": "852333", "Month": "Revenue", "Title": "STLY" },
+        { "Amount": "166.6", "Month": "ARR", "Title": "STLY" },
+        { "Amount": "118.19", "Month": "RevPAR", "Title": "STLY" },
+
+        { "Amount": "15", "Month": "Room Nts", "Title": "Vs.BUD" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.BUD" },
+        { "Amount": "75965", "Month": "Revenue", "Title": "Vs.BUD" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.BUD" },
+        { "Amount": "8.6", "Month": "RevPAR", "Title": "Vs.BUD" },
+
+        { "Amount": "-25", "Month": "Room Nts", "Title": "Vs.LY" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.LY" },
+        { "Amount": "15965", "Month": "Revenue", "Title": "Vs.LY" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.LY" },
+        { "Amount": "3.6", "Month": "RevPAR", "Title": "Vs.LY" },
+
+        { "Amount": "55", "Month": "Room Nts", "Title": "Vs.STLY" },
+        { "Amount": "5.1", "Month": "OCC", "Title": "Vs.STLY" },
+        { "Amount": "118032", "Month": "Revenue", "Title": "Vs.STLY" },
+        { "Amount": "11.2", "Month": "ARR", "Title": "Vs.STLY" },
+        { "Amount": "17.9", "Month": "RevPAR", "Title": "Vs.STLY" }
+      ],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "June",
+      "id": 6,
+      "idNum": "six",
+      "tabledata": [
+        { "Amount": "5425", "Month": "Room Nts", "Title": "Pick-up" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "Pick-up" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "Pick-up" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "Pick-up" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "Pick-up" },
+
+        { "Amount": "5425", "Month": "Room Nts", "Title": "BOB" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "BOB" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "BOB" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "BOB" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "BOB" },
+
+        { "Amount": "4836", "Month": "Room Nts", "Title": "BUDGET" },
+        { "Amount": "67.8", "Month": "OCC", "Title": "BUDGET" },
+        { "Amount": "845965", "Month": "Revenue", "Title": "BUDGET" },
+        { "Amount": "174.9", "Month": "ARR", "Title": "BUDGET" },
+        { "Amount": "118.1", "Month": "RevPAR", "Title": "BUDGET" },
+
+        { "Amount": "4347", "Month": "Room Nts", "Title": "LY" },
+        { "Amount": "61.0", "Month": "OCC", "Title": "LY" },
+        { "Amount": "733395", "Month": "Revenue", "Title": "LY" },
+        { "Amount": "168.7", "Month": "ARR", "Title": "LY" },
+        { "Amount": "102.9", "Month": "RevPAR", "Title": "LY" },
+
+        { "Amount": "5120", "Month": "Room Nts", "Title": "STLY" },
+        { "Amount": "71.0", "Month": "OCC", "Title": "STLY" },
+        { "Amount": "852333", "Month": "Revenue", "Title": "STLY" },
+        { "Amount": "166.6", "Month": "ARR", "Title": "STLY" },
+        { "Amount": "118.19", "Month": "RevPAR", "Title": "STLY" },
+
+        { "Amount": "15", "Month": "Room Nts", "Title": "Vs.BUD" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.BUD" },
+        { "Amount": "75965", "Month": "Revenue", "Title": "Vs.BUD" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.BUD" },
+        { "Amount": "8.6", "Month": "RevPAR", "Title": "Vs.BUD" },
+
+        { "Amount": "-25", "Month": "Room Nts", "Title": "Vs.LY" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.LY" },
+        { "Amount": "15965", "Month": "Revenue", "Title": "Vs.LY" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.LY" },
+        { "Amount": "3.6", "Month": "RevPAR", "Title": "Vs.LY" },
+
+        { "Amount": "55", "Month": "Room Nts", "Title": "Vs.STLY" },
+        { "Amount": "5.1", "Month": "OCC", "Title": "Vs.STLY" },
+        { "Amount": "118032", "Month": "Revenue", "Title": "Vs.STLY" },
+        { "Amount": "11.2", "Month": "ARR", "Title": "Vs.STLY" },
+        { "Amount": "17.9", "Month": "RevPAR", "Title": "Vs.STLY" }
+      ],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "July",
+      "id": 7,
+      "idNum": "seven",
+      "tabledata": [
+        { "Amount": "5425", "Month": "Room Nts", "Title": "Pick-up" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "Pick-up" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "Pick-up" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "Pick-up" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "Pick-up" },
+
+        { "Amount": "5425", "Month": "Room Nts", "Title": "BOB" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "BOB" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "BOB" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "BOB" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "BOB" },
+
+        { "Amount": "4836", "Month": "Room Nts", "Title": "BUDGET" },
+        { "Amount": "67.8", "Month": "OCC", "Title": "BUDGET" },
+        { "Amount": "845965", "Month": "Revenue", "Title": "BUDGET" },
+        { "Amount": "174.9", "Month": "ARR", "Title": "BUDGET" },
+        { "Amount": "118.1", "Month": "RevPAR", "Title": "BUDGET" },
+
+        { "Amount": "4347", "Month": "Room Nts", "Title": "LY" },
+        { "Amount": "61.0", "Month": "OCC", "Title": "LY" },
+        { "Amount": "733395", "Month": "Revenue", "Title": "LY" },
+        { "Amount": "168.7", "Month": "ARR", "Title": "LY" },
+        { "Amount": "102.9", "Month": "RevPAR", "Title": "LY" },
+
+        { "Amount": "5120", "Month": "Room Nts", "Title": "STLY" },
+        { "Amount": "71.0", "Month": "OCC", "Title": "STLY" },
+        { "Amount": "852333", "Month": "Revenue", "Title": "STLY" },
+        { "Amount": "166.6", "Month": "ARR", "Title": "STLY" },
+        { "Amount": "118.19", "Month": "RevPAR", "Title": "STLY" },
+
+        { "Amount": "15", "Month": "Room Nts", "Title": "Vs.BUD" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.BUD" },
+        { "Amount": "75965", "Month": "Revenue", "Title": "Vs.BUD" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.BUD" },
+        { "Amount": "8.6", "Month": "RevPAR", "Title": "Vs.BUD" },
+
+        { "Amount": "-25", "Month": "Room Nts", "Title": "Vs.LY" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.LY" },
+        { "Amount": "15965", "Month": "Revenue", "Title": "Vs.LY" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.LY" },
+        { "Amount": "3.6", "Month": "RevPAR", "Title": "Vs.LY" },
+
+        { "Amount": "55", "Month": "Room Nts", "Title": "Vs.STLY" },
+        { "Amount": "5.1", "Month": "OCC", "Title": "Vs.STLY" },
+        { "Amount": "118032", "Month": "Revenue", "Title": "Vs.STLY" },
+        { "Amount": "11.2", "Month": "ARR", "Title": "Vs.STLY" },
+        { "Amount": "17.9", "Month": "RevPAR", "Title": "Vs.STLY" }
+      ],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "August",
+      "id": 8,
+      "idNum": "eigth",
+      "tabledata": [
+        { "Amount": "5425", "Month": "Room Nts", "Title": "Pick-up" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "Pick-up" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "Pick-up" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "Pick-up" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "Pick-up" },
+
+        { "Amount": "5425", "Month": "Room Nts", "Title": "BOB" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "BOB" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "BOB" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "BOB" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "BOB" },
+
+        { "Amount": "4836", "Month": "Room Nts", "Title": "BUDGET" },
+        { "Amount": "67.8", "Month": "OCC", "Title": "BUDGET" },
+        { "Amount": "845965", "Month": "Revenue", "Title": "BUDGET" },
+        { "Amount": "174.9", "Month": "ARR", "Title": "BUDGET" },
+        { "Amount": "118.1", "Month": "RevPAR", "Title": "BUDGET" },
+
+        { "Amount": "4347", "Month": "Room Nts", "Title": "LY" },
+        { "Amount": "61.0", "Month": "OCC", "Title": "LY" },
+        { "Amount": "733395", "Month": "Revenue", "Title": "LY" },
+        { "Amount": "168.7", "Month": "ARR", "Title": "LY" },
+        { "Amount": "102.9", "Month": "RevPAR", "Title": "LY" },
+
+        { "Amount": "5120", "Month": "Room Nts", "Title": "STLY" },
+        { "Amount": "71.0", "Month": "OCC", "Title": "STLY" },
+        { "Amount": "852333", "Month": "Revenue", "Title": "STLY" },
+        { "Amount": "166.6", "Month": "ARR", "Title": "STLY" },
+        { "Amount": "118.19", "Month": "RevPAR", "Title": "STLY" },
+
+        { "Amount": "15", "Month": "Room Nts", "Title": "Vs.BUD" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.BUD" },
+        { "Amount": "75965", "Month": "Revenue", "Title": "Vs.BUD" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.BUD" },
+        { "Amount": "8.6", "Month": "RevPAR", "Title": "Vs.BUD" },
+
+        { "Amount": "-25", "Month": "Room Nts", "Title": "Vs.LY" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.LY" },
+        { "Amount": "15965", "Month": "Revenue", "Title": "Vs.LY" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.LY" },
+        { "Amount": "3.6", "Month": "RevPAR", "Title": "Vs.LY" },
+
+        { "Amount": "55", "Month": "Room Nts", "Title": "Vs.STLY" },
+        { "Amount": "5.1", "Month": "OCC", "Title": "Vs.STLY" },
+        { "Amount": "118032", "Month": "Revenue", "Title": "Vs.STLY" },
+        { "Amount": "11.2", "Month": "ARR", "Title": "Vs.STLY" },
+        { "Amount": "17.9", "Month": "RevPAR", "Title": "Vs.STLY" }
+      ],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "September",
+      "id": 9,
+      "idNum": "nine",
+      "tabledata": [
+        { "Amount": "5425", "Month": "Room Nts", "Title": "Pick-up" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "Pick-up" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "Pick-up" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "Pick-up" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "Pick-up" },
+
+        { "Amount": "5425", "Month": "Room Nts", "Title": "BOB" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "BOB" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "BOB" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "BOB" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "BOB" },
+
+        { "Amount": "4836", "Month": "Room Nts", "Title": "BUDGET" },
+        { "Amount": "67.8", "Month": "OCC", "Title": "BUDGET" },
+        { "Amount": "845965", "Month": "Revenue", "Title": "BUDGET" },
+        { "Amount": "174.9", "Month": "ARR", "Title": "BUDGET" },
+        { "Amount": "118.1", "Month": "RevPAR", "Title": "BUDGET" },
+
+        { "Amount": "4347", "Month": "Room Nts", "Title": "LY" },
+        { "Amount": "61.0", "Month": "OCC", "Title": "LY" },
+        { "Amount": "733395", "Month": "Revenue", "Title": "LY" },
+        { "Amount": "168.7", "Month": "ARR", "Title": "LY" },
+        { "Amount": "102.9", "Month": "RevPAR", "Title": "LY" },
+
+        { "Amount": "5120", "Month": "Room Nts", "Title": "STLY" },
+        { "Amount": "71.0", "Month": "OCC", "Title": "STLY" },
+        { "Amount": "852333", "Month": "Revenue", "Title": "STLY" },
+        { "Amount": "166.6", "Month": "ARR", "Title": "STLY" },
+        { "Amount": "118.19", "Month": "RevPAR", "Title": "STLY" },
+
+        { "Amount": "15", "Month": "Room Nts", "Title": "Vs.BUD" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.BUD" },
+        { "Amount": "75965", "Month": "Revenue", "Title": "Vs.BUD" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.BUD" },
+        { "Amount": "8.6", "Month": "RevPAR", "Title": "Vs.BUD" },
+
+        { "Amount": "-25", "Month": "Room Nts", "Title": "Vs.LY" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.LY" },
+        { "Amount": "15965", "Month": "Revenue", "Title": "Vs.LY" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.LY" },
+        { "Amount": "3.6", "Month": "RevPAR", "Title": "Vs.LY" },
+
+        { "Amount": "55", "Month": "Room Nts", "Title": "Vs.STLY" },
+        { "Amount": "5.1", "Month": "OCC", "Title": "Vs.STLY" },
+        { "Amount": "118032", "Month": "Revenue", "Title": "Vs.STLY" },
+        { "Amount": "11.2", "Month": "ARR", "Title": "Vs.STLY" },
+        { "Amount": "17.9", "Month": "RevPAR", "Title": "Vs.STLY" }
+      ],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "Octobar",
+      "id": 10,
+      "idNum": "ten",
+      "tabledata": [
+        { "Amount": "5425", "Month": "Room Nts", "Title": "Pick-up" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "Pick-up" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "Pick-up" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "Pick-up" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "Pick-up" },
+
+        { "Amount": "5425", "Month": "Room Nts", "Title": "BOB" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "BOB" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "BOB" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "BOB" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "BOB" },
+
+        { "Amount": "4836", "Month": "Room Nts", "Title": "BUDGET" },
+        { "Amount": "67.8", "Month": "OCC", "Title": "BUDGET" },
+        { "Amount": "845965", "Month": "Revenue", "Title": "BUDGET" },
+        { "Amount": "174.9", "Month": "ARR", "Title": "BUDGET" },
+        { "Amount": "118.1", "Month": "RevPAR", "Title": "BUDGET" },
+
+        { "Amount": "4347", "Month": "Room Nts", "Title": "LY" },
+        { "Amount": "61.0", "Month": "OCC", "Title": "LY" },
+        { "Amount": "733395", "Month": "Revenue", "Title": "LY" },
+        { "Amount": "168.7", "Month": "ARR", "Title": "LY" },
+        { "Amount": "102.9", "Month": "RevPAR", "Title": "LY" },
+
+        { "Amount": "5120", "Month": "Room Nts", "Title": "STLY" },
+        { "Amount": "71.0", "Month": "OCC", "Title": "STLY" },
+        { "Amount": "852333", "Month": "Revenue", "Title": "STLY" },
+        { "Amount": "166.6", "Month": "ARR", "Title": "STLY" },
+        { "Amount": "118.19", "Month": "RevPAR", "Title": "STLY" },
+
+        { "Amount": "15", "Month": "Room Nts", "Title": "Vs.BUD" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.BUD" },
+        { "Amount": "75965", "Month": "Revenue", "Title": "Vs.BUD" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.BUD" },
+        { "Amount": "8.6", "Month": "RevPAR", "Title": "Vs.BUD" },
+
+        { "Amount": "-25", "Month": "Room Nts", "Title": "Vs.LY" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.LY" },
+        { "Amount": "15965", "Month": "Revenue", "Title": "Vs.LY" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.LY" },
+        { "Amount": "3.6", "Month": "RevPAR", "Title": "Vs.LY" },
+
+        { "Amount": "55", "Month": "Room Nts", "Title": "Vs.STLY" },
+        { "Amount": "5.1", "Month": "OCC", "Title": "Vs.STLY" },
+        { "Amount": "118032", "Month": "Revenue", "Title": "Vs.STLY" },
+        { "Amount": "11.2", "Month": "ARR", "Title": "Vs.STLY" },
+        { "Amount": "17.9", "Month": "RevPAR", "Title": "Vs.STLY" }
+      ],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "November",
+      "id": 11,
+      "idNum": "eleven",
+      "tabledata": [
+        { "Amount": "5425", "Month": "Room Nts", "Title": "Pick-up" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "Pick-up" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "Pick-up" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "Pick-up" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "Pick-up" },
+
+        { "Amount": "5425", "Month": "Room Nts", "Title": "BOB" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "BOB" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "BOB" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "BOB" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "BOB" },
+
+        { "Amount": "4836", "Month": "Room Nts", "Title": "BUDGET" },
+        { "Amount": "67.8", "Month": "OCC", "Title": "BUDGET" },
+        { "Amount": "845965", "Month": "Revenue", "Title": "BUDGET" },
+        { "Amount": "174.9", "Month": "ARR", "Title": "BUDGET" },
+        { "Amount": "118.1", "Month": "RevPAR", "Title": "BUDGET" },
+
+        { "Amount": "4347", "Month": "Room Nts", "Title": "LY" },
+        { "Amount": "61.0", "Month": "OCC", "Title": "LY" },
+        { "Amount": "733395", "Month": "Revenue", "Title": "LY" },
+        { "Amount": "168.7", "Month": "ARR", "Title": "LY" },
+        { "Amount": "102.9", "Month": "RevPAR", "Title": "LY" },
+
+        { "Amount": "5120", "Month": "Room Nts", "Title": "STLY" },
+        { "Amount": "71.0", "Month": "OCC", "Title": "STLY" },
+        { "Amount": "852333", "Month": "Revenue", "Title": "STLY" },
+        { "Amount": "166.6", "Month": "ARR", "Title": "STLY" },
+        { "Amount": "118.19", "Month": "RevPAR", "Title": "STLY" },
+
+        { "Amount": "15", "Month": "Room Nts", "Title": "Vs.BUD" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.BUD" },
+        { "Amount": "75965", "Month": "Revenue", "Title": "Vs.BUD" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.BUD" },
+        { "Amount": "8.6", "Month": "RevPAR", "Title": "Vs.BUD" },
+
+        { "Amount": "-25", "Month": "Room Nts", "Title": "Vs.LY" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.LY" },
+        { "Amount": "15965", "Month": "Revenue", "Title": "Vs.LY" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.LY" },
+        { "Amount": "3.6", "Month": "RevPAR", "Title": "Vs.LY" },
+
+        { "Amount": "55", "Month": "Room Nts", "Title": "Vs.STLY" },
+        { "Amount": "5.1", "Month": "OCC", "Title": "Vs.STLY" },
+        { "Amount": "118032", "Month": "Revenue", "Title": "Vs.STLY" },
+        { "Amount": "11.2", "Month": "ARR", "Title": "Vs.STLY" },
+        { "Amount": "17.9", "Month": "RevPAR", "Title": "Vs.STLY" }
+      ],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    },
+    {
+      "name": "December",
+      "id": 12,
+      "idNum": "twelve",
+      "tabledata": [
+        { "Amount": "5425", "Month": "Room Nts", "Title": "Pick-up" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "Pick-up" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "Pick-up" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "Pick-up" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "Pick-up" },
+
+        { "Amount": "5425", "Month": "Room Nts", "Title": "BOB" },
+        { "Amount": "76.1", "Month": "OCC", "Title": "BOB" },
+        { "Amount": "970365", "Month": "Revenue", "Title": "BOB" },
+        { "Amount": "178.9", "Month": "ARR", "Title": "BOB" },
+        { "Amount": "136.1", "Month": "RevPAR", "Title": "BOB" },
+
+        { "Amount": "4836", "Month": "Room Nts", "Title": "BUDGET" },
+        { "Amount": "67.8", "Month": "OCC", "Title": "BUDGET" },
+        { "Amount": "845965", "Month": "Revenue", "Title": "BUDGET" },
+        { "Amount": "174.9", "Month": "ARR", "Title": "BUDGET" },
+        { "Amount": "118.1", "Month": "RevPAR", "Title": "BUDGET" },
+
+        { "Amount": "4347", "Month": "Room Nts", "Title": "LY" },
+        { "Amount": "61.0", "Month": "OCC", "Title": "LY" },
+        { "Amount": "733395", "Month": "Revenue", "Title": "LY" },
+        { "Amount": "168.7", "Month": "ARR", "Title": "LY" },
+        { "Amount": "102.9", "Month": "RevPAR", "Title": "LY" },
+
+        { "Amount": "5120", "Month": "Room Nts", "Title": "STLY" },
+        { "Amount": "71.0", "Month": "OCC", "Title": "STLY" },
+        { "Amount": "852333", "Month": "Revenue", "Title": "STLY" },
+        { "Amount": "166.6", "Month": "ARR", "Title": "STLY" },
+        { "Amount": "118.19", "Month": "RevPAR", "Title": "STLY" },
+
+        { "Amount": "15", "Month": "Room Nts", "Title": "Vs.BUD" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.BUD" },
+        { "Amount": "75965", "Month": "Revenue", "Title": "Vs.BUD" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.BUD" },
+        { "Amount": "8.6", "Month": "RevPAR", "Title": "Vs.BUD" },
+
+        { "Amount": "-25", "Month": "Room Nts", "Title": "Vs.LY" },
+        { "Amount": "0.8", "Month": "OCC", "Title": "Vs.LY" },
+        { "Amount": "15965", "Month": "Revenue", "Title": "Vs.LY" },
+        { "Amount": "14.9", "Month": "ARR", "Title": "Vs.LY" },
+        { "Amount": "3.6", "Month": "RevPAR", "Title": "Vs.LY" },
+
+        { "Amount": "55", "Month": "Room Nts", "Title": "Vs.STLY" },
+        { "Amount": "5.1", "Month": "OCC", "Title": "Vs.STLY" },
+        { "Amount": "118032", "Month": "Revenue", "Title": "Vs.STLY" },
+        { "Amount": "11.2", "Month": "ARR", "Title": "Vs.STLY" },
+        { "Amount": "17.9", "Month": "RevPAR", "Title": "Vs.STLY" }
+      ],
+      "segmentData": [
+        {
+          "name": "Best Flexible Rate",
+          "RoomNts": 8,
+          "ADR": 100
+        },
+        {
+          "name": "Leisure Break",
+          "RoomNts": 17,
+          "ADR": 54
+        },
+        {
+          "name": "Corporate Contracted",
+          "RoomNts": 63,
+          "ADR": 26
+        },
+        {
+          "name": "Consortia",
+          "RoomNts": 38,
+          "ADR": 56
+        },
+        {
+          "name": "Promotions",
+          "RoomNts": 25,
+          "ADR": 56
+        },
+        {
+          "name": "Groups",
+          "RoomNts": 18,
+          "ADR": 46
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 18,
+          "ADR": 60
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 12,
+          "ADR": 59
+        }
+      ],
+      "OccData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ],
+      "DowData": [
+        {
+          "name": "Mon",
+          "RoomNts": 59,
+          "ADR": 100
+        },
+        {
+          "name": "Tue",
+          "RoomNts": 69,
+          "ADR": 54
+        },
+        {
+          "name": "Wed",
+          "RoomNts": 75,
+          "ADR": 26
+        },
+        {
+          "name": "Thu",
+          "RoomNts": 62,
+          "ADR": 56
+        },
+        {
+          "name": "Fri",
+          "RoomNts": 76,
+          "ADR": 56
+        },
+        {
+          "name": "Sat",
+          "RoomNts": 88,
+          "ADR": 46
+        },
+        {
+          "name": "Sun",
+          "RoomNts": 45,
+          "ADR": 60
+        },
+        {
+          "name": "Total",
+          "RoomNts": 68,
+          "ADR": 59
+        }
+      ]
+    }
+  ]
+}
+

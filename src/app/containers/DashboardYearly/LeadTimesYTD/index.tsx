@@ -5,17 +5,8 @@ import WidgetHeader from "../../../components/WidgetHeader";
 const PieChartComponent = React.lazy(() =>
   import("../../../components/Charts/PieChart")
 );
-const data = [
-  { x: "90+", y: 35, text: "35%" },
-  { x: "60+", y: 19, text: "19%" },
-  { x: "30+", y: 22, text: "22%" },
-  { x: "14+", y: 3, text: "3%" },
-  { x: "7+", y: 2, text: "2%" },
-  { x: "1+", y: 16, text: "16%" },
-  { x: "One Day", y: 3, text: "3%" },
-];
 
-export default (props: any) => {
+export default ({ graphdata = [] }: any) => {
   return (
     <Card>
       <WidgetHeader title={"Lead Times YTD"} activeToggle={"graph"} />
@@ -24,7 +15,7 @@ export default (props: any) => {
           <PieChartComponent
             id={"leadtimes"}
             height={"285px"}
-            data={data}
+            data={graphdata}
             chartSettings={{
               SeriesDirective: {
                 innerRadius: "40%",

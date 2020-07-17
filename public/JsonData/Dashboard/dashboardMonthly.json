@@ -1,0 +1,508 @@
+{
+    "data": [
+      { "name": "Business on the Books", "id": 1 , "graphdata":[] },
+      { "name": "Monthly Daily Occupacy & ADR", "id": 2 , "graphdata":[
+        {
+          "data": [
+            {
+              "name": "1",
+              "OCC": 50,
+              "ADR": 64
+            },
+            {
+              "name": "2",
+              "OCC": 88,
+              "ADR": 80
+            },
+            {
+              "name": "3",
+              "OCC": 74,
+              "ADR": 76
+            },
+            {
+              "name": "4",
+              "OCC": 50,
+              "ADR": 64
+            },
+            {
+              "name": "5",
+              "OCC": 88,
+              "ADR": 80
+            },
+            {
+              "name": "6",
+              "OCC": 74,
+              "ADR": 76
+            },
+            {
+              "name": "7",
+              "OCC": 50,
+              "ADR": 64
+            },
+            {
+              "name": "8",
+              "OCC": 88,
+              "ADR": 80
+            },
+            {
+              "name": "9",
+              "OCC": 74,
+              "ADR": 76
+            },
+            {
+              "name": "10",
+              "OCC": 50,
+              "ADR": 64
+            },
+            {
+              "name": "11",
+              "OCC": 88,
+              "ADR": 80
+            },
+            {
+              "name": "12",
+              "OCC": 74,
+              "ADR": 76
+            },
+            {
+              "name": "13",
+              "OCC": 50,
+              "ADR": 64
+            },
+            {
+              "name": "14",
+              "OCC": 88,
+              "ADR": 80
+            },
+            {
+              "name": "15",
+              "OCC": 74,
+              "ADR": 76
+            },
+            {
+              "name": "16",
+              "OCC": 50,
+              "ADR": 64
+            },
+            {
+              "name": "17",
+              "OCC": 88,
+              "ADR": 80
+            },
+            {
+              "name": "18",
+              "OCC": 74,
+              "ADR": 76
+            },
+            {
+              "name": "19",
+              "OCC": 50,
+              "ADR": 64
+            },
+            {
+              "name": "20",
+              "OCC": 88,
+              "ADR": 80
+            },
+            {
+              "name": "21",
+              "OCC": 74,
+              "ADR": 76
+            },
+            {
+              "name": "22",
+              "OCC": 74,
+              "ADR": 76
+            },
+            {
+              "name": "23",
+              "OCC": 50,
+              "ADR": 64
+            },
+            {
+              "name": "24",
+              "OCC": 88,
+              "ADR": 80
+            },
+            {
+              "name": "25",
+              "OCC": 74,
+              "ADR": 76
+            },
+            {
+              "name": "26",
+              "OCC": 50,
+              "ADR": 64
+            },
+            {
+              "name": "27",
+              "OCC": 88,
+              "ADR": 80
+            },
+            {
+              "name": "28",
+              "OCC": 74,
+              "ADR": 76
+            },
+            {
+              "name": "29",
+              "OCC": 50,
+              "ADR": 64
+            },
+            {
+              "name": "30",
+              "OCC": 88,
+              "ADR": 80
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "name": "WE",
+              "OCC": 90,
+              "ADR": 64
+            },
+            {
+              "name": "WD",
+              "OCC": 86,
+              "ADR": 80
+            },
+            {
+              "name": "Total",
+              "OCC": 88,
+              "ADR": 76
+            }
+          ]
+        }
+      ]},
+      { "name": "Daily Occupacy Vs. BUD Vs. LY", "id": 3 , "graphdata":[
+        {
+          "name": "1",
+          "OCC": 50,
+          "Budget": 64,
+          "LY": 134
+        },
+        {
+          "name": "2",
+          "OCC": 88,
+          "Budget": 80,
+          "LY": 157
+        },
+        {
+          "name": "3",
+          "OCC": 74,
+          "Budget": 76,
+          "LY": 257
+        },
+        {
+          "name": "4",
+          "OCC": 50,
+          "Budget": 64,
+          "LY": 134
+        },
+        {
+          "name": "5",
+          "OCC": 88,
+          "Budget": 80,
+          "LY": 157
+        },
+        {
+          "name": "6",
+          "OCC": 74,
+          "Budget": 76,
+          "LY": 257
+        },
+        {
+          "name": "7",
+          "OCC": 50,
+          "Budget": 64,
+          "LY": 134
+        },
+        {
+          "name": "8",
+          "OCC": 88,
+          "Budget": 80,
+          "LY": 157
+        },
+        {
+          "name": "9",
+          "OCC": 74,
+          "Budget": 76,
+          "LY": 257
+        },
+        {
+          "name": "10",
+          "OCC": 50,
+          "Budget": 64,
+          "LY": 134
+        },
+        {
+          "name": "11",
+          "OCC": 88,
+          "Budget": 80,
+          "LY": 157
+        },
+        {
+          "name": "12",
+          "OCC": 74,
+          "Budget": 76,
+          "LY": 257
+        },
+        {
+          "name": "13",
+          "OCC": 50,
+          "Budget": 64,
+          "LY": 134
+        },
+        {
+          "name": "14",
+          "OCC": 88,
+          "Budget": 80,
+          "LY": 157
+        },
+        {
+          "name": "15",
+          "OCC": 74,
+          "Budget": 76,
+          "LY": 257
+        },
+        {
+          "name": "16",
+          "OCC": 50,
+          "Budget": 64,
+          "LY": 134
+        },
+        {
+          "name": "17",
+          "OCC": 88,
+          "Budget": 80,
+          "LY": 157
+        },
+        {
+          "name": "18",
+          "OCC": 74,
+          "Budget": 76,
+          "LY": 257
+        },
+        {
+          "name": "19",
+          "OCC": 50,
+          "Budget": 64,
+          "LY": 134
+        },
+        {
+          "name": "20",
+          "OCC": 88,
+          "Budget": 80,
+          "LY": 157
+        },
+        {
+          "name": "21",
+          "OCC": 74,
+          "Budget": 76,
+          "LY": 257
+        },
+        {
+          "name": "22",
+          "OCC": 74,
+          "Budget": 76,
+          "LY": 257
+        },
+        {
+          "name": "23",
+          "OCC": 50,
+          "Budget": 64,
+          "LY": 134
+        },
+        {
+          "name": "24",
+          "OCC": 88,
+          "Budget": 80,
+          "LY": 157
+        },
+        {
+          "name": "25",
+          "OCC": 74,
+          "Budget": 76,
+          "LY": 257
+        },
+        {
+          "name": "26",
+          "OCC": 50,
+          "Budget": 64,
+          "LY": 134
+        },
+        {
+          "name": "27",
+          "OCC": 88,
+          "Budget": 80,
+          "LY": 157
+        },
+        {
+          "name": "28",
+          "OCC": 74,
+          "Budget": 76,
+          "LY": 257
+        },
+        {
+          "name": "29",
+          "OCC": 50,
+          "Budget": 64,
+          "LY": 134
+        },
+        {
+          "name": "30",
+          "OCC": 88,
+          "Budget": 80,
+          "LY": 157
+        },
+        {
+          "name": "Total",
+          "OCC": 74,
+          "Budget": 76,
+          "LY": 257
+        }
+      ]},
+      { "name": "Rate Code Statistics", "id": 4 , "graphdata":[
+        {
+          "name": "BAR",
+          "RoomNts": 250,
+          "ARR": 199
+        },
+        {
+          "name": "PRM",
+          "RoomNts": 210,
+          "ARR": 144
+        },
+        {
+          "name": "COR1",
+          "RoomNts": 100,
+          "ARR": 168
+        },
+        {
+          "name": "COR2",
+          "RoomNts": 70,
+          "ARR": 154
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 165,
+          "ARR": 149
+        },
+        {
+          "name": "FLS",
+          "RoomNts": 50,
+          "ARR": 138
+        },
+        {
+          "name": "GRP",
+          "RoomNts": 169,
+          "ARR": 166
+        }
+      ]},
+      { "name": "Market Segmentation", "id": 5 , "graphdata":[
+        {
+          "name": "BAR",
+          "RMS2018": 50,
+          "RMS2017": 64,
+          "ADR2018": 185,
+          "ADR2017": 195
+        },
+        {
+          "name": "MTG",
+          "RMS2018": 88,
+          "RMS2017": 80,
+          "ADR2018": 202,
+          "ADR2017": 207
+        },
+        {
+          "name": "COR",
+          "RMS2018": 74,
+          "RMS2017": 76,
+          "ADR2018": 184,
+          "ADR2017": 194
+        },
+        {
+          "name": "CON",
+          "RMS2018": 68,
+          "RMS2017": 73,
+          "ADR2018": 176,
+          "ADR2017": 196
+        },
+        {
+          "name": "GRP",
+          "RMS2018": 67,
+          "RMS2017": 64,
+          "ADR2018": 155,
+          "ADR2017": 156
+        },
+        {
+          "name": "FIT",
+          "RMS2018": 74,
+          "RMS2017": 76,
+          "ADR2018": 143,
+          "ADR2017": 150
+        },
+        {
+          "name": "DIS",
+          "RMS2018": 63,
+          "RMS2017": 43,
+          "ADR2018": 157,
+          "ADR2017": 172
+        }
+      ]},
+      { "name": "Room Type Statistics", "id": 6 , "graphdata":[
+        {
+          "name": "0BRM",
+          "OCCTY": 50,
+          "OCCLY": 64,
+          "ADRLY": 134,
+          "ADRTY": 111
+        },
+        {
+          "name": "1BRM",
+          "OCCTY": 88,
+          "OCCLY": 80,
+          "ADRLY": 157,
+          "ADRTY": 169
+        },
+        {
+          "name": "2BRM",
+          "OCCTY": 74,
+          "OCCLY": 76,
+          "ADRLY": 257,
+          "ADRTY": 231
+        }
+      ]},
+      { "name": "Booking Channel", "id": 7 , "graphdata":[
+        {
+          "name": "Direct",
+          "RoomNts": 180,
+          "ARR": 228
+        },
+        {
+          "name": "GDS",
+          "RoomNts": 110,
+          "ARR": 203
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 200,
+          "ARR": 158
+        },
+        {
+          "name": "Brand Website",
+          "RoomNts": 120,
+          "ARR": 161
+        },
+        {
+          "name": "Corporate Website",
+          "RoomNts": 50,
+          "ARR": 198
+        }
+      ]}
+      
+    ]
+  }
+  

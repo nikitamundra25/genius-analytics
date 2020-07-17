@@ -6,46 +6,37 @@ const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
 
-const RTGBarChart = [
-  {
-    id: "r1",
-    title: "RGI",
-    color: "#2e75b7",
-    data: [
-      { x: "My RevPAR", y: 115.0 },
-      { x: "RevPAR Compact", y: 96.0 },
-      { x: "RGI", y: 119.8 },
-    ],
-  },
-  {
-    id: "r2",
-    title: "MPI",
-    color: "#5398d9",
-    data: [
-      { x: "My OCC", y: 65.0 },
-      { x: "OCC Compact", y: 68.0 },
-      { x: "MPI", y: 96.8 },
-    ],
-  },
-  {
-    id: "r3",
-    title: "ARI",
-    color: "#1f4e79",
-    data: [
-      { x: "My ARR", y: 175.0 },
-      { x: "ARR Compact", y: 140.0 },
-      { x: "ARI", y: 124.8 },
-    ],
-  },
-];
 
-export default (props: any) => {
+export default ({ graphdata = [] }:any) => {
+
+  const RTGBarChart = [
+    {
+      id: "r1",
+      title: "RGI",
+      color: "#2e75b7",
+      data:graphdata[0].data
+    },
+    {
+      id: "r2",
+      title: "MPI",
+      color: "#5398d9",
+      data: graphdata[1].data
+    },
+    {
+      id: "r3",
+      title: "ARI",
+      color: "#1f4e79",
+      data: graphdata[2].data
+    },
+  ];
+
   return (
     <Card>
       <WidgetHeader title={"MTD RGI Performance"} />
       <Card.Body>
         <Row>
-          {RTGBarChart.map((key: any, index: number) => {
+          { RTGBarChart && RTGBarChart.length ? 
+          RTGBarChart.map((key: any, index: number) => {
             return (
               <Col key={index} sm={4} md={4}>
                 <React.Suspense fallback={<Loader />}>
@@ -76,7 +67,7 @@ export default (props: any) => {
                 </React.Suspense>
               </Col>
             );
-          })}
+          }) :null }
         </Row>
       </Card.Body>
     </Card>
