@@ -1,0 +1,69 @@
+.business-table{
+  border-collapse: separate;
+  th, td {
+    padding: 3px 2px;
+    border: 0px;
+    font-size:12px;
+    text-align:center;
+    vertical-align: middle;
+   }
+  thead{
+    th{
+      border:0px;
+    }
+    
+  }
+  .variance-col{
+    background: #6ea0b7;
+    color:#fff;
+    text-align:center;
+    font-weight: 600;
+  }
+  .head-col{
+    background: #0082b3;
+    text-align:center;
+    color:#fff;
+    font-weight: 500;
+    padding:12px 5px;
+  }
+  .date-col {
+    background: #2f74b5;
+    color:#fff;
+    &.weekend-bg{
+      background:#d0cecf;
+      color:#000;
+    }
+    .date-div {
+      display: flex;
+      flex-flow: column;
+      font-size: 12px;
+      align-items: center;
+      justify-content: center;
+      min-width: 43px;
+    }
+  }
+  
+  .title-col{
+    background: #6ea0b7;
+    color:#fff;
+    text-align:left;
+    font-weight: 600;
+    &.bg-1{
+      background:#203763;
+    }
+  }
+  .total-col{
+    color:#fff;
+    background: #2f74b5;text-align:right;
+    min-width:80px;
+  }
+  .content-col{
+    background: #e1eef4;
+    color:#000;
+    text-align:center;
+    font-weight: 500;
+    &.bg-2{
+      background: #f7f6f2;
+    }
+  }
+}

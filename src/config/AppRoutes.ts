@@ -9,6 +9,7 @@ export const AppRoutes: IAppRoutes = {
   DASHBOARDYEARLY: "/dashboard/yearly",
   PICKUPSUMMARY: "/pickup",
   PICKUPDETAIL: "/pickup/detail",
+  PICKUPBOB: "/pickup/bob",
   MY_PROFILE: "/my-profile",
   USER: "#",
   ADD_USER: "/user/add",
