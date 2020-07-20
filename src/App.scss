@@ -507,6 +507,37 @@ body {
     z-index: 1;
   }
 }
+.picker-modal-header{
+  padding: 0px;
+  border: 0px;
+  .close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: #ddd;
+    padding: 0px;
+    width: 30px;
+    height: 30px;
+    float: none;
+    text-shadow: none;
+    opacity: 1 !important;
+    font-size: 23px;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    span{
+      top: -2px;
+      position: relative;
+      display: inline-block;
+    }
+    &:hover{
+      color:$white;
+      background: $theme-color;
+    }
+  }
+}
    
 }
 html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .main, html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .app-footer, html:not([dir="rtl"]) .sidebar-show.sidebar-fixed.sidebar-minimized .main, html:not([dir="rtl"]) .sidebar-show.sidebar-fixed.sidebar-minimized .app-footer {

@@ -35,13 +35,21 @@ const SAMPLE_CSS = `
     }
 
     .e-pivotview .e-headercell {
-      background-color: #538dd6 !important;
+      background-color: #0f243f !important;
     }
-    .e-pivotview  .e-headertext {
+    .e-pivotview  .e-headertext,  .e-pivotview .e-rowsheader .e-cellvalue {
       color:#fff !important;
       font-size:12px !important;
       font-weight: 500;
     }
+    .e-pivotview .e-grid .e-rowcell , .e-grid .e-headercelldiv {
+      text-align: center;
+  }
+    
+    .e-pivotview .e-grid .e-rowsheader {
+      background-color: #0f243f !important;
+      text-align: left;
+  }
 
      .e-pivotview .e-gtot  {
     background-color: #16365d !important;
