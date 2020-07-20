@@ -3,4 +3,5 @@ export interface IMonthPickerProps  {
     startDate: Date 
     handleClose : () => void;
     handleChange:(date:any) => void;
+    isYearSelection?:boolean
 }
