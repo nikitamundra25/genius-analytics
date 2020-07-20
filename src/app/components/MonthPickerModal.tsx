@@ -6,7 +6,7 @@ import { IMonthPickerProps } from "../../interfaces";
 
 const MonthPickerModal = (props: IMonthPickerProps) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const { show,startDate, handleClose, handleChange } = props;
+  const { show,startDate, handleClose, handleChange /* isYearSelection */} = props;
 
   // Set date when modal open
   useEffect(() => {
@@ -31,9 +31,9 @@ const MonthPickerModal = (props: IMonthPickerProps) => {
           <DatePicker
             selected={selectedDate}
             onChange={(date: any) => ondateChange(date)}
-            dateFormat="MM/yyyy"
-            showMonthYearPicker
-            // showYearPicker
+            dateFormat= "MM/yyyy"  /* {isYearSelection ? "yyyy"  : "MM/yyyy" } */
+            showMonthYearPicker /* = {!isYearSelection ? true : false} */
+            // showYearPicker = {isYearSelection ? true : false}
             inline
             className="custom-datepicker"
           />

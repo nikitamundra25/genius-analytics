@@ -16,9 +16,7 @@ const TopBar = (props: any) => {
   });
 
   const [show, setShow] = useState(false);
- 
-
-   
+  const [isYearSelection, setIsYearSelection] = useState(false);
 
   useEffect(() => {
     const yearOptions = [];
@@ -67,29 +65,37 @@ const TopBar = (props: any) => {
     });
   };
 
-
- const handleDatePicker = (date: Date | any) => {
+  const handleDatePicker = (date: Date | any) => {
     let year: number = date.getFullYear();
     let month: number = date.getMonth();
     setState({ startDate: date, activeYear: year, activeMonth: month });
-    setShow(false)
+    setShow(false);
   };
-  
-  const handleShow = () => setShow(true);
+
+  const handleShow = (str:string) => {
+    setShow(true)
+    if(str === "year"){
+      setIsYearSelection(true)
+    }else{
+      setIsYearSelection(false)
+    }
+  };
   const { startDate } = state;
 
   return (
     <>
       <div className="main-navbar">
         <div className="navbar-nav-item">
-          <div className="year-nav" >
+          <div className="year-nav">
             <span
               className="cursor-pointer"
               onClick={() => handleMonthNav("previous")}
             >
               <i className="icon-arrow-left "></i>
             </span>
-            <span className="mx-3" onClick={handleShow}>{moment(startDate).format("MMMM")} </span>
+            <span className="mx-3" onClick={()=>handleShow("") }>
+              {moment(startDate).format("MMMM")}{" "}
+            </span>
             <span
               className="cursor-pointer"
               onClick={() => handleMonthNav("next")}
@@ -99,7 +105,9 @@ const TopBar = (props: any) => {
           </div>
         </div>
         <div className="navbar-nav-item">
-          <span className="cursor-pointer" onClick={handleShow}>{moment(startDate).format("YYYY")} </span>
+          <span className="cursor-pointer" onClick={()=>handleShow("year")}>
+            {moment(startDate).format("YYYY")}{" "}
+          </span>
           {/* <DropDownListComponent
             id="year"
             dataSource={options}
@@ -133,9 +141,8 @@ const TopBar = (props: any) => {
         show={show}
         startDate={startDate}
         handleClose={() => setShow(false)}
-        handleChange={(date: any) => 
-          handleDatePicker(date)
-         }
+        handleChange={(date: any) => handleDatePicker(date)}
+        isYearSelection={isYearSelection}
       />
     </>
   );
