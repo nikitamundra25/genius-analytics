@@ -15,6 +15,11 @@ const PickupDetail = React.lazy(() =>
   import("../app/containers/PickupDetail")
 );
 
+const PickupBOB = React.lazy(() =>
+  import("../app/containers/PickupBOB")
+);
+
+
 const ComingSoon = React.lazy(() => import("../app/containers/ComingSoon"));
 
 const routes = [
@@ -53,6 +58,12 @@ const routes = [
     path: AppRoutes.PICKUPDETAIL,
     name: "Pickup Detail",
     component: PickupDetail,
+    exact: true,
+  },
+  {
+    path: AppRoutes.PICKUPBOB,
+    name: "Pickup BOB",
+    component: PickupBOB,
     exact: true,
   },
 ];
