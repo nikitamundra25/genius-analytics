@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import { AppRoutes } from "../../../config";
-import MonthPickerModal from "../../components/MonthPickerModal";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -17,8 +16,6 @@ const TopBar = (props: any) => {
     startDate: new Date(),
   });
 
-  const [show, setShow] = useState(false);
-  const [isYearSelection, setIsYearSelection] = useState(false);
 
   useEffect(() => {
     const yearOptions = [];
@@ -67,34 +64,17 @@ const TopBar = (props: any) => {
     });
   };
 
-  const handleDatePicker = (date: Date | any) => {
-    let year: number = date.getFullYear();
-    let month: number = date.getMonth();
-    setState({ startDate: date, activeYear: year, activeMonth: month });
-    setShow(false);
-  };
-
-  const handleShow = (str:string) => {
-    setShow(true)
-    if(str === "year"){
-      setIsYearSelection(true)
-    }else{
-      setIsYearSelection(false)
-    }
-  };
-  const { startDate } = state;
-
-  const [selectedDate, setSelectedDate] = useState(new Date());
-  // Set date when modal open
-  useEffect(() => {
-    setSelectedDate(startDate)
-    // eslint-disable-next-line
-  }, [show]);
 
 // To change Date
   const ondateChange = (date: Date) => {
-    setSelectedDate(date)
+    let year: number = date.getFullYear();
+    let month: number = date.getMonth();
+    setState({ 
+      activeYear: year, activeMonth: month ,
+      startDate: date
+    });
   };
+  const { startDate } = state;
 
   return (
     <>
@@ -111,11 +91,13 @@ const TopBar = (props: any) => {
               {moment(startDate).format("MMMM")}{" "}
             </span> */}
             <DatePicker
-              selected={selectedDate}
+              selected={startDate}
               onChange={(date: any) => ondateChange(date)}
               showMonthYearPicker
               dateFormat="MMMM"
               className="custom-datepicker cursor-pointer"
+              // minDate={new Date("2010/01/01")}
+              // maxDate={new Date()}
             />
             <span
               className="cursor-pointer ml-2"
@@ -130,11 +112,13 @@ const TopBar = (props: any) => {
             {moment(startDate).format("YYYY")}{" "}
           </span> */}
           <DatePicker
-            selected={selectedDate}
+            selected={startDate}
             onChange={(date: any) => ondateChange(date)}
             showYearPicker
             dateFormat="yyyy"
             className="custom-datepicker cursor-pointer"
+            // minDate={new Date("2010/01/01")}
+            // maxDate={new Date()}
           />
           
           {/* <DropDownListComponent
@@ -166,13 +150,6 @@ const TopBar = (props: any) => {
           </Dropdown>
         </div>
       </div>
-      <MonthPickerModal
-        show={show}
-        startDate={startDate}
-        handleClose={() => setShow(false)}
-        handleChange={(date: any) => handleDatePicker(date)}
-        isYearSelection={isYearSelection}
-      />
     </>
   );
 };
