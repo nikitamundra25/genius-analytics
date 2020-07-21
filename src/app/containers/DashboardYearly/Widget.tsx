@@ -1,6 +1,6 @@
 import React from "react";
 import { Row } from "react-bootstrap";
-import CumulativeTable from "./Cumulative";
+import CumulativeTable from "./CumulativeTable";
 import MonthlyOCCADR from "./OCCADR/Monthly";
 import QuarterlyOCCADR from "./OCCADR/Quarterly";
 import RoomTypesYTD from "./RoomTypesYTD";

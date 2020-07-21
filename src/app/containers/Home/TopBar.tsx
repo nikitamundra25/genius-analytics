@@ -3,7 +3,7 @@ import { Dropdown } from "react-bootstrap";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import { AppRoutes } from "../../../config";
-import MonthPickerModal from "../../components/MonthPickerModal";
+// import MonthPickerModal from "../../components/MonthPickerModal";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -18,7 +18,7 @@ const TopBar = (props: any) => {
   });
 
   const [show, setShow] = useState(false);
-  const [isYearSelection, setIsYearSelection] = useState(false);
+  //const [isYearSelection, setIsYearSelection] = useState(false);
 
   useEffect(() => {
     const yearOptions = [];
@@ -74,14 +74,14 @@ const TopBar = (props: any) => {
     setShow(false);
   };
 
-  const handleShow = (str:string) => {
-    setShow(true)
-    if(str === "year"){
-      setIsYearSelection(true)
-    }else{
-      setIsYearSelection(false)
-    }
-  };
+  // const handleShow = (str:string) => {
+  //   setShow(true)
+  //   if(str === "year"){
+  //     setIsYearSelection(true)
+  //   }else{
+  //     setIsYearSelection(false)
+  //   }
+  // };
   const { startDate } = state;
 
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -166,13 +166,13 @@ const TopBar = (props: any) => {
           </Dropdown>
         </div>
       </div>
-      <MonthPickerModal
+      {/* <MonthPickerModal
         show={show}
         startDate={startDate}
         handleClose={() => setShow(false)}
         handleChange={(date: any) => handleDatePicker(date)}
         isYearSelection={isYearSelection}
-      />
+      /> */}
     </>
   );
 };
