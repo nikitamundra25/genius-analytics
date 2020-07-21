@@ -13,6 +13,8 @@ const PickupSummary:FunctionComponent = () => {
   const dispatch = useDispatch()
   const PickupReducer = useSelector((state:IRootState) => state.PickupReducer)
   
+ 
+
   useEffect(() => {
     dispatch(PickupSummaryRequest())
     // eslint-disable-next-line

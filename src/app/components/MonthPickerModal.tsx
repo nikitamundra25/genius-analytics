@@ -6,7 +6,7 @@ import { IMonthPickerProps } from "../../interfaces";
 
 const MonthPickerModal = (props: IMonthPickerProps) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const { show,startDate, handleClose, handleChange /* isYearSelection */} = props;
+  const { show,startDate, handleClose, handleChange ,isYearSelection} = props;
 
   // Set date when modal open
   useEffect(() => {
@@ -31,11 +31,13 @@ const MonthPickerModal = (props: IMonthPickerProps) => {
           <DatePicker
             selected={selectedDate}
             onChange={(date: any) => ondateChange(date)}
-            dateFormat= "MM/yyyy"  /* {isYearSelection ? "yyyy"  : "MM/yyyy" } */
-            showMonthYearPicker /* = {!isYearSelection ? true : false} */
-            // showYearPicker = {isYearSelection ? true : false}
+            dateFormat= {isYearSelection ? "yyyy"  : "MM/yyyy" }
+            showMonthYearPicker = {!isYearSelection ? true : false}
+            showYearPicker = {isYearSelection ? true : false}
             inline
             className="custom-datepicker"
+            minDate={new Date("2010/01/01")}
+            maxDate={new Date()}
           />
           <div className="d-flex justify-content-end mt-2">
             <Button variant="secondary" className="mr-2" onClick={handleClose}>
