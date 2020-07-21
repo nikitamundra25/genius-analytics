@@ -1,21 +1,27 @@
 import React, { useState } from "react";
-import MonthPickerModal from "../../components/MonthPickerModal";
-
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const TopBar = () => {
   const [startDate, setStartDate] = useState(new Date());
-  const [show, setShow] = useState(false);
-  const handleShow = () => setShow(true);
+  
+  
   return (
     <>
       <div className='main-navbar'>
         <div className='navbar-nav-item'>
-          <div className='year-nav' onClick={handleShow}>
-            <span className='cursor-pointer'>
+          <div className='year-nav' >
+            <span className='cursor-pointer mr-2'>
               <i className='icon-arrow-left '></i>
             </span>
-            <span className='mx-3'>2018</span>
-            <span className='cursor-pointer'>
+              <DatePicker
+              selected={startDate}
+              onChange={(date: any) => setStartDate(date)}
+              showYearPicker
+              dateFormat="yyyy"
+              className="custom-datepicker cursor-pointer"
+            />
+            <span className='cursor-pointer ml-2'>
               <i className='icon-arrow-right '></i>
             </span>
           </div>
@@ -32,12 +38,7 @@ const TopBar = () => {
                 >BOB</div>
         </div>
       </div>
-      <MonthPickerModal 
-        show={show}
-        startDate={startDate}
-        handleClose={() => setShow(false)}
-        handleChange={(date:any) => setStartDate(date)}
-        />
+     
     </>
   );
 };

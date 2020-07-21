@@ -99,7 +99,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
       <Card.Body>
         <Row>
           <Col xs={12} md={9}>
-            <React.Suspense fallback={<Loader />}>
+            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
               <MixedCharts
                 id={"occChart1"}
                 chartSettings={{
@@ -126,7 +126,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
             </React.Suspense>
           </Col>
           <Col xs={12} md={3}>
-            <React.Suspense fallback={<Loader />}>
+            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
               <MixedCharts
                 id={"occChart2"}
                 chartSettings={{

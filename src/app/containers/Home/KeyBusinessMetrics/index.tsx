@@ -46,8 +46,9 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
         barChartBusinessMetrics.map((key: any, index: number) => {
           return (
             <Col key={index} sm={3} md={3}>
-              <div className="w-100">
-              <React.Suspense fallback={<Loader />}>
+              
+              <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+             
                 <BarChartComponent
                   chartSettings={{
                     primaryXAxis: {
@@ -71,7 +72,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
                   {...key}
                 />
               </React.Suspense>
-              </div>
+              
             </Col>
           );
         }): null}

@@ -70,7 +70,7 @@ const SAMPLE_CSS = `
     <Card>
       <WidgetHeader title={"Business on the Books"} activeToggle={"grid"} />
       <Card.Body>
-        <React.Suspense fallback={<Loader />}>
+        <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
         <style>{SAMPLE_CSS}</style>
           <PivotTableComponent
           id={`BOB`}

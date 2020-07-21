@@ -4,6 +4,8 @@ import moment from "moment";
 import { Link } from "react-router-dom";
 import { AppRoutes } from "../../../config";
 import MonthPickerModal from "../../components/MonthPickerModal";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 
 const TopBar = (props: any) => {
@@ -82,22 +84,41 @@ const TopBar = (props: any) => {
   };
   const { startDate } = state;
 
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  // Set date when modal open
+  useEffect(() => {
+    setSelectedDate(startDate)
+    // eslint-disable-next-line
+  }, [show]);
+
+// To change Date
+  const ondateChange = (date: Date) => {
+    setSelectedDate(date)
+  };
+
   return (
     <>
       <div className="main-navbar">
         <div className="navbar-nav-item">
           <div className="year-nav">
             <span
-              className="cursor-pointer"
+              className="cursor-pointer mr-2"
               onClick={() => handleMonthNav("previous")}
             >
               <i className="icon-arrow-left "></i>
             </span>
-            <span className="mx-3" onClick={()=>handleShow("") }>
+            {/* <span className="mx-3" onClick={()=>handleShow("") }>
               {moment(startDate).format("MMMM")}{" "}
-            </span>
+            </span> */}
+            <DatePicker
+              selected={selectedDate}
+              onChange={(date: any) => ondateChange(date)}
+              showMonthYearPicker
+              dateFormat="MMMM"
+              className="custom-datepicker cursor-pointer"
+            />
             <span
-              className="cursor-pointer"
+              className="cursor-pointer ml-2"
               onClick={() => handleMonthNav("next")}
             >
               <i className="icon-arrow-right "></i>
@@ -105,9 +126,17 @@ const TopBar = (props: any) => {
           </div>
         </div>
         <div className="navbar-nav-item">
-          <span className="cursor-pointer" onClick={()=>handleShow("year")}>
+          {/* <span className="cursor-pointer" onClick={()=>handleShow("year")}>
             {moment(startDate).format("YYYY")}{" "}
-          </span>
+          </span> */}
+          <DatePicker
+            selected={selectedDate}
+            onChange={(date: any) => ondateChange(date)}
+            showYearPicker
+            dateFormat="yyyy"
+            className="custom-datepicker cursor-pointer"
+          />
+          
           {/* <DropDownListComponent
             id="year"
             dataSource={options}

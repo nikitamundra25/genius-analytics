@@ -106,7 +106,7 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
         activeToggle={"graph"}
       />
         {/* <Card.Body> */}
-          <React.Suspense fallback={<Loader />}>
+          <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts
               id={"MarketChart"}
               chartSettings={{

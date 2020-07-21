@@ -11,7 +11,7 @@ export default ({ graphdata = [] }: any) => {
     <Card>
       <WidgetHeader title={"Lead Times YTD"} activeToggle={"graph"} />
       <Card.Body>
-        <React.Suspense fallback={<Loader />}>
+        <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
           <PieChartComponent
             id={"leadtimes"}
             height={"285px"}
