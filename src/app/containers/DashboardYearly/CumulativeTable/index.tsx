@@ -1,32 +1,36 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import TableData  from './Table.json';
 import Loader from "../../../components/Loader/Loader";
-import WidgetHeader from "../../../components/WidgetHeader";
-const PivotTableComponent = React.lazy(() =>
-  import("../../../components/Tables/PivotTable")
-);
+import { PivotViewComponent } from '@syncfusion/ej2-react-pivotview';
 
 // let data = localData.data;
+
+let dataSourceSettings = {
+  enableSorting: false,
+  columns: [{ name: 'Month' }, { name: 'col-subtitle' }],
+  valueSortSettings: { headerDelimiter: ' - ' },
+  values: [ { name: 'Amount', caption: 'Amount' }],
+  dataSource: TableData.pivotData,
+  rows: [{ name: 'Title' }],
+  formatSettings: [{ name: 'Amount', format: '' }],
+  expandAll: true,
+  showRowGrandTotals : false,
+  showColumnSubTotals : false,
+  filters: []
+  
+};
+
 
 
 
 // let toolbarOptions = ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
 //             'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'ConditionalFormatting', 'NumberFormatting', 'FieldList'];
-const BOB = ({graphdata=[]}:any) => {
-
-  let dataSourceSettings = {
-    enableSorting: false,
-    columns: [{ name: 'Title' }],
-    valueSortSettings: { headerDelimiter: ' - ' },
-    values: [ { name: 'Amount', caption: 'Amount' }],
-    dataSource: graphdata,
-    rows: [{ name: 'Month' }],
-    formatSettings: [{ name: 'Amount', format: '' }],
-    expandAll: false,
-    showGrandTotals: false,
-    filters: []
-  };
-
+const CumulativeTable = (props:any) => {
+  const cellTemplate = (props:any) => {
+    // console.log("hello chart");
+    return (<span className="tempwrap e-pivot-trend-neutral pv-icons"></span>);
+  }
 const SAMPLE_CSS = `
 .e-pivotview{
   font-size:12px !important;
@@ -37,9 +41,9 @@ const SAMPLE_CSS = `
     }
 
     .e-pivotview .e-headercell {
-      background-color: #007aab !important;
+      background-color: #0074a7 !important;
     }
-    .e-pivotview  .e-headertext,  .e-pivotview .e-rowsheader .e-cellvalue {
+    .e-pivotview  .e-headertext,  .e-pivotview .e-rowsheader .e-cellvalue, .e-pivotview .e-stackedheadercelldiv {
       color:#fff !important;
       font-size:12px !important;
       font-weight: 500;
@@ -49,9 +53,10 @@ const SAMPLE_CSS = `
   }
     
     .e-pivotview .e-grid .e-rowsheader {
-      background-color: #6ea0b7 !important;
+      background-color: #0074a7 !important;
       text-align: left;
   }
+  
 
      .e-pivotview .e-gtot  {
     background-color: #16365d !important;
@@ -67,33 +72,34 @@ const SAMPLE_CSS = `
   `;
   return (
     <>
+
     <Card>
-      <WidgetHeader title={"Business on the Books"} activeToggle={"grid"} />
       <Card.Body>
         <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
         <style>{SAMPLE_CSS}</style>
-          <PivotTableComponent
+        <PivotViewComponent 
+          id='PivotView' 
+          dataSourceSettings={dataSourceSettings} 
+          width={'100%'} 
+          height={'300'} 
+          gridSettings={{ columnWidth: 80,  allowResizing: true }}
+          cellTemplate={cellTemplate}
+             
+                        
+                        >
+        </PivotViewComponent>
+          {/* <PivotTableComponent
           id={`BOB`}
           dataSourceSettings={dataSourceSettings}
           width={'100%'} 
-          height={'300'}
+          height={'350'}
           TableSettings={{
               TableComponent: {
-                gridSettings: {columnWidth: 85 , allowResizing: true },
-                
-                // showFieldList: true,
-                // allowExcelExport: true ,
-                // allowConditionalFormatting: true ,
-                // allowNumberFormatting:true,
-                // allowPdfExport:true ,
-                // showToolbar:true,
-                // allowCalculatedField:true ,
-                // displayOption:{ view: 'Both' } ,
-                // toolbar:toolbarOptions ,
+                gridSettings: {columnWidth: 130 , allowResizing: true },
               },
           }}
           
-          />
+          /> */}
         </React.Suspense>
       </Card.Body>
     </Card>
@@ -104,5 +110,6 @@ const SAMPLE_CSS = `
   );
 };
 
-export default BOB;
+export default CumulativeTable;
+
 

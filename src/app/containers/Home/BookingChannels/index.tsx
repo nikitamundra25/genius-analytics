@@ -12,7 +12,7 @@ export default ({ graphdata = [] }:any) => {
     <Card>
       <WidgetHeader title={"Booking Channel Mix"} activeToggle={"graph"} />
       <Card.Body>
-        <React.Suspense fallback={<Loader />}>
+        <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
           <PieChartComponent
             id={"booking-mix"}
             height={"280px"}

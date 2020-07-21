@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import { AppRoutes } from "../../../config";
-import MonthPickerModal from "../../components/MonthPickerModal";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 
 const TopBar = (props: any) => {
@@ -15,8 +16,6 @@ const TopBar = (props: any) => {
     startDate: new Date(),
   });
 
-  const [show, setShow] = useState(false);
-  const [isYearSelection, setIsYearSelection] = useState(false);
 
   useEffect(() => {
     const yearOptions = [];
@@ -65,20 +64,15 @@ const TopBar = (props: any) => {
     });
   };
 
-  const handleDatePicker = (date: Date | any) => {
+
+// To change Date
+  const ondateChange = (date: Date) => {
     let year: number = date.getFullYear();
     let month: number = date.getMonth();
-    setState({ startDate: date, activeYear: year, activeMonth: month });
-    setShow(false);
-  };
-
-  const handleShow = (str:string) => {
-    setShow(true)
-    if(str === "year"){
-      setIsYearSelection(true)
-    }else{
-      setIsYearSelection(false)
-    }
+    setState({ 
+      activeYear: year, activeMonth: month ,
+      startDate: date
+    });
   };
   const { startDate } = state;
 
@@ -88,16 +82,25 @@ const TopBar = (props: any) => {
         <div className="navbar-nav-item">
           <div className="year-nav">
             <span
-              className="cursor-pointer"
+              className="cursor-pointer mr-2"
               onClick={() => handleMonthNav("previous")}
             >
               <i className="icon-arrow-left "></i>
             </span>
-            <span className="mx-3" onClick={()=>handleShow("") }>
+            {/* <span className="mx-3" onClick={()=>handleShow("") }>
               {moment(startDate).format("MMMM")}{" "}
-            </span>
+            </span> */}
+            <DatePicker
+              selected={startDate}
+              onChange={(date: any) => ondateChange(date)}
+              showMonthYearPicker
+              dateFormat="MMMM"
+              className="custom-datepicker cursor-pointer"
+              // minDate={new Date("2010/01/01")}
+              // maxDate={new Date()}
+            />
             <span
-              className="cursor-pointer"
+              className="cursor-pointer ml-2"
               onClick={() => handleMonthNav("next")}
             >
               <i className="icon-arrow-right "></i>
@@ -105,9 +108,19 @@ const TopBar = (props: any) => {
           </div>
         </div>
         <div className="navbar-nav-item">
-          <span className="cursor-pointer" onClick={()=>handleShow("year")}>
+          {/* <span className="cursor-pointer" onClick={()=>handleShow("year")}>
             {moment(startDate).format("YYYY")}{" "}
-          </span>
+          </span> */}
+          <DatePicker
+            selected={startDate}
+            onChange={(date: any) => ondateChange(date)}
+            showYearPicker
+            dateFormat="yyyy"
+            className="custom-datepicker cursor-pointer"
+            // minDate={new Date("2010/01/01")}
+            // maxDate={new Date()}
+          />
+          
           {/* <DropDownListComponent
             id="year"
             dataSource={options}
@@ -137,13 +150,6 @@ const TopBar = (props: any) => {
           </Dropdown>
         </div>
       </div>
-      <MonthPickerModal
-        show={show}
-        startDate={startDate}
-        handleClose={() => setShow(false)}
-        handleChange={(date: any) => handleDatePicker(date)}
-        isYearSelection={isYearSelection}
-      />
     </>
   );
 };

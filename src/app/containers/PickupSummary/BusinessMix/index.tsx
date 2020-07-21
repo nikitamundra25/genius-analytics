@@ -60,7 +60,7 @@ const PickupBusinessMix = (props:any) => {
 
   return (
     <>
-          <React.Suspense fallback={<Loader />}>
+          <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts
               id={`PickupBusinessChart-${index}`}
               chartSettings={{

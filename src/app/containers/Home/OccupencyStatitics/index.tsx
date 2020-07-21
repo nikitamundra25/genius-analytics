@@ -129,7 +129,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
         <Row className='row-inner'>
           <Col sm={7}>
             <div className="w-100">
-            <React.Suspense fallback={<Loader />}>
+            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
               <MixedCharts
                 id={"line-and-column"}
                 chartSettings={{
@@ -157,7 +157,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           </Col>
           <Col sm={5}>
           <div className="w-100">
-          <React.Suspense fallback={<Loader />}>
+          <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts
               id={"line-and-bar"}
               charts={Charts2}
