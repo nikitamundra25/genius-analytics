@@ -59,7 +59,7 @@ const PickupSinceYesterday = ({ graphdata = [] }:any) => {
                     ) : null}
                   </div>
  
-                  <React.Suspense fallback={<Loader />}>
+                  <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
                     <ColumnChart
                       {...key}
                       chartSettings={{

@@ -58,7 +58,7 @@ export default ({ graphdata = [] }:any) => {
       <Card>
         <WidgetHeader title={"Room Type Statics"} activeToggle={"graph"} />
         <Card.Body>
-          <React.Suspense fallback={<Loader />}>
+          <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts
               id='room-type'
               charts={Charts}

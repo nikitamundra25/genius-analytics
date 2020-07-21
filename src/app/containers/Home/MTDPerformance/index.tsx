@@ -34,12 +34,12 @@ export default ({ graphdata = [] }:any) => {
     <Card>
       <WidgetHeader title={"MTD RGI Performance"} />
       <Card.Body>
-        <Row>
+        <Row className="row-inner">
           { RTGBarChart && RTGBarChart.length ? 
           RTGBarChart.map((key: any, index: number) => {
             return (
               <Col key={index} sm={4} md={4}>
-                <React.Suspense fallback={<Loader />}>
+                <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
                 <BarChartComponent
                   chartSettings={{
                     primaryXAxis: {

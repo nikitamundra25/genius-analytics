@@ -27,4 +27,5 @@ export interface IAppRoutes {
   DASHBOARDYEARLY:string;
   PICKUPSUMMARY:string;
   PICKUPDETAIL:string;
+  PICKUPBOB:string;
 }

@@ -75,7 +75,7 @@ export default (props: any) => {
                 return (
                   <Col xs={12} md={6} key={index}>
                     
-                      <React.Suspense fallback={<Loader />}>
+                      <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
                         <BarChartComponent
                           id={key.id}
                           chartSettings={key.chartSettings}

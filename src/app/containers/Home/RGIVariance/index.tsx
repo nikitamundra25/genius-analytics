@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
-
+import Loader from "../../../components/Loader/Loader";
 import MixedCharts from "../../../components/Charts/MixedCharts";
 import WidgetHeader from "../../../components/WidgetHeader";
 
@@ -53,6 +53,7 @@ export default ({ graphdata = [] }:any) => {
     <Card>
       <WidgetHeader title={"RGI YoY Variance"} activeToggle={"graph"} />
       <Card.Body>
+         <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
         <MixedCharts
           id='adfdsf'
           charts={Charts}
@@ -75,6 +76,7 @@ export default ({ graphdata = [] }:any) => {
             tooltip: { enable: true },
           }}
         />
+        </React.Suspense>
       </Card.Body>
     </Card>
   );

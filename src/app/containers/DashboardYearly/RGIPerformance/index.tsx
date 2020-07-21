@@ -33,7 +33,7 @@ export default ({ graphdata = [] }: any) => {
           {RGIBarChart.map((key: any, index: number) => {
             return (
               <Col key={index} sm={4} md={4}>
-                <React.Suspense fallback={<Loader />}>
+                <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
                   <ColumnChart
                     chartSettings={{
                       primaryXAxis: {

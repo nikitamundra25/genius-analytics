@@ -5,7 +5,7 @@ const PivotTableComponent = React.lazy(() =>
 );
 
 
-const MonthlyTable = (props:any) => {
+const BOBMonthlyTable = (props:any) => {
 const {index,graphdata} = props;
 
 let dataSourceSettings = {
@@ -83,4 +83,4 @@ const SAMPLE_CSS = `
   );
 };
 
-export default MonthlyTable;
+export default BOBMonthlyTable;

@@ -10,14 +10,14 @@ const PivotTableComponent = React.lazy(() =>
 
 let dataSourceSettings = {
   enableSorting: false,
-  columns: [{ name: 'Title' }],
+  columns: [{ name: 'Month' }],
   valueSortSettings: { headerDelimiter: ' - ' },
   values: [ { name: 'Amount', caption: 'Amount' }],
   dataSource: MonthlyBOBData.pivotData,
-  rows: [{ name: 'Month' }],
+  rows: [{ name: 'Title' }, { name: 'SubTitle' }],
   formatSettings: [{ name: 'Amount', format: '' }],
-  expandAll: false,
-  showGrandTotals: false,
+  expandAll: true,
+  showRowGrandTotals : false,
   filters: []
 };
 
@@ -66,7 +66,7 @@ const SAMPLE_CSS = `
     <>
     <Card>
       <Card.Body>
-        <React.Suspense fallback={<Loader />}>
+        <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
         <style>{SAMPLE_CSS}</style>
           <PivotTableComponent
           id={`BOB`}
@@ -75,7 +75,7 @@ const SAMPLE_CSS = `
           height={'300'}
           TableSettings={{
               TableComponent: {
-                gridSettings: {columnWidth: 85 , allowResizing: true },
+                gridSettings: {columnWidth: 90 , allowResizing: true },
                 
                 // showFieldList: true,
                 // allowExcelExport: true ,
