@@ -180,7 +180,7 @@ const getChart = (chartType: any) => {
   }
 };
 
-const DashboardWidget = ({ graphList }: { graphList: any[] }) => {
+const DashboardMonthlyWidget = ({ graphList }: { graphList: any[] }) => {
   return (
     <Row>
       {graphList.map((chartConfig: any, index: number) => {
@@ -196,4 +196,4 @@ const DashboardWidget = ({ graphList }: { graphList: any[] }) => {
   );
 };
 
-export default DashboardWidget;
+export default DashboardMonthlyWidget;
