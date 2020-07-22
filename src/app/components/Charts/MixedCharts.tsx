@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import {
   ChartComponent,
   SeriesCollectionDirective,
@@ -16,6 +16,8 @@ import {
 } from "@syncfusion/ej2-react-charts";
 
 const MixedCharts = ({ charts = [], id, chartSettings = {} }: any) => {
+  // class MixedCharts extends Component<any, any> {
+      
   return (
     <ChartComponent
       id={id}

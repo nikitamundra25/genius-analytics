@@ -5,6 +5,79 @@ import Loader from "../../../components/Loader/Loader";
 import { PivotViewComponent } from "@syncfusion/ej2-react-pivotview";
 import './index.scss';
 // let data = localData.data;
+const MixedCharts = React.lazy(() =>
+  import("../../../components/Charts/MixedCharts")
+);
+
+let graphdata =[
+  {
+    name: "Q1",
+    OCC: 50,
+    ADR: 64
+  },
+  {
+    name: "Q2",
+    OCC: 88,
+    ADR: 80
+  },
+  {
+    name: "Q3",
+    OCC: 74,
+    ADR: 76
+  },
+  {
+    name: "Q4",
+    OCC: 74,
+    ADR: 76
+  }
+]
+
+const Charts1 = [
+  {
+    dataSource: graphdata,
+    xName: "name",
+    yName: "OCC",
+    type: "Column",
+    fill: "#3a71b4",
+    name: "OCC %",
+    width: 1,
+    marker: {
+      dataLabel: {
+        visible: true,
+        position: "Top",
+        font: {
+          fontWeight: "600",
+          color: "#ffffff",
+        },
+      },
+    },
+  },
+  {
+    dataSource: graphdata,
+    xName: "name",
+    yName: "ADR",
+    type: "Line",
+    fill: "#bb423d",
+    name: "ADR",
+    width: 2,
+    marker: {
+      visible: true,
+      width: 8,
+      height: 8,
+      fill: "#bb423d",
+      border: { width: 0, color: "#bb423d" },
+      dataLabel: {
+        visible: false,
+        position: "Top",
+        font: {
+          fontWeight: "600",
+          color: "#000000",
+        },
+      },
+    },
+  },
+];
+
 
 let dataSourceSettings = {
   enableSorting: false,
@@ -18,16 +91,14 @@ let dataSourceSettings = {
   showGrandTotals: false,
   filters: [],
 };
-
 // let toolbarOptions = ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
 //             'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'ConditionalFormatting', 'NumberFormatting', 'FieldList'];
 const CumulativeTable = (props: any) => {
   let pivotObj: any;
   const cellTemplate = (props: any) => {
-    // console.log("hello chart");
+    console.log("hello chart",props);
     return (
       <div>
-      
       <div className="header-addon-text">
         <span className="header-text">BUD </span>
         <span className="header-text"> LY  </span>
@@ -36,9 +107,14 @@ const CumulativeTable = (props: any) => {
         <span className="tempwrap e-pivot-trend-profit pv-icons"> {trend()} </span>
         <span className="tempwrap e-pivot-trend-profit pv-icons"> {trend()} </span>
       </div>
+      <div>
+      <span className=""> {pivotChart()} </span>
+      </div>
     </div>
   );
   };
+
+
 
   const SAMPLE_CSS = `
 .e-pivotview{
@@ -80,9 +156,46 @@ const CumulativeTable = (props: any) => {
   }
   `;
 
+
+  const pivotChart = () =>{
+    if(pivotObj !== null){
+      if(pivotObj && pivotObj.pivotValues &&  pivotObj.pivotValues.length ){
+        console.log("pivotObj.pivotValues",pivotObj.pivotValues);
+     if(pivotObj.pivotValues[12].length){
+       for (let index = 0; index < pivotObj.pivotValues[12].length; index++) {
+         const element = pivotObj.pivotValues[12][index];
+         console.log("element.rowHeaders",element);
+         if(element.rowHeaders === "Business Mix"  && element.rowIndex === 12 ){
+            pivotObj.pivotValues[12][index].formattedText = `<dl>
+            <dt>
+              Browser market share June 2015
+            </dt>
+            <dd class="percentage percentage-11"><span class="text">IE 11: 11.33%</span></dd>
+            <dd class="percentage percentage-49"><span class="text">Chrome: 49.77%</span></dd>
+            <dd class="percentage percentage-16"><span class="text">Firefox: 16.09%</span></dd>
+            <dd class="percentage percentage-5"><span class="text">Safari: 5.41%</span></dd>
+            <dd class="percentage percentage-2"><span class="text">Opera: 1.62%</span></dd>
+            <dd class="percentage percentage-2"><span class="text">Android 4.4: 2%</span></dd>
+          </dl>`
+         }else{
+            pivotObj.pivotValues[12][index].value = ""
+         }
+       }
+     }else{
+     }
+      }
+    }
+  }
+
+
+
   const trend = () => {
-    if(pivotObj && pivotObj.pivotValues){
+    if(pivotObj !== null){
+      if(pivotObj && pivotObj.pivotValues &&  pivotObj.pivotValues.length ){
     let cTable: any = [].slice.call(document.getElementsByClassName("e-table"));
+
+    
+
     let colLen = pivotObj.pivotValues[3].length;
     let cLen = cTable[3].children[0].children.length;
     let rLen = cTable[3].children[1].children.length;
@@ -221,7 +334,9 @@ const CumulativeTable = (props: any) => {
         }
       }
     }
-  }
+
+}
+}
   };
 
   return (
