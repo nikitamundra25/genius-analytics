@@ -65,7 +65,6 @@ const SAMPLE_CSS = `
   `;
   return (
     <>
-    
         <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
         <style>{SAMPLE_CSS}</style>
           <PivotTableComponent

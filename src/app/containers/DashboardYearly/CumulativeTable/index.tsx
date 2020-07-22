@@ -15,8 +15,7 @@ let dataSourceSettings = {
   rows: [{ name: "Title" }],
   formatSettings: [{ name: "Amount", format: "" }],
   expandAll: true,
-  showRowGrandTotals: false,
-  showColumnSubTotals: false,
+  showGrandTotals: false,
   filters: [],
 };
 
@@ -26,7 +25,19 @@ const CumulativeTable = (props: any) => {
   let pivotObj: any;
   const cellTemplate = (props: any) => {
     // console.log("hello chart");
-    return (<span className="tempwrap e-pivot-trend-neutral pv-icons"> {trend()} </span>);
+    return (
+      <div>
+      
+      <div className="header-addon-text">
+        <span className="header-text">BUD </span>
+        <span className="header-text"> LY  </span>
+      </div>
+      <div className="arrow-div">
+        <span className="tempwrap e-pivot-trend-profit pv-icons"> {trend()} </span>
+        <span className="tempwrap e-pivot-trend-profit pv-icons"> {trend()} </span>
+      </div>
+    </div>
+  );
   };
 
   const SAMPLE_CSS = `
@@ -46,7 +57,7 @@ const CumulativeTable = (props: any) => {
       font-size:12px !important;
       font-weight: 500;
     }
-    .e-pivotview .e-grid .e-rowcell , .e-grid .e-headercelldiv {
+     .e-grid .e-headercelldiv {
       text-align: center;
   }
     
@@ -137,7 +148,7 @@ const CumulativeTable = (props: any) => {
                   ) {
                     let trendElement = node.querySelector(".tempwrap");
                     trendElement.className = trendElement.className.replace(
-                      "e-pivot-trend-neutral",
+                      "e-pivot-trend-profit",
                       "e-pivot-trend-loss"
                     );
                   } else if (
@@ -148,7 +159,7 @@ const CumulativeTable = (props: any) => {
 
                     let trendElement = node.querySelector(".tempwrap");
                     trendElement.className = trendElement.className.replace(
-                      "e-pivot-trend-neutral",
+                      "e-pivot-trend-profit",
                       "e-pivot-trend-profit"
                     );
                   }
@@ -189,7 +200,7 @@ const CumulativeTable = (props: any) => {
                 ) {
                   let trendElement = node.querySelector(".tempwrap");
                   trendElement.className = trendElement.className.replace(
-                    "e-pivot-trend-neutral",
+                    "e-pivot-trend-profit",
                     "e-pivot-trend-loss"
                   );
                 } else if (
@@ -200,7 +211,7 @@ const CumulativeTable = (props: any) => {
                 ) {
                   let trendElement = node.querySelector(".tempwrap");
                   trendElement.className = trendElement.className.replace(
-                    "e-pivot-trend-neutral",
+                    "e-pivot-trend-profit",
                     "e-pivot-trend-profit"
                   );
                 }
@@ -231,8 +242,8 @@ const CumulativeTable = (props: any) => {
               id="PivotView"
               dataSourceSettings={dataSourceSettings}
               width={"100%"}
-              height={"300"}
-              gridSettings={{ columnWidth: 80, allowResizing: true }}
+              height={"350"}
+              gridSettings={{ columnWidth: 130, allowResizing: true }}
               cellTemplate={cellTemplate}
               dataBound={trend}
               ref={(pivotview: any) => {
