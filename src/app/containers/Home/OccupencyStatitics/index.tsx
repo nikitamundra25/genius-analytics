@@ -5,7 +5,7 @@ import WidgetHeader from "../../../components/WidgetHeader";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
-
+// import MixedCharts from "../../../components/Charts/MixedCharts"
 
 const OccupencyStatitics = ({ graphdata = [] }:any) => {
 

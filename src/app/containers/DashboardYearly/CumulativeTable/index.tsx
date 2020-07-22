@@ -23,7 +23,7 @@ let dataSourceSettings = {
 // let toolbarOptions = ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
 //             'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'ConditionalFormatting', 'NumberFormatting', 'FieldList'];
 const CumulativeTable = (props: any) => {
-  let pivotObj: any;
+  let pivotObj: any = null;
   const cellTemplate = (props: any) => {
     // console.log("hello chart");
     return (<span className="tempwrap e-pivot-trend-neutral pv-icons"> {trend()} </span>);
@@ -70,7 +70,8 @@ const CumulativeTable = (props: any) => {
   `;
 
   const trend = () => {
-    if(pivotObj && pivotObj.pivotValues){
+    if(pivotObj !== null){
+      if(pivotObj && pivotObj.pivotValues && pivotObj.pivotValues.length && pivotObj.pivotValues[3] && pivotObj.pivotValues[3].length){
     let cTable: any = [].slice.call(document.getElementsByClassName("e-table"));
     let colLen = pivotObj.pivotValues[3].length;
     let cLen = cTable[3].children[0].children.length;
@@ -210,6 +211,7 @@ const CumulativeTable = (props: any) => {
         }
       }
     }
+  }
   }
   };
 
