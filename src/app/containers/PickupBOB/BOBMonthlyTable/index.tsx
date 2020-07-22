@@ -12,14 +12,27 @@ let dataSourceSettings = {
   enableSorting: false,
   columns: [{ name: 'Title' }],
   valueSortSettings: { headerDelimiter: ' - ' },
-  values: [ { name: 'Amount', caption: 'Amount' }],
+  values: [ { name: 'Amount', caption: 'Amount',  showNoDataItems: false } ],
   dataSource: graphdata,
   rows: [{ name: 'Month' }],
   formatSettings: [{ name: 'Amount', format: '' }],
   expandAll: false,
-  filters: []
+  filters: [],
+  conditionalFormatSettings: [
+    {
+        measure: 'Amount',
+        value1: 0,
+        conditions: 'LessThan',
+        style: {
+            color: 'red',
+            
+        }
+    },
+]
 };
 
+// const toolbarOptions: any = ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
+// 'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'Formatting', 'FieldList']; 
 
 const SAMPLE_CSS = `
 .e-pivotview{
@@ -66,13 +79,13 @@ const SAMPLE_CSS = `
                 gridSettings: {columnWidth: 120 , allowResizing: true },
                 // showFieldList: true,
                 // allowExcelExport: true ,
-                // allowConditionalFormatting: true ,
+                allowConditionalFormatting: true ,
                 // allowNumberFormatting:true,
                 // allowPdfExport:true ,
                 // showToolbar:true,
                 // allowCalculatedField:true ,
                 // displayOption:{ view: 'Both' } ,
-                // toolbar:toolbarOptions ,
+                // toolbar:toolbarOptions,
               },
           }}
           

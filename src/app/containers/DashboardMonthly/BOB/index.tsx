@@ -18,7 +18,19 @@ let dataSourceSettings = {
   formatSettings: [{ name: 'Amount', format: '' }],
   expandAll: true,
   showRowGrandTotals : false,
-  filters: []
+  showSubTotals: false ,
+  filters: [],
+  conditionalFormatSettings: [
+    {
+        measure: 'Amount',
+        value1: 0,
+        conditions: 'LessThan',
+        style: {
+            color: 'red',
+            
+        }
+    },
+]
 };
 
 // let toolbarOptions = ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
@@ -79,8 +91,8 @@ const SAMPLE_CSS = `
                 
                 // showFieldList: true,
                 // allowExcelExport: true ,
-                // allowConditionalFormatting: true ,
-                // allowNumberFormatting:true,
+                allowConditionalFormatting: true ,
+                //allowNumberFormatting:true,
                 // allowPdfExport:true ,
                 // showToolbar:true,
                 // allowCalculatedField:true ,

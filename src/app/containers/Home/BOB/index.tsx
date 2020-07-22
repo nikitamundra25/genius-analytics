@@ -24,7 +24,18 @@ const BOB = ({graphdata=[]}:any) => {
     formatSettings: [{ name: 'Amount', format: '' }],
     expandAll: false,
     showGrandTotals: false,
-    filters: []
+    filters: [],
+    conditionalFormatSettings: [
+      {
+          measure: 'Amount',
+          value1: 0,
+          conditions: 'LessThan',
+          style: {
+              color: 'red',
+              
+          }
+      },
+  ]
   };
 
 const SAMPLE_CSS = `
@@ -83,7 +94,7 @@ const SAMPLE_CSS = `
                 
                 // showFieldList: true,
                 // allowExcelExport: true ,
-                // allowConditionalFormatting: true ,
+                allowConditionalFormatting: true ,
                 // allowNumberFormatting:true,
                 // allowPdfExport:true ,
                 // showToolbar:true,

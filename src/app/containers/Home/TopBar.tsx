@@ -66,12 +66,28 @@ const TopBar = (props: any) => {
 
 
 // To change Date
-  const ondateChange = (date: Date) => {
-    let year: number = date.getFullYear();
-    let month: number = date.getMonth();
+  const ondateChange = (date: Date, str:string) => {
+  const { startDate } = state;
+    let year: number 
+    let month: number
+    let setNewDate: any
+    if(str === "month"){
+       year = date.getFullYear();
+       month = date.getMonth();
+       setNewDate = date
+    }else{
+      year = date.getFullYear();
+      month = startDate.getMonth();
+       setNewDate = new Date(
+        year,
+        month,
+        1
+      );
+    }
     setState({ 
-      activeYear: year, activeMonth: month ,
-      startDate: date
+      activeYear: year, 
+      activeMonth: month ,
+      startDate: setNewDate
     });
   };
   const { startDate } = state;
@@ -92,7 +108,7 @@ const TopBar = (props: any) => {
             </span> */}
             <DatePicker
               selected={startDate}
-              onChange={(date: any) => ondateChange(date)}
+              onChange={(date: any) => ondateChange(date, "month")}
               showMonthYearPicker
               dateFormat="MMMM"
               className="custom-datepicker cursor-pointer"
@@ -113,7 +129,7 @@ const TopBar = (props: any) => {
           </span> */}
           <DatePicker
             selected={startDate}
-            onChange={(date: any) => ondateChange(date)}
+            onChange={(date: any) => ondateChange(date,"year")}
             showYearPicker
             dateFormat="yyyy"
             className="custom-datepicker cursor-pointer"
