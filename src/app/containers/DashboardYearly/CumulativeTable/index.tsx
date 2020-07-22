@@ -27,10 +27,10 @@ let dataSourceSettings = {
 // let toolbarOptions = ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
 //             'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'ConditionalFormatting', 'NumberFormatting', 'FieldList'];
 const CumulativeTable = (props:any) => {
-  const cellTemplate = (props:any) => {
-    // console.log("hello chart");
-    return (<span className="tempwrap e-pivot-trend-neutral pv-icons"></span>);
-  }
+  // const cellTemplate = (props:any) => {
+  //   // console.log("hello chart");
+  //   return (<span className="tempwrap e-pivot-trend-neutral pv-icons"></span>);
+  // }
 const SAMPLE_CSS = `
 .e-pivotview{
   font-size:12px !important;
@@ -78,12 +78,12 @@ const SAMPLE_CSS = `
         <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
         <style>{SAMPLE_CSS}</style>
         <PivotViewComponent 
-          id='PivotView' 
+          id='PivotViewTable' 
           dataSourceSettings={dataSourceSettings} 
           width={'100%'} 
           height={'300'} 
           gridSettings={{ columnWidth: 80,  allowResizing: true }}
-          cellTemplate={cellTemplate}
+          // cellTemplate={cellTemplate}
              
                         
                         >
