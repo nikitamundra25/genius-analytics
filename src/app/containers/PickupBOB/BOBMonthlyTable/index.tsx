@@ -20,28 +20,14 @@ let dataSourceSettings = {
   filters: [],
   conditionalFormatSettings: [
     {
-        measure: 'In_Stock',
-        value1: 5000,
+        measure: 'Amount',
+        value1: 0,
         conditions: 'LessThan',
         style: {
-            backgroundColor: '#80cbc4',
-            color: 'black',
-            fontFamily: 'Tahoma',
-            fontSize: '12px'
+            color: 'red',
+            
         }
     },
-    {
-        value1: 3400,
-        value2: 40000,
-        measure: 'Sold',
-        conditions: 'Between',
-        style: {
-            backgroundColor: '#f48fb1',
-            color: 'black',
-            fontFamily: 'Tahoma',
-            fontSize: '12px'
-        }
-    }
 ]
 };
 
@@ -93,7 +79,7 @@ const SAMPLE_CSS = `
                 gridSettings: {columnWidth: 120 , allowResizing: true },
                 // showFieldList: true,
                 // allowExcelExport: true ,
-                // allowConditionalFormatting: true ,
+                allowConditionalFormatting: true ,
                 // allowNumberFormatting:true,
                 // allowPdfExport:true ,
                 // showToolbar:true,

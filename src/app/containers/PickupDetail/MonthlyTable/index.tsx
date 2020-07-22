@@ -17,7 +17,18 @@ let dataSourceSettings = {
   rows: [{ name: 'Month' }],
   formatSettings: [{ name: 'Amount', format: '' }],
   expandAll: false,
-  filters: []
+  filters: [],
+  conditionalFormatSettings: [
+    {
+        measure: 'Amount',
+        value1: 0,
+        conditions: 'LessThan',
+        style: {
+            color: 'red',
+            
+        }
+    },
+  ]
 };
 
 
@@ -64,15 +75,8 @@ const SAMPLE_CSS = `
           TableSettings={{
               TableComponent: {
                 gridSettings: {columnWidth: 120 , allowResizing: true },
-                // showFieldList: true,
-                // allowExcelExport: true ,
-                // allowConditionalFormatting: true ,
-                // allowNumberFormatting:true,
-                // allowPdfExport:true ,
-                // showToolbar:true,
-                // allowCalculatedField:true ,
-                // displayOption:{ view: 'Both' } ,
-                // toolbar:toolbarOptions ,
+                allowConditionalFormatting: true ,
+               
               },
           }}
           
