@@ -1,0 +1,29 @@
+{ "pivotData" : [
+  {  "Amount": "164", "Title": "Room Nights",  "Month": "January Actual" , "col-subtitle": "BUD" },
+  {  "Amount": "164", "Title": "Room Nights",  "Month": "January Actual" , "col-subtitle": "LY" },
+  {  "Amount": "164", "Title": "OCC%",  "Month": "February Actual" ,"col-subtitle": "BUD" },
+  {  "Amount": "164", "Title": "OCC%",  "Month": "February Actual" ,"col-subtitle": "LY" },
+  {  "Amount": "164", "Title": "Rooms Rev",  "Month": "March Actual"  , "col-subtitle": "BUD"},
+  {  "Amount": "164", "Title": "Rooms Rev",  "Month": "March Actual"  , "col-subtitle": "LY"},
+  {  "Amount": "164", "Title": "ADR",  "Month": "April Actual","col-subtitle": "BUD"  },
+  {  "Amount": "164", "Title": "ADR",  "Month": "April Actual","col-subtitle": "LY"  },
+  {  "Amount": "164", "Title": "RevPAR",  "Month": "May Actual" , "col-subtitle": "BUD" },
+  {  "Amount": "164", "Title": "RevPAR",  "Month": "May Actual" , "col-subtitle": "LY" },
+  {  "Amount": "164", "Title": "TrevPAR",  "Month": "June Actual" ,"col-subtitle": "BUD" },
+  {  "Amount": "164", "Title": "TrevPAR",  "Month": "June Actual" ,"col-subtitle": "LY" },
+  {  "Amount": "164", "Title": "F&B Revenue",  "Month": "July Actual" , "col-subtitle": "BUD" },
+  {  "Amount": "164", "Title": "F&B Revenue",  "Month": "July Actual" , "col-subtitle": "LY" },
+  {  "Amount": "164", "Title": "M&E Revenue",  "Month": "August Actual" ,"col-subtitle": "BUD" },
+  {  "Amount": "164", "Title": "M&E Revenue",  "Month": "August Actual" ,"col-subtitle": "LY" },
+  {  "Amount": "164", "Title": "Other Revenue",  "Month": "September Actual" , "col-subtitle": "BUD" },
+  {  "Amount": "164", "Title": "Other Revenue",  "Month": "September Actual" , "col-subtitle": "LY" },
+  {  "Amount": "164", "Title": "Total Revenue",  "Month": "October BOB/Actual" ,"col-subtitle": "BUD" },
+  {  "Amount": "164", "Title": "Total Revenue",  "Month": "October BOB/Actual" ,"col-subtitle": "LY" },
+  {  "Amount": "164", "Title": "Pickup",  "Month": "November BOB" , "col-subtitle": "BUD" },
+  {  "Amount": "164", "Title": "Pickup",  "Month": "November BOB" , "col-subtitle": "LY" },
+  {  "Amount": "164", "Title": "Business Mix",  "Month": "December BOB" ,"col-subtitle": "BUD" } ,
+  {  "Amount": "164", "Title": "Business Mix",  "Month": "December BOB" ,"col-subtitle": "LY" } 
+  
+]
+
+}
