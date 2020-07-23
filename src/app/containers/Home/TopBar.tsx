@@ -89,6 +89,7 @@ const TopBar = (props: any) => {
       activeMonth: month ,
       startDate: setNewDate
     });
+    props.handleReset()
   };
   const { startDate } = state;
 

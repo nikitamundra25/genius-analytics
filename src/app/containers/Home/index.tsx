@@ -17,12 +17,17 @@ const HomeComponent : FunctionComponent = () => {
     dispatch(DashboardMainRequest())
     // eslint-disable-next-line
   }, [])
+
+  // To reset drag & drop when select date
+ const handleReset = () => {
+  // dispatch(DashboardMainRequest())
+  }
   
   const {dashboardMainList}= DashboardReducer
   
   return (
     <>
-      <TopBar />
+      <TopBar  handleReset={handleReset} />
       <div className="animated fadeIn">
         {dashboardMainList && dashboardMainList.length ? (
         <DashboardLayoutComponent
@@ -31,6 +36,7 @@ const HomeComponent : FunctionComponent = () => {
           allowResizing={false}
           columns={4}
           cellAspectRatio={120 / 140}
+          enablePersistence={false}
         >
             <DashboardWidget graphList={dashboardMainList} />
         </DashboardLayoutComponent>

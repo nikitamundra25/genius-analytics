@@ -15,12 +15,13 @@ import {
   StackingColumnSeries,
 } from "@syncfusion/ej2-react-charts";
 
-const MixedCharts = ({ charts = [], id, chartSettings = {} }: any) => {
+const MixedCharts = ({ charts = [], id, chartSettings = {},legend= true }: any) => {
   // class MixedCharts extends Component<any, any> {
-      
+      const legendSettings = { visible: legend };
   return (
     <ChartComponent
       id={id}
+      legendSettings={legendSettings}
       style={{ textAlign: "center" }}
       chartArea={{ border: { width: 0 } }}
       width={"100%"}
@@ -40,7 +41,7 @@ const MixedCharts = ({ charts = [], id, chartSettings = {} }: any) => {
         ]}
       />
       <SeriesCollectionDirective>
-        {charts.map(({ marker, ...chart }: any, index: number) => {
+        {charts.map(({ marker, ...chart }: any, index: number) => {    
           return (
             <SeriesDirective
               key={index}
