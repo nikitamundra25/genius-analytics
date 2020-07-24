@@ -6,7 +6,7 @@ import { DashboardMainRequest } from "../../../actions";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
 import "./index.scss";
 import { IRootState } from "../../../interfaces";
-import { Button } from "react-bootstrap";
+
 
 // export class Default extends SampleBase {
 const HomeComponent: FunctionComponent = () => {
@@ -15,49 +15,47 @@ const HomeComponent: FunctionComponent = () => {
   let restoreModel: any = [];
   let dashboardObj: any;
 
-   const DashboardReducer = useSelector((state:IRootState) => state.DashboardReducer)
+  const DashboardReducer = useSelector(
+    (state: IRootState) => state.DashboardReducer
+  );
 
-   useEffect(() => {
-    dispatch(DashboardMainRequest())
+  useEffect(() => {
+    dispatch(DashboardMainRequest());
     // eslint-disable-next-line
-  }, [])
- 
+  }, []);
 
-    // To reset drag & drop when select date
-  const RestorePanel = () => {  
-    // dashboardObj.panels = restoreModel;
+  // To reset drag & drop when select date
+  const RestorePanel = () => {
+    dashboardObj.panels = restoreModel;
   };
-  
+
+  // To store dashboard data initially
   const created = () => {
     restoreModel = dashboardObj.serialize();
   };
 
 
-   const {dashboardMainList}= DashboardReducer
+  const { dashboardMainList } = DashboardReducer;
 
   return (
     <>
-    <TopBar  handleReset={RestorePanel} />
-        {/* <div className="addContainer">
-          <Button id="add" onClick={RestorePanel}>
-            Restore
-          </Button>
-        </div> */}
+      <TopBar handleReset={RestorePanel} />
       <div className="animated fadeIn">
         {dashboardMainList && dashboardMainList.length ? (
-        <DashboardLayoutComponent
-          id="defaultLayout"
-          cellSpacing={cellSpacing}
-          allowResizing={false}
-          columns={4}
-          cellAspectRatio={120 / 140}
-          created={created}
-          ref={(scope:any) => { dashboardObj = scope; }}
-        >
-           <DashboardWidget graphList={dashboardMainList} />
-        </DashboardLayoutComponent>
-        ) : null
-        }
+          <DashboardLayoutComponent
+            id="defaultLayout"
+            cellSpacing={cellSpacing}
+            allowResizing={false}
+            columns={4}
+            cellAspectRatio={120 / 140}
+            created={created}
+            ref={(scope: any) => {
+              dashboardObj = scope;
+            }}
+          >
+            <DashboardWidget graphList={dashboardMainList} />
+          </DashboardLayoutComponent>
+        ) : null}
       </div>
     </>
   );

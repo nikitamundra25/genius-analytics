@@ -55,7 +55,7 @@ const TopBar = (props: any) => {
       setMonthForDays.getMonth() - 1,
       1
     );
-
+    props.handleReset();
     setState({
       ...state,
       activeMonth: month,

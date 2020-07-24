@@ -5,9 +5,10 @@ import { useHistory } from "react-router";
 import "react-datepicker/dist/react-datepicker.css";
 import { AppRoutes } from "../../../config";
 
-const TopBar = () => {
+const TopBar = (props: any) => {
   const [startDate, setStartDate] = useState(new Date());
   let history = useHistory();
+
   const handleMonthNav = (str: string) => {
     let activeYear: number = startDate.getFullYear();
     let activeMonth: number = startDate.getMonth();
@@ -23,7 +24,7 @@ const TopBar = () => {
       setMonthForDays.getMonth() - 1,
       1
     );
-
+    props.handleReset();
     setStartDate(setNewDate);
   };
 
@@ -40,7 +41,10 @@ const TopBar = () => {
             </span>
             <DatePicker
               selected={startDate}
-              onChange={(date: any) => setStartDate(date)}
+              onChange={(date: any) => {
+                props.handleReset();
+                setStartDate(date);
+              }}
               showYearPicker
               dateFormat="yyyy"
               className="custom-datepicker cursor-pointer"
@@ -53,8 +57,9 @@ const TopBar = () => {
             </span>
           </div>
         </div>
-        <div className="navbar-nav-item cursor-pointer"
-         onClick={() => history.push(AppRoutes.PICKUPSUMMARY)}
+        <div
+          className="navbar-nav-item cursor-pointer"
+          onClick={() => history.push(AppRoutes.PICKUPSUMMARY)}
         >
           <div className="nav-btn">By Month</div>
         </div>
@@ -64,8 +69,9 @@ const TopBar = () => {
         >
           <div className="nav-btn">Detail View</div>
         </div>
-        <div className="navbar-nav-item cursor-pointer"
-         onClick={() => history.push(AppRoutes.PICKUPBOB)}
+        <div
+          className="navbar-nav-item cursor-pointer"
+          onClick={() => history.push(AppRoutes.PICKUPBOB)}
         >
           <div className="nav-btn">BOB</div>
         </div>

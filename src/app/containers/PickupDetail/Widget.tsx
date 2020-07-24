@@ -59,7 +59,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   }
 
   return (
-    <Row>
+    <>
       {graphList.map((chartConfig: any, index: number) => {
          GetDynamicRowCol(index)
         return (
@@ -68,7 +68,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
           </React.Fragment>
         );
       })}
-    </Row>
+    </>
   );
 };
 

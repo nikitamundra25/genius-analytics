@@ -201,13 +201,13 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   };
 
   return (
-    <Row>
-      {graphList.map((chartConfig: any, index: number) => {
-        return (
-          <React.Fragment key={index}>{getChart(chartConfig)}</React.Fragment>
+    <>
+     { graphList.map((chartConfig: any, index: number) => {
+        return ( 
+           <React.Fragment key={index}>{getChart(chartConfig)}</React.Fragment>
         );
       })}
-    </Row>
+    </>
   );
 };
 

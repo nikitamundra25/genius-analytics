@@ -182,7 +182,7 @@ const getChart = (chartType: any) => {
 
 const DashboardMonthlyWidget = ({ graphList }: { graphList: any[] }) => {
   return (
-    <Row>
+    <>
       {graphList.map((chartConfig: any, index: number) => {
         return (
           <React.Fragment key={index}>
@@ -192,7 +192,7 @@ const DashboardMonthlyWidget = ({ graphList }: { graphList: any[] }) => {
           </React.Fragment>
         );
       })}
-    </Row>
+    </>
   );
 };
 
