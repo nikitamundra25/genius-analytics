@@ -1,5 +1,4 @@
 import React from "react";
-import { Row } from "react-bootstrap";
 import BOB from "./BOB";
 import MonthlyDailyOccupacy from "./MonthlyDailyOccupacy";
 import DailyOccupacy from "./DailyOccupacy";
