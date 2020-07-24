@@ -12,9 +12,7 @@ export interface IDefaultLayoutState {
   isLoading: boolean;
   isAuthenticated: boolean;
   userDetails: {};
-  startDate?:Date | undefined
-  activeMonth:any
-  activeYear:any
+
 }
 
 export interface IDefaultHeaderProps extends RouteComponentProps {

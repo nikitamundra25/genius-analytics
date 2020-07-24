@@ -16,6 +16,9 @@ const TopBar = (props: any) => {
     startDate: new Date(),
   });
 
+ 
+
+
 
   useEffect(() => {
     const yearOptions = [];
@@ -55,7 +58,7 @@ const TopBar = (props: any) => {
       setMonthForDays.getMonth() - 1,
       1
     );
-
+    props.handleReset();
     setState({
       ...state,
       activeMonth: month,
@@ -89,6 +92,7 @@ const TopBar = (props: any) => {
       activeMonth: month ,
       startDate: setNewDate
     });
+    props.handleReset()
   };
   const { startDate } = state;
 

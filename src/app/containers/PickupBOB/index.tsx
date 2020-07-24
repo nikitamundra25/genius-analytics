@@ -9,7 +9,8 @@ import "./index.scss";
 
 const PickupDetail: FunctionComponent = () => {
   const cellSpacing = [5, 10];
-
+  let restoreModel: any = [];
+  let dashboardObj: any;
   const dispatch = useDispatch();
   const PickupReducer = useSelector((state: IRootState) => state.PickupReducer);
 
@@ -18,11 +19,21 @@ const PickupDetail: FunctionComponent = () => {
     // eslint-disable-next-line
   }, []);
 
+ // To reset drag & drop when select date
+ const RestorePanel = () => {
+  dashboardObj.panels = restoreModel;
+};
+
+// To store dashboard data initially
+const created = () => {
+  restoreModel = dashboardObj.serialize();
+};
+
   const { pickupDetailList } = PickupReducer;
 
   return (
     <>
-      <TopBar />
+      <TopBar handleReset={RestorePanel}/>
       <div className="animated fadeIn">
         {pickupDetailList && pickupDetailList.length ? (
           <DashboardLayoutComponent
@@ -31,6 +42,10 @@ const PickupDetail: FunctionComponent = () => {
             allowResizing={false}
             columns={6}
             cellAspectRatio={30 / 50}
+            created={created}
+            ref={(scope: any) => {
+              dashboardObj = scope;
+            }}
           >
             <DashboardWidget graphList={pickupDetailList} />
           </DashboardLayoutComponent>

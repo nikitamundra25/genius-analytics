@@ -1,0 +1,61 @@
+.yearly-table{
+  border-collapse: separate;
+  font-family: 'Roboto', sans-serif;
+  th, td {
+    padding: 5px 5px;
+    border: 1px solid #e0e0e0;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+    max-width: 265px;
+   }
+  thead{
+    th{
+      border:0px;
+    }
+    
+  }
+  .head-col{
+    background: #0074a7;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+    position: relative;
+  }
+  .row-title{
+    background: #0074a7;
+    color: #fff;
+    font-weight: 500;
+    min-width: 80px;
+    font-size: 13px;
+    border: 1px solid #e0e0e0;
+    white-space: nowrap;
+  }
+  .text-col {
+    flex: 1;
+    text-align: left;
+    padding: 0px 10px;
+  }
+  .icon-col {
+    flex: 0 0 30px;
+    max-width: 30px;
+  }
+  .content-col{
+    background:#cdeaf8;
+  }
+  .header-sub-title{
+    position: absolute;
+    bottom:0px;
+    right:5px;
+    color:#fff;
+    span{
+      width: 30px;
+      display: inline-block;
+    }
+  }
+ 
+}

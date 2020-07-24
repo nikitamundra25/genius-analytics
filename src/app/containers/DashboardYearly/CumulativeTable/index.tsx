@@ -3,8 +3,21 @@ import { Card } from "react-bootstrap";
 import TableData from "./Table.json";
 import Loader from "../../../components/Loader/Loader";
 import { PivotViewComponent } from "@syncfusion/ej2-react-pivotview";
-import './index.scss';
+import "./index.scss";
 // let data = localData.data;
+import {
+  AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, AccumulationLegend, PieSeries, AccumulationDataLabel, AccumulationTooltip,
+  Inject, IAccLoadedEventArgs, AccumulationTheme
+} from '@syncfusion/ej2-react-charts';
+ let data1 = [
+  { x: 'Argentina', y: 505370, r: '100' },
+  { x: 'Belgium', y: 551500, r: '118.7' },
+  { x: 'Cuba', y: 312685, r: '124.6' },
+  { x: 'Dominican Republic', y: 350000, r: '137.5' },
+  { x: 'Egypt', y: 301000, r: '150.8' },
+  { x: 'Kazakhstan', y: 300000, r: '155.5' },
+  { x: 'Somalia', y: 357022, r: '160.6' }
+];
 
 let dataSourceSettings = {
   enableSorting: false,
@@ -18,26 +31,32 @@ let dataSourceSettings = {
   showGrandTotals: false,
   filters: [],
 };
-
 // let toolbarOptions = ['New', 'Save', 'SaveAs', 'Rename', 'Remove', 'Load',
 //             'Grid', 'Chart', 'Export', 'SubTotal', 'GrandTotal', 'ConditionalFormatting', 'NumberFormatting', 'FieldList'];
 const CumulativeTable = (props: any) => {
   let pivotObj: any;
   const cellTemplate = (props: any) => {
-    // console.log("hello chart");
     return (
       <div>
-      
-      <div className="header-addon-text">
-        <span className="header-text">BUD </span>
-        <span className="header-text"> LY  </span>
+        <div className="header-addon-text">
+          <span className="header-text">BUD </span>
+          <span className="header-text"> LY </span>
+        </div>
+        <div className="arrow-div">
+          <span className="tempwrap e-pivot-trend-profit pv-icons">
+            {" "}
+            {trend()}{" "}
+          </span>
+          <span className="tempwrap e-pivot-trend-profit pv-icons">
+            {" "}
+            {trend()}{" "}
+          </span>
+        </div>
+        <div>
+          <span className=""> {pivotChart()} </span>
+        </div>
       </div>
-      <div className="arrow-div">
-        <span className="tempwrap e-pivot-trend-profit pv-icons"> {trend()} </span>
-        <span className="tempwrap e-pivot-trend-profit pv-icons"> {trend()} </span>
-      </div>
-    </div>
-  );
+    );
   };
 
   const SAMPLE_CSS = `
@@ -80,148 +99,196 @@ const CumulativeTable = (props: any) => {
   }
   `;
 
-  const trend = () => {
-    if(pivotObj && pivotObj.pivotValues){
-    let cTable: any = [].slice.call(document.getElementsByClassName("e-table"));
-    let colLen = pivotObj.pivotValues[3].length;
-    let cLen = cTable[3].children[0].children.length;
-    let rLen = cTable[3].children[1].children.length;
-    // eslint-disable-next-line
-    let rowIndx;
-    
-    for (let k = 0; k < rLen; k++) {
-      if (pivotObj.pivotValues[k] && pivotObj.pivotValues[k][0] !== undefined) {
-        rowIndx = pivotObj.pivotValues[k][0].rowIndex;
-        break;
+
+  const pivotChart = () =>{
+    if(pivotObj !== null){
+      if(pivotObj && pivotObj.pivotValues &&  pivotObj.pivotValues.length ){
+        console.log("pivotObj.pivotValues",pivotObj.pivotValues);
+     if(pivotObj.pivotValues[12].length){
+       for (let index = 0; index < pivotObj.pivotValues[12].length; index++) {
+         const element = pivotObj.pivotValues[12][index];
+         console.log("element.rowHeaders",element);
+         if(element.rowHeaders === "Business Mix"  && element.rowIndex === 12 ){
+            pivotObj.pivotValues[12][index].formattedText =   <AccumulationChartComponent id={`pie-chart-${index}`}  
+            legendSettings={{
+              visible: true
+            }}
+            enableSmartLabels={true}
+            enableAnimation={true}
+            
+            tooltip={{ enable: true }}
+          >
+            <Inject services={[AccumulationLegend, PieSeries, AccumulationDataLabel, AccumulationTooltip]} />
+            <AccumulationSeriesCollectionDirective>
+              <AccumulationSeriesDirective dataSource={data1} xName='x' yName='y' innerRadius='20%'
+                dataLabel={{
+                  visible: true, position: 'Outside', name: 'x'
+                }}
+                radius='r'
+              >
+              </AccumulationSeriesDirective>
+            </AccumulationSeriesCollectionDirective>
+          </AccumulationChartComponent>
+         }else{
+            pivotObj.pivotValues[12][index].value = ""
+         }
+       }
+     }else{
+     }
       }
     }
-    let rowHeaders: any = [].slice.call(
-      cTable[2].children[1].querySelectorAll("td")
-    );
-    let rows = pivotObj.dataSourceSettings.rows;
-    
-    if (rowHeaders.length > 1) {
-      for (let i = 0, Cnt = rows; i < Cnt.length; i++) {
-        let fields: any = {};
-        let fieldHeaders: any = [];
-        for (let j = 0, Lnt = rowHeaders; j < Lnt.length; j++) {
-          let header: any = rowHeaders[j];
+  };
+
+  const trend = () => {
+    if (pivotObj !== null) {
+      if (pivotObj && pivotObj.pivotValues && pivotObj.pivotValues.length) {
+        let cTable: any = [].slice.call(
+          document.getElementsByClassName("e-table")
+        );
+
+        let colLen = pivotObj.pivotValues[3].length;
+        let cLen = cTable[3].children[0].children.length;
+        let rLen = cTable[3].children[1].children.length;
+        // eslint-disable-next-line
+        let rowIndx;
+
+        for (let k = 0; k < rLen; k++) {
           if (
-            header.className.indexOf("e-gtot") === -1 &&
-            header.className.indexOf("e-rowsheader") > -1 &&
-            header.getAttribute("fieldname") === rows[i].name
+            pivotObj.pivotValues[k] &&
+            pivotObj.pivotValues[k][0] !== undefined
           ) {
-            // let headerName =
-            //   rowHeaders[j].getAttribute("fieldname") +
-            //   "_" +
-            //   rowHeaders[j].textContent;
-            fields[rowHeaders[j].textContent] = j;
-            fieldHeaders.push(rowHeaders[j].textContent);
+            rowIndx = pivotObj.pivotValues[k][0].rowIndex;
+            break;
           }
         }
-        
-        if (i === 0) {
-          for (let rnt = 0, Lnt = fieldHeaders; rnt < Lnt.length; rnt++) {
-            if (rnt !== 0) {
-              let row = fields[fieldHeaders[rnt]];
-              let prevRow = fields[fieldHeaders[rnt - 1]];
-              for (let j = 0, ci = 1; j < cLen && ci < colLen; j++, ci++) {
-                if (!cTable[3].children[1].children[row]) {
-                  break;
-                }
-                let node = cTable[3].children[1].children[row].childNodes[j];
-                let prevNode =
-                  cTable[3].children[1].children[prevRow].childNodes[j];
-                let ri = undefined;
-                let prevRi = undefined;
-                if (node) {
-                  ri = node.getAttribute("index");
-                }
-                if (prevNode) {
-                  prevRi = prevNode.getAttribute("index");
-                }
-                if (ri && ri < [].slice.call(pivotObj.pivotValues).length) {
-                  if (
-                    pivotObj.pivotValues[prevRi][ci].value >
-                      pivotObj.pivotValues[ri][ci].value &&
-                    node.querySelector(".tempwrap")
-                  ) {
-                    let trendElement = node.querySelector(".tempwrap");
-                    trendElement.className = trendElement.className.replace(
-                      "e-pivot-trend-profit",
-                      "e-pivot-trend-loss"
-                    );
-                  } else if (
-                    pivotObj.pivotValues[prevRi][ci].value <
-                      pivotObj.pivotValues[ri][ci].value &&
-                    node.querySelector(".tempwrap")
-                  ) {
+        let rowHeaders: any = [].slice.call(
+          cTable[2].children[1].querySelectorAll("td")
+        );
+        let rows = pivotObj.dataSourceSettings.rows;
 
-                    let trendElement = node.querySelector(".tempwrap");
-                    trendElement.className = trendElement.className.replace(
-                      "e-pivot-trend-profit",
-                      "e-pivot-trend-profit"
-                    );
+        if (rowHeaders.length > 1) {
+          for (let i = 0, Cnt = rows; i < Cnt.length; i++) {
+            let fields: any = {};
+            let fieldHeaders: any = [];
+            for (let j = 0, Lnt = rowHeaders; j < Lnt.length; j++) {
+              let header: any = rowHeaders[j];
+              if (
+                header.className.indexOf("e-gtot") === -1 &&
+                header.className.indexOf("e-rowsheader") > -1 &&
+                header.getAttribute("fieldname") === rows[i].name
+              ) {
+                // let headerName =
+                //   rowHeaders[j].getAttribute("fieldname") +
+                //   "_" +
+                //   rowHeaders[j].textContent;
+                fields[rowHeaders[j].textContent] = j;
+                fieldHeaders.push(rowHeaders[j].textContent);
+              }
+            }
+
+            if (i === 0) {
+              for (let rnt = 0, Lnt = fieldHeaders; rnt < Lnt.length; rnt++) {
+                if (rnt !== 0) {
+                  let row = fields[fieldHeaders[rnt]];
+                  let prevRow = fields[fieldHeaders[rnt - 1]];
+                  for (let j = 0, ci = 1; j < cLen && ci < colLen; j++, ci++) {
+                    if (!cTable[3].children[1].children[row]) {
+                      break;
+                    }
+                    let node =
+                      cTable[3].children[1].children[row].childNodes[j];
+                    let prevNode =
+                      cTable[3].children[1].children[prevRow].childNodes[j];
+                    let ri = undefined;
+                    let prevRi = undefined;
+                    if (node) {
+                      ri = node.getAttribute("index");
+                    }
+                    if (prevNode) {
+                      prevRi = prevNode.getAttribute("index");
+                    }
+                    if (ri && ri < [].slice.call(pivotObj.pivotValues).length) {
+                      if (
+                        pivotObj.pivotValues[prevRi][ci].value >
+                          pivotObj.pivotValues[ri][ci].value &&
+                        node.querySelector(".tempwrap")
+                      ) {
+                        let trendElement = node.querySelector(".tempwrap");
+                        trendElement.className = trendElement.className.replace(
+                          "e-pivot-trend-profit",
+                          "e-pivot-trend-loss"
+                        );
+                      } else if (
+                        pivotObj.pivotValues[prevRi][ci].value <
+                          pivotObj.pivotValues[ri][ci].value &&
+                        node.querySelector(".tempwrap")
+                      ) {
+                        let trendElement = node.querySelector(".tempwrap");
+                        trendElement.className = trendElement.className.replace(
+                          "e-pivot-trend-profit",
+                          "e-pivot-trend-profit"
+                        );
+                      }
+                    }
+                  }
+                }
+              }
+            } else {
+              for (let rnt = 0, Lnt = fieldHeaders; rnt < Lnt.length; rnt++) {
+                let row = fields[fieldHeaders[rnt]];
+                for (let j = 0, ci = 1; j < cLen && ci < colLen; j++, ci++) {
+                  if (!cTable[3].children[1].children[row]) {
+                    break;
+                  }
+                  let node = cTable[3].children[1].children[row].childNodes[j];
+                  let prevNode =
+                    cTable[3].children[1].children[row - 1].childNodes[j];
+                  let ri = undefined;
+                  let prevRi = undefined;
+                  if (node) {
+                    ri = node.getAttribute("index");
+                  }
+                  if (prevNode) {
+                    prevRi = prevNode.getAttribute("index");
+                  }
+                  if (ri < [].slice.call(pivotObj.pivotValues).length) {
+                    let cRowFieldName = cTable[2].children[1].children[
+                      row
+                    ].childNodes[0].getAttribute("fieldname");
+                    let prevRowFieldName = cTable[2].children[1].children[
+                      row - 1
+                    ].childNodes[0].getAttribute("fieldname");
+                    if (
+                      pivotObj.pivotValues[prevRi][ci].value >
+                        pivotObj.pivotValues[ri][ci].value &&
+                      node.querySelector(".tempwrap") &&
+                      cRowFieldName === prevRowFieldName
+                    ) {
+                      let trendElement = node.querySelector(".tempwrap");
+                      trendElement.className = trendElement.className.replace(
+                        "e-pivot-trend-profit",
+                        "e-pivot-trend-loss"
+                      );
+                    } else if (
+                      pivotObj.pivotValues[prevRi][ci].value <
+                        pivotObj.pivotValues[ri][ci].value &&
+                      node.querySelector(".tempwrap") &&
+                      cRowFieldName === prevRowFieldName
+                    ) {
+                      let trendElement = node.querySelector(".tempwrap");
+                      trendElement.className = trendElement.className.replace(
+                        "e-pivot-trend-profit",
+                        "e-pivot-trend-profit"
+                      );
+                    }
                   }
                 }
               }
             }
           }
-        } else {
-          for (let rnt = 0, Lnt = fieldHeaders; rnt < Lnt.length; rnt++) {
-            let row = fields[fieldHeaders[rnt]];
-            for (let j = 0, ci = 1; j < cLen && ci < colLen; j++, ci++) {
-              if (!cTable[3].children[1].children[row]) {
-                break;
-              }
-              let node = cTable[3].children[1].children[row].childNodes[j];
-              let prevNode =
-                cTable[3].children[1].children[row - 1].childNodes[j];
-              let ri = undefined;
-              let prevRi = undefined;
-              if (node) {
-                ri = node.getAttribute("index");
-              }
-              if (prevNode) {
-                prevRi = prevNode.getAttribute("index");
-              }
-              if (ri < [].slice.call(pivotObj.pivotValues).length) {
-                let cRowFieldName = cTable[2].children[1].children[
-                  row
-                ].childNodes[0].getAttribute("fieldname");
-                let prevRowFieldName = cTable[2].children[1].children[
-                  row - 1
-                ].childNodes[0].getAttribute("fieldname");
-                if (
-                  pivotObj.pivotValues[prevRi][ci].value >
-                    pivotObj.pivotValues[ri][ci].value &&
-                  node.querySelector(".tempwrap") &&
-                  cRowFieldName === prevRowFieldName
-                ) {
-                  let trendElement = node.querySelector(".tempwrap");
-                  trendElement.className = trendElement.className.replace(
-                    "e-pivot-trend-profit",
-                    "e-pivot-trend-loss"
-                  );
-                } else if (
-                  pivotObj.pivotValues[prevRi][ci].value <
-                    pivotObj.pivotValues[ri][ci].value &&
-                  node.querySelector(".tempwrap") &&
-                  cRowFieldName === prevRowFieldName
-                ) {
-                  let trendElement = node.querySelector(".tempwrap");
-                  trendElement.className = trendElement.className.replace(
-                    "e-pivot-trend-profit",
-                    "e-pivot-trend-profit"
-                  );
-                }
-              }
-            }
-          }
         }
       }
     }
-  }
   };
 
   return (
@@ -235,22 +302,22 @@ const CumulativeTable = (props: any) => {
               </div>
             }
           >
-            <style>{SAMPLE_CSS}</style> 
+            <style>{SAMPLE_CSS}</style>
             <div className="control-pane">
-        <div className="control-section" style={{ overflow: "auto" }}>
-            <PivotViewComponent
-              id="PivotView"
-              dataSourceSettings={dataSourceSettings}
-              width={"100%"}
-              height={"350"}
-              gridSettings={{ columnWidth: 130, allowResizing: true }}
-              cellTemplate={cellTemplate}
-              dataBound={trend}
-              ref={(pivotview: any) => {
-                pivotObj = pivotview;
-              }}
-            ></PivotViewComponent>
-            </div>
+              <div className="control-section" style={{ overflow: "auto" }}>
+                <PivotViewComponent
+                  id="PivotView"
+                  dataSourceSettings={dataSourceSettings}
+                  width={"100%"}
+                  height={"350"}
+                  gridSettings={{ columnWidth: 130, allowResizing: true }}
+                  cellTemplate={cellTemplate}
+                  dataBound={trend}
+                  ref={(pivotview: any) => {
+                    pivotObj = pivotview;
+                  }}
+                ></PivotViewComponent>
+              </div>
             </div>
             {/* <PivotTableComponent
           id={`BOB`}

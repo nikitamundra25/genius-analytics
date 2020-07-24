@@ -210,7 +210,7 @@
           "name": "0BRM",
           "OCCTY": 50,
           "OCCLY": 64,
-          "ADRTY": 134,
+          "ADRTY": 174,
           "ADRLY": 111
         },
         {
@@ -218,14 +218,14 @@
           "OCCTY": 88,
           "OCCLY": 80,
           "ADRTY": 157,
-          "ADRLY": 169
+          "ADRLY": 129
         },
         {
           "name": "2BRM",
           "OCCTY": 74,
           "OCCLY": 76,
           "ADRTY": 257,
-          "ADRLY": 231
+          "ADRLY": 200
         }
       ]
     },
@@ -1450,23 +1450,23 @@
       "graphdata": [
         {
           "data": [
-            { "x": "My RevPAR", "y": 115.0 },
-            { "x": "RevPAR Compact", "y": 96.0 },
-            { "x": "RGI", "y": 119.8 }
+            { "x": "My RevPAR", "y1": 115.0 },
+            { "x": "RevPAR Compact", "y1": 96.0 },
+            { "x": "RGI", "y1": 119.8 }
           ]
         },
         {
           "data": [
-            { "x": "My OCC", "y": 65.0 },
-            { "x": "OCC Compact", "y": 68.0 },
-            { "x": "MPI", "y": 96.8 }
+            { "x": "My OCC", "y1": 65.0 },
+            { "x": "OCC Compact", "y1": 68.0 },
+            { "x": "MPI", "y1": 96.8 }
           ]
         },
         {
           "data": [
-            { "x": "My ARR", "y": 175.0 },
-            { "x": "ARR Compact", "y": 140.0 },
-            { "x": "ARI", "y": 124.8 }
+            { "x": "My ARR", "y1": 175.0 },
+            { "x": "ARR Compact", "y1": 140.0 },
+            { "x": "ARI", "y1": 124.8 }
           ]
         }
       ]

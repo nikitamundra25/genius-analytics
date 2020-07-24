@@ -1,5 +1,4 @@
 import React from "react";
-import { Row } from "react-bootstrap";
 import BOB from "./BOB";
 import MonthlyDailyOccupacy from "./MonthlyDailyOccupacy";
 import DailyOccupacy from "./DailyOccupacy";
@@ -143,13 +142,13 @@ const getChart = (chartType: any) => {
 
 const DashboardWidget = ({ graphList }: { graphList: any[] }) => {
   return (
-    <Row>
+    <>
       {graphList.map((chartConfig: any, index: number) => {
         return (
           <React.Fragment key={index}>{getChart(chartConfig)}</React.Fragment>
         );
       })}
-    </Row>
+    </>
   );
 };
 

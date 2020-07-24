@@ -30,7 +30,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f7f7f7;
+  background: $light-bg;
 
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -85,7 +85,7 @@ body {
           top: -3px;
           width: 16px;
           height: 16px;
-          color: #fff;
+          color: $white;
           background-color: #f46a6a;
           border-radius: 50%;
           font-size: 10px;
@@ -343,6 +343,7 @@ body {
   box-shadow: none;
   transition: all .3s ease-in-out;
   height: 100%;
+  width:100%;
   margin-bottom:0px;
   .card-header{
     padding: 20px 15px 0px;
@@ -350,7 +351,7 @@ body {
     border-bottom: 0px ;
     .card-title{
       font-weight: 500;
-      color: #2c2c2c;
+      color: $light-black-opaque;
      
     }
   }
@@ -361,7 +362,7 @@ body {
 
 .main-title{
   font-weight: 500;
-  color: #ffffff;
+  color: $white;
   font-size: 18px;
   text-align: center;
   margin-bottom: 20px;
@@ -371,14 +372,14 @@ body {
 }
 .sub-title{
   font-weight: 500;
-  color: #2c2c2c;
+  color: $light-black-opaque;
   font-size: 1.09375rem;
   text-align: center;
 }
 .sub-inner-title{
   font-size: 15px;
   font-weight: 500;
-  color: #2c2c2c;
+  color: $light-black-opaque;
 }
 
 .action-wrap{
@@ -390,8 +391,8 @@ body {
     height:35px;
     border-radius: 4px;
     background:$white;
-    border:1px solid #242424;
-    color:#242424;
+    border:1px solid $light-black-opaque;
+    color:$light-black-opaque;
     cursor:pointer;
     display:inline-flex;
     align-items: center;
@@ -400,7 +401,7 @@ body {
     font-size: 16px;
     transition: all 0.3s ease-in;
     &.active{
-      background:#242424;
+      background:$light-black-opaque;
       color:$white;
     }
   }
@@ -421,7 +422,7 @@ body {
     border-radius: 4px;
     box-shadow: 2px 2px 4px 0px rgba(46, 44, 44, 0.29);
     font-weight: 500;
-    border: 1px solid #ede8e8;
+    border: 1px solid $border-color;
   }
   .year-nav{
     font-size: 16px;
@@ -478,14 +479,14 @@ body {
       .dropdown-toggle {
         background: #007db9;
         border-color: #007db9;
-        color: #fff;
+        color: $white;
         box-shadow: 2px 2px 4px 0px #1d1d1d47;
       }
     }
     &.dashboard-dropdown{
       .dropdown-toggle {
-        background: #ffffff;
-        border-color: #ffffff;
+        background: $white;
+        border-color: $white;
         color: #007db9;
         box-shadow: 2px 2px 4px 0px #1d1d1d47;
       }
@@ -494,7 +495,7 @@ body {
     min-width: 10rem;
     padding: .5rem 0;
     border:0px;
-    background:#fff;
+    background:$white;
     box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
     z-index: 1001;
     .dropdown-item {

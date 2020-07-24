@@ -30,7 +30,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
           <Card.Body>
             <Row>
               <Col xs={12} md={12}>
-                <div className="sub-title text-left">{chartType.name}</div>
+                <div className="sub-title text-left  mb-3 ">{chartType.name}</div>
                 <TableForm index={index} 
                 graphdata={chartType.pivotData}
                 />
@@ -59,7 +59,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   }
 
   return (
-    <Row>
+    <>
       {graphList.map((chartConfig: any, index: number) => {
          GetDynamicRowCol(index)
         return (
@@ -68,7 +68,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
           </React.Fragment>
         );
       })}
-    </Row>
+    </>
   );
 };
 

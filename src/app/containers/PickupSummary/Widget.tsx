@@ -62,7 +62,7 @@ const getChart = (chartType: any, index: number) => {
 
 const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   return (
-    <Row>
+    <>
       {graphList.map((chartConfig: any, index: number) => {
         return (
           <React.Fragment key={index}>
@@ -70,7 +70,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
           </React.Fragment>
         );
       })}
-    </Row>
+    </>
   );
 };
 

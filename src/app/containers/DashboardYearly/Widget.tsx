@@ -1,6 +1,5 @@
 import React from "react";
-import { Row } from "react-bootstrap";
-import CumulativeTable from "./CumulativeTable";
+import CumulativeTable from "./Cumulative";
 import MonthlyOCCADR from "./OCCADR/Monthly";
 import QuarterlyOCCADR from "./OCCADR/Quarterly";
 import RoomTypesYTD from "./RoomTypesYTD";
@@ -182,7 +181,7 @@ const getChart = (chartType: any) => {
 
 const DashboardMonthlyWidget = ({ graphList }: { graphList: any[] }) => {
   return (
-    <Row>
+    <>
       {graphList.map((chartConfig: any, index: number) => {
         return (
           <React.Fragment key={index}>
@@ -192,7 +191,7 @@ const DashboardMonthlyWidget = ({ graphList }: { graphList: any[] }) => {
           </React.Fragment>
         );
       })}
-    </Row>
+    </>
   );
 };
 
