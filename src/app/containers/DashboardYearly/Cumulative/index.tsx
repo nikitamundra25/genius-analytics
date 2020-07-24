@@ -4,8 +4,8 @@ import { getMonths } from "../../../../helper";
 import BarChartComponent from "../../../components/Charts/BarChart";
 import PieChartComponent from "../../../components/Charts/PieChart";
 const months = getMonths();
-
-const data = months.map((month: string) => ({
+  months.push("Total")
+let data = months.map((month: string) => ({
   name: month,
   type: "label",
   data: [
@@ -31,6 +31,7 @@ const data = months.map((month: string) => ({
     },
   ],
 }));
+
 
 const tableData = [
   {
@@ -156,10 +157,6 @@ const CumulativeTable = () => {
                     </div>
                   </th>
                 ))}
-                <th className="head-col">
-                  Total
-                  <br /> 2018
-                </th>
               </tr>
             </thead>
             <tbody>

@@ -99,7 +99,7 @@ export default ({ graphdata = [] }: any) => {
           {RTGBarChart && RTGBarChart.length
             ? RTGBarChart.map((key: any, index: number) => {
                 return (
-                  <Col sm={4} md={4}>
+                  <Col sm={4} md={4} key={index} >
                     <React.Suspense
                       fallback={
                         <div className="card-loader">
