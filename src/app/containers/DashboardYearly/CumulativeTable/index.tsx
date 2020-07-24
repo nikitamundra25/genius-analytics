@@ -100,7 +100,7 @@ const CumulativeTable = (props: any) => {
               element.rowHeaders === "Business Mix" &&
               element.rowIndex === 12
             ) {
-              pivotObj.pivotValues[12][index].formattedText = "1";
+              pivotObj.pivotValues[12][index].formattedText = "pivot chart";
             } else {
               pivotObj.pivotValues[12][index].value = "";
             }

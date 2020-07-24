@@ -1,33 +1,48 @@
-import React ,{FunctionComponent,useEffect}  from "react";
+import React, { FunctionComponent, useEffect } from "react";
 import DashboardWidget from "./Widget";
 import TopBar from "./TopBar";
-import {useSelector, useDispatch} from 'react-redux'
-import {DashboardMainRequest} from '../../../actions';
+import { useSelector, useDispatch } from "react-redux";
+import { DashboardMainRequest } from "../../../actions";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
 import "./index.scss";
 import { IRootState } from "../../../interfaces";
+import { Button } from "react-bootstrap";
 
-const HomeComponent : FunctionComponent = () => {
-  // const { graphCard } = graphStats;
+// export class Default extends SampleBase {
+const HomeComponent: FunctionComponent = () => {
   const cellSpacing = [5, 10];
-  const dispatch = useDispatch()
-  const DashboardReducer = useSelector((state:IRootState) => state.DashboardReducer)
-  
-  useEffect(() => {
+  const dispatch = useDispatch();
+  let restoreModel: any = [];
+  let dashboardObj: any;
+
+   const DashboardReducer = useSelector((state:IRootState) => state.DashboardReducer)
+
+   useEffect(() => {
     dispatch(DashboardMainRequest())
     // eslint-disable-next-line
   }, [])
+ 
 
-  // To reset drag & drop when select date
- const handleReset = () => {
-  // dispatch(DashboardMainRequest())
-  }
+    // To reset drag & drop when select date
+  const RestorePanel = () => {  
+    // dashboardObj.panels = restoreModel;
+  };
   
-  const {dashboardMainList}= DashboardReducer
-  
+  const created = () => {
+    restoreModel = dashboardObj.serialize();
+  };
+
+
+   const {dashboardMainList}= DashboardReducer
+
   return (
     <>
-      <TopBar  handleReset={handleReset} />
+    <TopBar  handleReset={RestorePanel} />
+        {/* <div className="addContainer">
+          <Button id="add" onClick={RestorePanel}>
+            Restore
+          </Button>
+        </div> */}
       <div className="animated fadeIn">
         {dashboardMainList && dashboardMainList.length ? (
         <DashboardLayoutComponent
@@ -36,11 +51,13 @@ const HomeComponent : FunctionComponent = () => {
           allowResizing={false}
           columns={4}
           cellAspectRatio={120 / 140}
-          enablePersistence={false}
+          created={created}
+          ref={(scope:any) => { dashboardObj = scope; }}
         >
-            <DashboardWidget graphList={dashboardMainList} />
+           <DashboardWidget graphList={dashboardMainList} />
         </DashboardLayoutComponent>
-          ) : null}
+        ) : null
+        }
       </div>
     </>
   );

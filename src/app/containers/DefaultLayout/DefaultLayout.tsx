@@ -41,69 +41,8 @@ class DefaultLayout extends Component<
       isLoading: true,
       isAuthenticated: true,
       userDetails: {},
-      startDate: new Date(),
-      activeMonth: moment().month(),
-      activeYear: moment().year(),
     };
   }
-
-  handleMonthNav = (str: string) => {
-    const { activeMonth, activeYear } = this.state;
-    let month: number = str === "previous" ? activeMonth - 1 : activeMonth + 1;
-    let year: number = parseInt(activeYear);
-    if (str === "previous") {
-      // To check if active month is january than set month to december & year to previous year
-      if (activeMonth === 0) {
-        month = 11;
-        year = activeYear - 1;
-      }
-    } else {
-      if (activeMonth === 11) {
-        month = 0;
-        year = activeYear + 1;
-      }
-    }
-    let setMonthForDays: any = new Date(
-      year,
-      parseInt(moment().month(month).format("M"))
-    );
-
-    let setNewDate: any = new Date(
-      setMonthForDays.getFullYear(),
-      setMonthForDays.getMonth() - 1,
-      1
-    );
-    this.setState({
-      activeMonth: month,
-      activeYear: year,
-      startDate: setNewDate,
-    });
-  };
-
-  onhandleChange = (e: any) => {
-    if (e && e.itemData && e.itemData.text) {
-      let setMonthForDays: any = new Date(
-        e.itemData.text,
-        this.state.activeMonth
-      );
-
-      let setNewDate: any = new Date(
-        setMonthForDays.getFullYear(),
-        setMonthForDays.getMonth() - 1,
-        1
-      );
-      this.setState({
-        activeYear: e.itemData.text,
-        startDate: setNewDate,
-      });
-    }
-  };
-
-  handleDatePicker = (date: Date | any) => {
-    let year: number = date.getFullYear();
-    let month: number = date.getMonth();
-    this.setState({ startDate: date, activeYear: year, activeMonth: month });
-  };
 
   render() {
     return (

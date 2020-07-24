@@ -22,10 +22,10 @@ const MixedCharts = ({ charts = [], id, chartSettings = {},legend= true }: any) 
     <ChartComponent
       id={id}
       legendSettings={legendSettings}
-      style={{ textAlign: "center" }}
+      style={{ textAlign: "center", "height": "250px", "width": "100%" }}
       chartArea={{ border: { width: 0 } }}
-      width={"100%"}
-      height={"250px"}
+      // width={"100%"}
+      // height={"250px"}
       {...chartSettings}>
       <Inject
         services={[
