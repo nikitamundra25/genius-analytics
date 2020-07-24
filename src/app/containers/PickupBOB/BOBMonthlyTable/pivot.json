@@ -17,20 +17,25 @@
   {  "Amount": 1, "Month": "Mon 13 Oct", "Title": "BAR"  },
   {  "Amount": 1, "Month": "Mon 14 Oct", "Title": "BAR"  },
 
-  
+  {  "Amount": "", "Month": "Mon 15 Oct", "Title": "BAR"  },
+  {  "Amount": "", "Month": "Mon 16 Oct", "Title": "BAR"  },
+  {  "Amount": "", "Month": "Mon 17 Oct", "Title": "BAR"  },
+  {  "Amount": "", "Month": "Mon 18 Oct", "Title": "BAR"  },
 
   {  "Amount": 1, "Month": "Mon 19 Oct", "Title": "BAR"  },
   {  "Amount": 0, "Month": "Mon 20 Oct", "Title": "BAR"  },
   {  "Amount": 0, "Month": "Mon 21 Oct", "Title": "BAR"  },
   {  "Amount": 1, "Month": "Mon 22 Oct", "Title": "BAR"  },
 
-  
+  {  "Amount": "", "Month": "Mon 25 Oct", "Title": "BAR"  },
 
   {  "Amount": 0, "Month": "Mon 26 Oct", "Title": "BAR"  },
   {  "Amount": 0, "Month": "Mon 27 Oct", "Title": "BAR"  },
   {  "Amount": 0, "Month": "Mon 28 Oct", "Title": "BAR"  },
 
-  
+  {  "Amount": "", "Month": "Mon 29 Oct", "Title": "BAR"  },
+  {  "Amount": "", "Month": "Mon 30 Oct", "Title": "BAR"  },
+  {  "Amount": "", "Month": "Mon 31 Oct", "Title": "BAR"  },
 
 
   {  "Amount": 0, "Month": "Mon 12 Oct", "Title": "Leisure Break"  },

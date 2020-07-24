@@ -102,6 +102,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
             <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
               <MixedCharts
                 id={"occChart1"}
+                legend = {false}
                 chartSettings={{
                   primaryXAxis: {
                     valueType: "Category",
@@ -129,6 +130,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
             <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
               <MixedCharts
                 id={"occChart2"}
+                legend = {false}
                 chartSettings={{
                   primaryXAxis: {
                     valueType: "Category",

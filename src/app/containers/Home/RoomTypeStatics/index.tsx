@@ -30,6 +30,30 @@ export default ({ graphdata = [] }:any) => {
     {
       dataSource: graphdata,
       xName: "name",
+      yName: "ADRTY",
+      type: "Line",
+      fill: "#1f487c",
+      name: "ADR TY",
+      width: 2,
+      marker: {
+        visible: true,
+        width: 8,
+        height: 8,
+        fill: "#1f487c",
+        border: { width: 0, color: "#1f487c" },
+        dataLabel: {
+          visible: true,
+          position: "Top",
+          font: {
+            fontWeight: "600",
+            color: "#000000",
+          },
+        },
+      },
+    },
+    {
+      dataSource: graphdata,
+      xName: "name",
       yName: "ADRLY",
       type: "Line",
       fill: "#05234e",
@@ -38,9 +62,10 @@ export default ({ graphdata = [] }:any) => {
       dashArray: 5,
       marker: {
         visible: true,
-        width: 10,
-        height: 10,
-        border: { width: 2, color: "#05234e" },
+        width: 8,
+        height: 8,
+        fill: "#1f487c",
+        border: { width: 0, color: "#1f487c" },
         dataLabel: {
           visible: true,
           position: "Top",

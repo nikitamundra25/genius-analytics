@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+// import { useLocation } from 'react-router';
 import { Col, Card, Row } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
 const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
+
 
 const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
 
@@ -35,17 +37,28 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
     },
   ];
 
-
+ 
+  // const location = useLocation();
+  // useEffect(() => {
+  // console.log("hello chart width")
+  // const header: HTMLElement | null = document.getElementById('col-width0');
+  //     if (header) {
+        
+  //       const check = header.clientWidth;
+  //       console.log("hello header", check);
+  //       header.style.color = "red";
+  //     }
+  // }, [location]);
 
   return (
     <Card>
       <WidgetHeader title={"Key Business Metrics"} activeToggle={"graph"} />
       <Card.Body>
-      <Row className='row-inner'>
+      <Row className='row-inner' >
         {barChartBusinessMetrics && barChartBusinessMetrics.length ? 
         barChartBusinessMetrics.map((key: any, index: number) => {
           return (
-            <Col key={index} sm={3} md={3}>
+            <Col key={index} sm={3} md={3} id={`col-width${index}`}>
               
               <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
              

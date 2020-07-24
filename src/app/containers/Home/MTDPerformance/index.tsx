@@ -10,7 +10,7 @@ export default ({ graphdata = [] }: any) => {
   const RTGBarChart = [
     {
       // id: "r1",
-      // title: "RGI",
+      title: "RGI",
       // color: "#2e75b7",
       // data: graphdata[0].data,
       charts: {
@@ -29,7 +29,7 @@ export default ({ graphdata = [] }: any) => {
             // ry: 10,
             font: {
               fontWeight: "600",
-              color: "#000",
+              color: "#fff",
             },
           },
         },
@@ -37,7 +37,7 @@ export default ({ graphdata = [] }: any) => {
     },
     {
       // id: "r2",
-      // title: "MPI",
+      title: "MPI",
       // color: "#5398d9",
       // data: graphdata[1].data,
       charts: {
@@ -56,7 +56,7 @@ export default ({ graphdata = [] }: any) => {
             // ry: 10,
             font: {
               fontWeight: "600",
-              color: "#000",
+              color: "#fff",
             },
           },
         },
@@ -64,7 +64,7 @@ export default ({ graphdata = [] }: any) => {
     },
     {
       // id: "r3",
-      // title: "ARI",
+      title: "ARI",
       // color: "#1f4e79",
       // data: graphdata[2].data,
       charts: {
@@ -83,7 +83,7 @@ export default ({ graphdata = [] }: any) => {
             // ry: 10,
             font: {
               fontWeight: "600",
-              color: "#000",
+              color: "#fff",
             },
           },
         },
@@ -127,7 +127,9 @@ export default ({ graphdata = [] }: any) => {
                               color: "transparent",
                             },
                           },
+                         
                           tooltip: { enable: true },
+                          title: key.title,
                         }}
                       />
 

@@ -68,6 +68,7 @@ const BookingChannel = ({ graphdata = [] }:any) => {
         <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
           <MixedCharts
             id={"BookingChannel"}
+            legend = {false}
             chartSettings={{
               primaryXAxis: {
                 valueType: "Category",
