@@ -43,9 +43,24 @@ class DefaultLayout extends Component<
     };
   }
 
+  // componentDidUpdate() {
+  //   // if (prevProps.location.pathname !== this.props.location.pathname) {
+  //     const window_width = window.innerWidth;
+  //     console.log("hello didupdate" , window_width);
+  //     const header: HTMLElement | null = document.getElementById('mainHeader');
+  //     if (header) {
+  //       console.log("hello header");
+  //       const width1 = `${window_width}px` ;
+  //       header.style.width = width1;
+       
+  //     }
+  //   // }
+  // }
+  
+
   render() {
     return (
-      <div className='app'>
+      <div className='app' >
         <AppHeader fixed>
           <Suspense fallback={<Loader />}>
             <DefaultHeader {...this.props} />

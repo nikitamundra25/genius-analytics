@@ -9,6 +9,7 @@ import {
   Category,
   Tooltip,
 } from "@syncfusion/ej2-react-charts";
+// import { Browser } from '@syncfusion/ej2-base';
 
 export const BarChartComponent = (barChart: any) => {
   return (
@@ -17,6 +18,7 @@ export const BarChartComponent = (barChart: any) => {
       style={{ textAlign: "center" }}
       chartArea={{ border: { width: 0 } }}
       height={barChart.height || "250px"}
+      // width={Browser.isDevice ? '100%' : '80%'}
       width={barChart.width || "100%"}
       {...(barChart.chartSettings || {
         primaryXAxis: {

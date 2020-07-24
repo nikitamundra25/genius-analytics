@@ -57,6 +57,7 @@ export default ({ graphdata = [] }:any) => {
         <MixedCharts
           id='adfdsf'
           charts={Charts}
+          // legend = {false}
           chartSettings={{
             primaryXAxis: {
               valueType: "Category",

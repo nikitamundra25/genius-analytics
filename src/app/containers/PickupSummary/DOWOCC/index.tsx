@@ -62,6 +62,7 @@ const PickupDOWOCCSegment = (props:any) => {
           <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts
               id={`DOWChart-${index}`}
+              legend = {false}
               chartSettings={{
                 primaryXAxis: {
                   valueType: "Category",
