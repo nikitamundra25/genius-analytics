@@ -5,6 +5,19 @@ import Loader from "../../../components/Loader/Loader";
 import { PivotViewComponent } from "@syncfusion/ej2-react-pivotview";
 import "./index.scss";
 // let data = localData.data;
+import {
+  AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, AccumulationLegend, PieSeries, AccumulationDataLabel, AccumulationTooltip,
+  Inject, IAccLoadedEventArgs, AccumulationTheme
+} from '@syncfusion/ej2-react-charts';
+ let data1 = [
+  { x: 'Argentina', y: 505370, r: '100' },
+  { x: 'Belgium', y: 551500, r: '118.7' },
+  { x: 'Cuba', y: 312685, r: '124.6' },
+  { x: 'Dominican Republic', y: 350000, r: '137.5' },
+  { x: 'Egypt', y: 301000, r: '150.8' },
+  { x: 'Kazakhstan', y: 300000, r: '155.5' },
+  { x: 'Somalia', y: 357022, r: '160.6' }
+];
 
 let dataSourceSettings = {
   enableSorting: false,
@@ -86,27 +99,42 @@ const CumulativeTable = (props: any) => {
   }
   `;
 
-  const pivotChart = () => {
-    if (pivotObj !== null) {
-      if (pivotObj && pivotObj.pivotValues && pivotObj.pivotValues.length) {
-        if (pivotObj.pivotValues[12].length) {
-          for (
-            let index = 0;
-            index < pivotObj.pivotValues[12].length;
-            index++
-          ) {
-            const element = pivotObj.pivotValues[12][index];
-            if (
-              element.rowHeaders === "Business Mix" &&
-              element.rowIndex === 12
-            ) {
-              pivotObj.pivotValues[12][index].formattedText = "pivot chart";
-            } else {
-              pivotObj.pivotValues[12][index].value = "";
-            }
-          }
-        } else {
-        }
+
+  const pivotChart = () =>{
+    if(pivotObj !== null){
+      if(pivotObj && pivotObj.pivotValues &&  pivotObj.pivotValues.length ){
+        console.log("pivotObj.pivotValues",pivotObj.pivotValues);
+     if(pivotObj.pivotValues[12].length){
+       for (let index = 0; index < pivotObj.pivotValues[12].length; index++) {
+         const element = pivotObj.pivotValues[12][index];
+         console.log("element.rowHeaders",element);
+         if(element.rowHeaders === "Business Mix"  && element.rowIndex === 12 ){
+            pivotObj.pivotValues[12][index].formattedText =   <AccumulationChartComponent id={`pie-chart-${index}`}  
+            legendSettings={{
+              visible: true
+            }}
+            enableSmartLabels={true}
+            enableAnimation={true}
+            
+            tooltip={{ enable: true }}
+          >
+            <Inject services={[AccumulationLegend, PieSeries, AccumulationDataLabel, AccumulationTooltip]} />
+            <AccumulationSeriesCollectionDirective>
+              <AccumulationSeriesDirective dataSource={data1} xName='x' yName='y' innerRadius='20%'
+                dataLabel={{
+                  visible: true, position: 'Outside', name: 'x'
+                }}
+                radius='r'
+              >
+              </AccumulationSeriesDirective>
+            </AccumulationSeriesCollectionDirective>
+          </AccumulationChartComponent>
+         }else{
+            pivotObj.pivotValues[12][index].value = ""
+         }
+       }
+     }else{
+     }
       }
     }
   };

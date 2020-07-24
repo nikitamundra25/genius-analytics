@@ -30,7 +30,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
           <Card.Body>
             <Row>
               <Col xs={12} md={12}>
-                <div className="sub-title text-left">{chartType.name}</div>
+                <div className="sub-title text-left  mb-3 ">{chartType.name}</div>
                 <TableForm index={index} 
                 graphdata={chartType.pivotData}
                 />
