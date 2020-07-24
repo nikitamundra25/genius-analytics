@@ -27,7 +27,6 @@ import { Dispatch } from "redux";
 import { connect } from "react-redux";
 import logo from "./../../../assets/img/logo150.png";
 import logosmall from "./../../../assets/img/logosmall.png";
-import moment from "moment";
 const DefaultFooter = React.lazy(() => import("./DefaultFooter"));
 const DefaultHeader = React.lazy(() => import("./DefaultHeader"));
 
@@ -43,6 +42,8 @@ class DefaultLayout extends Component<
       userDetails: {},
     };
   }
+
+
 
   render() {
     return (
