@@ -5,7 +5,7 @@ import {useSelector, useDispatch} from 'react-redux'
 import { DashboardLayoutComponent } from '@syncfusion/ej2-react-layouts';
 import { DashboardYearlyRequest } from "../../../actions";
 import { IRootState } from "../../../interfaces";
-import "../Home/index.scss";
+import "./index.scss";
 
 const DashboardYearly:FunctionComponent = () => {
   const cellSpacing = [5,10];

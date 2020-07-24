@@ -5,79 +5,19 @@ import Loader from "../../../components/Loader/Loader";
 import { PivotViewComponent } from "@syncfusion/ej2-react-pivotview";
 import './index.scss';
 // let data = localData.data;
-const MixedCharts = React.lazy(() =>
-  import("../../../components/Charts/MixedCharts")
-);
-
-let graphdata =[
-  {
-    name: "Q1",
-    OCC: 50,
-    ADR: 64
-  },
-  {
-    name: "Q2",
-    OCC: 88,
-    ADR: 80
-  },
-  {
-    name: "Q3",
-    OCC: 74,
-    ADR: 76
-  },
-  {
-    name: "Q4",
-    OCC: 74,
-    ADR: 76
-  }
-]
-
-const Charts1 = [
-  {
-    dataSource: graphdata,
-    xName: "name",
-    yName: "OCC",
-    type: "Column",
-    fill: "#3a71b4",
-    name: "OCC %",
-    width: 1,
-    marker: {
-      dataLabel: {
-        visible: true,
-        position: "Top",
-        font: {
-          fontWeight: "600",
-          color: "#ffffff",
-        },
-      },
-    },
-  },
-  {
-    dataSource: graphdata,
-    xName: "name",
-    yName: "ADR",
-    type: "Line",
-    fill: "#bb423d",
-    name: "ADR",
-    width: 2,
-    marker: {
-      visible: true,
-      width: 8,
-      height: 8,
-      fill: "#bb423d",
-      border: { width: 0, color: "#bb423d" },
-      dataLabel: {
-        visible: false,
-        position: "Top",
-        font: {
-          fontWeight: "600",
-          color: "#000000",
-        },
-      },
-    },
-  },
+import {
+  AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, AccumulationLegend, PieSeries, AccumulationDataLabel, AccumulationTooltip,
+  Inject, IAccLoadedEventArgs, AccumulationTheme
+} from '@syncfusion/ej2-react-charts';
+ let data1 = [
+  { x: 'Argentina', y: 505370, r: '100' },
+  { x: 'Belgium', y: 551500, r: '118.7' },
+  { x: 'Cuba', y: 312685, r: '124.6' },
+  { x: 'Dominican Republic', y: 350000, r: '137.5' },
+  { x: 'Egypt', y: 301000, r: '150.8' },
+  { x: 'Kazakhstan', y: 300000, r: '155.5' },
+  { x: 'Somalia', y: 357022, r: '160.6' }
 ];
-
 
 let dataSourceSettings = {
   enableSorting: false,
@@ -166,17 +106,26 @@ const CumulativeTable = (props: any) => {
          const element = pivotObj.pivotValues[12][index];
          console.log("element.rowHeaders",element);
          if(element.rowHeaders === "Business Mix"  && element.rowIndex === 12 ){
-            pivotObj.pivotValues[12][index].formattedText = `<dl>
-            <dt>
-              Browser market share June 2015
-            </dt>
-            <dd class="percentage percentage-11"><span class="text">IE 11: 11.33%</span></dd>
-            <dd class="percentage percentage-49"><span class="text">Chrome: 49.77%</span></dd>
-            <dd class="percentage percentage-16"><span class="text">Firefox: 16.09%</span></dd>
-            <dd class="percentage percentage-5"><span class="text">Safari: 5.41%</span></dd>
-            <dd class="percentage percentage-2"><span class="text">Opera: 1.62%</span></dd>
-            <dd class="percentage percentage-2"><span class="text">Android 4.4: 2%</span></dd>
-          </dl>`
+            pivotObj.pivotValues[12][index].formattedText =   <AccumulationChartComponent id={`pie-chart-${index}`}  
+            legendSettings={{
+              visible: true
+            }}
+            enableSmartLabels={true}
+            enableAnimation={true}
+            
+            tooltip={{ enable: true }}
+          >
+            <Inject services={[AccumulationLegend, PieSeries, AccumulationDataLabel, AccumulationTooltip]} />
+            <AccumulationSeriesCollectionDirective>
+              <AccumulationSeriesDirective dataSource={data1} xName='x' yName='y' innerRadius='20%'
+                dataLabel={{
+                  visible: true, position: 'Outside', name: 'x'
+                }}
+                radius='r'
+              >
+              </AccumulationSeriesDirective>
+            </AccumulationSeriesCollectionDirective>
+          </AccumulationChartComponent>
          }else{
             pivotObj.pivotValues[12][index].value = ""
          }

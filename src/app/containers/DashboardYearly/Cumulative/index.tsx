@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Table, Row, Col } from "react-bootstrap";
+import { Card, Table } from "react-bootstrap";
 import { getMonths } from "../../../../helper";
 import BarChartComponent from "../../../components/Charts/BarChart";
 import PieChartComponent from "../../../components/Charts/PieChart";
@@ -9,15 +9,18 @@ const data = months.map((month: string) => ({
   name: month,
   type: "label",
   data: [
-    { label: "", value: 2051 },
-    {
-      label: "BUD",
-      value: <i className='fa fa-arrow-up text-success' aria-hidden='true'></i>,
+    { 
+      // label: "", 
+      value: <div className="text-col">2051</div> 
     },
     {
-      label: "LY",
+      // label: "BUD",
+      value: <div className="icon-col"><i className='fa fa-arrow-up text-success' aria-hidden='true'></i></div>,
+    },
+    {
+      // label: "LY",
       value: (
-        <i className='fa fa-arrow-down text-danger' aria-hidden='true'></i>
+        <div className="icon-col" ><i className='fa fa-arrow-down text-danger' aria-hidden='true'></i></div>
       ),
     },
   ],
@@ -81,7 +84,7 @@ const tableData = [
   },
   {
     type: "pick-up",
-    name: "Pick-Up",
+    name: "Pick-up",
     months: months.map((month) => ({
       name: month,
       type: "graph",
@@ -89,12 +92,10 @@ const tableData = [
         {
           type: "bar",
           data: [
-            { x: "BAR", y: 23 },
-            { x: "Discount", y: 27 },
-            { x: "Corporate", y: -15 },
-            { x: "Cor Group", y: 8 },
-            { x: "Leisure Group", y: -13 },
-            { x: "FIT", y: 14 },
+            { x: "Room Nights", y: 23 },
+            { x: "Revenue", y: 27 },
+            { x: "ARR", y: -15 },
+            
           ],
         },
       ],
@@ -102,7 +103,7 @@ const tableData = [
   },
   {
     type: "graph",
-    name: "Business-MIX",
+    name: "Business Mix",
     months: months.map((month) => ({
       name: month,
       type: "graph",
@@ -136,17 +137,22 @@ const CumulativeTable = () => {
     <>
       <Card>
         <Card.Body>
-          <Table className='business-table' responsive>
+          <Table className='yearly-table' responsive>
             <thead>
               <tr className='business-top-row'>
                 <th></th>
                 {months.map((month: string) => (
-                  <th className='variance-col' key={month}>
+                  <th  key={month} className="head-col">
+                    
                     {month}
                     <br /> Actual
+                    <div className="header-sub-title">
+                      <span>BUD</span>
+                      <span>LY</span>
+                    </div>
                   </th>
                 ))}
-                <th className='variance-col'>
+                <th  className="head-col" >
                   Total
                   <br /> 2018
                 </th>
@@ -156,22 +162,19 @@ const CumulativeTable = () => {
               {tableData.map((table: any, index: number) => (
                 <React.Fragment key={`${table.type}-${index}`}>
                   <tr>
-                    <td>{table.name}</td>
+                    <td className="row-title" >{table.name}</td>
                     {table.months.map((month: any, index: number) => (
-                      <td key={`${month.type}-${index}`}>
-                        <Row>
+                      <td key={`${month.type}-${index}`} className="content-col">
+                       <div className="d-flex align-items-center flex-wrap">
                           {month.data.map((d: any, ind: number) => (
                             <React.Fragment
                               key={`${table.type}-${index}-${d.label}-${ind}`}>
                               {month.type === "label" ? (
-                                <Col sm={4}>
-                                  <>
-                                    {d.label} <br />
+                                <>
+                                    {/* {d.label} <br /> */}
                                     {d.value}
-                                  </>
-                                </Col>
+                                </>
                               ) : d.type === "bar" ? (
-                                <Col sm={12}>
                                   <BarChartComponent
                                     id={`${table.name}-${d.type}-${index}-${ind}`}
                                     data={d.data}
@@ -198,9 +201,9 @@ const CumulativeTable = () => {
                                     title={"Business Mix ADR"}
                                     color='#4473c5'
                                   />
-                                </Col>
+                               
                               ) : d.type === "pie" ? (
-                                <Col sm={12}>
+                               
                                   <PieChartComponent
                                     height={"250px"}
                                     width={"250px"}
@@ -213,7 +216,7 @@ const CumulativeTable = () => {
                                           explodeOffset: '5%',
                                           explodeIndex: 0,
                                           radius: "70%",
-                                          palettes: ['#4b90d1', '#f67b2b', '#a5a5a5', '#ffc60a']
+                                          palettes: ['#5b9cd6', '#ed7d31', '#a5a5a5', '#ffbf00']
                                   },
                                       chartComponent: {
                                         enableSmartLabels:true,
@@ -222,11 +225,11 @@ const CumulativeTable = () => {
                                       }
                                     }}
                                   />
-                                </Col>
+                               
                               ) : null}
                             </React.Fragment>
                           ))}
-                        </Row>
+                        </div>
                       </td>
                     ))}
                   </tr>
