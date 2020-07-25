@@ -12,6 +12,7 @@ import RGIVariance from "./RGIVariance";
 import { IDashboardWidgetProps } from "../../../interfaces";
 
 
+
 const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
 
   const getChart = (chartType: any) => {
