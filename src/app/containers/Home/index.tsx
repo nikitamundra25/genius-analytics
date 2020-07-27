@@ -6,6 +6,7 @@ import { DashboardMainRequest } from "../../../actions";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
 import { IRootState } from "../../../interfaces";
 import Loader from "../../components/Loader/Loader";
+import "./index.scss";
 
 // export class Default extends SampleBase {
 const HomeComponent: FunctionComponent = () => {
