@@ -64,31 +64,31 @@ const tableData = [
     name: "RevPAR",
     months: data,
   },
-  {
-    type: "trev-par",
-    name: "TrevPAR",
-    months: data,
-  },
-  {
-    type: "fnbrevenue",
-    name: "F&B Revenue",
-    months: data,
-  },
-  {
-    type: "mnerevenue",
-    name: "M&E Revenue",
-    months: data,
-  },
-  {
-    type: "otherrevenue",
-    name: "Other Revenue",
-    months: data,
-  },
-  {
-    type: "totalrevenue",
-    name: "Total Revenue",
-    months: data,
-  },
+  // {
+  //   type: "trev-par",
+  //   name: "TrevPAR",
+  //   months: data,
+  // },
+  // {
+  //   type: "fnbrevenue",
+  //   name: "F&B Revenue",
+  //   months: data,
+  // },
+  // {
+  //   type: "mnerevenue",
+  //   name: "M&E Revenue",
+  //   months: data,
+  // },
+  // {
+  //   type: "otherrevenue",
+  //   name: "Other Revenue",
+  //   months: data,
+  // },
+  // {
+  //   type: "totalrevenue",
+  //   name: "Total Revenue",
+  //   months: data,
+  // },
   {
     type: "pick-up",
     name: "Pick-up",
@@ -125,15 +125,15 @@ const tableData = [
             { x: "FIT", y: 14 },
           ],
         },
-        {
-          type: "pie",
-          data: [
-            { x: "Brand.com", y: 27, text: "27%" },
-            { x: "OTA", y: 38, text: "38%" },
-            { x: "GDS", y: 20, text: "20%" },
-            { x: "Direct", y: 15, text: "15%" },
-          ],
-        },
+        // {
+        //   type: "pie",
+        //   data: [
+        //     { x: "Brand.com", y: 27, text: "27%" },
+        //     { x: "OTA", y: 38, text: "38%" },
+        //     { x: "GDS", y: 20, text: "20%" },
+        //     { x: "Direct", y: 15, text: "15%" },
+        //   ],
+        // },
       ],
     })),
   },

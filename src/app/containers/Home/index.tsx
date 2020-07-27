@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { DashboardMainRequest } from "../../../actions";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
 import { IRootState } from "../../../interfaces";
-
+import "./index.scss";
 
 // export class Default extends SampleBase {
 const HomeComponent: FunctionComponent = () => {

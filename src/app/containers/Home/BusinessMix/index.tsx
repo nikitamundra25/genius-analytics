@@ -29,7 +29,7 @@ export default (props: any) => {
           },
         },
         title: "Business Mix %",
-        tooltip: { enable: true },
+        tooltip: { enable: false },
       },
       title: "Business Mix %",
       color: "#5b9cd6",

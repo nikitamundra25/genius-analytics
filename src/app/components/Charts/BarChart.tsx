@@ -49,6 +49,7 @@ export const BarChartComponent = (barChart: any) => {
           fill={barChart.color}
           name={barChart.title}
           width={1}
+          cornerRadius={{ bottomLeft: 0, bottomRight: 7, topLeft: 0, topRight: 7 }}
           marker={{
             dataLabel: {
               visible: true,

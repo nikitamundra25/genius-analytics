@@ -124,7 +124,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
   return (
     <>
       <Card>
-        <WidgetHeader title={"Occupacy Statics"} activeToggle={"graph"} />
+        <WidgetHeader title={"Occupancy Statistics"} activeToggle={"graph"} />
         <Card.Body>
         <Row className='row-inner'>
           <Col sm={7}>

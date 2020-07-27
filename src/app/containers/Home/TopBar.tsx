@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import moment from "moment";
 import { AppRoutes } from "../../../config";
 import DatePicker from "react-datepicker";
@@ -152,18 +153,18 @@ const TopBar = (props: any) => {
         </div>
         <div className="navbar-nav-item">
           <Dropdown className="dashboard-dropdown common-dropdown">
-            <Dropdown.Toggle variant="success" id="dropdown-dasboard">
+            <Dropdown.Toggle variant="link" id="dropdown-dasboard">
               Dashboard
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item href={AppRoutes.HOME}>
-                Dashboard
+              <Dropdown.Item >
+                <Link to={AppRoutes.HOME}>Dashboard</Link>
               </Dropdown.Item>
-              <Dropdown.Item  href={AppRoutes.DASHBOARDMONTHLY}>
-                Dashboard Monthly
+              <Dropdown.Item>
+                <Link to={AppRoutes.DASHBOARDMONTHLY}>Dashboard Monthly</Link>
               </Dropdown.Item>
-              <Dropdown.Item  href={AppRoutes.DASHBOARDYEARLY}>
-                Dashboard Yearly
+              <Dropdown.Item>
+                <Link to={AppRoutes.DASHBOARDYEARLY}>Dashboard Yearly</Link>
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
