@@ -5,7 +5,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
 import { IRootState } from "../../../interfaces";
 import { PickupDetailRequest } from "../../../actions";
-import "./index.scss";
 
 const PickupDetail: FunctionComponent = () => {
   const cellSpacing = [5, 10];

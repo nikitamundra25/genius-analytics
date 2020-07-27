@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import {  Container } from "react-bootstrap";
 
 class ComingSoon extends Component<any, any> {
   
   render() {
  
     return (
-     <Container>
+      <div className="d-flex align-items-center justify-content-center bg-white coming-soon-section">
          <h1>Coming Soon</h1>
-         </Container>
+      </div>
     );
   }
 }

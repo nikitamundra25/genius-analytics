@@ -4,7 +4,6 @@ import TopBar from "./TopBar";
 import { useSelector, useDispatch } from "react-redux";
 import { DashboardMainRequest } from "../../../actions";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
-import "./index.scss";
 import { IRootState } from "../../../interfaces";
 
 

@@ -128,7 +128,7 @@ export default ({ graphdata = [] }: any) => {
                             },
                           },
                          
-                          tooltip: { enable: true },
+                          tooltip: { enable: false },
                           title: key.title,
                         }}
                       />

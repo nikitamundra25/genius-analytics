@@ -106,7 +106,7 @@ const RoomTypesYTD = ({ graphdata = [] }: any) => {
   return (
     <>
       <Card>
-        <WidgetHeader title={"Room Types - YTD"} showToggle={false} />
+        <WidgetHeader title={"Room Types - YTD"} activeToggle={"graph"} />
         {/* <Card.Body> */}
           <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts
