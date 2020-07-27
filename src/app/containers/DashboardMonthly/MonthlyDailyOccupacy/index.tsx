@@ -14,10 +14,30 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
       dataSource: graphdata[0].data,
       xName: "name",
       yName: "OCC",
-      type: "Column",
+      type: "StackingColumn100",
       fill: "#2b588f",
-      name: "OCC",
+      name: "Occupied Rooms",
       width: 1,
+    },
+    {
+      dataSource: graphdata[0].data,
+      xName: "name",
+      yName: "EMPTY",
+      type: "StackingColumn100",
+      fill: "#dce8fc",
+      name: "Empty Rooms",
+      width: 1,
+      marker: {
+        dataLabel: {
+          visible: false,
+          position: "Bottom",
+          font: {
+            fontWeight: "600",
+            color: "#ffffff",
+            fontSize:"12px",
+          },
+        },
+      },
     },
     {
       dataSource: graphdata[0].data,
@@ -39,6 +59,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
           font: {
             fontWeight: "600",
             color: "#000000",
+            fontSize:"12px",
           },
         },
       },
@@ -50,9 +71,9 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
       dataSource: graphdata[1].data,
       xName: "name",
       yName: "OCC",
-      type: "Column",
+      type: "StackingColumn100",
       fill: "#2b588f",
-      name: "OCC",
+      name: "Occupied Rooms",
       width: 1,
       marker: {
         dataLabel: {
@@ -61,6 +82,27 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
           font: {
             fontWeight: "600",
             color: "#ffffff",
+            fontSize:"12px",
+          },
+        },
+      },
+    },
+    {
+      dataSource: graphdata[1].data,
+      xName: "name",
+      yName: "EMPTY",
+      type: "StackingColumn100",
+      fill: "#dce8fc",
+      name: "Empty Rooms",
+      width: 1,
+      marker: {
+        dataLabel: {
+          visible: false,
+          position: "Bottom",
+          font: {
+            fontWeight: "600",
+            color: "#ffffff",
+            fontSize:"12px",
           },
         },
       },
@@ -85,6 +127,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
           font: {
             fontWeight: "600",
             color: "#ffffff",
+            fontSize:"12px",
           },
         },
       },

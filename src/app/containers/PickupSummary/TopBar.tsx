@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import moment from "moment";
-import { useHistory } from "react-router";
+import { useHistory, useLocation } from 'react-router';
 import "react-datepicker/dist/react-datepicker.css";
 import { AppRoutes } from "../../../config";
 
 const TopBar = (props: any) => {
   const [startDate, setStartDate] = useState(new Date());
   let history = useHistory();
+  let location = useLocation();
 
   const handleMonthNav = (str: string) => {
     let activeYear: number = startDate.getFullYear();
@@ -46,6 +47,8 @@ const TopBar = (props: any) => {
                 setStartDate(date);
               }}
               showYearPicker
+              // readonly
+              // disabledKeyboardNavigation
               dateFormat="yyyy"
               className="custom-datepicker cursor-pointer"
             />
@@ -58,22 +61,28 @@ const TopBar = (props: any) => {
           </div>
         </div>
         <div
-          className="navbar-nav-item cursor-pointer"
+          className={`navbar-nav-item cursor-pointer`}
           onClick={() => history.push(AppRoutes.PICKUPSUMMARY)}
         >
-          <div className="nav-btn">By Month</div>
+          <div className={`nav-btn ${
+            location.pathname === AppRoutes.PICKUPSUMMARY ? 'active' : ''
+          }`} >By Month</div>
         </div>
         <div
-          className="navbar-nav-item cursor-pointer"
+        className={`navbar-nav-item cursor-pointer`}
           onClick={() => history.push(AppRoutes.PICKUPDETAIL)}
         >
-          <div className="nav-btn">Detail View</div>
+          <div className={`nav-btn ${
+            location.pathname === AppRoutes.PICKUPDETAIL ? 'active' : ''
+          }`}>Detail View</div>
         </div>
         <div
-          className="navbar-nav-item cursor-pointer"
+          className={`navbar-nav-item cursor-pointer `}
           onClick={() => history.push(AppRoutes.PICKUPBOB)}
         >
-          <div className="nav-btn">BOB</div>
+          <div  className={`nav-btn ${
+            location.pathname === AppRoutes.PICKUPBOB ? 'active' : ''
+          }`}>BOB</div>
         </div>
       </div>
     </>

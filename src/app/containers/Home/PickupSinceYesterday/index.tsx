@@ -75,6 +75,18 @@ const PickupSinceYesterday = ({ graphdata = [] }:any) => {
                           labelStyle: { color: "transparent" },
                         },
                         tooltip: { enable: true },
+                        marker: {
+                          dataLabel: {
+                            visible: true,
+                            position:"Middle",
+                            // rx: 10,
+                            // ry: 10,
+                            font: {
+                              fontWeight: "600",
+                              color: "#000",
+                            },
+                          },
+                        },
                         //title: key.title,
                       }}
                     />
