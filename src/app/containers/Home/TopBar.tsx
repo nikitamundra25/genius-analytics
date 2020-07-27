@@ -153,11 +153,11 @@ const TopBar = (props: any) => {
         </div>
         <div className="navbar-nav-item">
           <Dropdown className="dashboard-dropdown common-dropdown">
-            <Dropdown.Toggle variant="success" id="dropdown-dasboard">
+            <Dropdown.Toggle variant="link" id="dropdown-dasboard">
               Dashboard
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item>
+              <Dropdown.Item >
                 <Link to={AppRoutes.HOME}>Dashboard</Link>
               </Dropdown.Item>
               <Dropdown.Item>

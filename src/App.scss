@@ -487,6 +487,7 @@ body {
         border-color:$theme-color;
         color: $white;
         box-shadow: 2px 2px 4px 0px #1d1d1d47;
+        
       }
     }
     &.dashboard-dropdown{
@@ -495,6 +496,10 @@ body {
         border-color: $white;
         color:$theme-color;
         box-shadow: 2px 2px 4px 0px #1d1d1d47;
+        &:focus, &:hover{
+          box-shadow: 2px 2px 4px 0px #1d1d1d47; 
+          text-decoration: none;
+        }
       }
     }
   .dropdown-menu {

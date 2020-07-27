@@ -47,8 +47,7 @@ const TopBar = (props: any) => {
                 setStartDate(date);
               }}
               showYearPicker
-              // readonly
-              // disabledKeyboardNavigation
+             
               dateFormat="yyyy"
               className="custom-datepicker cursor-pointer"
             />
