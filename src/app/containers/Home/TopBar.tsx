@@ -5,7 +5,6 @@ import { AppRoutes } from "../../../config";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-
 const TopBar = (props: any) => {
   const currentYear = moment().get("year");
   const [state, setState] = React.useState<any>({
@@ -14,10 +13,6 @@ const TopBar = (props: any) => {
     activeMonth: moment().month(),
     startDate: new Date(),
   });
-
- 
-
-
 
   useEffect(() => {
     const yearOptions = [];
@@ -66,45 +61,39 @@ const TopBar = (props: any) => {
     });
   };
 
-
-// To change Date
-  const ondateChange = (date: Date, str:string) => {
-  const { startDate } = state;
-    let year: number 
-    let month: number
-    let setNewDate: any
-    if(str === "month"){
-       year = date.getFullYear();
-       month = date.getMonth();
-       setNewDate = date
-    }else{
+  // To change Date
+  const ondateChange = (date: Date, str: string) => {
+    const { startDate } = state;
+    let year: number;
+    let month: number;
+    let setNewDate: any;
+    if (str === "month") {
+      year = date.getFullYear();
+      month = date.getMonth();
+      setNewDate = date;
+    } else {
       year = date.getFullYear();
       month = startDate.getMonth();
-       setNewDate = new Date(
-        year,
-        month,
-        1
-      );
+      setNewDate = new Date(year, month, 1);
     }
-    setState({ 
-      activeYear: year, 
-      activeMonth: month ,
-      startDate: setNewDate
+    setState({
+      activeYear: year,
+      activeMonth: month,
+      startDate: setNewDate,
     });
-    props.handleReset()
+    props.handleReset();
   };
   const { startDate } = state;
 
   return (
     <>
-      <div className="main-navbar">
-        <div className="navbar-nav-item">
-          <div className="year-nav">
+      <div className='main-navbar'>
+        <div className='navbar-nav-item'>
+          <div className='year-nav'>
             <span
-              className="cursor-pointer mr-2"
-              onClick={() => handleMonthNav("previous")}
-            >
-              <i className="icon-arrow-left "></i>
+              className='cursor-pointer mr-2'
+              onClick={() => handleMonthNav("previous")}>
+              <i className='icon-arrow-left '></i>
             </span>
             {/* <span className="mx-3" onClick={()=>handleShow("") }>
               {moment(startDate).format("MMMM")}{" "}
@@ -113,33 +102,32 @@ const TopBar = (props: any) => {
               selected={startDate}
               onChange={(date: any) => ondateChange(date, "month")}
               showMonthYearPicker
-              dateFormat="MMMM"
-              className="custom-datepicker cursor-pointer"
+              dateFormat='MMMM'
+              className='custom-datepicker cursor-pointer'
               // minDate={new Date("2010/01/01")}
               // maxDate={new Date()}
             />
             <span
-              className="cursor-pointer ml-2"
-              onClick={() => handleMonthNav("next")}
-            >
-              <i className="icon-arrow-right "></i>
+              className='cursor-pointer ml-2'
+              onClick={() => handleMonthNav("next")}>
+              <i className='icon-arrow-right '></i>
             </span>
           </div>
         </div>
-        <div className="navbar-nav-item">
+        <div className='navbar-nav-item'>
           {/* <span className="cursor-pointer" onClick={()=>handleShow("year")}>
             {moment(startDate).format("YYYY")}{" "}
           </span> */}
           <DatePicker
             selected={startDate}
-            onChange={(date: any) => ondateChange(date,"year")}
+            onChange={(date: any) => ondateChange(date, "year")}
             showYearPicker
-            dateFormat="yyyy"
-            className="custom-datepicker cursor-pointer"
+            dateFormat='yyyy'
+            className='custom-datepicker cursor-pointer'
             // minDate={new Date("2010/01/01")}
             // maxDate={new Date()}
           />
-          
+
           {/* <DropDownListComponent
             id="year"
             dataSource={options}
@@ -148,21 +136,18 @@ const TopBar = (props: any) => {
             value={activeYear}
             popupHeight="220px"
           /> */}
-          
         </div>
-        <div className="navbar-nav-item">
-          <Dropdown className="dashboard-dropdown common-dropdown">
-            <Dropdown.Toggle variant="success" id="dropdown-dasboard">
+        <div className='navbar-nav-item'>
+          <Dropdown className='dashboard-dropdown common-dropdown'>
+            <Dropdown.Toggle variant='success' id='dropdown-dasboard'>
               Dashboard
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item href={AppRoutes.HOME}>
-                Dashboard
-              </Dropdown.Item>
-              <Dropdown.Item  href={AppRoutes.DASHBOARDMONTHLY}>
+              <Dropdown.Item href={AppRoutes.HOME}>Dashboard</Dropdown.Item>
+              <Dropdown.Item href={AppRoutes.DASHBOARDMONTHLY}>
                 Dashboard Monthly
               </Dropdown.Item>
-              <Dropdown.Item  href={AppRoutes.DASHBOARDYEARLY}>
+              <Dropdown.Item href={AppRoutes.DASHBOARDYEARLY}>
                 Dashboard Yearly
               </Dropdown.Item>
             </Dropdown.Menu>
