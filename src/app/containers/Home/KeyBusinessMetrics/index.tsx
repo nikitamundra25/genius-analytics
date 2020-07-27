@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-// import { useLocation } from 'react-router';
+import React from "react";
 import { Col, Card, Row } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
@@ -42,17 +41,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
   ];
 
  
-  // const location = useLocation();
-  // useEffect(() => {
-  // console.log("hello chart width")
-  // const header: HTMLElement | null = document.getElementById('col-width0');
-  //     if (header) {
-        
-  //       const check = header.clientWidth;
-  //       console.log("hello header", check);
-  //       header.style.color = "red";
-  //     }
-  // }, [location]);
+  
 
   return (
     <Card>
@@ -62,7 +51,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
         {barChartBusinessMetrics && barChartBusinessMetrics.length ? 
         barChartBusinessMetrics.map((key: any, index: number) => {
           return (
-            <Col key={index} sm={3} md={3} id={`col-width${index}`}>
+            <Col key={index} sm={3} md={3} >
               
               <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
              
@@ -84,7 +73,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
                       },
                     },
                     title: key.title,
-                    tooltip: { enable: true,  position: 'Top' },
+                    tooltip: { enable: false,  position: 'Top' },
                   }}
                   {...key}
                 />

@@ -27,7 +27,7 @@ export default ({ graphdata = [] }: any) => {
 
   return (
     <Card>
-      <WidgetHeader title={"RGI Performance - YTD"} />
+      <WidgetHeader title={"RGI Performance - YTD"}  activeToggle={"graph"}/>
       <Card.Body>
         <Row className="row-inner">
           {RGIBarChart.map((key: any, index: number) => {

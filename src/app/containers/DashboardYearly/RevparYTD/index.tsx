@@ -82,7 +82,7 @@ const RevparYTD = ({ graphdata = [] }: any) => {
   return (
     <>
       <Card>
-        <WidgetHeader title={"RevPAR Vs. NrevPAR - YTD"} showToggle={false} />
+        <WidgetHeader title={"RevPAR Vs. NrevPAR - YTD"} activeToggle={"graph"} />
         {/* <Card.Body> */}
           <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts

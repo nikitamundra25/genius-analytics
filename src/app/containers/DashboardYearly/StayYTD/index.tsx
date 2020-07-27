@@ -55,7 +55,7 @@ const StayYTD = ({ graphdata = [] }: any) => {
   return (
     <>
       <Card>
-        <WidgetHeader title={"Length of Stay & ADR - YTD"} showToggle={false} />
+        <WidgetHeader title={"Length of Stay & ADR - YTD"} activeToggle={"graph"} />
         {/* <Card.Body> */}
           <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts

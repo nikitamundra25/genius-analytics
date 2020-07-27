@@ -78,7 +78,7 @@ body {
         font-size: 20px;
         padding: 0px 20px;
         position: relative;
-        color: #b2b4b6;
+        color:$gray-text;
         .count{
           position: absolute;
           right: 14px;
@@ -86,7 +86,7 @@ body {
           width: 16px;
           height: 16px;
           color: $white;
-          background-color: #f46a6a;
+          background-color: $danger;
           border-radius: 50%;
           font-size: 10px;
           display: inline-flex;
@@ -99,7 +99,7 @@ body {
         .dropdown-toggle {
           background:transparent;
           position: relative;
-          color: #b2b4b6;
+          color:$gray-text;
           box-shadow:none;
           border:none;
           .user-info{
@@ -109,8 +109,8 @@ body {
             .user-icon{
               width: 40px;
               height: 40px;
-              background: #ecedf2;
-              color:#c1c4cf;
+              background:$gray-light;
+              color:$gray-text;
               border-radius: 50%;
               display: inline-flex;
               align-items: center;
@@ -121,7 +121,7 @@ body {
             .user-name{
               font-size: 15px;
               font-weight: 500;
-              color: #333;
+              color: $light-black;
               margin-right: 10px;
             }
           }
@@ -134,7 +134,7 @@ body {
             right: -9px;
             position: absolute;
             font-size: 18px;
-            color: #d7d9de;
+            color: $gray-mid;
           }
         }
         .dropdown-menu {
@@ -178,7 +178,7 @@ body {
     }
     .nav-link {
       border-radius: 6px;
-      color: #626262;
+      color: $light-black-opaque;
       // display: flex;
       // align-items: center;
       padding: 10px 12px;
@@ -187,6 +187,7 @@ body {
       border-radius: 3px;
       .nav-icon{
         font-size: 16px;
+        color: $light-black-opaque;
       }
       &.active{
         color: $white;
@@ -329,7 +330,7 @@ body {
   }
   .app-footer{
     padding: 0px 16px;
-    color: #74788d;
+    color: $secondary;
     border: 0px;
     font-size: 14px;
     margin-top: 30px;
@@ -449,7 +450,7 @@ body {
     }
   }
  .react-datepicker__month--selected {
-    border-color: #216ba5 !important;
+    border-color: $theme-color !important;
  }
  .react-datepicker__year-container-text {
     width: 16px;
@@ -477,8 +478,8 @@ body {
     font-weight: 500;
     &.year-dropdown{
       .dropdown-toggle {
-        background: #007db9;
-        border-color: #007db9;
+        background: $theme-color;
+        border-color:$theme-color;
         color: $white;
         box-shadow: 2px 2px 4px 0px #1d1d1d47;
       }
@@ -487,7 +488,7 @@ body {
       .dropdown-toggle {
         background: $white;
         border-color: $white;
-        color: #007db9;
+        color:$theme-color;
         box-shadow: 2px 2px 4px 0px #1d1d1d47;
       }
     }
@@ -504,15 +505,15 @@ body {
       padding: .35rem 1.5rem;
       clear: both;
       font-weight: 400;
-      color: #212529;
+      color: $dark;
       text-align: inherit;
       white-space: nowrap;
       background-color: transparent;
       border: 0;
       &:hover, &.active {
-        color: #16181b;
+        color: $dark;
         text-decoration: none;
-        background-color: #eaf6fb;
+        background-color: $light-blue;
       }
      }
   }
@@ -534,7 +535,7 @@ body {
     position: absolute;
     top: 0px;
     right: 0px;
-    background: #ddd;
+    background: $gray-mid-light;
     padding: 0px;
     width: 30px;
     height: 30px;
@@ -556,6 +557,13 @@ body {
       color:$white;
       background: $theme-color;
     }
+  }
+}
+.coming-soon-section{
+  min-height: calc(100vh - 150px);
+  margin: 15px 0px 0px;
+  h1{
+    color:$theme-color;
   }
 }
  

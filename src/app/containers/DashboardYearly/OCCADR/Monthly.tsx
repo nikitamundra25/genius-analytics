@@ -59,7 +59,7 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
   return (
     <>
       <Card>
-        <WidgetHeader title={"Monthly OCC & ADR"} showToggle={false} />
+        <WidgetHeader title={"Monthly OCC & ADR"} activeToggle={"graph"} />
         {/* <Card.Body> */}
           <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts

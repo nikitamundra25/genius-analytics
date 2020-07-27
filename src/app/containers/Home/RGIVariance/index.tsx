@@ -74,7 +74,7 @@ export default ({ graphdata = [] }:any) => {
                 color: "transparent",
               },
             },
-            tooltip: { enable: true },
+            tooltip: { enable: false },
           }}
         />
         </React.Suspense>

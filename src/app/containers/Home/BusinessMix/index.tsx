@@ -54,7 +54,7 @@ export default (props: any) => {
           },
         },
         title: "Business Mix ADR",
-        tooltip: { enable: true },
+        tooltip: { enable: false },
       },
       title: "Business Mix ADR",
       color: "#4473c5",
