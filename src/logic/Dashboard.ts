@@ -1,3 +1,4 @@
+import { ToggleDashboardLoader } from "./../actions/Dashboard";
 import { createLogic } from "redux-logic";
 import { toast } from "react-toastify";
 import {
@@ -22,7 +23,11 @@ let toastId: any = null;
 const dashboardLogic = createLogic({
   type: DashBoardTypes.DASHBOARD_MAIN_REQUEST,
   async process(data, dispatch: any, done) {
-    dispatch(showLoader());
+    dispatch(
+      ToggleDashboardLoader({
+        isLoading: true,
+      })
+    );
     const response = await new ApiHelper().FetchFromLocalJSONFile(
       "Dashboard/",
       "dashboard.json",
@@ -31,21 +36,16 @@ const dashboardLogic = createLogic({
       undefined,
       undefined
     );
-    if (response && !response.isError) {
-      dispatch(hideLoader());
 
+    if (response && !response.isError) {
       dispatch(
         DashboardMainSuccess({
           dashboardMainList: response.data.data,
         })
       );
-      // dispatch(push("/dashboard"));
       done();
     } else {
-      dispatch(hideLoader());
-      console.log(response);
       if (!toast.isActive(toastId)) {
-        console.log("fffffffffff");
         toastId = toast.error("Something went wrong! Please try again later");
       }
       dispatch(

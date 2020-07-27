@@ -4,6 +4,7 @@ import moment from "moment";
 import { AppRoutes } from "../../../config";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { Link } from "react-router-dom";
 
 const TopBar = (props: any) => {
   const currentYear = moment().get("year");
@@ -143,12 +144,14 @@ const TopBar = (props: any) => {
               Dashboard
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item href={AppRoutes.HOME}>Dashboard</Dropdown.Item>
-              <Dropdown.Item href={AppRoutes.DASHBOARDMONTHLY}>
-                Dashboard Monthly
+              <Dropdown.Item>
+                <Link to={AppRoutes.HOME}>Dashboard</Link>
               </Dropdown.Item>
-              <Dropdown.Item href={AppRoutes.DASHBOARDYEARLY}>
-                Dashboard Yearly
+              <Dropdown.Item>
+                <Link to={AppRoutes.DASHBOARDMONTHLY}>Dashboard Monthly</Link>
+              </Dropdown.Item>
+              <Dropdown.Item>
+                <Link to={AppRoutes.DASHBOARDYEARLY}>Dashboard Yearly</Link>
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>

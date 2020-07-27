@@ -33,6 +33,7 @@ const HomeComponent: FunctionComponent = () => {
   };
 
   const { dashboardMainList, isLoading } = DashboardReducer;
+  console.log("isLoading", isLoading);
   return (
     <>
       <TopBar handleReset={RestorePanel} />
