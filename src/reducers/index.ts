@@ -1,8 +1,9 @@
-import { IRootState } from './../interfaces';
-import { Reducer, AnyAction, combineReducers } from 'redux';
-import { handleActions } from 'redux-actions';
-import { DashboardReducer } from './Dashboard';
-import { PickupReducer } from './Pickup';
+import { IRootState } from "./../interfaces";
+import { Reducer, AnyAction, combineReducers } from "redux";
+import { handleActions } from "redux-actions";
+import { DashboardReducer } from "./Dashboard";
+import { PickupReducer } from "./Pickup";
+import { BOBReducer } from "./BOB";
 
 export const mainReducer = handleActions(
   {
@@ -15,13 +16,14 @@ export const mainReducer = handleActions(
   },
   {
     showLoader: false,
-  },
+  }
 );
 
 export const RootReducer: Reducer<IRootState, AnyAction> = combineReducers<
   IRootState
 >({
   mainReducer: mainReducer as any,
-  DashboardReducer:DashboardReducer as any,
-  PickupReducer: PickupReducer as any
+  DashboardReducer: DashboardReducer as any,
+  PickupReducer: PickupReducer as any,
+  BOBReducer: BOBReducer as any,
 });

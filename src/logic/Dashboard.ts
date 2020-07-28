@@ -1,4 +1,8 @@
-import { ToggleDashboardLoader } from "./../actions/Dashboard";
+import {
+  ToggleDashboardLoader,
+  getWidgetsFailed,
+  getWidgetsSuccess,
+} from "./../actions/Dashboard";
 import { createLogic } from "redux-logic";
 import { toast } from "react-toastify";
 import {
@@ -136,8 +140,42 @@ const dashboardYearlyLogic = createLogic({
     }
   },
 });
+
+//
+const getWidgetsLogic = createLogic({
+  type: DashBoardTypes.GET_DASHBOARD_WIDGETS,
+  process: async ({ action }, dispatch: any, done) => {
+    dispatch(
+      ToggleDashboardLoader({
+        isLoading: true,
+      })
+    );
+    const {
+      isError,
+      data,
+      messages,
+    } = await new ApiHelper().FetchFromLocalJSONFile(
+      "Dashboard",
+      "/widgets.json",
+      "GET"
+    );
+    if (isError) {
+      dispatch(getWidgetsFailed({}));
+      done();
+      return;
+    }
+    dispatch(
+      getWidgetsSuccess({
+        widgets: data,
+      })
+    );
+    done();
+  },
+});
+//
 export const DashBoardLogics = [
   dashboardLogic,
   dashboardMonthlyLogic,
   dashboardYearlyLogic,
+  getWidgetsLogic,
 ];

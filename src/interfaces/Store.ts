@@ -1,5 +1,6 @@
-import { IDashboardMainModel } from './Dashboard';
-import { IPickupModel } from './Pickup';
+import { IDashboardMainModel } from "./Dashboard";
+import { IPickupModel } from "./Pickup";
+import { IBOBModel } from "./BOB";
 
 export interface ImainState {
   showLoader: boolean;
@@ -8,5 +9,6 @@ export interface ImainState {
 export interface IRootState {
   DashboardReducer: IDashboardMainModel;
   PickupReducer: IPickupModel;
-  mainReducer: ImainState
+  mainReducer: ImainState;
+  BOBReducer: IBOBModel;
 }

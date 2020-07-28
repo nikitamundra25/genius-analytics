@@ -1,10 +1,11 @@
-import { Logic, createLogic } from 'redux-logic';
-import { push } from 'react-router-redux';
+import { Logic, createLogic } from "redux-logic";
+import { push } from "react-router-redux";
 import { DashBoardLogics } from "./Dashboard";
-import { PickupLogics } from './Pickup';
+import { PickupLogics } from "./Pickup";
+import { BOBDataLogics } from "./BOB";
 
 export const redirectToLogic = createLogic({
-  type: 'REDIRET_TO',
+  type: "REDIRET_TO",
   async process(data, dispatch: any, done) {
     const action: any = data.action;
     dispatch(push(action.payload.path));
@@ -12,8 +13,9 @@ export const redirectToLogic = createLogic({
   },
 });
 
-export const AllLogics: Logic[]|any = [
-...DashBoardLogics,
-...PickupLogics,
+export const AllLogics: Logic[] | any = [
+  ...DashBoardLogics,
+  ...PickupLogics,
+  ...BOBDataLogics,
   redirectToLogic,
 ];

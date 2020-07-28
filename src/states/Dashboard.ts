@@ -1,10 +1,10 @@
-import { IDashboardMainModel} from "../interfaces";
+import { IDashboardMainModel } from "../interfaces";
 
 export const DashboardMainState: IDashboardMainModel = {
-  isLoading: false,
+  isLoading: true,
+  widgets: [],
   dashboardMainList: [],
   dashboardMonthlyList: [],
   dashboardYearlyList: [],
   isError: false,
 };
-
