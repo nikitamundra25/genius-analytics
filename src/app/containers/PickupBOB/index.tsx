@@ -5,9 +5,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
 import { IRootState } from "../../../interfaces";
 import { PickupDetailRequest } from "../../../actions";
+import '../PickupDetail/index.scss';
 
 const PickupDetail: FunctionComponent = () => {
-  const cellSpacing = [5, 10];
+  const cellSpacing = [15, 30];
   let restoreModel: any = [];
   let dashboardObj: any;
   const dispatch = useDispatch();

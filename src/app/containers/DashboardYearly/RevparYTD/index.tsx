@@ -12,7 +12,7 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       dataSource: graphdata,
       xName: "name",
       yName: "OCC",
-      type: "Area",
+      type: "SplineArea",
       fill: "#c4e6ef",
       name: "OCC %",
       width: 1,

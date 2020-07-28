@@ -16,10 +16,11 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           type: "Column",
           fill: "#244d81",
           name: "OCC TY",
+          cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
           marker: {
             visible: false,
-            width: 10,
-            height: 10,
+            width: 8,
+            height: 8,
             border: { width: 2, color: "#2bb5ec" },
             dataLabel: {
               visible: true,
@@ -39,6 +40,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           type: "Column",
           fill: "#4f81bc",
           name: "OCC LY",
+          cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
           marker: {
             visible: false,
             width: 10,
@@ -65,8 +67,8 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           width: 2,
           marker: {
             visible: false,
-            width: 10,
-            height: 10,
+            width: 8,
+            height: 8,
             border: { width: 2, color: "#2bb5ec" },
             dataLabel: {
               visible: true,
@@ -88,9 +90,9 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           dashArray: "5",
           width: 2,
           marker: {
-            visible: true,
-            width: 10,
-            height: 10,
+            visible: false,
+            width: 8,
+            height: 8,
             border: { width: 2, color: "#293046" },
             dataLabel: {
               visible: true,
@@ -112,6 +114,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           fill: "#8293b1",
           name: "TY",
           width: 1,
+          cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
         },
         {
           dataSource: graphdata[1].data,
@@ -121,6 +124,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           fill: "#3269aa",
           name: "OCC LY",
           width: 1,
+          cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
         },
         {
           dataSource: graphdata[1].data,
@@ -131,18 +135,20 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           name: "Var",
           dashArray: "5",
           width: 2,
+          
           marker: {
             visible: true,
-            width: 10,
-            height: 10,
+            width: 8,
+            height: 8,
             fill: "#2f5891",
             border: { width: 1, color: "#ddd" },
             dataLabel: {
               visible: true,
               position: "Top",
+              fill: "#26405d",
               font: {
                 fontWeight: "600",
-                color: "#000000",
+                color: "#ffffff",
               },
             },
           },
@@ -154,7 +160,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
         <WidgetHeader title={"Occupancy Statistics"} activeToggle={"graph"} />
         <Card.Body>
         <Row className='row-inner'>
-          <Col sm={7}>
+          <Col sm={8}>
           
             <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
               <MixedCharts
@@ -183,7 +189,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
             </React.Suspense>
            
           </Col>
-          <Col sm={5}>
+          <Col sm={4}>
           
           <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts

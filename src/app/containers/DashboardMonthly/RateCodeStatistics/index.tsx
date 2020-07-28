@@ -33,10 +33,10 @@ const RateCodeStatistics = ({ graphdata = [] }:any) => {
       dataSource: graphdata,
       xName: "name",
       yName: "ARR",
-      type: "Line",
+      type: "Spline",
       fill: "#b73632",
       name: "ARR",
-      width: 2,
+      width: 3,
       dashArray:'5',
       marker: {
         visible: true,

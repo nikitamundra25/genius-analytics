@@ -42,7 +42,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
             className="e-panel"
             data-row="0"
             data-col="2"
-            data-sizex="2.5"
+            data-sizex="2"
             data-sizey="0"
           >
             <span id="close" className="e-template-icon e-clear-icon" />
