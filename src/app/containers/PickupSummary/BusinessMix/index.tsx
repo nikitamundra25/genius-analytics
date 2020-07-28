@@ -78,6 +78,7 @@ const PickupBusinessMix = (props:any) => {
                   labelStyle: {
                     color: "transparent",
                   },
+                  visible:false,
                 },
                 tooltip: { enable: true },
               }}

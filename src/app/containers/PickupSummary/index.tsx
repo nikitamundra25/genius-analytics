@@ -5,6 +5,7 @@ import TopBar from "./TopBar";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
 import { IRootState } from "../../../interfaces";
 import { PickupSummaryRequest } from "../../../actions";
+import "./index.scss";
 
 const PickupSummary: FunctionComponent = () => {
   const cellSpacing = [5, 10];

@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { DashboardMainRequest } from "../../../actions";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
 import { IRootState } from "../../../interfaces";
+import Loader from "../../components/Loader/Loader";
 import "./index.scss";
 
 // export class Default extends SampleBase {
@@ -17,7 +18,6 @@ const HomeComponent: FunctionComponent = () => {
   const DashboardReducer = useSelector(
     (state: IRootState) => state.DashboardReducer
   );
-
   useEffect(() => {
     dispatch(DashboardMainRequest());
     // eslint-disable-next-line
@@ -33,16 +33,17 @@ const HomeComponent: FunctionComponent = () => {
     restoreModel = dashboardObj.serialize();
   };
 
-
-  const { dashboardMainList } = DashboardReducer;
-
+  const { dashboardMainList, isLoading } = DashboardReducer;
+  console.log("isLoading", isLoading);
   return (
     <>
       <TopBar handleReset={RestorePanel} />
-      <div className="animated fadeIn">
-        {dashboardMainList && dashboardMainList.length ? (
+      <div className='animated fadeIn'>
+        {isLoading ? (
+          <Loader />
+        ) : dashboardMainList && dashboardMainList.length ? (
           <DashboardLayoutComponent
-            id="defaultLayout"
+            id='defaultLayout'
             cellSpacing={cellSpacing}
             allowResizing={false}
             columns={4}
@@ -50,8 +51,7 @@ const HomeComponent: FunctionComponent = () => {
             created={created}
             ref={(scope: any) => {
               dashboardObj = scope;
-            }}
-          >
+            }}>
             <DashboardWidget graphList={dashboardMainList} />
           </DashboardLayoutComponent>
         ) : null}

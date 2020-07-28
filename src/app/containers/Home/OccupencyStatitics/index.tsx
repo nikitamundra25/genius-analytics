@@ -5,7 +5,6 @@ import WidgetHeader from "../../../components/WidgetHeader";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
-// import MixedCharts from "../../../components/Charts/MixedCharts"
 
 const OccupencyStatitics = ({ graphdata = [] }:any) => {
 
@@ -17,6 +16,21 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           type: "Column",
           fill: "#244d81",
           name: "OCC TY",
+          marker: {
+            visible: false,
+            width: 10,
+            height: 10,
+            border: { width: 2, color: "#2bb5ec" },
+            dataLabel: {
+              visible: true,
+              position: "Middle",
+              font: {
+                fontWeight: "600",
+                color: "#ffffff",
+                fontSize:"7px",
+              },
+            },
+          },
         },
         {
           dataSource: graphdata[0].data,
@@ -25,7 +39,20 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           type: "Column",
           fill: "#4f81bc",
           name: "OCC LY",
-          width: 1,
+          marker: {
+            visible: false,
+            width: 10,
+            height: 10,
+            border: { width: 2, color: "#2bb5ec" },
+            dataLabel: {
+              visible: true,
+              position: "Top",
+              font: {
+                fontWeight: "600",
+                color: "#fff",
+              },
+            },
+          },
         },
         {
           dataSource: graphdata[0].data,
@@ -128,7 +155,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
         <Card.Body>
         <Row className='row-inner'>
           <Col sm={7}>
-            <div className="w-100">
+          
             <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
               <MixedCharts
                 id={"line-and-column"}
@@ -139,7 +166,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
                     majorGridLines: { width: 0 },
                   },
                   primaryYAxis: {
-                    labelFormat: "{value}%",
+                    labelFormat: "{value}",
                     edgeLabelPlacement: "Shift",
                     majorGridLines: { width: 0 },
                     majorTickLines: { width: 0 },
@@ -147,16 +174,17 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
                     labelStyle: {
                       color: "transparent",
                     },
+                    visible:false,
                   },
                   tooltip: { enable: true },
                 }}
                 charts={Charts1}
               />
             </React.Suspense>
-            </div>
+           
           </Col>
           <Col sm={5}>
-          <div className="w-100">
+          
           <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts
               id={"line-and-bar"}
@@ -176,12 +204,13 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
                   labelStyle: {
                     color: "transparent",
                   },
+                  visible:false,
                 },
                 tooltip: { enable: true },
               }}
             />
             </React.Suspense>
-            </div>
+            
           </Col>
         </Row>
        </Card.Body>

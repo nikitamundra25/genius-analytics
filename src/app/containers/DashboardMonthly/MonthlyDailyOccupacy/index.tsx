@@ -161,6 +161,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
                     labelStyle: {
                       color: "transparent",
                     },
+                    visible:false,
                   },
                   tooltip: { enable: true },
                   Legend: { enable: false },

@@ -1,25 +1,22 @@
 import React, { useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import moment from "moment";
-import { AppRoutes } from "../../../config";
+import { useHistory,useLocation } from "react-router";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
+import { AppRoutes } from "../../../config";
 
 const TopBar = (props: any) => {
   const currentYear = moment().get("year");
+  let history = useHistory();
+  let { pathname } = useLocation();
   const [state, setState] = React.useState<any>({
     yearOptions: [],
     activeYear: currentYear,
     activeMonth: moment().month(),
     startDate: new Date(),
   });
-
- 
-
-
-
+  const [selectedNav, setselectedNav] = React.useState<string>("Dashboard");
   useEffect(() => {
     const yearOptions = [];
     for (let i = currentYear; i >= 2010; i--) {
@@ -31,6 +28,16 @@ const TopBar = (props: any) => {
     });
     // eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    let str = "Dashboard"
+    if(pathname === "/dashboard/yearly"){
+      str = "Dashboard Yearly"
+    }else if(pathname === "/dashboard/monthly"){
+      str = "Dashboard Monthly"
+    }
+    setselectedNav(str)
+  }, [ pathname]);
 
   const handleMonthNav = (str: string) => {
     const { activeMonth, activeYear } = state;
@@ -67,33 +74,33 @@ const TopBar = (props: any) => {
     });
   };
 
-
-// To change Date
-  const ondateChange = (date: Date, str:string) => {
-  const { startDate } = state;
-    let year: number 
-    let month: number
-    let setNewDate: any
-    if(str === "month"){
-       year = date.getFullYear();
-       month = date.getMonth();
-       setNewDate = date
-    }else{
+  // To change Date
+  const ondateChange = (date: Date, str: string) => {
+    const { startDate } = state;
+    let year: number;
+    let month: number;
+    let setNewDate: any;
+    if (str === "month") {
+      year = date.getFullYear();
+      month = date.getMonth();
+      setNewDate = date;
+    } else {
       year = date.getFullYear();
       month = startDate.getMonth();
-       setNewDate = new Date(
-        year,
-        month,
-        1
-      );
+      setNewDate = new Date(year, month, 1);
     }
-    setState({ 
-      activeYear: year, 
-      activeMonth: month ,
-      startDate: setNewDate
+    setState({
+      activeYear: year,
+      activeMonth: month,
+      startDate: setNewDate,
     });
-    props.handleReset()
+    props.handleReset();
   };
+  const CustomInput = ({ value, onClick }:any) => (
+    <span className="custom-datepicker  cursor-pointer" onClick={onClick}>
+      {value}
+    </span>
+  );
   const { startDate } = state;
 
   return (
@@ -116,6 +123,7 @@ const TopBar = (props: any) => {
               showMonthYearPicker
               dateFormat="MMMM"
               className="custom-datepicker cursor-pointer"
+              customInput={<CustomInput />}
               // minDate={new Date("2010/01/01")}
               // maxDate={new Date()}
             />
@@ -131,16 +139,18 @@ const TopBar = (props: any) => {
           {/* <span className="cursor-pointer" onClick={()=>handleShow("year")}>
             {moment(startDate).format("YYYY")}{" "}
           </span> */}
+          
           <DatePicker
             selected={startDate}
-            onChange={(date: any) => ondateChange(date,"year")}
+            onChange={(date: any) => ondateChange(date, "year")}
             showYearPicker
             dateFormat="yyyy"
             className="custom-datepicker cursor-pointer"
+            //customInput={<CustomInput />}
             // minDate={new Date("2010/01/01")}
             // maxDate={new Date()}
           />
-          
+
           {/* <DropDownListComponent
             id="year"
             dataSource={options}
@@ -149,22 +159,36 @@ const TopBar = (props: any) => {
             value={activeYear}
             popupHeight="220px"
           /> */}
-          
         </div>
         <div className="navbar-nav-item">
           <Dropdown className="dashboard-dropdown common-dropdown">
             <Dropdown.Toggle variant="link" id="dropdown-dasboard">
-              Dashboard
+              {selectedNav}
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item >
-                <Link to={AppRoutes.HOME}>Dashboard</Link>
+              <Dropdown.Item
+                eventKey="Dashboard"
+                active={selectedNav === "Dashboard" ? true : false}
+                onClick = {()=> history.push(AppRoutes.HOME)}
+                // onSelect={handleSelect}
+              >
+                Dashboard
               </Dropdown.Item>
-              <Dropdown.Item>
-                <Link to={AppRoutes.DASHBOARDMONTHLY}>Dashboard Monthly</Link>
+              <Dropdown.Item
+                eventKey="Dashboard Monthly"
+                active={selectedNav === "Dashboard Monthly" ? true : false}
+                onClick = {()=> history.push(AppRoutes.DASHBOARDMONTHLY)}
+                // onSelect={handleSelect}
+              >
+                Dashboard Monthly
               </Dropdown.Item>
-              <Dropdown.Item>
-                <Link to={AppRoutes.DASHBOARDYEARLY}>Dashboard Yearly</Link>
+              <Dropdown.Item
+                eventKey="Dashboard Yearly"
+                active={selectedNav === "Dashboard Yearly" ? true : false}
+                onClick = {()=> history.push(AppRoutes.DASHBOARDYEARLY)}
+                // onSelect={handleSelect}
+              >
+                Dashboard Yearly
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>

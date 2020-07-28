@@ -126,8 +126,8 @@ export default ({ graphdata = [] }: any) => {
                             labelStyle: {
                               color: "transparent",
                             },
+                            visible:false,
                           },
-                         
                           tooltip: { enable: false },
                           title: key.title,
                         }}

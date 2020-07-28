@@ -470,6 +470,7 @@ body {
   padding: 0px;
   font-size: 16px;
   font-weight: 600;
+  display: inline-block;
   &:focus{
     border:none;
     outline:none
@@ -529,7 +530,7 @@ body {
   }
 }
 .pickup-card{
-  padding-top:30px;
+  padding-top:50px;
   position: relative;
   .range-text{
     position: absolute;
