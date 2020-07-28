@@ -17,6 +17,7 @@ export default ({ graphdata = [] }:any) => {
       fill: "#a1c6d6",
       name: "OCC TY",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
     },
     {
       dataSource: graphdata,
@@ -26,6 +27,7 @@ export default ({ graphdata = [] }:any) => {
       fill: "#65adc5",
       name: "OCC LY",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
     },
     {
       dataSource: graphdata,
@@ -102,6 +104,7 @@ export default ({ graphdata = [] }:any) => {
                   labelStyle: {
                     color: "transparent",
                   },
+                  visible:false,
                 },
                 tooltip: { enable: true },
               }}

@@ -5,11 +5,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { DashboardMainRequest } from "../../../actions";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
 import { IRootState } from "../../../interfaces";
+import Loader from "../../components/Loader/Loader";
 import "./index.scss";
 
 // export class Default extends SampleBase {
 const HomeComponent: FunctionComponent = () => {
-  const cellSpacing = [5, 10];
+  const cellSpacing = [15, 30];
   const dispatch = useDispatch();
   let restoreModel: any = [];
   let dashboardObj: any;
@@ -17,7 +18,6 @@ const HomeComponent: FunctionComponent = () => {
   const DashboardReducer = useSelector(
     (state: IRootState) => state.DashboardReducer
   );
-
   useEffect(() => {
     dispatch(DashboardMainRequest());
     // eslint-disable-next-line
@@ -33,25 +33,27 @@ const HomeComponent: FunctionComponent = () => {
     restoreModel = dashboardObj.serialize();
   };
 
-
-  const { dashboardMainList } = DashboardReducer;
-
+  const { dashboardMainList, isLoading } = DashboardReducer;
+  console.log("isLoading", isLoading);
   return (
     <>
       <TopBar handleReset={RestorePanel} />
-      <div className="animated fadeIn">
-        {dashboardMainList && dashboardMainList.length ? (
+      <div className='animated fadeIn'>
+        {isLoading ? (
+          <Loader />
+        ) : dashboardMainList && dashboardMainList.length ? (
           <DashboardLayoutComponent
-            id="defaultLayout"
+            id='defaultLayout'
             cellSpacing={cellSpacing}
             allowResizing={false}
             columns={4}
-            cellAspectRatio={120 / 140}
+          
+            //cellAspectRatio={100 / 110}
             created={created}
             ref={(scope: any) => {
               dashboardObj = scope;
-            }}
-          >
+            }}>
+              
             <DashboardWidget graphList={dashboardMainList} />
           </DashboardLayoutComponent>
         ) : null}

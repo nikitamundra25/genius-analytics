@@ -43,10 +43,10 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
       dataSource: graphdata[0].data,
       xName: "name",
       yName: "ADR",
-      type: "Line",
+      type: "Spline",
       fill: "#e46d09",
       name: "ADR",
-      width: 2,
+      width: 3,
       marker: {
         visible: false,
         width: 10,
@@ -111,10 +111,10 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
       dataSource: graphdata[1].data,
       xName: "name",
       yName: "ADR",
-      type: "Line",
+      type: "Spline",
       fill: "#e46d09",
       name: "ADR",
-      width: 2,
+      width: 3,
       marker: {
         visible: false,
         width: 10,
@@ -140,7 +140,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
         activeToggle={"graph"}
       />
       <Card.Body>
-        <Row>
+        <Row className="row-inner">
           <Col xs={12} md={9}>
             <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
               <MixedCharts
@@ -161,6 +161,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
                     labelStyle: {
                       color: "transparent",
                     },
+                    visible:false,
                   },
                   tooltip: { enable: true },
                   Legend: { enable: false },
@@ -189,6 +190,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
                     labelStyle: {
                       color: "transparent",
                     },
+                    visible:false,
                   },
                   tooltip: { enable: true },
                 }}

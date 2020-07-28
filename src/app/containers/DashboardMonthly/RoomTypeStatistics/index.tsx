@@ -52,10 +52,10 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
       dataSource: graphdata,
       xName: "name",
       yName: "ADRTY",
-      type: "Line",
+      type: "Spline",
       fill: "#202c47",
       name: "ADR TY",
-      width: 2,
+      width: 3,
       marker: {
         visible: true,
         width: 8,
@@ -78,10 +78,10 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
       dataSource: graphdata,
       xName: "name",
       yName: "ADRLY",
-      type: "Line",
+      type: "Spline",
       fill: "#81cbe8",
       name: "ADR LY",
-      width: 2,
+      width: 3,
       dashArray:'5',
       marker: {
         visible: true,
@@ -126,6 +126,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
                   labelStyle: {
                     color: "transparent",
                   },
+                  visible:false,
                 },
                 tooltip: { enable: true },
               }}

@@ -79,6 +79,7 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
                   labelStyle: {
                     color: "transparent",
                   },
+                  visible:false,
                 },
                 tooltip: { enable: true },
               }}

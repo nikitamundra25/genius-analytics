@@ -71,6 +71,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
                       labelStyle: {
                         color: "transparent",
                       },
+                      visible:false,
                     },
                     title: key.title,
                     tooltip: { enable: false,  position: 'Top' },

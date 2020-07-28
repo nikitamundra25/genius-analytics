@@ -50,6 +50,7 @@ export default ({ graphdata = [] }: any) => {
                         labelStyle: {
                           color: "transparent",
                         },
+                        visible:false,
                       },
                       title: key.title,
                       tooltip: { enable: true },

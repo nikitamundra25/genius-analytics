@@ -51,10 +51,10 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
       dataSource: graphdata,
       xName: "name",
       yName: "ADR2018",
-      type: "Line",
+      type: "Spline",
       fill: "#50aec7",
       name: "ADR 2018",
-      width: 2,
+      width: 3,
       marker: {
         visible: true,
         width: 8,
@@ -76,10 +76,10 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
       dataSource: graphdata,
       xName: "name",
       yName: "ADR2017",
-      type: "Line",
+      type: "Spline",
       fill: "#24446e",
       name: "ADR 2017",
-      width: 2,
+      width: 3,
       marker: {
         visible: true,
         width: 8,
@@ -124,6 +124,7 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
                   labelStyle: {
                     color: "transparent",
                   },
+                  visible:false,
                 },
                 tooltip: { enable: true },
               }}

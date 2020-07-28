@@ -470,6 +470,7 @@ body {
   padding: 0px;
   font-size: 16px;
   font-weight: 600;
+  display: inline-block;
   &:focus{
     border:none;
     outline:none
@@ -528,16 +529,16 @@ body {
      }
   }
 }
-.pickup-card{
-  padding-top:30px;
-  position: relative;
-  .range-text{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-  }
-}
+// .pickup-card{
+//   padding-top:50px;
+//   position: relative;
+//   .range-text{
+//     position: absolute;
+//     top: 0px;
+//     left: 0px;
+//     z-index: 1;
+//   }
+// }
 .picker-modal-header{
   padding: 0px;
   border: 0px;
@@ -593,17 +594,23 @@ html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .main, ht
   }
 }
 
-#defaultLayout {
-  padding: 10px;
-}
-
 #defaultLayout .e-panel .e-panel-container {
   vertical-align: middle;
   font-weight: 600;
   font-size: 20px;
   text-align: center;
 }
-
-.content {
-  line-height: 90px;
+.e-dashboardlayout.e-control .e-panel {
+  background: #fff;
+  -webkit-box-shadow:  0px 0px 30px 0px rgba(82, 63, 105, 0.05);
+  box-shadow: 0px 0px 30px 0px rgba(82, 63, 105, 0.05);
+  border: 0;
+  border-radius: 4px;
 }
+.e-dashboardlayout.e-control .e-panel:hover {
+  border: 0px;
+}
+
+// .content {
+//   line-height: 90px;
+// }

@@ -5,9 +5,10 @@ import TopBar from "./TopBar";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
 import { IRootState } from "../../../interfaces";
 import { PickupSummaryRequest } from "../../../actions";
+import "./index.scss";
 
 const PickupSummary: FunctionComponent = () => {
-  const cellSpacing = [5, 10];
+  const cellSpacing = [15, 30];
   let restoreModel: any = [];
   let dashboardObj: any;
   const dispatch = useDispatch();

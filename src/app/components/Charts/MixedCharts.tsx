@@ -13,6 +13,8 @@ import {
   BarSeries,
   AreaSeries,
   StackingColumnSeries,
+  SplineAreaSeries,
+  SplineSeries
 } from "@syncfusion/ej2-react-charts";
 
 const MixedCharts = ({ charts = [], id, chartSettings = {},legend= true }: any) => {
@@ -38,6 +40,8 @@ const MixedCharts = ({ charts = [], id, chartSettings = {},legend= true }: any) 
           Tooltip,
           Legend,
           StackingColumnSeries,
+          SplineAreaSeries,
+          SplineSeries
         ]}
       />
       <SeriesCollectionDirective>
