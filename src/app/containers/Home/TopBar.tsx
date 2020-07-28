@@ -96,7 +96,11 @@ const TopBar = (props: any) => {
     });
     props.handleReset();
   };
-
+  const CustomInput = ({ value, onClick }:any) => (
+    <span className="example-custom-input cursor-pointer" onClick={onClick}>
+      {value}
+    </span>
+  );
   const { startDate } = state;
 
   return (
@@ -119,6 +123,7 @@ const TopBar = (props: any) => {
               showMonthYearPicker
               dateFormat="MMMM"
               className="custom-datepicker cursor-pointer"
+              customInput={<CustomInput />}
               // minDate={new Date("2010/01/01")}
               // maxDate={new Date()}
             />
@@ -140,6 +145,7 @@ const TopBar = (props: any) => {
             showYearPicker
             dateFormat="yyyy"
             className="custom-datepicker cursor-pointer"
+            customInput={<CustomInput />}
             // minDate={new Date("2010/01/01")}
             // maxDate={new Date()}
           />

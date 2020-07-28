@@ -29,6 +29,12 @@ const TopBar = (props: any) => {
     setStartDate(setNewDate);
   };
 
+  const CustomInput = ({ value, onClick }:any) => (
+    <span className="example-custom-input" onClick={onClick}>
+      {value}
+    </span>
+  );
+
   return (
     <>
       <div className="main-navbar">
@@ -47,8 +53,7 @@ const TopBar = (props: any) => {
                 setStartDate(date);
               }}
               showYearPicker
-              // readonly
-              // disabledKeyboardNavigation
+              customInput={<CustomInput />}
               dateFormat="yyyy"
               className="custom-datepicker cursor-pointer"
             />
