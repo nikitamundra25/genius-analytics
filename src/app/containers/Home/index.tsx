@@ -34,13 +34,13 @@ const HomeComponent: FunctionComponent = () => {
   };
 
   const { dashboardMainList, isLoading } = DashboardReducer;
-  console.log("isLoading", isLoading);
+
   return (
     <>
       <TopBar handleReset={RestorePanel} />
       <div className='animated fadeIn'>
         {isLoading ? (
-          <Loader />
+          <Loader /> 
         ) : dashboardMainList && dashboardMainList.length ? (
           <DashboardLayoutComponent
             id='defaultLayout'
