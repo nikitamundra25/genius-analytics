@@ -3,10 +3,7 @@ import Loader from "../../../components/Loader/Loader";
 import { Table } from "react-bootstrap";
 
 const MonthlyTable = (props:any) => {
-  const {index} = props;
-  
-  
-
+ 
 
   return (
     <>
