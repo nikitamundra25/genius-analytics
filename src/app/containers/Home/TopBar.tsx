@@ -97,7 +97,7 @@ const TopBar = (props: any) => {
     props.handleReset();
   };
   const CustomInput = ({ value, onClick }:any) => (
-    <span className="example-custom-input cursor-pointer" onClick={onClick}>
+    <span className="custom-datepicker  cursor-pointer" onClick={onClick}>
       {value}
     </span>
   );
@@ -139,13 +139,14 @@ const TopBar = (props: any) => {
           {/* <span className="cursor-pointer" onClick={()=>handleShow("year")}>
             {moment(startDate).format("YYYY")}{" "}
           </span> */}
+          
           <DatePicker
             selected={startDate}
             onChange={(date: any) => ondateChange(date, "year")}
             showYearPicker
             dateFormat="yyyy"
             className="custom-datepicker cursor-pointer"
-            customInput={<CustomInput />}
+            //customInput={<CustomInput />}
             // minDate={new Date("2010/01/01")}
             // maxDate={new Date()}
           />
@@ -161,7 +162,7 @@ const TopBar = (props: any) => {
         </div>
         <div className="navbar-nav-item">
           <Dropdown className="dashboard-dropdown common-dropdown">
-            <Dropdown.Toggle variant="success" id="dropdown-dasboard">
+            <Dropdown.Toggle variant="link" id="dropdown-dasboard">
               {selectedNav}
             </Dropdown.Toggle>
             <Dropdown.Menu>

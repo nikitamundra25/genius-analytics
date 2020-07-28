@@ -2,40 +2,127 @@ import React  from "react";
 import { Card, Row, Col } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
-const ColumnChart = React.lazy(() =>
-  import("../../../components/Charts/ColumnChart")
+const MixedCharts = React.lazy(() =>
+  import("../../../components/Charts/MixedCharts")
 );
 
 
 const PickupSinceYesterday = ({ graphdata = [] }:any) => {
 
+  // const BarChartReferenceLine = [
+  //   {
+  //     id: "1",
+  //     title: "Room Nights",
+  //     color: "#f07623",
+  //     data: graphdata[0].data,
+  //     range: "198",
+  //     arrowClass: "cui-arrow-top",
+  //     textClass: "text-success",
+  //   },
+  //   {
+  //     id: "2",
+  //     title: "ADR",
+  //     color: "#f07623",
+  //     data: graphdata[1].data,
+  //     range: "2.6",
+  //     arrowClass: "cui-arrow-bottom",
+  //     textClass: "text-danger",
+  //   },
+  //   {
+  //     id: "3",
+  //     title: "Revenue",
+  //     color: "#f07623",
+  //     data: graphdata[2].data,
+  //     range: "19.4 k",
+  //     arrowClass: "cui-arrow-top",
+  //     textClass: "text-success",
+  //   },
+  // ];
+
   const BarChartReferenceLine = [
     {
       id: "1",
       title: "Room Nights",
-      color: "#f07623",
-      data: graphdata[0].data,
       range: "198",
       arrowClass: "cui-arrow-top",
       textClass: "text-success",
+      charts: {
+        dataSource: graphdata[0].data,
+        xName: "x",
+        yName: "y",
+        type: "Column",
+        fill: "#f07623",
+        name: "RGI",
+        width: 1,
+        cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 7, topRight: 7 },
+        marker: {
+          dataLabel: {
+            visible: true,
+            rx: 10,
+            ry: 10,
+            font: {
+              fontWeight: "600",
+              color: "#000",
+            },
+          },
+        },
+      },
     },
     {
       id: "2",
       title: "ADR",
-      color: "#f07623",
-      data: graphdata[1].data,
       range: "2.6",
       arrowClass: "cui-arrow-bottom",
       textClass: "text-danger",
+      charts: {
+        dataSource: graphdata[1].data,
+        xName: "x",
+        yName: "y",
+        type: "Column",
+        fill: "#f07623",
+        name: "MPI",
+        width: 1,
+        cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 7, topRight: 7 },
+        marker: {
+          dataLabel: {
+            visible: true,
+            rx: 10,
+            ry: 10,
+            font: {
+              fontWeight: "600",
+              color: "#000",
+            },
+          },
+        },
+      },
     },
     {
       id: "3",
       title: "Revenue",
-      color: "#f07623",
-      data: graphdata[2].data,
       range: "19.4 k",
       arrowClass: "cui-arrow-top",
       textClass: "text-success",
+      charts: {
+        dataSource: graphdata[2].data,
+        xName: "x",
+        yName: "y",
+        type: "Column",
+        fill: "#f07623",
+        name: "ARI",
+        width: 1,
+        cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 7, topRight: 7 },
+        marker: {
+          dataLabel: {
+            visible: true,
+            rx: 10,
+            ry: 10,
+            font: {
+              fontWeight: "600",
+              color: "#000",
+            },
+          },
+        },
+      },
     },
   ];
 
@@ -60,7 +147,57 @@ const PickupSinceYesterday = ({ graphdata = [] }:any) => {
                   </div>
  
                   <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
-                    <ColumnChart
+                    <MixedCharts
+                        id={`pickup-${index}`}
+                        charts={[key.charts]}
+                        legend = {false}
+                        chartSettings={{
+                          // primaryXAxis:{ 
+                          //   title: 'Defects', 
+                          //   interval: 1, 
+                          //   valueType: 'Category', 
+                          //   majorGridLines: { width: 0 }, 
+                          //   minorGridLines: { width: 0 }, 
+                          //   majorTickLines: { width: 0 }, 
+                          //   minorTickLines: { width: 0 }, 
+                          //   lineStyle: { width: 0 }, 
+                          // },
+                          // primaryYAxis: { 
+                          //   title: 'Frequency', 
+                          //   minimum: 0,
+                          //    maximum: 150, 
+                          //    interval: 30, 
+                          //    lineStyle: { width: 0 }, 
+                          //    majorTickLines: { width: 0 }, 
+                          //    majorGridLines: { width: 1 },
+                          //   minorGridLines: { width: 1 }, 
+                          //   minorTickLines: { width: 0 } ,
+                          //   },
+                          chartArea:{ border: { width: 0 } },
+                          primaryXAxis: {
+                            valueType: "Category",
+                            interval: 1,
+                            majorGridLines: { width: 0 },
+                           
+                          },
+                          primaryYAxis: {
+                            
+                            labelFormat: "{value}%",
+                            edgeLabelPlacement: "Shift",
+                            majorGridLines: { width: 0 },
+                            majorTickLines: { width: 0 },
+                            lineStyle: { width: 0 },
+                            labelStyle: {
+                              color: "transparent",
+                            },
+                            visible:false,
+                          },
+                         
+                          tooltip: { enable: false },
+                          //title: key.title,
+                        }}
+                      />
+                    {/* <ColumnChart
                       {...key}
                       chartSettings={{
                         primaryXAxis: {
@@ -89,7 +226,7 @@ const PickupSinceYesterday = ({ graphdata = [] }:any) => {
                         },
                         //title: key.title,
                       }}
-                    />
+                    /> */}
                   </React.Suspense>
                 </div>
               </Col>

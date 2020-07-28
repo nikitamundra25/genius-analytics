@@ -126,6 +126,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
                   labelStyle: {
                     color: "transparent",
                   },
+                  visible:false,
                 },
                 tooltip: { enable: true },
               }}

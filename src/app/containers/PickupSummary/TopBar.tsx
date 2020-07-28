@@ -30,10 +30,11 @@ const TopBar = (props: any) => {
   };
 
   const CustomInput = ({ value, onClick }:any) => (
-    <span className="example-custom-input" onClick={onClick}>
+    <span className="custom-datepicker  cursor-pointer" onClick={onClick}>
       {value}
     </span>
   );
+   
 
   return (
     <>

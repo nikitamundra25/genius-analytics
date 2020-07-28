@@ -27,6 +27,7 @@ export default (props: any) => {
           labelStyle: {
             color: "transparent",
           },
+          visible:false,
         },
         title: "Business Mix %",
         tooltip: { enable: false },
@@ -52,6 +53,7 @@ export default (props: any) => {
           labelStyle: {
             color: "transparent",
           },
+          visible:false,
         },
         title: "Business Mix ADR",
         tooltip: { enable: false },
