@@ -6,6 +6,7 @@ import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestRoomTypeStaticsData } from "../../../../actions";
+import Loader from "../../../components/Loader/Loader";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
@@ -13,14 +14,13 @@ const MixedCharts = React.lazy(() =>
 
 export default () => {
   const dispatch = useDispatch();
-  const { isLoading, data, isError } = useSelector(
+  const { isLoading, data = [], isError } = useSelector(
     (state: IRootState) => state.RoomTypeStaticsReducer
   );
   useEffect(() => {
     dispatch(requestRoomTypeStaticsData());
     // eslint-disable-next-line
   }, []);
-
   const Charts = [
     {
       dataSource: data,
@@ -129,6 +129,7 @@ export default () => {
               message={"An error occured while fetching details "}
             />
           ) : (
+            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts
               id='room-type'
               charts={Charts}
@@ -152,8 +153,8 @@ export default () => {
                 tooltip: { enable: true },
               }}
             />
-            
-          )}
+          </React.Suspense>
+          )}  
         </Card.Body>
       </Card>
     </>

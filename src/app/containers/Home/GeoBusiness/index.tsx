@@ -1,6 +1,7 @@
 import React ,{useEffect} from "react";
 import { Card } from "react-bootstrap";
 // import data from "./datasource.json";
+import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
@@ -36,7 +37,9 @@ export default ({ graphdata = {} }:any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
+            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <WorldMap data={data} />
+            </React.Suspense>
             )}
         </Card.Body>
       </Card>
