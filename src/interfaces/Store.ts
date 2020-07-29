@@ -1,6 +1,7 @@
 import { IDashboardMainModel } from "./Dashboard";
 import { IPickupModel } from "./Pickup";
 import { IBOBModel } from "./BOB";
+import { IBookingChannelModel } from ".";
 
 export interface ImainState {
   showLoader: boolean;
@@ -11,4 +12,13 @@ export interface IRootState {
   PickupReducer: IPickupModel;
   mainReducer: ImainState;
   BOBReducer: IBOBModel;
+  BookingChannelReducer: IBookingChannelModel
+  BusinessMixReducer: IBookingChannelModel
+  GeographicOriginReducer: IBookingChannelModel
+  KeyBusinessMetricsReducer: IBookingChannelModel
+  MTRDRGIPerformanceReducer:IBookingChannelModel
+  OccupacyStaticsReducer: IBookingChannelModel,
+  RGIYOYVarianceReducer: IBookingChannelModel,
+  RoomNightsReducer: IBookingChannelModel,
+  RoomTypeStaticsReducer: IBookingChannelModel
 }

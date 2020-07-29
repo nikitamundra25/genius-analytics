@@ -152,8 +152,7 @@ const getWidgetsLogic = createLogic({
     );
     const {
       isError,
-      data,
-      messages,
+      data
     } = await new ApiHelper().FetchFromLocalJSONFile(
       "Dashboard",
       "/widgets.json",

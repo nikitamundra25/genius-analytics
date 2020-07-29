@@ -1,14 +1,25 @@
-import React from "react";
+import React ,{useEffect} from "react";
 import { Card } from "react-bootstrap";
-import Loader from "../../../components/Loader/Loader";
 import MixedCharts from "../../../components/Charts/MixedCharts";
 import WidgetHeader from "../../../components/WidgetHeader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import { ErrorComponent } from "../../../components/Error";
+import { requestRGIYOYVarianceData } from "../../../../actions";
 
-export default ({ graphdata = [] }:any) => {
-
+export default () => {
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.RGIYOYVarianceReducer
+  );
+  useEffect(() => {
+    dispatch(requestRGIYOYVarianceData());
+    // eslint-disable-next-line
+  }, []);
   const Charts = [
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "x",
       yName: "y1",
       type: "Bar",
@@ -28,7 +39,7 @@ export default ({ graphdata = [] }:any) => {
       },
     },
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "x",
       yName: "y2",
       type: "Bar",
@@ -53,7 +64,13 @@ export default ({ graphdata = [] }:any) => {
     <Card>
       <WidgetHeader title={"RGI YoY Variance"} activeToggle={"graph"} />
       <Card.Body>
-         <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+      {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
         <MixedCharts
           id='adfdsf'
           charts={Charts}
@@ -77,7 +94,7 @@ export default ({ graphdata = [] }:any) => {
             tooltip: { enable: false },
           }}
         />
-        </React.Suspense>
+        )}
       </Card.Body>
     </Card>
   );

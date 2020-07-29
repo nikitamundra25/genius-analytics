@@ -10,8 +10,7 @@ import GeoBusiness from "./GeoBusiness";
 import MTDPerformance from "./MTDPerformance";
 import RGIVariance from "./RGIVariance";
 import { IDashboardWidgetProps } from "../../../interfaces";
-import Loader from "../../components/Loader/Loader";
-import { Spinner } from "react-bootstrap";
+
 
 const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   const getChart = (chartType: any) => {
@@ -42,7 +41,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
             data-sizey='0'>
             <span id='close' className='e-template-icon e-clear-icon' />
             <div className='e-panel-container'>
-              {/* <KeyBusinessMetrics /> */}
+              <KeyBusinessMetrics />
             </div>
           </div>
         );
@@ -57,7 +56,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
             data-sizey='1'>
             <span id='close' className='e-template-icon e-clear-icon' />
             <div className='e-panel-container'>
-              {/* <PickupSinceYesterday /> */}
+              <PickupSinceYesterday />
             </div>
           </div>
         );
@@ -72,7 +71,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
             data-sizey='1'>
             <span id='close' className='e-template-icon e-clear-icon' />
             <div className='e-panel-container'>
-              {/* <OccupencyStatitics /> */}
+              <OccupencyStatitics />
             </div>
           </div>
         );
@@ -87,7 +86,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
             data-sizey='0'>
             <span id='close' className='e-template-icon e-clear-icon' />
             <div className='e-panel-container'>
-              {/* <BusinessMixComponent /> */}
+              <BusinessMixComponent />
             </div>
           </div>
         );
@@ -101,7 +100,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
             data-sizex='2'
             data-sizey='0'>
             <span id='close' className='e-template-icon e-clear-icon' />
-            <div className='e-panel-container'>{/* <RoomTypeStatics /> */}</div>
+            <div className='e-panel-container'><RoomTypeStatics /></div>
           </div>
         );
       case "Booking Channel Mix":
@@ -114,7 +113,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
             data-sizex='2'
             data-sizey='1'>
             <span id='close' className='e-template-icon e-clear-icon' />
-            <div className='e-panel-container'>{/* <BookingChannels /> */}</div>
+            <div className='e-panel-container'><BookingChannels /></div>
           </div>
         );
       case "Geographic Origin of business":
@@ -127,7 +126,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
             data-sizex='2'
             data-sizey='1'>
             <span id='close' className='e-template-icon e-clear-icon' />
-            <div className='e-panel-container'>{/* <GeoBusiness /> */}</div>
+            <div className='e-panel-container'><GeoBusiness /></div>
           </div>
         );
       case "MTD RGI Performance":
@@ -141,7 +140,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
             data-sizey='0'>
             <span id='close' className='e-template-icon e-clear-icon' />
             <div className='e-panel-container'>
-              {/* <MTDPerformance key={"rgi"} /> */}
+              <MTDPerformance key={"rgi"} />
             </div>
           </div>
         );
@@ -155,7 +154,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
             data-sizex='1'
             data-sizey='0'>
             <span id='close' className='e-template-icon e-clear-icon' />
-            <div className='e-panel-container'>{/* <RGIVariance /> */}</div>
+            <div className='e-panel-container'><RGIVariance /></div>
           </div>
         );
 

@@ -1,14 +1,26 @@
-import React  from "react";
+import React, {useEffect}  from "react";
 import { Card, Row, Col } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import { ErrorComponent } from "../../../components/Error";
+import { requestRoomNightsData } from "../../../../actions";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
 
-const PickupSinceYesterday = ({ graphdata = [] }:any) => {
-
+const PickupSinceYesterday = () => {
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.RoomNightsReducer
+  );
+  useEffect(() => {
+    dispatch(requestRoomNightsData());
+    // eslint-disable-next-line
+  }, []);
   // const BarChartReferenceLine = [
   //   {
   //     id: "1",
@@ -47,7 +59,7 @@ const PickupSinceYesterday = ({ graphdata = [] }:any) => {
       arrowClass: "cui-arrow-top",
       textClass: "text-success",
       charts: {
-        dataSource: graphdata[0].data,
+        dataSource:data && data.length && data[0] ? data[0].data : [],
         xName: "x",
         yName: "y",
         type: "Column",
@@ -75,7 +87,7 @@ const PickupSinceYesterday = ({ graphdata = [] }:any) => {
       arrowClass: "cui-arrow-bottom",
       textClass: "text-danger",
       charts: {
-        dataSource: graphdata[1].data,
+        dataSource: data && data.length && data[1] ? data[1].data : [],
         xName: "x",
         yName: "y",
         type: "Column",
@@ -103,7 +115,7 @@ const PickupSinceYesterday = ({ graphdata = [] }:any) => {
       arrowClass: "cui-arrow-top",
       textClass: "text-success",
       charts: {
-        dataSource: graphdata[2].data,
+        dataSource: data && data.length && data[2] ? data[2].data : [],
         xName: "x",
         yName: "y",
         type: "Column",
@@ -131,6 +143,13 @@ const PickupSinceYesterday = ({ graphdata = [] }:any) => {
       <WidgetHeader title={"Pick up Since Yesterday"} activeToggle={"graph"} />
 
       <Card.Body>
+      {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
         <Row className='row-inner'>
           {BarChartReferenceLine && BarChartReferenceLine.length ? 
           BarChartReferenceLine.map((key: any, index: number) => {
@@ -233,7 +252,8 @@ const PickupSinceYesterday = ({ graphdata = [] }:any) => {
             );
           }):null}
         </Row>
-      </Card.Body>
+          )}
+     </Card.Body>
     </Card>
   );
 };

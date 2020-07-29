@@ -2,7 +2,7 @@ import React, { FunctionComponent, useEffect } from "react";
 import DashboardWidget from "./Widget";
 import TopBar from "./TopBar";
 import { useSelector, useDispatch } from "react-redux";
-import { DashboardMainRequest, getWidgets } from "../../../actions";
+import {  getWidgets } from "../../../actions";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
 import { IRootState } from "../../../interfaces";
 import Loader from "../../components/Loader/Loader";

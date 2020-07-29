@@ -8,3 +8,4 @@ export * from "./CommonDatePicker";
 export * from "./Dashboard";
 export * from "./Pickup";
 export * from "./BOB";
+export * from "./BookingChannel";

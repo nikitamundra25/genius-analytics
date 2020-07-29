@@ -3,6 +3,15 @@ import { push } from "react-router-redux";
 import { DashBoardLogics } from "./Dashboard";
 import { PickupLogics } from "./Pickup";
 import { BOBDataLogics } from "./BOB";
+import { BookingChannelDataLogics } from "./BookingChannel";
+import { BusinessMixDataLogics } from "./BusinessMix";
+import { GeographicOriginDataLogics } from "./GeographicOriginOfBusiness";
+import { KeyBusinessMetricsDataLogics } from "./KeyBusinessMetrics";
+import { MTRDRGIPerformanceDataLogics } from "./MTDRGIPerformance";
+import { OccupacyStaticsDataLogics } from "./OccupacyStatics";
+import { RGIYOYVarianceDataLogics } from "./RGIYOYVariance";
+import { RoomNightsDataLogics } from "./RoomNights";
+import { RoomTypeStaticsDataLogics } from "./RoomTypeStatics";
 
 export const redirectToLogic = createLogic({
   type: "REDIRET_TO",
@@ -17,5 +26,14 @@ export const AllLogics: Logic[] | any = [
   ...DashBoardLogics,
   ...PickupLogics,
   ...BOBDataLogics,
+  ...BookingChannelDataLogics,
+  ...BusinessMixDataLogics,
+  ...GeographicOriginDataLogics,
+  ...KeyBusinessMetricsDataLogics,
+  ...MTRDRGIPerformanceDataLogics,
+  ...OccupacyStaticsDataLogics,
+  ...RGIYOYVarianceDataLogics,
+  ...RoomNightsDataLogics,
+  ...RoomTypeStaticsDataLogics,
   redirectToLogic,
 ];
