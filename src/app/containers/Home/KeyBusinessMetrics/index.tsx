@@ -6,6 +6,7 @@ import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestKeyBusinessMetricsData } from "../../../../actions";
+import Loader from "../../../components/Loader/Loader";
 const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
@@ -73,7 +74,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
         barChartBusinessMetrics.map((key: any, index: number) => {
           return (
             <Col key={index} sm={3} md={3} >
-             
+              <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
                 <BarChartComponent
                   chartSettings={{
                     primaryXAxis: {
@@ -98,7 +99,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
                   {...key}
                 />
               
-              
+              </React.Suspense>
             </Col>
           );
         }): null}

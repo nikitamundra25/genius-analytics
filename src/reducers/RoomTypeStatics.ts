@@ -10,7 +10,7 @@ export const RoomTypeStaticsReducer = handleActions<IBookingChannelModel, IBooki
       action
     ): IBookingChannelModel => ({
       ...state,
-      isLoading: action.payload.isLoading,
+      isLoading: true,
     }),
     [RoomTypeStaticsActionTypes.ROOM_TYPE_STATICS_DATA_FAILED]: (
       state = RoomTypeStaticsInitialState,

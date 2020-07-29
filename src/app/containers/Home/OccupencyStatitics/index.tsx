@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
 import { Row, Card, Col } from "react-bootstrap";
-// import Loader from "../../../components/Loader/Loader";
+import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
@@ -184,6 +184,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           ) : (
         <Row className='row-inner'>
           <Col sm={8}>
+          <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
               <MixedCharts
                 id={"line-and-column"}
                 chartSettings={{
@@ -207,9 +208,10 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
                 }}
                 charts={Charts1}
               />
-         
+          </React.Suspense>
           </Col>
           <Col sm={4}>
+          <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts
               id={"line-and-bar"}
               charts={Charts2}
@@ -232,7 +234,8 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
                 },
                 tooltip: { enable: true },
               }}
-            />          
+            />       
+               </React.Suspense>   
           </Col>
         </Row>
          )} 

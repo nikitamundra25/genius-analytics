@@ -6,6 +6,8 @@ import { IRootState } from "../../../../interfaces";
 import { requestRateCodeStatisticsData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import Loader from "../../../components/Loader/Loader";
+
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
@@ -85,6 +87,7 @@ const RateCodeStatistics = ({ graphdata = [] }:any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
+            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts
               id={"Ratecode"}
               chartSettings={{
@@ -108,6 +111,7 @@ const RateCodeStatistics = ({ graphdata = [] }:any) => {
               }}
               charts={Charts}
             />
+             </React.Suspense>
           )}
         </Card.Body>
       </Card>

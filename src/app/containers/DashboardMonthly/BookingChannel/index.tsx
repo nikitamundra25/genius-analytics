@@ -6,6 +6,8 @@ import { IRootState } from "../../../../interfaces";
 import { requestBookingChannelMonthlyData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import Loader from "../../../components/Loader/Loader";
+
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
@@ -85,6 +87,7 @@ const BookingChannel = ({ graphdata = [] }:any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
+            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
           <MixedCharts
             id={"BookingChannel"}
             legend = {false}
@@ -109,6 +112,7 @@ const BookingChannel = ({ graphdata = [] }:any) => {
             }}
             charts={Charts}
           />
+          </React.Suspense>
           )}
       </Card.Body>
     </Card>
