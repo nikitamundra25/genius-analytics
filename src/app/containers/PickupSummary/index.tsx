@@ -5,6 +5,7 @@ import TopBar from "./TopBar";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
 import { IRootState } from "../../../interfaces";
 import { PickupSummaryRequest } from "../../../actions";
+import Loader from "../../components/Loader/Loader";
 import "./index.scss";
 
 const PickupSummary: FunctionComponent = () => {
@@ -29,13 +30,15 @@ const PickupSummary: FunctionComponent = () => {
     restoreModel = dashboardObj.serialize();
   };
 
-  const { pickupSummaryList } = PickupReducer;
+  const { pickupSummaryList,isLoading } = PickupReducer;
 
   return (
     <>
       <TopBar handleReset={RestorePanel} />
       <div className="animated fadeIn">
-        {pickupSummaryList && pickupSummaryList.length ? (
+        { isLoading ? (
+          <Loader />
+        ) : pickupSummaryList && pickupSummaryList.length ? (
           <DashboardLayoutComponent
             id="defaultLayout"
             cellSpacing={cellSpacing}

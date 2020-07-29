@@ -1,22 +1,41 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Card } from "react-bootstrap";
-import Loader from "../../../components/Loader/Loader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
 import WidgetHeader from "../../../components/WidgetHeader";
+import { requestBookingChannelData } from "../../../../actions";
+import { ErrorComponent } from "../../../components/Error";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 const PieChartComponent = React.lazy(() =>
   import("../../../components/Charts/PieChart")
 );
 
 
 export default ({ graphdata = [] }:any) => {
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.BookingChannelReducer
+  );
+  useEffect(() => {
+    dispatch(requestBookingChannelData());
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <Card>
       <WidgetHeader title={"Booking Channel Mix"} activeToggle={"graph"} />
       <Card.Body>
-        <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+      {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
           <PieChartComponent
             id={"booking-mix"}
             height={"280px"}
-            data={graphdata}
+            data={data}
             chartSettings={{
               SeriesDirective: {
                 explode: true,
@@ -33,7 +52,8 @@ export default ({ graphdata = [] }:any) => {
               },
             }}
           />
-        </React.Suspense>
+          )}
+        
       </Card.Body>
     </Card>
   );

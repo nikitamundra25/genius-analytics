@@ -1,14 +1,27 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Card, Row, Col } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
 import Loader from "../../../components/Loader/Loader";
+import { requestBusinessMixData } from "../../../../actions";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import { ErrorComponent } from "../../../components/Error";
+
 const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
 
 export default (props: any) => {
-  const {graphdata}= props;
-
+  // const {graphdata}= props;
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.BusinessMixReducer
+  );
+  useEffect(() => {
+    dispatch(requestBusinessMixData());
+    // eslint-disable-next-line
+  }, []);
   const BarChartData = [
     {
       id: "business-card-percent",
@@ -34,7 +47,7 @@ export default (props: any) => {
       },
       title: "Business Mix %",
       color: "#5b9cd6",
-      data: graphdata[0].data,
+      data: data && data.length && data[0] ? data[0].data : [],
     },
     {
       id: "business-card-adr",
@@ -60,7 +73,7 @@ export default (props: any) => {
       },
       title: "Business Mix ADR",
       color: "#4473c5",
-      data: graphdata[1].data,
+      data: data && data.length && data[1] ? data[1].data : [],
     },
   ];
 
@@ -70,7 +83,13 @@ export default (props: any) => {
       <Card>
         <WidgetHeader title={"Business Mix"} activeToggle={"graph"} />
         <Card.Body>
-          
+        {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
             <Row className="row-inner">
               { BarChartData && BarChartData.length ? 
               BarChartData.map((key: any, index: number) => {
@@ -91,7 +110,7 @@ export default (props: any) => {
                 );
               }): null}
             </Row>
-          
+           )}
         </Card.Body>
       </Card>
     </>
