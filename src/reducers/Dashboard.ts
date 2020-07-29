@@ -31,7 +31,7 @@ export const DashboardReducer = handleActions<any, any>(
     }),
 
     // Dashboard monthly list
-    [DashBoardTypes.DASHBOARD_MONTHLY_REQUEST]: (
+    [DashBoardTypes.TOGGLE_DASHBOARD_MONTHLY_LOADER]: (
       state = DashboardMainState,
       action
     ): IDashboardMainModel => ({
@@ -56,29 +56,31 @@ export const DashboardReducer = handleActions<any, any>(
     }),
 
     //   Dashboard yearly list
-    [DashBoardTypes.DASHBOARD_YEARLY_REQUEST]: (
+    [DashBoardTypes.TOGGLE_DASHBOARD_YEARLY_LOADER]: (
       state = DashboardMainState,
       action
     ): IDashboardMainModel => ({
       ...state,
-      isLoading: true,
+      isYearlyLoading: true,
     }),
     [DashBoardTypes.DASHBOARD_YEARLY_SUCCESS]: (
       state = DashboardMainState,
       action
     ): IDashboardMainModel => ({
       ...state,
-      isLoading: false,
-      dashboardYearlyList: action.payload.dashboardYearlyList,
+      isYearlyLoading: false,
+      dashboardYearlyList: action.payload.widgets,
     }),
     [DashBoardTypes.DASHBOARD_YEARLY_FAILURE]: (
       state = DashboardMainState,
       action
     ): IDashboardMainModel => ({
       ...state,
-      isLoading: false,
-      error: action.payload.error,
+      isYearlyLoading: false,
+      isYearlyError: action.payload.error,
     }),
+
+
     [DashBoardTypes.TOGGLE_DASHBOARD_LOADER]: (
       state = DashboardMainState,
       action

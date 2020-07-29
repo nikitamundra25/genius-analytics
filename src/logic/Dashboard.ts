@@ -3,6 +3,7 @@ import {
   getWidgetsFailed,
   getWidgetsSuccess,
   ToggleDashboardMonthlyLoader,
+  ToggleDashboardYearlyLoader,
 } from "./../actions/Dashboard";
 import { createLogic } from "redux-logic";
 import { toast } from "react-toastify";
@@ -66,42 +67,35 @@ const dashboardLogic = createLogic({
 //  To get dashboard yearly list
 const dashboardYearlyLogic = createLogic({
   type: DashBoardTypes.DASHBOARD_YEARLY_REQUEST,
-  async process(data, dispatch: any, done) {
-    dispatch(showLoader());
-    const response = await new ApiHelper().FetchFromLocalJSONFile(
-      "Dashboard/",
-      "dashboardYearly.json",
-      "GET",
-      undefined,
-      undefined,
-      undefined
+  process: async ({ action }, dispatch: any, done) => {
+    dispatch(
+      ToggleDashboardYearlyLoader({
+        isLoading: true,
+      })
     );
-    if (response && !response.isError) {
-      dispatch(hideLoader());
-
-      dispatch(
-        DashboardYearlySuccess({
-          dashboardYearlyList: response.data.data,
-        })
-      );
-      // dispatch(push("/dashboard"));
+    const {
+      isError,
+      data,
+      
+    } = await new ApiHelper().FetchFromLocalJSONFile(
+      "DashboardYearly",
+      "/widgetYearly.json",
+      "GET"
+    );
+    if (isError) {
+      dispatch(DashboardYearlyFailed({}));
       done();
-    } else {
-      dispatch(hideLoader());
-      console.log(response);
-      if (!toast.isActive(toastId)) {
-        console.log("fffffffffff");
-        toastId = toast.error("Something went wrong! Please try again later");
-      }
-      dispatch(
-        DashboardYearlyFailed({
-          error: response.messages[0],
-        })
-      );
-      done();
+      return;
     }
+    dispatch(
+      DashboardYearlySuccess({
+        widgets: data,
+      })
+    );
+    done();
   },
 });
+
 
 
 

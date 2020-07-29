@@ -18,6 +18,14 @@ import { MonthlyDailyOccupacyDataLogics } from "./MonthlyDailyOccupacy";
 import { RateCodeStatisticsDataLogics } from "./RateCodeStatistics";
 import { MonthlyRoomTypeStatsDataLogics } from "./MonthlyRoomTypeStats";
 import { BookingChannelMonthlyDataLogics } from "./BookingChannelMonthly";
+import { LeadTimesYTDDataLogics } from "./LeadTimesYTD";
+import { LeadTimeYTDSegmentDataLogics } from "./LeadTimeYTDSegment";
+import { MOCCADRDataLogics } from "./MOCCADR";
+import { QOCCADRDataLogics } from "./QOCCADR";
+import { ROOMTYPESDataLogics } from "./ROOMTYPES";
+import { StayYTDDataLogics } from "./StayYTD";
+import { RGIPerformanceLogics } from "./RGIPerformance";
+import { RevPARYTDLogics } from "./RevPARYTD";
 
 export const redirectToLogic = createLogic({
   type: "REDIRET_TO",
@@ -48,5 +56,15 @@ export const AllLogics: Logic[] | any = [
   ...MonthlyDailyOccupacyDataLogics,
   ...RateCodeStatisticsDataLogics,
   ...MonthlyRoomTypeStatsDataLogics,
+
+
+  ...LeadTimesYTDDataLogics,
+  ...LeadTimeYTDSegmentDataLogics,
+  ...MOCCADRDataLogics,
+  ...QOCCADRDataLogics,
+  ...ROOMTYPESDataLogics,
+  ...StayYTDDataLogics,
+  ...RGIPerformanceLogics,
+  ...RevPARYTDLogics,
   redirectToLogic,
 ];

@@ -1,7 +1,11 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Card } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
-import Loader from "../../../components/Loader/Loader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
+import { requestQOCCADRData } from "../../../../actions";
+import { ErrorComponent } from "../../../components/Error";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
@@ -11,9 +15,18 @@ const MixedCharts = React.lazy(() =>
 
 const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
 
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.QOCCADRReducer
+  );
+  useEffect(() => {
+    dispatch(requestQOCCADRData());
+    // eslint-disable-next-line
+  }, []);
+
   const Charts1 = [
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "OCC",
       type: "Column",
@@ -32,7 +45,7 @@ const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
       },
     },
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "ADR",
       type: "Line",
@@ -62,7 +75,13 @@ const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
       <Card>
         <WidgetHeader title={"Quarterly OCC & ADR"} activeToggle={"graph"}  />
         {/* <Card.Body> */}
-          <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+        {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
             <MixedCharts
               id={id}
               chartSettings={{
@@ -86,7 +105,7 @@ const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
               }}
               charts={Charts1}
             />
-          </React.Suspense>
+          )}
         {/* </Card.Body> */}
       </Card>
     </>
