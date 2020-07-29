@@ -13,6 +13,12 @@ import { OccupacyStaticsReducer } from "./OccupacyStatics";
 import { RGIYOYVarianceReducer } from "./RGIYOYVariance";
 import { RoomNightsReducer } from "./RoomNights";
 import { RoomTypeStaticsReducer } from "./RoomTypeStatics";
+import { BookingChannelMonthlyReducer } from "./BookingChannelMonthly";
+import { DailyOccupacyBudLyReducer } from "./DailyOccupacyBudLy";
+import { MarketSegmentationReducer } from "./MarketSegmentation";
+import { MonthlyDailyOccupacyReducer } from "./MonthlyDailyOccupacy";
+import { MonthlyRoomTypeStatsReducer } from "./MonthlyRoomTypeStats";
+import { RateCodeStatisticsReducer } from "./RateCodeStatistics";
 
 export const mainReducer = handleActions(
   {
@@ -43,5 +49,12 @@ export const RootReducer: Reducer<IRootState, AnyAction> = combineReducers<
   OccupacyStaticsReducer: OccupacyStaticsReducer as any,
   RGIYOYVarianceReducer: RGIYOYVarianceReducer as any,
   RoomNightsReducer: RoomNightsReducer as any,
-  RoomTypeStaticsReducer: RoomTypeStaticsReducer as any
+  RoomTypeStaticsReducer: RoomTypeStaticsReducer as any,
+
+  BookingChannelMonthlyReducer: BookingChannelMonthlyReducer as any,
+  DailyOccupacyBudLyReducer: DailyOccupacyBudLyReducer as any,
+  MarketSegmentationReducer: MarketSegmentationReducer as any,
+  MonthlyDailyOccupacyReducer: MonthlyDailyOccupacyReducer as any,
+  MonthlyRoomTypeStatsReducer: MonthlyRoomTypeStatsReducer as any,
+  RateCodeStatisticsReducer: RateCodeStatisticsReducer as any
 });

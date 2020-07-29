@@ -1,15 +1,29 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Card } from "react-bootstrap";
-import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
+import { requestDailyOccupacyBudLyData } from "../../../../actions";
+import { ErrorComponent } from "../../../components/Error";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
+
 const DailyOccupacy = ({ graphdata = [] }:any) => {
- 
+
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.DailyOccupacyBudLyReducer
+  );
+  useEffect(() => {
+    dispatch(requestDailyOccupacyBudLyData());
+    // eslint-disable-next-line
+  }, []);
+
   const Charts = [
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "OCC",
       type: "Spline",
@@ -33,7 +47,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       },
     },
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "Budget",
       type: "Spline",
@@ -58,7 +72,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       },
     },
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "LY",
       type: "Spline",
@@ -92,7 +106,13 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       />
 
       <Card.Body>
-        <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+         {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
           <MixedCharts
             id={"dailyocc"}
             chartSettings={{
@@ -117,7 +137,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
             }}
             charts={Charts}
           />
-        </React.Suspense>
+          )}
       </Card.Body>
     </Card>
   );

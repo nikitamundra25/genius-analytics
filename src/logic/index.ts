@@ -12,6 +12,12 @@ import { OccupacyStaticsDataLogics } from "./OccupacyStatics";
 import { RGIYOYVarianceDataLogics } from "./RGIYOYVariance";
 import { RoomNightsDataLogics } from "./RoomNights";
 import { RoomTypeStaticsDataLogics } from "./RoomTypeStatics";
+import { DailyOccupacyBudLyDataLogics } from "./DailyOccupacyBudLy";
+import { MarketSegmentationDataLogics } from "./MarketSegmentation";
+import { MonthlyDailyOccupacyDataLogics } from "./MonthlyDailyOccupacy";
+import { RateCodeStatisticsDataLogics } from "./RateCodeStatistics";
+import { MonthlyRoomTypeStatsDataLogics } from "./MonthlyRoomTypeStats";
+import { BookingChannelMonthlyDataLogics } from "./BookingChannelMonthly";
 
 export const redirectToLogic = createLogic({
   type: "REDIRET_TO",
@@ -35,5 +41,12 @@ export const AllLogics: Logic[] | any = [
   ...RGIYOYVarianceDataLogics,
   ...RoomNightsDataLogics,
   ...RoomTypeStaticsDataLogics,
+
+  ...BookingChannelMonthlyDataLogics,
+  ...DailyOccupacyBudLyDataLogics,
+  ...MarketSegmentationDataLogics,
+  ...MonthlyDailyOccupacyDataLogics,
+  ...RateCodeStatisticsDataLogics,
+  ...MonthlyRoomTypeStatsDataLogics,
   redirectToLogic,
 ];

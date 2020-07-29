@@ -10,3 +10,11 @@ export * from "./OccupacyStatics";
 export * from "./RGIYOYVariance";
 export * from "./RoomNights";
 export * from "./RoomTypeStatics";
+
+
+export * from "./BookingChannelMonthly";
+export * from "./DailyOccupacyBudLy";
+export * from "./MarketSegmentation";
+export * from "./MonthlyDailyOccupacy";
+export * from "./MonthlyRoomTypeStats";
+export * from "./RateCodeStatistics";

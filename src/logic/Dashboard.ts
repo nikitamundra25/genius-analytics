@@ -2,6 +2,7 @@ import {
   ToggleDashboardLoader,
   getWidgetsFailed,
   getWidgetsSuccess,
+  ToggleDashboardMonthlyLoader,
 } from "./../actions/Dashboard";
 import { createLogic } from "redux-logic";
 import { toast } from "react-toastify";
@@ -62,46 +63,6 @@ const dashboardLogic = createLogic({
   },
 });
 
-//  To get dashboard monthly list
-const dashboardMonthlyLogic = createLogic({
-  type: DashBoardTypes.DASHBOARD_MONTHLY_REQUEST,
-  async process(data, dispatch: any, done) {
-    dispatch(showLoader());
-    const response = await new ApiHelper().FetchFromLocalJSONFile(
-      "Dashboard/",
-      "dashboardMonthly.json",
-      "GET",
-      undefined,
-      undefined,
-      undefined
-    );
-    if (response && !response.isError) {
-      dispatch(hideLoader());
-
-      dispatch(
-        DashboardMonthlySuccess({
-          dashboardMonthlyList: response.data.data,
-        })
-      );
-      // dispatch(push("/dashboard"));
-      done();
-    } else {
-      dispatch(hideLoader());
-      console.log(response);
-      if (!toast.isActive(toastId)) {
-        console.log("fffffffffff");
-        toastId = toast.error("Something went wrong! Please try again later");
-      }
-      dispatch(
-        DashboardMonthlyFailed({
-          error: response.messages[0],
-        })
-      );
-      done();
-    }
-  },
-});
-
 //  To get dashboard yearly list
 const dashboardYearlyLogic = createLogic({
   type: DashBoardTypes.DASHBOARD_YEARLY_REQUEST,
@@ -129,6 +90,7 @@ const dashboardYearlyLogic = createLogic({
       dispatch(hideLoader());
       console.log(response);
       if (!toast.isActive(toastId)) {
+        console.log("fffffffffff");
         toastId = toast.error("Something went wrong! Please try again later");
       }
       dispatch(
@@ -141,6 +103,43 @@ const dashboardYearlyLogic = createLogic({
   },
 });
 
+
+
+//  To get dashboard monthly list
+
+const dashboardMonthlyLogic = createLogic({
+  type: DashBoardTypes.DASHBOARD_MONTHLY_REQUEST,
+  process: async ({ action }, dispatch: any, done) => {
+    dispatch(
+      ToggleDashboardMonthlyLoader({
+        isLoading: true,
+      })
+    );
+    const {
+      isError,
+      data,
+      
+    } = await new ApiHelper().FetchFromLocalJSONFile(
+      "DashboardMonthly",
+      "/widgetsMonthly.json",
+      "GET"
+    );
+    if (isError) {
+      dispatch(DashboardMonthlyFailed({}));
+      done();
+      return;
+    }
+    dispatch(
+      DashboardMonthlySuccess({
+        widgets: data,
+      })
+    );
+    done();
+  },
+});
+
+
+
 //
 const getWidgetsLogic = createLogic({
   type: DashBoardTypes.GET_DASHBOARD_WIDGETS,
@@ -152,7 +151,8 @@ const getWidgetsLogic = createLogic({
     );
     const {
       isError,
-      data
+      data,
+      
     } = await new ApiHelper().FetchFromLocalJSONFile(
       "Dashboard",
       "/widgets.json",

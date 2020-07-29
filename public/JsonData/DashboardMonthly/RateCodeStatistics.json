@@ -1,0 +1,39 @@
+{
+    "data":[
+        {
+          "name": "BAR",
+          "RoomNts": 250,
+          "ARR": 199
+        },
+        {
+          "name": "PRM",
+          "RoomNts": 210,
+          "ARR": 144
+        },
+        {
+          "name": "COR1",
+          "RoomNts": 100,
+          "ARR": 168
+        },
+        {
+          "name": "COR2",
+          "RoomNts": 70,
+          "ARR": 154
+        },
+        {
+          "name": "FIT",
+          "RoomNts": 165,
+          "ARR": 149
+        },
+        {
+          "name": "FLS",
+          "RoomNts": 50,
+          "ARR": 138
+        },
+        {
+          "name": "GRP",
+          "RoomNts": 169,
+          "ARR": 166
+        }
+      ]
+}
