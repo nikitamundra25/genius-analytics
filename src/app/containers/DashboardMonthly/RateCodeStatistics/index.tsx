@@ -36,14 +36,14 @@ const RateCodeStatistics = ({ graphdata = [] }:any) => {
       type: "Spline",
       fill: "#b73632",
       name: "ARR",
-      width: 3,
-      dashArray:'5',
+      width: 2,
+      dashArray:'3',
       marker: {
         visible: true,
         width: 8,
         height: 8,
-        fill: "#b73632",
-        border: { width: 0, color: "#b73632" },
+       fill: "#b73632",
+        border: { width: 1, color: "#b73632" },
         dataLabel: {
           visible: true,
           position: "Top",

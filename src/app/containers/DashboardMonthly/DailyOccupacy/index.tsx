@@ -40,7 +40,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       fill: "#b82f2c",
       name: "Budget",
       width: 2,
-      dashArray: "5",
+      dashArray: "3",
       marker: {
         visible: false,
         width: 10,
@@ -65,7 +65,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       fill: "#94b54e",
       name: "LY",
       width: 2,
-      dashArray: "5",
+      dashArray: "3",
       marker: {
         visible: false,
         width: 10,

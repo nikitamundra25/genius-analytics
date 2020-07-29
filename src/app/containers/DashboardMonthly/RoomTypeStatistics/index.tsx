@@ -60,8 +60,8 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
         visible: true,
         width: 8,
         height: 8,
-        fill: "#202c47",
-        border: { width: 0, color: "#202c47" },
+        fill: "#3fabc9",
+        border: { width: 0, color: "#3fabc9" },
         dataLabel: {
           visible: true,
           position: "Top",
@@ -87,8 +87,8 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
         visible: true,
         width: 8,
         height: 8,
-        fill: "#81cbe8",
-        border: { width: 0, color: "#81cbe8" },
+        fill: "#3fabc9",
+        border: { width: 0, color: "#3fabc9" },
         dataLabel: {
           visible: true,
           position: "Bottom",

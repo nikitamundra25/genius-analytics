@@ -38,8 +38,8 @@ const BookingChannel = ({ graphdata = [] }:any) => {
       type: "Spline",
       fill: "#b73632",
       name: "ARR",
-      width: 3,
-      dashArray:'5',
+      width: 2,
+      dashArray:'4',
       marker: {
         visible: true,
         width: 8,
