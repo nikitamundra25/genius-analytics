@@ -19,6 +19,7 @@ const BookingChannel = ({ graphdata = [] }:any) => {
       fill: "#4f81bc",
       name: "Room Nts",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,

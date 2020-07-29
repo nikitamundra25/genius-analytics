@@ -17,6 +17,7 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
       fill: "#3d78c0",
       name: "RMS 2018",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
@@ -36,6 +37,7 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
       fill: "#98c0e3",
       name: "RMS 2017",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,

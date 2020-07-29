@@ -19,10 +19,11 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
       fill: "#3a71b4",
       name: "OCC %",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
-          position: "Top",
+          position: "Bottom",
           font: {
             fontWeight: "600",
             color: "#ffffff",
@@ -34,7 +35,7 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
       dataSource: graphdata,
       xName: "name",
       yName: "ADR",
-      type: "Line",
+      type: "Spline",
       fill: "#bb423d",
       name: "ADR",
       width: 2,
@@ -45,7 +46,7 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
         fill: "#bb423d",
         border: { width: 0, color: "#bb423d" },
         dataLabel: {
-          visible: false,
+          visible: true,
           position: "Top",
           font: {
             fontWeight: "600",

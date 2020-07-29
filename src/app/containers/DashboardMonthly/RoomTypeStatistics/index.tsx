@@ -17,6 +17,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
       fill: "#9ec2d2",
       name: "OCC TY",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
@@ -36,6 +37,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
       fill: "#61a7c0",
       name: "OCC LY",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,

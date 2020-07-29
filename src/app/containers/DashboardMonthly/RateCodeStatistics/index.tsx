@@ -18,6 +18,7 @@ const RateCodeStatistics = ({ graphdata = [] }:any) => {
       fill: "#386fb0",
       name: "Room Nts",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
