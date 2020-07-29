@@ -34,10 +34,10 @@ const PickupBusinessMix = (props:any) => {
       dataSource: DowData,
       xName: "name",
       yName: "ADR",
-      type: "Line",
+      type: "Spline",
       fill: "#ee792b",
       name: "ADR",
-      width: 2,
+      width: 3,
       marker: {
         visible: true,
         width: 8,

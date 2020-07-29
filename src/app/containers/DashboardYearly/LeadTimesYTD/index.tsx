@@ -37,8 +37,8 @@ export default ({ graphdata = [] }: any) => {
             data={data}
             chartSettings={{
               SeriesDirective: {
-                innerRadius: "40%",
-                radius: "70%",
+                // innerRadius: "70%",
+                // radius: "70%",
                 palettes: [
                   "#4f81bc",
                   "#c0504e",
@@ -48,10 +48,18 @@ export default ({ graphdata = [] }: any) => {
                   "#e79645",
                   "#2c4e74",
                 ],
+                innerRadius:'40%',
+                startAngle:'0',
+                endAngle:'360' ,
+                radius:'70%' ,
+                explode:false ,
+                explodeOffset:'10%' ,
+                explodeIndex:'3',
               },
               chartComponent: {
-                enableAnimation: false,
+                enableAnimation: true,
                 center: { x: "50%", y: "50%" },
+               
               },
             }}
           />

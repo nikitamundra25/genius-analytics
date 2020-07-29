@@ -27,7 +27,13 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       type: "SplineArea",
       fill: "#c4e6ef",
       name: "OCC %",
-      width: 1,
+      width: 2,
+      dashArray: '5,5',
+      border:{
+         color: '#78a3c7', 
+         width: 2 ,
+      },
+      opacity: '0.6',
       marker: {
         dataLabel: {
           visible: true,
@@ -44,7 +50,7 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       dataSource: data,
       xName: "name",
       yName: "RevPAR",
-      type: "Line",
+      type: "Spline",
       fill: "#76923c",
       name: "RevPAR",
       width: 2,
@@ -69,7 +75,7 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       dataSource: data,
       xName: "name",
       yName: "NrevPAR",
-      type: "Line",
+      type: "Spline",
       fill: "#bf0b0b",
       name: "NrevPAR",
       width: 2,

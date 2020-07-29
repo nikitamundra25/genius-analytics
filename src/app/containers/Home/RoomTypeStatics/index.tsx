@@ -31,6 +31,18 @@ export default () => {
       name: "OCC TY",
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
+      marker: {
+        visible: false,
+        border: { width: 0, color: "#288096" },
+        dataLabel: {
+          visible: true,
+          position: "Bottom",
+          font: {
+            fontWeight: "600",
+            color: "#ffffff",
+          },
+        },
+      },
     },
     {
       dataSource: data,
@@ -41,21 +53,33 @@ export default () => {
       name: "OCC LY",
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
+      marker: {
+        visible: false,
+        border: { width: 0, color: "#288096" },
+        dataLabel: {
+          visible: true,
+          position: "Bottom",
+          font: {
+            fontWeight: "600",
+            color: "#ffffff",
+          },
+        },
+      },
     },
     {
       dataSource: data,
       xName: "name",
       yName: "ADRTY",
-      type: "Line",
+      type: "Spline",
       fill: "#1f487c",
       name: "ADR TY",
-      width: 2,
+      width: 3,
       marker: {
         visible: true,
         width: 8,
         height: 8,
-        fill: "#1f487c",
-        border: { width: 0, color: "#1f487c" },
+        fill: "#288096",
+        border: { width: 0, color: "#288096" },
         dataLabel: {
           visible: true,
           position: "Top",
@@ -70,7 +94,7 @@ export default () => {
       dataSource: data,
       xName: "name",
       yName: "ADRLY",
-      type: "Line",
+      type: "Spline",
       fill: "#05234e",
       name: "ADR LY",
       width: 2,
@@ -79,11 +103,11 @@ export default () => {
         visible: true,
         width: 8,
         height: 8,
-        fill: "#1f487c",
-        border: { width: 0, color: "#1f487c" },
+        fill: "#288096",
+        border: { width: 0, color: "#288096" },
         dataLabel: {
           visible: true,
-          position: "Top",
+          position: "Bottom",
           font: {
             fontWeight: "600",
             color: "#000000",

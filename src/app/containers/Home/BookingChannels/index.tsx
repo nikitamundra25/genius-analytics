@@ -34,7 +34,7 @@ export default ({ graphdata = [] }:any) => {
           ) : (
           <PieChartComponent
             id={"booking-mix"}
-            height={"280px"}
+            height={"250px"}
             data={data}
             chartSettings={{
               SeriesDirective: {

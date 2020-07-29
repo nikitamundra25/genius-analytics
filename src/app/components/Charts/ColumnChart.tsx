@@ -31,6 +31,7 @@ export default ({ id, color, title, data, chartSettings = {} }: any) => {
           type='Column'
           fill={color}
           name={title}
+          cornerRadius={{ bottomLeft: 0, bottomRight: 0, topLeft: 7, topRight: 7 }}
           marker={{
             dataLabel: {
               visible: true,

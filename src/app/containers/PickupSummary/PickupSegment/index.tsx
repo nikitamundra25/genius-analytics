@@ -18,6 +18,7 @@ const PickupSegment = (props: any) => {
       fill: "#4684bd",
       name: "Room Nts",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
@@ -35,10 +36,10 @@ const PickupSegment = (props: any) => {
       dataSource: data,
       xName: "name",
       yName: "ADR",
-      type: "Line",
+      type: "Spline",
       fill: "#ee792b",
       name: "ADR",
-      width: 2,
+      width: 3,
       marker: {
         visible: false,
         width: 8,

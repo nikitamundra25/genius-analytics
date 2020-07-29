@@ -13,7 +13,7 @@ const WorldMap = ({ data, id = "maps" }: any) => {
   return (
     <MapsComponent
       width={"100%"}
-      height={"280px"}
+      height={"250px"}
       id={id}
       zoomSettings={{
         enable: true,
