@@ -119,7 +119,14 @@
   position: relative;
   height: 150px;
 }
-.card-loader{
+.card-loader {
   position: relative;
   min-height: 200px;
+}
+.widget-loader {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

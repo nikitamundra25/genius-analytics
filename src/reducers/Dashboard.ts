@@ -86,6 +86,23 @@ export const DashboardReducer = handleActions<any, any>(
       ...state,
       isLoading: action.payload.isLoading,
     }),
+    [DashBoardTypes.DASHBOARD_WIDGETS_FAILED]: (
+      state = DashboardMainState,
+      action
+    ): IDashboardMainModel => ({
+      ...state,
+      isLoading: false,
+      isError: true,
+    }),
+    [DashBoardTypes.DASHBOARD_WIDGETS_SUCCESS]: (
+      state = DashboardMainState,
+      action
+    ): IDashboardMainModel => ({
+      ...state,
+      isLoading: false,
+      isError: false,
+      widgets: action.payload.widgets,
+    }),
   },
   DashboardMainState
 );

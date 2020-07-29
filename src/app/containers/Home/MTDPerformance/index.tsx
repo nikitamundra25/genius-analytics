@@ -1,12 +1,28 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Card, Row, Col } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import { ErrorComponent } from "../../../components/Error";
+import { requestMTRDRGIPerformanceData } from "../../../../actions";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
 export default ({ graphdata = [] }: any) => {
+
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.MTRDRGIPerformanceReducer
+  );
+  useEffect(() => {
+    dispatch(requestMTRDRGIPerformanceData());
+    // eslint-disable-next-line
+  }, []);
+
+
   const RTGBarChart = [
     {
       // id: "r1",
@@ -14,7 +30,7 @@ export default ({ graphdata = [] }: any) => {
       // color: "#2e75b7",
       // data: graphdata[0].data,
       charts: {
-        dataSource: graphdata[0].data,
+        dataSource: data && data.length && data[0] ? data[0].data : [],
         xName: "x",
         yName: "y1",
         type: "Bar",
@@ -42,7 +58,7 @@ export default ({ graphdata = [] }: any) => {
       // color: "#5398d9",
       // data: graphdata[1].data,
       charts: {
-        dataSource: graphdata[1].data,
+        dataSource: data && data.length && data[1] ? data[1].data : [],
         xName: "x",
         yName: "y1",
         type: "Bar",
@@ -70,7 +86,7 @@ export default ({ graphdata = [] }: any) => {
       // color: "#1f4e79",
       // data: graphdata[2].data,
       charts: {
-        dataSource: graphdata[2].data,
+        dataSource: data && data.length && data[2] ? data[2].data : [],
         xName: "x",
         yName: "y1",
         type: "Bar",
@@ -98,6 +114,14 @@ export default ({ graphdata = [] }: any) => {
     <Card>
       <WidgetHeader title={"MTD RGI Performance"} />
       <Card.Body>
+      {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
+
         <Row className="row-inner">
           {RTGBarChart && RTGBarChart.length
             ? RTGBarChart.map((key: any, index: number) => {
@@ -165,7 +189,9 @@ export default ({ graphdata = [] }: any) => {
               })
             : null}
         </Row>
-      </Card.Body>
+   )}
+   
+   </Card.Body>
     </Card>
   );
 };

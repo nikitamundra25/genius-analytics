@@ -1,16 +1,32 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Row, Card, Col } from "react-bootstrap";
-import Loader from "../../../components/Loader/Loader";
+// import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import { ErrorComponent } from "../../../components/Error";
+import { requestOccupacyStaticsData } from "../../../../actions";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
 const OccupencyStatitics = ({ graphdata = [] }:any) => {
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.OccupacyStaticsReducer
+  );
+
+
+
+  useEffect(() => {
+    dispatch(requestOccupacyStaticsData());
+    // eslint-disable-next-line
+  }, []);
 
     const Charts1 = [
         {
-          dataSource: graphdata[0].data,
+          dataSource: data && data.length && data[0] ? data[0].data : [],
           xName: "name",
           yName: "OCCTY",
           type: "Column",
@@ -34,7 +50,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           },
         },
         {
-          dataSource: graphdata[0].data,
+          dataSource: data && data.length && data[0] ? data[0].data : [],
           xName: "name",
           yName: "OCCLY",
           type: "Column",
@@ -57,10 +73,10 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           },
         },
         {
-          dataSource: graphdata[0].data,
+          dataSource: data && data.length && data[0] ? data[0].data : [],
           xName: "name",
           yName: "ADRTY",
-          type: "Line",
+          type: "Spline",
           fill: "#2bb5ec",
           name: "ADR TY",
           dashArray: "5",
@@ -81,13 +97,13 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           },
         },
         {
-          dataSource: graphdata[0].data,
+          dataSource: data && data.length && data[0] ? data[0].data : [],
           xName: "name",
           yName: "ADRLY",
-          type: "Line",
+          type: "Spline",
           fill: "#293046",
           name: "ADR LY",
-          dashArray: "5",
+          dashArray: "20 10",
           width: 2,
           marker: {
             visible: false,
@@ -107,7 +123,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
       ];
       const Charts2 = [
         {
-          dataSource: graphdata[1].data,
+          dataSource: data && data.length && data[1] ? data[1].data : [],
           xName: "name",
           yName: "TY",
           type: "Column",
@@ -117,7 +133,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
         },
         {
-          dataSource: graphdata[1].data,
+          dataSource: data && data.length && data[1] ? data[1].data : [],
           xName: "name",
           yName: "LY",
           type: "Column",
@@ -127,10 +143,10 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
         },
         {
-          dataSource: graphdata[1].data,
+          dataSource: data && data.length && data[1] ? data[1].data : [],
           xName: "name",
           yName: "Var",
-          type: "Line",
+          type: "Spline",
           fill: "#2f5891",
           name: "Var",
           dashArray: "5",
@@ -159,10 +175,15 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
       <Card>
         <WidgetHeader title={"Occupancy Statistics"} activeToggle={"graph"} />
         <Card.Body>
+        {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
         <Row className='row-inner'>
           <Col sm={8}>
-          
-            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
               <MixedCharts
                 id={"line-and-column"}
                 chartSettings={{
@@ -186,12 +207,9 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
                 }}
                 charts={Charts1}
               />
-            </React.Suspense>
-           
+         
           </Col>
           <Col sm={4}>
-          
-          <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts
               id={"line-and-bar"}
               charts={Charts2}
@@ -214,11 +232,10 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
                 },
                 tooltip: { enable: true },
               }}
-            />
-            </React.Suspense>
-            
+            />          
           </Col>
         </Row>
+         )} 
        </Card.Body>
       </Card>
     </>

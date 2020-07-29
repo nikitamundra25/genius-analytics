@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
 import { IRootState } from "../../../interfaces";
 import { PickupDetailRequest } from "../../../actions";
+import Loader from "../../components/Loader/Loader";
 import '../PickupDetail/index.scss';
 
 const PickupDetail: FunctionComponent = () => {
@@ -29,13 +30,15 @@ const created = () => {
   restoreModel = dashboardObj.serialize();
 };
 
-  const { pickupDetailList } = PickupReducer;
+  const { pickupDetailList,isLoading } = PickupReducer;
 
   return (
     <>
       <TopBar handleReset={RestorePanel}/>
       <div className="animated fadeIn">
-        {pickupDetailList && pickupDetailList.length ? (
+        {isLoading ? (
+          <Loader />
+        ) : pickupDetailList && pickupDetailList.length ? (
           <DashboardLayoutComponent
             id="defaultLayout"
             cellSpacing={cellSpacing}

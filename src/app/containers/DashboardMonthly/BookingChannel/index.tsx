@@ -19,6 +19,7 @@ const BookingChannel = ({ graphdata = [] }:any) => {
       fill: "#4f81bc",
       name: "Room Nts",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
@@ -38,8 +39,8 @@ const BookingChannel = ({ graphdata = [] }:any) => {
       type: "Spline",
       fill: "#b73632",
       name: "ARR",
-      width: 3,
-      dashArray:'5',
+      width: 2,
+      dashArray:'4',
       marker: {
         visible: true,
         width: 8,

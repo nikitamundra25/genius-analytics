@@ -6,6 +6,7 @@ import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
 import { DashboardYearlyRequest } from "../../../actions";
 import { IRootState } from "../../../interfaces";
 import "./index.scss";
+import Loader from "../../components/Loader/Loader";
 
 const DashboardYearly: FunctionComponent = () => {
   const cellSpacing = [15, 30];
@@ -31,13 +32,15 @@ const DashboardYearly: FunctionComponent = () => {
     restoreModel = dashboardObj.serialize();
   };
 
-  const { dashboardYearlyList } = DashboardReducer;
+  const { dashboardYearlyList , isLoading} = DashboardReducer;
 
   return (
     <>
-      <div className="animated fadeIn">
         <TopBar handleReset={RestorePanel} />
-        {dashboardYearlyList && dashboardYearlyList.length ? (
+      <div className="animated fadeIn">
+        { isLoading ? (
+          <Loader />
+        ) : dashboardYearlyList && dashboardYearlyList.length ? (
           <DashboardLayoutComponent
             id="defaultLayout"
             cellSpacing={cellSpacing}

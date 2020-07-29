@@ -19,6 +19,7 @@ const RoomTypesYTD = ({ graphdata = [] }: any) => {
       fill: "#99bac9",
       name: "OCC TY",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
@@ -38,6 +39,7 @@ const RoomTypesYTD = ({ graphdata = [] }: any) => {
       fill: "#64acc4",
       name: "OCC LY",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
@@ -53,11 +55,11 @@ const RoomTypesYTD = ({ graphdata = [] }: any) => {
       dataSource: graphdata,
       xName: "name",
       yName: "ADRTY",
-      type: "Line",
+      type: "Spline",
       fill: "#101238",
       name: "ADR TY",
       width: 2,
-      dashArray: 5,
+      dashArray: 4,
       marker: {
         visible: true,
         width: 8,
@@ -79,11 +81,11 @@ const RoomTypesYTD = ({ graphdata = [] }: any) => {
       dataSource: graphdata,
       xName: "name",
       yName: "ADRLY",
-      type: "Line",
+      type: "Spline",
       fill: "#8f2826",
       name: "ADR LY",
       width: 2,
-      dashArray: 3,
+      dashArray: 4,
       marker: {
         visible: true,
         width: 8,

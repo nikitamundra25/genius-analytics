@@ -16,6 +16,7 @@ const PickupDOWOCCSegment = (props:any) => {
       fill: "#4684bd",
       name: "Room Nts",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
@@ -32,11 +33,11 @@ const PickupDOWOCCSegment = (props:any) => {
       dataSource: OccData,
       xName: "name",
       yName: "ADR",
-      type: "Line",
+      type: "Spline",
       fill: "#ee792b",
       name: "ADR",
-      width: 2,
-      dashArray: "5",
+      width: 3,
+      dashArray: "8 5",
       marker: {
         visible: true,
         width: 8,
