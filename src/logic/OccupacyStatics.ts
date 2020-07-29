@@ -9,7 +9,7 @@ import { ApiHelper } from "../helper";
 
 const getOccupacyStaticsDataLogic = createLogic({
   type: OccupacyStaticsActionTypes.REQUETS_OCCUPACY_STATICS_DATA,
-  process: async ({ action }, dispatch: any, done) => {
+  process: async ({ action }:any, dispatch: any, done) => {
     dispatch(
         toggleOccupacyStaticsLoader({
         isLoading: true,

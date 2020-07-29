@@ -12,11 +12,13 @@ const MixedCharts = React.lazy(() =>
 );
 
 const OccupencyStatitics = ({ graphdata = [] }:any) => {
-
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.OccupacyStaticsReducer
   );
+
+
+
   useEffect(() => {
     dispatch(requestOccupacyStaticsData());
     // eslint-disable-next-line
@@ -224,12 +226,10 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
                 },
                 tooltip: { enable: true },
               }}
-            />
-         
-            
+            />          
           </Col>
         </Row>
-        )}
+         )} 
        </Card.Body>
       </Card>
     </>
