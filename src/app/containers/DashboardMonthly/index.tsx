@@ -9,7 +9,7 @@ import "./index.scss";
 import Loader from "../../components/Loader/Loader";
 
 const DashboardMonthly: FunctionComponent = () => {
-  const cellSpacing = [5, 10];
+  const cellSpacing = [15, 30];
   let restoreModel: any = [];
   let dashboardObj: any;
   const dispatch = useDispatch();

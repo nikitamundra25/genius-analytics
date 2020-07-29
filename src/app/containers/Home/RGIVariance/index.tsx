@@ -26,6 +26,7 @@ export default () => {
       fill: "#3467a6",
       name: "HOTEL",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 4, topLeft: 0, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
@@ -46,6 +47,7 @@ export default () => {
       fill: "#819bc6",
       name: "MARKET",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 4, topLeft: 0, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,

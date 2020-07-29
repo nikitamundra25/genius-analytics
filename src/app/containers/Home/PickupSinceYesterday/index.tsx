@@ -159,7 +159,7 @@ const PickupSinceYesterday = () => {
                   <div  className="text-left range-text">
                     <div className="sub-inner-title">{key.title}</div>
                     {key.range ? (
-                      <div className={`${key.textClass} h3  pt-2`}>
+                      <div className={`${key.textClass} h3  pt-2 mb-0`}>
                         <i className={`${key.arrowClass}`}></i> {key.range}
                       </div>
                     ) : null}
@@ -171,27 +171,9 @@ const PickupSinceYesterday = () => {
                         charts={[key.charts]}
                         legend = {false}
                         chartSettings={{
-                          // primaryXAxis:{ 
-                          //   title: 'Defects', 
-                          //   interval: 1, 
-                          //   valueType: 'Category', 
-                          //   majorGridLines: { width: 0 }, 
-                          //   minorGridLines: { width: 0 }, 
-                          //   majorTickLines: { width: 0 }, 
-                          //   minorTickLines: { width: 0 }, 
-                          //   lineStyle: { width: 0 }, 
-                          // },
-                          // primaryYAxis: { 
-                          //   title: 'Frequency', 
-                          //   minimum: 0,
-                          //    maximum: 150, 
-                          //    interval: 30, 
-                          //    lineStyle: { width: 0 }, 
-                          //    majorTickLines: { width: 0 }, 
-                          //    majorGridLines: { width: 1 },
-                          //   minorGridLines: { width: 1 }, 
-                          //   minorTickLines: { width: 0 } ,
-                          //   },
+                          width: "100%",
+                          height: "200px",
+                          
                           chartArea:{ border: { width: 0 } },
                           primaryXAxis: {
                             valueType: "Category",
@@ -212,7 +194,7 @@ const PickupSinceYesterday = () => {
                             visible:false,
                           },
                          
-                          tooltip: { enable: false },
+                          tooltip: { enable: true },
                           //title: key.title,
                         }}
                       />

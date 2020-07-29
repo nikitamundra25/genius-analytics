@@ -30,6 +30,7 @@ export default () => {
       fill: "#a1c6d6",
       name: "OCC TY",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
     },
     {
       dataSource: data,
@@ -39,6 +40,7 @@ export default () => {
       fill: "#65adc5",
       name: "OCC LY",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
     },
     {
       dataSource: data,

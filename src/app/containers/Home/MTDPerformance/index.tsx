@@ -37,6 +37,7 @@ export default ({ graphdata = [] }: any) => {
         fill: "#2e75b7",
         name: "RGI",
         width: 1,
+        cornerRadius:{ bottomLeft: 0, bottomRight: 4, topLeft: 0, topRight: 4 },
         marker: {
           dataLabel: {
             visible: true,
@@ -64,6 +65,7 @@ export default ({ graphdata = [] }: any) => {
         fill: "#5398d9",
         name: "MPI",
         width: 1,
+        cornerRadius:{ bottomLeft: 0, bottomRight: 4, topLeft: 0, topRight: 4 },
         marker: {
           dataLabel: {
             visible: true,
@@ -88,6 +90,7 @@ export default ({ graphdata = [] }: any) => {
         xName: "x",
         yName: "y1",
         type: "Bar",
+        cornerRadius:{ bottomLeft: 0, bottomRight: 4, topLeft: 0, topRight: 4 },
         fill: "#1f4e79",
         name: "ARI",
         width: 1,
