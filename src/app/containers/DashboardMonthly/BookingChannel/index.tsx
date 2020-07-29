@@ -1,7 +1,13 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Card } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
+import { requestBookingChannelMonthlyData } from "../../../../actions";
+import { ErrorComponent } from "../../../components/Error";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import Loader from "../../../components/Loader/Loader";
+
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
@@ -10,9 +16,17 @@ const MixedCharts = React.lazy(() =>
 
 
 const BookingChannel = ({ graphdata = [] }:any) => {
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.BookingChannelMonthlyReducer
+  );
+  useEffect(() => {
+    dispatch(requestBookingChannelMonthlyData());
+    // eslint-disable-next-line
+  }, []);
   const Charts = [
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "RoomNts",
       type: "Column",
@@ -33,7 +47,7 @@ const BookingChannel = ({ graphdata = [] }:any) => {
     },
     
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "ARR",
       type: "Spline",
@@ -65,8 +79,15 @@ const BookingChannel = ({ graphdata = [] }:any) => {
       title={"Booking Channel"}
       activeToggle={"graph"}
     />
-      {/* <Card.Body> */}
-        <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+      <Card.Body>
+      {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
+            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
           <MixedCharts
             id={"BookingChannel"}
             legend = {false}
@@ -91,9 +112,9 @@ const BookingChannel = ({ graphdata = [] }:any) => {
             }}
             charts={Charts}
           />
-        </React.Suspense>
-    
-      {/* </Card.Body> */}
+          </React.Suspense>
+          )}
+      </Card.Body>
     </Card>
     
   );

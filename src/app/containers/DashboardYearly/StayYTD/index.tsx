@@ -1,15 +1,28 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Card } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
-import Loader from "../../../components/Loader/Loader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
+import { requestStayYTDData } from "../../../../actions";
+import { ErrorComponent } from "../../../components/Error";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
 const StayYTD = ({ graphdata = [] }: any) => {
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.StayYTDReducer
+  );
+  useEffect(() => {
+    dispatch(requestStayYTDData());
+    // eslint-disable-next-line
+  }, []);
+
   const Charts = [
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "x",
       yName: "y1",
       type: "Column",
@@ -28,7 +41,7 @@ const StayYTD = ({ graphdata = [] }: any) => {
       },
     },
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "x",
       yName: "y2",
       type: "Spline",
@@ -53,12 +66,24 @@ const StayYTD = ({ graphdata = [] }: any) => {
       },
     },
   ];
+
+//   const pointRender = (args:any) => {
+//     let seriesColor = ['#00bdae', '#404041', '#357cd2', '#e56590', '#f8b883',
+//         '#70ad47', '#dd8abd', '#7f84e8', '#7bb4eb', '#ea7a57'];
+//     args.fill = seriesColor[args.point.index];
+// };
   return (
     <>
       <Card>
         <WidgetHeader title={"Length of Stay & ADR - YTD"} activeToggle={"graph"} />
-        {/* <Card.Body> */}
-          <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+        <Card.Body>
+           {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
             <MixedCharts
               id={"stay"}
               chartSettings={{
@@ -79,11 +104,12 @@ const StayYTD = ({ graphdata = [] }: any) => {
                    visible:false,
                 },
                 tooltip: { enable: true },
+                
               }}
               charts={Charts}
             />
-          </React.Suspense>
-        {/* </Card.Body> */}
+          )}
+        </Card.Body>
       </Card>
     </>
   );

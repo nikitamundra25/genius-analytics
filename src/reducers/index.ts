@@ -13,6 +13,23 @@ import { OccupacyStaticsReducer } from "./OccupacyStatics";
 import { RGIYOYVarianceReducer } from "./RGIYOYVariance";
 import { RoomNightsReducer } from "./RoomNights";
 import { RoomTypeStaticsReducer } from "./RoomTypeStatics";
+import { BookingChannelMonthlyReducer } from "./BookingChannelMonthly";
+import { DailyOccupacyBudLyReducer } from "./DailyOccupacyBudLy";
+import { MarketSegmentationReducer } from "./MarketSegmentation";
+import { MonthlyDailyOccupacyReducer } from "./MonthlyDailyOccupacy";
+import { MonthlyRoomTypeStatsReducer } from "./MonthlyRoomTypeStats";
+import { RateCodeStatisticsReducer } from "./RateCodeStatistics";
+import { LeadTimesYTDReducer } from "./LeadTimesYTD";
+import { LeadTimesYTDSegmentReducer } from "./LeadTimeYTDSegment";
+import { MOCCADRReducer } from "./MOCCADR";
+import { QOCCADRReducer } from "./QOCCADR";
+import { ROOMTYPESReducer } from "./ROOMTYPES";
+import { StayYTDReducer } from "./StayYTD";
+import { RevPARYTDReducer } from "./RevPARYTD";
+import { RGIPerformanceReducer } from "./RGIPerformance";
+import { pickupSummarySegmentReducer } from "./pickupSummarySegmentData";
+import { pickupSummaryOCCReducer } from "./pickupSummaryOCC";
+import { pickupSummaryDowDataReducer } from "./pickupSummaryDowData";
 
 export const mainReducer = handleActions(
   {
@@ -43,5 +60,26 @@ export const RootReducer: Reducer<IRootState, AnyAction> = combineReducers<
   OccupacyStaticsReducer: OccupacyStaticsReducer as any,
   RGIYOYVarianceReducer: RGIYOYVarianceReducer as any,
   RoomNightsReducer: RoomNightsReducer as any,
-  RoomTypeStaticsReducer: RoomTypeStaticsReducer as any
+  RoomTypeStaticsReducer: RoomTypeStaticsReducer as any,
+
+  BookingChannelMonthlyReducer: BookingChannelMonthlyReducer as any,
+  DailyOccupacyBudLyReducer: DailyOccupacyBudLyReducer as any,
+  MarketSegmentationReducer: MarketSegmentationReducer as any,
+  MonthlyDailyOccupacyReducer: MonthlyDailyOccupacyReducer as any,
+  MonthlyRoomTypeStatsReducer: MonthlyRoomTypeStatsReducer as any,
+  RateCodeStatisticsReducer: RateCodeStatisticsReducer as any,
+
+  LeadTimesYTDReducer: LeadTimesYTDReducer as any,
+  LeadTimesYTDSegmentReducer: LeadTimesYTDSegmentReducer as any,
+  MOCCADRReducer: MOCCADRReducer as any,
+  QOCCADRReducer: QOCCADRReducer as any,
+  
+  ROOMTYPESReducer: ROOMTYPESReducer as any,
+  StayYTDReducer: StayYTDReducer as any,
+  RevPARYTDReducer: RevPARYTDReducer as any,
+  RGIPerformanceReducer: RGIPerformanceReducer as any,
+
+  pickupSummarySegmentReducer: pickupSummarySegmentReducer as any,
+  pickupSummaryOCCReducer: pickupSummaryOCCReducer as any,
+  pickupSummaryDowDataReducer: pickupSummaryDowDataReducer as any
 });

@@ -41,25 +41,27 @@ const HomeComponent: FunctionComponent = () => {
       <TopBar handleReset={RestorePanel} />
       <div className='animated fadeIn'>
         {isLoading ? (
-          <Loader />
+          <Loader /> 
         ) : isError ? (
           <ErrorComponent
             message={"An error occured while fetching dashboard details"}
           />
         ) : widgets && widgets.length ? (
+         
           <DashboardLayoutComponent
             id='defaultLayout'
             cellSpacing={cellSpacing}
             allowResizing={false}
             columns={4}
           
-            //cellAspectRatio={100 / 110}
+            cellAspectRatio={100 / 110}
             created={created}
             ref={(scope: any) => {
               dashboardObj = scope;
             }}>
             <DashboardWidget graphList={widgets} />
           </DashboardLayoutComponent>
+         
         ) : null}
       </div>
     </>

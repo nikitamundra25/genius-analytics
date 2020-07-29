@@ -1,15 +1,27 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Card } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
-import Loader from "../../../components/Loader/Loader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
+import { requestRevPARYTDData } from "../../../../actions";
+import { ErrorComponent } from "../../../components/Error";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
 const RevparYTD = ({ graphdata = [] }: any) => {
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.RevPARYTDReducer
+  );
+  useEffect(() => {
+    dispatch(requestRevPARYTDData());
+    // eslint-disable-next-line
+  }, []);
   const Charts = [
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "OCC",
       type: "SplineArea",
@@ -35,7 +47,7 @@ const RevparYTD = ({ graphdata = [] }: any) => {
     },
    
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "RevPAR",
       type: "Spline",
@@ -60,7 +72,7 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       },
     },
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "NrevPAR",
       type: "Spline",
@@ -90,7 +102,13 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       <Card>
         <WidgetHeader title={"RevPAR Vs. NrevPAR - YTD"} activeToggle={"graph"} />
         {/* <Card.Body> */}
-          <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+        {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
             <MixedCharts
               id={"RevPAR"}
               chartSettings={{
@@ -114,7 +132,7 @@ const RevparYTD = ({ graphdata = [] }: any) => {
               }}
               charts={Charts}
             />
-          </React.Suspense>
+          )}
         {/* </Card.Body> */}
       </Card>
     </>

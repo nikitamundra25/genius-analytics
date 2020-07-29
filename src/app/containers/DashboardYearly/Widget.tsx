@@ -40,7 +40,6 @@ const getChart = (chartType: any) => {
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
           <MonthlyOCCADR id='monthly-ofasdfcc-adr' 
-          graphdata={chartType.graphdata}
           />
         </div>
         </div>
@@ -59,7 +58,6 @@ const getChart = (chartType: any) => {
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
           <QuarterlyOCCADR id='quarterly-occ-adr' 
-           graphdata={chartType.graphdata}
           />
           </div>
         </div>
@@ -77,7 +75,6 @@ const getChart = (chartType: any) => {
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
           <RoomTypesYTD 
-          graphdata={chartType.graphdata}
           />
           </div>
         </div>
@@ -96,7 +93,6 @@ const getChart = (chartType: any) => {
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
           <REVPARYTD 
-           graphdata={chartType.graphdata}
           />
         </div>
         </div>
@@ -114,7 +110,6 @@ const getChart = (chartType: any) => {
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
           <StayYTD 
-            graphdata={chartType.graphdata}
           />
         </div>
         </div>
@@ -133,7 +128,6 @@ const getChart = (chartType: any) => {
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
             <LeadTimesYTD 
-            graphdata={chartType.graphdata}
             />
           </div>
           </div>
@@ -151,7 +145,6 @@ const getChart = (chartType: any) => {
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
             <LeadTimesSegmentYTD 
-            graphdata={chartType.graphdata}
             />
           </div>
           </div>
@@ -169,7 +162,6 @@ const getChart = (chartType: any) => {
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
             <RGIPerformance 
-            graphdata={chartType.graphdata}
             />
           </div>
           </div>

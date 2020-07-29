@@ -1,13 +1,12 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { Card, Row, Col } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
-import Loader from "../../../components/Loader/Loader";
 import { requestBusinessMixData } from "../../../../actions";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
-
+import Loader from "../../../components/Loader/Loader";
 const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
@@ -40,7 +39,7 @@ export default (props: any) => {
           labelStyle: {
             color: "transparent",
           },
-          visible:false,
+          visible: false,
         },
         title: "Business Mix %",
         tooltip: { enable: false },
@@ -66,7 +65,7 @@ export default (props: any) => {
           labelStyle: {
             color: "transparent",
           },
-          visible:false,
+          visible: false,
         },
         title: "Business Mix ADR",
         tooltip: { enable: false },
@@ -77,13 +76,12 @@ export default (props: any) => {
     },
   ];
 
-
   return (
     <>
       <Card>
         <WidgetHeader title={"Business Mix"} activeToggle={"graph"} />
         <Card.Body>
-        {isLoading ? (
+          {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
             <ErrorComponent
@@ -91,12 +89,11 @@ export default (props: any) => {
             />
           ) : (
             <Row className="row-inner">
-              { BarChartData && BarChartData.length ? 
-              BarChartData.map((key: any, index: number) => {
-                return (
-                  <Col xs={12} md={6} key={index}>
-                    
-                      <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+              {BarChartData && BarChartData.length
+                ? BarChartData.map((key: any, index: number) => {
+                    return (
+                      <Col xs={12} md={6} key={index}>
+                         <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
                         <BarChartComponent
                           id={key.id}
                           chartSettings={key.chartSettings}
@@ -104,13 +101,13 @@ export default (props: any) => {
                           color={key.color}
                           data={key.data}
                         />
-                      </React.Suspense>
-                    
-                  </Col>
-                );
-              }): null}
+                        </React.Suspense>
+                      </Col>
+                    );
+                  })
+                : null}
             </Row>
-           )}
+          )}
         </Card.Body>
       </Card>
     </>

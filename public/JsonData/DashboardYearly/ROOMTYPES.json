@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+          "name": "0BRM",
+          "OCCTY": 50,
+          "OCCLY": 64,
+          "ADRTY": 134,
+          "ADRLY": 111
+        },
+        {
+          "name": "1BRM",
+          "OCCTY": 88,
+          "OCCLY": 80,
+          "ADRTY": 157,
+          "ADRLY": 169
+        },
+        {
+          "name": "2BRM",
+          "OCCTY": 74,
+          "OCCLY": 76,
+          "ADRTY": 257,
+          "ADRLY": 231
+        }
+      ]
+}

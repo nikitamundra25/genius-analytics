@@ -6,10 +6,12 @@ export enum DashBoardTypes {
   DASHBOARD_MAIN_FAILURE = "dashboard main data list Failed",
   TOGGLE_DASHBOARD_LOADER = "Toggle dashboard loader",
 
+  TOGGLE_DASHBOARD_MONTHLY_LOADER = "Toggle dashboard monthly loader",
   DASHBOARD_MONTHLY_REQUEST = "Request dashboard MONTHLY data list!",
   DASHBOARD_MONTHLY_SUCCESS = "dashboard MONTHLY data list Successfully!",
   DASHBOARD_MONTHLY_FAILURE = "dashboard MONTHLY data list Failed",
 
+  TOGGLE_DASHBOARD_YEARLY_LOADER = "Toggle dashboard YEARLY loader",
   DASHBOARD_YEARLY_REQUEST = "Request dashboard YEARLY data list!",
   DASHBOARD_YEARLY_SUCCESS = "dashboard YEARLY data list Successfully!",
   DASHBOARD_YEARLY_FAILURE = "dashboard YEARLY data list Failed",
@@ -38,6 +40,10 @@ export const DashboardMainFailed = createAction(
 
 /* Dashboard monthly list
  */
+export const ToggleDashboardMonthlyLoader = createAction(
+  DashBoardTypes.TOGGLE_DASHBOARD_MONTHLY_LOADER
+); 
+
 export const DashboardMonthlyRequest = createAction(
   DashBoardTypes.DASHBOARD_MONTHLY_REQUEST
 );
@@ -51,6 +57,10 @@ export const DashboardMonthlyFailed = createAction(
 
 /* Dashboard yearly list
  */
+export const ToggleDashboardYearlyLoader = createAction(
+  DashBoardTypes.TOGGLE_DASHBOARD_YEARLY_LOADER
+); 
+
 export const DashboardYearlyRequest = createAction(
   DashBoardTypes.DASHBOARD_YEARLY_REQUEST
 );
@@ -61,6 +71,7 @@ export const DashboardYearlySuccess = createAction(
 export const DashboardYearlyFailed = createAction(
   DashBoardTypes.DASHBOARD_YEARLY_FAILURE
 );
+
 // widget actions
 export const getWidgets = createAction(DashBoardTypes.GET_DASHBOARD_WIDGETS);
 export const getWidgetsSuccess = createAction(

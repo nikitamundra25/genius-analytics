@@ -1,13 +1,12 @@
 import { createLogic } from "redux-logic";
-import { toast } from "react-toastify";
 import {
     PickupTypes,
-  showLoader,
-  hideLoader,
   PickupSummarySuccess,
   PickupSummaryFailed,
   PickupDetailSuccess,
   PickupDetailFailed,
+  TogglePickupSummaryLoader,
+  TogglePickupDetailLoader,
 } from "../actions";
 import { ApiHelper } from "../helper";
 
@@ -15,85 +14,73 @@ import { ApiHelper } from "../helper";
  *
  */
 
-let toastId: any = null;
 // To get pickup summary list
+
 const pickupListLogic = createLogic({
   type: PickupTypes.PICKUP_SUMMARY_REQUEST,
-  async process(data, dispatch: any, done) {
-    dispatch(showLoader());
-    const response = await new ApiHelper().FetchFromLocalJSONFile(
-      "Pickup/",
-      "pickupSummary.json",
-      "GET",
-      undefined,
-      undefined,
-      undefined
+  process: async ({ action }, dispatch: any, done) => {
+    dispatch(
+      TogglePickupSummaryLoader({
+        isLoading: true,
+      })
     );
-    if (response && !response.isError) {
-      dispatch(hideLoader());
-
-      dispatch(
-        PickupSummarySuccess({
-            pickupSummaryList: response.data.data,
-        })
-      );
-      // dispatch(push("/dashboard"));
+    const {
+      isError,
+      data,
+      
+    } = await new ApiHelper().FetchFromLocalJSONFile(
+      "Pickup",
+      "/pickupSummaryWidget.json",
+      "GET"
+    );
+    if (isError) {
+      dispatch(PickupSummaryFailed({}));
       done();
-    } else {
-      dispatch(hideLoader());
-      console.log(response);
-      if (!toast.isActive(toastId)) {
-        console.log("fffffffffff");
-        toastId = toast.error("Something went wrong! Please try again later");
-      }
-      dispatch(
-        PickupSummaryFailed({
-          error: true,
-        })
-      );
-      done();
+      return;
     }
+    dispatch(
+      PickupSummarySuccess({
+        pickupSummaryList: data,
+      })
+    );
+    done();
   },
 });
 
+
 // To get pickup detail list
+
 const pickupDetailListLogic = createLogic({
-    type: PickupTypes.PICKUP_DETAIL_REQUEST,
-    async process(data, dispatch: any, done) {
-      dispatch(showLoader());
-      const response = await new ApiHelper().FetchFromLocalJSONFile(
-        "Pickup/",
-        "pickupDetail.json",
-        "GET",
-        undefined,
-        undefined,
-        undefined
-      );
-      if (response && !response.isError) {
-        dispatch(hideLoader());
-  
-        dispatch(
-            PickupDetailSuccess({
-                pickupDetailList: response.data.data,
-          })
-        );
-        // dispatch(push("/dashboard"));
-        done();
-      } else {
-        dispatch(hideLoader());
-        console.log(response);
-        if (!toast.isActive(toastId)) {
-          toastId = toast.error("Something went wrong! Please try again later");
-        }
-        dispatch(
-            PickupDetailFailed({
-            error: true,
-          })
-        );
-        done();
-      }
-    },
-  });
+  type: PickupTypes.PICKUP_DETAIL_REQUEST,
+  process: async ({ action }, dispatch: any, done) => {
+    dispatch(
+      TogglePickupDetailLoader({
+        isLoading: true,
+      })
+    );
+    const {
+      isError,
+      data,
+      
+    } = await new ApiHelper().FetchFromLocalJSONFile(
+      "Pickup",
+      "/pickupSummaryWidget.json",
+      "GET"
+    );
+    if (isError) {
+      dispatch(PickupDetailFailed({}));
+      done();
+      return;
+    }
+    dispatch(
+      PickupDetailSuccess({
+        pickupDetailList: data,
+      })
+    );
+    done();
+  },
+});
+
 
 
 export const PickupLogics = [

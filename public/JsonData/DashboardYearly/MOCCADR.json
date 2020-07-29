@@ -1,0 +1,64 @@
+{
+    "data": [
+        {
+          "name": "Jan",
+          "OCC": 50,
+          "ADR": 64
+        },
+        {
+          "name": "Feb",
+          "OCC": 88,
+          "ADR": 80
+        },
+        {
+          "name": "Mar",
+          "OCC": 74,
+          "ADR": 76
+        },
+        {
+          "name": "Apr",
+          "OCC": 50,
+          "ADR": 64
+        },
+        {
+          "name": "May",
+          "OCC": 88,
+          "ADR": 80
+        },
+        {
+          "name": "Jun",
+          "OCC": 74,
+          "ADR": 76
+        },
+        {
+          "name": "Jul",
+          "OCC": 50,
+          "ADR": 64
+        },
+        {
+          "name": "Aug",
+          "OCC": 88,
+          "ADR": 80
+        },
+        {
+          "name": "Sep",
+          "OCC": 74,
+          "ADR": 76
+        },
+        {
+          "name": "Oct",
+          "OCC": 50,
+          "ADR": 64
+        },
+        {
+          "name": "Nov",
+          "OCC": 88,
+          "ADR": 80
+        },
+        {
+          "name": "Dec",
+          "OCC": 74,
+          "ADR": 76
+        }
+      ]
+}

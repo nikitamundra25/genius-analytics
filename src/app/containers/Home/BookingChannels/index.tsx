@@ -6,6 +6,7 @@ import WidgetHeader from "../../../components/WidgetHeader";
 import { requestBookingChannelData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import Loader from "../../../components/Loader/Loader";
 const PieChartComponent = React.lazy(() =>
   import("../../../components/Charts/PieChart")
 );
@@ -32,6 +33,7 @@ export default ({ graphdata = [] }:any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
+            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
           <PieChartComponent
             id={"booking-mix"}
             height={"250px"}
@@ -52,6 +54,7 @@ export default ({ graphdata = [] }:any) => {
               },
             }}
           />
+           </React.Suspense>
           )}
         
       </Card.Body>

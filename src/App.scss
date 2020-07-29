@@ -400,9 +400,15 @@ body {
     justify-content: center;
     margin: 0px 10px;
     font-size: 16px;
-    transition: all 0.3s ease-in;
+    //transition: all 0.3s ease-in;
+    &:hover{
+      background: $gray-mid;
+      border:1px solid $gray-mid;
+      color: $light-black-opaque;
+    }
     &.active{
       background:$light-black-opaque;
+      border:1px solid $light-black-opaque;
       color:$white;
     }
   }

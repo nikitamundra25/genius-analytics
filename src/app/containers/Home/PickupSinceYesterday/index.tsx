@@ -7,6 +7,9 @@ import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestRoomNightsData } from "../../../../actions";
+import caretup from "../../../../assets/img/caret-up.svg";
+import caretdown from "../../../../assets/img/caret-down.svg"
+
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
@@ -56,7 +59,7 @@ const PickupSinceYesterday = () => {
       id: "1",
       title: "Room Nights",
       range: "198",
-      arrowClass: "cui-arrow-top",
+      arrowClass: caretup,
       textClass: "text-success",
       charts: {
         dataSource:data && data.length && data[0] ? data[0].data : [],
@@ -84,7 +87,7 @@ const PickupSinceYesterday = () => {
       id: "2",
       title: "ADR",
       range: "2.6",
-      arrowClass: "cui-arrow-bottom",
+      arrowClass: caretdown,
       textClass: "text-danger",
       charts: {
         dataSource: data && data.length && data[1] ? data[1].data : [],
@@ -112,7 +115,7 @@ const PickupSinceYesterday = () => {
       id: "3",
       title: "Revenue",
       range: "19.4 k",
-      arrowClass: "cui-arrow-top",
+      arrowClass: caretup,
       textClass: "text-success",
       charts: {
         dataSource: data && data.length && data[2] ? data[2].data : [],
@@ -160,7 +163,9 @@ const PickupSinceYesterday = () => {
                     <div className="sub-inner-title">{key.title}</div>
                     {key.range ? (
                       <div className={`${key.textClass} h3  pt-2 mb-0`}>
-                        <i className={`${key.arrowClass}`}></i> {key.range}
+                         <img src={key.arrowClass} alt="success" width="20" className="mr-2"/>
+                        {/* <i className={`${key.arrowClass}`}></i>  */}
+                        {key.range}
                       </div>
                     ) : null}
                   </div>

@@ -62,7 +62,7 @@ class DefaultLayout extends Component<
     return (
       <div className='app' >
         <AppHeader fixed>
-          <Suspense fallback={<Loader />}>
+          <Suspense fallback={" "}>
             <DefaultHeader {...this.props} />
           </Suspense>
         </AppHeader>

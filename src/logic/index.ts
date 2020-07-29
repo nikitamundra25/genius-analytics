@@ -12,6 +12,23 @@ import { OccupacyStaticsDataLogics } from "./OccupacyStatics";
 import { RGIYOYVarianceDataLogics } from "./RGIYOYVariance";
 import { RoomNightsDataLogics } from "./RoomNights";
 import { RoomTypeStaticsDataLogics } from "./RoomTypeStatics";
+import { DailyOccupacyBudLyDataLogics } from "./DailyOccupacyBudLy";
+import { MarketSegmentationDataLogics } from "./MarketSegmentation";
+import { MonthlyDailyOccupacyDataLogics } from "./MonthlyDailyOccupacy";
+import { RateCodeStatisticsDataLogics } from "./RateCodeStatistics";
+import { MonthlyRoomTypeStatsDataLogics } from "./MonthlyRoomTypeStats";
+import { BookingChannelMonthlyDataLogics } from "./BookingChannelMonthly";
+import { LeadTimesYTDDataLogics } from "./LeadTimesYTD";
+import { LeadTimeYTDSegmentDataLogics } from "./LeadTimeYTDSegment";
+import { MOCCADRDataLogics } from "./MOCCADR";
+import { QOCCADRDataLogics } from "./QOCCADR";
+import { ROOMTYPESDataLogics } from "./ROOMTYPES";
+import { StayYTDDataLogics } from "./StayYTD";
+import { RGIPerformanceLogics } from "./RGIPerformance";
+import { RevPARYTDLogics } from "./RevPARYTD";
+import { PickupSummaryDowDataLogics } from "./pickupSummaryDowData";
+import { PickupSummaryOCCLogics } from "./pickupSummaryOCC";
+import { PickupSummarySegmentLogics } from "./pickupSummarySegmentData";
 
 export const redirectToLogic = createLogic({
   type: "REDIRET_TO",
@@ -35,5 +52,26 @@ export const AllLogics: Logic[] | any = [
   ...RGIYOYVarianceDataLogics,
   ...RoomNightsDataLogics,
   ...RoomTypeStaticsDataLogics,
+
+  ...BookingChannelMonthlyDataLogics,
+  ...DailyOccupacyBudLyDataLogics,
+  ...MarketSegmentationDataLogics,
+  ...MonthlyDailyOccupacyDataLogics,
+  ...RateCodeStatisticsDataLogics,
+  ...MonthlyRoomTypeStatsDataLogics,
+
+
+  ...LeadTimesYTDDataLogics,
+  ...LeadTimeYTDSegmentDataLogics,
+  ...MOCCADRDataLogics,
+  ...QOCCADRDataLogics,
+  ...ROOMTYPESDataLogics,
+  ...StayYTDDataLogics,
+  ...RGIPerformanceLogics,
+  ...RevPARYTDLogics,
+
+  ...PickupSummaryDowDataLogics,
+  ...PickupSummaryOCCLogics,
+  ...PickupSummarySegmentLogics,
   redirectToLogic,
 ];

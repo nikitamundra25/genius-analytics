@@ -3,4 +3,6 @@ export interface IPickupModel{
     pickupSummaryList: Object[] |any,
     pickupDetailList: Object[] |any,
     isError: boolean,
+    isPickupLoading: boolean,
+    isPickupError: boolean
 }
