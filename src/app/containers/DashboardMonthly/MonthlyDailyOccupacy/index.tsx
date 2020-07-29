@@ -126,7 +126,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
           position: "Bottom",
           font: {
             fontWeight: "600",
-            color: "#ffffff",
+            color: "#000000",
             fontSize:"12px",
           },
         },
