@@ -1,16 +1,30 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Card } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
-import Loader from "../../../components/Loader/Loader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
+import { requestMarketSegmentationData } from "../../../../actions";
+import { ErrorComponent } from "../../../components/Error";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
 
 const MarketSegmentation = ({ graphdata = [] }:any) => {
+
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.MarketSegmentationReducer
+  );
+  useEffect(() => {
+    dispatch(requestMarketSegmentationData());
+    // eslint-disable-next-line
+  }, []);
+
   const Charts = [
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "RMS2018",
       type: "Column",
@@ -29,7 +43,7 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
       },
     },
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "RMS2017",
       type: "Column",
@@ -48,7 +62,7 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
       },
     },
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "ADR2018",
       type: "Spline",
@@ -73,7 +87,7 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
       },
     },
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "ADR2017",
       type: "Spline",
@@ -106,7 +120,13 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
         activeToggle={"graph"}
       />
         {/* <Card.Body> */}
-          <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+        {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
             <MixedCharts
               id={"MarketChart"}
               chartSettings={{
@@ -130,7 +150,7 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
               }}
               charts={Charts}
             />
-          </React.Suspense>
+          )}
       
         {/* </Card.Body> */}
       </Card>

@@ -36,23 +36,23 @@ export const DashboardReducer = handleActions<any, any>(
       action
     ): IDashboardMainModel => ({
       ...state,
-      isLoading: true,
+      isMonthlyLoading: true,
     }),
     [DashBoardTypes.DASHBOARD_MONTHLY_SUCCESS]: (
       state = DashboardMainState,
       action
     ): IDashboardMainModel => ({
       ...state,
-      isLoading: false,
-      dashboardMonthlyList: action.payload.dashboardMonthlyList,
+      isMonthlyLoading: false,
+      dashboardMonthlyList: action.payload.widgets,
     }),
     [DashBoardTypes.DASHBOARD_MONTHLY_FAILURE]: (
       state = DashboardMainState,
       action
     ): IDashboardMainModel => ({
       ...state,
-      isLoading: false,
-      error: action.payload.error,
+      isMonthlyLoading: false,
+      isMonthlyError: action.payload.error,
     }),
 
     //   Dashboard yearly list

@@ -13,6 +13,13 @@ export * from "./RGIYOYVariance";
 export * from "./RoomNights";
 export * from "./RoomTypeStatics";
 
+export * from "./BookingChannelMonthly";
+export * from "./DailyOccupacyBudLy";
+export * from "./MarketSegmentation";
+export * from "./MonthlyDailyOccupacy";
+export * from "./RateCodeStatistics";
+export * from "./MonthlyRoomTypeStats";
+
 //
 export const redirectTo = createAction("REDIRET_TO");
 //

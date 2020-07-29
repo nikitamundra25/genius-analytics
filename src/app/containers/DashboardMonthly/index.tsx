@@ -7,6 +7,7 @@ import { DashboardMonthlyRequest } from "../../../actions";
 import { IRootState } from "../../../interfaces";
 import "./index.scss";
 import Loader from "../../components/Loader/Loader";
+import { ErrorComponent } from "../../components/Error";
 
 const DashboardMonthly: FunctionComponent = () => {
   const cellSpacing = [15, 30];
@@ -33,14 +34,18 @@ const DashboardMonthly: FunctionComponent = () => {
     restoreModel = dashboardObj.serialize();
   };
 
-  const { dashboardMonthlyList,isLoading } = DashboardReducer;
+  const { dashboardMonthlyList,isMonthlyLoading,isMonthlyError } = DashboardReducer;
 
   return (
     <>
       <TopBar handleReset={RestorePanel}/>
       <div className="animated fadeIn">
-        { isLoading ? (
+      {isMonthlyLoading ? (
           <Loader />
+        ) : isMonthlyError ? (
+          <ErrorComponent
+            message={"An error occured while fetching dashboard details"}
+          />
         ) :dashboardMonthlyList && dashboardMonthlyList.length ? (
           <DashboardLayoutComponent
             id="defaultLayout"

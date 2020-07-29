@@ -40,7 +40,7 @@ const getChart = (chartType: any) => {
         <div className="e-panel-container">
          
           <MonthlyDailyOccupacy 
-          graphdata={chartType.graphdata}
+         
           />
           </div>
         </div>
@@ -58,7 +58,6 @@ const getChart = (chartType: any) => {
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
           <DailyOccupacy 
-           graphdata={chartType.graphdata}
           />
         </div>
         </div>
@@ -76,7 +75,6 @@ const getChart = (chartType: any) => {
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
           <RateCodeStatistics 
-           graphdata={chartType.graphdata}
           />
           </div>
         </div>
@@ -94,7 +92,6 @@ const getChart = (chartType: any) => {
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
           <MarketSegmentation 
-          graphdata={chartType.graphdata}
           />
           </div>
         </div>
@@ -112,7 +109,6 @@ const getChart = (chartType: any) => {
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
           <RoomTypeStatistics 
-          graphdata={chartType.graphdata}
           />
         </div>
         </div>
@@ -130,7 +126,6 @@ const getChart = (chartType: any) => {
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
           <BookingChannel 
-          graphdata={chartType.graphdata}
           />
         </div>
         </div>

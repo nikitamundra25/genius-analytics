@@ -1,0 +1,29 @@
+{
+    "data": [
+        {
+          "name": "Direct",
+          "RoomNts": 180,
+          "ARR": 228
+        },
+        {
+          "name": "GDS",
+          "RoomNts": 110,
+          "ARR": 203
+        },
+        {
+          "name": "OTAs",
+          "RoomNts": 200,
+          "ARR": 158
+        },
+        {
+          "name": "Brand Website",
+          "RoomNts": 120,
+          "ARR": 161
+        },
+        {
+          "name": "Corporate Website",
+          "RoomNts": 50,
+          "ARR": 198
+        }
+      ]
+}

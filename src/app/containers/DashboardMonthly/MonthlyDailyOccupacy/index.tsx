@@ -1,17 +1,30 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Row, Card, Col } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
+import { requestMonthlyDailyOccupacyData } from "../../../../actions";
+import { ErrorComponent } from "../../../components/Error";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
 
 const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
-
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.MonthlyDailyOccupacyReducer
+  );
+  useEffect(() => {
+    dispatch(requestMonthlyDailyOccupacyData());
+    // eslint-disable-next-line
+  }, []);
+  
   const Charts1 = [
     {
-      dataSource: graphdata[0].data,
+      dataSource: data && data.length && data[0] ? data[0].data : [],
       xName: "name",
       yName: "OCC",
       type: "StackingColumn100",
@@ -20,7 +33,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
       width: 1,
     },
     {
-      dataSource: graphdata[0].data,
+      dataSource:  data && data.length && data[0] ? data[0].data : [],
       xName: "name",
       yName: "EMPTY",
       type: "StackingColumn100",
@@ -40,7 +53,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
       },
     },
     {
-      dataSource: graphdata[0].data,
+      dataSource:  data && data.length && data[0] ? data[0].data : [],
       xName: "name",
       yName: "ADR",
       type: "Spline",
@@ -68,7 +81,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
   
   const Charts2 = [
     {
-      dataSource: graphdata[1].data,
+      dataSource:  data && data.length && data[1] ? data[1].data : [],
       xName: "name",
       yName: "OCC",
       type: "StackingColumn100",
@@ -88,7 +101,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
       },
     },
     {
-      dataSource: graphdata[1].data,
+      dataSource: data && data.length && data[1] ? data[1].data : [],
       xName: "name",
       yName: "EMPTY",
       type: "StackingColumn100",
@@ -108,7 +121,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
       },
     },
     {
-      dataSource: graphdata[1].data,
+      dataSource: data && data.length && data[1] ? data[1].data : [],
       xName: "name",
       yName: "ADR",
       type: "Spline",
@@ -140,6 +153,13 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
         activeToggle={"graph"}
       />
       <Card.Body>
+      {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
         <Row className="row-inner">
           <Col xs={12} md={9}>
             <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
@@ -199,6 +219,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
             </React.Suspense>
           </Col>
         </Row>
+          )}
       </Card.Body>
     </Card>
   );

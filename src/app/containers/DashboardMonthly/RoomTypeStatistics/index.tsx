@@ -1,16 +1,30 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Card } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
-import Loader from "../../../components/Loader/Loader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
+import { requestMonthlyRoomTypeStaticsData } from "../../../../actions";
+import { ErrorComponent } from "../../../components/Error";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
 
 const RoomTypeStatistics = ({ graphdata = [] }:any) => {
+
+  
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.MonthlyRoomTypeStatsReducer
+  );
+  useEffect(() => {
+    dispatch(requestMonthlyRoomTypeStaticsData());
+    // eslint-disable-next-line
+  }, []);
   const Charts = [
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "OCCTY",
       type: "Column",
@@ -29,7 +43,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
       },
     },
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "OCCLY",
       type: "Column",
@@ -49,7 +63,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
     },
   
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "ADRTY",
       type: "Spline",
@@ -75,7 +89,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
     },
   
     {
-      dataSource: graphdata,
+      dataSource: data,
       xName: "name",
       yName: "ADRLY",
       type: "Spline",
@@ -108,7 +122,13 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
         activeToggle={"graph"}
       />
         {/* <Card.Body> */}
-          <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+        {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
             <MixedCharts
               id={"RoomChart"}
               chartSettings={{
@@ -132,7 +152,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
               }}
               charts={Charts}
             />
-          </React.Suspense>
+          )}
       
         {/* </Card.Body> */}
       </Card>
