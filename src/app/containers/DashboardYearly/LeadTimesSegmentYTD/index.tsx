@@ -1,12 +1,25 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Card } from "react-bootstrap";
-import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
+import { requestLeadTimeYTDSegmentData } from "../../../../actions";
+import { ErrorComponent } from "../../../components/Error";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 const PieChartComponent = React.lazy(() =>
   import("../../../components/Charts/PieChart")
 );
 
 export default ({graphdata = []}: any) => {
+
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.LeadTimesYTDSegmentReducer
+  );
+  useEffect(() => {
+    dispatch(requestLeadTimeYTDSegmentData());
+    // eslint-disable-next-line
+  }, []);
   return (
     <Card>
       <WidgetHeader
@@ -14,11 +27,17 @@ export default ({graphdata = []}: any) => {
         activeToggle={"graph"}
       />
       <Card.Body>
-        <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+      {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
           <PieChartComponent
             id={"leadtimesSegment"}
             height={"250px"}
-            data={graphdata}
+            data={data}
             chartSettings={{
               SeriesDirective: {
                 innerRadius: "40%",
@@ -39,7 +58,7 @@ export default ({graphdata = []}: any) => {
               },
             }}
           />
-        </React.Suspense>
+          )}
       </Card.Body>
     </Card>
   );

@@ -1,6 +1,5 @@
 import React,{useEffect} from "react";
 import { Card, Row, Col } from "react-bootstrap";
-import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
@@ -127,13 +126,7 @@ export default ({ graphdata = [] }: any) => {
             ? RTGBarChart.map((key: any, index: number) => {
                 return (
                   <Col sm={4} md={4} key={index} >
-                    <React.Suspense
-                      fallback={
-                        <div className="card-loader">
-                          <Loader />
-                        </div>
-                      }
-                    >
+                   
                       <MixedCharts
                         id={`mix-${index}`}
                         charts={[key.charts]}
@@ -183,7 +176,7 @@ export default ({ graphdata = [] }: any) => {
                   key={index}
                   {...key}
                 /> */}
-                    </React.Suspense>
+                  
                   </Col>
                 );
               })

@@ -5,14 +5,13 @@ const MixedCharts = React.lazy(() =>
 );
 
 
-
-
-
 const PickupSegment = (props: any) => {
-  const{index, segmentData} = props;
+  const{index, data} = props;
+
+
   const Charts = [
     {
-      dataSource: segmentData,
+      dataSource: data,
       xName: "name",
       yName: "RoomNts",
       type: "Column",
@@ -34,7 +33,7 @@ const PickupSegment = (props: any) => {
     },
    
     {
-      dataSource: segmentData,
+      dataSource: data,
       xName: "name",
       yName: "ADR",
       type: "Spline",
@@ -65,7 +64,14 @@ const PickupSegment = (props: any) => {
   return (
     <>
      
-          <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+          {/* {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : ( */}
+           <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts
               id={`PickupChart-${index}`}
               legend = {false}
@@ -90,6 +96,7 @@ const PickupSegment = (props: any) => {
               }}
               charts={Charts}
             />
+          {/* )} */}
           </React.Suspense>
           <div className="sub-title">Pick up by segment</div>
     </>

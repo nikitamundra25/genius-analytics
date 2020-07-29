@@ -7,6 +7,8 @@ import { DashboardYearlyRequest } from "../../../actions";
 import { IRootState } from "../../../interfaces";
 import "./index.scss";
 import Loader from "../../components/Loader/Loader";
+import { ErrorComponent } from "../../components/Error";
+
 
 const DashboardYearly: FunctionComponent = () => {
   const cellSpacing = [15, 30];
@@ -32,14 +34,18 @@ const DashboardYearly: FunctionComponent = () => {
     restoreModel = dashboardObj.serialize();
   };
 
-  const { dashboardYearlyList , isLoading} = DashboardReducer;
+  const { dashboardYearlyList , isYearlyLoading,isYearlyError} = DashboardReducer;
 
   return (
     <>
         <TopBar handleReset={RestorePanel} />
       <div className="animated fadeIn">
-        { isLoading ? (
+      {isYearlyLoading ? (
           <Loader />
+        ) : isYearlyError ? (
+          <ErrorComponent
+            message={"An error occured while fetching dashboard details"}
+          />
         ) : dashboardYearlyList && dashboardYearlyList.length ? (
           <DashboardLayoutComponent
             id="defaultLayout"

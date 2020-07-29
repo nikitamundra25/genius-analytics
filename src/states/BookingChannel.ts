@@ -1,7 +1,7 @@
 import { IBookingChannelModel } from "../interfaces";
 
 export const BookingChannelInitialState: IBookingChannelModel = {
-  isLoading: true,
+  isLoading: false,
   isError: false,
   data: [],
 };

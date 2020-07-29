@@ -18,3 +18,17 @@ export * from "./MarketSegmentation";
 export * from "./MonthlyDailyOccupacy";
 export * from "./MonthlyRoomTypeStats";
 export * from "./RateCodeStatistics";
+
+export * from "./QOCCADR";
+export * from "./MOCCADR";
+export * from "./LeadTimesYTD";
+export * from "./LeadTimeYTDSegment";
+export * from "./RGIPerformance";
+export * from "./RevPARYTD";
+export * from "./ROOMTYPES";
+export * from "./StayYTD";
+
+
+export * from "./pickupSummaryDowData";
+export * from "./pickupSummaryOCC";
+export * from "./pickupSummarySegmentData"

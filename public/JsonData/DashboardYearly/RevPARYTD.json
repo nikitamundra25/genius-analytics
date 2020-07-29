@@ -1,0 +1,82 @@
+{
+    "data": [
+        {
+          "name": "Jan",
+          "OCC": 75,
+          "RevPAR": 132,
+          "NrevPAR": 115
+        },
+        {
+          "name": "Feb",
+          "OCC": 86,
+          "RevPAR": 133,
+          "NrevPAR": 117
+        },
+        {
+          "name": "Mar",
+          "OCC": 93,
+          "RevPAR": 135,
+          "NrevPAR": 124
+        },
+        {
+          "name": "Apr",
+          "OCC": 94,
+          "RevPAR": 146,
+          "NrevPAR": 122
+        },
+        {
+          "name": "May",
+          "OCC": 89,
+          "RevPAR": 154,
+          "NrevPAR": 143
+        },
+        {
+          "name": "Jun",
+          "OCC": 91,
+          "RevPAR": 161,
+          "NrevPAR": 152
+        },
+        {
+          "name": "Jul",
+          "OCC": 88,
+          "RevPAR": 167,
+          "NrevPAR": 157
+        },
+        {
+          "name": "Aug",
+          "OCC": 85,
+          "RevPAR": 144,
+          "NrevPAR": 118
+        },
+        {
+          "name": "Sep",
+          "OCC": 89,
+          "RevPAR": 156,
+          "NrevPAR": 144
+        },
+        {
+          "name": "Oct",
+          "OCC": 95,
+          "RevPAR": 150,
+          "NrevPAR": 142
+        },
+        {
+          "name": "Nov",
+          "OCC": 91,
+          "RevPAR": 143,
+          "NrevPAR": 145
+        },
+        {
+          "name": "Dec",
+          "OCC": 88,
+          "RevPAR": 150,
+          "NrevPAR": 130
+        },
+        {
+          "name": "Total",
+          "OCC": 90,
+          "RevPAR": 149,
+          "NrevPAR": 135
+        }
+      ]
+}

@@ -11,14 +11,14 @@ export const PickupReducer = handleActions<IPickupModel, any>(
       action,
     ): IPickupModel => ({
       ...state,
-      isLoading: true,
+      isPickupLoading: true,
     }),
     [PickupTypes.PICKUP_SUMMARY_SUCCESS]: (
       state = PickupInitialState,
       action,
     ): IPickupModel => ({
       ...state,
-      isLoading: false,
+      isPickupLoading: false,
       pickupSummaryList: action.payload.pickupSummaryList,
     }),
     [PickupTypes.PICKUP_SUMMARY_FAILURE]: (
@@ -26,8 +26,8 @@ export const PickupReducer = handleActions<IPickupModel, any>(
       action,
     ): IPickupModel => ({
       ...state,
-      isLoading: false,
-      isError: action.payload.error,
+      isPickupLoading: false,
+      isPickupError: action.payload.error,
     }),
 
      //   Pickup detail list 

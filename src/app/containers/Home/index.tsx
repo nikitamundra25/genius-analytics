@@ -41,7 +41,7 @@ const HomeComponent: FunctionComponent = () => {
       <TopBar handleReset={RestorePanel} />
       <div className='animated fadeIn'>
         {isLoading ? (
-          <Loader />
+          <Loader /> 
         ) : isError ? (
           <ErrorComponent
             message={"An error occured while fetching dashboard details"}

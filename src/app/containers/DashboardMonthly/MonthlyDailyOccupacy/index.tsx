@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import { Row, Card, Col } from "react-bootstrap";
-import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
@@ -162,7 +161,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
           ) : (
         <Row className="row-inner">
           <Col xs={12} md={9}>
-            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+            {/* <React.Suspense fallback={<div className="card-loader"><Loader /></div>}> */}
               <MixedCharts
                 id={"occChart1"}
                 legend = {false}
@@ -188,10 +187,10 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
                 }}
                 charts={Charts1}
               />
-            </React.Suspense>
+            {/* </React.Suspense> */}
           </Col>
           <Col xs={12} md={3}>
-            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+            {/* <React.Suspense fallback={<div className="card-loader"><Loader /></div>}> */}
               <MixedCharts
                 id={"occChart2"}
                 legend = {false}
@@ -216,7 +215,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
                 }}
                 charts={Charts2}
               />
-            </React.Suspense>
+            {/* </React.Suspense> */}
           </Col>
         </Row>
           )}

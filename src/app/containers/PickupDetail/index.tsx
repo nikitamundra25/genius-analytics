@@ -7,6 +7,7 @@ import { IRootState } from "../../../interfaces";
 import { PickupDetailRequest } from "../../../actions";
 import Loader from "../../components/Loader/Loader";
 import "./index.scss";
+import { ErrorComponent } from "../../components/Error";
 
 const PickupDetail: FunctionComponent = () => {
   const cellSpacing = [15, 30];
@@ -29,15 +30,19 @@ const PickupDetail: FunctionComponent = () => {
   const created = () => {
     restoreModel = dashboardObj.serialize();
   };
-  const { pickupDetailList ,isLoading} = PickupReducer;
+  const { pickupDetailList ,isLoading,isError} = PickupReducer;
 
   return (
     <>
       <TopBar handleReset={RestorePanel} />
       <div className="animated fadeIn">
-        { isLoading ? (
+      {isLoading ? (
           <Loader />
-        ) : pickupDetailList && pickupDetailList.length ? (
+        ) : isError ? (
+          <ErrorComponent
+            message={"An error occured while fetching dashboard details"}
+          />
+        ) :  pickupDetailList && pickupDetailList.length ? (
           <DashboardLayoutComponent
             id="defaultLayout"
             cellSpacing={cellSpacing}

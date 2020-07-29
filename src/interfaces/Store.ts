@@ -27,5 +27,18 @@ export interface IRootState {
   MarketSegmentationReducer: IBookingChannelModel,
   MonthlyDailyOccupacyReducer: IBookingChannelModel,
   MonthlyRoomTypeStatsReducer: IBookingChannelModel,
-  RateCodeStatisticsReducer: IBookingChannelModel
+  RateCodeStatisticsReducer: IBookingChannelModel,
+
+  LeadTimesYTDReducer: IBookingChannelModel,
+  LeadTimesYTDSegmentReducer: IBookingChannelModel,
+  MOCCADRReducer: IBookingChannelModel,
+  QOCCADRReducer: IBookingChannelModel,
+  ROOMTYPESReducer: IBookingChannelModel,
+  StayYTDReducer: IBookingChannelModel,
+  RevPARYTDReducer: IBookingChannelModel,
+  RGIPerformanceReducer: IBookingChannelModel,
+
+  pickupSummarySegmentReducer: IBookingChannelModel,
+  pickupSummaryOCCReducer: IBookingChannelModel,
+  pickupSummaryDowDataReducer: IBookingChannelModel
 }

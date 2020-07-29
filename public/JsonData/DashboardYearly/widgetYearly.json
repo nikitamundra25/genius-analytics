@@ -1,0 +1,13 @@
+[
+    { "name": "Cumulative", "id": 1 },
+    { "name": "MOCCADR", "id": 2 },
+    { "name": "QOCCADR", "id": 3 },
+    { "name": "ROOMTYPES", "id": 4 },
+    { "name": "RevPARYTD", "id": 5 },
+    { "name": "StayYTD", "id": 6 },
+    { "name": "Lead Times YTD", "id": 7 },
+    { "name": "Lead Times YTD by Segment", "id": 8 },
+    { "name": "RGI Performance - YTD", "id": 9 }
+   
+  ]
+
