@@ -31,6 +31,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
       fill: "#9ec2d2",
       name: "OCC TY",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
@@ -50,6 +51,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
       fill: "#61a7c0",
       name: "OCC LY",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
@@ -74,8 +76,8 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
         visible: true,
         width: 8,
         height: 8,
-        fill: "#202c47",
-        border: { width: 0, color: "#202c47" },
+        fill: "#3fabc9",
+        border: { width: 0, color: "#3fabc9" },
         dataLabel: {
           visible: true,
           position: "Top",
@@ -101,8 +103,8 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
         visible: true,
         width: 8,
         height: 8,
-        fill: "#81cbe8",
-        border: { width: 0, color: "#81cbe8" },
+        fill: "#3fabc9",
+        border: { width: 0, color: "#3fabc9" },
         dataLabel: {
           visible: true,
           position: "Bottom",

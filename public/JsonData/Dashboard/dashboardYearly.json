@@ -111,91 +111,91 @@
       { "name": "RevPARYTD", "id": 5 , "graphdata":[
         {
           "name": "Jan",
-          "OCC": 75,
+          "OCC": 205,
           "RevPAR": 132,
           "NrevPAR": 115
         },
         {
           "name": "Feb",
-          "OCC": 86,
+          "OCC": 146,
           "RevPAR": 133,
           "NrevPAR": 117
         },
         {
           "name": "Mar",
-          "OCC": 93,
+          "OCC": 183,
           "RevPAR": 135,
           "NrevPAR": 124
         },
         {
           "name": "Apr",
-          "OCC": 94,
+          "OCC": 194,
           "RevPAR": 146,
           "NrevPAR": 122
         },
         {
           "name": "May",
-          "OCC": 89,
+          "OCC": 219,
           "RevPAR": 154,
           "NrevPAR": 143
         },
         {
           "name": "Jun",
-          "OCC": 91,
-          "RevPAR": 161,
-          "NrevPAR": 152
+          "OCC": 151,
+          "RevPAR": 131,
+          "NrevPAR": 122
         },
         {
           "name": "Jul",
-          "OCC": 88,
+          "OCC": 198,
           "RevPAR": 167,
           "NrevPAR": 157
         },
         {
           "name": "Aug",
-          "OCC": 85,
+          "OCC": 165,
           "RevPAR": 144,
           "NrevPAR": 118
         },
         {
           "name": "Sep",
-          "OCC": 89,
+          "OCC": 189,
           "RevPAR": 156,
           "NrevPAR": 144
         },
         {
           "name": "Oct",
-          "OCC": 95,
+          "OCC": 195,
           "RevPAR": 150,
           "NrevPAR": 142
         },
         {
           "name": "Nov",
-          "OCC": 91,
+          "OCC": 151,
           "RevPAR": 143,
           "NrevPAR": 145
         },
         {
           "name": "Dec",
-          "OCC": 88,
+          "OCC": 178,
           "RevPAR": 150,
           "NrevPAR": 130
         },
         {
           "name": "Total",
-          "OCC": 90,
+          "OCC": 190,
           "RevPAR": 149,
           "NrevPAR": 135
         }
       ]},
       { "name": "StayYTD", "id": 6 , "graphdata":[
-        { "x": "Total", "y1": 2.9,  "y2": 175   },
-        { "x": "BAR", "y1": 2.3,  "y2": 201   },
-        { "x": "COR", "y1": 1.9,  "y2": 187  },
-        { "x": "DIS", "y1": 3.3,  "y2": 149  },
-        { "x": "GRP", "y1": 4.1,  "y2": 166  },
-        { "x": "MTG", "y1": 3.5,  "y2": 171   },
-        { "x": "FIT", "y1": 2.8,  "y2": 149  }
+        { "x": "Total", "y1": 29,  "y2": 175   },
+        { "x": "BAR", "y1": 23,  "y2": 201   },
+        { "x": "COR", "y1": 19,  "y2": 187  },
+        { "x": "DIS", "y1": 33,  "y2": 149  },
+        { "x": "GRP", "y1": 41,  "y2": 166  },
+        { "x": "MTG", "y1": 35,  "y2": 171   },
+        { "x": "FIT", "y1": 28,  "y2": 149  }
       ]},
       { "name": "Lead Times YTD", "id": 7 , "graphdata":[
         { "x": "90+", "y": 35, "text": "35%" },

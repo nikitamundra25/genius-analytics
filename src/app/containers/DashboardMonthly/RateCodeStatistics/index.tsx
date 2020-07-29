@@ -31,6 +31,7 @@ const RateCodeStatistics = ({ graphdata = [] }:any) => {
       fill: "#386fb0",
       name: "Room Nts",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
@@ -49,14 +50,14 @@ const RateCodeStatistics = ({ graphdata = [] }:any) => {
       type: "Spline",
       fill: "#b73632",
       name: "ARR",
-      width: 3,
-      dashArray:'5',
+      width: 2,
+      dashArray:'3',
       marker: {
         visible: true,
         width: 8,
         height: 8,
-        fill: "#b73632",
-        border: { width: 0, color: "#b73632" },
+       fill: "#b73632",
+        border: { width: 1, color: "#b73632" },
         dataLabel: {
           visible: true,
           position: "Top",

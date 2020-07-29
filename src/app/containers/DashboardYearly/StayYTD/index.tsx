@@ -28,6 +28,7 @@ const StayYTD = ({ graphdata = [] }: any) => {
       type: "Column",
       name: "Stay",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
@@ -43,7 +44,7 @@ const StayYTD = ({ graphdata = [] }: any) => {
       dataSource: data,
       xName: "x",
       yName: "y2",
-      type: "Line",
+      type: "Spline",
       fill: "#5685c1",
       name: "ADR",
       width: 2,
