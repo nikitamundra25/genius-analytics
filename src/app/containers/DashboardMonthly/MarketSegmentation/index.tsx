@@ -121,7 +121,7 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
         title={"Market Segmentation"}
         activeToggle={"graph"}
       />
-        {/* <Card.Body> */}
+        <Card.Body>
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -154,7 +154,7 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
             />
           )}
       
-        {/* </Card.Body> */}
+        </Card.Body>
       </Card>
     </>
   );

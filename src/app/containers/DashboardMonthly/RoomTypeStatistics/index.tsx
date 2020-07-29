@@ -123,7 +123,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
         title={"Room Type Statistics"}
         activeToggle={"graph"}
       />
-        {/* <Card.Body> */}
+        <Card.Body>
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -156,7 +156,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
             />
           )}
       
-        {/* </Card.Body> */}
+        </Card.Body>
       </Card>
     
   );

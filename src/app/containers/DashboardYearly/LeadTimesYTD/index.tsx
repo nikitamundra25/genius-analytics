@@ -14,7 +14,7 @@ export default ({ graphdata = [] }: any) => {
         <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
           <PieChartComponent
             id={"leadtimes"}
-            height={"285px"}
+            height={"250px"}
             data={graphdata}
             chartSettings={{
               SeriesDirective: {

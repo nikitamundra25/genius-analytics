@@ -77,7 +77,7 @@ const BookingChannel = ({ graphdata = [] }:any) => {
       title={"Booking Channel"}
       activeToggle={"graph"}
     />
-      {/* <Card.Body> */}
+      <Card.Body>
       {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -110,7 +110,7 @@ const BookingChannel = ({ graphdata = [] }:any) => {
             charts={Charts}
           />
           )}
-      {/* </Card.Body> */}
+      </Card.Body>
     </Card>
     
   );

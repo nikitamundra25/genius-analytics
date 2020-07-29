@@ -145,6 +145,9 @@ const CumulativeTable = () => {
     <>
       <Card>
         <Card.Body>
+        <div className='dashboard-yearly-table'>
+
+        
           <Table className="yearly-table" responsive>
             <thead>
               <tr className="business-top-row">
@@ -203,7 +206,7 @@ const CumulativeTable = () => {
                                         color: "transparent",
                                       },
                                     },
-                                    tooltip: { enable: true },
+                                    tooltip: { enable: false },
                                   }}
                                   title={"Business Mix ADR"}
                                   color="#4473c5"
@@ -246,6 +249,7 @@ const CumulativeTable = () => {
               ))}
             </tbody>
           </Table>
+          </div>
         </Card.Body>
       </Card>
     </>

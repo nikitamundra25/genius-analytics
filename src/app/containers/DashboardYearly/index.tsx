@@ -46,7 +46,7 @@ const DashboardYearly: FunctionComponent = () => {
             cellSpacing={cellSpacing}
             allowResizing={false}
             columns={6}
-            cellAspectRatio={50 / 80}
+            cellAspectRatio={50 / 75}
             created={created}
             ref={(scope: any) => {
               dashboardObj = scope;

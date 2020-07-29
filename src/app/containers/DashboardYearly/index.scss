@@ -1,5 +1,10 @@
 
 @import "../../../scss/variables";
+.dashboard-yearly-table{
+  height:270px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 .yearly-table{
   border-collapse: separate;
   font-family: 'Roboto', sans-serif;
