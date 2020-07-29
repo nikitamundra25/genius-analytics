@@ -10,8 +10,6 @@ import { toast } from "react-toastify";
 import {
   DashBoardTypes,
   DashboardMainSuccess,
-  showLoader,
-  hideLoader,
   DashboardMainFailed,
   DashboardMonthlySuccess,
   DashboardMonthlyFailed,
@@ -24,45 +22,8 @@ import { ApiHelper } from "../helper";
  *
  */
 
-let toastId: any = null;
-// To get dashboard main list
-const dashboardLogic = createLogic({
-  type: DashBoardTypes.DASHBOARD_MAIN_REQUEST,
-  async process(data, dispatch: any, done) {
-    dispatch(
-      ToggleDashboardLoader({
-        isLoading: true,
-      })
-    );
-    const response = await new ApiHelper().FetchFromLocalJSONFile(
-      "Dashboard/",
-      "dashboard.json",
-      "GET",
-      undefined,
-      undefined,
-      undefined
-    );
+let toastId: any = null
 
-    if (response && !response.isError) {
-      dispatch(
-        DashboardMainSuccess({
-          dashboardMainList: response.data.data,
-        })
-      );
-      done();
-    } else {
-      if (!toast.isActive(toastId)) {
-        toastId = toast.error("Something went wrong! Please try again later");
-      }
-      dispatch(
-        DashboardMainFailed({
-          error: response.messages[0],
-        })
-      );
-      done();
-    }
-  },
-});
 
 //  To get dashboard yearly list
 const dashboardYearlyLogic = createLogic({
@@ -167,7 +128,7 @@ const getWidgetsLogic = createLogic({
 });
 //
 export const DashBoardLogics = [
-  dashboardLogic,
+  // dashboardLogic,
   dashboardMonthlyLogic,
   dashboardYearlyLogic,
   getWidgetsLogic,

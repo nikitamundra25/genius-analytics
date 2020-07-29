@@ -6,29 +6,7 @@ import { DashBoardTypes } from "../actions";
 export const DashboardReducer = handleActions<any, any>(
   {
     //   Dashboard main list
-    [DashBoardTypes.DASHBOARD_MAIN_REQUEST]: (
-      state = DashboardMainState,
-      action
-    ): IDashboardMainModel => ({
-      ...state,
-      isLoading: true,
-    }),
-    [DashBoardTypes.DASHBOARD_MAIN_SUCCESS]: (
-      state = DashboardMainState,
-      action
-    ): IDashboardMainModel => ({
-      ...state,
-      isLoading: false,
-      dashboardMainList: action.payload.dashboardMainList,
-    }),
-    [DashBoardTypes.DASHBOARD_MAIN_FAILURE]: (
-      state = DashboardMainState,
-      action
-    ): IDashboardMainModel => ({
-      ...state,
-      isLoading: false,
-      error: action.payload.error,
-    }),
+
 
     // Dashboard monthly list
     [DashBoardTypes.TOGGLE_DASHBOARD_MONTHLY_LOADER]: (
@@ -81,6 +59,7 @@ export const DashboardReducer = handleActions<any, any>(
     }),
 
 
+    
     [DashBoardTypes.TOGGLE_DASHBOARD_LOADER]: (
       state = DashboardMainState,
       action

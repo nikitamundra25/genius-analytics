@@ -1,7 +1,7 @@
 import { IBOBModel } from "../interfaces";
 
 export const BOBInitialState: IBOBModel = {
-  isLoading: true,
+  isLoading: false,
   isError: false,
   data: [],
 };
