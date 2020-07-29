@@ -1,9 +1,6 @@
 import { createLogic } from "redux-logic";
-import { toast } from "react-toastify";
 import {
     PickupTypes,
-  showLoader,
-  hideLoader,
   PickupSummarySuccess,
   PickupSummaryFailed,
   PickupDetailSuccess,
@@ -17,7 +14,6 @@ import { ApiHelper } from "../helper";
  *
  */
 
-let toastId: any = null;
 // To get pickup summary list
 
 const pickupListLogic = createLogic({
