@@ -27,3 +27,8 @@ export * from "./RGIPerformance";
 export * from "./RevPARYTD";
 export * from "./ROOMTYPES";
 export * from "./StayYTD";
+
+
+export * from "./pickupSummaryDowData";
+export * from "./pickupSummaryOCC";
+export * from "./pickupSummarySegmentData"

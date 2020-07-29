@@ -6,11 +6,8 @@ import {
   ToggleDashboardYearlyLoader,
 } from "./../actions/Dashboard";
 import { createLogic } from "redux-logic";
-import { toast } from "react-toastify";
 import {
   DashBoardTypes,
-  DashboardMainSuccess,
-  DashboardMainFailed,
   DashboardMonthlySuccess,
   DashboardMonthlyFailed,
   DashboardYearlySuccess,
@@ -22,7 +19,6 @@ import { ApiHelper } from "../helper";
  *
  */
 
-let toastId: any = null
 
 
 //  To get dashboard yearly list

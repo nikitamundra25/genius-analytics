@@ -36,5 +36,9 @@ export interface IRootState {
   ROOMTYPESReducer: IBookingChannelModel,
   StayYTDReducer: IBookingChannelModel,
   RevPARYTDReducer: IBookingChannelModel,
-  RGIPerformanceReducer: IBookingChannelModel
+  RGIPerformanceReducer: IBookingChannelModel,
+
+  pickupSummarySegmentReducer: IBookingChannelModel,
+  pickupSummaryOCCReducer: IBookingChannelModel,
+  pickupSummaryDowDataReducer: IBookingChannelModel
 }

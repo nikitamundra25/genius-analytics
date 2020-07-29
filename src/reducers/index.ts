@@ -27,6 +27,9 @@ import { ROOMTYPESReducer } from "./ROOMTYPES";
 import { StayYTDReducer } from "./StayYTD";
 import { RevPARYTDReducer } from "./RevPARYTD";
 import { RGIPerformanceReducer } from "./RGIPerformance";
+import { pickupSummarySegmentReducer } from "./pickupSummarySegmentData";
+import { pickupSummaryOCCReducer } from "./pickupSummaryOCC";
+import { pickupSummaryDowDataReducer } from "./pickupSummaryDowData";
 
 export const mainReducer = handleActions(
   {
@@ -74,5 +77,9 @@ export const RootReducer: Reducer<IRootState, AnyAction> = combineReducers<
   ROOMTYPESReducer: ROOMTYPESReducer as any,
   StayYTDReducer: StayYTDReducer as any,
   RevPARYTDReducer: RevPARYTDReducer as any,
-  RGIPerformanceReducer: RGIPerformanceReducer as any
+  RGIPerformanceReducer: RGIPerformanceReducer as any,
+
+  pickupSummarySegmentReducer: pickupSummarySegmentReducer as any,
+  pickupSummaryOCCReducer: pickupSummaryOCCReducer as any,
+  pickupSummaryDowDataReducer: pickupSummaryDowDataReducer as any
 });

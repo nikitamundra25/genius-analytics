@@ -30,6 +30,10 @@ export * from "./RGIPerformance";
 export * from "./ROOMTYPES";
 export * from "./StayYTD";
 
+export * from "./pickupSummaryDowData";
+export * from "./pickupSummaryOCC";
+export * from "./pickupSummarySegmentData";
+
 //
 export const redirectTo = createAction("REDIRET_TO");
 //

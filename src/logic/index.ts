@@ -26,6 +26,9 @@ import { ROOMTYPESDataLogics } from "./ROOMTYPES";
 import { StayYTDDataLogics } from "./StayYTD";
 import { RGIPerformanceLogics } from "./RGIPerformance";
 import { RevPARYTDLogics } from "./RevPARYTD";
+import { PickupSummaryDowDataLogics } from "./pickupSummaryDowData";
+import { PickupSummaryOCCLogics } from "./pickupSummaryOCC";
+import { PickupSummarySegmentLogics } from "./pickupSummarySegmentData";
 
 export const redirectToLogic = createLogic({
   type: "REDIRET_TO",
@@ -66,5 +69,9 @@ export const AllLogics: Logic[] | any = [
   ...StayYTDDataLogics,
   ...RGIPerformanceLogics,
   ...RevPARYTDLogics,
+
+  ...PickupSummaryDowDataLogics,
+  ...PickupSummaryOCCLogics,
+  ...PickupSummarySegmentLogics,
   redirectToLogic,
 ];
