@@ -6,7 +6,6 @@ import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestMTRDRGIPerformanceData } from "../../../../actions";
-import Loader from "../../../components/Loader/Loader";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
@@ -182,7 +181,7 @@ export default ({ graphdata = [] }: any) => {
                       <React.Suspense
                         fallback={
                           <div className="card-loader">
-                            <Loader />
+                            <WidgetLoader />
                           </div>
                         }
                       >

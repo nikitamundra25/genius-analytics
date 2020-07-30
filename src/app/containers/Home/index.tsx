@@ -53,8 +53,8 @@ const HomeComponent: FunctionComponent = () => {
             cellSpacing={cellSpacing}
             allowResizing={false}
             columns={4}
-          
-           cellAspectRatio={100 / 100}
+            // mediaQuery= {'max-width: 700px'}
+            cellAspectRatio={100 / 100}
             created={created}
             ref={(scope: any) => {
               dashboardObj = scope;

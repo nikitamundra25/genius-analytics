@@ -1,6 +1,5 @@
 import React, {useEffect}  from "react";
 import { Card, Row, Col } from "react-bootstrap";
-import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
@@ -162,7 +161,7 @@ const PickupSinceYesterday = () => {
                     ) : null}
                   </div>
  
-                  <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+                  <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
                     <MixedCharts
                         id={`pickup-${index}`}
                         charts={[key.charts]}

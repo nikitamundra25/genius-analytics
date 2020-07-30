@@ -260,7 +260,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           </React.Suspense>
           </Col>
           <Col sm={4}>
-          <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+          <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
             <MixedCharts
               id={"line-and-bar"}
               charts={Charts2}

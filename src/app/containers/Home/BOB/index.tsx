@@ -9,14 +9,14 @@ import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 
 const BOB = () => {
   const dispatch = useDispatch();
-  const { isLoading, data, isError } = useSelector(
+  const { isLoading, /* data */ isError } = useSelector(
     (state: IRootState) => state.BOBReducer
   );
   useEffect(() => {
     dispatch(requestBOBData());
     // eslint-disable-next-line
   }, []);
-  console.log(isLoading, data, isError);
+
   return (
     <>
       <Card>
