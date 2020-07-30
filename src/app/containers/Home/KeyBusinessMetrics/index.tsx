@@ -31,32 +31,78 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
     {
       id: "1",
       title: "OCC",
-      color: "#2e75b7",
+      color: "url(#occ-chart)",
       labelformat:"{value}%",
       data: data && data.length ? data : [],
     },
     {
       id: "2",
       title: "ADR",
-      color: "#5398d9",
+      color: "url(#adr-chart)",
+      // color: "#5398d9",
       labelformat:"n2",
       data: data && data.length ? data : [],
     },
     {
       id: "3",
       title: "Revenue",
-      color: "#1f4e79",
+      color: "url(#revnue-chart)",
+      // color: "#1f4e79",
       labelformat:"c2",
       data: data && data.length ? data : [],
     },
     {
       id: "4",
       title: "Revpar",
-      color: "#9dc3e7",
+      color: "url(#revpar-chart)",
+      // color: "#9dc3e7",
       labelformat:"c2",
       data: data && data.length ? data : [],
     },
   ];
+
+  const SAMPLE_CSS = `
+    #occ-chart stop {
+		stop-color: #2e75b7;
+	}
+	#occ-chart stop[offset="0"] {
+		stop-opacity: 0.95;
+	}
+	#occ-chart stop[offset="1"] {
+		stop-opacity: 0.3;
+  }
+
+  #adr-chart stop {
+		stop-color: #5398d9;
+	}
+	#adr-chart stop[offset="0"] {
+		stop-opacity: 0.99;
+	}
+	#adr-chart stop[offset="1"] {
+    stop-opacity: 0.4;
+  }
+
+  #revnue-chart stop {
+		stop-color: #1f4e79;
+	}
+	#revnue-chart stop[offset="0"] {
+		stop-opacity: 0.99;
+	}
+	#revnue-chart stop[offset="1"] {
+		stop-opacity: 0.4;
+  }
+
+  #revpar-chart stop {
+		stop-color: #6197ca;
+	}
+	#revpar-chart stop[offset="0"] {
+		stop-opacity: 1;
+	}
+	#revpar-chart stop[offset="1"] {
+		stop-opacity: 0.4;
+  }
+  
+  `;
 
  
   const location = useLocation();
@@ -74,6 +120,10 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
   }, [location]);
 
   return (
+    <>
+     <style>
+          {SAMPLE_CSS}
+      </style>
     <Card>
       <WidgetHeader title={"Key Business Metrics"} activeToggle={"graph"} />
       <Card.Body>
@@ -111,6 +161,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
                     },
                     title: key.title,
                     tooltip: { enable: false,  position: 'Top' },
+                   
                   }}
                   {...key}
                 />
@@ -123,6 +174,42 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
         )}
      </Card.Body>
     </Card>
+     <svg style={{ height: '0' }}>
+        <defs>
+            <linearGradient id="occ-chart" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" />
+                <stop offset="1" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <svg style={{ height: '0' }}>
+        <defs>
+            <linearGradient id="adr-chart" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" />
+                <stop offset="1" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <svg style={{ height: '0' }}>
+        <defs>
+            <linearGradient id="revnue-chart" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" />
+                <stop offset="1" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <svg style={{ height: '0' }}>
+        <defs>
+            <linearGradient id="revpar-chart" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" />
+                <stop offset="1" />
+            </linearGradient>
+        </defs>
+    </svg>
+ </>
   );
 };
 

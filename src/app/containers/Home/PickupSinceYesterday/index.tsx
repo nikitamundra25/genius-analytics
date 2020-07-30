@@ -38,7 +38,8 @@ const PickupSinceYesterday = () => {
         xName: "x",
         yName: "y",
         type: "Column",
-        fill: "#f07623",
+        fill: "url(#pickup-chart)",
+        //fill: "#f07623",
         name: "RGI",
         width: 1,
         cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 7, topRight: 7 },
@@ -66,7 +67,8 @@ const PickupSinceYesterday = () => {
         xName: "x",
         yName: "y",
         type: "Column",
-        fill: "#f07623",
+        fill: "url(#pickup-chart)",
+        //fill: "#f07623",
         name: "MPI",
         width: 1,
         cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 7, topRight: 7 },
@@ -94,7 +96,8 @@ const PickupSinceYesterday = () => {
         xName: "x",
         yName: "y",
         type: "Column",
-        fill: "#f07623",
+        fill: "url(#pickup-chart)",
+        //fill: "#f07623",
         name: "ARI",
         width: 1,
         cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 7, topRight: 7 },
@@ -113,7 +116,24 @@ const PickupSinceYesterday = () => {
     },
   ];
 
+  const SAMPLE_CSS = `
+  #pickup-chart stop {
+  stop-color: #f07623;
+}
+#pickup-chart stop[offset="0"] {
+  stop-opacity: 1;
+}
+#pickup-chart stop[offset="1"] {
+  stop-opacity: 0.4;
+}
+
+`;
+
   return (
+    <>
+    <style>
+          {SAMPLE_CSS}
+      </style>
     <Card>
       <WidgetHeader title={"Pick up Since Yesterday"} activeToggle={"graph"} />
 
@@ -214,6 +234,17 @@ const PickupSinceYesterday = () => {
           )}
      </Card.Body>
     </Card>
+    <svg style={{ height: '0' }}>
+    <defs>
+        <linearGradient id="pickup-chart" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" />
+            <stop offset="1" />
+        </linearGradient>
+    </defs>
+</svg>
+
+
+    </>
   );
 };
 

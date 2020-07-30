@@ -27,7 +27,8 @@ export default () => {
       xName: "name",
       yName: "OCCTY",
       type: "Column",
-      fill: "#a1c6d6",
+      //fill: "#a1c6d6",
+      fill: "url(#roccty-chart)",
       name: "OCC TY",
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
@@ -49,7 +50,8 @@ export default () => {
       xName: "name",
       yName: "OCCLY",
       type: "Column",
-      fill: "#65adc5",
+      //fill: "#65adc5",
+      fill: "url(#roccly-chart)",
       name: "OCC LY",
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
@@ -104,6 +106,7 @@ export default () => {
         width: 8,
         height: 8,
         fill: "#288096",
+       
         border: { width: 0, color: "#288096" },
         dataLabel: {
           visible: true,
@@ -117,8 +120,35 @@ export default () => {
     },
   ];
 
+  const SAMPLE_CSS = `
+      #roccty-chart stop {
+      stop-color: #a1c6d6;
+    }
+    #roccty-chart stop[offset="0"] {
+      stop-opacity: 1;
+    }
+    #roccty-chart stop[offset="1"] {
+      stop-opacity: 0.4;
+    }
+
+    #roccly-chart stop {
+      stop-color: #65adc5;
+    }
+    #roccly-chart stop[offset="0"] {
+      stop-opacity: 1;
+    }
+    #roccly-chart stop[offset="1"] {
+      stop-opacity: 0.4;
+    }
+
+    `;
+
+
   return (
     <>
+    <style>
+          {SAMPLE_CSS}
+      </style>
       <Card>
         <WidgetHeader title={"Room Type Statics"} activeToggle={"graph"} />
         <Card.Body>
@@ -157,6 +187,23 @@ export default () => {
           )}  
         </Card.Body>
       </Card>
+      <svg style={{ height: '0' }}>
+        <defs>
+            <linearGradient id="roccty-chart" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" />
+                <stop offset="1" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <svg style={{ height: '0' }}>
+        <defs>
+            <linearGradient id="roccly-chart" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" />
+                <stop offset="1" />
+            </linearGradient>
+        </defs>
+    </svg>
     </>
   );
 };

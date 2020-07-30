@@ -25,7 +25,7 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       xName: "name",
       yName: "OCC",
       type: "SplineArea",
-      fill: "#c4e6ef",
+      fill: "url(#gradient-chart)",
       name: "OCC %",
       width: 2,
       dashArray: '5,5',
@@ -97,8 +97,23 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       },
     },
   ];
+
+  const SAMPLE_CSS = `
+  #gradient-chart stop {
+  stop-color: red;
+}
+#gradient-chart stop[offset="0"] {
+  stop-opacity: 0.75;
+}
+#gradient-chart stop[offset="1"] {
+  stop-opacity: 0;
+}`;
+
   return (
     <>
+     <style>
+          {SAMPLE_CSS}
+      </style>
       <Card>
         <WidgetHeader title={"RevPAR Vs. NrevPAR - YTD"} activeToggle={"graph"} />
         <Card.Body>
@@ -135,6 +150,14 @@ const RevparYTD = ({ graphdata = [] }: any) => {
           )}
         </Card.Body>
       </Card>
+      <svg style={{ height: '0' }}>
+                    <defs>
+                        <linearGradient id="gradient-chart" x1="0" x2="0" y1="0" y2="1">
+                            <stop offset="0"/>
+                            <stop offset="1"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
     </>
   );
 };

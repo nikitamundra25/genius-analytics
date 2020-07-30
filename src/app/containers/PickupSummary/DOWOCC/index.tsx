@@ -59,7 +59,6 @@ const PickupDOWOCCSegment = (props:any) => {
   ];
   return (
     <>
-     
           <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts
               id={`DOWChart-${index}`}

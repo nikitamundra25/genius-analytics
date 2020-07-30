@@ -30,7 +30,8 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           xName: "name",
           yName: "OCCTY",
           type: "Column",
-          fill: "#244d81",
+          // fill: "#244d81",
+          fill: "url(#occty-chart)",
           name: "OCC TY",
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
           marker: {
@@ -54,7 +55,8 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           xName: "name",
           yName: "OCCLY",
           type: "Column",
-          fill: "#4f81bc",
+          //fill: "#4f81bc",
+          fill: "url(#occly-chart)",
           name: "OCC LY",
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
           marker: {
@@ -127,7 +129,8 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           xName: "name",
           yName: "TY",
           type: "Column",
-          fill: "#8293b1",
+          //fill: "#8293b1",
+          fill: "url(#ty-chart)",
           name: "TY",
           width: 1,
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
@@ -137,8 +140,9 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           xName: "name",
           yName: "LY",
           type: "Column",
-          fill: "#3269aa",
-          name: "OCC LY",
+          //fill: "#3269aa",
+          fill: "url(#ly-chart)",
+          name: "LY",
           width: 1,
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
         },
@@ -170,8 +174,53 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           },
         },
       ];
+
+  const SAMPLE_CSS = `
+      #occty-chart stop {
+      stop-color: #244d81;
+    }
+    #occty-chart stop[offset="0"] {
+      stop-opacity: 1;
+    }
+    #occty-chart stop[offset="1"] {
+      stop-opacity: 0.4;
+    }
+
+    #occly-chart stop {
+      stop-color: #4f81bc;
+    }
+    #occly-chart stop[offset="0"] {
+      stop-opacity: 1;
+    }
+    #occly-chart stop[offset="1"] {
+      stop-opacity: 0.4;
+    }
+
+    #ty-chart stop {
+      stop-color: #8293b1;
+    }
+    #ty-chart stop[offset="0"] {
+      stop-opacity: 1;
+    }
+    #ty-chart stop[offset="1"] {
+      stop-opacity: 0.4;
+    }
+
+    #ly-chart stop {
+      stop-color: #3269aa;
+    }
+    #ly-chart stop[offset="0"] {
+      stop-opacity: 1;
+    }
+    #ly-chart stop[offset="1"] {
+      stop-opacity: 0.4;
+    }
+    `;
   return (
     <>
+    <style>
+          {SAMPLE_CSS}
+      </style>
       <Card>
         <WidgetHeader title={"Occupancy Statistics"} activeToggle={"graph"} />
         <Card.Body>
@@ -241,6 +290,42 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
          )} 
        </Card.Body>
       </Card>
+
+      <svg style={{ height: '0' }}>
+        <defs>
+            <linearGradient id="ty-chart" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" />
+                <stop offset="1" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <svg style={{ height: '0' }}>
+        <defs>
+            <linearGradient id="ly-chart" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" />
+                <stop offset="1" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <svg style={{ height: '0' }}>
+        <defs>
+            <linearGradient id="occty-chart" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" />
+                <stop offset="1" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <svg style={{ height: '0' }}>
+        <defs>
+            <linearGradient id="occly-chart" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" />
+                <stop offset="1" />
+            </linearGradient>
+        </defs>
+    </svg>
     </>
   );
 };

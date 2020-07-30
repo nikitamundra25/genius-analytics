@@ -14,7 +14,8 @@ const PickupBusinessMix = (props:any) => {
       xName: "name",
       yName: "RoomNts",
       type: "Area",
-      fill: "#4684bd",
+      //fill: "#4684bd",
+      fill: "url(#pickupmix-chart)",
       name: "Room Nts",
       width: 1,
       marker: {
@@ -58,8 +59,26 @@ const PickupBusinessMix = (props:any) => {
     },
   ];
 
+  
+
+
+  const SAMPLE_CSS = `
+      #pickupmix-chart stop {
+      stop-color: #4684bd;
+    }
+    #pickupmix-chart stop[offset="0"] {
+      stop-opacity: 1;
+    }
+    #pickupmix-chart stop[offset="1"] {
+      stop-opacity: 0.3;
+    }
+    `;
+
   return (
     <>
+    <style>
+          {SAMPLE_CSS}
+      </style>
           <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
             <MixedCharts
               id={`PickupBusinessChart-${index}`}
@@ -86,6 +105,16 @@ const PickupBusinessMix = (props:any) => {
             />
           </React.Suspense>
         <div className="sub-title">Business Mix</div>
+
+        <svg style={{ height: '0' }}>
+          <defs>
+              <linearGradient id="pickupmix-chart" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0" />
+                  <stop offset="1" />
+              </linearGradient>
+          </defs>
+      </svg>
+
     </>
   );
 };
