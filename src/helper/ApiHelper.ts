@@ -172,9 +172,6 @@ export class ApiHelper {
     responseType?: any
   ) {
     let options: AxiosRequestConfig = { method: method };
-    console.log("folderfolder",folder);
-    console.log("filePath",filePath);
-    
     let url: string =   folder + filePath;
     options.headers = { "Content-Type": "application/json" };
     if (responseType === "blob") {
@@ -195,10 +192,6 @@ export class ApiHelper {
       options.data = body;
     }
     try {
-      console.log("url main",url);
-      
-      console.log("urlurlurl",`${this._baseUrlForJson}${url}`);
-      
       let response: AxiosResponse<any> = await Axios({
         ...options,
         url: `${this._baseUrlForJson}${url}`

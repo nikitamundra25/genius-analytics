@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect,useState} from "react";
 import { useLocation } from 'react-router';
 import { Col, Card, Row } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
@@ -14,7 +14,8 @@ const BarChartComponent = React.lazy(() =>
 
 
 const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
-
+   
+  const [setHeight, setsetHeight] = React.useState<string>("250px");
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.KeyBusinessMetricsReducer
@@ -24,7 +25,45 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
     // eslint-disable-next-line
   }, []);
 
- 
+   useEffect(() => {
+   // const modalbtn: HTMLElement | null = document.getElementById(`language_dropmodal-${index}`);
+    const modalbtn: HTMLElement | null = document.getElementById(`col-width0`);
+      console.log("modalbtn",modalbtn);
+      
+    if (modalbtn) {
+      const check = modalbtn.getBoundingClientRect();
+      console.log("hello chart width",check);
+      modalbtn.style.color = "red";
+      // setHeight = `${check.height}px`
+      setsetHeight(`${check.height}px`)
+    }
+  }, [data]);
+
+
+  useEffect(() => {
+    const resizeListener = () => {
+      // change width from the state object
+      const modalbtn: HTMLElement | null = document.getElementById(`col-width0`);
+      console.log("modalbtn",modalbtn);
+      
+    if (modalbtn) {
+      const check = modalbtn.getBoundingClientRect();
+      console.log("hello chart width",check);
+      // setHeight = `${check.height}px`
+      setsetHeight(`${check.height}px`)
+    }
+      
+      // setWidth(getWidth())
+    };
+    // set resize listener
+    window.addEventListener('resize', resizeListener);
+
+    // clean up function
+    return () => {
+      // remove resize listener
+      window.removeEventListener('resize', resizeListener);
+    }
+  }, [])
  
 
   const barChartBusinessMetrics = [
@@ -34,6 +73,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
       color: "#2e75b7",
       labelformat:"{value}%",
       data: data && data.length ? data : [],
+      height:setHeight
     },
     {
       id: "2",
@@ -41,6 +81,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
       color: "#5398d9",
       labelformat:"n2",
       data: data && data.length ? data : [],
+      height:setHeight
     },
     {
       id: "3",
@@ -48,6 +89,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
       color: "#1f4e79",
       labelformat:"c2",
       data: data && data.length ? data : [],
+      height:setHeight
     },
     {
       id: "4",
@@ -55,23 +97,16 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
       color: "#9dc3e7",
       labelformat:"c2",
       data: data && data.length ? data : [],
+      height:setHeight
     },
   ];
 
  
   const location = useLocation();
-  useEffect(() => {
-   // const modalbtn: HTMLElement | null = document.getElementById(`language_dropmodal-${index}`);
-    const modalbtn: HTMLElement | null = document.getElementById(`col-width0`);
-    if (modalbtn) {
-      const check = modalbtn.getBoundingClientRect();
-      console.log("hello chart width");
-      console.log("hello header", check);
-      modalbtn.style.color = "red";
-    }
- 
-     
-  }, [location]);
+  
+
+
+console.log("setHeight",setHeight);
 
   return (
     <Card>
@@ -111,6 +146,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
                     },
                     title: key.title,
                     tooltip: { enable: false,  position: 'Top' },
+                    height:setHeight
                   }}
                   {...key}
                 />
