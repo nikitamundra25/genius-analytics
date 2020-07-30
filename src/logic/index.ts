@@ -29,6 +29,7 @@ import { RevPARYTDLogics } from "./RevPARYTD";
 import { PickupSummaryDowDataLogics } from "./pickupSummaryDowData";
 import { PickupSummaryOCCLogics } from "./pickupSummaryOCC";
 import { PickupSummarySegmentLogics } from "./pickupSummarySegmentData";
+import { PickupDetailTableLogics } from "./PickupDetailTable";
 
 export const redirectToLogic = createLogic({
   type: "REDIRET_TO",
@@ -73,5 +74,6 @@ export const AllLogics: Logic[] | any = [
   ...PickupSummaryDowDataLogics,
   ...PickupSummaryOCCLogics,
   ...PickupSummarySegmentLogics,
+  ...PickupDetailTableLogics,
   redirectToLogic,
 ];

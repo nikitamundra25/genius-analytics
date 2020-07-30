@@ -30,6 +30,7 @@ import { RGIPerformanceReducer } from "./RGIPerformance";
 import { pickupSummarySegmentReducer } from "./pickupSummarySegmentData";
 import { pickupSummaryOCCReducer } from "./pickupSummaryOCC";
 import { pickupSummaryDowDataReducer } from "./pickupSummaryDowData";
+import { pickupDetailTableReducer } from "./PickupDetailTable";
 
 export const mainReducer = handleActions(
   {
@@ -81,5 +82,6 @@ export const RootReducer: Reducer<IRootState, AnyAction> = combineReducers<
 
   pickupSummarySegmentReducer: pickupSummarySegmentReducer as any,
   pickupSummaryOCCReducer: pickupSummaryOCCReducer as any,
-  pickupSummaryDowDataReducer: pickupSummaryDowDataReducer as any
+  pickupSummaryDowDataReducer: pickupSummaryDowDataReducer as any,
+  pickupDetailTableReducer: pickupDetailTableReducer as any
 });

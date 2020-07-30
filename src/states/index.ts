@@ -31,4 +31,5 @@ export * from "./StayYTD";
 
 export * from "./pickupSummaryDowData";
 export * from "./pickupSummaryOCC";
-export * from "./pickupSummarySegmentData"
+export * from "./pickupSummarySegmentData";
+export * from "./PickupDetailTable";

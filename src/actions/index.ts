@@ -33,6 +33,7 @@ export * from "./StayYTD";
 export * from "./pickupSummaryDowData";
 export * from "./pickupSummaryOCC";
 export * from "./pickupSummarySegmentData";
+export * from "./PickupDetailTable";
 
 //
 export const redirectTo = createAction("REDIRET_TO");

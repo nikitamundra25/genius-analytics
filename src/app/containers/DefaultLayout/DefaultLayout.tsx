@@ -66,7 +66,7 @@ class DefaultLayout extends Component<
             <DefaultHeader {...this.props} />
           </Suspense>
         </AppHeader>
-        <div className='app-body'>
+        <div className='app-body overflow-hidden'>
           <AppSidebar fixed minimized display='lg'>
             <div className='brand-logo'>
               <img src={logo} width={120} alt='' className='main-logo' />
