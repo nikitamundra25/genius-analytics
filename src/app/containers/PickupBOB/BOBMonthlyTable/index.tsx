@@ -10,7 +10,7 @@ const BOBMonthlyTable = ({ graphdata = [] }: any) => {
      
       <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
       <div className="table-detail-section">
-            <Table responsive className='pickup-detail-table'>
+            <Table responsive className='pickup-detail-table mb-0'>
             <thead>
               
               <tr>
