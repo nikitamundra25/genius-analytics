@@ -52,7 +52,7 @@ const DashboardMonthly: FunctionComponent = () => {
             cellSpacing={cellSpacing}
             allowResizing={false}
             columns={6}
-            cellAspectRatio={50 / 70}
+            cellAspectRatio={50 / 85}
             created={created}
             ref={(scope: any) => {
               dashboardObj = scope;

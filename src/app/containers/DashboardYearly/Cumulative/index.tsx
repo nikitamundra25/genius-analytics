@@ -3,6 +3,8 @@ import { Card, Table } from "react-bootstrap";
 import { getMonths } from "../../../../helper";
 import BarChartComponent from "../../../components/Charts/BarChart";
 import PieChartComponent from "../../../components/Charts/PieChart";
+import caretup from "../../../../assets/img/caret-up.svg";
+import caretdown from "../../../../assets/img/caret-down.svg"
 const months = getMonths();
   months.push("Total")
 let data = months.map((month: string) => ({
@@ -17,7 +19,7 @@ let data = months.map((month: string) => ({
       // label: "BUD",
       value: (
         <div className="icon-col">
-          <i className="fa fa-arrow-up text-success" aria-hidden="true"></i>
+          <img src={caretup} alt="success" width="15" />
         </div>
       ),
     },
@@ -25,7 +27,7 @@ let data = months.map((month: string) => ({
       // label: "LY",
       value: (
         <div className="icon-col">
-          <i className="fa fa-arrow-down text-danger" aria-hidden="true"></i>
+          <img src={caretdown} alt="success" width="15" />
         </div>
       ),
     },
@@ -143,6 +145,9 @@ const CumulativeTable = () => {
     <>
       <Card>
         <Card.Body>
+        <div className='dashboard-yearly-table'>
+
+        
           <Table className="yearly-table" responsive>
             <thead>
               <tr className="business-top-row">
@@ -201,7 +206,7 @@ const CumulativeTable = () => {
                                         color: "transparent",
                                       },
                                     },
-                                    tooltip: { enable: true },
+                                    tooltip: { enable: false },
                                   }}
                                   title={"Business Mix ADR"}
                                   color="#4473c5"
@@ -244,6 +249,7 @@ const CumulativeTable = () => {
               ))}
             </tbody>
           </Table>
+          </div>
         </Card.Body>
       </Card>
     </>

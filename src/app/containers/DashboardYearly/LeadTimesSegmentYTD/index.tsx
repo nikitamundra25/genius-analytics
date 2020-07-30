@@ -36,7 +36,7 @@ export default ({graphdata = []}: any) => {
           ) : (
           <PieChartComponent
             id={"leadtimesSegment"}
-            height={"285px"}
+            height={"250px"}
             data={data}
             chartSettings={{
               SeriesDirective: {

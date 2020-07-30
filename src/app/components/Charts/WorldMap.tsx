@@ -15,6 +15,7 @@ const WorldMap = ({ data, id = "maps" }: any) => {
       width={"100%"}
       height={"250px"}
       id={id}
+      background='transparent'
       zoomSettings={{
         enable: true,
       }}

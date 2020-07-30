@@ -49,7 +49,7 @@ const PickupSummary: FunctionComponent = () => {
             cellSpacing={cellSpacing}
             allowResizing={false}
             columns={1}
-            cellAspectRatio={100 / 40}
+            cellAspectRatio={100 / 42}
             created={created}
             ref={(scope: any) => {
               dashboardObj = scope;

@@ -79,7 +79,7 @@ const RateCodeStatistics = ({ graphdata = [] }:any) => {
         title={"Rate Code Statistics"}
         activeToggle={"graph"}
       />
-        {/* <Card.Body> */}
+        <Card.Body>
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -113,7 +113,7 @@ const RateCodeStatistics = ({ graphdata = [] }:any) => {
             />
              </React.Suspense>
           )}
-        {/* </Card.Body> */}
+        </Card.Body>
       </Card>
     </>
   );

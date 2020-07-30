@@ -146,7 +146,7 @@ const TopBar = (props: any) => {
             showYearPicker
             dateFormat="yyyy"
             className="custom-datepicker cursor-pointer"
-            //customInput={<CustomInput />}
+            customInput={<CustomInput />}
             // minDate={new Date("2010/01/01")}
             // maxDate={new Date()}
           />

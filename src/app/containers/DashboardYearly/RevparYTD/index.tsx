@@ -101,7 +101,7 @@ const RevparYTD = ({ graphdata = [] }: any) => {
     <>
       <Card>
         <WidgetHeader title={"RevPAR Vs. NrevPAR - YTD"} activeToggle={"graph"} />
-        {/* <Card.Body> */}
+        <Card.Body>
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -133,7 +133,7 @@ const RevparYTD = ({ graphdata = [] }: any) => {
               charts={Charts}
             />
           )}
-        {/* </Card.Body> */}
+        </Card.Body>
       </Card>
     </>
   );

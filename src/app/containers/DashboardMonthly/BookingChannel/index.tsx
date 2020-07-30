@@ -79,7 +79,7 @@ const BookingChannel = ({ graphdata = [] }:any) => {
       title={"Booking Channel"}
       activeToggle={"graph"}
     />
-      {/* <Card.Body> */}
+      <Card.Body>
       {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -114,7 +114,7 @@ const BookingChannel = ({ graphdata = [] }:any) => {
           />
           </React.Suspense>
           )}
-      {/* </Card.Body> */}
+      </Card.Body>
     </Card>
     
   );

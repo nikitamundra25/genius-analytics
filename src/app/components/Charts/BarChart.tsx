@@ -20,6 +20,8 @@ export const BarChartComponent = (barChart: any) => {
       height={barChart.height || "250px"}
       // width={Browser.isDevice ? '100%' : '80%'}
       width={barChart.width || "100%"}
+      fill="transparent"
+      background='transparent'
       {...(barChart.chartSettings || {
         primaryXAxis: {
           valueType: "Category",

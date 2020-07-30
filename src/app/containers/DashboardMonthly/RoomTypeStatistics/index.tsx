@@ -124,7 +124,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
         title={"Room Type Statistics"}
         activeToggle={"graph"}
       />
-        {/* <Card.Body> */}
+        <Card.Body>
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -159,7 +159,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
             </React.Suspense>
           )}
       
-        {/* </Card.Body> */}
+        </Card.Body>
       </Card>
     
   );
