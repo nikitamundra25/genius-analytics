@@ -148,7 +148,7 @@ const CumulativeTable = () => {
         <div className='dashboard-yearly-table'>
 
         
-          <Table className="yearly-table" responsive>
+          <Table className="yearly-table mb-0" responsive>
             <thead>
               <tr className="business-top-row">
                 <th></th>
