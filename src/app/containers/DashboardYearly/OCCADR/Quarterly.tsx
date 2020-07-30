@@ -75,7 +75,7 @@ const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
       {" "}
       <Card>
         <WidgetHeader title={"Quarterly OCC & ADR"} showToggle={false}  />
-        {/* <Card.Body> */}
+        <Card.Body>
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -107,7 +107,7 @@ const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
               charts={Charts1}
             />
           )}
-        {/* </Card.Body> */}
+        </Card.Body>
       </Card>
     </>
   );

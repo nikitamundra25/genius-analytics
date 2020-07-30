@@ -75,7 +75,7 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
     <>
       <Card>
         <WidgetHeader title={"Monthly OCC & ADR"} activeToggle={"graph"} />
-        {/* <Card.Body> */}
+        <Card.Body>
          {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -109,7 +109,7 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
               charts={Charts1}
             />
           )}
-        {/* </Card.Body> */}
+        </Card.Body>
       </Card>
     </>
   );

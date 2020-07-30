@@ -122,7 +122,7 @@ const RoomTypesYTD = ({ graphdata = [] }: any) => {
     <>
       <Card>
         <WidgetHeader title={"Room Types - YTD"} activeToggle={"graph"} />
-        {/* <Card.Body> */}
+        <Card.Body>
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -154,7 +154,7 @@ const RoomTypesYTD = ({ graphdata = [] }: any) => {
               charts={Charts}
             />
           )}
-        {/* </Card.Body> */}
+        </Card.Body>
       </Card>
     </>
   );

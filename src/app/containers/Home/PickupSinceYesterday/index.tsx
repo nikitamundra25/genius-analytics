@@ -60,7 +60,7 @@ const PickupSinceYesterday = () => {
       title: "Room Nights",
       range: "198",
       arrowClass: caretup,
-      textClass: "text-success",
+      textClass: "text-green",
       charts: {
         dataSource:data && data.length && data[0] ? data[0].data : [],
         xName: "x",
@@ -88,7 +88,7 @@ const PickupSinceYesterday = () => {
       title: "ADR",
       range: "2.6",
       arrowClass: caretdown,
-      textClass: "text-danger",
+      textClass: "text-red",
       charts: {
         dataSource: data && data.length && data[1] ? data[1].data : [],
         xName: "x",
@@ -116,7 +116,7 @@ const PickupSinceYesterday = () => {
       title: "Revenue",
       range: "19.4 k",
       arrowClass: caretup,
-      textClass: "text-success",
+      textClass: "text-green",
       charts: {
         dataSource: data && data.length && data[2] ? data[2].data : [],
         xName: "x",

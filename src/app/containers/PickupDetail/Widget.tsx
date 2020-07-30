@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Card } from "react-bootstrap";
+import {  Card } from "react-bootstrap";
 import { IDashboardWidgetProps } from "../../../interfaces";
 import TableForm from "./MonthlyTable";
 
@@ -25,20 +25,18 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
           >
             <span id="close" className="e-template-icon e-clear-icon" />
             <div className="e-panel-container">
-      {/* <Col xs={12} md={12}> */}
+     
         <Card>
           <Card.Body>
-            <Row>
-              <Col xs={12} md={12}>
+            
                 <div className="sub-title text-left  mb-3 ">{chartType.name}</div>
                 <TableForm index={index} 
                 graphdata={chartType.pivotData}
                 />
-              </Col>
-            </Row>
+             
           </Card.Body>
         </Card>
-      {/* </Col> */}
+      
       </div>
           </div>
     );
