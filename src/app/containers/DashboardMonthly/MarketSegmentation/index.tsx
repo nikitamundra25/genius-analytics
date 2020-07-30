@@ -122,6 +122,7 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
       <WidgetHeader
         title={"Market Segmentation"}
         activeToggle={"graph"}
+        showToggle={false}
       />
         <Card.Body>
         {isLoading ? (

@@ -78,6 +78,7 @@ const BookingChannel = ({ graphdata = [] }:any) => {
     <WidgetHeader
       title={"Booking Channel"}
       activeToggle={"graph"}
+      showToggle={false}
     />
       <Card.Body>
       {isLoading ? (

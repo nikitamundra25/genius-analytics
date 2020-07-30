@@ -1,5 +1,6 @@
 import React from "react";
-import Loader from "../../../components/Loader/Loader";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
@@ -71,7 +72,7 @@ const PickupSegment = (props: any) => {
               message={"An error occured while fetching details "}
             />
           ) : ( */}
-           <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+           <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
             <MixedCharts
               id={`PickupChart-${index}`}
               legend = {false}
@@ -93,6 +94,7 @@ const PickupSegment = (props: any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
+                height:"200px"
               }}
               charts={Charts}
             />

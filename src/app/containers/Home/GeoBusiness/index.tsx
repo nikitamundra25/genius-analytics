@@ -1,7 +1,6 @@
 import React ,{useEffect} from "react";
 import { Card } from "react-bootstrap";
 // import data from "./datasource.json";
-import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
@@ -28,6 +27,7 @@ export default ({ graphdata = {} }:any) => {
         <WidgetHeader
           title={"Geographic Origin of business"}
           activeToggle={"graph"}
+          showToggle={false} 
         />
         <Card.Body>
         {isLoading ? (
@@ -37,7 +37,7 @@ export default ({ graphdata = {} }:any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
-            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+            <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
             <WorldMap data={data} />
             </React.Suspense>
             )}

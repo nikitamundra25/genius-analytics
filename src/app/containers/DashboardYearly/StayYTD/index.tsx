@@ -75,7 +75,7 @@ const StayYTD = ({ graphdata = [] }: any) => {
   return (
     <>
       <Card>
-        <WidgetHeader title={"Length of Stay & ADR - YTD"} activeToggle={"graph"} />
+        <WidgetHeader title={"Length of Stay & ADR - YTD"} activeToggle={"graph"}   showToggle={false}/>
         <Card.Body>
            {isLoading ? (
             <WidgetLoader />

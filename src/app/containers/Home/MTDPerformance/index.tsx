@@ -6,7 +6,6 @@ import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestMTRDRGIPerformanceData } from "../../../../actions";
-import Loader from "../../../components/Loader/Loader";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
@@ -32,7 +31,8 @@ export default ({ graphdata = [] }: any) => {
         xName: "x",
         yName: "y1",
         type: "Bar",
-        fill: "#2e75b7",
+        //fill: "#2e75b7",
+        fill: "url(#rgi-chart)",
         name: "RGI",
         width: 1,
         cornerRadius: {
@@ -65,7 +65,8 @@ export default ({ graphdata = [] }: any) => {
         xName: "x",
         yName: "y1",
         type: "Bar",
-        fill: "#5398d9",
+        //fill: "#5398d9",
+        fill: "url(#mpi-chart)",
         name: "MPI",
         width: 1,
         cornerRadius: {
@@ -104,7 +105,8 @@ export default ({ graphdata = [] }: any) => {
           topLeft: 0,
           topRight: 4,
         },
-        fill: "#1f4e79",
+        //fill: "#1f4e79",
+        fill: "url(#ari-chart)",
         name: "ARI",
         width: 1,
         marker: {
@@ -123,9 +125,46 @@ export default ({ graphdata = [] }: any) => {
     },
   ];
 
+  const SAMPLE_CSS = `
+  #rgi-chart stop {
+  stop-color: #2e75b7;
+}
+#rgi-chart stop[offset="0"] {
+  stop-opacity: 1;
+}
+#rgi-chart stop[offset="1"] {
+  stop-opacity: 1;
+}
+
+#mpi-chart stop {
+  stop-color: #5398d9;
+}
+#mpi-chart stop[offset="0"] {
+  stop-opacity: 1;
+}
+#mpi-chart stop[offset="1"] {
+  stop-opacity: 1;
+}
+
+#ari-chart stop {
+  stop-color: #1f4e79;
+}
+#ari-chart stop[offset="0"] {
+  stop-opacity: 1;
+}
+#ari-chart stop[offset="1"] {
+  stop-opacity: 1;
+}
+
+`;
+
   return (
+    <>
+    <style>
+          {SAMPLE_CSS}
+      </style>
     <Card>
-      <WidgetHeader title={"MTD RGI Performance"} />
+      <WidgetHeader title={"MTD RGI Performance"} showToggle={false} />
       <Card.Body>
         {isLoading ? (
           <WidgetLoader />
@@ -142,7 +181,7 @@ export default ({ graphdata = [] }: any) => {
                       <React.Suspense
                         fallback={
                           <div className="card-loader">
-                            <Loader />
+                            <WidgetLoader />
                           </div>
                         }
                       >
@@ -203,5 +242,31 @@ export default ({ graphdata = [] }: any) => {
         )}
       </Card.Body>
     </Card>
+     <svg style={{ height: '0' }}>
+     <defs>
+         <linearGradient id="rgi-chart" x1="0" x2="0" y1="0" y2="1">
+             <stop offset="0" />
+             <stop offset="1" />
+         </linearGradient>
+     </defs>
+ </svg>
+
+ <svg style={{ height: '0' }}>
+     <defs>
+         <linearGradient id="mpi-chart" x1="0" x2="0" y1="0" y2="1">
+             <stop offset="0" />
+             <stop offset="1" />
+         </linearGradient>
+     </defs>
+ </svg>
+ <svg style={{ height: '0' }}>
+ <defs>
+     <linearGradient id="ari-chart" x1="0" x2="0" y1="0" y2="1">
+         <stop offset="0" />
+         <stop offset="1" />
+     </linearGradient>
+ </defs>
+</svg>
+    </>
   );
 };

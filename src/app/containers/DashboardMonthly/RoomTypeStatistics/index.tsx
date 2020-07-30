@@ -123,6 +123,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
       <WidgetHeader
         title={"Room Type Statistics"}
         activeToggle={"graph"}
+         showToggle={false}
       />
         <Card.Body>
         {isLoading ? (

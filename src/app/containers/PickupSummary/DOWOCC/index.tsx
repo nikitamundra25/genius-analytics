@@ -1,5 +1,6 @@
 import React from "react";
-import Loader from "../../../components/Loader/Loader";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
@@ -60,7 +61,7 @@ const PickupDOWOCCSegment = (props:any) => {
   return (
     <>
      
-          <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+          <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
             <MixedCharts
               id={`DOWChart-${index}`}
               legend = {false}
@@ -82,6 +83,7 @@ const PickupDOWOCCSegment = (props:any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
+                height:"200px"
               }}
               charts={Charts}
             />

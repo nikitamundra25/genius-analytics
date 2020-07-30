@@ -6,7 +6,6 @@ import WidgetHeader from "../../../components/WidgetHeader";
 import { requestBookingChannelData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
-import Loader from "../../../components/Loader/Loader";
 const PieChartComponent = React.lazy(() =>
   import("../../../components/Charts/PieChart")
 );
@@ -24,7 +23,7 @@ export default ({ graphdata = [] }:any) => {
 
   return (
     <Card>
-      <WidgetHeader title={"Booking Channel Mix"} activeToggle={"graph"} />
+      <WidgetHeader title={"Booking Channel Mix"} activeToggle={"graph"}  showToggle={false} />
       <Card.Body>
       {isLoading ? (
             <WidgetLoader />
@@ -33,10 +32,10 @@ export default ({ graphdata = [] }:any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
-            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+            <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
           <PieChartComponent
             id={"booking-mix"}
-            height={"250px"}
+            height={"270px"}
             data={data}
             chartSettings={{
               SeriesDirective: {

@@ -58,11 +58,11 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
           {/* <Col xs={12} md={12}> */}
           <Card>
             <Card.Body>
-              <Row>
-                <Col xs={12} md={4}>
+              <Row className="row-inner">
+                <Col xs={12} md={5}>
                   <div className="sub-title text-left">{chartType.name}</div>
                 </Col>
-                <Col xs={12} md={8}>
+                <Col xs={12} md={7}>
                   <TableForm index={index} tabledata={chartType.tabledata} />
                 </Col>
                 <Col xs={12} md={4}>

@@ -7,7 +7,6 @@ import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestRGIYOYVarianceData } from "../../../../actions";
-import Loader from "../../../components/Loader/Loader";
 
 export default () => {
   const dispatch = useDispatch();
@@ -24,7 +23,8 @@ export default () => {
       xName: "x",
       yName: "y1",
       type: "Bar",
-      fill: "#3467a6",
+     // fill: "#3467a6",
+      fill: "url(#hotel-chart)",
       name: "HOTEL",
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 4, topLeft: 0, topRight: 4 },
@@ -45,7 +45,8 @@ export default () => {
       xName: "x",
       yName: "y2",
       type: "Bar",
-      fill: "#819bc6",
+      //fill: "#819bc6",
+      fill: "url(#market-chart)",
       name: "MARKET",
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 4, topLeft: 0, topRight: 4 },
@@ -63,9 +64,36 @@ export default () => {
     },
   ];
 
+  const SAMPLE_CSS = `
+      #hotel-chart stop {
+      stop-color: #3467a6;
+    }
+    #hotel-chart stop[offset="0"] {
+      stop-opacity: 1;
+    }
+    #hotel-chart stop[offset="1"] {
+      stop-opacity: 1;
+    }
+
+    #market-chart stop {
+      stop-color: #819bc6;
+    }
+    #market-chart stop[offset="0"] {
+      stop-opacity: 1;
+    }
+    #market-chart stop[offset="1"] {
+      stop-opacity: 1;
+    }
+
+    `;
+
   return (
+    <>
+    <style>
+          {SAMPLE_CSS}
+      </style>
     <Card>
-      <WidgetHeader title={"RGI YoY Variance"} activeToggle={"graph"} />
+      <WidgetHeader title={"RGI YoY Variance"} activeToggle={"graph"} showToggle={false} />
       <Card.Body>
       {isLoading ? (
             <WidgetLoader />
@@ -74,7 +102,7 @@ export default () => {
               message={"An error occured while fetching details "}
             />
           ) : (
-            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+            <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
         <MixedCharts
           id='adfdsf'
           charts={Charts}
@@ -102,5 +130,25 @@ export default () => {
         )}
       </Card.Body>
     </Card>
+
+    <svg style={{ height: '0' }}>
+        <defs>
+            <linearGradient id="hotel-chart" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" />
+                <stop offset="1" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <svg style={{ height: '0' }}>
+        <defs>
+            <linearGradient id="market-chart" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" />
+                <stop offset="1" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    </>
   );
 };

@@ -22,7 +22,7 @@ export default ({ graphdata = [] }: any) => {
 
   return (
     <Card>
-      <WidgetHeader title={"Lead Times YTD"} activeToggle={"graph"} />
+      <WidgetHeader title={"Lead Times YTD"} activeToggle={"graph"}  showToggle={false}/>
       <Card.Body>
       {isLoading ? (
             <WidgetLoader />
@@ -33,7 +33,7 @@ export default ({ graphdata = [] }: any) => {
           ) : (
           <PieChartComponent
             id={"leadtimes"}
-            height={"250px"}
+            height={"270px"}
             data={data}
             chartSettings={{
               SeriesDirective: {

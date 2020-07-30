@@ -1,6 +1,5 @@
 import React, {useEffect}  from "react";
 import { Card, Row, Col } from "react-bootstrap";
-import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
@@ -24,35 +23,7 @@ const PickupSinceYesterday = () => {
     dispatch(requestRoomNightsData());
     // eslint-disable-next-line
   }, []);
-  // const BarChartReferenceLine = [
-  //   {
-  //     id: "1",
-  //     title: "Room Nights",
-  //     color: "#f07623",
-  //     data: graphdata[0].data,
-  //     range: "198",
-  //     arrowClass: "cui-arrow-top",
-  //     textClass: "text-success",
-  //   },
-  //   {
-  //     id: "2",
-  //     title: "ADR",
-  //     color: "#f07623",
-  //     data: graphdata[1].data,
-  //     range: "2.6",
-  //     arrowClass: "cui-arrow-bottom",
-  //     textClass: "text-danger",
-  //   },
-  //   {
-  //     id: "3",
-  //     title: "Revenue",
-  //     color: "#f07623",
-  //     data: graphdata[2].data,
-  //     range: "19.4 k",
-  //     arrowClass: "cui-arrow-top",
-  //     textClass: "text-success",
-  //   },
-  // ];
+
 
   const BarChartReferenceLine = [
     {
@@ -60,13 +31,14 @@ const PickupSinceYesterday = () => {
       title: "Room Nights",
       range: "198",
       arrowClass: caretup,
-      textClass: "text-success",
+      textClass: "text-green",
       charts: {
         dataSource:data && data.length && data[0] ? data[0].data : [],
         xName: "x",
         yName: "y",
         type: "Column",
-        fill: "#f07623",
+        fill: "url(#pickup-chart)",
+        //fill: "#f07623",
         name: "RGI",
         width: 1,
         cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 7, topRight: 7 },
@@ -88,13 +60,14 @@ const PickupSinceYesterday = () => {
       title: "ADR",
       range: "2.6",
       arrowClass: caretdown,
-      textClass: "text-danger",
+      textClass: "text-red",
       charts: {
         dataSource: data && data.length && data[1] ? data[1].data : [],
         xName: "x",
         yName: "y",
         type: "Column",
-        fill: "#f07623",
+        fill: "url(#pickup-chart)",
+        //fill: "#f07623",
         name: "MPI",
         width: 1,
         cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 7, topRight: 7 },
@@ -116,13 +89,14 @@ const PickupSinceYesterday = () => {
       title: "Revenue",
       range: "19.4 k",
       arrowClass: caretup,
-      textClass: "text-success",
+      textClass: "text-green",
       charts: {
         dataSource: data && data.length && data[2] ? data[2].data : [],
         xName: "x",
         yName: "y",
         type: "Column",
-        fill: "#f07623",
+        fill: "url(#pickup-chart)",
+        //fill: "#f07623",
         name: "ARI",
         width: 1,
         cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 7, topRight: 7 },
@@ -141,9 +115,26 @@ const PickupSinceYesterday = () => {
     },
   ];
 
+  const SAMPLE_CSS = `
+  #pickup-chart stop {
+  stop-color: #f07623;
+}
+#pickup-chart stop[offset="0"] {
+  stop-opacity: 1;
+}
+#pickup-chart stop[offset="1"] {
+  stop-opacity: 1;
+}
+
+`;
+
   return (
+    <>
+    <style>
+          {SAMPLE_CSS}
+      </style>
     <Card>
-      <WidgetHeader title={"Pick up Since Yesterday"} activeToggle={"graph"} />
+      <WidgetHeader title={"Pick up Since Yesterday"} activeToggle={"graph"} showToggle={false} />
 
       <Card.Body>
       {isLoading ? (
@@ -170,7 +161,7 @@ const PickupSinceYesterday = () => {
                     ) : null}
                   </div>
  
-                  <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+                  <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
                     <MixedCharts
                         id={`pickup-${index}`}
                         charts={[key.charts]}
@@ -242,6 +233,17 @@ const PickupSinceYesterday = () => {
           )}
      </Card.Body>
     </Card>
+    <svg style={{ height: '0' }}>
+    <defs>
+        <linearGradient id="pickup-chart" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" />
+            <stop offset="1" />
+        </linearGradient>
+    </defs>
+</svg>
+
+
+    </>
   );
 };
 

@@ -26,6 +26,7 @@ export const DonutChartComponent = ({
       }}
       width={width}
       height={height}
+      // background='transparent'
       // enableSmartLabels={true}
       enableAnimation={false}
       center={{ x: "50%", y: "50%" }}

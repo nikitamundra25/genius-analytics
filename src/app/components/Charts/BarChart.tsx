@@ -12,14 +12,18 @@ import {
 // import { Browser } from '@syncfusion/ej2-base';
 
 export const BarChartComponent = (barChart: any) => {
+  console.log("barChartbarChart",barChart.height);
+  
   return (
     <ChartComponent
       id={`chart-${barChart.id}`}
       style={{ textAlign: "center" }}
       chartArea={{ border: { width: 0 } }}
-      height={barChart.height || "250px"}
+      height={barChart.height || "270px"}
       // width={Browser.isDevice ? '100%' : '80%'}
       width={barChart.width || "100%"}
+      // fill="transparent"
+      // background='transparent'
       {...(barChart.chartSettings || {
         primaryXAxis: {
           valueType: "Category",

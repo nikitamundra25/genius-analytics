@@ -1,15 +1,29 @@
-import React from "react";
-import { Row, Col, Card } from "react-bootstrap";
-import { IDashboardWidgetProps } from "../../../interfaces";
+import React,{useEffect} from "react";
+import {  Card } from "react-bootstrap";
+import { IDashboardWidgetProps, IRootState } from "../../../interfaces";
 import BOBMonthlyTable from "./BOBMonthlyTable";
+import { requestPickupDetailTableData } from "../../../actions";
+import { ErrorComponent } from "../../components/Error";
+import { WidgetLoader } from "../../components/Loader/WidgetLoader";
+import { useDispatch, useSelector } from "react-redux";
 
 const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   let rowId: number = 0;
   let colId: number = 0;
+  const dispatch = useDispatch();
+
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.pickupDetailTableReducer
+  );
+
+  useEffect(() => {
+    dispatch(requestPickupDetailTableData());
+    // eslint-disable-next-line
+  }, []);
 
   const GetDynamicRowCol = (index: number) => {
     if (index !== 0) {
-      if (index % 3 === 0) {
+      if (index % 1 === 0) {
         rowId += 1;
         colId = 0;
       } else {
@@ -33,28 +47,34 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
         className="e-panel "
         data-row={rowId}
         data-col={colId}
-        data-sizex="2"
+        data-sizex="6"
         data-sizey="0"
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          {/* <Col xs={12} md={12}> */}
+          
           <Card>
             <Card.Body>
-              <Row>
-                <Col xs={12} md={12}>
+            {isLoading ? (
+                <WidgetLoader />
+              ) : isError ? (
+                <ErrorComponent
+                  message={"An error occured while fetching details "}
+                />
+              ) : (
+                <>
                   <div className="sub-title text-left  mb-3 ">
                     {chartType.name}
                   </div>
                   <BOBMonthlyTable
                     index={index}
-                    graphdata={chartType.pivotData}
+                    graphdata={data}
                   />
-                </Col>
-              </Row>
+                  </>
+              )}
             </Card.Body>
           </Card>
-          {/* </Col> */}
+          
         </div>
       </div>
     );

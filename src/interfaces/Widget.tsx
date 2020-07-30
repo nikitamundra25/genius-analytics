@@ -10,5 +10,8 @@ export interface IWidgetHeaderProps {
   title: string;
   activeToggle?: ToggleType;
   showToggle?: boolean;
+  showdropdowndaily?: boolean;
+  showdropdownlead?: boolean;
+  
   onToggle?: (activeToggle?: ToggleType) => void;
 }
