@@ -23,7 +23,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
 
   const GetDynamicRowCol = (index: number) => {
     if (index !== 0) {
-      if (index % 3 === 0) {
+      if (index % 1 === 0) {
         rowId += 1;
         colId = 0;
       } else {
@@ -47,7 +47,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
         className="e-panel "
         data-row={rowId}
         data-col={colId}
-        data-sizex="2"
+        data-sizex="6"
         data-sizey="0"
       >
         <span id="close" className="e-template-icon e-clear-icon" />

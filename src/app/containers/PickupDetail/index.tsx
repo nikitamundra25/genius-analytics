@@ -48,7 +48,7 @@ const PickupDetail: FunctionComponent = () => {
             cellSpacing={cellSpacing}
             allowResizing={false}
             columns={6}
-            cellAspectRatio={30 / 50}
+            cellAspectRatio={30 / 80}
             created={created}
             ref={(scope: any) => {
               dashboardObj = scope;

@@ -1,5 +1,4 @@
-import React, {useEffect,useState} from "react";
-import { useLocation } from 'react-router';
+import React, {useEffect} from "react";
 import { Col, Card, Row } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
@@ -147,7 +146,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
   `;
 
  
-  const location = useLocation();
+
   
 
 
@@ -194,7 +193,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
                     },
                     title: key.title,
                     tooltip: { enable: false,  position: 'Top' },
-                    height:setHeight
+                    height:"270px"
                   }}
                   {...key}
                 />

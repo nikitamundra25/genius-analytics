@@ -18,6 +18,7 @@ const MonthlyTable = ({ graphdata = [] }: any) => {
             <thead>
               <tr>
                 <th></th>
+                <th></th>
                 <th className="head-col">Bar</th>
                 <th className="head-col">Leisure Break</th>
                 <th className="head-col">Corporate</th>
@@ -33,11 +34,16 @@ const MonthlyTable = ({ graphdata = [] }: any) => {
               {graphdata && graphdata.length
                 ? graphdata.map((list: any, index: number) => {
                     return (
+                      <>
                       <tr
                         key={index}
                         className={list.isWeekend ? "weekend-bg" : ""}
                       >
-                        <td className="title-col">{list.title} </td>
+                       
+                        <td  rowSpan={3} className="title-col bg-1 text-center">{list.title} </td>
+                        <td  className='title-col  '>
+                         Room Nights
+                        </td>
                         <td className={`content-col ${list.barValue && parseInt(list.barValue) < 0 ? "text-danger" :""}`}>
                           {" "}
                           {list.barValue ? list.barValue : ""}{" "}
@@ -67,12 +73,92 @@ const MonthlyTable = ({ graphdata = [] }: any) => {
                           {list.total ? list.total : ""}
                         </td>
                       </tr>
+
+                        <tr
+                        key={index}
+                        className={list.isWeekend ? "weekend-bg" : ""}
+                        >
+
+                        
+                        <td  className='title-col '>
+                        OCC%
+                        </td>
+                        <td className={`content-col ${list.barValue && parseInt(list.barValue) < 0 ? "text-danger" :""}`}>
+                          {" "}
+                          {list.barValue ? list.barValue : ""}{" "}
+                        </td>
+                        <td  className={`content-col ${list.leisureBreak && parseInt(list.leisureBreak) < 0 ?"text-danger":"" }`}>
+                          {list.leisureBreak ? list.leisureBreak : ""}{" "}
+                        </td>
+                        <td  className={`content-col ${list.corporate && parseInt(list.corporate) < 0 ? "text-danger": ""}`}>
+                          {list.corporate ? list.corporate : ""}
+                        </td>
+                        <td className={`content-col ${list.consortia && parseInt(list.consortia) < 0 ? "text-danger": ""}`}>
+                          {list.consortia ? list.consortia : ""}
+                        </td>
+                        <td className={`content-col ${list.promotions && parseInt(list.promotions) < 0 ? "text-danger": ""}`}>
+                          {list.promotions ? list.promotions : ""}
+                        </td>
+                        <td className={`content-col ${list.groups && parseInt(list.groups) < 0 ? "text-danger": ""}`}>
+                          {list.groups ? list.groups : ""}
+                        </td>
+                        <td className={`content-col ${list.ota && parseInt(list.ota) < 0 ? "text-danger": ""}`}>
+                          {list.ota ? list.ota : ""}
+                        </td>
+                        <td className={`content-col ${list.fit && parseInt(list.fit) < 0 ? "text-danger": ""}`}>
+                          {list.fit ? list.fit : ""}
+                        </td>
+                        <td className={`content-col total-content  ${list.total && parseInt(list.total) < 0 ? "text-danger": ""}`}>
+                          {list.total ? list.total : ""}
+                        </td>
+                        </tr>
+
+                        <tr
+                          key={index}
+                          className={list.isWeekend ? "weekend-bg" : ""}
+                        >
+                       
+                        
+                        <td  className='title-col  '>
+                          RevPar
+                        </td>
+                        <td className={`content-col ${list.barValue && parseInt(list.barValue) < 0 ? "text-danger" :""}`}>
+                          {" "}
+                          {list.barValue ? list.barValue : ""}{" "}
+                        </td>
+                        <td  className={`content-col ${list.leisureBreak && parseInt(list.leisureBreak) < 0 ?"text-danger":"" }`}>
+                          {list.leisureBreak ? list.leisureBreak : ""}{" "}
+                        </td>
+                        <td  className={`content-col ${list.corporate && parseInt(list.corporate) < 0 ? "text-danger": ""}`}>
+                          {list.corporate ? list.corporate : ""}
+                        </td>
+                        <td className={`content-col ${list.consortia && parseInt(list.consortia) < 0 ? "text-danger": ""}`}>
+                          {list.consortia ? list.consortia : ""}
+                        </td>
+                        <td className={`content-col ${list.promotions && parseInt(list.promotions) < 0 ? "text-danger": ""}`}>
+                          {list.promotions ? list.promotions : ""}
+                        </td>
+                        <td className={`content-col ${list.groups && parseInt(list.groups) < 0 ? "text-danger": ""}`}>
+                          {list.groups ? list.groups : ""}
+                        </td>
+                        <td className={`content-col ${list.ota && parseInt(list.ota) < 0 ? "text-danger": ""}`}>
+                          {list.ota ? list.ota : ""}
+                        </td>
+                        <td className={`content-col ${list.fit && parseInt(list.fit) < 0 ? "text-danger": ""}`}>
+                          {list.fit ? list.fit : ""}
+                        </td>
+                        <td className={`content-col total-content  ${list.total && parseInt(list.total) < 0 ? "text-danger": ""}`}>
+                          {list.total ? list.total : ""}
+                        </td>
+                      </tr>
+                    </>
                     );
                   })
                 : null}
             </tbody>
             <tfoot>
               <tr>
+                <td></td>
                 <td></td>
                 <td className="total-col">5</td>
                 <td className="total-col">19</td>

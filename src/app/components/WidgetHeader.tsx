@@ -1,11 +1,13 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Card, Form } from "react-bootstrap";
 import { IWidgetHeaderProps } from "../../interfaces";
 
 const WidgetHeader = ({
   title,
   activeToggle = "graph",
   showToggle = true,
+  showdropdowndaily = false,
+  showdropdownlead = false,
 }: IWidgetHeaderProps) => {
   return (
     <>
@@ -27,6 +29,38 @@ const WidgetHeader = ({
             </div>
           </div>
         ) : null}
+        {showdropdownlead ? 
+        (
+          <div className='action-wrap'>
+            <Form>
+            <Form.Group controlId="exampleForm.ControlSelect2" className="mb-2">
+                <Form.Control as="select" >
+                  <option>Bar</option>
+                  <option>2</option>
+                  <option>3</option>
+                  
+                </Form.Control>
+              </Form.Group>
+            </Form>
+          </div>
+        )
+        : null }
+         {showdropdowndaily ? 
+        (
+          <div className='action-wrap'>
+            <Form>
+            <Form.Group controlId="exampleForm.ControlSelect2" className="mb-2">
+                <Form.Control as="select" >
+                  <option>OCC</option>
+                  <option>2</option>
+                  <option>3</option>
+                  
+                </Form.Control>
+              </Form.Group>
+            </Form>
+          </div>
+        )
+        : null }
       </Card.Header>
     </>
   );

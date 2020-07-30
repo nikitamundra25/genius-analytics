@@ -628,7 +628,13 @@ body {
 .e-dashboardlayout.e-control .e-panel:hover {
   border: 0px;
 }
-
+.form-control:focus {
+    color: #5c6873;
+    background-color: #fff;
+    border-color: #e4e7ea;
+    outline: 0;
+    box-shadow: none;
+}
 // .content {
 //   line-height: 90px;
 // }

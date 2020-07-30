@@ -106,6 +106,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
         title={"Daily Occupacy Vs. BUD Vs. LY"}
         activeToggle={"graph"}
         showToggle={false}
+        showdropdowndaily={true}
       />
 
       <Card.Body>

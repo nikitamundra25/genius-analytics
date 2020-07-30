@@ -20,7 +20,7 @@ const BOB = () => {
   return (
     <>
       <Card>
-        <WidgetHeader title={"Business on the Books"} activeToggle={"grid"} />
+        <WidgetHeader title={"Business on the Books"} activeToggle={"grid"} showToggle={false} />
       
           {isLoading ? (
             <WidgetLoader />

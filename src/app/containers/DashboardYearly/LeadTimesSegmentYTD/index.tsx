@@ -26,6 +26,7 @@ export default ({graphdata = []}: any) => {
         title={"Lead Times YTD by Segment"}
         activeToggle={"graph"}
         showToggle={false}
+        showdropdownlead={true}
       />
       <Card.Body>
       {isLoading ? (
