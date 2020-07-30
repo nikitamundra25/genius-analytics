@@ -7,7 +7,6 @@ import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestKeyBusinessMetricsData } from "../../../../actions";
-import Loader from "../../../components/Loader/Loader";
 const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
@@ -106,7 +105,6 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
   
 
 
-console.log("setHeight",setHeight);
 
   return (
     <Card>
@@ -125,7 +123,7 @@ console.log("setHeight",setHeight);
         barChartBusinessMetrics.map((key: any, index: number) => {
           return (
             <Col key={index} sm={3} md={3} id={`col-width${index}`}>
-              <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+              <React.Suspense fallback={<div className="card-loader"> <WidgetLoader /></div>}>
                 <BarChartComponent
                   chartSettings={{
                     primaryXAxis: {

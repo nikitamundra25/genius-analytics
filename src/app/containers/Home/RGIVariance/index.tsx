@@ -7,7 +7,6 @@ import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestRGIYOYVarianceData } from "../../../../actions";
-import Loader from "../../../components/Loader/Loader";
 
 export default () => {
   const dispatch = useDispatch();
@@ -74,7 +73,7 @@ export default () => {
               message={"An error occured while fetching details "}
             />
           ) : (
-            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+            <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
         <MixedCharts
           id='adfdsf'
           charts={Charts}

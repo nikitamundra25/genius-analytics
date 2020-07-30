@@ -6,7 +6,6 @@ import { IRootState } from "../../../../interfaces";
 import { requestBusinessMixData } from "../../../../actions";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
-import Loader from "../../../components/Loader/Loader";
 const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
@@ -93,7 +92,7 @@ export default (props: any) => {
                 ? BarChartData.map((key: any, index: number) => {
                     return (
                       <Col xs={12} md={6} key={index}>
-                         <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+                         <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
                         <BarChartComponent
                           id={key.id}
                           chartSettings={key.chartSettings}

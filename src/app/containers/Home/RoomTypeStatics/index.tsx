@@ -6,7 +6,6 @@ import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestRoomTypeStaticsData } from "../../../../actions";
-import Loader from "../../../components/Loader/Loader";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
@@ -129,7 +128,7 @@ export default () => {
               message={"An error occured while fetching details "}
             />
           ) : (
-            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+            <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
             <MixedCharts
               id='room-type'
               charts={Charts}

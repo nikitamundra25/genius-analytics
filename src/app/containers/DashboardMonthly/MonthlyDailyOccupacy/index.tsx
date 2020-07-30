@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Row, Card, Col } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,8 +11,7 @@ const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
-
-const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
+const MonthlyDailyOccupacy = ({ graphdata = [] }: any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.MonthlyDailyOccupacyReducer
@@ -21,7 +20,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
     dispatch(requestMonthlyDailyOccupacyData());
     // eslint-disable-next-line
   }, []);
-  
+
   const Charts1 = [
     {
       dataSource: data && data.length && data[0] ? data[0].data : [],
@@ -33,7 +32,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
       width: 1,
     },
     {
-      dataSource:  data && data.length && data[0] ? data[0].data : [],
+      dataSource: data && data.length && data[0] ? data[0].data : [],
       xName: "name",
       yName: "EMPTY",
       type: "StackingColumn100",
@@ -47,13 +46,13 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
           font: {
             fontWeight: "600",
             color: "#ffffff",
-            fontSize:"12px",
+            fontSize: "12px",
           },
         },
       },
     },
     {
-      dataSource:  data && data.length && data[0] ? data[0].data : [],
+      dataSource: data && data.length && data[0] ? data[0].data : [],
       xName: "name",
       yName: "ADR",
       type: "Spline",
@@ -72,16 +71,16 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
           font: {
             fontWeight: "600",
             color: "#000000",
-            fontSize:"12px",
+            fontSize: "12px",
           },
         },
       },
     },
   ];
-  
+
   const Charts2 = [
     {
-      dataSource:  data && data.length && data[1] ? data[1].data : [],
+      dataSource: data && data.length && data[1] ? data[1].data : [],
       xName: "name",
       yName: "OCC",
       type: "StackingColumn100",
@@ -95,7 +94,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
           font: {
             fontWeight: "600",
             color: "#ffffff",
-            fontSize:"12px",
+            fontSize: "12px",
           },
         },
       },
@@ -115,7 +114,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
           font: {
             fontWeight: "600",
             color: "#ffffff",
-            fontSize:"12px",
+            fontSize: "12px",
           },
         },
       },
@@ -140,7 +139,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
           font: {
             fontWeight: "600",
             color: "#000000",
-            fontSize:"12px",
+            fontSize: "12px",
           },
         },
       },
@@ -153,73 +152,85 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
         activeToggle={"graph"}
       />
       <Card.Body>
-      {isLoading ? (
-            <WidgetLoader />
-          ) : isError ? (
-            <ErrorComponent
-              message={"An error occured while fetching details "}
-            />
-          ) : (
-        <Row className="row-inner">
-          <Col xs={12} md={9}>
-            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
-              <MixedCharts
-                id={"occChart1"}
-                legend = {false}
-                chartSettings={{
-                  primaryXAxis: {
-                    valueType: "Category",
-                    interval: 1,
-                    majorGridLines: { width: 0 },
-                  },
-                  primaryYAxis: {
-                    labelFormat: "{value}%",
-                    edgeLabelPlacement: "Shift",
-                    majorGridLines: { width: 0 },
-                    majorTickLines: { width: 0 },
-                    lineStyle: { width: 0 },
-                    labelStyle: {
-                      color: "transparent",
+        {isLoading ? (
+          <WidgetLoader />
+        ) : isError ? (
+          <ErrorComponent
+            message={"An error occured while fetching details "}
+          />
+        ) : (
+          <Row className="row-inner">
+            <Col xs={12} md={9}>
+              <React.Suspense
+                fallback={
+                  <div className="card-loader">
+                    <Loader />
+                  </div>
+                }
+              >
+                <MixedCharts
+                  id={"occChart1"}
+                  legend={false}
+                  chartSettings={{
+                    primaryXAxis: {
+                      valueType: "Category",
+                      interval: 1,
+                      majorGridLines: { width: 0 },
                     },
-                    visible:false,
-                  },
-                  tooltip: { enable: true },
-                  Legend: { enable: false },
-                }}
-                charts={Charts1}
-              />
-            </React.Suspense>
-          </Col>
-          <Col xs={12} md={3}>
-            <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
-              <MixedCharts
-                id={"occChart2"}
-                legend = {false}
-                chartSettings={{
-                  primaryXAxis: {
-                    valueType: "Category",
-                    interval: 1,
-                    majorGridLines: { width: 0 },
-                  },
-                  primaryYAxis: {
-                    labelFormat: "{value}%",
-                    edgeLabelPlacement: "Shift",
-                    majorGridLines: { width: 0 },
-                    majorTickLines: { width: 0 },
-                    lineStyle: { width: 0 },
-                    labelStyle: {
-                      color: "transparent",
+                    primaryYAxis: {
+                      labelFormat: "{value}%",
+                      edgeLabelPlacement: "Shift",
+                      majorGridLines: { width: 0 },
+                      majorTickLines: { width: 0 },
+                      lineStyle: { width: 0 },
+                      labelStyle: {
+                        color: "transparent",
+                      },
+                      visible: false,
                     },
-                    visible:false,
-                  },
-                  tooltip: { enable: true },
-                }}
-                charts={Charts2}
-              />
-            </React.Suspense>
-          </Col>
-        </Row>
-          )}
+                    tooltip: { enable: true },
+                    Legend: { enable: false },
+                  }}
+                  charts={Charts1}
+                />
+              </React.Suspense>
+            </Col>
+            <Col xs={12} md={3}>
+              <React.Suspense
+                fallback={
+                  <div className="card-loader">
+                    <Loader />
+                  </div>
+                }
+              >
+                <MixedCharts
+                  id={"occChart2"}
+                  legend={false}
+                  chartSettings={{
+                    primaryXAxis: {
+                      valueType: "Category",
+                      interval: 1,
+                      majorGridLines: { width: 0 },
+                    },
+                    primaryYAxis: {
+                      labelFormat: "{value}%",
+                      edgeLabelPlacement: "Shift",
+                      majorGridLines: { width: 0 },
+                      majorTickLines: { width: 0 },
+                      lineStyle: { width: 0 },
+                      labelStyle: {
+                        color: "transparent",
+                      },
+                      visible: false,
+                    },
+                    tooltip: { enable: true },
+                  }}
+                  charts={Charts2}
+                />
+              </React.Suspense>
+            </Col>
+          </Row>
+        )}
       </Card.Body>
     </Card>
   );
