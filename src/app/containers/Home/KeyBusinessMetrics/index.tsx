@@ -61,13 +61,16 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
  
   const location = useLocation();
   useEffect(() => {
-  const header1 : HTMLElement | null = document.getElementById('col-width0');
-      if (header1) {
-        console.log("hello chart width");
-       // const check = header.getBoundingClientRect();
-        console.log("hello header");
-        header1.style.color = "red";
-      }
+   // const modalbtn: HTMLElement | null = document.getElementById(`language_dropmodal-${index}`);
+    const modalbtn: HTMLElement | null = document.getElementById(`col-width0`);
+    if (modalbtn) {
+      const check = modalbtn.getBoundingClientRect();
+      console.log("hello chart width");
+      console.log("hello header", check);
+      modalbtn.style.color = "red";
+    }
+ 
+     
   }, [location]);
 
   return (
