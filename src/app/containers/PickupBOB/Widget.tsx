@@ -1,11 +1,25 @@
-import React from "react";
+import React,{useEffect} from "react";
 import {  Card } from "react-bootstrap";
-import { IDashboardWidgetProps } from "../../../interfaces";
+import { IDashboardWidgetProps, IRootState } from "../../../interfaces";
 import BOBMonthlyTable from "./BOBMonthlyTable";
+import { requestPickupDetailTableData } from "../../../actions";
+import { ErrorComponent } from "../../components/Error";
+import { WidgetLoader } from "../../components/Loader/WidgetLoader";
+import { useDispatch, useSelector } from "react-redux";
 
 const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   let rowId: number = 0;
   let colId: number = 0;
+  const dispatch = useDispatch();
+
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.pickupDetailTableReducer
+  );
+
+  useEffect(() => {
+    dispatch(requestPickupDetailTableData());
+    // eslint-disable-next-line
+  }, []);
 
   const GetDynamicRowCol = (index: number) => {
     if (index !== 0) {
@@ -41,15 +55,23 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
           
           <Card>
             <Card.Body>
-             
+            {isLoading ? (
+                <WidgetLoader />
+              ) : isError ? (
+                <ErrorComponent
+                  message={"An error occured while fetching details "}
+                />
+              ) : (
+                <>
                   <div className="sub-title text-left  mb-3 ">
                     {chartType.name}
                   </div>
                   <BOBMonthlyTable
                     index={index}
-                    graphdata={chartType.pivotData}
+                    graphdata={data}
                   />
-               
+                  </>
+              )}
             </Card.Body>
           </Card>
           

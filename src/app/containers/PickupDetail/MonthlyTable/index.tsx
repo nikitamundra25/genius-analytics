@@ -2,430 +2,92 @@ import React from "react";
 import Loader from "../../../components/Loader/Loader";
 import { Table } from "react-bootstrap";
 
-
-const MonthlyTable = (props:any) => {
-
+const MonthlyTable = ({ graphdata = [] }: any) => {
 
   return (
     <>
-     
-      <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
-      <div className="table-detail-section">
-            <Table responsive className='pickup-detail-table'>
+      <React.Suspense
+        fallback={
+          <div className="card-loader">
+            <Loader />
+          </div>
+        }
+      >
+        <div className="table-detail-section">
+          <Table responsive className="pickup-detail-table">
             <thead>
-              
               <tr>
                 <th></th>
-                <th className='head-col'>Bar</th>
-                <th className='head-col'>Leisure Break</th>
-                <th className='head-col'>Corporate</th>
-                <th className='head-col'>Consortia</th>
-                <th className='head-col'>Promotions</th>
-                <th className='head-col'>Groups</th>
-                <th className='head-col'>OTAs</th>
-                <th className='head-col'>Fit</th>
-                <th className='head-col total-content'>Total</th>
+                <th className="head-col">Bar</th>
+                <th className="head-col">Leisure Break</th>
+                <th className="head-col">Corporate</th>
+                <th className="head-col">Consortia</th>
+                <th className="head-col">Promotions</th>
+                <th className="head-col">Groups</th>
+                <th className="head-col">OTAs</th>
+                <th className="head-col">Fit</th>
+                <th className="head-col total-content">Total</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className='title-col'>Mon 01 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col total-content'></td>
-              </tr>
-              <tr>
-                <td className='title-col'>Tue 02 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col total-content'></td>
-              </tr>
-              <tr>
-                <td className='title-col'>Wed 03 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col total-content'></td>
-              </tr>
-              <tr>
-                <td className='title-col'>Thu 04 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col total-content'></td>
-              </tr>
-              <tr className="weekend-bg">
-                <td className='title-col'>Fri 05 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col total-content'></td>
-              </tr>
-              <tr className="weekend-bg">
-                <td className='title-col'>Sat 06 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col total-content'></td>
-              </tr>
-              <tr className="weekend-bg">
-                <td className='title-col'>Sun 07 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col total-content'></td>
-              </tr>
-              <tr>
-                <td className='title-col'>Mon 08 Oct</td>
-                <td className='content-col text-danger'>-1</td>
-                <td className='content-col'></td>
-                <td className='content-col text-danger'>-1</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col text-danger'>-1</td>
-                <td className='content-col '></td>
-                <td className='content-col total-content text-danger'>-2</td>
-              </tr>
-              <tr>
-                <td className='title-col'>Tue 09 Oct</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>1</td>
-                <td className='content-col '></td>
-                <td className='content-col '>1</td>
-                <td className='content-col '></td>
-                <td className='content-col total-content'>4</td>
-              </tr>
-              <tr>
-                <td className='title-col'>Wed 10 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'>1</td>
-                <td className='content-col'></td>
-                <td className='content-col'>1</td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col text-danger'>-3</td>
-                <td className='content-col total-content text-danger'>-1</td>
-              </tr>
-
-              <tr>
-                <td className='title-col'>Thu 11 Oct</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col '>0</td>
-                <td className='content-col '>0</td>
-                <td className='content-col '>0</td>
-                <td className='content-col total-content'>1</td>
-              </tr>
-              <tr className="weekend-bg">
-                <td className='title-col'>Fri 12 Oct</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>0</td>
-                <td className='content-col text-danger'>-1</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>0</td>
-                <td className='content-col '>0</td>
-                <td className='content-col '>1</td>
-                <td className='content-col '>0</td>
-                <td className='content-col total-content'>2</td>
-              </tr>
-              <tr className="weekend-bg">
-                <td className='title-col'>Sat 13 Oct</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>2</td>
-                <td className='content-col'>0</td>
-                <td className='content-col '>0</td>
-                <td className='content-col '>1</td>
-                <td className='content-col '>0</td>
-                <td className='content-col total-content'>4</td>
-              </tr>
-              <tr className="weekend-bg">
-                <td className='title-col'>Sun 14 Oct</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>2</td>
-                <td className='content-col'>0</td>
-                <td className='content-col '>0</td>
-                <td className='content-col '>1</td>
-                <td className='content-col '>0</td>
-                <td className='content-col total-content'>4</td>
-              </tr>
-              <tr>
-                <td className='title-col'>Mon 15 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>2</td>
-                <td className='content-col'>2</td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '>7</td>
-                <td className='content-col '>3</td>
-                <td className='content-col total-content'>15</td>
-              </tr>
-              <tr>
-                <td className='title-col'>Tue 16 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col text-danger'>-1</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '>1</td>
-                <td className='content-col '>2</td>
-                <td className='content-col total-content'>2</td>
-              </tr>
-              <tr>
-                <td className='title-col'>Wed 17 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'>1</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col '>1</td>
-                <td className='content-col total-content'>2</td>
-              </tr>
-              <tr>
-                <td className='title-col'>Thu 18 Oct</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '>1</td>
-                <td className='content-col '>1</td>
-                <td className='content-col total-content'>3</td>
-              </tr>
-              <tr className="weekend-bg">
-                <td className='title-col'>Fri 19 Oct</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col '>0</td>
-                <td className='content-col '>1</td>
-                <td className='content-col '>1</td>
-                <td className='content-col total-content'>4</td>
-              </tr>
-              <tr className="weekend-bg">
-                <td className='title-col'>Sat 20 Oct</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>3</td>
-                <td className='content-col text-danger'>-1</td>
-                <td className='content-col'>0</td>
-                <td className='content-col '>0</td>
-                <td className='content-col '>2</td>
-                <td className='content-col '>1</td>
-                <td className='content-col total-content'>5</td>
-              </tr>
-
-              <tr className="weekend-bg">
-                <td className='title-col'>Sun 21 Oct</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>5</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col '>0</td>
-                <td className='content-col '>2</td>
-                <td className='content-col '>1</td>
-                <td className='content-col total-content'>8</td>
-              </tr>
-              <tr>
-                <td className='title-col'>Mon 22 Oct</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>3</td>
-                <td className='content-col'>5</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '>1</td>
-                <td className='content-col '></td>
-                <td className='content-col total-content'>10</td>
-              </tr>
-              <tr>
-                <td className='title-col'>Tue 23 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'>4</td>
-                <td className='content-col'>3</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col '>1</td>
-                <td className='content-col total-content '>8</td>
-              </tr>
-              <tr>
-                <td className='title-col'>Wed 24 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'>3</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col total-content'>4</td>
-              </tr>
-              <tr>
-                <td className='title-col'>Thu 25 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'>2</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col total-content'>2</td>
-              </tr>
-              <tr className="weekend-bg">
-                <td className='title-col'>Fri 26 Oct</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col '>0</td>
-                <td className='content-col text-danger'>-1</td>
-                <td className='content-col '>0</td>
-                <td className='content-col total-content'>-1</td>
-              </tr>
-              <tr className="weekend-bg">
-                <td className='title-col'>Sat 27 Oct</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>0</td>
-                <td className='content-col '>0</td>
-                <td className='content-col '>0</td>
-                <td className='content-col '>0</td>
-                <td className='content-col total-content'>1</td>
-              </tr>
-              <tr className="weekend-bg">
-                <td className='title-col'>Sun 28 Oct</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>0</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>2</td>
-                <td className='content-col'>0</td>
-                <td className='content-col '>0</td>
-                <td className='content-col '>0</td>
-                <td className='content-col '>1</td>
-                <td className='content-col total-content'>4</td>
-              </tr>
-              <tr>
-                <td className='title-col'>Mon 29 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>2</td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col '></td>
-                <td className='content-col total-content'>4</td>
-              </tr>
-              <tr>
-                <td className='title-col'>Tue 30 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'></td>
-                <td className='content-col'></td>
-                <td className='content-col '></td>
-                <td className='content-col '>1</td>
-                <td className='content-col '></td>
-                <td className='content-col total-content'>3</td>
-              </tr>
-              <tr>
-                <td className='title-col'>Wed 31 Oct</td>
-                <td className='content-col'></td>
-                <td className='content-col'>3</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>1</td>
-                <td className='content-col'>1</td>
-                <td className='content-col '></td>
-                <td className='content-col text-danger'>-1</td>
-                <td className='content-col '></td>
-                <td className='content-col total-content'>5</td>
-              </tr>
-              
+              {graphdata && graphdata.length
+                ? graphdata.map((list: any, index: number) => {
+                    return (
+                      <tr
+                        key={index}
+                        className={list.isWeekend ? "weekend-bg" : ""}
+                      >
+                        <td className="title-col">{list.title} </td>
+                        <td className={`content-col ${list.barValue && parseInt(list.barValue) < 0 ? "text-danger" :""}`}>
+                          {" "}
+                          {list.barValue ? list.barValue : ""}{" "}
+                        </td>
+                        <td  className={`content-col ${list.leisureBreak && parseInt(list.leisureBreak) < 0 ?"text-danger":"" }`}>
+                          {list.leisureBreak ? list.leisureBreak : ""}{" "}
+                        </td>
+                        <td  className={`content-col ${list.corporate && parseInt(list.corporate) < 0 ? "text-danger": ""}`}>
+                          {list.corporate ? list.corporate : ""}
+                        </td>
+                        <td className={`content-col ${list.consortia && parseInt(list.consortia) < 0 ? "text-danger": ""}`}>
+                          {list.consortia ? list.consortia : ""}
+                        </td>
+                        <td className={`content-col ${list.promotions && parseInt(list.promotions) < 0 ? "text-danger": ""}`}>
+                          {list.promotions ? list.promotions : ""}
+                        </td>
+                        <td className={`content-col ${list.groups && parseInt(list.groups) < 0 ? "text-danger": ""}`}>
+                          {list.groups ? list.groups : ""}
+                        </td>
+                        <td className={`content-col ${list.ota && parseInt(list.ota) < 0 ? "text-danger": ""}`}>
+                          {list.ota ? list.ota : ""}
+                        </td>
+                        <td className={`content-col ${list.fit && parseInt(list.fit) < 0 ? "text-danger": ""}`}>
+                          {list.fit ? list.fit : ""}
+                        </td>
+                        <td className={`content-col total-content  ${list.total && parseInt(list.total) < 0 ? "text-danger": ""}`}>
+                          {list.total ? list.total : ""}
+                        </td>
+                      </tr>
+                    );
+                  })
+                : null}
             </tbody>
             <tfoot>
               <tr>
-                <td ></td>
-                <td className='total-col'>5</td>
-                <td className='total-col'>19</td>
-                <td className='total-col'>23</td>
-                <td className='total-col'>12</td>
-                <td className='total-col'>3</td>
-                <td className='total-col '>0</td>
-                <td className='total-col '>17</td>
-                <td className='total-col '>7</td>
-                <td className='total-col total-content'>86</td>
+                <td></td>
+                <td className="total-col">5</td>
+                <td className="total-col">19</td>
+                <td className="total-col">23</td>
+                <td className="total-col">12</td>
+                <td className="total-col">3</td>
+                <td className="total-col ">0</td>
+                <td className="total-col ">17</td>
+                <td className="total-col ">7</td>
+                <td className="total-col total-content">86</td>
               </tr>
             </tfoot>
           </Table>
-          
-         
-          </div>
-         
-          
+        </div>
       </React.Suspense>
-      
     </>
   );
 };
