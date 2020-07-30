@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Row, Col, Card } from "react-bootstrap";
+import {  Card } from "react-bootstrap";
 import { IDashboardWidgetProps, IRootState } from "../../../interfaces";
 import { requestPickupDetailTableData } from "../../../actions";
 import TableForm from "./MonthlyTable";
@@ -42,7 +42,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
       >
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
-          {/* <Col xs={12} md={12}> */}
+         
           <Card>
             <Card.Body>
               {isLoading ? (
@@ -52,18 +52,16 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                   message={"An error occured while fetching details "}
                 />
               ) : (
-                <Row>
-                  <Col xs={12} md={12}>
+                <>
                     <div className="sub-title text-left  mb-3 ">
                       {chartType.name}
                     </div>
                     <TableForm index={index} graphdata={data} />
-                  </Col>
-                </Row>
+                 </>
               )}
             </Card.Body>
           </Card>
-          {/* </Col> */}
+          
         </div>
       </div>
     );

@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import { useLocation } from 'react-router';
 import { Col, Card, Row } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,6 +23,9 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
     dispatch(requestKeyBusinessMetricsData());
     // eslint-disable-next-line
   }, []);
+
+ 
+ 
 
   const barChartBusinessMetrics = [
     {
@@ -55,7 +59,19 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
   ];
 
  
-  
+  const location = useLocation();
+  useEffect(() => {
+   // const modalbtn: HTMLElement | null = document.getElementById(`language_dropmodal-${index}`);
+    const modalbtn: HTMLElement | null = document.getElementById(`col-width0`);
+    if (modalbtn) {
+      const check = modalbtn.getBoundingClientRect();
+      console.log("hello chart width");
+      console.log("hello header", check);
+      modalbtn.style.color = "red";
+    }
+ 
+     
+  }, [location]);
 
   return (
     <Card>
@@ -73,7 +89,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
         {barChartBusinessMetrics && barChartBusinessMetrics.length ? 
         barChartBusinessMetrics.map((key: any, index: number) => {
           return (
-            <Col key={index} sm={3} md={3} >
+            <Col key={index} sm={3} md={3} id={`col-width${index}`}>
               <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
                 <BarChartComponent
                   chartSettings={{

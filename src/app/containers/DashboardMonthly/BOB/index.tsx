@@ -12,7 +12,7 @@ const MonthlyBOB = (props:any) => {
           <div className='dashboard-monthly-table'>
 
          
-            <Table responsive >
+            <Table responsive className="mb-0">
                   <thead>
                     <tr className='business-top-row'>
                       <th></th>

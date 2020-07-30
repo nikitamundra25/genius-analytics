@@ -21,7 +21,7 @@ const BOB = () => {
     <>
       <Card>
         <WidgetHeader title={"Business on the Books"} activeToggle={"grid"} />
-        <Card.Body>
+      
           {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -29,7 +29,10 @@ const BOB = () => {
               message={"An error occured while fetching details "}
             />
           ) : (
-            <Table responsive className='business-table'>
+            <div className="business-table-section">
+
+            
+            <Table responsive className='business-table mb-0'>
               <thead>
                 <tr className='business-top-row'>
                   <th></th>
@@ -105,8 +108,9 @@ const BOB = () => {
                 </tr>
               </tbody>
             </Table>
+            </div>
           )}
-        </Card.Body>
+        
       </Card>
     </>
   );

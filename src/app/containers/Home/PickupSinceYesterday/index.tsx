@@ -24,35 +24,7 @@ const PickupSinceYesterday = () => {
     dispatch(requestRoomNightsData());
     // eslint-disable-next-line
   }, []);
-  // const BarChartReferenceLine = [
-  //   {
-  //     id: "1",
-  //     title: "Room Nights",
-  //     color: "#f07623",
-  //     data: graphdata[0].data,
-  //     range: "198",
-  //     arrowClass: "cui-arrow-top",
-  //     textClass: "text-success",
-  //   },
-  //   {
-  //     id: "2",
-  //     title: "ADR",
-  //     color: "#f07623",
-  //     data: graphdata[1].data,
-  //     range: "2.6",
-  //     arrowClass: "cui-arrow-bottom",
-  //     textClass: "text-danger",
-  //   },
-  //   {
-  //     id: "3",
-  //     title: "Revenue",
-  //     color: "#f07623",
-  //     data: graphdata[2].data,
-  //     range: "19.4 k",
-  //     arrowClass: "cui-arrow-top",
-  //     textClass: "text-success",
-  //   },
-  // ];
+
 
   const BarChartReferenceLine = [
     {
