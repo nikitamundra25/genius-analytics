@@ -53,7 +53,7 @@ const HomeComponent: FunctionComponent = () => {
             cellSpacing={cellSpacing}
             allowResizing={false}
             columns={4}
-          
+            // mediaQuery= {'max-width: 700px'}
             cellAspectRatio={100 / 110}
             created={created}
             ref={(scope: any) => {
