@@ -28,7 +28,7 @@ export const PieChartComponent = ({
       }}
       width={width}
       height={height}
-      background='transparent'
+      // background='transparent'
       tooltip={{
         enable: true,
         // eslint-disable-next-line

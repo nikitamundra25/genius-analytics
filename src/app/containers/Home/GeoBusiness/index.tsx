@@ -28,6 +28,7 @@ export default ({ graphdata = {} }:any) => {
         <WidgetHeader
           title={"Geographic Origin of business"}
           activeToggle={"graph"}
+          showToggle={false} 
         />
         <Card.Body>
         {isLoading ? (

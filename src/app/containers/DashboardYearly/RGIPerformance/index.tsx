@@ -41,7 +41,7 @@ export default ({ graphdata = [] }: any) => {
 
   return (
     <Card>
-      <WidgetHeader title={"RGI Performance - YTD"}  activeToggle={"graph"}/>
+      <WidgetHeader title={"RGI Performance - YTD"}  activeToggle={"graph"}  showToggle={false}/>
       <Card.Body>
       {isLoading ? (
             <WidgetLoader />

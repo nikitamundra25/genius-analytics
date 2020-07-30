@@ -121,7 +121,7 @@ const RoomTypesYTD = ({ graphdata = [] }: any) => {
   return (
     <>
       <Card>
-        <WidgetHeader title={"Room Types - YTD"} activeToggle={"graph"} />
+        <WidgetHeader title={"Room Types - YTD"} activeToggle={"graph"}  showToggle={false}/>
         <Card.Body>
         {isLoading ? (
             <WidgetLoader />

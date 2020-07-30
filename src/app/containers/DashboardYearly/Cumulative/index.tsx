@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Table } from "react-bootstrap";
+import { Card, Table ,OverlayTrigger, Tooltip } from "react-bootstrap";
 import { getMonths } from "../../../../helper";
 import BarChartComponent from "../../../components/Charts/BarChart";
 import PieChartComponent from "../../../components/Charts/PieChart";
@@ -18,17 +18,39 @@ let data = months.map((month: string) => ({
     {
       // label: "BUD",
       value: (
-        <div className="icon-col">
-          <img src={caretup} alt="success" width="15" />
+        <OverlayTrigger
+      key={"top"}
+      placement={"top"}
+      overlay={
+        <Tooltip id={`tooltip-increase`}>
+          Increase 2%
+        </Tooltip>
+      }
+    >
+      <div className="icon-col">
+          <img src={caretup} alt="increase" width="15" />
         </div>
+    </OverlayTrigger>
+        
       ),
     },
     {
       // label: "LY",
       value: (
-        <div className="icon-col">
-          <img src={caretdown} alt="success" width="15" />
+        <OverlayTrigger
+      key={"top"}
+      placement={"top"}
+      overlay={
+        <Tooltip id={`tooltip-decrease`}>
+          Decrease 2%
+        </Tooltip>
+      }
+    >
+      <div className="icon-col">
+          <img src={caretdown} alt="decrease" width="15" />
         </div>
+    </OverlayTrigger>
+        
       ),
     },
   ],
@@ -91,54 +113,54 @@ const tableData = [
   //   name: "Total Revenue",
   //   months: data,
   // },
-  {
-    type: "pick-up",
-    name: "Pick-up",
-    months: months.map((month) => ({
-      name: month,
-      type: "graph",
-      data: [
-        {
-          type: "bar",
-          data: [
-            { x: "Room Nights", y: 23 },
-            { x: "Revenue", y: 27 },
-            { x: "ARR", y: -15 },
-          ],
-        },
-      ],
-    })),
-  },
-  {
-    type: "graph",
-    name: "Business Mix",
-    months: months.map((month) => ({
-      name: month,
-      type: "graph",
-      data: [
-        {
-          type: "bar",
-          data: [
-            { x: "BAR", y: 23 },
-            { x: "Discount", y: 27 },
-            { x: "Corporate", y: -15 },
-            { x: "Cor Group", y: 8 },
-            { x: "Leisure Group", y: -13 },
-            { x: "FIT", y: 14 },
-          ],
-        },
-        // {
-        //   type: "pie",
-        //   data: [
-        //     { x: "Brand.com", y: 27, text: "27%" },
-        //     { x: "OTA", y: 38, text: "38%" },
-        //     { x: "GDS", y: 20, text: "20%" },
-        //     { x: "Direct", y: 15, text: "15%" },
-        //   ],
-        // },
-      ],
-    })),
-  },
+  // {
+  //   type: "pick-up",
+  //   name: "Pick-up",
+  //   months: months.map((month) => ({
+  //     name: month,
+  //     type: "graph",
+  //     data: [
+  //       {
+  //         type: "bar",
+  //         data: [
+  //           { x: "Room Nights", y: 23 },
+  //           { x: "Revenue", y: 27 },
+  //           { x: "ARR", y: -15 },
+  //         ],
+  //       },
+  //     ],
+  //   })),
+  // },
+  // {
+  //   type: "graph",
+  //   name: "Business Mix",
+  //   months: months.map((month) => ({
+  //     name: month,
+  //     type: "graph",
+  //     data: [
+  //       {
+  //         type: "bar",
+  //         data: [
+  //           { x: "BAR", y: 23 },
+  //           { x: "Discount", y: 27 },
+  //           { x: "Corporate", y: -15 },
+  //           { x: "Cor Group", y: 8 },
+  //           { x: "Leisure Group", y: -13 },
+  //           { x: "FIT", y: 14 },
+  //         ],
+  //       },
+  //       // {
+  //       //   type: "pie",
+  //       //   data: [
+  //       //     { x: "Brand.com", y: 27, text: "27%" },
+  //       //     { x: "OTA", y: 38, text: "38%" },
+  //       //     { x: "GDS", y: 20, text: "20%" },
+  //       //     { x: "Direct", y: 15, text: "15%" },
+  //       //   ],
+  //       // },
+  //     ],
+  //   })),
+  // },
 ];
 const CumulativeTable = () => {
   return (

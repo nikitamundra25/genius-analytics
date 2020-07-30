@@ -73,7 +73,7 @@ export default () => {
       stop-opacity: 1;
     }
     #hotel-chart stop[offset="1"] {
-      stop-opacity: 0.4;
+      stop-opacity: 1;
     }
 
     #market-chart stop {
@@ -83,7 +83,7 @@ export default () => {
       stop-opacity: 1;
     }
     #market-chart stop[offset="1"] {
-      stop-opacity: 0.4;
+      stop-opacity: 1;
     }
 
     `;
@@ -94,7 +94,7 @@ export default () => {
           {SAMPLE_CSS}
       </style>
     <Card>
-      <WidgetHeader title={"RGI YoY Variance"} activeToggle={"graph"} />
+      <WidgetHeader title={"RGI YoY Variance"} activeToggle={"graph"} showToggle={false} />
       <Card.Body>
       {isLoading ? (
             <WidgetLoader />

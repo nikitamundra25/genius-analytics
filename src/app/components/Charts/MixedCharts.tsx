@@ -27,9 +27,9 @@ const MixedCharts = ({ charts = [], id, chartSettings = {},legend= true }: any) 
       //style={{ textAlign: "center", "height": "250px", "width": "100%" }}
       chartArea={{ border: { width: 0 } }}
       width={"100%"}
-      height={"250px"}
-      fill="transparent"
-      background='transparent'
+      height={"270px"}
+      // fill="transparent"
+      // background='transparent'
       {...chartSettings}>
       <Inject
         services={[

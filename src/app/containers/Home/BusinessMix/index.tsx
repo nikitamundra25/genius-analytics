@@ -87,7 +87,7 @@ export default (props: any) => {
       stop-opacity: 1;
     }
     #mix-chart stop[offset="1"] {
-      stop-opacity: 0.4;
+      stop-opacity: 1;
     }
 
     #mixadr-chart stop {
@@ -97,7 +97,7 @@ export default (props: any) => {
       stop-opacity: 1;
     }
     #mixadr-chart stop[offset="1"] {
-      stop-opacity: 0.4;
+      stop-opacity: 1;
     }
 
     `;
@@ -108,7 +108,7 @@ export default (props: any) => {
           {SAMPLE_CSS}
       </style>
       <Card>
-        <WidgetHeader title={"Business Mix"} activeToggle={"graph"} />
+        <WidgetHeader title={"Business Mix"} activeToggle={"graph"} showToggle={false}  />
         <Card.Body>
           {isLoading ? (
             <WidgetLoader />

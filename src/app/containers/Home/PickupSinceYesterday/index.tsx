@@ -124,7 +124,7 @@ const PickupSinceYesterday = () => {
   stop-opacity: 1;
 }
 #pickup-chart stop[offset="1"] {
-  stop-opacity: 0.4;
+  stop-opacity: 1;
 }
 
 `;
@@ -135,7 +135,7 @@ const PickupSinceYesterday = () => {
           {SAMPLE_CSS}
       </style>
     <Card>
-      <WidgetHeader title={"Pick up Since Yesterday"} activeToggle={"graph"} />
+      <WidgetHeader title={"Pick up Since Yesterday"} activeToggle={"graph"} showToggle={false} />
 
       <Card.Body>
       {isLoading ? (

@@ -24,7 +24,7 @@ export default ({ graphdata = [] }:any) => {
 
   return (
     <Card>
-      <WidgetHeader title={"Booking Channel Mix"} activeToggle={"graph"} />
+      <WidgetHeader title={"Booking Channel Mix"} activeToggle={"graph"}  showToggle={false} />
       <Card.Body>
       {isLoading ? (
             <WidgetLoader />
@@ -36,7 +36,7 @@ export default ({ graphdata = [] }:any) => {
             <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
           <PieChartComponent
             id={"booking-mix"}
-            height={"250px"}
+            height={"270px"}
             data={data}
             chartSettings={{
               SeriesDirective: {

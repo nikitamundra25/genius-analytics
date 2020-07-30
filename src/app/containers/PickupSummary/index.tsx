@@ -10,7 +10,7 @@ import "./index.scss";
 import { ErrorComponent } from "../../components/Error";
 
 const PickupSummary: FunctionComponent = () => {
-  const cellSpacing = [15, 30];
+  const cellSpacing = [15, 15];
   let restoreModel: any = [];
   let dashboardObj: any;
   const dispatch = useDispatch();
@@ -49,7 +49,7 @@ const PickupSummary: FunctionComponent = () => {
             cellSpacing={cellSpacing}
             allowResizing={false}
             columns={1}
-            cellAspectRatio={100 / 42}
+            cellAspectRatio={100 / 32}
             created={created}
             ref={(scope: any) => {
               dashboardObj = scope;

@@ -183,7 +183,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
       stop-opacity: 1;
     }
     #occty-chart stop[offset="1"] {
-      stop-opacity: 0.4;
+      stop-opacity: 1;
     }
 
     #occly-chart stop {
@@ -193,7 +193,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
       stop-opacity: 1;
     }
     #occly-chart stop[offset="1"] {
-      stop-opacity: 0.4;
+      stop-opacity: 1;
     }
 
     #ty-chart stop {
@@ -203,7 +203,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
       stop-opacity: 1;
     }
     #ty-chart stop[offset="1"] {
-      stop-opacity: 0.4;
+      stop-opacity: 1;
     }
 
     #ly-chart stop {
@@ -213,7 +213,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
       stop-opacity: 1;
     }
     #ly-chart stop[offset="1"] {
-      stop-opacity: 0.4;
+      stop-opacity: 1;
     }
     `;
   return (
@@ -222,7 +222,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           {SAMPLE_CSS}
       </style>
       <Card>
-        <WidgetHeader title={"Occupancy Statistics"} activeToggle={"graph"} />
+        <WidgetHeader title={"Occupancy Statistics"} activeToggle={"graph"} showToggle={false} />
         <Card.Body>
         {isLoading ? (
             <WidgetLoader />

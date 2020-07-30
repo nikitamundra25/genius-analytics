@@ -66,30 +66,30 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
 		stop-color: #2e75b7;
 	}
 	#occ-chart stop[offset="0"] {
-		stop-opacity: 0.95;
+		stop-opacity: 1;
 	}
 	#occ-chart stop[offset="1"] {
-		stop-opacity: 0.3;
+		stop-opacity: 1;
   }
 
   #adr-chart stop {
 		stop-color: #5398d9;
 	}
 	#adr-chart stop[offset="0"] {
-		stop-opacity: 0.99;
+		stop-opacity: 1;
 	}
 	#adr-chart stop[offset="1"] {
-    stop-opacity: 0.4;
+    stop-opacity: 1;
   }
 
   #revnue-chart stop {
 		stop-color: #1f4e79;
 	}
 	#revnue-chart stop[offset="0"] {
-		stop-opacity: 0.99;
+		stop-opacity: 1;
 	}
 	#revnue-chart stop[offset="1"] {
-		stop-opacity: 0.4;
+		stop-opacity: 1;
   }
 
   #revpar-chart stop {
@@ -99,7 +99,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
 		stop-opacity: 1;
 	}
 	#revpar-chart stop[offset="1"] {
-		stop-opacity: 0.4;
+		stop-opacity: 1;
   }
   
   `;

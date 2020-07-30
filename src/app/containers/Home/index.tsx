@@ -54,7 +54,7 @@ const HomeComponent: FunctionComponent = () => {
             allowResizing={false}
             columns={4}
           
-            cellAspectRatio={100 / 110}
+           cellAspectRatio={100 / 100}
             created={created}
             ref={(scope: any) => {
               dashboardObj = scope;

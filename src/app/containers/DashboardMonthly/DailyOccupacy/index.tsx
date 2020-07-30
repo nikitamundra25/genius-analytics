@@ -105,6 +105,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       <WidgetHeader
         title={"Daily Occupacy Vs. BUD Vs. LY"}
         activeToggle={"graph"}
+        showToggle={false}
       />
 
       <Card.Body>

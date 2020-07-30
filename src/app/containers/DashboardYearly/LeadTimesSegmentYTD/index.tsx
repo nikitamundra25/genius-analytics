@@ -25,6 +25,7 @@ export default ({graphdata = []}: any) => {
       <WidgetHeader
         title={"Lead Times YTD by Segment"}
         activeToggle={"graph"}
+        showToggle={false}
       />
       <Card.Body>
       {isLoading ? (
@@ -36,7 +37,7 @@ export default ({graphdata = []}: any) => {
           ) : (
           <PieChartComponent
             id={"leadtimesSegment"}
-            height={"250px"}
+            height={"270px"}
             data={data}
             chartSettings={{
               SeriesDirective: {

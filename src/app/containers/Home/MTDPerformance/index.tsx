@@ -134,7 +134,7 @@ export default ({ graphdata = [] }: any) => {
   stop-opacity: 1;
 }
 #rgi-chart stop[offset="1"] {
-  stop-opacity: 0.4;
+  stop-opacity: 1;
 }
 
 #mpi-chart stop {
@@ -144,7 +144,7 @@ export default ({ graphdata = [] }: any) => {
   stop-opacity: 1;
 }
 #mpi-chart stop[offset="1"] {
-  stop-opacity: 0.4;
+  stop-opacity: 1;
 }
 
 #ari-chart stop {
@@ -154,7 +154,7 @@ export default ({ graphdata = [] }: any) => {
   stop-opacity: 1;
 }
 #ari-chart stop[offset="1"] {
-  stop-opacity: 0.4;
+  stop-opacity: 1;
 }
 
 `;
@@ -165,7 +165,7 @@ export default ({ graphdata = [] }: any) => {
           {SAMPLE_CSS}
       </style>
     <Card>
-      <WidgetHeader title={"MTD RGI Performance"} />
+      <WidgetHeader title={"MTD RGI Performance"} showToggle={false} />
       <Card.Body>
         {isLoading ? (
           <WidgetLoader />

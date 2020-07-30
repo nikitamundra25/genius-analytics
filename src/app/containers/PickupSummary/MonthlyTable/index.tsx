@@ -8,7 +8,7 @@ const MonthlyTable = (props:any) => {
     <>
         <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
           <div className="pickup-table-section">
-            <Table responsive className='pickup-table'>
+            <Table responsive className='pickup-table mb-0'>
             <thead>
               <tr className='business-top-row'>
                 <th></th>

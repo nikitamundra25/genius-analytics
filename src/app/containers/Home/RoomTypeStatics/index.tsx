@@ -128,7 +128,7 @@ export default () => {
       stop-opacity: 1;
     }
     #roccty-chart stop[offset="1"] {
-      stop-opacity: 0.4;
+      stop-opacity: 1;
     }
 
     #roccly-chart stop {
@@ -138,7 +138,7 @@ export default () => {
       stop-opacity: 1;
     }
     #roccly-chart stop[offset="1"] {
-      stop-opacity: 0.4;
+      stop-opacity: 1;
     }
 
     `;
@@ -150,7 +150,7 @@ export default () => {
           {SAMPLE_CSS}
       </style>
       <Card>
-        <WidgetHeader title={"Room Type Statics"} activeToggle={"graph"} />
+        <WidgetHeader title={"Room Type Statics"} activeToggle={"graph"} showToggle={false} />
         <Card.Body>
       {isLoading ? (
             <WidgetLoader />

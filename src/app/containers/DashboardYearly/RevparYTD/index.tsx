@@ -100,13 +100,13 @@ const RevparYTD = ({ graphdata = [] }: any) => {
 
   const SAMPLE_CSS = `
   #gradient-chart stop {
-  stop-color: red;
+  stop-color: #c4e6ef;
 }
 #gradient-chart stop[offset="0"] {
   stop-opacity: 0.75;
 }
 #gradient-chart stop[offset="1"] {
-  stop-opacity: 0;
+  stop-opacity: 0.2;
 }`;
 
   return (
@@ -115,7 +115,7 @@ const RevparYTD = ({ graphdata = [] }: any) => {
           {SAMPLE_CSS}
       </style>
       <Card>
-        <WidgetHeader title={"RevPAR Vs. NrevPAR - YTD"} activeToggle={"graph"} />
+        <WidgetHeader title={"RevPAR Vs. NrevPAR - YTD"} activeToggle={"graph"}  showToggle={false} />
         <Card.Body>
         {isLoading ? (
             <WidgetLoader />

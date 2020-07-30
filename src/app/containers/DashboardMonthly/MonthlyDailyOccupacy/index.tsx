@@ -151,6 +151,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }:any) => {
       <WidgetHeader
         title={"Monthly Daily Occupacy & ADR"}
         activeToggle={"graph"}
+        showToggle={false}
       />
       <Card.Body>
       {isLoading ? (

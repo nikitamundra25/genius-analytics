@@ -78,6 +78,7 @@ const RateCodeStatistics = ({ graphdata = [] }:any) => {
       <WidgetHeader
         title={"Rate Code Statistics"}
         activeToggle={"graph"}
+        showToggle={false}
       />
         <Card.Body>
         {isLoading ? (

@@ -100,6 +100,7 @@ const PickupBusinessMix = (props:any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
+                height:"200px"
               }}
               charts={Charts}
             />
