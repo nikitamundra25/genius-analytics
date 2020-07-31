@@ -162,12 +162,31 @@ const tableData = [
   //   })),
   // },
 ];
+
+const pickupdata = [
+
+  { x: "Room Nights", y: 23 },
+  { x: "Revenue", y: 27 },
+  { x: "ADR", y: -15 },
+  
+];
+
+const mixdata = [
+  { x: "BAR", y: 23 },
+  { x: "Discount", y: 27 },
+  { x: "Corporate", y: -15 },
+  { x: "Cor Group", y: 8 },
+  { x: "Leisure Group", y: -13 },
+  { x: "FIT", y: 14 },
+  
+];
+
 const CumulativeTable = () => {
   return (
     <>
       <Card>
         <Card.Body>
-        <div className='dashboard-yearly-table'>
+        <div className='dashboard-yearly-table mb-3'>
 
         
           <Table className="yearly-table mb-0" responsive>
@@ -269,6 +288,110 @@ const CumulativeTable = () => {
                   </tr>
                 </React.Fragment>
               ))}
+            </tbody>
+          </Table>
+          </div>
+
+          <div className='dashboard-yearly-table'>
+          <Table className="yearly-table mb-0" responsive>
+          <thead>
+              <tr className="business-top-row">
+                <th></th>
+                {months.map((month: string) => (
+                  <th key={month} className="head-col">
+                    {month}
+                    <br /> Actual
+                    
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+             
+                
+                  <tr>
+                    <td className="row-title">Pick-up</td>
+                    {months.map((month: any, index: number) => (
+                      <td
+                        key={`${month.type}-${index}`}
+                        className="content-col"
+                      >
+                        <div className="d-flex align-items-center flex-wrap">
+                          
+                                <BarChartComponent
+                                  id={`tablebar${month.type}-${index}`}
+                                  data={pickupdata}
+                                  height={"150px"}
+                                  width={"250px"}
+                                  chartSettings={{
+                                    primaryXAxis: {
+                                      valueType: "Category",
+                                      interval: 1,
+                                      majorGridLines: { width: 0 },
+                                    },
+                                    primaryYAxis: {
+                                      labelFormat: "{value}",
+                                      edgeLabelPlacement: "Shift",
+                                      majorGridLines: { width: 0 },
+                                      majorTickLines: { width: 0 },
+                                      lineStyle: { width: 0 },
+                                      labelStyle: {
+                                        color: "transparent",
+                                      },
+                                    },
+                                    tooltip: { enable: false },
+                                  }}
+                                  title={"Business Mix ADR"}
+                                  color="#4473c5"
+                                />
+                              
+                        </div>
+                      </td>
+                    ))}
+                  </tr>
+
+                  <tr>
+                    <td className="row-title">Business Mix</td>
+                    {months.map((month: any, index: number) => (
+                      <td
+                        key={`${month.type}-${index}`}
+                        className="content-col"
+                      >
+                        <div className="d-flex align-items-center flex-wrap">
+                          
+                                <BarChartComponent
+                                  id={`tablebar2${month.type}-${index}`}
+                                  data={mixdata}
+                                  height={"250px"}
+                                  width={"250px"}
+                                  chartSettings={{
+                                    primaryXAxis: {
+                                      valueType: "Category",
+                                      interval: 1,
+                                      majorGridLines: { width: 0 },
+                                    },
+                                    primaryYAxis: {
+                                      labelFormat: "{value}",
+                                      edgeLabelPlacement: "Shift",
+                                      majorGridLines: { width: 0 },
+                                      majorTickLines: { width: 0 },
+                                      lineStyle: { width: 0 },
+                                      labelStyle: {
+                                        color: "transparent",
+                                      },
+                                    },
+                                    tooltip: { enable: false },
+                                  }}
+                                  title={"Business Mix %"}
+                                  color="#4473c5"
+                                />
+                              
+                        </div>
+                      </td>
+                    ))}
+                  </tr>
+                
+             
             </tbody>
           </Table>
           </div>
