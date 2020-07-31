@@ -4,59 +4,59 @@
           "data": [
             {
               "name": "Mon",
-              "OCCTY": 50,
-              "OCCLY": 64,
-              "ADRLY": 185,
-              "ADRTY": 195
+              "OCCTY": 66,
+              "OCCLY": 73,
+              "ADRLY": 166.0,
+              "ADRTY": 165.1
             },
             {
               "name": "Tue",
-              "OCCTY": 88,
-              "OCCLY": 80,
-              "ADRLY": 202,
-              "ADRTY": 207
+              "OCCTY": 89,
+              "OCCLY": 84,
+              "ADRLY": 188.0,
+              "ADRTY": 190.2
             },
             {
               "name": "Wed",
-              "OCCTY": 74,
-              "OCCLY": 76,
-              "ADRLY": 184,
-              "ADRTY": 194
+              "OCCTY": 93,
+              "OCCLY": 95,
+              "ADRLY": 192.3,
+              "ADRTY": 188.0
             },
             {
               "name": "Thu",
-              "OCCTY": 68,
-              "OCCLY": 73,
-              "ADRLY": 176,
-              "ADRTY": 196
+              "OCCTY": 75,
+              "OCCLY": 81,
+              "ADRLY": 183.2,
+              "ADRTY": 180.0
             },
             {
               "name": "Fri",
-              "OCCTY": 67,
-              "OCCLY": 64,
-              "ADRLY": 155,
-              "ADRTY": 156
+              "OCCTY": 79,
+              "OCCLY": 86,
+              "ADRLY": 155.0,
+              "ADRTY": 158.3
             },
             {
               "name": "Sat",
-              "OCCTY": 74,
-              "OCCLY": 76,
-              "ADRLY": 143,
-              "ADRTY": 150
+              "OCCTY": 99,
+              "OCCLY": 89,
+              "ADRLY": 171.2,
+              "ADRTY": 170.2
             },
             {
               "name": "Sun",
-              "OCCTY": 63,
-              "OCCLY": 43,
-              "ADRLY": 157,
-              "ADRTY": 172
+              "OCCTY": 64,
+              "OCCLY": 68,
+              "ADRLY": 144.0,
+              "ADRTY": 145.2
             },
             {
               "name": "Total",
-              "OCCTY": 45,
-              "OCCLY": 69,
-              "ADRLY": 170,
-              "ADRTY": 183
+              "OCCTY": 81,
+              "OCCLY": 82,
+              "ADRLY": 171.39,
+              "ADRTY": 171.00
             }
           ]
         },
@@ -64,21 +64,21 @@
           "data": [
             {
               "name": "Midweek OCC",
-              "TY": 73,
-              "LY": 71,
-              "Var": 73
+              "TY": 87,
+              "LY": 90,
+              "Var": -3
             },
             {
               "name": "Weekend OCC",
-              "TY": 65,
+              "TY": 74,
               "LY": 73,
-              "Var": 11
+              "Var": 1
             },
             {
               "name": "Total OCC",
-              "TY": 69,
-              "LY": 72,
-              "Var": 43
+              "TY": 81,
+              "LY": 82,
+              "Var": -1
             }
           ]
         }

@@ -2,23 +2,23 @@
     "data": [
         {
           "data": [
-            { "x": "My RevPAR", "y1": 115.0 },
+            { "x": "My RevPAR", "y1": 119.7 },
             { "x": "RevPAR Compact", "y1": 96.0 },
-            { "x": "RGI", "y1": 119.8 }
+            { "x": "RGI", "y1": 119.7 }
           ]
         },
         {
           "data": [
-            { "x": "My OCC", "y1": 65.0 },
-            { "x": "OCC Compact", "y1": 68.0 },
-            { "x": "MPI", "y1": 96.8 }
+            { "x": "My OCC", "y1": 65.7 },
+            { "x": "OCC Compact", "y1": 68.3 },
+            { "x": "MPI", "y1": 1.04 }
           ]
         },
         {
           "data": [
-            { "x": "My ARR", "y1": 175.0 },
-            { "x": "ARR Compact", "y1": 140.0 },
-            { "x": "ARI", "y1": 124.8 }
+            { "x": "My ARR", "y1": 0.80 },
+            { "x": "ARR Compact", "y1": 140.6 },
+            { "x": "ARI", "y1": 175.1 }
           ]
         }
       ]

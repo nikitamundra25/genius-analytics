@@ -2,63 +2,80 @@
     "data": [
         {
           "name": "Jan",
-          "OCC": 50,
-          "ADR": 64
+          "OCC": 55,
+          "ADR": 207,
+          "Room Nights":385
         },
         {
           "name": "Feb",
-          "OCC": 88,
-          "ADR": 80
+          "OCC": 73,
+          "ADR": 248,
+          "Room Nights":232
         },
         {
           "name": "Mar",
-          "OCC": 74,
-          "ADR": 76
+          "OCC": 93,
+          "ADR": 200,
+          "Room Nights":250
         },
         {
           "name": "Apr",
-          "OCC": 50,
-          "ADR": 64
+          "OCC": 48,
+          "ADR": 377,
+          "Room Nights":267
         },
         {
           "name": "May",
-          "OCC": 88,
-          "ADR": 80
+          "OCC": 70,
+          "ADR": 247,
+          "Room Nights":264
         },
         {
           "name": "Jun",
-          "OCC": 74,
-          "ADR": 76
+          "OCC": 50,
+          "ADR": 251,
+          "Room Nights":372
         },
         {
           "name": "Jul",
-          "OCC": 50,
-          "ADR": 64
+          "OCC": 78,
+          "ADR": 419,
+          "Room Nights":383
         },
         {
           "name": "Aug",
-          "OCC": 88,
-          "ADR": 80
+          "OCC": 76,
+          "ADR": 380,
+          "Room Nights":235
         },
         {
           "name": "Sep",
-          "OCC": 74,
-          "ADR": 76
+          "OCC": 63,
+          "ADR": 261,
+          "Room Nights":326
         },
         {
           "name": "Oct",
-          "OCC": 50,
-          "ADR": 64
+          "OCC": 70,
+          "ADR": 237,
+          "Room Nights":313
         },
         {
           "name": "Nov",
-          "OCC": 88,
-          "ADR": 80
+          "OCC": 70,
+          "ADR": 397,
+          "Room Nights":193
         },
         {
           "name": "Dec",
-          "OCC": 74,
-          "ADR": 76
+          "OCC": 51,
+          "ADR": 346
+        },
+        {
+          "name": "Total",
+          "OCC": 66,
+          "ADR": 297.5,
+          "Room Nights":3553
         }
       ]
 }

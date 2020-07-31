@@ -1,8 +1,10 @@
 {
     "data": [
-    { "x": "Brand.com", "y": 27, "text": "27%" },
-    { "x": "OTA", "y": 38, "text": "38%" },
-    { "x": "GDS", "y": 20, "text": "20%" },
-    { "x": "Direct", "y": 15, "text": "15%" }
+    { "x": "Brand Website", "y": 31, "text": "31%" },
+    { "x": "OTA's", "y": 11, "text": "11%" },
+    { "x": "GDS", "y": 40, "text": "40%" },
+    { "x": "Direct", "y": 13, "text": "13%" },
+    { "x": "Corporate We", "y": 5, "text": "5%" }
+
   ]
 }

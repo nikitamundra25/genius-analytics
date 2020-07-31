@@ -10,6 +10,9 @@ import {
 } from "@syncfusion/ej2-react-maps";
 
 const WorldMap = ({ data, id = "maps" }: any) => {
+
+
+  
   return (
     <MapsComponent
       width={"100%"}

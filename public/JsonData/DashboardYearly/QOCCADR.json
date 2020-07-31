@@ -2,23 +2,28 @@
     "data": [
         {
           "name": "Q1",
-          "OCC": 50,
-          "ADR": 64
+          "OCC": 55,
+          "ADR": 286
         },
         {
           "name": "Q2",
-          "OCC": 88,
-          "ADR": 80
+          "OCC": 53,
+          "ADR": 290
         },
         {
           "name": "Q3",
-          "OCC": 74,
-          "ADR": 76
+          "OCC": 54,
+          "ADR": 298
         },
         {
           "name": "Q4",
-          "OCC": 74,
-          "ADR": 76
+          "OCC": 68,
+          "ADR": 294
+        },
+        {
+          "name": "Total",
+          "OCC": 58,
+          "ADR": 292.0
         }
       ]
 }
