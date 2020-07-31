@@ -23,6 +23,13 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
     dispatch(requestMonthlyRoomTypeStaticsData());
     // eslint-disable-next-line
   }, []);
+
+  const labeltemplate = (args:any) => {
+    return (<div  style={{fontSize: '11px'}}>
+      <span>{args.point.y}%</span>
+    </div>);
+};
+
   const Charts = [
     {
       dataSource: data,
@@ -37,6 +44,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",
@@ -57,6 +65,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",

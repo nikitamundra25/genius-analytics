@@ -179,7 +179,7 @@ const PickupSinceYesterday = () => {
                           },
                           primaryYAxis: {
                             
-                            labelFormat: "{value}%",
+                            labelFormat: "{value}",
                             edgeLabelPlacement: "Shift",
                             majorGridLines: { width: 0 },
                             majorTickLines: { width: 0 },

@@ -20,6 +20,19 @@ export default () => {
     dispatch(requestRoomTypeStaticsData());
     // eslint-disable-next-line
   }, []);
+
+  const labeltemplate = (args:any) => {
+    return (<div  style={{fontSize: '11px'}}>
+      <span>{args.point.y}%</span>
+    </div>);
+};
+const labeltemplateline = (args:any) => {
+  return (<div  style={{fontSize: '11px'}}>
+    <span>&pound;{args.point.y}</span>
+  </div>);
+};
+
+
   const Charts = [
     {
       dataSource: data,
@@ -37,6 +50,7 @@ export default () => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",
@@ -60,6 +74,7 @@ export default () => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",
@@ -84,6 +99,7 @@ export default () => {
         dataLabel: {
           visible: true,
           position: "Top",
+          template: labeltemplateline,
           font: {
             fontWeight: "600",
             color: "#000000",
@@ -110,6 +126,7 @@ export default () => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplateline,
           font: {
             fontWeight: "600",
             color: "#000000",
@@ -169,7 +186,7 @@ export default () => {
                   majorGridLines: { width: 0 },
                 },
                 primaryYAxis: {
-                  labelFormat: "{value}%",
+                  labelFormat: "{value}",
                   edgeLabelPlacement: "Shift",
                   majorGridLines: { width: 0 },
                   majorTickLines: { width: 0 },

@@ -18,6 +18,11 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
   );
 
 
+  const labeltemplate = (args:any) => {
+    return (<div  style={{fontSize: '9px'}}>
+      <span>{args.point.y}%</span>
+    </div>);
+};
 
   useEffect(() => {
     dispatch(requestOccupacyStaticsData());
@@ -42,6 +47,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
             dataLabel: {
               visible: true,
               position: "Middle",
+              template: labeltemplate,
               font: {
                 fontWeight: "600",
                 color: "#ffffff",
@@ -66,7 +72,8 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
             border: { width: 2, color: "#2bb5ec" },
             dataLabel: {
               visible: true,
-              position: "Top",
+              position: "Middle",
+              template: labeltemplate,
               font: {
                 fontWeight: "600",
                 color: "#fff",

@@ -148,12 +148,6 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
   
   `;
 
- 
-
-  
-
-
-
   return (
     <>
      <style>

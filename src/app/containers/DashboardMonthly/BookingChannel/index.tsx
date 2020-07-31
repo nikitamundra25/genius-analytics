@@ -24,6 +24,13 @@ const BookingChannel = ({ graphdata = [] }:any) => {
     dispatch(requestBookingChannelMonthlyData());
     // eslint-disable-next-line
   }, []);
+
+  const labeltemplate = (args:any) => {
+    return (<div  style={{fontSize: '11px'}}>
+      <span>{args.point.y}%</span>
+    </div>);
+};
+
   const Charts = [
     {
       dataSource: data,
@@ -38,6 +45,7 @@ const BookingChannel = ({ graphdata = [] }:any) => {
         dataLabel: {
           visible: true,
           position: "Middle",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",

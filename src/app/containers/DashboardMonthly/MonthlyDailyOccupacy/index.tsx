@@ -21,6 +21,17 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }: any) => {
     // eslint-disable-next-line
   }, []);
 
+  const labeltemplate = (args:any) => {
+    return (<div  style={{fontSize: '11px'}}>
+      <span>{args.point.y}%</span>
+    </div>);
+};
+const labeltemplateline = (args:any) => {
+  return (<div  style={{fontSize: '11px'}}>
+    <span>{args.point.y}</span>
+  </div>);
+};
+
   const Charts1 = [
     {
       dataSource: data && data.length && data[0] ? data[0].data : [],
@@ -30,6 +41,18 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }: any) => {
       fill: "#2b588f",
       name: "Occupied Rooms",
       width: 1,
+      marker: {
+        dataLabel: {
+          visible: true,
+          position: "Middle",
+          template: labeltemplate,
+          font: {
+            fontWeight: "600",
+            color: "#ffffff",
+            fontSize: "12px",
+          },
+        },
+      },
     },
     {
       dataSource: data && data.length && data[0] ? data[0].data : [],
@@ -43,6 +66,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }: any) => {
         dataLabel: {
           visible: false,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",
@@ -68,6 +92,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }: any) => {
         dataLabel: {
           visible: false,
           position: "Top",
+          template: labeltemplateline,
           font: {
             fontWeight: "600",
             color: "#000000",
@@ -91,6 +116,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }: any) => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",
@@ -111,6 +137,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }: any) => {
         dataLabel: {
           visible: false,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",
@@ -136,6 +163,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }: any) => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplateline,
           font: {
             fontWeight: "600",
             color: "#000000",
@@ -179,7 +207,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }: any) => {
                       majorGridLines: { width: 0 },
                     },
                     primaryYAxis: {
-                      labelFormat: "{value}%",
+                      labelFormat: "{value}",
                       edgeLabelPlacement: "Shift",
                       majorGridLines: { width: 0 },
                       majorTickLines: { width: 0 },
@@ -214,7 +242,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }: any) => {
                       majorGridLines: { width: 0 },
                     },
                     primaryYAxis: {
-                      labelFormat: "{value}%",
+                      labelFormat: "{value}",
                       edgeLabelPlacement: "Shift",
                       majorGridLines: { width: 0 },
                       majorTickLines: { width: 0 },
