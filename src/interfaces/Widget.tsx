@@ -1,4 +1,4 @@
-export type ToggleType = "graph" | "grid";
+export type ToggleType = "graph" | "grid" ;
 export interface IGraphListsModel {
   name: string;
   id: string | number;
@@ -12,6 +12,5 @@ export interface IWidgetHeaderProps {
   showToggle?: boolean;
   showdropdowndaily?: boolean;
   showdropdownlead?: boolean;
-  
-  onToggle?: (activeToggle?: ToggleType) => void;
+  // onToggle?: (activeToggle?: any) => void  | any
 }
