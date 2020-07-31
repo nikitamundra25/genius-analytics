@@ -18,7 +18,7 @@ const getPickupDetailTableLogic = createLogic({
     
     const { isError, data } = await new ApiHelper().FetchFromLocalJSONFile(
       "Pickup",
-      "/PickupDetailTable.json",
+      "/pickupDetailTable.json",
       "GET"
     );
     if (isError) {
