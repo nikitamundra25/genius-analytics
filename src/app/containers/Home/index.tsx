@@ -11,7 +11,7 @@ import { ErrorComponent } from "../../components/Error";
 
 // export class Default extends SampleBase {
 const HomeComponent: FunctionComponent = () => {
-  const cellSpacing = [15, 30];
+  const cellSpacing = [15, 20];
   const dispatch = useDispatch();
   let restoreModel: any = [];
   let dashboardObj: any;

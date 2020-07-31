@@ -24,31 +24,34 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
   }, []);
 
    useEffect(() => {
-   // const modalbtn: HTMLElement | null = document.getElementById(`language_dropmodal-${index}`);
-    const modalbtn: HTMLElement | null = document.getElementById(`col-width0`);
-      console.log("modalbtn",modalbtn);
-      
+    const modalbtn: HTMLElement | null = document.getElementById(`card-height`);
     if (modalbtn) {
-      const check = modalbtn.getBoundingClientRect();
-      console.log("hello chart width",check);
-      modalbtn.style.color = "red";
-      // setHeight = `${check.height}px`
-      setsetHeight(`${check.height}px`)
+      setTimeout(() => {
+        const check = modalbtn.getBoundingClientRect();
+        const getHeight =check.height;
+        const setgraphHeight = getHeight - 75 ;
+        console.log("hello chart height on normal",check, getHeight, setgraphHeight);
+        setsetHeight(`${setgraphHeight}px`)
+      }, 100);
     }
   }, [data]);
 
 
   useEffect(() => {
     const resizeListener = () => {
-      // change width from the state object
-      const modalbtn: HTMLElement | null = document.getElementById(`col-width0`);
+      // change width when resize window from the state object
+      const modalbtn: HTMLElement | null = document.getElementById(`card-height`);
       console.log("modalbtn",modalbtn);
       
     if (modalbtn) {
-      const check = modalbtn.getBoundingClientRect();
-      console.log("hello chart width",check);
-      // setHeight = `${check.height}px`
-      setsetHeight(`${check.height}px`)
+      setTimeout(() => {
+        const check = modalbtn.getBoundingClientRect();
+        const getHeight =check.height;
+        const setgraphHeight = getHeight - 75 ;
+        console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+        setsetHeight(`${setgraphHeight}px`)
+      }, 100);
+      
     }
       
       // setWidth(getWidth())
@@ -71,7 +74,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
       color: "url(#occ-chart)",
       labelformat:"{value}%",
       data: data && data.length ? data : [],
-      height:setHeight
+      //height:setHeight
     },
     {
       id: "2",
@@ -80,7 +83,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
       // color: "#5398d9",
       labelformat:"n2",
       data: data && data.length ? data : [],
-      height:setHeight
+      //height:setHeight
     },
     {
       id: "3",
@@ -89,7 +92,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
       // color: "#1f4e79",
       labelformat:"c2",
       data: data && data.length ? data : [],
-      height:setHeight
+      //height:setHeight
     },
     {
       id: "4",
@@ -98,7 +101,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
       // color: "#9dc3e7",
       labelformat:"c2",
       data: data && data.length ? data : [],
-      height:setHeight
+      //height:setHeight
     },
   ];
 
@@ -156,7 +159,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
      <style>
           {SAMPLE_CSS}
       </style>
-    <Card>
+    <Card id={`card-height`}>
       <WidgetHeader title={"Key Business Metrics"} activeToggle={"graph"} />
       <Card.Body>
       {isLoading ? (
@@ -167,11 +170,11 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
             />
           ) : (
             <> 
-      <Row className='row-inner' >
+      <Row className='row-inner ' >
         {barChartBusinessMetrics && barChartBusinessMetrics.length ? 
         barChartBusinessMetrics.map((key: any, index: number) => {
           return (
-            <Col key={index} sm={3} md={3} id={`col-width${index}`}>
+            <Col key={index} sm={3} md={3} >
               <React.Suspense fallback={<div className="card-loader"> <WidgetLoader /></div>}>
                 <BarChartComponent
                   chartSettings={{
@@ -193,7 +196,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
                     },
                     title: key.title,
                     tooltip: { enable: false,  position: 'Top' },
-                    height:"270px"
+                    height:setHeight
                   }}
                   {...key}
                 />
@@ -208,7 +211,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
         )}
      </Card.Body>
      
-     <div className="business-table-section">
+     <div className="business-table-section" >
 
                         
       <Table responsive className='business-table mb-0'>
