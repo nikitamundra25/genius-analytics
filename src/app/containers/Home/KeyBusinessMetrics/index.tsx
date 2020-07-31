@@ -69,11 +69,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
     // eslint-disable-next-line
   }, []);
 
-  const labeltemplate = (args:any) => {
-    return (<div  style={{fontSize: '9px'}}>
-      <span>{args.point.y}</span>
-    </div>);
-};
+
 
   const barChartBusinessMetrics = [
     {

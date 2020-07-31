@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Form } from "react-bootstrap";
-import { IWidgetHeaderProps,ToggleType } from "../../interfaces";
+import { IWidgetHeaderProps } from "../../interfaces";
 
 const WidgetHeader = ({
   title,

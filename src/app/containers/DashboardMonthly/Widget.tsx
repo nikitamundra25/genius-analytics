@@ -17,7 +17,7 @@ const getChart = (chartType: any) => {
           data-row="0"
           data-col="0"
           data-sizex="6"
-          data-sizey="2"
+          data-sizey="0"
         >
           <span id="close" className="e-template-icon e-clear-icon" />
           <div className="e-panel-container">
