@@ -35,6 +35,8 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
       // setHeight = `${check.height}px`
       setsetHeight(`${check.height}px`)
     }
+    // eslint-disable-next-line
+
   }, [data]);
 
 
@@ -61,6 +63,8 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
       // remove resize listener
       window.removeEventListener('resize', resizeListener);
     }
+    // eslint-disable-next-line
+
   }, [])
  
 
