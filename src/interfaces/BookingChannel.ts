@@ -1,5 +1,5 @@
 export interface IBookingChannelModel {
     isLoading: boolean;
-    data: any[];
+    data: any;
     isError: boolean;
 }
