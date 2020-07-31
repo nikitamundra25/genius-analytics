@@ -6,6 +6,7 @@ import { IRootState, ToggleType } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestKeyBusinessMetricsData } from "../../../../actions";
+import { getCurrentHeight } from "../../../../helper";
 const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
@@ -40,8 +41,13 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
   }, [data]);
 
   useEffect(() => {
+
     const resizeListener = () => {
-      // change width from the state object
+
+      // const height =  getCurrentHeight(`col-width0`)
+      // console.log("height++++++++++++",height);
+
+      // // change width from the state object
       const modalbtn: HTMLElement | null = document.getElementById(
         `col-width0`
       );
@@ -55,9 +61,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
           console.log("hello chart height on resize",check, getHeight, setgraphHeight);
           setsetHeight(`${setgraphHeight}px`)
         }, 100);
-        
       }
-      // setWidth(getWidth())
     };
     // set resize listener
     window.addEventListener("resize", resizeListener);
@@ -69,7 +73,6 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
     };
     // eslint-disable-next-line
   }, []);
-console.log(data,"data0000000000");
 
   const barChartBusinessMetrics = [
     {
