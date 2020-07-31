@@ -27,9 +27,14 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
     // const modalbtn: HTMLElement | null = document.getElementById(`language_dropmodal-${index}`);
     const modalbtn: HTMLElement | null = document.getElementById(`col-width0`);
     if (modalbtn) {
-      const check = modalbtn.getBoundingClientRect();
-      // setHeight = `${check.height}px`
-      setsetHeight(`${check.height}px`);
+      setTimeout(() => {
+        const check = modalbtn.getBoundingClientRect();
+        const getHeight =check.height;
+        const setgraphHeight = getHeight - 75 ;
+        console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+        setsetHeight(`${setgraphHeight}px`)
+      }, 100);
+      
     }
     // eslint-disable-next-line
   }, [data]);
@@ -43,12 +48,15 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
       console.log("modalbtn", modalbtn);
 
       if (modalbtn) {
-        const check = modalbtn.getBoundingClientRect();
-        console.log("hello chart width", check);
-        // setHeight = `${check.height}px`
-        setsetHeight(`${check.height}px`);
+        setTimeout(() => {
+          const check = modalbtn.getBoundingClientRect();
+          const getHeight =check.height;
+          const setgraphHeight = getHeight - 75 ;
+          console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+          setsetHeight(`${setgraphHeight}px`)
+        }, 100);
+        
       }
-
       // setWidth(getWidth())
     };
     // set resize listener
@@ -151,7 +159,7 @@ console.log(data,"data0000000000");
   return (
     <>
       <style>{SAMPLE_CSS}</style>
-      <Card>
+      <Card id={`card-height`}>
         <WidgetHeader
           title={"Key Business Metrics"}
           activeToggle={activeToggle}
@@ -200,7 +208,7 @@ console.log(data,"data0000000000");
                                 },
                                 title: key.title,
                                 tooltip: { enable: false, position: "Top" },
-                                height: "270px",
+                                height: setHeight
                               }}
                               {...key}
                             />

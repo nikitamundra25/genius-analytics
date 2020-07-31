@@ -10,7 +10,7 @@ import Loader from "../../components/Loader/Loader";
 import { ErrorComponent } from "../../components/Error";
 
 const DashboardMonthly: FunctionComponent = () => {
-  const cellSpacing = [15, 30];
+  const cellSpacing = [15, 20];
   let restoreModel: any = [];
   let dashboardObj: any;
   const dispatch = useDispatch();
