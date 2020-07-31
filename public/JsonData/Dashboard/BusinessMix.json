@@ -2,22 +2,22 @@
     "data":  [
         {
           "data": [
-            { "x": "BAR", "y": 23 },
-            { "x": "Discount", "y": 27 },
-            { "x": "Corporate", "y": 15 },
-            { "x": "Cor Group", "y": 8 },
+            { "x": "BAR", "y": 24 },
+            { "x": "Discount", "y": 22 },
+            { "x": "Corporate", "y": 19 },
+            { "x": "Cor Group", "y": 6 },
             { "x": "Leisure Group", "y": 13 },
-            { "x": "FIT", "y": 14 }
+            { "x": "FIT", "y": 16 }
           ]
         },
         {
           "data": [
-            { "x": "BAR", "y": 150.55 },
-            { "x": "Discount", "y": 127.32 },
-            { "x": "Corporate", "y": 144.32 },
-            { "x": "Cor Group", "y": 132.33 },
-            { "x": "Leisure Group", "y": 115 },
-            { "x": "FIT", "y": 111 }
+            { "x": "BAR", "y": 201.44 },
+            { "x": "Discount", "y": 185.72 },
+            { "x": "Corporate", "y": 190.36 },
+            { "x": "Cor Group", "y": 180.1 },
+            { "x": "Leisure Group", "y": 144.44 },
+            { "x": "FIT", "y": 153 }
           ]
         }
       ]

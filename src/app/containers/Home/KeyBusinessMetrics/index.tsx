@@ -35,13 +35,11 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
         //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
         setsetHeight(`${setgraphHeight}px`)
       }, 100);
-      
     }
     // eslint-disable-next-line
   }, [data]);
 
   useEffect(() => {
-
     const resizeListener = () => {
 
       // // change width from the state object

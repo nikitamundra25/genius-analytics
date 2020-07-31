@@ -75,7 +75,7 @@ useEffect(() => {
     {
       id: "1",
       title: "Room Nights",
-      range: "198",
+      range: "202",
       arrowClass: caretup,
       textClass: "text-green",
       charts: {
@@ -104,7 +104,7 @@ useEffect(() => {
     {
       id: "2",
       title: "ADR",
-      range: "2.6",
+      range: "-1.3",
       arrowClass: caretdown,
       textClass: "text-red",
       charts: {
@@ -133,7 +133,7 @@ useEffect(() => {
     {
       id: "3",
       title: "Revenue",
-      range: "19.4 k",
+      range: "21,203",
       arrowClass: caretup,
       textClass: "text-green",
       charts: {

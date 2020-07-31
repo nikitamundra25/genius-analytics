@@ -6,21 +6,40 @@
             "value": "1000",
             "name": "Côte d'Ivoire",
             "population": 1000000000,
-            "density": -1
+            "density": -1,
+            "roomNights":3627,
+            "ADR":169,
+            "revenue":612963
+          },
+          {
+            "code": "SG",
+            "value": "1000",
+            "name": "Singapore",
+            "population": 1000000000,
+            "density": 8358,
+            "roomNights":788,
+            "ADR":156,
+            "revenue":122928
           },
           {
             "code": "BH",
             "value": "2000",
             "name": "Bhutan",
             "population": 202002020,
-            "density": -1
+            "density": -1,
+            "roomNights":3627,
+            "ADR":169,
+            "revenue":612963
           },
           {
             "code": "Ec",
             "value": "2000",
             "name": "Ecuador",
             "population": 10102002,
-            "density": -1
+            "density": -1,
+            "roomNights":3627,
+            "ADR":169,
+            "revenue":612963
           },
           {
             "code": "AF",
@@ -34,7 +53,10 @@
             "value": 117,
             "name": "Albania",
             "population": 3195000,
-            "density": 111
+            "density": 111,
+            "roomNights":0,
+            "ADR":"",
+            "revenue":""
           },
           {
             "code": "DZ",
@@ -48,14 +70,20 @@
             "value": 15,
             "name": "Angola",
             "population": 18498000,
-            "density": 15
+            "density": 15,
+            "roomNights":0,
+            "ADR":"",
+            "revenue":""
           },
           {
             "code": "AR",
             "value": 15,
             "name": "Argentina",
             "population": 40091359,
-            "density": 14
+            "density": 14,
+            "roomNights":91,
+            "ADR":164,
+            "revenue":14924
           },
           {
             "code": "AM",
@@ -69,21 +97,30 @@
             "value": 3,
             "name": "Australia",
             "population": 23839595,
-            "density": 3.3
+            "density": 3.3,
+            "roomNights":671,
+            "ADR":188,
+            "revenue":126148
           },
           {
             "code": "AT",
             "value": 102,
             "name": "Austria",
             "population": 8372930,
-            "density": 100
+            "density": 100,
+            "roomNights":83,
+            "ADR":170,
+            "revenue":14110
           },
           {
             "code": "AZ",
             "value": 110,
             "name": "Azerbaijan",
             "population": 9165000,
-            "density": 106
+            "density": 106,
+            "roomNights":4,
+            "ADR":177,
+            "revenue":708
           },
           {
             "code": "BS",
@@ -111,14 +148,20 @@
             "value": 359,
             "name": "Belgium",
             "population": 10827519,
-            "density": 355
+            "density": 355,
+            "roomNights":133,
+            "ADR":185,
+            "revenue":24605
           },
           {
             "code": "BZ",
             "value": 15,
             "name": "Belize",
             "population": 322000,
-            "density": 14
+            "density": 14,
+            "roomNights":0,
+            "ADR":"",
+            "revenue":""
           },
           {
             "code": "BJ",
@@ -153,21 +196,30 @@
             "value": 23,
             "name": "Brazil",
             "population": 206598985,
-            "density": 24
+            "density": 24,
+            "roomNights":318,
+            "ADR":181,
+            "revenue":57558
           },
           {
             "code": "BN",
             "value": 76,
             "name": "Brunei",
             "population": 400000,
-            "density": 69
+            "density": 69,
+            "roomNights":7,
+            "ADR":162,
+            "revenue":1134
           },
           {
             "code": "BG",
             "value": 69,
             "name": "Bulgaria",
             "population": 7351234,
-            "density": 66
+            "density": 66,
+            "roomNights":6,
+            "ADR":172,
+            "revenue":1032  
           },
           {
             "code": "BF",
@@ -202,7 +254,10 @@
             "value": 4,
             "name": "Canada",
             "population": 35151728,
-            "density": 3.4
+            "density": 3.4,
+            "roomNights":932,
+            "ADR":179,
+            "revenue":166828
           },
           {
             "code": "CF",
@@ -223,21 +278,30 @@
             "value": 23,
             "name": "Chile",
             "population": 18349928,
-            "density": 24
+            "density": 24,
+            "roomNights":17,
+            "ADR":175,
+            "revenue":2975
           },
           {
             "code": "CN",
             "value": 143,
             "name": "China",
             "population": 1389750000,
-            "density": 144
+            "density": 144,
+            "roomNights":139,
+            "ADR":162,
+            "revenue":22518
           },
           {
             "code": "CO",
             "value": 42,
             "name": "Colombia",
             "population": 49471496,
-            "density": 43
+            "density": 43,
+            "roomNights":6,
+            "ADR":186,
+            "revenue":1116
           },
           {
             "code": "CD",
@@ -265,7 +329,10 @@
             "value": 79,
             "name": "Croatia",
             "population": 4443000,
-            "density": 79
+            "density": 79,
+            "roomNights":5,
+            "ADR":174,
+            "revenue":870 
           },
           {
             "code": "CU",
@@ -279,21 +346,30 @@
             "value": 119,
             "name": "Cyprus",
             "population": 801851,
-            "density": 87
+            "density": 87,
+            "roomNights":18,
+            "ADR":173,
+            "revenue":3114
           },
           {
             "code": "CZ",
             "value": 136,
             "name": "Czech Rep.",
             "population": 10532770,
-            "density": 134
+            "density": 134,
+            "roomNights":45,
+            "ADR":172,
+            "revenue":7740
           },
           {
             "code": "DK",
             "value": 131,
             "name": "Denmark",
             "population": 5532531,
-            "density": 128
+            "density": 128,
+            "roomNights":176,
+            "ADR":172,
+            "revenue":30272
           },
           {
             "code": "DJ",
@@ -314,7 +390,10 @@
             "value": 81,
             "name": "Egypt",
             "population": 90177649,
-            "density": 90
+            "density": 90,
+            "roomNights":8,
+            "ADR":185,
+            "revenue":1480
           },
           {
             "code": "SV",
@@ -342,7 +421,10 @@
             "value": 32,
             "name": "Estonia",
             "population": 1315819,
-            "density": 29
+            "density": 29,
+            "roomNights":2,
+            "ADR":184,
+            "revenue":368
           },
           {
             "code": "ET",
@@ -363,56 +445,80 @@
             "value": 18,
             "name": "Finland",
             "population": 5538741,
-            "density": 16
+            "density": 16,
+            "roomNights":69,
+            "ADR":187,
+            "revenue":17952
           },
           {
             "code": "FR",
             "value": 118,
             "name": "France",
             "population": 62793432,
-            "density": 114
+            "density": 114,
+            "roomNights":1875,
+            "ADR":185,
+            "revenue":346875
           },
           {
             "code": "GA",
             "value": 6,
             "name": "Gabon",
             "population": 1475000,
-            "density": 5.5
+            "density": 5.5,
+            "roomNights":60,
+            "ADR":182,
+            "revenue":10920
           },
           {
             "code": "GM",
             "value": 173,
             "name": "Gambia",
             "population": 1705000,
-            "density": 151
+            "density": 151,
+            "roomNights":0,
+            "ADR":"",
+            "revenue":""
           },
           {
             "code": "GE",
             "value": 78,
             "name": "Georgia",
             "population": 4465000,
-            "density": 64
+            "density": 64,
+            "roomNights":7,
+            "ADR":175,
+            "revenue":1225
           },
           {
             "code": "DE",
             "value": 234,
             "name": "Germany",
             "population": 81757600,
-            "density": 229
+            "density": 229,
+            "roomNights":617,
+            "ADR":188,
+            "revenue":115996
           },
           {
             "code": "GH",
             "value": 107,
             "name": "Ghana",
             "population": 23837000,
-            "density": 100
+            "density": 100,
+            "roomNights":9,
+            "ADR":165 ,
+            "revenue":1485
           },
           {
             "code": "GR",
             "value": 88,
             "name": "Greece",
             "population": 11306183,
-            "density": 86
+            "density": 86,
+            "roomNights":97,
+            "ADR":170,
+            "revenue":16490
           },
           {
             "code": "GL",
@@ -468,112 +574,160 @@
             "value": 112,
             "name": "Hungary",
             "population": 10013628,
-            "density": 108
+            "density": 108,
+            "roomNights":86,
+            "ADR":183,
+            "revenue":15738
           },
           {
             "code": "IS",
             "value": 3,
             "name": "Iceland",
             "population": 318452,
-            "density": 3.1
+            "density": 3.1,
+            "roomNights":4,
+            "ADR":175,
+            "revenue":700
           },
           {
             "code": "IN",
             "value": 394,
             "name": "India",
             "population": 1198003000,
-            "density": 364
+            "density": 364,
+            "roomNights":587,
+            "ADR":169,
+            "revenue":99203
           },
           {
             "code": "ID",
             "value": 132,
             "name": "Indonesia",
             "population": 237556363,
-            "density": 121
+            "density": 121,
+            "roomNights":64,
+            "ADR":179,
+            "revenue":11456
           },
           {
             "code": "IR",
             "value": 45,
             "name": "Iran",
             "population": 74196000,
-            "density": 117
+            "density": 117,
+            "roomNights":0,
+            "ADR":"",
+            "revenue":""
           },
           {
             "code": "IQ",
             "value": 73,
             "name": "Iraq",
             "population": 30747000,
-            "density": 70
+            "density": 70,
+            "roomNights":101,
+            "ADR":178,
+            "revenue":17978
           },
           {
             "code": "IE",
             "value": 65,
             "name": "Ireland",
             "population": 4581269,
-            "density": 65
+            "density": 65,
+            "roomNights":141,
+            "ADR":170,
+            "revenue":23970
           },
           {
             "code": "IL",
             "value": 352,
             "name": "Israel",
             "population": 7697600,
-            "density": 371
+            "density": 371,
+            "roomNights":87,
+            "ADR":186,
+            "revenue":16182
           },
           {
             "code": "IT",
             "value": 206,
             "name": "Italy",
             "population": 60200060,
-            "density": 200
+            "density": 200,
+            "roomNights":739,
+            "ADR":171,
+            "revenue":126369
           },
           {
             "code": "JM",
             "value": 250,
             "name": "Jamaica",
             "population": 2719000,
-            "density": 247
+            "density": 247,
+            "roomNights":9,
+            "ADR":184,
+            "revenue":1656
           },
           {
             "code": "JP",
             "value": 350,
             "name": "Japan",
             "population": 127387000,
-            "density": 337
+            "density": 337,
+            "roomNights":285,
+            "ADR":162,
+            "revenue":46170
           },
           {
             "code": "JO",
             "value": 69,
             "name": "Jordan",
             "population": 6316000,
-            "density": 67
+            "density": 67,
+            "roomNights":148,
+            "ADR":176,
+            "revenue":26048
           },
           {
             "code": "KZ",
             "value": 6,
             "name": "Kazakhstan",
             "population": 17010000,
-            "density": 6.2
+            "density": 6.2,
+            "roomNights":53,
+            "ADR":165,
+            "revenue":8745
           },
           {
             "code": "KE",
             "value": 71,
             "name": "Kenya",
             "population": 39802000,
-            "density": 69
+            "density": 69,
+            "roomNights":41,
+            "ADR":158,
+            "revenue":6478
           },
           {
             "code": "KP",
             "value": 202,
             "name": "Dem. Rep. Korea",
             "population": 24051706,
-            "density": 200
+            "density": 200,
+            "roomNights":30,
+            "ADR":161,
+            "revenue":4830   
           },
           {
             "code": "KR",
             "value": 504,
             "name": "Korea",
             "population": 48456369,
-            "density": 487
+            "density": 487,
+            "roomNights":100,
+            "ADR":188,
+            "revenue":18800
           },
           {
             "code": "XK",
@@ -587,7 +741,10 @@
             "value": 154,
             "name": "Kuwait",
             "population": 3566437,
-            "density": 200
+            "density": 200,
+            "roomNights":103,
+            "ADR":168,
+            "revenue":17304
           },
           {
             "code": "KG",
@@ -608,14 +765,21 @@
             "value": 36,
             "name": "Latvia",
             "population": 2248961,
-            "density": 35
+            "density": 35,
+            "roomNights":4,
+            "ADR":174,
+            "revenue":696
           },
           {
             "code": "LB",
             "value": 413,
             "name": "Lebanon",
             "population": 4224000,
-            "density": 404
+            "density": 404,
+            "roomNights":87,
+            "ADR":160,
+            "revenue":13920
+            
           },
           {
             "code": "LS",
@@ -643,14 +807,20 @@
             "value": 53,
             "name": "Lithuania",
             "population": 3053800,
-            "density": 47
+            "density": 47,
+            "roomNights":15,
+            "ADR":184,
+            "revenue":2760
           },
           {
             "code": "LU",
             "value": 195,
             "name": "Luxembourg",
             "population": 502207,
-            "density": 194
+            "density": 194,
+            "roomNights":29,
+            "ADR":186,
+            "revenue":5397
           },
           {
             "code": "MK",
@@ -678,14 +848,20 @@
             "value": 86,
             "name": "Malaysia",
             "population": 28306700,
-            "density": 86
+            "density": 86,
+            "roomNights":141,
+            "ADR":159,
+            "revenue":22419
           },
           {
             "code": "ML",
             "value": 13,
             "name": "Mali",
             "population": 14517176,
-            "density": 12
+            "density": 12,
+            "roomNights":0,
+            "ADR":"",
+            "revenue":""
           },
           {
             "code": "MR",
@@ -699,7 +875,10 @@
             "value": 58,
             "name": "Mexico",
             "population": 107550697,
-            "density": 57
+            "density": 57,
+            "roomNights":70,
+            "ADR":178,
+            "revenue":12460
           },
           {
             "code": "MD",
@@ -713,14 +892,20 @@
             "value": 17704,
             "name": "Monaco",
             "population": 33000,
-            "density": 16923
+            "density": 16923,
+            "roomNights":1,
+            "ADR":164,
+            "revenue":164
           },
           {
             "code": "MN",
             "value": 2,
             "name": "Mongolia",
             "population": 2671000,
-            "density": 1.7
+            "density": 1.7,
+            "roomNights":11,
+            "ADR":168,
+            "revenue":1848
           },
           {
             "code": "ME",
@@ -734,7 +919,10 @@
             "value": 72,
             "name": "Morocco",
             "population": 34407605,
-            "density": 77
+            "density": 77,
+            "roomNights":5,
+            "ADR":181,
+            "revenue":905
           },
           {
             "code": "MZ",
@@ -769,7 +957,10 @@
             "value": 492,
             "name": "Netherlands",
             "population": 17250000,
-            "density": 415
+            "density": 415,
+            "roomNights":216,
+            "ADR":173,
+            "revenue":37368
           },
           {
             "code": "NC",
@@ -783,14 +974,20 @@
             "value": 17,
             "name": "New Zealand",
             "population": 4315800,
-            "density": 16
+            "density": 16,
+            "roomNights":209,
+            "ADR":180,
+            "revenue":37620
           },
           {
             "code": "NI",
             "value": 48,
             "name": "Nicaragua",
             "population": 5743000,
-            "density": 44
+            "density": 44,
+            "roomNights":0,
+            "ADR":"",
+            "revenue":""
           },
           {
             "code": "NE",
@@ -804,28 +1001,39 @@
             "value": 174,
             "name": "Nigeria",
             "population": 154729000,
-            "density": 167
+            "density": 167,
+            "roomNights":49,
+            "ADR":186,
+            "revenue":9114
           },
           {
             "code": "NO",
             "value": 16,
             "name": "Norway",
             "population": 5279970,
-            "density": 14
-          },
+            "density": 14,
+            "roomNights":258,
+            "ADR":155,
+            "revenue":39990          },
           {
             "code": "OM",
             "value": 9,
             "name": "Oman",
             "population": 2845000,
-            "density": 9.2
+            "density": 9.2,
+            "roomNights":49,
+            "ADR":183,
+            "revenue":8967
           },
           {
             "code": "PK",
             "value": 225,
             "name": "Pakistan",
             "population": 193231420,
-            "density": 245
+            "density": 245,
+            "roomNights":17,
+            "ADR":171,
+            "revenue":2907
           },
           {
             "code": "PA",
@@ -860,21 +1068,30 @@
             "value": 313,
             "name": "Philippines",
             "population": 100981437,
-            "density": 337
+            "density": 337,
+            "roomNights":56,
+            "ADR":188,
+            "revenue":10528
           },
           {
             "code": "PL",
             "value": 126,
             "name": "Poland",
             "population": 38163895,
-            "density": 122
+            "density": 122,
+            "roomNights":43,
+            "ADR":178,
+            "revenue":7654
           },
           {
             "code": "PT",
             "value": 116,
             "name": "Portugal",
             "population": 10636888,
-            "density": 115
+            "density": 115,
+            "roomNights":65,
+            "ADR":186,
+            "revenue":12090
           },
           {
             "code": "PR",
@@ -888,21 +1105,30 @@
             "value": 152,
             "name": "Qatar",
             "population": 1409000,
-            "density": 128
+            "density": 128,
+            "roomNights":211,
+            "ADR":164,
+            "revenue":34604
           },
           {
             "code": "RO",
             "value": 93,
             "name": "Romania",
             "population": 21466174,
-            "density": 90
+            "density": 90,
+            "roomNights":102,
+            "ADR":156,
+            "revenue":15912
           },
           {
             "code": "RU",
             "value": 9,
             "name": "Russia",
             "population": 142905208,
-            "density": 8.3
+            "density": 8.3,
+            "roomNights":211,
+            "ADR":171,
+            "revenue":36801
           },
           {
             "code": "RW",
@@ -916,21 +1142,30 @@
             "value": 14,
             "name": "Saudi Arabia",
             "population": 28146658,
-            "density": 12
+            "density": 12,
+            "roomNights":132,
+            "ADR":156,
+            "revenue":20592
           },
           {
             "code": "SN",
             "value": 65,
             "name": "Senegal",
             "population": 12534000,
-            "density": 64
+            "density": 64,
+            "roomNights":0,
+            "ADR":"",
+            "revenue":""
           },
           {
             "code": "RS",
             "value": 83,
             "name": "Serbia",
             "population": 7800000,
-            "density": 101
+            "density": 101,
+            "roomNights":2,
+            "ADR":184,
+            "revenue":368
           },
           {
             "code": "SL",
@@ -944,14 +1179,20 @@
             "value": 113,
             "name": "Slovakia",
             "population": 5424057,
-            "density": 111
+            "density": 111,
+            "roomNights":0,
+            "ADR":"",
+            "revenue":""
           },
           {
             "code": "SI",
             "value": 102,
             "name": "Slovenia",
             "population": 2192912,
-            "density": 108
+            "density": 108,
+            "roomNights":13,
+            "ADR":184,
+            "revenue":2392
           },
           {
             "code": "SB",
@@ -972,7 +1213,10 @@
             "value": 41,
             "name": "South Africa",
             "population": 50586757,
-            "density": 41
+            "density": 41,
+            "roomNights":75,
+            "ADR":177,
+            "revenue":13275
           },
           {
             "code": "SS",
@@ -986,7 +1230,10 @@
             "value": 92,
             "name": "Spain",
             "population": 46087170,
-            "density": 91
+            "density": 91,
+            "roomNights":443,
+            "ADR":182,
+            "revenue":80626
           },
           {
             "code": "LK",
@@ -1014,14 +1261,20 @@
             "value": 69,
             "name": "Swaziland",
             "population": 1185000,
-            "density": 68
+            "density": 68,
+            "roomNights":347,
+            "ADR":170,
+            "revenue":58990
           },
           {
             "code": "SE",
             "value": 23,
             "name": "Sweden",
             "population": 9366092,
-            "density": 21
+            "density": 21,
+            "roomNights":301,
+            "ADR":187,
+            "revenue":56287
           },
           {
             "code": "CH",
@@ -1056,7 +1309,10 @@
             "value": 135,
             "name": "Thailand",
             "population": 64232760,
-            "density": 125
+            "density": 125,
+            "roomNights":134,
+            "ADR":166,
+            "revenue":22244
           },
           {
             "code": "TP",
@@ -1077,21 +1333,30 @@
             "value": 261,
             "name": "Trinidad and Tobago",
             "population": 1339000,
-            "density": 261
+            "density": 261,
+            "roomNights":0,
+            "ADR":"",
+            "revenue":""
           },
           {
             "code": "TN",
             "value": 68,
             "name": "Tunisia",
             "population": 10327800,
-            "density": 63
+            "density": 63,
+            "roomNights":19,
+            "ADR":155,
+            "revenue":2945
           },
           {
             "code": "TR",
             "value": 95,
             "name": "Turkey",
             "population": 77804122,
-            "density": 93
+            "density": 93,
+            "roomNights":78,
+            "ADR":176,
+            "revenue":13728
           },
           {
             "code": "TM",
@@ -1112,35 +1377,50 @@
             "value": 79,
             "name": "Ukraine",
             "population": 46936000,
-            "density": 78
+            "density": 78,
+            "roomNights":64,
+            "ADR":170,
+            "revenue":10880
           },
           {
             "code": "AE",
             "value": 90,
             "name": "United Arab Emirates",
             "population": 8264070,
-            "density": 99
+            "density": 99,
+            "roomNights":193,
+            "ADR":159,
+            "revenue":30687
           },
           {
             "code": "GB",
             "value": 257,
             "name": "United Kingdom",
             "population": 62041708,
-            "density": 255
+            "density": 255,
+            "roomNights":3627,
+            "ADR":169,
+            "revenue":612963
           },
           {
             "code": "US",
             "value": 34,
             "name": "United States",
             "population": 325020000,
-            "density": 33
+            "density": 33,
+            "roomNights":2162,
+            "ADR":155,
+            "revenue":335110
           },
           {
             "code": "UY",
             "value": 19,
             "name": "Uruguay",
             "population": 3463197,
-            "density": 20
+            "density": 20,
+            "roomNights":0,
+            "ADR":"",
+            "revenue":""
           },
           {
             "code": "UZ",
@@ -1161,7 +1441,10 @@
             "value": 33,
             "name": "Venezuela",
             "population": 32240855,
-            "density": 35
+            "density": 35,
+            "roomNights":12,
+            "ADR":162,
+            "revenue":1944
           },
           {
             "code": "VN",
@@ -1189,14 +1472,20 @@
             "value": 17,
             "name": "Zambia",
             "population": 12935000,
-            "density": 17
+            "density": 17,
+            "roomNights":0,
+            "ADR":"",
+            "revenue":""
           },
           {
             "code": "ZW",
             "value": 32,
             "name": "Zimbabwe",
             "population": 13009530,
-            "density": 33
+            "density": 33,
+            "roomNights":0,
+            "ADR":"",
+            "revenue":""
           }
         ]
       }
