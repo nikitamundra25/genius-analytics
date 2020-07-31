@@ -1,6 +1,7 @@
 import React from "react";
-import Loader from "../../../components/Loader/Loader";
+// import Loader from "../../../components/Loader/Loader";
 import { Table } from "react-bootstrap";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 
 const MonthlyTable = ({ graphdata = [] }: any) => {
 
@@ -9,7 +10,7 @@ const MonthlyTable = ({ graphdata = [] }: any) => {
       <React.Suspense
         fallback={
           <div className="card-loader">
-            <Loader />
+            <WidgetLoader />
           </div>
         }
       >

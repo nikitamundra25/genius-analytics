@@ -1,12 +1,12 @@
 import React from "react";
-import Loader from "../../../components/Loader/Loader";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { Table } from "react-bootstrap";
 
 const BOBMonthlyTable = ({ graphdata = [] }: any) => {
   return (
     <>
      
-      <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+      <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
       <div className="table-detail-section">
             <Table responsive className='pickup-detail-table mb-0'>
             <thead>

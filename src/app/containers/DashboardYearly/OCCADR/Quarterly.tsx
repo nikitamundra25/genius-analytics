@@ -83,6 +83,13 @@ const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
+            <React.Suspense
+            fallback={
+              <div className="card-loader">
+                <WidgetLoader />
+              </div>
+            }
+          >
             <MixedCharts
               id={id}
               chartSettings={{
@@ -106,6 +113,7 @@ const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
               }}
               charts={Charts1}
             />
+            </React.Suspense>
           )}
         </Card.Body>
       </Card>

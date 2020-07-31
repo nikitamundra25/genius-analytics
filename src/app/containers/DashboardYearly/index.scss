@@ -1,7 +1,8 @@
 
 @import "../../../scss/variables";
 .dashboard-yearly-table{
-  height:calc(100% - 0px);
+  // height:calc(100% - 0px);
+  height:auto;
   overflow-y: auto;
   overflow-x: hidden;
 }
