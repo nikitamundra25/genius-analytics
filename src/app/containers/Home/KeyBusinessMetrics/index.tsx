@@ -26,40 +26,47 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
 
   useEffect(() => {
     // const modalbtn: HTMLElement | null = document.getElementById(`language_dropmodal-${index}`);
-    const modalbtn: HTMLElement | null = document.getElementById(`col-width0`);
+    const modalbtn: HTMLElement | null = document.getElementById(`card-height`);
     if (modalbtn) {
       setTimeout(() => {
         const check = modalbtn.getBoundingClientRect();
-        const getHeight =check.height;
-        const setgraphHeight = getHeight - 75 ;
-        console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-        setsetHeight(`${setgraphHeight}px`)
+        const getHeight = check.height;
+        const setgraphHeight = getHeight - 75;
+        console.log(
+          "hello chart height on resize",
+          check,
+          getHeight,
+          setgraphHeight
+        );
+        setsetHeight(`${setgraphHeight}px`);
       }, 100);
-      
     }
     // eslint-disable-next-line
   }, [data]);
 
   useEffect(() => {
-
     const resizeListener = () => {
-
       // const height =  getCurrentHeight(`col-width0`)
       // console.log("height++++++++++++",height);
 
       // // change width from the state object
       const modalbtn: HTMLElement | null = document.getElementById(
-        `col-width0`
+        `card-height`
       );
       console.log("modalbtn", modalbtn);
 
       if (modalbtn) {
         setTimeout(() => {
           const check = modalbtn.getBoundingClientRect();
-          const getHeight =check.height;
-          const setgraphHeight = getHeight - 75 ;
-          console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-          setsetHeight(`${setgraphHeight}px`)
+          const getHeight = check.height;
+          const setgraphHeight = getHeight - 75;
+          console.log(
+            "hello chart height on resize",
+            check,
+            getHeight,
+            setgraphHeight
+          );
+          setsetHeight(`${setgraphHeight}px`);
         }, 100);
       }
     };
@@ -80,7 +87,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
       title: "OCC",
       color: "url(#occ-chart)",
       labelformat: "{value}%",
-      data: data&&  data.graph && data.graph.length ? data.graph[0].OCC : [],
+      data: data && data.graph && data.graph.length ? data.graph[0].OCC : [],
       height: setHeight,
     },
     {
@@ -89,7 +96,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
       color: "url(#adr-chart)",
       // color: "#5398d9",
       labelformat: "n2",
-      data: data &&  data.graph && data.graph.length ? data.graph[1].ADR : [],
+      data: data && data.graph && data.graph.length ? data.graph[1].ADR : [],
       height: setHeight,
     },
     {
@@ -98,7 +105,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
       color: "url(#revnue-chart)",
       // color: "#1f4e79",
       labelformat: "c2",
-      data: data &&  data.graph && data.graph.length ? data.graph[2].Revpar : [],
+      data: data && data.graph && data.graph.length ? data.graph[2].Revpar : [],
       height: setHeight,
     },
     {
@@ -107,7 +114,8 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
       color: "url(#revpar-chart)",
       // color: "#9dc3e7",
       labelformat: "c2",
-      data: data &&  data.graph && data.graph.length ? data.graph[3].Revenue : [],
+      data:
+        data && data.graph && data.graph.length ? data.graph[3].Revenue : [],
       height: setHeight,
     },
   ];
@@ -211,7 +219,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
                                 },
                                 title: key.title,
                                 tooltip: { enable: false, position: "Top" },
-                                height: setHeight
+                                height: setHeight,
                               }}
                               {...key}
                             />
@@ -232,34 +240,25 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td className="title-col">STLY</td>
-                            <td className="content-col">82.0%</td>
-                            <td className="content-col">168.47</td>
-                            <td className="content-col">&pound;138.15</td>
-                            <td className="content-col">&pound;1,169,687</td>
-                          </tr>
-                          <tr>
-                            <td className="title-col">LY</td>
-                            <td className="content-col">68.5%</td>
-                            <td className="content-col">151.30</td>
-                            <td className="content-col">&pound;103.64</td>
-                            <td className="content-col">&pound;1,201,776</td>
-                          </tr>
-                          <tr>
-                            <td className="title-col">BUD</td>
-                            <td className="content-col">88.0%</td>
-                            <td className="content-col">175.10</td>
-                            <td className="content-col">&pound;154.09</td>
-                            <td className="content-col">&pound;1,548,760</td>
-                          </tr>
-                          <tr>
-                            <td className="title-col">BOB</td>
-                            <td className="content-col">85.2%</td>
-                            <td className="content-col">178.87</td>
-                            <td className="content-col">&pound;152.40</td>
-                            <td className="content-col">&pound;1,453,133</td>
-                          </tr>
+                          {data && data.grid && data.grid.length
+                            ? data.grid.map((list: any, index: number) => {
+                                return (
+                                  <tr key={index}>
+                                    <td className="title-col">{list.title} </td>
+                                    <td className="content-col">
+                                      {`${list.OCC}%`}{" "}
+                                    </td>
+                                    <td className="content-col">{`${list.ADR}%`}</td>
+                                    <td className="content-col">
+                                      &pound;{`${list.revpar}`}{" "}
+                                    </td>
+                                    <td className="content-col">
+                                      &pound;{`${list.revenue}`}
+                                    </td>
+                                  </tr>
+                                );
+                              })
+                            : null}
                         </tbody>
                       </Table>
                     </div>
