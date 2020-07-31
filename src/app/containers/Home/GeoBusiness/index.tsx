@@ -13,6 +13,7 @@ const WorldMap = React.lazy(() =>
 
 export default ({ graphdata = {} }:any) => {
   const dispatch = useDispatch();
+ 
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.GeographicOriginReducer
   );
@@ -21,9 +22,11 @@ export default ({ graphdata = {} }:any) => {
     // eslint-disable-next-line
   }, []);
 
+ 
+
   return (
     <>
-      <Card>
+      <Card id="map-card">
         <WidgetHeader
           title={"Geographic Origin of business"}
           activeToggle={"graph"}
@@ -38,7 +41,7 @@ export default ({ graphdata = {} }:any) => {
             />
           ) : (
             <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
-            <WorldMap data={data} />
+            <WorldMap data={data}  />
             </React.Suspense>
             )}
         </Card.Body>

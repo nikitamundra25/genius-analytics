@@ -50,6 +50,7 @@ const DashboardMonthly: FunctionComponent = () => {
           <DashboardLayoutComponent
             id="defaultLayout"
             cellSpacing={cellSpacing}
+            mediaQuery= {'max-width: 991px'}
             allowResizing={false}
             columns={6}
             cellAspectRatio={50 / 75}

@@ -172,7 +172,7 @@ const pickupdata = [
 ];
 
 const mixdata = [
-  { x: "BAR", y: "23" },
+  { x: "BAR", y: 23 },
   { x: "Discount", y: 27 },
   { x: "Corporate", y: -15 },
   { x: "Cor Group", y: 8 },
@@ -371,7 +371,7 @@ const CumulativeTable = () => {
                                       majorGridLines: { width: 0 },
                                     },
                                     primaryYAxis: {
-                                      labelFormat: "{value}",
+                                      labelFormat: "{value}%",
                                       edgeLabelPlacement: "Shift",
                                       majorGridLines: { width: 0 },
                                       majorTickLines: { width: 0 },

@@ -13,6 +13,7 @@ const BarChartComponent = React.lazy(() =>
 export default (props: any) => {
   // const {graphdata}= props;
   const dispatch = useDispatch();
+  const [setHeight, setsetHeight] = React.useState<string>("250px");
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.BusinessMixReducer
   );
@@ -20,6 +21,55 @@ export default (props: any) => {
     dispatch(requestBusinessMixData());
     // eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    const modalbtn: HTMLElement | null = document.getElementById(`mix-card`);
+    if (modalbtn) {
+      setTimeout(() => {
+        const check = modalbtn.getBoundingClientRect();
+        const getHeight =check.height;
+        const setgraphHeight = getHeight - 75 ;
+        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+        setsetHeight(`${setgraphHeight}px`)
+      }, 100);
+      
+    }
+    // eslint-disable-next-line
+  }, [data]);
+
+  useEffect(() => {
+
+    const resizeListener = () => {
+
+      // // change width from the state object
+      const modalbtn: HTMLElement | null = document.getElementById(
+        `mix-card`
+      );
+     // console.log("modalbtn", modalbtn);
+
+      if (modalbtn) {
+        setTimeout(() => {
+          const check = modalbtn.getBoundingClientRect();
+          const getHeight =check.height;
+          const setgraphHeight = getHeight - 75 ;
+          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+          setsetHeight(`${setgraphHeight}px`)
+        }, 100);
+      }
+    };
+    // set resize listener
+    window.addEventListener("resize", resizeListener);
+
+    // clean up function
+    return () => {
+      // remove resize listener
+      window.removeEventListener("resize", resizeListener);
+    };
+    // eslint-disable-next-line
+  }, []);
+
+
+
   const BarChartData = [
     {
       id: "business-card-percent",
@@ -42,6 +92,7 @@ export default (props: any) => {
         },
         title: "Business Mix %",
         tooltip: { enable: false },
+        height: setHeight,
       },
       title: "Business Mix %",
       //color: "#5b9cd6",
@@ -69,9 +120,11 @@ export default (props: any) => {
         },
         title: "Business Mix ADR",
         tooltip: { enable: false },
+        height: setHeight,
       },
       title: "Business Mix ADR",
       color: "url(#mixadr-chart)",
+
      // color: "#4473c5",
       data: data && data.length && data[1] ? data[1].data : [],
     },
@@ -106,7 +159,7 @@ export default (props: any) => {
     <style>
           {SAMPLE_CSS}
       </style>
-      <Card>
+      <Card id="mix-card">
         <WidgetHeader title={"Business Mix"} activeToggle={"graph"} showToggle={false}  />
         <Card.Body>
           {isLoading ? (

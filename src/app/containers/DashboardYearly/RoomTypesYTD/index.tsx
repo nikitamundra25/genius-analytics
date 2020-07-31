@@ -23,6 +23,17 @@ const RoomTypesYTD = ({ graphdata = [] }: any) => {
     // eslint-disable-next-line
   }, []);
 
+  const labeltemplate = (args:any) => {
+    return (<div  style={{fontSize: '11px'}}>
+      <span>{args.point.y}%</span>
+    </div>);
+};
+const labeltemplateline = (args:any) => {
+  return (<div  style={{fontSize: '11px', padding: '3px 3px 3px 3px'}}>
+    <span>&pound;{args.point.y}</span>
+  </div>);
+};
+
   const Charts = [
     {
       dataSource: data,
@@ -37,6 +48,7 @@ const RoomTypesYTD = ({ graphdata = [] }: any) => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",
@@ -57,6 +69,7 @@ const RoomTypesYTD = ({ graphdata = [] }: any) => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",
@@ -83,6 +96,7 @@ const RoomTypesYTD = ({ graphdata = [] }: any) => {
           fill:"#01224e",
           visible: true,
           position: "Top",
+          template: labeltemplateline,
           font: {
             fontWeight: "600",
             color: "#fff",
@@ -108,6 +122,7 @@ const RoomTypesYTD = ({ graphdata = [] }: any) => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplateline,
           fill:"#c50000",
           font: {
             fontWeight: "600",
@@ -139,7 +154,7 @@ const RoomTypesYTD = ({ graphdata = [] }: any) => {
                   majorGridLines: { width: 0 },
                 },
                 primaryYAxis: {
-                  labelFormat: "{value}%",
+                  labelFormat: "{value}",
                   edgeLabelPlacement: "Shift",
                   majorGridLines: { width: 0 },
                   majorTickLines: { width: 0 },

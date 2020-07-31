@@ -51,6 +51,7 @@ const DashboardYearly: FunctionComponent = () => {
             id="defaultLayout"
             cellSpacing={cellSpacing}
             allowResizing={false}
+             mediaQuery= {'max-width: 991px'}
             columns={6}
             cellAspectRatio={50 / 75}
             created={created}

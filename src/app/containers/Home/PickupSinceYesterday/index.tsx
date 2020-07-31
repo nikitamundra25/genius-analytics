@@ -16,6 +16,7 @@ const MixedCharts = React.lazy(() =>
 
 const PickupSinceYesterday = () => {
   const dispatch = useDispatch();
+  const [setHeight, setsetHeight] = React.useState<string>("250px");
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.RoomNightsReducer
   );
@@ -23,6 +24,51 @@ const PickupSinceYesterday = () => {
     dispatch(requestRoomNightsData());
     // eslint-disable-next-line
   }, []);
+
+  
+ useEffect(() => {
+  const cardheight: HTMLElement | null = document.getElementById(`pickup-card`);
+  if (cardheight) {
+    setTimeout(() => {
+      const check = cardheight.getBoundingClientRect();
+      const getHeight =check.height;
+      const setgraphHeight = getHeight - 135 ;
+     // console.log("pickup chart height ",check, getHeight, setgraphHeight);
+      setsetHeight(`${setgraphHeight}px`)
+    }, 100);
+    
+  }
+  // eslint-disable-next-line
+}, [data]);
+
+useEffect(() => {
+
+  const resizeListener = () => {
+
+    // // change width from the state object
+    const cardheight: HTMLElement | null = document.getElementById(`pickup-card`);
+   // console.log("cardheight", cardheight);
+
+    if (cardheight) {
+      setTimeout(() => {
+        const check = cardheight.getBoundingClientRect();
+        const getHeight =check.height;
+        const setgraphHeight = getHeight - 135 ;
+       // console.log("pickup chart height on resize",check, getHeight, setgraphHeight);
+        setsetHeight(`${setgraphHeight}px`)
+      }, 100);
+    }
+  };
+  // set resize listener
+  window.addEventListener("resize", resizeListener);
+
+  // clean up function
+  return () => {
+    // remove resize listener
+    window.removeEventListener("resize", resizeListener);
+  };
+  // eslint-disable-next-line
+}, []);
 
 
   const BarChartReferenceLine = [
@@ -133,7 +179,7 @@ const PickupSinceYesterday = () => {
     <style>
           {SAMPLE_CSS}
       </style>
-    <Card>
+    <Card id="pickup-card">
       <WidgetHeader title={"Pick up Since Yesterday"} activeToggle={"graph"} showToggle={false} />
 
       <Card.Body>
@@ -168,8 +214,7 @@ const PickupSinceYesterday = () => {
                         legend = {false}
                         chartSettings={{
                           width: "100%",
-                          height: "200px",
-                          
+                          height: setHeight,
                           chartArea:{ border: { width: 0 } },
                           primaryXAxis: {
                             valueType: "Category",

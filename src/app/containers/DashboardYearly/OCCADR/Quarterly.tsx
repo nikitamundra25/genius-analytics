@@ -24,6 +24,12 @@ const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
     // eslint-disable-next-line
   }, []);
 
+  const labeltemplate = (args:any) => {
+    return (<div  style={{fontSize: '11px'}}>
+      <span>{args.point.y}%</span>
+    </div>);
+};
+
   const Charts1 = [
     {
       dataSource: data,
@@ -38,6 +44,7 @@ const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",
@@ -62,6 +69,7 @@ const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
         dataLabel: {
           visible: true,
           position: "Top",
+          
           font: {
             fontWeight: "600",
             color: "#000000",
@@ -99,7 +107,7 @@ const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
                   majorGridLines: { width: 0 },
                 },
                 primaryYAxis: {
-                  labelFormat: "{value}%",
+                  labelFormat: "{value}",
                   edgeLabelPlacement: "Shift",
                   majorGridLines: { width: 0 },
                   majorTickLines: { width: 0 },

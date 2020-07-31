@@ -10,7 +10,7 @@ import '../PickupDetail/index.scss';
 import { ErrorComponent } from "../../components/Error";
 
 const PickupDetail: FunctionComponent = () => {
-  const cellSpacing = [15, 30];
+  const cellSpacing = [15, 20];
   let restoreModel: any = [];
   let dashboardObj: any;
   const dispatch = useDispatch();
