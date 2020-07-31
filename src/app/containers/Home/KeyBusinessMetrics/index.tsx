@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import { Col, Card, Row } from "react-bootstrap";
+import { Col, Card, Row, Table } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
@@ -166,7 +166,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
-             
+            <> 
       <Row className='row-inner' >
         {barChartBusinessMetrics && barChartBusinessMetrics.length ? 
         barChartBusinessMetrics.map((key: any, index: number) => {
@@ -203,8 +203,58 @@ const KeyBusinessMetrics = ({ graphdata = [] }:any) => {
           );
         }): null}
       </Row>
+
+      </>
         )}
      </Card.Body>
+     
+     <div className="business-table-section">
+
+                        
+      <Table responsive className='business-table mb-0'>
+        <thead>
+        
+          <tr>
+            <th></th>
+            <th className='head-col'>OCC</th>
+            <th className='head-col'>ADR</th>
+            <th className='head-col'>RevPAR</th>
+            <th className='head-col'>Revenue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className='title-col'>STLY</td>
+            <td className='content-col'>82.0%</td>
+            <td className='content-col'>168.47</td>
+            <td className='content-col'>&pound;138.15</td>
+            <td className='content-col'>&pound;1,169,687</td>
+          </tr>
+          <tr>
+          <td className='title-col'>LY</td>
+            <td className='content-col'>68.5%</td>
+            <td className='content-col'>151.30</td>
+            <td className='content-col'>&pound;103.64</td>
+            <td className='content-col'>&pound;1,201,776</td>
+          </tr>
+          <tr>
+          <td className='title-col'>BUD</td>
+            <td className='content-col'>88.0%</td>
+            <td className='content-col'>175.10</td>
+            <td className='content-col'>&pound;154.09</td>
+            <td className='content-col'>&pound;1,548,760</td>
+          </tr>
+          <tr>
+          <td className='title-col'>BOB</td>
+            <td className='content-col'>85.2%</td>
+            <td className='content-col'>178.87</td>
+            <td className='content-col'>&pound;152.40</td>
+            <td className='content-col'>&pound;1,453,133</td>
+          </tr>
+          
+        </tbody>
+      </Table>
+      </div>
     </Card>
      <svg style={{ height: '0' }}>
         <defs>
