@@ -16,6 +16,7 @@ const MixedCharts = React.lazy(() =>
 
 const PickupSinceYesterday = () => {
   const dispatch = useDispatch();
+  const [setHeight, setsetHeight] = React.useState<string>("250px");
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.RoomNightsReducer
   );
@@ -24,12 +25,57 @@ const PickupSinceYesterday = () => {
     // eslint-disable-next-line
   }, []);
 
+  
+ useEffect(() => {
+  const cardheight: HTMLElement | null = document.getElementById(`pickup-card`);
+  if (cardheight) {
+    setTimeout(() => {
+      const check = cardheight.getBoundingClientRect();
+      const getHeight =check.height;
+      const setgraphHeight = getHeight - 135 ;
+     // console.log("pickup chart height ",check, getHeight, setgraphHeight);
+      setsetHeight(`${setgraphHeight}px`)
+    }, 100);
+    
+  }
+  // eslint-disable-next-line
+}, [data]);
+
+useEffect(() => {
+
+  const resizeListener = () => {
+
+    // // change width from the state object
+    const cardheight: HTMLElement | null = document.getElementById(`pickup-card`);
+   // console.log("cardheight", cardheight);
+
+    if (cardheight) {
+      setTimeout(() => {
+        const check = cardheight.getBoundingClientRect();
+        const getHeight =check.height;
+        const setgraphHeight = getHeight - 135 ;
+       // console.log("pickup chart height on resize",check, getHeight, setgraphHeight);
+        setsetHeight(`${setgraphHeight}px`)
+      }, 100);
+    }
+  };
+  // set resize listener
+  window.addEventListener("resize", resizeListener);
+
+  // clean up function
+  return () => {
+    // remove resize listener
+    window.removeEventListener("resize", resizeListener);
+  };
+  // eslint-disable-next-line
+}, []);
+
 
   const BarChartReferenceLine = [
     {
       id: "1",
       title: "Room Nights",
-      range: "198",
+      range: "202",
       arrowClass: caretup,
       textClass: "text-green",
       charts: {
@@ -58,7 +104,7 @@ const PickupSinceYesterday = () => {
     {
       id: "2",
       title: "ADR",
-      range: "2.6",
+      range: "-1.3",
       arrowClass: caretdown,
       textClass: "text-red",
       charts: {
@@ -87,7 +133,7 @@ const PickupSinceYesterday = () => {
     {
       id: "3",
       title: "Revenue",
-      range: "19.4 k",
+      range: "21,203",
       arrowClass: caretup,
       textClass: "text-green",
       charts: {
@@ -133,7 +179,7 @@ const PickupSinceYesterday = () => {
     <style>
           {SAMPLE_CSS}
       </style>
-    <Card>
+    <Card id="pickup-card">
       <WidgetHeader title={"Pick up Since Yesterday"} activeToggle={"graph"} showToggle={false} />
 
       <Card.Body>
@@ -168,8 +214,7 @@ const PickupSinceYesterday = () => {
                         legend = {false}
                         chartSettings={{
                           width: "100%",
-                          height: "200px",
-                          
+                          height: setHeight,
                           chartArea:{ border: { width: 0 } },
                           primaryXAxis: {
                             valueType: "Category",
@@ -179,7 +224,7 @@ const PickupSinceYesterday = () => {
                           },
                           primaryYAxis: {
                             
-                            labelFormat: "{value}%",
+                            labelFormat: "{value}",
                             edgeLabelPlacement: "Shift",
                             majorGridLines: { width: 0 },
                             majorTickLines: { width: 0 },

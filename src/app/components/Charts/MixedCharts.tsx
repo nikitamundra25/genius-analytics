@@ -1,4 +1,4 @@
-import React  from "react";
+import React,{useEffect}  from "react";
 import {
   ChartComponent,
   SeriesCollectionDirective,
@@ -20,9 +20,31 @@ import {
 const MixedCharts = ({ charts = [], id, chartSettings = {},legend= true }: any) => {
   // class MixedCharts extends Component<any, any> {
       const legendSettings = { visible: legend };
+      let chartObj:any
+      useEffect(() => {
+        const resizeListener = () => {
+          if(chartObj){
+            chartObj.refresh(); 
+          }
+        };
+        // set resize listener
+        window.addEventListener('resize', resizeListener);
+    
+        // clean up function
+        return () => {
+          // remove resize listener
+          window.removeEventListener('resize', resizeListener);
+        }
+    // eslint-disable-next-line
+      }, [])
+
+
   return (
     <ChartComponent
       id={id}
+      ref={(scope: any) => {
+        chartObj = scope;
+      }}
       legendSettings={legendSettings}
       //style={{ textAlign: "center", "height": "250px", "width": "100%" }}
       chartArea={{ border: { width: 0 } }}

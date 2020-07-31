@@ -21,6 +21,58 @@ export default ({ graphdata = [] }: any) => {
     dispatch(requestRGIPerformanceData());
     // eslint-disable-next-line
   }, []);
+
+  const [setHeight, setsetHeight] = React.useState<string>("250px");
+
+ useEffect(() => {
+    const modalbtn: HTMLElement | null = document.getElementById(`dy-rgi-card`);
+    if (modalbtn) {
+      setTimeout(() => {
+        const check = modalbtn.getBoundingClientRect();
+        const getHeight =check.height;
+        const setgraphHeight = getHeight - 75 ;
+        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+        setsetHeight(`${setgraphHeight}px`)
+      }, 100);
+      
+    }
+    // eslint-disable-next-line
+  }, [data]);
+
+  useEffect(() => {
+
+    const resizeListener = () => {
+
+      // // change width from the state object
+      const modalbtn: HTMLElement | null = document.getElementById(
+        `dy-rgi-card`
+      );
+     // console.log("modalbtn", modalbtn);
+
+      if (modalbtn) {
+        setTimeout(() => {
+          const check = modalbtn.getBoundingClientRect();
+          const getHeight =check.height;
+          const setgraphHeight = getHeight - 75 ;
+          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+          setsetHeight(`${setgraphHeight}px`)
+        }, 100);
+      }
+    };
+    // set resize listener
+    window.addEventListener("resize", resizeListener);
+
+    // clean up function
+    return () => {
+      // remove resize listener
+      window.removeEventListener("resize", resizeListener);
+    };
+    // eslint-disable-next-line
+  }, []);
+
+   
+
+
   const RGIBarChart = [
     {
       id: "r1",
@@ -40,7 +92,7 @@ export default ({ graphdata = [] }: any) => {
   ];
 
   return (
-    <Card>
+    <Card id="dy-rgi-card">
       <WidgetHeader title={"RGI Performance - YTD"}  activeToggle={"graph"}  showToggle={false}/>
       <Card.Body>
       {isLoading ? (
@@ -75,6 +127,7 @@ export default ({ graphdata = [] }: any) => {
                       },
                       title: key.title,
                       tooltip: { enable: true },
+                      height: setHeight,
                     }}
                     key={index}
                     {...key}

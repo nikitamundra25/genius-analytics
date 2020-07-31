@@ -13,6 +13,7 @@ const MixedCharts = React.lazy(() =>
 
 export default () => {
   const dispatch = useDispatch();
+  const [setHeight, setsetHeight] = React.useState<string>("250px");
   const { isLoading, data = [], isError } = useSelector(
     (state: IRootState) => state.RoomTypeStaticsReducer
   );
@@ -20,6 +21,65 @@ export default () => {
     dispatch(requestRoomTypeStaticsData());
     // eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    const modalbtn: HTMLElement | null = document.getElementById(`room-card`);
+    if (modalbtn) {
+      setTimeout(() => {
+        const check = modalbtn.getBoundingClientRect();
+        const getHeight =check.height;
+        const setgraphHeight = getHeight - 75 ;
+        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+        setsetHeight(`${setgraphHeight}px`)
+      }, 100);
+      
+    }
+    // eslint-disable-next-line
+  }, [data]);
+
+  useEffect(() => {
+
+    const resizeListener = () => {
+
+      // // change width from the state object
+      const modalbtn: HTMLElement | null = document.getElementById(
+        `room-card`
+      );
+     // console.log("modalbtn", modalbtn);
+
+      if (modalbtn) {
+        setTimeout(() => {
+          const check = modalbtn.getBoundingClientRect();
+          const getHeight =check.height;
+          const setgraphHeight = getHeight - 75 ;
+          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+          setsetHeight(`${setgraphHeight}px`)
+        }, 100);
+      }
+    };
+    // set resize listener
+    window.addEventListener("resize", resizeListener);
+
+    // clean up function
+    return () => {
+      // remove resize listener
+      window.removeEventListener("resize", resizeListener);
+    };
+    // eslint-disable-next-line
+  }, []);
+
+  const labeltemplate = (args:any) => {
+    return (<div  style={{fontSize: '11px'}}>
+      <span>{args.point.y}%</span>
+    </div>);
+};
+const labeltemplateline = (args:any) => {
+  return (<div  style={{fontSize: '11px'}}>
+    <span>&pound;{args.point.y}</span>
+  </div>);
+};
+
+
   const Charts = [
     {
       dataSource: data,
@@ -37,6 +97,7 @@ export default () => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",
@@ -60,6 +121,7 @@ export default () => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",
@@ -84,6 +146,7 @@ export default () => {
         dataLabel: {
           visible: true,
           position: "Top",
+          template: labeltemplateline,
           font: {
             fontWeight: "600",
             color: "#000000",
@@ -110,6 +173,7 @@ export default () => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplateline,
           font: {
             fontWeight: "600",
             color: "#000000",
@@ -148,7 +212,7 @@ export default () => {
     <style>
           {SAMPLE_CSS}
       </style>
-      <Card>
+      <Card id="room-card">
         <WidgetHeader title={"Room Type Statics"} activeToggle={"graph"} showToggle={false} />
         <Card.Body>
       {isLoading ? (
@@ -169,7 +233,7 @@ export default () => {
                   majorGridLines: { width: 0 },
                 },
                 primaryYAxis: {
-                  labelFormat: "{value}%",
+                  labelFormat: "{value}",
                   edgeLabelPlacement: "Shift",
                   majorGridLines: { width: 0 },
                   majorTickLines: { width: 0 },
@@ -180,6 +244,7 @@ export default () => {
                   visible:false,
                 },
                 tooltip: { enable: true },
+                height: setHeight,
               }}
             />
           </React.Suspense>

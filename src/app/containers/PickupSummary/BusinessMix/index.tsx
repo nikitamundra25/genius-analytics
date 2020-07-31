@@ -9,6 +9,13 @@ const MixedCharts = React.lazy(() =>
 
 const PickupBusinessMix = (props:any) => {
   const{index, DowData} = props;
+
+  const labeltemplate = (args:any) => {
+    return (<div  style={{fontSize: '11px', padding: '3px 3px 3px 3px' , borderRadius: '3px'}}>
+      <span>{args.point.y}%</span>
+    </div>);
+};
+
   const Charts = [
     {
       dataSource: DowData,
@@ -24,6 +31,7 @@ const PickupBusinessMix = (props:any) => {
           visible: true,
           position: "Bottom",
           fill:"#2b72b5",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#fff",

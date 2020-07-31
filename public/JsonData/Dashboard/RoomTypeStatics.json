@@ -2,24 +2,38 @@
     "data": [
         {
           "name": "0BRM",
-          "OCCTY": 50,
-          "OCCLY": 64,
-          "ADRTY": 174,
-          "ADRLY": 111
+          "OCCTY": 90,
+          "OCCLY": 92,
+          "ADRTY": 205,
+          "ADRLY": 195
         },
         {
           "name": "1BRM",
-          "OCCTY": 88,
-          "OCCLY": 80,
-          "ADRTY": 157,
-          "ADRLY": 129
+          "OCCTY": 77,
+          "OCCLY": 70,
+          "ADRTY": 233,
+          "ADRLY": 235
         },
         {
           "name": "2BRM",
-          "OCCTY": 74,
-          "OCCLY": 76,
-          "ADRTY": 257,
-          "ADRLY": 200
+          "OCCTY": 88,
+          "OCCLY": 82,
+          "ADRTY": 256.1,
+          "ADRLY": 242
+        },
+        {
+          "name": "3BRM",
+          "OCCTY": 55,
+          "OCCLY": 58,
+          "ADRTY": 301.3,
+          "ADRLY": 299.99
+        },
+        {
+          "name": "4BRM",
+          "OCCTY": 76,
+          "OCCLY": 52,
+          "ADRTY": 356.5,
+          "ADRLY": 333.33
         }
       ]
 }

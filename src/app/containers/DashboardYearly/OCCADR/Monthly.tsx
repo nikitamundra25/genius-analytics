@@ -23,6 +23,62 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
     // eslint-disable-next-line
   }, []);
 
+  const [setHeight, setsetHeight] = React.useState<string>("250px");
+
+ useEffect(() => {
+    const modalbtn: HTMLElement | null = document.getElementById(`dy-monthly-card`);
+    if (modalbtn) {
+      setTimeout(() => {
+        const check = modalbtn.getBoundingClientRect();
+        const getHeight =check.height;
+        const setgraphHeight = getHeight - 75 ;
+        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+        setsetHeight(`${setgraphHeight}px`)
+      }, 100);
+      
+    }
+    // eslint-disable-next-line
+  }, [data]);
+
+  useEffect(() => {
+
+    const resizeListener = () => {
+
+      // // change width from the state object
+      const modalbtn: HTMLElement | null = document.getElementById(
+        `dy-monthly-card`
+      );
+     // console.log("modalbtn", modalbtn);
+
+      if (modalbtn) {
+        setTimeout(() => {
+          const check = modalbtn.getBoundingClientRect();
+          const getHeight =check.height;
+          const setgraphHeight = getHeight - 75 ;
+          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+          setsetHeight(`${setgraphHeight}px`)
+        }, 100);
+      }
+    };
+    // set resize listener
+    window.addEventListener("resize", resizeListener);
+
+    // clean up function
+    return () => {
+      // remove resize listener
+      window.removeEventListener("resize", resizeListener);
+    };
+    // eslint-disable-next-line
+  }, []);
+
+  
+
+  const labeltemplate = (args:any) => {
+    return (<div  style={{fontSize: '11px'}}>
+      <span>{args.point.y}%</span>
+    </div>);
+};
+
 
   const Charts1 = [
     {
@@ -38,6 +94,7 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",
@@ -73,7 +130,7 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
 
   return (
     <>
-      <Card>
+      <Card id="dy-monthly-card">
         <WidgetHeader title={"Monthly OCC & ADR"} activeToggle={"graph"}  showToggle={false}/>
         <Card.Body>
          {isLoading ? (
@@ -99,7 +156,7 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
                   majorGridLines: { width: 0 },
                 },
                 primaryYAxis: {
-                  labelFormat: "{value}%",
+                  labelFormat: "{value}",
                   edgeLabelPlacement: "Shift",
                   majorGridLines: { width: 0 },
                   majorTickLines: { width: 0 },
@@ -110,6 +167,7 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
+                height: setHeight,
                 // width:"100%",
                 // height:"100%"
               }}

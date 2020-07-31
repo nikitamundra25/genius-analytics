@@ -11,7 +11,7 @@ import { ErrorComponent } from "../../components/Error";
 
 
 const DashboardYearly: FunctionComponent = () => {
-  const cellSpacing = [15, 30];
+  const cellSpacing = [15, 20];
   let restoreModel: any = [];
   let dashboardObj: any;
   const dispatch = useDispatch();
@@ -51,6 +51,7 @@ const DashboardYearly: FunctionComponent = () => {
             id="defaultLayout"
             cellSpacing={cellSpacing}
             allowResizing={false}
+             mediaQuery= {'max-width: 991px'}
             columns={6}
             cellAspectRatio={50 / 75}
             created={created}

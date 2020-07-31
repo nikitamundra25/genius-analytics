@@ -8,6 +8,14 @@ const MixedCharts = React.lazy(() =>
 
 const PickupDOWOCCSegment = (props:any) => {
   const{index,OccData} = props;
+
+  const labeltemplate = (args:any) => {
+    return (<div  style={{fontSize: '11px'}}>
+      <span>{args.point.y}%</span>
+    </div>);
+};
+
+
   const Charts = [
     {
       dataSource: OccData,
@@ -22,6 +30,7 @@ const PickupDOWOCCSegment = (props:any) => {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#fff",

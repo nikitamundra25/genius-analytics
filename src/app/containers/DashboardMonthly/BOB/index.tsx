@@ -10,8 +10,6 @@ const MonthlyBOB = (props:any) => {
       <Card.Body>
         <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
           <div className='dashboard-monthly-table'>
-
-         
             <Table responsive className="mb-0">
                   <thead>
                     <tr className='business-top-row'>

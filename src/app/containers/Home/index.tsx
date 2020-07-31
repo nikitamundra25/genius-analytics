@@ -11,7 +11,7 @@ import { ErrorComponent } from "../../components/Error";
 
 // export class Default extends SampleBase {
 const HomeComponent: FunctionComponent = () => {
-  const cellSpacing = [15, 30];
+  const cellSpacing = [15, 20];
   const dispatch = useDispatch();
   let restoreModel: any = [];
   let dashboardObj: any;
@@ -53,7 +53,7 @@ const HomeComponent: FunctionComponent = () => {
             cellSpacing={cellSpacing}
             allowResizing={false}
             columns={4}
-            // mediaQuery= {'max-width: 700px'}
+            mediaQuery= {'max-width: 991px'}
             cellAspectRatio={100 / 100}
             created={created}
             ref={(scope: any) => {

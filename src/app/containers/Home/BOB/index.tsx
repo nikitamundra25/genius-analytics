@@ -48,7 +48,7 @@ const BOB = () => {
                   <th></th>
                   <th className='head-col'>BOB</th>
                   <th className='head-col'>BUDGET</th>
-                  <th className='head-col'>LY</th>
+                  <th className='head-col'>2016</th>
                   <th className='head-col'>STLY</th>
                   <th className='head-col'>Vs.BUD</th>
                   <th className='head-col'>Vs.LY</th>
@@ -58,53 +58,53 @@ const BOB = () => {
               <tbody>
                 <tr>
                   <td className='title-col'>Room Nights</td>
-                  <td className='content-col'>3454</td>
-                  <td className='content-col'>4836</td>
-                  <td className='content-col'>4347</td>
-                  <td className='content-col'>5120</td>
-                  <td className='content-col bg-2'>15</td>
-                  <td className='content-col bg-2 text-danger'>-25</td>
-                  <td className='content-col bg-2'>55</td>
+                  <td className='content-col'>8124</td>
+                  <td className='content-col'>8,845</td>
+                  <td className='content-col'>7,943</td>
+                  <td className='content-col'>6,943</td>
+                  <td className='content-col bg-2 text-danger'>-721</td>
+                  <td className='content-col bg-2 '>181</td>
+                  <td className='content-col bg-2'>1,181</td>
                 </tr>
                 <tr>
                   <td className='title-col'>OCC</td>
-                  <td className='content-col'>76.01%</td>
-                  <td className='content-col'>67.8%</td>
-                  <td className='content-col'>61.0%</td>
-                  <td className='content-col'>71.0%</td>
-                  <td className='content-col bg-2 text-danger'>-0.8%</td>
-                  <td className='content-col bg-2 text-danger'>-0.8%</td>
-                  <td className='content-col bg-2'>5.1%</td>
+                  <td className='content-col'>75.7%</td>
+                  <td className='content-col'>71.5%</td>
+                  <td className='content-col'>64.2%</td>
+                  <td className='content-col'>56.1%</td>
+                  <td className='content-col bg-2 text-danger'>-6%</td>
+                  <td className='content-col bg-2 text-danger'>1.5%</td>
+                  <td className='content-col bg-2'>9.5%</td>
                 </tr>
                 <tr>
                   <td className='title-col'>Revenue</td>
-                  <td className='content-col'>$970,365</td>
-                  <td className='content-col'>$845,365</td>
-                  <td className='content-col'>$733,395</td>
-                  <td className='content-col'>$852,333</td>
-                  <td className='content-col bg-2'>$75,965</td>
-                  <td className='content-col bg-2 '>$15,965</td>
-                  <td className='content-col bg-2'>$118,032</td>
+                  <td className='content-col'>&pound;14,80,599</td>
+                  <td className='content-col'>&pound;17,18,849</td>
+                  <td className='content-col'>&pound;15,18,702</td>
+                  <td className='content-col'>&pound;12,49,740</td>
+                  <td className='content-col bg-2'>&pound;75,965</td>
+                  <td className='content-col bg-2 '>-&pound;38,103</td>
+                  <td className='content-col bg-2'>&pound;2,30,859</td>
                 </tr>
                 <tr>
                   <td className='title-col'>ADR</td>
-                  <td className='content-col'>$178.9</td>
-                  <td className='content-col'>$174.9</td>
-                  <td className='content-col'>$168.7</td>
-                  <td className='content-col'>$166.5</td>
-                  <td className='content-col bg-2'>$14.9</td>
-                  <td className='content-col bg-2 '>$14.9</td>
-                  <td className='content-col bg-2'>$11.2</td>
+                  <td className='content-col'>&pound;182.3</td>
+                  <td className='content-col'>&pound;194.3</td>
+                  <td className='content-col'>&pound;191.2</td>
+                  <td className='content-col'>&pound;180.0</td>
+                  <td className='content-col bg-2'>-12</td>
+                  <td className='content-col bg-2 '>-&pound;8.9</td>
+                  <td className='content-col bg-2'>&pound;2.3</td>
                 </tr>
                 <tr>
                   <td className='title-col'>RevPar</td>
-                  <td className='content-col'>$136.1</td>
-                  <td className='content-col'>$118.9</td>
-                  <td className='content-col'>$102.9</td>
-                  <td className='content-col'>$118.9</td>
-                  <td className='content-col bg-2'>$8.6</td>
-                  <td className='content-col bg-2 '>$3.6</td>
-                  <td className='content-col bg-2'>$17.9</td>
+                  <td className='content-col'>&pound;119.7</td>
+                  <td className='content-col'>&pound;139.0</td>
+                  <td className='content-col'>&pound;122.8</td>
+                  <td className='content-col'>&pound;101.04</td>
+                  <td className='content-col bg-2'>-19</td>
+                  <td className='content-col bg-2 '>-&pound;3.1</td>
+                  <td className='content-col bg-2'>&pound;18.7</td>
                 </tr>
               </tbody>
             </Table>
