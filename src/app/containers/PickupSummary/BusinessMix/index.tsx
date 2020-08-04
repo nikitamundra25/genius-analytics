@@ -1,4 +1,4 @@
-import React from "react";
+import React,  { useEffect } from "react";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 
 const MixedCharts = React.lazy(() =>
@@ -9,6 +9,56 @@ const MixedCharts = React.lazy(() =>
 
 const PickupBusinessMix = (props:any) => {
   const{index, DowData} = props;
+
+  const [setHeight, setsetHeight] = React.useState<string>("250px");
+
+ useEffect(() => {
+    const modalbtn: HTMLElement | null = document.getElementById(`pickup-mix-card`);
+    if (modalbtn) {
+      setTimeout(() => {
+        const check = modalbtn.getBoundingClientRect();
+        const getHeight =check.height;
+        const setgraphHeight = getHeight - 75 ;
+        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+        setsetHeight(`${setgraphHeight}px`)
+      }, 100);
+      
+    }
+    // eslint-disable-next-line
+  }, [DowData]);
+
+  useEffect(() => {
+
+    const resizeListener = () => {
+
+      // // change width from the state object
+      const modalbtn: HTMLElement | null = document.getElementById(
+        `pickup-mix-card`
+      );
+     // console.log("modalbtn", modalbtn);
+
+      if (modalbtn) {
+        setTimeout(() => {
+          const check = modalbtn.getBoundingClientRect();
+          const getHeight =check.height;
+          const setgraphHeight = getHeight - 75 ;
+          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+          setsetHeight(`${setgraphHeight}px`)
+        }, 100);
+      }
+    };
+    // set resize listener
+    window.addEventListener("resize", resizeListener);
+
+    // clean up function
+    return () => {
+      // remove resize listener
+      window.removeEventListener("resize", resizeListener);
+    };
+    // eslint-disable-next-line
+  }, []);
+
+  
 
   const labeltemplate = (args:any) => {
     return (<div  style={{fontSize: '11px', padding: '3px 3px 3px 3px' , borderRadius: '3px'}}>
@@ -109,7 +159,8 @@ const PickupBusinessMix = (props:any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
-                height:"200px"
+                height: setHeight,
+                //height:"200px"
               }}
               charts={Charts}
             />

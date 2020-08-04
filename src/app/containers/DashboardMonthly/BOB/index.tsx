@@ -416,38 +416,35 @@ const MonthlyBOB = (props: any) => {
                     </tr> */}
                 </thead>
                 <tbody>
-                  {data && data.length
+                {data && data.length
                     ? data.map(( list: any, index: number) => {
                         return (
                           <>
-                          {list.subData.map((key: any, ind: number) => {
+                           {list.subData.map((key: any, ind: number) => {
                                 return (
                             <tr>
-                              {ind === 0 ? 
                               <td
-                                rowSpan={key.length}
+                                rowSpan={3}
                                 className="title-col bg-1 text-center"
                               >
                                 {list.title}
                               </td>
-                              :null}
-                                  <tr>
-                                    <td className="title-col white-nowrap">
-                                      {key.title}{" "}
-                                    </td>
-                                    {key.data.map((data: any, i: number) => {
-                                      return (
-                                        <td className="content-col">{data} </td>
-                                      );
-                                    })}
-                                  </tr>
+                                <td className="title-col white-nowrap">
+                                  {key.title}{" "}
+                                </td>
+                                {key.data.map((data: any, i: number) => {
+                                  return (
+                                    <td className="content-col">{data} </td>
+                                  );
+                                })}
                             </tr>
-                                );
+                            );
                               })}
                           </>
                         );
                       })
                     : null}
+
 
                   {/* <tr>
                     <td rowSpan={2} className="title-col bg-1 text-center">
