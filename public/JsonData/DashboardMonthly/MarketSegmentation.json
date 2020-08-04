@@ -2,52 +2,60 @@
     "data": [
         {
           "name": "BAR",
-          "RMS2018": 50,
-          "RMS2017": 64,
-          "ADR2018": 185,
-          "ADR2017": 195
+          "Rm Nts TY": 175,
+          "Rm Nts LY": 145,
+          "ADR TY": 253,
+          "ADR LY": 254
         },
         {
-          "name": "MTG",
-          "RMS2018": 88,
-          "RMS2017": 80,
-          "ADR2018": 202,
-          "ADR2017": 207
+          "name": "Leisure",
+          "Rm Nts TY": 201,
+          "Rm Nts LY": 102,
+          "ADR TY": 291,
+          "ADR LY": 293
         },
         {
-          "name": "COR",
-          "RMS2018": 74,
-          "RMS2017": 76,
-          "ADR2018": 184,
-          "ADR2017": 194
+          "name": "Corporate",
+          "Rm Nts TY": 134,
+          "Rm Nts LY": 180,
+          "ADR TY": 185,
+          "ADR LY": 349
         },
         {
-          "name": "CON",
-          "RMS2018": 68,
-          "RMS2017": 73,
-          "ADR2018": 176,
-          "ADR2017": 196
+          "name": "Consortia",
+          "Rm Nts TY": 174,
+          "Rm Nts LY": 209,
+          "ADR TY": 413,
+          "ADR LY": 299
         },
         {
-          "name": "GRP",
-          "RMS2018": 67,
-          "RMS2017": 64,
-          "ADR2018": 155,
-          "ADR2017": 156
+          "name": "Promotion",
+          "Rm Nts TY": 216,
+          "Rm Nts LY": 82,
+          "ADR TY": 181,
+          "ADR LY": 372
+        },
+        {
+          "name": "Groups",
+          "Rm Nts TY": 194,
+          "Rm Nts LY": 212,
+          "ADR TY": 383,
+          "ADR LY": 346
+        },
+        {
+          "name": "OTAs",
+          "Rm Nts TY": 201,
+          "Rm Nts LY": 154,
+          "ADR TY": 244,
+          "ADR LY": 291
         },
         {
           "name": "FIT",
-          "RMS2018": 74,
-          "RMS2017": 76,
-          "ADR2018": 143,
-          "ADR2017": 150
-        },
-        {
-          "name": "DIS",
-          "RMS2018": 63,
-          "RMS2017": 43,
-          "ADR2018": 157,
-          "ADR2017": 172
+          "Rm Nts TY": 160,
+          "Rm Nts LY": 241,
+          "ADR TY": 297,
+          "ADR LY": 417
         }
+        
       ]
 }
