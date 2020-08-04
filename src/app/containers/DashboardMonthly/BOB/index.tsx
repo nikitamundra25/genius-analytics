@@ -420,6 +420,8 @@ const MonthlyBOB = (props: any) => {
                     ? data.map(( list: any, index: number) => {
                         return (
                           <>
+                           {list.subData.map((key: any, ind: number) => {
+                                return (
                             <tr>
                               <td
                                 rowSpan={3}
@@ -427,21 +429,17 @@ const MonthlyBOB = (props: any) => {
                               >
                                 {list.title}
                               </td>
-                              {list.subData.map((key: any, ind: number) => {
-                                return (
-                                  <tr>
-                                    <td className="title-col white-nowrap">
-                                      {key.title}{" "}
-                                    </td>
-                                    {key.data.map((data: any, i: number) => {
-                                      return (
-                                        <td className="content-col">{data} </td>
-                                      );
-                                    })}
-                                  </tr>
-                                );
-                              })}
+                                <td className="title-col white-nowrap">
+                                  {key.title}{" "}
+                                </td>
+                                {key.data.map((data: any, i: number) => {
+                                  return (
+                                    <td className="content-col">{data} </td>
+                                  );
+                                })}
                             </tr>
+                            );
+                              })}
                           </>
                         );
                       })

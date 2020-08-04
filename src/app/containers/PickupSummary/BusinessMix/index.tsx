@@ -10,53 +10,53 @@ const MixedCharts = React.lazy(() =>
 const PickupBusinessMix = (props:any) => {
   const{index, DowData} = props;
 
-//   const [setHeight, setsetHeight] = React.useState<string>("250px");
+  const [setHeight, setsetHeight] = React.useState<string>("250px");
 
-//  useEffect(() => {
-//     const modalbtn: HTMLElement | null = document.getElementById(`pickup-mix-card`);
-//     if (modalbtn) {
-//       setTimeout(() => {
-//         const check = modalbtn.getBoundingClientRect();
-//         const getHeight =check.height;
-//         const setgraphHeight = getHeight - 75 ;
-//         //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-//         setsetHeight(`${setgraphHeight}px`)
-//       }, 100);
+ useEffect(() => {
+    const modalbtn: HTMLElement | null = document.getElementById(`pickup-mix-card`);
+    if (modalbtn) {
+      setTimeout(() => {
+        const check = modalbtn.getBoundingClientRect();
+        const getHeight =check.height;
+        const setgraphHeight = getHeight - 75 ;
+        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+        setsetHeight(`${setgraphHeight}px`)
+      }, 100);
       
-//     }
-//     // eslint-disable-next-line
-//   }, [data]);
+    }
+    // eslint-disable-next-line
+  }, [DowData]);
 
-  // useEffect(() => {
+  useEffect(() => {
 
-  //   const resizeListener = () => {
+    const resizeListener = () => {
 
-  //     // // change width from the state object
-  //     const modalbtn: HTMLElement | null = document.getElementById(
-  //       `pickup-mix-card`
-  //     );
-  //    // console.log("modalbtn", modalbtn);
+      // // change width from the state object
+      const modalbtn: HTMLElement | null = document.getElementById(
+        `pickup-mix-card`
+      );
+     // console.log("modalbtn", modalbtn);
 
-  //     if (modalbtn) {
-  //       setTimeout(() => {
-  //         const check = modalbtn.getBoundingClientRect();
-  //         const getHeight =check.height;
-  //         const setgraphHeight = getHeight - 75 ;
-  //         //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-  //         setsetHeight(`${setgraphHeight}px`)
-  //       }, 100);
-  //     }
-  //   };
-  //   // set resize listener
-  //   window.addEventListener("resize", resizeListener);
+      if (modalbtn) {
+        setTimeout(() => {
+          const check = modalbtn.getBoundingClientRect();
+          const getHeight =check.height;
+          const setgraphHeight = getHeight - 75 ;
+          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+          setsetHeight(`${setgraphHeight}px`)
+        }, 100);
+      }
+    };
+    // set resize listener
+    window.addEventListener("resize", resizeListener);
 
-  //   // clean up function
-  //   return () => {
-  //     // remove resize listener
-  //     window.removeEventListener("resize", resizeListener);
-  //   };
-  //   // eslint-disable-next-line
-  // }, []);
+    // clean up function
+    return () => {
+      // remove resize listener
+      window.removeEventListener("resize", resizeListener);
+    };
+    // eslint-disable-next-line
+  }, []);
 
   
 
@@ -159,8 +159,8 @@ const PickupBusinessMix = (props:any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
-                // height: setHeight,
-                height:"200px"
+                height: setHeight,
+                //height:"200px"
               }}
               charts={Charts}
             />
