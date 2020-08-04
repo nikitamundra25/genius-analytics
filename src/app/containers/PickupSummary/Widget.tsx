@@ -40,6 +40,56 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
     // eslint-disable-next-line
   }, []);
 
+  const [setHeight, setsetHeight] = React.useState<string>("250px");
+
+ useEffect(() => {
+    const modalbtn: HTMLElement | null = document.getElementById(`summary-card0`);
+    if (modalbtn) {
+      setTimeout(() => {
+        const check = modalbtn.getBoundingClientRect();
+        const getHeight =check.height;
+        const setgraphHeight = getHeight - 225 ;
+        console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+        setsetHeight(`${setgraphHeight}px`)
+      }, 100);
+      
+    }
+    // eslint-disable-next-line
+  }, [DowData]);
+
+  useEffect(() => {
+
+    const resizeListener = () => {
+
+      // // change width from the state object
+      const modalbtn: HTMLElement | null = document.getElementById(
+        `summary-card0`
+      );
+     // console.log("modalbtn", modalbtn);
+
+      if (modalbtn) {
+        setTimeout(() => {
+          const check = modalbtn.getBoundingClientRect();
+          const getHeight =check.height;
+          const setgraphHeight = getHeight - 225 ;
+          console.log("hello chart height on resize",check, getHeight, setgraphHeight);
+          setsetHeight(`${setgraphHeight}px`)
+        }, 100);
+      }
+    };
+    // set resize listener
+    window.addEventListener("resize", resizeListener);
+
+    // clean up function
+    return () => {
+      // remove resize listener
+      window.removeEventListener("resize", resizeListener);
+    };
+    // eslint-disable-next-line
+  }, []);
+
+ 
+
   const getChart = (chartType: any, index: number) => {
     // switch (chartType.name) {
     //   case "Month":
@@ -56,7 +106,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
         <span id="close" className="e-template-icon e-clear-icon" />
         <div className="e-panel-container">
           {/* <Col xs={12} md={12}> */}
-          <Card>
+          <Card id={`summary-card${index}`}>
             <Card.Body>
               <Row className="row-inner">
                 <Col xs={12} md={5}>
@@ -73,7 +123,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       message={"An error occured while fetching details "}
                     />
                   ) : (
-                    <PickupSegment index={index} data={segmentData} />
+                    <PickupSegment index={index} data={segmentData} setHeight={setHeight}/>
                   )}
                 </Col>
                 <Col xs={12} md={4}>
@@ -84,7 +134,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       message={"An error occured while fetching details "}
                     />
                   ) : (
-                    <PickupDOWOCCSegment index={index} OccData={OCCData} />
+                    <PickupDOWOCCSegment index={index} OccData={OCCData} setHeight={setHeight}/>
                   )}
                 </Col>
                 <Col xs={12} md={4}>
@@ -95,7 +145,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       message={"An error occured while fetching details "}
                     />
                   ) : (
-                    <PickupBusinessMix index={index} DowData={DowData} />
+                    <PickupBusinessMix index={index} DowData={DowData} setHeight={setHeight}/>
                   )}
                 </Col>
               </Row>

@@ -7,7 +7,7 @@ const MixedCharts = React.lazy(() =>
 
 
 const PickupSegment = (props: any) => {
-  const{index, data} = props;
+  const{index, data, setHeight} = props;
 
 
   const Charts = [
@@ -94,7 +94,8 @@ const PickupSegment = (props: any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
-                height:"200px"
+                //height:"200px"
+                height: setHeight
               }}
               charts={Charts}
             />

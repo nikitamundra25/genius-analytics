@@ -8,8 +8,11 @@ const MixedCharts = React.lazy(() =>
 
 
 const PickupBusinessMix = (props:any) => {
-  const{index, DowData} = props;
+  const{index, DowData, setHeight} = props;
 
+  console.log(setHeight, "setHeight");
+  
+  
   const labeltemplate = (args:any) => {
     return (<div  style={{fontSize: '11px', padding: '3px 3px 3px 3px' , borderRadius: '3px'}}>
       <span>{args.point.y}%</span>
@@ -109,7 +112,8 @@ const PickupBusinessMix = (props:any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
-                height:"200px"
+                height: setHeight,
+               // height:"200px"
               }}
               charts={Charts}
             />

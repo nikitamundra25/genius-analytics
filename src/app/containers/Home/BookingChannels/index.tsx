@@ -93,7 +93,7 @@ export default ({ graphdata = [] }:any) => {
                 explodeOffset: "5%",
                 explodeIndex: 0,
                 radius: "70%",
-                palettes: ["#4b90d1", "#f67b2b", "#a5a5a5", "#ffc60a"],
+                palettes: ["#4b90d1", "#f67b2b", "#a5a5a5", "#ffc60a",  "#9bbb58",],
               },
               chartComponent: {
                 enableSmartLabels: true,
