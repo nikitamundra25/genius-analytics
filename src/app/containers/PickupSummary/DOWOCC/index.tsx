@@ -7,7 +7,7 @@ const MixedCharts = React.lazy(() =>
 
 
 const PickupDOWOCCSegment = (props:any) => {
-  const{index,OccData} = props;
+  const{index,OccData, setHeight} = props;
 
   const labeltemplate = (args:any) => {
     return (<div  style={{fontSize: '11px'}}>
@@ -92,8 +92,10 @@ const PickupDOWOCCSegment = (props:any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
-                height:"200px"
+                //height:"200px"
+                height: setHeight,
               }}
+              
               charts={Charts}
             />
           </React.Suspense>
