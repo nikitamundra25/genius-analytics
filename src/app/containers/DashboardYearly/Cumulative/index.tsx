@@ -310,20 +310,190 @@ const tableData = [
   // },
 ];
 
-const pickupdata = [
-  { x: "Room Nights", y: 23 },
-  { x: "Revenue", y: 27 },
-  { x: "ADR", y: -15 },
+const pickupChartData = [
+  [],
+  [],
+  [
+    { x: "Room Nights", y: 55 },
+    { x: "ADR", y: -1 },
+    { x: "Revenue", y: -599 },
+  ],
+  [
+    { x: "Room Nights", y: -11 },
+    { x: "ADR", y: 2 },
+    { x: "Revenue", y: -3804 },
+  ],
+  [
+    { x: "Room Nights", y: 12 },
+    { x: "ADR", y: 1 },
+    { x: "Revenue", y: 7800 },
+  ],
+  [
+    { x: "Room Nights", y: 0 },
+    { x: "ADR", y: -1 },
+    { x: "Revenue", y: 3022 },
+  ],
+  [
+    { x: "Room Nights", y: 29 },
+    { x: "ADR", y: 8 },
+    { x: "Revenue", y: 1655 },
+  ],
+  [
+    { x: "Room Nights", y: 49 },
+    { x: "ADR", y: -2 },
+    { x: "Revenue", y: -2538 },
+  ],
+  [
+    { x: "Room Nights", y: 43 },
+    { x: "ADR", y: -2 },
+    { x: "Revenue", y: -2538 },
+  ],
+  [
+    { x: "Room Nights", y: 30 },
+    { x: "ADR", y: -3 },
+    { x: "Revenue", y: 6155 },
+  ],
+  [
+    { x: "Room Nights", y: 20 },
+    { x: "ADR", y: 1 },
+    { x: "Revenue", y: -1297 },
+  ],
+  [
+    { x: "Room Nights", y: 53 },
+    { x: "ADR", y: 0 },
+    { x: "Revenue", y: 7519 },
+  ],
+  [
+    { x: "Room Nights", y: 280 },
+    { x: "ADR", y: 0.7 },
+    { x: "Revenue", y: 23609 },
+  ],
 ];
 
-const mixdata = [
+
+const mixdata = [[
+  { x: "BAR", y: 26 },
+  { x: "Discount", y: 11 },
+  { x: "COR Discount", y: 12 },
+  { x: "Meetings", y: 25 },
+  { x: "Corporate", y: 16 },
+  { x: "Cor Group", y: 10 },
+  { x: "Leisure Group", y: 13 },
+  { x: "FIT", y: 6 }
+],
+[
+  { x: "BAR", y: 20 },
+  { x: "Discount", y: 14 },
+  { x: "COR Discount", y: 9 },
+  { x: "Meetings", y: 20 },
+  { x: "Corporate", y: 16 },
+  { x: "Cor Group", y: 14 },
+  { x: "Leisure Group", y: 13 },
+  { x: "FIT", y: 5 },
+],
+[
+  { x: "BAR", y: 26 },
+  { x: "Discount", y: 11 },
+  { x: "COR Discount", y: 10 },
+  { x: "Meetings", y: 20 },
+  { x: "Corporate", y: 18 },
+  { x: "Cor Group", y: 14 },
+  { x: "Leisure Group", y: 8 },
+  { x: "FIT", y: 7 },
+],
+[
+  { x: "BAR", y: 24 },
+  { x: "Discount", y: 15 },
+  { x: "COR Discount", y: 10 },
+  { x: "Meetings", y: 19 },
+  { x: "Corporate", y: 18 },
+  { x: "Cor Group", y: 12 },
+  { x: "Leisure Group", y: 12 },
+  { x: "FIT", y: 9 },
+],[
+  { x: "BAR", y: 24 },
+  { x: "Discount", y: 16 },
+  { x: "COR Discount", y: 8 },
+  { x: "Meetings", y: 19 },
+  { x: "Corporate", y: 17 },
+  { x: "Cor Group", y: 11 },
+  { x: "Leisure Group", y: 8 },
+  { x: "FIT", y: 6 },
+],[
+  { x: "BAR", y: 24 },
+  { x: "Discount", y: 19 },
+  { x: "COR Discount", y: 10 },
+  { x: "Meetings", y: 19 },
+  { x: "Corporate", y: 17 },
+  { x: "Cor Group", y: 12 },
+  { x: "Leisure Group", y: 11 },
+  { x: "FIT", y: 6 },
+],[
+  { x: "BAR", y: 24 },
+  { x: "Discount", y: 18 },
+  { x: "COR Discount", y: 10 },
+  { x: "Meetings", y: 19 },
+  { x: "Corporate", y: 20 },
+  { x: "Cor Group", y: 14 },
+  { x: "Leisure Group", y: 11 },
+  { x: "FIT", y: 5 },
+],[
   { x: "BAR", y: 23 },
-  { x: "Discount", y: 27 },
-  { x: "Corporate", y: -15 },
-  { x: "Cor Group", y: 8 },
-  { x: "Leisure Group", y: -13 },
-  { x: "FIT", y: 14 },
-];
+  { x: "Discount", y: 18 },
+  { x: "COR Discount", y: 12 },
+  { x: "Meetings", y: 29 },
+  { x: "Corporate", y: 17 },
+  { x: "Cor Group", y: 10 },
+  { x: "Leisure Group", y: 13 },
+  { x: "FIT", y: 6 },
+],[
+  { x: "BAR", y: 20 },
+  { x: "Discount", y: 11 },
+  { x: "COR Discount", y: 10 },
+  { x: "Meetings", y: 19 },
+  { x: "Corporate", y: 16 },
+  { x: "Cor Group", y: 12 },
+  { x: "Leisure Group", y: 10 },
+  { x: "FIT", y: 9 },
+],[
+  { x: "BAR", y: 26 },
+  { x: "Discount", y: 11 },
+  { x: "COR Discount", y: 11 },
+  { x: "Meetings", y: 19 },
+  { x: "Corporate", y: 17 },
+  { x: "Cor Group", y: 10 },
+  { x: "Leisure Group", y:12 },
+  { x: "FIT", y: 8 },
+],[
+  { x: "BAR", y: 20 },
+  { x: "Discount", y: 12 },
+  { x: "COR Discount", y: 8 },
+  { x: "Meetings", y: 23 },
+  { x: "Corporate", y: 16 },
+  { x: "Cor Group", y: 10 },
+  { x: "Leisure Group", y: 12 },
+  { x: "FIT", y: 5 },
+],
+[
+  { x: "BAR", y: 26 },
+  { x: "Discount", y: 11 },
+  { x: "COR Discount", y: 8 },
+  { x: "Meetings", y: 27 },
+  { x: "Corporate", y: 20 },
+  { x: "Cor Group", y: 11 },
+  { x: "Leisure Group", y: 8 },
+  { x: "FIT", y: 8 },
+],[
+  { x: "BAR", y: 24 },
+  { x: "Discount", y: 14 },
+  { x: "COR Discount", y: 10 },
+  { x: "Meetings", y: 22 },
+  { x: "Corporate", y: 17 },
+  { x: "Cor Group", y: 12 },
+  { x: "Leisure Group", y: 11 },
+  { x: "FIT", y: 7 },
+],
+]
 
 const CumulativeTable = () => {
   return (
@@ -358,9 +528,12 @@ const CumulativeTable = () => {
                           className="content-col"
                         >
                           <div className="d-flex align-items-center flex-wrap">
-                            {table.monthData && table.monthData.length
-                              ? table.monthData[index]
-                              : 0}
+                            <div className="text-col">
+                              {" "}
+                              {table.monthData && table.monthData.length
+                                ? table.monthData[index]
+                                : 0}
+                            </div>
                             <OverlayTrigger
                               key={"top"}
                               placement={"top"}
@@ -476,7 +649,7 @@ const CumulativeTable = () => {
               <thead>
                 <tr className="business-top-row">
                   <th></th>
-                  {months.map((month: string) => (
+                  {months.map((month: string, index: number) => (
                     <th key={month} className="head-col">
                       {month}
                       <br /> Actual
@@ -490,9 +663,10 @@ const CumulativeTable = () => {
                   {months.map((month: any, index: number) => (
                     <td key={`${month.type}-${index}`} className="content-col">
                       <div className="d-flex align-items-center flex-wrap">
+                        {pickupChartData[index] && pickupChartData[index].length ? 
                         <BarChartComponent
                           id={`tablebar${month.type}-${index}`}
-                          data={pickupdata}
+                          data={pickupChartData[index]}
                           height={"150px"}
                           width={"250px"}
                           chartSettings={{
@@ -516,6 +690,8 @@ const CumulativeTable = () => {
                           title={"Business Mix ADR"}
                           color="#4473c5"
                         />
+                        : <div className="bg-white"  style={{ width: "250px", height: "150px" }}
+                        ></div> }
                       </div>
                     </td>
                   ))}
@@ -528,7 +704,7 @@ const CumulativeTable = () => {
                       <div className="d-flex align-items-center flex-wrap">
                         <BarChartComponent
                           id={`tablebar2${month.type}-${index}`}
-                          data={mixdata}
+                          data={mixdata[index]}
                           height={"250px"}
                           width={"250px"}
                           chartSettings={{
