@@ -80,10 +80,10 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
     {
       dataSource: data,
       xName: "name",
-      yName: "RMS2018",
+      yName: "Rm Nts TY",
       type: "Column",
       fill: "#3d78c0",
-      name: "RMS 2018",
+      name: "Rm Nts TY",
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
@@ -100,10 +100,10 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
     {
       dataSource: data,
       xName: "name",
-      yName: "RMS2017",
+      yName: "Rm Nts LY",
       type: "Column",
       fill: "#98c0e3",
-      name: "RMS 2017",
+      name: "Rm Nts LY",
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
@@ -120,10 +120,10 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
     {
       dataSource: data,
       xName: "name",
-      yName: "ADR2018",
+      yName: "ADR TY",
       type: "Spline",
       fill: "#50aec7",
-      name: "ADR 2018",
+      name: "ADR TY",
       width: 3,
       marker: {
         visible: true,
@@ -145,10 +145,10 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
     {
       dataSource: data,
       xName: "name",
-      yName: "ADR2017",
+      yName: "ADR LY",
       type: "Spline",
       fill: "#24446e",
-      name: "ADR 2017",
+      name: "ADR LY",
       width: 3,
       marker: {
         visible: true,

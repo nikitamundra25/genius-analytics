@@ -17,8 +17,8 @@ const getMonthlyRoomTypeStatsDataLogic = createLogic({
     );
     
     const { isError, data } = await new ApiHelper().FetchFromLocalJSONFile(
-      "Dashboard",
-      "/RoomTypeStatics.json",
+      "DashboardMonthly",
+      "/MonthlyRoomTypeStats.json",
       "GET"
     );
     if (isError) {
