@@ -82,7 +82,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       yName: "OCC",
       type: "Spline",
       fill: "#4176b9",
-      name: "Budget",
+      name: "OCC",
       width: 3,
       marker: {
         visible: false,
