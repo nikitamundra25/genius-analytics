@@ -1,212 +1,36 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Card, Table } from "react-bootstrap";
-import Loader from "../../../components/Loader/Loader";
+import { useDispatch, useSelector } from "react-redux";
+import { IRootState } from "../../../../interfaces";
+import { requestMonthlyBOBData } from "../../../../actions";
+import { ErrorComponent } from "../../../components/Error";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 
 const MonthlyBOB = (props: any) => {
-  const data = [
-    {
-      title: "Business on the Books",
-      subData: [
-        {
-          title: "Room Nights",
-          data: [
-            249,
-            269,
-            293,
-            196,
-            367,
-            308,
-            277,
-            190,
-            167,
-            372,
-            217,
-            312,
-            311,
-            197,
-            329,
-            291,
-            250,
-            175,
-            251,
-            320,
-            204,
-            151,
-            233,
-            173,
-            371,
-            393,
-            277,
-            220,
-            196,
-            191,
-            185,
-          ],
-        },
-        {
-          title: "OCC%",
-          data: [
-            55,
-            92,
-            49,
-            90,
-            86,
-            70,
-            74,
-            87,
-            94,
-            74,
-            67,
-            53,
-            47,
-            70,
-            70,
-            89,
-            42,
-            46,
-            60,
-            98,
-            80,
-            88,
-            73,
-            93,
-            73,
-            94,
-            93,
-            76,
-            40,
-            49,
-            91,
-          ],
-          total: 73,
-        },
-        {
-          title: "ADR",
-          data: [
-            254,
-            219,
-            394,
-            326,
-            376,
-            201,
-            250,
-            391,
-            362,
-            374,
-            313,
-            216,
-            322,
-            283,
-            392,
-            319,
-            385,
-            208,
-            371,
-            380,
-            221,
-            338,
-            359,
-            310,
-            238,
-            297,
-            395,
-            330,
-            327,
-            425,
-            390,
-          ],
-          total: 321.5,
-        },
-      ],
-    },
-    {
-      title: "Pick up since Yesterday",
-      subData: [
-        {
-          title: "Room Nights",
-          data: [
-            39,
-            28,
-            33,
-            30,
-            49,
-            18,
-            10,
-            11,
-            10,
-            20,
-            48,
-            46,
-            46,
-            35,
-            14,
-            43,
-            15,
-            15,
-            31,
-            14,
-            49,
-            38,
-            43,
-            27,
-            11,
-            29,
-            29,
-            46,
-            21,
-            33,
-            11,
-          ],
-          total: 892,
-        },
-        {
-          title: "ADR",
-          data: [
-            8,
-            6,
-            2,
-            -1,
-            2,
-            6,
-            9,
-            -3,
-            5,
-            8,
-            2,
-            7,
-            3,
-            4,
-            -1.4,
-            7,
-            5,
-            7,
-            4,
-            7,
-            9,
-            8,
-            2 - 2.5,
-            6,
-            7,
-            2,
-            -4,
-            8,
-            2,
-            2,
-          ],
-          total: 4.1,
-        },
-      ],
-    },
-  ];
+  const dispatch = useDispatch();
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.MonthlyBOBReducer
+  );
+  useEffect(() => {
+    dispatch(requestMonthlyBOBData());
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>
       <Card>
         <Card.Body>
+        {isLoading ? (
+            <WidgetLoader />
+          ) : isError ? (
+            <ErrorComponent
+              message={"An error occured while fetching details "}
+            />
+          ) : (
           <React.Suspense
             fallback={
               <div className="card-loader">
-                <Loader />
+                <WidgetLoader />
               </div>
             }
           >
@@ -396,12 +220,12 @@ const MonthlyBOB = (props: any) => {
                         <span>30 Nov</span>
                       </div>
                     </th>
-                    {/* <th className='date-col weekend-bg'>
-                        <div className='date-div'>
-                          <span>Sat</span>
-                          <span>31 Nov</span>
-                        </div>
-                      </th> */}
+                    <th className="date-col weekend-bg">
+                      <div className="date-div">
+                        <span>Sat</span>
+                        <span>31 Nov</span>
+                      </div>
+                    </th>
                     <th>Total</th>
                   </tr>
                   {/* <tr>
@@ -416,387 +240,51 @@ const MonthlyBOB = (props: any) => {
                     </tr> */}
                 </thead>
                 <tbody>
-                {data && data.length
-                    ? data.map(( list: any, index: number) => {
+                  {data && data.length
+                    ? data.map((list: any, index: number) => {
                         return (
                           <>
-                           {list.subData.map((key: any, ind: number) => {
-                                return (
-                            <tr>
-                              <td
-                                rowSpan={3}
-                                className="title-col bg-1 text-center"
-                              >
-                                {list.title}
-                              </td>
-                                <td className="title-col white-nowrap">
-                                  {key.title}{" "}
-                                </td>
-                                {key.data.map((data: any, i: number) => {
-                                  return (
-                                    <td className="content-col">{data} </td>
-                                  );
-                                })}
-                            </tr>
-                            );
-                              })}
+                            {list.subData.map((key: any, ind: number) => {
+                              return (
+                                <tr key={ind}>
+                                  {ind === 0 ? (
+                                    <td
+                                      rowSpan={list.subData.length}
+                                      className="title-col bg-1 text-center"
+                                    >
+                                      {list.title}
+                                    </td>
+                                  ) : null}
+                                  <td className="title-col white-nowrap">
+                                    {key.title}{" "}
+                                  </td>
+                                  {key.data.map((data: any, i: number) => {
+                                    return (
+                                      <td
+                                        className={`content-col ${
+                                          parseInt(data.num) < 0
+                                            ? "text-danger"
+                                            : ""
+                                        } ${data.isWeekend ? "bg-2" : ""} `}
+                                        key={i}
+                                      >
+                                        {data.num}{" "}
+                                      </td>
+                                    );
+                                  })}
+                                  <td className="total-col  "> {key.total}</td>
+                                </tr>
+                              );
+                            })}
                           </>
                         );
                       })
                     : null}
-
-
-                  {/* <tr>
-                    <td rowSpan={2} className="title-col bg-1 text-center">
-                      Pick up since Yesterday
-                    </td>
-                    <td className="title-col white-nowrap">Room Nights</td>
-                    <td className="content-col">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col  ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  bg-2 text-danger">-25</td>
-
-                    <td className="total-col  ">4960</td>
-                  </tr>
-                  <tr>
-                    <td className="title-col white-nowrap">ADR</td>
-                    <td className="content-col">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col  ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  bg-2 text-danger">-25</td>
-
-                    <td className="total-col  ">4960</td>
-                  </tr>
-
-                  <tr>
-                    <td rowSpan={3} className="title-col bg-1 text-center">
-                      Availability & Rates
-                    </td>
-                    <td className="title-col white-nowrap">Available Rooms</td>
-                    <td className="content-col">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col  ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  bg-2 text-danger">-25</td>
-                  </tr>
-                  <tr>
-                    <td className="title-col white-nowrap">Selling Rate</td>
-                    <td className="content-col">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col  ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  bg-2 text-danger">-25</td>
-                  </tr>
-                  <tr>
-                    <td className="title-col white-nowrap">Market Rate</td>
-                    <td className="content-col">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col  ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  bg-2 text-danger">-25</td>
-                  </tr>
-
-                  <tr>
-                    <td rowSpan={5} className="title-col bg-1 text-center">
-                      Room Type Availability{" "}
-                    </td>
-                    <td className="title-col white-nowrap">Classic</td>
-                    <td className="content-col">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col  ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  bg-2 text-danger">-25</td>
-                  </tr>
-                  <tr>
-                    <td className="title-col white-nowrap">Executive</td>
-                    <td className="content-col">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col  ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  bg-2 text-danger">-25</td>
-                  </tr>
-                  <tr>
-                    <td className="title-col white-nowrap">Delux</td>
-                    <td className="content-col">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col  ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  bg-2 text-danger">-25</td>
-                  </tr>
-
-                  <tr>
-                    <td className="title-col white-nowrap">Junior Suite</td>
-                    <td className="content-col">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col  ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  bg-2 text-danger">-25</td>
-                  </tr>
-
-                  <tr>
-                    <td className="title-col white-nowrap">Suite</td>
-                    <td className="content-col">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  text-danger">-25</td>
-                    <td className="content-col  ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">18</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col bg-2">3</td>
-                    <td className="content-col bg-2">8</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col text-danger">-25</td>
-                    <td className="content-col ">55</td>
-                    <td className="content-col ">13</td>
-                    <td className="content-col  bg-2 text-danger">-25</td>
-                  </tr> */}
                 </tbody>
               </Table>
             </div>
           </React.Suspense>
+          )}
         </Card.Body>
       </Card>
     </>
