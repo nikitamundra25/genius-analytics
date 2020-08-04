@@ -30,6 +30,7 @@ import { PickupSummaryDowDataLogics } from "./pickupSummaryDowData";
 import { PickupSummaryOCCLogics } from "./pickupSummaryOCC";
 import { PickupSummarySegmentLogics } from "./pickupSummarySegmentData";
 import { PickupDetailTableLogics } from "./PickupDetailTable";
+import { MonthlyBOBLogics } from "./MonthlyBOB";
 
 export const redirectToLogic = createLogic({
   type: "REDIRET_TO",
@@ -75,5 +76,6 @@ export const AllLogics: Logic[] | any = [
   ...PickupSummaryOCCLogics,
   ...PickupSummarySegmentLogics,
   ...PickupDetailTableLogics,
+  ...MonthlyBOBLogics,
   redirectToLogic,
 ];

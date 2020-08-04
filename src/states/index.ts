@@ -33,3 +33,4 @@ export * from "./pickupSummaryDowData";
 export * from "./pickupSummaryOCC";
 export * from "./pickupSummarySegmentData";
 export * from "./PickupDetailTable";
+export * from "./MonthlyBOB";

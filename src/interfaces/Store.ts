@@ -41,5 +41,6 @@ export interface IRootState {
   pickupSummarySegmentReducer: IBookingChannelModel,
   pickupSummaryOCCReducer: IBookingChannelModel,
   pickupSummaryDowDataReducer: IBookingChannelModel,
-  pickupDetailTableReducer: IBookingChannelModel
+  pickupDetailTableReducer: IBookingChannelModel,
+  MonthlyBOBReducer: IBookingChannelModel
 }
