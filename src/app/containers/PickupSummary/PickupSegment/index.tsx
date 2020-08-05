@@ -13,6 +13,8 @@ const MixedCharts = React.lazy(() =>
 
 const PickupSegment = (props: any) => {
   const{index,setHeight} = props;
+  const setHeight1 = setHeight  + 140;
+  
   const dispatch = useDispatch();
   // const [setHeight, setsetHeight] = React.useState<string>("250px");
 
@@ -109,7 +111,7 @@ const PickupSegment = (props: any) => {
                 },
                 tooltip: { enable: true },
                 //height:"200px"
-                height: setHeight
+                height: `${setHeight1}px`
               }}
               charts={Charts}
             />

@@ -8,7 +8,7 @@ import TableForm from "./MonthlyTable";
 
 const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
 
-  const [setHeight, setsetHeight] = React.useState<string>("250px");
+  const [setHeight, setsetHeight] = React.useState<number>(250);
 
   useEffect(() => {
     const modalbtn: HTMLElement | null = document.getElementById(
@@ -19,7 +19,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
         const check = modalbtn.getBoundingClientRect();
         const getHeight = check.height;
         const setgraphHeight = getHeight - 225;
-        setsetHeight(`${setgraphHeight}px`);
+        setsetHeight(setgraphHeight);
       }, 100);
     }
     // eslint-disable-next-line
@@ -38,13 +38,8 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
           const check = modalbtn.getBoundingClientRect();
           const getHeight = check.height;
           const setgraphHeight = getHeight - 225;
-          console.log(
-            "hello chart height on resize",
-            check,
-            getHeight,
-            setgraphHeight
-          );
-          setsetHeight(`${setgraphHeight}px`);
+        
+          setsetHeight(setgraphHeight);
         }, 100);
       }
     };
@@ -80,24 +75,25 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
               <Row className="row-inner">
                 <Col xs={12} md={5}>
                   <div className="sub-title text-left">{chartType.name}</div>
+                  <div>
+                    <PickupSegment index={index} setHeight={setHeight} />
+                  </div>
                 </Col>
                 <Col xs={12} md={7}>
                   <TableForm index={index} tabledata={chartType.tabledata} />
+                  <Row className="row-inner">
+                    <Col xs={12} md={6} >
+                      <PickupDOWOCCSegment index={index} setHeight={setHeight} />
+                    </Col>
+                    <Col xs={12} md={6} >
+                      <PickupBusinessMix
+                        index={index}
+                        setHeight={setHeight}
+                      />
+                    </Col>
+                  </Row>
                 </Col>
-                <Col xs={12} md={4}>
-                  <PickupSegment index={index} setHeight={setHeight} />
-                </Col>
-                <Col xs={12} md={4}>
-                  <PickupDOWOCCSegment index={index} setHeight={setHeight} />
-                </Col>
-                <Col xs={12} md={4}>
-                
-                    <PickupBusinessMix
-                      index={index}
-                      setHeight={setHeight}
-                    />
-                 
-                </Col>
+               
               </Row>
             </Card.Body>
           </Card>

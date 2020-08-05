@@ -15,33 +15,38 @@
     
   }
   .variance-col{
-    background: #0f233e;
+    background: #6ea0b7;
     color:#fff;
     text-align:center;
     font-weight: 600;
   }
   .head-col{
-    background: #0f233e;
+    background: #0082b3;
     text-align:center;
     color:#fff;
     font-weight: 500;
+    //padding:8px 5px;
   }
   .title-col{
-    background: #0f233e;
+    background: #6ea0b7;
     color:#fff;
     text-align:left;
     font-weight: 600;
+    // &.bg-1{
+    //   background:#203763;
+    // }
   }
   
   .content-col{
-    background: #f7f7f7;
+    background: #e1eef4;
     color:#000;
     text-align:center;
     font-weight: 500;
     &.bg-2{
-      background: #f2f2f2;
+      background: #f7f6f2;
     }
   }
+
 }
 
 
