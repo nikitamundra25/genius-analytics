@@ -1,7 +1,8 @@
 {
     "data": [
       { "name": "Business on the Books", "id": 1 , "graphdata":[] },
-      { "name": "Monthly Daily Occupacy & ADR", "id": 2 , "graphdata":[
+      { "name": "Monthly Daily Occupacy & ADR", "id": 2 , 
+        "graphdata":[
         {
           "data": [
             {
@@ -209,7 +210,8 @@
           ]
         }
       ]},
-      { "name": "Daily Occupacy Vs. BUD Vs. LY", "id": 3 , "graphdata":[
+      { "name": "Daily Occupacy Vs. BUD Vs. LY", "id": 3 ,
+         "graphdata":[
         {
           "name": "1",
           "OCC": 50,

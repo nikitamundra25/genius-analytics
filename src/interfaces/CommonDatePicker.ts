@@ -1,4 +1,4 @@
-export interface IMonthPickerProps  {
+    export interface IMonthPickerProps  {
     show: boolean;
     startDate: Date 
     handleClose : () => void;
