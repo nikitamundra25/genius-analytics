@@ -1,1985 +1,407 @@
 {
     "data": [
-      {
-        "name": "January",
-        "id": 1,
-        "idNum": "one",
-        "pivotData": [
-          { "Amount": "", "Month": "Mon 1 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 2 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 3 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 4 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 5 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 6 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 7 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 8 Oct", "Title": "BAR" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 12 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 15 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 22 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 4, "Month": "Mon 23 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 24 Oct", "Title": "Leisure Break" },
-          { "Amount": 2, "Month": "Mon 25 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 31 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 13 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Corporate" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 16 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 20 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 21 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 22 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 23 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 24 Oct", "Title": "Corporate" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 28 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 9 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 14 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Consortia" },
-          { "Amount": -1, "Month": "Mon 20 Oct", "Title": "Consortia" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 27 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 28 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 29 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Promotion" },
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Promotion" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Groups" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "OTAs" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "OTAs" },
-          { "Amount": 7, "Month": "Mon 15 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 16 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 20 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 21 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 23 Oct", "Title": "OTAs" },
-  
-          { "Amount": -1, "Month": "Mon 26 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "OTAs" },
-          { "Amount": -1, "Month": "Mon 31 Oct", "Title": "OTAs" },
-  
-          { "Amount": -3, "Month": "Mon 11 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "FIT" },
-          { "Amount": 3, "Month": "Mon 15 Oct", "Title": "FIT" },
-          { "Amount": 2, "Month": "Mon 16 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 20 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 21 Oct", "Title": "FIT" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "FIT" }
-        ]
-      },
-      {
-        "name": "February",
-        "id": 2,
-        "idNum": "two",
-        "pivotData": [
-          { "Amount": "", "Month": "Mon 1 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 2 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 3 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 4 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 5 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 6 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 7 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 8 Oct", "Title": "BAR" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 12 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 15 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 22 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 4, "Month": "Mon 23 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 24 Oct", "Title": "Leisure Break" },
-          { "Amount": 2, "Month": "Mon 25 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 31 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 13 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Corporate" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 16 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 20 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 21 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 22 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 23 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 24 Oct", "Title": "Corporate" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 28 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 9 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 14 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Consortia" },
-          { "Amount": -1, "Month": "Mon 20 Oct", "Title": "Consortia" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 27 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 28 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 29 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Promotion" },
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Promotion" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Groups" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "OTAs" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "OTAs" },
-          { "Amount": 7, "Month": "Mon 15 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 16 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 20 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 21 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 23 Oct", "Title": "OTAs" },
-  
-          { "Amount": -1, "Month": "Mon 26 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "OTAs" },
-          { "Amount": -1, "Month": "Mon 31 Oct", "Title": "OTAs" },
-  
-          { "Amount": -3, "Month": "Mon 11 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "FIT" },
-          { "Amount": 3, "Month": "Mon 15 Oct", "Title": "FIT" },
-          { "Amount": 2, "Month": "Mon 16 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 20 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 21 Oct", "Title": "FIT" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "FIT" }
-        ]
-      },
-      {
-        "name": "March",
-        "id": 3,
-        "idNum": "three",
-        "pivotData": [
-          { "Amount": "", "Month": "Mon 1 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 2 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 3 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 4 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 5 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 6 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 7 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 8 Oct", "Title": "BAR" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 12 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 15 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 22 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 4, "Month": "Mon 23 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 24 Oct", "Title": "Leisure Break" },
-          { "Amount": 2, "Month": "Mon 25 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 31 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 13 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Corporate" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 16 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 20 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 21 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 22 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 23 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 24 Oct", "Title": "Corporate" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 28 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 9 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 14 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Consortia" },
-          { "Amount": -1, "Month": "Mon 20 Oct", "Title": "Consortia" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 27 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 28 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 29 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Promotion" },
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Promotion" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Groups" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "OTAs" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "OTAs" },
-          { "Amount": 7, "Month": "Mon 15 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 16 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 20 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 21 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 23 Oct", "Title": "OTAs" },
-  
-          { "Amount": -1, "Month": "Mon 26 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "OTAs" },
-          { "Amount": -1, "Month": "Mon 31 Oct", "Title": "OTAs" },
-  
-          { "Amount": -3, "Month": "Mon 11 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "FIT" },
-          { "Amount": 3, "Month": "Mon 15 Oct", "Title": "FIT" },
-          { "Amount": 2, "Month": "Mon 16 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 20 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 21 Oct", "Title": "FIT" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "FIT" }
-        ]
-      },
-      {
-        "name": "April",
-        "id": 4,
-        "idNum": "four",
-        "pivotData": [
-          { "Amount": "", "Month": "Mon 1 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 2 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 3 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 4 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 5 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 6 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 7 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 8 Oct", "Title": "BAR" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 12 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 15 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 22 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 4, "Month": "Mon 23 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 24 Oct", "Title": "Leisure Break" },
-          { "Amount": 2, "Month": "Mon 25 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 31 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 13 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Corporate" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 16 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 20 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 21 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 22 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 23 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 24 Oct", "Title": "Corporate" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 28 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 9 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 14 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Consortia" },
-          { "Amount": -1, "Month": "Mon 20 Oct", "Title": "Consortia" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 27 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 28 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 29 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Promotion" },
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Promotion" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Groups" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "OTAs" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "OTAs" },
-          { "Amount": 7, "Month": "Mon 15 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 16 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 20 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 21 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 23 Oct", "Title": "OTAs" },
-  
-          { "Amount": -1, "Month": "Mon 26 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "OTAs" },
-          { "Amount": -1, "Month": "Mon 31 Oct", "Title": "OTAs" },
-  
-          { "Amount": -3, "Month": "Mon 11 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "FIT" },
-          { "Amount": 3, "Month": "Mon 15 Oct", "Title": "FIT" },
-          { "Amount": 2, "Month": "Mon 16 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 20 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 21 Oct", "Title": "FIT" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "FIT" }
-        ]
-      },
-      {
-        "name": "May",
-        "id": 5,
-        "idNum": "five",
-        "pivotData": [
-          { "Amount": "", "Month": "Mon 1 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 2 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 3 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 4 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 5 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 6 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 7 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 8 Oct", "Title": "BAR" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 12 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 15 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 22 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 4, "Month": "Mon 23 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 24 Oct", "Title": "Leisure Break" },
-          { "Amount": 2, "Month": "Mon 25 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 31 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 13 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Corporate" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 16 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 20 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 21 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 22 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 23 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 24 Oct", "Title": "Corporate" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 28 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 9 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 14 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Consortia" },
-          { "Amount": -1, "Month": "Mon 20 Oct", "Title": "Consortia" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 27 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 28 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 29 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Promotion" },
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Promotion" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Groups" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "OTAs" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "OTAs" },
-          { "Amount": 7, "Month": "Mon 15 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 16 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 20 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 21 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 23 Oct", "Title": "OTAs" },
-  
-          { "Amount": -1, "Month": "Mon 26 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "OTAs" },
-          { "Amount": -1, "Month": "Mon 31 Oct", "Title": "OTAs" },
-  
-          { "Amount": -3, "Month": "Mon 11 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "FIT" },
-          { "Amount": 3, "Month": "Mon 15 Oct", "Title": "FIT" },
-          { "Amount": 2, "Month": "Mon 16 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 20 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 21 Oct", "Title": "FIT" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "FIT" }
-        ]
-      },
-      {
-        "name": "June",
-        "id": 6,
-        "idNum": "six",
-        "pivotData": [
-          { "Amount": "", "Month": "Mon 1 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 2 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 3 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 4 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 5 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 6 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 7 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 8 Oct", "Title": "BAR" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 12 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 15 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 22 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 4, "Month": "Mon 23 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 24 Oct", "Title": "Leisure Break" },
-          { "Amount": 2, "Month": "Mon 25 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 31 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 13 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Corporate" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 16 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 20 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 21 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 22 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 23 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 24 Oct", "Title": "Corporate" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 28 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 9 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 14 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Consortia" },
-          { "Amount": -1, "Month": "Mon 20 Oct", "Title": "Consortia" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 27 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 28 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 29 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Promotion" },
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Promotion" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Groups" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "OTAs" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "OTAs" },
-          { "Amount": 7, "Month": "Mon 15 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 16 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 20 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 21 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 23 Oct", "Title": "OTAs" },
-  
-          { "Amount": -1, "Month": "Mon 26 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "OTAs" },
-          { "Amount": -1, "Month": "Mon 31 Oct", "Title": "OTAs" },
-  
-          { "Amount": -3, "Month": "Mon 11 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "FIT" },
-          { "Amount": 3, "Month": "Mon 15 Oct", "Title": "FIT" },
-          { "Amount": 2, "Month": "Mon 16 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 20 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 21 Oct", "Title": "FIT" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "FIT" }
-        ]
-      },
-      {
-        "name": "July",
-        "id": 7,
-        "idNum": "seven",
-        "pivotData": [
-          { "Amount": "", "Month": "Mon 1 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 2 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 3 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 4 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 5 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 6 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 7 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 8 Oct", "Title": "BAR" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 12 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 15 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 22 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 4, "Month": "Mon 23 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 24 Oct", "Title": "Leisure Break" },
-          { "Amount": 2, "Month": "Mon 25 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 31 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 13 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Corporate" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 16 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 20 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 21 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 22 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 23 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 24 Oct", "Title": "Corporate" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 28 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 9 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 14 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Consortia" },
-          { "Amount": -1, "Month": "Mon 20 Oct", "Title": "Consortia" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 27 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 28 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 29 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Promotion" },
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Promotion" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Groups" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "OTAs" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "OTAs" },
-          { "Amount": 7, "Month": "Mon 15 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 16 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 20 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 21 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 23 Oct", "Title": "OTAs" },
-  
-          { "Amount": -1, "Month": "Mon 26 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "OTAs" },
-          { "Amount": -1, "Month": "Mon 31 Oct", "Title": "OTAs" },
-  
-          { "Amount": -3, "Month": "Mon 11 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "FIT" },
-          { "Amount": 3, "Month": "Mon 15 Oct", "Title": "FIT" },
-          { "Amount": 2, "Month": "Mon 16 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 20 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 21 Oct", "Title": "FIT" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "FIT" }
-        ]
-      },
-      {
-        "name": "August",
-        "id": 8,
-        "idNum": "eigth",
-        "pivotData": [
-          { "Amount": "", "Month": "Mon 1 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 2 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 3 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 4 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 5 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 6 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 7 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 8 Oct", "Title": "BAR" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 12 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 15 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 22 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 4, "Month": "Mon 23 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 24 Oct", "Title": "Leisure Break" },
-          { "Amount": 2, "Month": "Mon 25 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 31 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 13 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Corporate" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 16 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 20 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 21 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 22 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 23 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 24 Oct", "Title": "Corporate" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 28 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 9 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 14 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Consortia" },
-          { "Amount": -1, "Month": "Mon 20 Oct", "Title": "Consortia" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 27 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 28 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 29 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Promotion" },
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Promotion" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Groups" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "OTAs" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "OTAs" },
-          { "Amount": 7, "Month": "Mon 15 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 16 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 20 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 21 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 23 Oct", "Title": "OTAs" },
-  
-          { "Amount": -1, "Month": "Mon 26 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "OTAs" },
-          { "Amount": -1, "Month": "Mon 31 Oct", "Title": "OTAs" },
-  
-          { "Amount": -3, "Month": "Mon 11 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "FIT" },
-          { "Amount": 3, "Month": "Mon 15 Oct", "Title": "FIT" },
-          { "Amount": 2, "Month": "Mon 16 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 20 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 21 Oct", "Title": "FIT" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "FIT" }
-        ]
-      },
-      {
-        "name": "September",
-        "id": 9,
-        "idNum": "nine",
-        "pivotData": [
-          { "Amount": "", "Month": "Mon 1 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 2 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 3 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 4 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 5 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 6 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 7 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 8 Oct", "Title": "BAR" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 12 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 15 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 22 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 4, "Month": "Mon 23 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 24 Oct", "Title": "Leisure Break" },
-          { "Amount": 2, "Month": "Mon 25 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 31 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 13 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Corporate" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 16 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 20 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 21 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 22 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 23 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 24 Oct", "Title": "Corporate" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 28 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 9 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 14 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Consortia" },
-          { "Amount": -1, "Month": "Mon 20 Oct", "Title": "Consortia" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 27 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 28 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 29 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Promotion" },
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Promotion" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Groups" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "OTAs" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "OTAs" },
-          { "Amount": 7, "Month": "Mon 15 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 16 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 20 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 21 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 23 Oct", "Title": "OTAs" },
-  
-          { "Amount": -1, "Month": "Mon 26 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "OTAs" },
-          { "Amount": -1, "Month": "Mon 31 Oct", "Title": "OTAs" },
-  
-          { "Amount": -3, "Month": "Mon 11 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "FIT" },
-          { "Amount": 3, "Month": "Mon 15 Oct", "Title": "FIT" },
-          { "Amount": 2, "Month": "Mon 16 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 20 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 21 Oct", "Title": "FIT" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "FIT" }
-        ]
-      },
-      {
-        "name": "Octobar",
-        "id": 10,
-        "idNum": "ten",
-        "pivotData": [
-          { "Amount": "", "Month": "Mon 1 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 2 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 3 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 4 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 5 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 6 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 7 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 8 Oct", "Title": "BAR" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 12 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 15 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 22 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 4, "Month": "Mon 23 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 24 Oct", "Title": "Leisure Break" },
-          { "Amount": 2, "Month": "Mon 25 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 31 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 13 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Corporate" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 16 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 20 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 21 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 22 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 23 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 24 Oct", "Title": "Corporate" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 28 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 9 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 14 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Consortia" },
-          { "Amount": -1, "Month": "Mon 20 Oct", "Title": "Consortia" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 27 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 28 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 29 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Promotion" },
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Promotion" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Groups" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "OTAs" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "OTAs" },
-          { "Amount": 7, "Month": "Mon 15 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 16 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 20 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 21 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 23 Oct", "Title": "OTAs" },
-  
-          { "Amount": -1, "Month": "Mon 26 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "OTAs" },
-          { "Amount": -1, "Month": "Mon 31 Oct", "Title": "OTAs" },
-  
-          { "Amount": -3, "Month": "Mon 11 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "FIT" },
-          { "Amount": 3, "Month": "Mon 15 Oct", "Title": "FIT" },
-          { "Amount": 2, "Month": "Mon 16 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 20 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 21 Oct", "Title": "FIT" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "FIT" }
-        ]
-      },
-      {
-        "name": "November",
-        "id": 11,
-        "idNum": "eleven",
-        "pivotData": [
-          { "Amount": "", "Month": "Mon 1 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 2 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 3 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 4 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 5 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 6 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 7 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 8 Oct", "Title": "BAR" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 12 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 15 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 22 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 4, "Month": "Mon 23 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 24 Oct", "Title": "Leisure Break" },
-          { "Amount": 2, "Month": "Mon 25 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 31 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 13 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Corporate" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 16 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 20 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 21 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 22 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 23 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 24 Oct", "Title": "Corporate" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 28 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 9 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 14 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Consortia" },
-          { "Amount": -1, "Month": "Mon 20 Oct", "Title": "Consortia" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 27 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 28 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 29 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Promotion" },
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Promotion" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Groups" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "OTAs" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "OTAs" },
-          { "Amount": 7, "Month": "Mon 15 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 16 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 20 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 21 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 23 Oct", "Title": "OTAs" },
-  
-          { "Amount": -1, "Month": "Mon 26 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "OTAs" },
-          { "Amount": -1, "Month": "Mon 31 Oct", "Title": "OTAs" },
-  
-          { "Amount": -3, "Month": "Mon 11 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "FIT" },
-          { "Amount": 3, "Month": "Mon 15 Oct", "Title": "FIT" },
-          { "Amount": 2, "Month": "Mon 16 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 20 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 21 Oct", "Title": "FIT" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "FIT" }
-        ]
-      },
-      {
-        "name": "December",
-        "id": 12,
-        "idNum": "twelve",
-        "pivotData": [
-          { "Amount": "", "Month": "Mon 1 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 2 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 3 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 4 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 5 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 6 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 7 Oct", "Title": "BAR" },
-          { "Amount": "", "Month": "Mon 8 Oct", "Title": "BAR" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 12 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "BAR" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "BAR" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "BAR" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "BAR" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 15 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 22 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 4, "Month": "Mon 23 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 24 Oct", "Title": "Leisure Break" },
-          { "Amount": 2, "Month": "Mon 25 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Leisure Break" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Leisure Break" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Leisure Break" },
-          { "Amount": 3, "Month": "Mon 31 Oct", "Title": "Leisure Break" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 13 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Corporate" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Corporate" },
-          { "Amount": -1, "Month": "Mon 16 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 20 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 21 Oct", "Title": "Corporate" },
-          { "Amount": 5, "Month": "Mon 22 Oct", "Title": "Corporate" },
-          { "Amount": 3, "Month": "Mon 23 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 24 Oct", "Title": "Corporate" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Corporate" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 28 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 29 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "Corporate" },
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Corporate" },
-  
-          { "Amount": 1, "Month": "Mon 9 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 14 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 15 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Consortia" },
-          { "Amount": -1, "Month": "Mon 20 Oct", "Title": "Consortia" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Consortia" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Consortia" },
-          { "Amount": 1, "Month": "Mon 27 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 28 Oct", "Title": "Consortia" },
-          { "Amount": 2, "Month": "Mon 29 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Consortia" },
-  
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "Promotion" },
-          { "Amount": 1, "Month": "Mon 11 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Promotion" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Promotion" },
-  
-          { "Amount": 1, "Month": "Mon 31 Oct", "Title": "Promotion" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 19 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 20 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 21 Oct", "Title": "Groups" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "Groups" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "Groups" },
-  
-          { "Amount": -1, "Month": "Mon 9 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 10 Oct", "Title": "OTAs" },
-  
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 13 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 14 Oct", "Title": "OTAs" },
-          { "Amount": 7, "Month": "Mon 15 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 16 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 20 Oct", "Title": "OTAs" },
-          { "Amount": 2, "Month": "Mon 21 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 22 Oct", "Title": "OTAs" },
-          { "Amount": 1, "Month": "Mon 23 Oct", "Title": "OTAs" },
-  
-          { "Amount": -1, "Month": "Mon 26 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "OTAs" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "OTAs" },
-  
-          { "Amount": 1, "Month": "Mon 30 Oct", "Title": "OTAs" },
-          { "Amount": -1, "Month": "Mon 31 Oct", "Title": "OTAs" },
-  
-          { "Amount": -3, "Month": "Mon 11 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 12 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 13 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 14 Oct", "Title": "FIT" },
-          { "Amount": 3, "Month": "Mon 15 Oct", "Title": "FIT" },
-          { "Amount": 2, "Month": "Mon 16 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 17 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 18 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 19 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 20 Oct", "Title": "FIT" },
-          { "Amount": 1, "Month": "Mon 21 Oct", "Title": "FIT" },
-  
-          { "Amount": 0, "Month": "Mon 26 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 27 Oct", "Title": "FIT" },
-          { "Amount": 0, "Month": "Mon 28 Oct", "Title": "FIT" }
-        ]
-      }
-    ]
-  }
-  
+        {
+          "title": "Mon 01 Oct",
+          "barValue": "",
+          "leisureBreak": "",
+          "corporate": "",
+          "consortia": "",
+          "promotions": "",
+          "groups":"",
+          "ota":"",
+          "fit":"",
+          "total":"",
+          "isWeekend":false
+        },
+        {
+          "title": "Tue 02 Oct",
+          "barValue": "",
+          "leisureBreak": "",
+          "corporate": "",
+          "consortia": "",
+          "promotions": "",
+          "groups":"",
+          "ota":"",
+          "fit":"",
+          "total":"",
+          "isWeekend":false
+        },
+        {
+          "title": "Wed 03 Oct",
+          "barValue": "",
+          "leisureBreak": "",
+          "corporate": "",
+          "consortia": "",
+          "promotions": "",
+          "groups":"",
+          "ota":"",
+          "fit":"",
+          "total":"",
+          "isWeekend":false
+        },
+        {
+          "title": "Thu 04 Oct",
+          "barValue": "",
+          "leisureBreak": "",
+          "corporate": "",
+          "consortia": "",
+          "promotions": "",
+          "groups":"",
+          "ota":"",
+          "fit":"",
+          "total":"",
+          "isWeekend":false
+        },
+        {
+          "title": "Fri 05 Oct",
+          "barValue": "",
+          "leisureBreak": "",
+          "corporate": "",
+          "consortia": "",
+          "promotions": "",
+          "groups":"",
+          "ota":"",
+          "fit":"",
+          "total":"",
+          "isWeekend":true
+        },
+        {
+          "title": "Sat 06 Oct",
+          "barValue": "",
+          "leisureBreak": "",
+          "corporate": "",
+          "consortia": "",
+          "promotions": "",
+          "groups":"",
+          "ota":"",
+          "fit":"",
+          "total":"",
+          "isWeekend":true
+        },
+        {
+          "title": "Sun 07 Oct",
+          "barValue": "",
+          "leisureBreak": "",
+          "corporate": "",
+          "consortia": "",
+          "promotions": "",
+          "groups":"",
+          "ota":"",
+          "fit":"",
+          "total":"",
+          "isWeekend":true
+        },
+        {
+          "title": "Mon 08 Oct",
+          "barValue": "-1",
+          "leisureBreak": "",
+          "corporate": "-1",
+          "consortia": "1",
+          "promotions": "",
+          "groups":"",
+          "ota":"-1",
+          "fit":"",
+          "total":"-2",
+          "isWeekend":false
+        },
+        {
+          "title": "Tue 09 Oct",
+          "barValue": "1",
+          "leisureBreak": "",
+          "corporate": "",
+          "consortia": "1",
+          "promotions": "1",
+          "groups":"",
+          "ota":"1",
+          "fit":"",
+          "total":"4",
+          "isWeekend":false
+        },
+        {
+          "title": "Wed 10 Oct",
+          "barValue": "",
+          "leisureBreak": "",
+          "corporate": "1",
+          "consortia": "",
+          "promotions": "1",
+          "groups":"",
+          "ota":"",
+          "fit":"-3",
+          "total":"-1",
+          "isWeekend":false
+        },
+        {
+          "title": "Thu 11 Oct",
+          "barValue": "1",
+          "leisureBreak": "0",
+          "corporate": "0",
+          "consortia": "0",
+          "promotions": "0",
+          "groups":"0",
+          "ota":"0",
+          "fit":"0",
+          "total":"1",
+          "isWeekend":false
+        },
+        {
+          "title": "Fri 12 Oct",
+          "barValue": "1",
+          "leisureBreak": "0",
+          "corporate": "-1",
+          "consortia": "1",
+          "promotions": "0",
+          "groups":"0",
+          "ota":"1",
+          "fit":"0",
+          "total":"2",
+          "isWeekend":true
+        },
+        {
+          "title": "Sat 13 Oct",
+          "barValue": "1",
+          "leisureBreak": "0",
+          "corporate": "0",
+          "consortia": "2",
+          "promotions": "0",
+          "groups":"0",
+          "ota":"1",
+          "fit":"0",
+          "total":"4",
+          "isWeekend":true
+        },
+        {
+          "title": "Sun 14 Oct",
+          "barValue": "1",
+          "leisureBreak": "0",
+          "corporate": "0",
+          "consortia": "2",
+          "promotions": "0",
+          "groups":"0",
+          "ota":"1",
+          "fit":"0",
+          "total":"4",
+          "isWeekend":true
+        },
+        {
+          "title": "Mon 15 Oct",
+          "barValue": "",
+          "leisureBreak": "1",
+          "corporate": "2",
+          "consortia": "3",
+          "promotions": "",
+          "groups":"",
+          "ota":"7",
+          "fit":"3",
+          "total":"15",
+          "isWeekend":false
+        },
+        {
+          "title": "Tue 16 Oct",
+          "barValue": "",
+          "leisureBreak": "",
+          "corporate": "-1",
+          "consortia": "",
+          "promotions": "",
+          "groups":"",
+          "ota":"1",
+          "fit":"2",
+          "total":"2",
+          "isWeekend":false
+        },
+        {
+          "title": "Wed 17 Oct",
+          "barValue": "1",
+          "leisureBreak": "",
+          "corporate": "",
+          "consortia": "",
+          "promotions": "",
+          "groups":"",
+          "ota":"",
+          "fit":"1",
+          "total":"2",
+          "isWeekend":false
+        },
+        {
+          "title": "Thu 18 Oct",
+          "barValue": "1",
+          "leisureBreak": "",
+          "corporate": "",
+          "consortia": "",
+          "promotions": "",
+          "groups":"",
+          "ota":"1",
+          "fit":"1",
+          "total":"3",
+          "isWeekend":false
+        },
+        {
+          "title": "Fri 19 Oct",
+          "barValue": "1",
+          "leisureBreak": "0",
+          "corporate": "1",
+          "consortia": "0",
+          "promotions": "0",
+          "groups":"0",
+          "ota":"1",
+          "fit":"1",
+          "total":"4",
+          "isWeekend":true
+        },
+        {
+          "title": "Sat 20 Oct",
+          "barValue": "0",
+          "leisureBreak": "0",
+          "corporate": "3",
+          "consortia": "-1",
+          "promotions": "1",
+          "groups":"0",
+          "ota":"0",
+          "fit":"2",
+          "total":"5",
+          "isWeekend":true
+        },
+        {
+          "title": "Sun 21 Oct",
+          "barValue": "0",
+          "leisureBreak": "0",
+          "corporate": "5",
+          "consortia": "0",
+          "promotions": "0",
+          "groups":"0",
+          "ota":"2",
+          "fit":"1",
+          "total":"8",
+          "isWeekend":true
+        },
+        {
+          "title": "Mon 22 Oct",
+          "barValue": "1",
+          "leisureBreak": "3",
+          "corporate": "5",
+          "consortia": "",
+          "promotions": "",
+          "groups":"",
+          "ota":"1",
+          "fit":"",
+          "total":"10",
+          "isWeekend":false
+        },
+        {
+          "title": "Tue 23 Oct",
+          "barValue": "",
+          "leisureBreak": "",
+          "corporate": "4",
+          "consortia": "",
+          "promotions": "",
+          "groups":"3",
+          "ota":"",
+          "fit":"1",
+          "total":"8",
+          "isWeekend":false
+        },
+        {
+          "title": "Wed 24 Oct",
+          "barValue": "",
+          "leisureBreak": "",
+          "corporate": "3",
+          "consortia": "1",
+          "promotions": "",
+          "groups":"",
+          "ota":"",
+          "fit":"",
+          "total":"4",
+          "isWeekend":false
+        },
+        {
+          "title": "Thu 25 Oct",
+          "barValue": "2",
+          "leisureBreak": "",
+          "corporate": "",
+          "consortia": "",
+          "promotions": "",
+          "groups":"",
+          "ota":"",
+          "fit":"",
+          "total":"2",
+          "isWeekend":false
+        },
+        {
+          "title": "Fri 26 Oct",
+          "barValue": "0",
+          "leisureBreak": "0",
+          "corporate": "0",
+          "consortia": "0",
+          "promotions": "0",
+          "groups":"0",
+          "ota":"-1",
+          "fit":"0",
+          "total":"-1",
+          "isWeekend":true
+        },
+        {
+          "title": "Sat 27 Oct",
+          "barValue": "0",
+          "leisureBreak": "0",
+          "corporate": "0",
+          "consortia": "1",
+          "promotions": "0",
+          "groups":"0",
+          "ota":"0",
+          "fit":"0",
+          "total":"1",
+          "isWeekend":true
+        },
+        {
+          "title": "Sun 28 Oct",
+          "barValue": "0",
+          "leisureBreak": "0",
+          "corporate": "1",
+          "consortia": "2",
+          "promotions": "0",
+          "groups":"0",
+          "ota":"0",
+          "fit":"1",
+          "total":"4",
+          "isWeekend":true
+        },
+        {
+          "title": "Mon 29 Oct",
+          "barValue": "",
+          "leisureBreak": "",
+          "corporate": "1",
+          "consortia": "1",
+          "promotions": "2",
+          "groups":"",
+          "ota":"",
+          "fit":"",
+          "total":"4",
+          "isWeekend":false
+        },
+        {
+          "title": "Tue 30 Oct",
+          "barValue": "1",
+          "leisureBreak": "1",
+          "corporate": "",
+          "consortia": "",
+          "promotions": "",
+          "groups":"",
+          "ota":"1",
+          "fit":"",
+          "total":"3",
+          "isWeekend":false
+        },
+        {
+          "title": "Wed 31 Oct",
+          "barValue": "",
+          "leisureBreak": "3",
+          "corporate": "1",
+          "consortia": "1",
+          "promotions": "1",
+          "groups":"",
+          "ota":"-1",
+          "fit":"",
+          "total":"5",
+          "isWeekend":false
+        }
+      ]      
+}
