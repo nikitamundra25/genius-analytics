@@ -41,7 +41,6 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
 
   useEffect(() => {
     const resizeListener = () => {
-
       // // change width from the state object
       const modalbtn: HTMLElement | null = document.getElementById(
         `key-card`

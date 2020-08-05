@@ -1,7 +1,7 @@
 import { IBookingChannelModel } from "../interfaces";
 
 export const pickupBlobInitialState: IBookingChannelModel = {
-  isLoading: false,
+  isLoading: true,
   isError: false,
   data: [],
 };
