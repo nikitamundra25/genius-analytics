@@ -27,11 +27,12 @@
     padding:12px 5px;
   }
   .date-col {
-    background: #2f74b5;
-    color:#fff;
-    &.weekend-bg{
-      background:#d0cecf;
+    background:#d0cecf;
       color:#000;
+    &.weekend-bg{
+      background: #2f74b5;
+    color:#fff;
+      
     }
     .date-div {
       display: flex;
