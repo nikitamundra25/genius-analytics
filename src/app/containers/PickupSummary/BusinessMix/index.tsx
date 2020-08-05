@@ -140,7 +140,7 @@ const PickupBusinessMix = (props:any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
-                height: setHeight,
+                height: `${setHeight}px`,
                // height:"200px"
               }}
               charts={Charts}

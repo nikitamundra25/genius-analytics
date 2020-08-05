@@ -119,7 +119,7 @@ useEffect(() => {
                 },
                 tooltip: { enable: true },
                 //height:"200px"
-                height: setHeight,
+                height: `${setHeight}px`,
               }}
               
               charts={Charts}
