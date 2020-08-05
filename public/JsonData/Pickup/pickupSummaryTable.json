@@ -1,0 +1,59 @@
+{
+    "data": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 174,
+          "bob": 3454,
+          "budget": 43543,
+          "ly": 54345,
+          "stly": 43543,
+          "vsBud": 15,
+          "vsLy": -25,
+          "vsStly": 55
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": 3454,
+          "budget": 43543,
+          "ly": 54345,
+          "stly": 43543,
+          "vsBud": 15,
+          "vsLy": -25,
+          "vsStly": 55
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 39359,
+          "bob": 3454,
+          "budget": 43543,
+          "ly": 54345,
+          "stly": 43543,
+          "vsBud": 15,
+          "vsLy": -25,
+          "vsStly": 55
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 1.4,
+          "bob": 3454,
+          "budget": 43543,
+          "ly": 54345,
+          "stly": 43543,
+          "vsBud": 15,
+          "vsLy": -25,
+          "vsStly": 55
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": "",
+          "bob": 3454,
+          "budget": 43543,
+          "ly": 54345,
+          "stly": 43543,
+          "vsBud": 15,
+          "vsLy": -25,
+          "vsStly": 55
+        }
+      ]
+}

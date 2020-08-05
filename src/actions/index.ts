@@ -35,6 +35,8 @@ export * from "./pickupSummaryOCC";
 export * from "./pickupSummarySegmentData";
 export * from "./PickupDetailTable";
 export * from "./MonthlyBOB";
+export * from "./pickupBlob";
+export * from "./pickupSummaryTable";
 
 //
 export const redirectTo = createAction("REDIRET_TO");

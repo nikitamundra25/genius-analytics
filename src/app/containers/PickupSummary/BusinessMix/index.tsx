@@ -1,5 +1,10 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import { useDispatch, useSelector } from "react-redux";
+
+import { IRootState } from "../../../../interfaces";
+import { requestPickupSummaryDowDataData } from "../../../../actions";
+import { ErrorComponent } from "../../../components/Error";
 
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
@@ -8,9 +13,23 @@ const MixedCharts = React.lazy(() =>
 
 
 const PickupBusinessMix = (props:any) => {
-  const{index, DowData, setHeight} = props;
+  const{index, setHeight} = props;
 
-  console.log(setHeight, "setHeight");
+  const dispatch = useDispatch();
+
+  const {
+    isLoading: DowDataLoading,
+    data: DowData,
+    isError: DowDataError,
+  } = useSelector((state: IRootState) => state.pickupSummaryDowDataReducer);
+
+  useEffect(() => {
+    // dispatch(requestPickupSummarySegmentData());
+    // dispatch(requestPickupSummaryOCCDataData());
+    dispatch(requestPickupSummaryDowDataData());
+
+    // eslint-disable-next-line
+  }, []);
   
   
   const labeltemplate = (args:any) => {
@@ -28,6 +47,7 @@ const PickupBusinessMix = (props:any) => {
       //fill: "#4684bd",
       fill: "url(#pickupmix-chart)",
       name: "Room Nts",
+      yAxisName:'yAxis1',
       width: 1,
       marker: {
         dataLabel: {
@@ -91,6 +111,14 @@ const PickupBusinessMix = (props:any) => {
     <style>
           {SAMPLE_CSS}
       </style>
+      {DowDataLoading ? (
+                    <WidgetLoader />
+                  ) : DowDataError ? (
+                    <ErrorComponent
+                      message={"An error occured while fetching details "}
+                    />
+                  ) : (
+                    <>
           <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
             <MixedCharts
               id={`PickupBusinessChart-${index}`}
@@ -112,13 +140,15 @@ const PickupBusinessMix = (props:any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
-                height: setHeight,
+                height: `${setHeight}px`,
                // height:"200px"
               }}
               charts={Charts}
             />
           </React.Suspense>
         <div className="sub-title">Business Mix</div>
+        </>
+                  )}
 
         <svg style={{ height: '0' }}>
           <defs>

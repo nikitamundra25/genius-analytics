@@ -1,6 +1,6 @@
 import { IBookingChannelModel } from "../interfaces";
 
-export const pickupSummaryOCCInitialState: IBookingChannelModel = {
+export const pickupSummaryTableInitialState: IBookingChannelModel = {
   isLoading: true,
   isError: false,
   data: [],

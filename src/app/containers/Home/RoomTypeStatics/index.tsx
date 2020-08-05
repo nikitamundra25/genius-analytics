@@ -89,6 +89,7 @@ const labeltemplateline = (args:any) => {
       //fill: "#a1c6d6",
       fill: "url(#roccty-chart)",
       name: "OCC TY",
+      yAxisName:'yAxis1',
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
@@ -113,6 +114,7 @@ const labeltemplateline = (args:any) => {
       //fill: "#65adc5",
       fill: "url(#roccly-chart)",
       name: "OCC LY",
+      yAxisName:'yAxis1',
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {

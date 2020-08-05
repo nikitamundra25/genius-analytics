@@ -32,6 +32,8 @@ import { pickupSummaryOCCReducer } from "./pickupSummaryOCC";
 import { pickupSummaryDowDataReducer } from "./pickupSummaryDowData";
 import { pickupDetailTableReducer } from "./PickupDetailTable";
 import {MonthlyBOBReducer} from "./MonthlyBOB";
+import {pickupBlobReducer} from "./pickupBlob";
+import {pickupSummaryTableReducer} from "./pickupSummaryTable";
 
 export const mainReducer = handleActions(
   {
@@ -85,5 +87,7 @@ export const RootReducer: Reducer<IRootState, AnyAction> = combineReducers<
   pickupSummaryOCCReducer: pickupSummaryOCCReducer as any,
   pickupSummaryDowDataReducer: pickupSummaryDowDataReducer as any,
   pickupDetailTableReducer: pickupDetailTableReducer as any,
-  MonthlyBOBReducer: MonthlyBOBReducer as any
+  MonthlyBOBReducer: MonthlyBOBReducer as any,
+  pickupBlobReducer: pickupBlobReducer as any,
+  pickupSummaryTableReducer: pickupSummaryTableReducer as any
 });

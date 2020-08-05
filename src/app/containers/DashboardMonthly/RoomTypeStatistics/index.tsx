@@ -90,6 +90,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
       type: "Column",
       fill: "#9ec2d2",
       name: "Rm Nts TY",
+      yAxisName:'yAxis1',
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
@@ -111,6 +112,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
       type: "Column",
       fill: "#61a7c0",
       name: "Rm Nts LY",
+      yAxisName:'yAxis1',
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {

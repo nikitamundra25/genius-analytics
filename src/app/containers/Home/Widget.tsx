@@ -138,7 +138,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
           >
             <span id="close" className="e-template-icon e-clear-icon" />
             <div className="e-panel-container">
-              <GeoBusiness />
+              <GeoBusiness key={"map"}/>
             </div>
           </div>
         );

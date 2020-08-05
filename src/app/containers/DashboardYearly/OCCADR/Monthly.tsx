@@ -89,6 +89,7 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
       fill: "#3a71b4",
       name: "OCC %",
       width: 1,
+      yAxisName:'yAxis1',
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {

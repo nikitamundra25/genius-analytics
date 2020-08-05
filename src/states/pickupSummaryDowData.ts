@@ -1,7 +1,7 @@
 import { IBookingChannelModel } from "../interfaces";
 
 export const pickupSummaryDowDataInitialState: IBookingChannelModel = {
-  isLoading: false,
+  isLoading: true,
   isError: false,
   data: [],
 };

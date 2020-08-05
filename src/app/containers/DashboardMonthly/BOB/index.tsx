@@ -265,7 +265,7 @@ const MonthlyBOB = (props: any) => {
                                           parseInt(data.num) < 0
                                             ? "text-danger"
                                             : ""
-                                        } ${data.isWeekend ? "bg-2" : ""} `}
+                                        } ${data.isWeekend ? "" : "bg-2"} `}
                                         key={i}
                                       >
                                         {data.num}{" "}

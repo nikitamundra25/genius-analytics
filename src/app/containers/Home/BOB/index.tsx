@@ -83,17 +83,17 @@ const BOB = () => {
                   <td className='content-col'>&pound;15,18,702</td>
                   <td className='content-col'>&pound;12,49,740</td>
                   <td className='content-col bg-2'>&pound;75,965</td>
-                  <td className='content-col bg-2 '>-&pound;38,103</td>
+                  <td className='content-col bg-2 text-danger'>-&pound;38,103</td>
                   <td className='content-col bg-2'>&pound;2,30,859</td>
                 </tr>
                 <tr>
-                  <td className='title-col'>ADR</td>
+                  <td className='title-col'>ARR</td>
                   <td className='content-col'>&pound;182.3</td>
                   <td className='content-col'>&pound;194.3</td>
                   <td className='content-col'>&pound;191.2</td>
                   <td className='content-col'>&pound;180.0</td>
-                  <td className='content-col bg-2'>-12</td>
-                  <td className='content-col bg-2 '>-&pound;8.9</td>
+                  <td className='content-col bg-2 text-danger'>-12</td>
+                  <td className='content-col bg-2 text-danger'>-&pound;8.9</td>
                   <td className='content-col bg-2'>&pound;2.3</td>
                 </tr>
                 <tr>
@@ -102,8 +102,8 @@ const BOB = () => {
                   <td className='content-col'>&pound;139.0</td>
                   <td className='content-col'>&pound;122.8</td>
                   <td className='content-col'>&pound;101.04</td>
-                  <td className='content-col bg-2'>-19</td>
-                  <td className='content-col bg-2 '>-&pound;3.1</td>
+                  <td className='content-col bg-2 text-danger'>-19</td>
+                  <td className='content-col bg-2 text-danger'>-&pound;3.1</td>
                   <td className='content-col bg-2'>&pound;18.7</td>
                 </tr>
               </tbody>

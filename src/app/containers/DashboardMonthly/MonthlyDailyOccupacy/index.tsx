@@ -91,6 +91,7 @@ const labeltemplateline = (args:any) => {
       fill: "#2b588f",
       name: "Occupied Rooms",
       width: 1,
+      yAxisName:'yAxis1',
       marker: {
         dataLabel: {
           visible: true,
@@ -112,6 +113,7 @@ const labeltemplateline = (args:any) => {
       fill: "#dce8fc",
       name: "Empty Rooms",
       width: 1,
+      yAxisName:'yAxis1',
       marker: {
         dataLabel: {
           visible: false,
@@ -161,6 +163,7 @@ const labeltemplateline = (args:any) => {
       type: "StackingColumn100",
       fill: "#2b588f",
       name: "Occupied Rooms",
+      yAxisName:'yAxis1',
       width: 1,
       marker: {
         dataLabel: {
@@ -183,6 +186,7 @@ const labeltemplateline = (args:any) => {
       fill: "#dce8fc",
       name: "Empty Rooms",
       width: 1,
+      yAxisName:'yAxis1',
       marker: {
         dataLabel: {
           visible: false,

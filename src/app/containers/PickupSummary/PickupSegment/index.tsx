@@ -1,5 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import { useDispatch, useSelector } from "react-redux";
+
+import { IRootState } from "../../../../interfaces";
+import { requestPickupSummarySegmentData } from "../../../../actions";
+import { ErrorComponent } from "../../../components/Error";
 
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
@@ -7,8 +12,20 @@ const MixedCharts = React.lazy(() =>
 
 
 const PickupSegment = (props: any) => {
-  const{index, data, setHeight} = props;
+  const{index,setHeight} = props;
+  const setHeight1 = setHeight  + 140;
+  
+  const dispatch = useDispatch();
+  // const [setHeight, setsetHeight] = React.useState<string>("250px");
 
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.pickupSummarySegmentReducer
+  );
+
+  useEffect(() => {
+    dispatch(requestPickupSummarySegmentData());
+    // eslint-disable-next-line
+  }, []);
 
   const Charts = [
     {
@@ -64,14 +81,13 @@ const PickupSegment = (props: any) => {
 
   return (
     <>
-     
-          {/* {isLoading ? (
+          {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
             <ErrorComponent
               message={"An error occured while fetching details "}
             />
-          ) : ( */}
+          ) : (
            <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
             <MixedCharts
               id={`PickupChart-${index}`}
@@ -95,12 +111,12 @@ const PickupSegment = (props: any) => {
                 },
                 tooltip: { enable: true },
                 //height:"200px"
-                height: setHeight
+                height: `${setHeight1}px`
               }}
               charts={Charts}
             />
-          {/* )} */}
           </React.Suspense>
+           )} 
           <div className="sub-title">Pick up by segment</div>
     </>
   );
