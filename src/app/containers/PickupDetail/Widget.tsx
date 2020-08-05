@@ -1,26 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {  Card } from "react-bootstrap";
-import { IDashboardWidgetProps, IRootState } from "../../../interfaces";
-import { requestPickupDetailTableData } from "../../../actions";
+import { IDashboardWidgetProps } from "../../../interfaces";
 import TableForm from "./MonthlyTable";
-import { ErrorComponent } from "../../components/Error";
-import { WidgetLoader } from "../../components/Loader/WidgetLoader";
-import { useDispatch, useSelector } from "react-redux";
+
 
 const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   let rowId: number = 0;
   let colId: number = 0;
 
-  const dispatch = useDispatch();
-
-  const { isLoading, data, isError } = useSelector(
-    (state: IRootState) => state.pickupDetailTableReducer
-  );
-
-  useEffect(() => {
-    dispatch(requestPickupDetailTableData());
-    // eslint-disable-next-line
-  }, []);
+ 
 
   const getChart = (
     chartType: any,
@@ -45,20 +33,14 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
          
           <Card>
             <Card.Body>
-              {isLoading ? (
-                <WidgetLoader />
-              ) : isError ? (
-                <ErrorComponent
-                  message={"An error occured while fetching details "}
-                />
-              ) : (
+             
                 <>
                     <div className="sub-title text-left  mb-3 ">
                       {chartType.name}
                     </div>
-                    <TableForm index={index} graphdata={data} />
+                    <TableForm index={index}  />
                  </>
-              )}
+             
             </Card.Body>
           </Card>
           
