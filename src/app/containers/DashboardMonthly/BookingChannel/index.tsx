@@ -88,6 +88,7 @@ const BookingChannel = ({ graphdata = [] }:any) => {
       type: "Column",
       fill: "#4f81bc",
       name: "Room Nts",
+      yAxisName:'yAxis1',
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {

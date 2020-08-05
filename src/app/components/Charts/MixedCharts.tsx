@@ -14,7 +14,8 @@ import {
   AreaSeries,
   StackingColumnSeries,
   SplineAreaSeries,
-  SplineSeries
+  SplineSeries,
+  AxesDirective, AxisDirective,
 } from "@syncfusion/ej2-react-charts";
 
 const MixedCharts = ({ charts = [], id, chartSettings = {},legend= true }: any) => {
@@ -68,6 +69,20 @@ const MixedCharts = ({ charts = [], id, chartSettings = {},legend= true }: any) 
           SplineSeries
         ]}
       />
+      <AxesDirective>
+        <AxisDirective 
+          rowIndex={1} 
+          name='yAxis1' 
+          opposedPosition={true}
+          //title='percent' 
+          labelFormat='{value}%'  
+          majorGridLines={{ width: 0 }}
+          majorTickLines={{ width: 0}}
+          lineStyle={{ width: 0 } }
+          visible={false}
+        >
+        </AxisDirective>
+      </AxesDirective>
       <SeriesCollectionDirective>
         {charts.map(({ marker, ...chart }: any, index: number) => {    
           return (

@@ -28,6 +28,7 @@ const PickupBusinessMix = (props:any) => {
       //fill: "#4684bd",
       fill: "url(#pickupmix-chart)",
       name: "Room Nts",
+      yAxisName:'yAxis1',
       width: 1,
       marker: {
         dataLabel: {

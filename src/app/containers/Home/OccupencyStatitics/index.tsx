@@ -211,7 +211,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           name: "Var",
           dashArray: "5",
           width: 2,
-          
+          yAxisName:'yAxis1',
           marker: {
             visible: true,
             width: 8,
@@ -332,7 +332,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
                   labelFormat: "{value}%",
                   edgeLabelPlacement: "Shift",
                   majorGridLines: { width: 0 },
-                  majorTickLines: { width: 0 },
+                  majorTickLines: { width: 0},
                   lineStyle: { width: 0 },
                   labelStyle: {
                     color: "transparent",

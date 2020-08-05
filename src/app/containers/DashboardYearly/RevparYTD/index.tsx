@@ -84,6 +84,7 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       type: "SplineArea",
       fill: "url(#gradient-chart)",
       name: "OCC %",
+      yAxisName:'yAxis1',
       width: 2,
       dashArray: '5,5',
       border:{

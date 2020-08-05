@@ -71,7 +71,11 @@ const StayYTD = ({ id, graphdata = [] }: any) => {
 
   
 
-
+  const labeltemplate = (args:any) => {
+    return (<div  style={{fontSize: '11px'}}>
+      <span>{args.point.y}</span>
+    </div>);
+};
   const Charts = [
     {
       dataSource: data,
@@ -81,11 +85,13 @@ const StayYTD = ({ id, graphdata = [] }: any) => {
       type: "Column",
       name: "Stay",
       width: 1,
+      yAxisName:'yAxis1',
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
           position: "Top",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#000000",

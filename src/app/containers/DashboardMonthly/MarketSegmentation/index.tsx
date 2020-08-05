@@ -73,7 +73,11 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
   }, []);
 
   
-
+  const labeltemplate = (args:any) => {
+    return (<div  style={{fontSize: '11px'}}>
+      <span>{args.point.y}</span>
+    </div>);
+};
 
 
   const Charts = [
@@ -85,11 +89,13 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
       fill: "#3d78c0",
       name: "Rm Nts TY",
       width: 1,
+      yAxisName:'yAxis1',
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",
@@ -104,12 +110,14 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
       type: "Column",
       fill: "#98c0e3",
       name: "Rm Nts LY",
+      yAxisName:'yAxis1',
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
           position: "Bottom",
+          template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#ffffff",
