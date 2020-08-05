@@ -358,9 +358,10 @@ const CumulativeTable = () => {
                           className="content-col"
                         >
                           <div className="d-flex align-items-center flex-wrap">
-                            {table.monthData && table.monthData.length
+                          <div className="text-col"> {table.monthData && table.monthData.length
                               ? table.monthData[index]
-                              : 0}
+                              : 0}</div>
+                           
                             <OverlayTrigger
                               key={"top"}
                               placement={"top"}

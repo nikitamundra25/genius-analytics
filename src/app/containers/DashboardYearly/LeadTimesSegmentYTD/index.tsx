@@ -90,6 +90,13 @@ export default ({graphdata = []}: any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
+            <React.Suspense
+            fallback={
+              <div className="card-loader">
+                <WidgetLoader />
+              </div>
+            }
+          >
           <PieChartComponent
             id={"leadtimesSegment"}
             //height={"270px"}
@@ -116,6 +123,7 @@ export default ({graphdata = []}: any) => {
               },
             }}
           />
+          </React.Suspense>
           )}
       </Card.Body>
     </Card>
