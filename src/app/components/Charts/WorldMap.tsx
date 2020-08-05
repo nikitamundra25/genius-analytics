@@ -9,14 +9,12 @@ import {
   MapsTooltip,
 } from "@syncfusion/ej2-react-maps";
 
-const WorldMap = ({ data, id = "maps" }: any) => {
-
+const WorldMap = ({ data, id = "maps", height="270px" }: any) => {
 
   
-  return (
-    <MapsComponent
+  return (<MapsComponent
       width={"100%"}
-      height={"270px"}
+      height={height}
       id={id}
       //background='transparent'
       zoomSettings={{
@@ -82,8 +80,7 @@ const WorldMap = ({ data, id = "maps" }: any) => {
           }}
         />
       </LayersDirective>
-    </MapsComponent>
-  );
+    </MapsComponent> );
 };
 
 export default WorldMap;
