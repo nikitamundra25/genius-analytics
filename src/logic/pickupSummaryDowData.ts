@@ -9,13 +9,13 @@ import { ApiHelper } from "../helper";
 
 const getpickupSummaryDowDataLogic = createLogic({
   type: pickupSummaryDowDataActionTypes.REQUETS_PICKUP_SUMMARY_DOWDATA_DATA,
-  process: async ({ action }:any, dispatch: any, done) => {
+  process: async ({ action }: any, dispatch: any, done) => {
     dispatch(
-        togglePickupSummaryDowDataLoader({
+      togglePickupSummaryDowDataLoader({
         isLoading: true,
       })
     );
-    
+
     const { isError, data } = await new ApiHelper().FetchFromLocalJSONFile(
       "Pickup",
       "/pickupSummaryDowData.json",
@@ -35,4 +35,6 @@ const getpickupSummaryDowDataLogic = createLogic({
   },
 });
 
-export const PickupSummaryDowDataLogics: Logic[] = [getpickupSummaryDowDataLogic as Logic];
+export const PickupSummaryDowDataLogics: Logic[] = [
+  getpickupSummaryDowDataLogic as Logic,
+];

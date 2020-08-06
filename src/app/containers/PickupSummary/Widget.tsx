@@ -7,7 +7,7 @@ import PickupBusinessMix from "./BusinessMix";
 import TableForm from "./MonthlyTable";
 
 const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
-
+  console.log("graphList", graphList);
   const [setHeight, setsetHeight] = React.useState<number>(250);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
           const check = modalbtn.getBoundingClientRect();
           const getHeight = check.height;
           const setgraphHeight = getHeight - 225;
-        
+
           setsetHeight(setgraphHeight);
         }, 100);
       }
@@ -55,55 +55,59 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   }, []);
 
   const getChart = (chartType: any, index: number) => {
-    // switch (chartType.name) {
-    //   case "Month":
     const rowId = index;
     return (
       <div
         id={chartType.idNum}
-        className="e-panel "
+        className='e-panel '
         data-row={rowId}
-        data-col="0"
-        data-sizex="1"
-        data-sizey="0"
-      >
-        <span id="close" className="e-template-icon e-clear-icon" />
-        <div className="e-panel-container">
-          {/* <Col xs={12} md={12}> */}
+        data-col='0'
+        data-sizex='1'
+        data-sizey='0'>
+        <span id='close' className='e-template-icon e-clear-icon' />
+        <div className='e-panel-container'>
           <Card id={`summary-card${index}`}>
             <Card.Body>
-              <Row className="row-inner">
+              <Row className='row-inner'>
                 <Col xs={12} md={5}>
-                  <div className="sub-title text-left">{chartType.name}</div>
+                  <div className='sub-title text-left'>{chartType.name}</div>
                   <div>
-                    <PickupSegment index={index} setHeight={setHeight} />
+                    <PickupSegment
+                      month={chartType.id}
+                      index={index}
+                      setHeight={setHeight}
+                    />
                   </div>
                 </Col>
                 <Col xs={12} md={7}>
-                  <TableForm index={index} tabledata={chartType.tabledata} />
-                  <Row className="row-inner">
-                    <Col xs={12} md={6} >
-                      <PickupDOWOCCSegment index={index} setHeight={setHeight} />
+                  <TableForm
+                    index={index}
+                    month={chartType.id}
+                    tabledata={chartType.tabledata}
+                  />
+                  <Row className='row-inner'>
+                    <Col xs={12} md={6}>
+                      <PickupDOWOCCSegment
+                        month={chartType.id}
+                        index={index}
+                        setHeight={setHeight}
+                      />
                     </Col>
-                    <Col xs={12} md={6} >
+                    <Col xs={12} md={6}>
                       <PickupBusinessMix
+                        month={chartType.id}
                         index={index}
                         setHeight={setHeight}
                       />
                     </Col>
                   </Row>
                 </Col>
-               
               </Row>
             </Card.Body>
           </Card>
-          {/* </Col> */}
         </div>
       </div>
     );
-    // default:
-    //   return null;
-    // }
   };
 
   return (

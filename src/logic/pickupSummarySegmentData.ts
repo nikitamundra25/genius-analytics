@@ -8,14 +8,15 @@ import {
 import { ApiHelper } from "../helper";
 
 const getpickupSummarySegmentLogic = createLogic({
-  type: pickupSummarySegmentDataActionTypes.REQUETS_PICKUP_SUMMARY_SEGMENT_DATA_DATA,
-  process: async ({ action }:any, dispatch: any, done) => {
+  type:
+    pickupSummarySegmentDataActionTypes.REQUETS_PICKUP_SUMMARY_SEGMENT_DATA_DATA,
+  process: async ({ action }: any, dispatch: any, done) => {
     dispatch(
-        togglePickupSummarySegmentDataLoader({
+      togglePickupSummarySegmentDataLoader({
         isLoading: true,
       })
     );
-    
+
     const { isError, data } = await new ApiHelper().FetchFromLocalJSONFile(
       "Pickup",
       "/pickupSummarySegmentData.json",
@@ -35,4 +36,6 @@ const getpickupSummarySegmentLogic = createLogic({
   },
 });
 
-export const PickupSummarySegmentLogics: Logic[] = [getpickupSummarySegmentLogic as Logic];
+export const PickupSummarySegmentLogics: Logic[] = [
+  getpickupSummarySegmentLogic as Logic,
+];

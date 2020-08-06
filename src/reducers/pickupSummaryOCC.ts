@@ -3,7 +3,10 @@ import { IBookingChannelModel } from "../interfaces";
 import { pickupSummaryOCCInitialState } from "../states";
 import { pickupSummaryOCCDataActionTypes } from "../actions";
 
-export const pickupSummaryOCCReducer = handleActions<IBookingChannelModel, IBookingChannelModel>(
+export const pickupSummaryOCCReducer = handleActions<
+  IBookingChannelModel,
+  IBookingChannelModel
+>(
   {
     [pickupSummaryOCCDataActionTypes.TOGGLE_PICKUP_SUMMARY_OCCDATA_LOADER]: (
       state = pickupSummaryOCCInitialState,

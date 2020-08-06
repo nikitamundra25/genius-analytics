@@ -9,13 +9,13 @@ import { ApiHelper } from "../helper";
 
 const getpickupSummaryTableLogic = createLogic({
   type: pickupSummaryTableActionTypes.REQUETS_PICKUP_SUMMARY_TABLE_DATA,
-  process: async ({ action }:any, dispatch: any, done) => {
+  process: async ({ action }: any, dispatch: any, done) => {
     dispatch(
-        togglePickupSummaryTableLoader({
+      togglePickupSummaryTableLoader({
         isLoading: true,
       })
     );
-    
+
     const { isError, data } = await new ApiHelper().FetchFromLocalJSONFile(
       "Pickup",
       "/pickupSummaryTable.json",
@@ -35,4 +35,6 @@ const getpickupSummaryTableLogic = createLogic({
   },
 });
 
-export const PickupSummaryTableLogics: Logic[] = [getpickupSummaryTableLogic as Logic];
+export const PickupSummaryTableLogics: Logic[] = [
+  getpickupSummaryTableLogic as Logic,
+];

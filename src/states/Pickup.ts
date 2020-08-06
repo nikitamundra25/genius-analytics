@@ -1,4 +1,4 @@
-import { IPickupModel} from "../interfaces";
+import { IPickupModel } from "../interfaces";
 
 export const PickupInitialState: IPickupModel = {
   isLoading: false,
@@ -6,6 +6,5 @@ export const PickupInitialState: IPickupModel = {
   pickupSummaryList: [],
   pickupDetailList: [],
   isError: false,
-  isPickupError: false
+  isPickupError: false,
 };
-

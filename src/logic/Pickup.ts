@@ -1,6 +1,6 @@
 import { createLogic } from "redux-logic";
 import {
-    PickupTypes,
+  PickupTypes,
   PickupSummarySuccess,
   PickupSummaryFailed,
   PickupDetailSuccess,
@@ -24,11 +24,7 @@ const pickupListLogic = createLogic({
         isLoading: true,
       })
     );
-    const {
-      isError,
-      data,
-      
-    } = await new ApiHelper().FetchFromLocalJSONFile(
+    const { isError, data } = await new ApiHelper().FetchFromLocalJSONFile(
       "Pickup",
       "/pickupSummaryWidget.json",
       "GET"
@@ -38,15 +34,26 @@ const pickupListLogic = createLogic({
       done();
       return;
     }
+    const defaultValues = {
+      isLoading: true,
+      data: [],
+    };
     dispatch(
       PickupSummarySuccess({
-        pickupSummaryList: data,
+        pickupSummaryList: data.map((d: any) => ({
+          ...d,
+          data: {
+            segment: defaultValues,
+            table: defaultValues,
+            dowOcc: defaultValues,
+            businessMix: defaultValues,
+          },
+        })),
       })
     );
     done();
   },
 });
-
 
 // To get pickup detail list
 
@@ -58,11 +65,7 @@ const pickupDetailListLogic = createLogic({
         isLoading: true,
       })
     );
-    const {
-      isError,
-      data,
-      
-    } = await new ApiHelper().FetchFromLocalJSONFile(
+    const { isError, data } = await new ApiHelper().FetchFromLocalJSONFile(
       "Pickup",
       "/pickupSummaryWidget.json",
       "GET"
@@ -81,9 +84,4 @@ const pickupDetailListLogic = createLogic({
   },
 });
 
-
-
-export const PickupLogics = [
-  pickupListLogic,
-  pickupDetailListLogic
-];
+export const PickupLogics = [pickupListLogic, pickupDetailListLogic];

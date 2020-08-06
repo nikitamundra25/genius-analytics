@@ -3,7 +3,10 @@ import { IBookingChannelModel } from "../interfaces";
 import { pickupSummarySegmentInitialState } from "../states";
 import { pickupSummarySegmentDataActionTypes } from "../actions";
 
-export const pickupSummarySegmentReducer = handleActions<IBookingChannelModel, IBookingChannelModel>(
+export const pickupSummarySegmentReducer = handleActions<
+  IBookingChannelModel,
+  IBookingChannelModel
+>(
   {
     [pickupSummarySegmentDataActionTypes.TOGGLE_PICKUP_SUMMARY_SEGMENT_DATA_LOADER]: (
       state = pickupSummarySegmentInitialState,
