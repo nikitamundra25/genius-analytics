@@ -3,31 +3,53 @@ import { IBookingChannelModel } from "../interfaces";
 import { pickupSummaryDowDataInitialState } from "../states";
 import { pickupSummaryDowDataActionTypes } from "../actions";
 
-export const pickupSummaryDowDataReducer = handleActions<IBookingChannelModel, IBookingChannelModel>(
+export const pickupSummaryDowDataReducer = handleActions<
+  IBookingChannelModel[],
+  IBookingChannelModel
+>(
   {
-    [pickupSummaryDowDataActionTypes.TOGGLE_PICKUP_SUMMARY_DOWDATA_LOADER]: (
-      state = pickupSummaryDowDataInitialState,
-      action
-    ): IBookingChannelModel => ({
-      ...state,
-      isLoading: action.payload.isLoading,
-    }),
     [pickupSummaryDowDataActionTypes.PICKUP_SUMMARY_DOWDATA_DATA_FAILED]: (
       state = pickupSummaryDowDataInitialState,
       action
-    ): IBookingChannelModel => ({
-      isLoading: false,
-      data: [],
-      isError: true,
-    }),
+    ): IBookingChannelModel[] => {
+      const { month } = action.payload;
+      const data: IBookingChannelModel[] = Object.assign([], state);
+      const index = data.findIndex(
+        (d: IBookingChannelModel) => d.month === month
+      );
+      if (index === -1) {
+        data.push({
+          month,
+          isLoading: false,
+          isError: true,
+          data: [],
+        });
+      } else {
+        data[index] = {
+          month,
+          isLoading: false,
+          isError: true,
+          data: [],
+        };
+      }
+      return data;
+    },
     [pickupSummaryDowDataActionTypes.PICKUP_SUMMARY_DOWDATA_DATA_SUCCESS]: (
       state = pickupSummaryDowDataInitialState,
       action
-    ): IBookingChannelModel => ({
-      isLoading: false,
-      data: action.payload.data,
-      isError: false,
-    }),
+    ): IBookingChannelModel[] => {
+      const { month } = action.payload;
+      const data: IBookingChannelModel[] = Object.assign([], state);
+      const index = data.findIndex(
+        (d: IBookingChannelModel) => d.month === month
+      );
+      if (index === -1) {
+        data.push(action.payload);
+      } else {
+        data[index] = action.payload;
+      }
+      return data;
+    },
   },
   pickupSummaryDowDataInitialState
 );

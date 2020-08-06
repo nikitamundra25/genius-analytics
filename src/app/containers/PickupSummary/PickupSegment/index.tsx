@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -10,20 +10,20 @@ const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
-
-const PickupSegment = (props: any) => {
-  const{index,setHeight} = props;
-  const setHeight1 = setHeight  + 140;
-  
+const PickupSegment = ({ index, setHeight, month }: any) => {
+  const setHeight1 = setHeight + 140;
   const dispatch = useDispatch();
-  // const [setHeight, setsetHeight] = React.useState<string>("250px");
-
-  const { isLoading, data, isError } = useSelector(
+  const pickupSummarySegmentReducer = useSelector(
     (state: IRootState) => state.pickupSummarySegmentReducer
   );
-
+  const ind = pickupSummarySegmentReducer.findIndex((d) => d.month === month);
+  let actualData: any = {};
+  if (ind > -1) {
+    actualData = pickupSummarySegmentReducer[ind];
+  }
+  const { isLoading, data, isError } = actualData;
   useEffect(() => {
-    dispatch(requestPickupSummarySegmentData());
+    dispatch(requestPickupSummarySegmentData({ month }));
     // eslint-disable-next-line
   }, []);
 
@@ -36,7 +36,7 @@ const PickupSegment = (props: any) => {
       fill: "#4684bd",
       name: "Room Nts",
       width: 1,
-      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
+      cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
@@ -49,7 +49,7 @@ const PickupSegment = (props: any) => {
         },
       },
     },
-   
+
     {
       dataSource: data,
       xName: "name",
@@ -62,17 +62,16 @@ const PickupSegment = (props: any) => {
         visible: false,
         width: 8,
         height: 8,
-        fill:"#ee792b",
+        fill: "#ee792b",
         border: { width: 0, color: "#ee792b" },
         dataLabel: {
           visible: true,
           position: "Top",
-          fill:"#ee792b",
+          fill: "#ee792b",
           border: { width: 1, color: "#4684bd" },
           font: {
             fontWeight: "600",
             color: "#ffffff",
-          
           },
         },
       },
@@ -81,43 +80,46 @@ const PickupSegment = (props: any) => {
 
   return (
     <>
-          {isLoading ? (
-            <WidgetLoader />
-          ) : isError ? (
-            <ErrorComponent
-              message={"An error occured while fetching details "}
-            />
-          ) : (
-           <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
-            <MixedCharts
-              id={`PickupChart-${index}`}
-              legend = {false}
-              chartSettings={{
-                primaryXAxis: {
-                  valueType: "Category",
-                  interval: 1,
-                  majorGridLines: { width: 0 },
+      {isLoading ? (
+        <WidgetLoader />
+      ) : isError ? (
+        <ErrorComponent message={"An error occured while fetching details "} />
+      ) : (
+        <React.Suspense
+          fallback={
+            <div className='card-loader'>
+              <WidgetLoader />
+            </div>
+          }>
+          <MixedCharts
+            id={`PickupChart-${index}`}
+            legend={false}
+            chartSettings={{
+              primaryXAxis: {
+                valueType: "Category",
+                interval: 1,
+                majorGridLines: { width: 0 },
+              },
+              primaryYAxis: {
+                labelFormat: "{value}",
+                edgeLabelPlacement: "Shift",
+                majorGridLines: { width: 0 },
+                majorTickLines: { width: 0 },
+                lineStyle: { width: 0 },
+                labelStyle: {
+                  color: "transparent",
                 },
-                primaryYAxis: {
-                  labelFormat: "{value}",
-                  edgeLabelPlacement: "Shift",
-                  majorGridLines: { width: 0 },
-                  majorTickLines: { width: 0 },
-                  lineStyle: { width: 0 },
-                  labelStyle: {
-                    color: "transparent",
-                  },
-                  visible:false,
-                },
-                tooltip: { enable: true },
-                //height:"200px"
-                height: `${setHeight1}px`
-              }}
-              charts={Charts}
-            />
-          </React.Suspense>
-           )} 
-          <div className="sub-title">Pick up by segment</div>
+                visible: false,
+              },
+              tooltip: { enable: true },
+              //height:"200px"
+              height: `${setHeight1}px`,
+            }}
+            charts={Charts}
+          />
+        </React.Suspense>
+      )}
+      <div className='sub-title'>Pick up by segment</div>
     </>
   );
 };

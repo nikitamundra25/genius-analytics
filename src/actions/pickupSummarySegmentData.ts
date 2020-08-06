@@ -7,7 +7,15 @@ export enum pickupSummarySegmentDataActionTypes {
   PICKUP_SUMMARY_SEGMENT_DATA_DATA_FAILED = "Requested pickup Summary SegmentData data fetching failed",
 }
 
-export const requestPickupSummarySegmentData = createAction(pickupSummarySegmentDataActionTypes.REQUETS_PICKUP_SUMMARY_SEGMENT_DATA_DATA);
-export const togglePickupSummarySegmentDataLoader = createAction(pickupSummarySegmentDataActionTypes.TOGGLE_PICKUP_SUMMARY_SEGMENT_DATA_LOADER);
-export const pickupSummarySegmentDataDataSuccess = createAction(pickupSummarySegmentDataActionTypes.PICKUP_SUMMARY_SEGMENT_DATA_DATA_SUCCESS);
-export const pickupSummarySegmentDataDataFailed = createAction(pickupSummarySegmentDataActionTypes.PICKUP_SUMMARY_SEGMENT_DATA_DATA_FAILED);
+export const requestPickupSummarySegmentData = createAction(
+  pickupSummarySegmentDataActionTypes.REQUETS_PICKUP_SUMMARY_SEGMENT_DATA_DATA
+);
+export const togglePickupSummarySegmentDataLoader = createAction(
+  pickupSummarySegmentDataActionTypes.TOGGLE_PICKUP_SUMMARY_SEGMENT_DATA_LOADER
+);
+export const pickupSummarySegmentDataDataSuccess = createAction(
+  pickupSummarySegmentDataActionTypes.PICKUP_SUMMARY_SEGMENT_DATA_DATA_SUCCESS
+);
+export const pickupSummarySegmentDataDataFailed = createAction(
+  pickupSummarySegmentDataActionTypes.PICKUP_SUMMARY_SEGMENT_DATA_DATA_FAILED
+);

@@ -7,7 +7,15 @@ export enum pickupSummaryOCCDataActionTypes {
   PICKUP_SUMMARY_OCCDATA_DATA_FAILED = "Requested pickup Summary OCCData data fetching failed",
 }
 
-export const requestPickupSummaryOCCDataData = createAction(pickupSummaryOCCDataActionTypes.REQUETS_PICKUP_SUMMARY_OCCDATA_DATA);
-export const togglePickupSummaryOCCDataLoader = createAction(pickupSummaryOCCDataActionTypes.TOGGLE_PICKUP_SUMMARY_OCCDATA_LOADER);
-export const pickupSummaryOCCDataDataSuccess = createAction(pickupSummaryOCCDataActionTypes.PICKUP_SUMMARY_OCCDATA_DATA_SUCCESS);
-export const pickupSummaryOCCDataDataFailed = createAction(pickupSummaryOCCDataActionTypes.PICKUP_SUMMARY_OCCDATA_DATA_FAILED);
+export const requestPickupSummaryOCCDataData = createAction(
+  pickupSummaryOCCDataActionTypes.REQUETS_PICKUP_SUMMARY_OCCDATA_DATA
+);
+export const togglePickupSummaryOCCDataLoader = createAction(
+  pickupSummaryOCCDataActionTypes.TOGGLE_PICKUP_SUMMARY_OCCDATA_LOADER
+);
+export const pickupSummaryOCCDataDataSuccess = createAction(
+  pickupSummaryOCCDataActionTypes.PICKUP_SUMMARY_OCCDATA_DATA_SUCCESS
+);
+export const pickupSummaryOCCDataDataFailed = createAction(
+  pickupSummaryOCCDataActionTypes.PICKUP_SUMMARY_OCCDATA_DATA_FAILED
+);

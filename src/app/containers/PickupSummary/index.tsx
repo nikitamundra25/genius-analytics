@@ -31,21 +31,21 @@ const PickupSummary: FunctionComponent = () => {
     restoreModel = dashboardObj.serialize();
   };
 
-  const { pickupSummaryList,isPickupLoading ,isPickupError} = PickupReducer;
-
+  const { pickupSummaryList, isPickupLoading, isPickupError } = PickupReducer;
+  console.log("pickupSummaryList", pickupSummaryList);
   return (
     <>
       <TopBar handleReset={RestorePanel} />
-      <div className="animated fadeIn">
-      {isPickupLoading ? (
+      <div className='animated fadeIn'>
+        {isPickupLoading ? (
           <Loader />
         ) : isPickupError ? (
           <ErrorComponent
             message={"An error occured while fetching dashboard details"}
           />
-        ) :  pickupSummaryList && pickupSummaryList.length ? (
+        ) : pickupSummaryList && pickupSummaryList.length ? (
           <DashboardLayoutComponent
-            id="defaultLayout"
+            id='defaultLayout'
             cellSpacing={cellSpacing}
             allowResizing={false}
             columns={1}
@@ -53,8 +53,7 @@ const PickupSummary: FunctionComponent = () => {
             created={created}
             ref={(scope: any) => {
               dashboardObj = scope;
-            }}
-          >
+            }}>
             <DashboardWidget graphList={pickupSummaryList} />
           </DashboardLayoutComponent>
         ) : null}

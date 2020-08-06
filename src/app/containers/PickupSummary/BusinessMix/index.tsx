@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -10,10 +10,8 @@ const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
-
-
-const PickupBusinessMix = (props:any) => {
-  const{index, setHeight} = props;
+const PickupBusinessMix = (props: any) => {
+  const { index, setHeight, month } = props;
 
   const dispatch = useDispatch();
 
@@ -21,22 +19,33 @@ const PickupBusinessMix = (props:any) => {
     isLoading: DowDataLoading,
     data: DowData,
     isError: DowDataError,
-  } = useSelector((state: IRootState) => state.pickupSummaryDowDataReducer);
+  } = useSelector((state: IRootState) => {
+    const pickupSummaryDowDataReducer = state.pickupSummaryDowDataReducer;
+    const ind = pickupSummaryDowDataReducer.findIndex((d) => d.month === month);
+    let actualData: any = {};
+    if (ind > -1) {
+      actualData = pickupSummaryDowDataReducer[ind];
+    }
+    return actualData;
+  });
 
   useEffect(() => {
-    // dispatch(requestPickupSummarySegmentData());
-    // dispatch(requestPickupSummaryOCCDataData());
-    dispatch(requestPickupSummaryDowDataData());
-
+    dispatch(requestPickupSummaryDowDataData({ month }));
     // eslint-disable-next-line
   }, []);
-  
-  
-  const labeltemplate = (args:any) => {
-    return (<div  style={{fontSize: '11px', padding: '3px 3px 3px 3px' , borderRadius: '3px'}}>
-      <span>{args.point.y}%</span>
-    </div>);
-};
+
+  const labeltemplate = (args: any) => {
+    return (
+      <div
+        style={{
+          fontSize: "11px",
+          padding: "3px 3px 3px 3px",
+          borderRadius: "3px",
+        }}>
+        <span>{args.point.y}%</span>
+      </div>
+    );
+  };
 
   const Charts = [
     {
@@ -47,13 +56,13 @@ const PickupBusinessMix = (props:any) => {
       //fill: "#4684bd",
       fill: "url(#pickupmix-chart)",
       name: "Room Nts",
-      yAxisName:'yAxis1',
+      yAxisName: "yAxis1",
       width: 1,
       marker: {
         dataLabel: {
           visible: true,
           position: "Bottom",
-          fill:"#2b72b5",
+          fill: "#2b72b5",
           template: labeltemplate,
           font: {
             fontWeight: "600",
@@ -62,7 +71,7 @@ const PickupBusinessMix = (props:any) => {
         },
       },
     },
-   
+
     {
       dataSource: DowData,
       xName: "name",
@@ -75,24 +84,20 @@ const PickupBusinessMix = (props:any) => {
         visible: true,
         width: 8,
         height: 8,
-        fill:"#ee792b",
+        fill: "#ee792b",
         border: { width: 0, color: "#ee792b" },
         dataLabel: {
           visible: true,
           position: "Top",
-          fill:"#ee792b",
+          fill: "#ee792b",
           font: {
             fontWeight: "600",
             color: "#ffffff",
-          
           },
         },
       },
     },
   ];
-
-  
-
 
   const SAMPLE_CSS = `
       #pickupmix-chart stop {
@@ -108,18 +113,19 @@ const PickupBusinessMix = (props:any) => {
 
   return (
     <>
-    <style>
-          {SAMPLE_CSS}
-      </style>
+      <style>{SAMPLE_CSS}</style>
       {DowDataLoading ? (
-                    <WidgetLoader />
-                  ) : DowDataError ? (
-                    <ErrorComponent
-                      message={"An error occured while fetching details "}
-                    />
-                  ) : (
-                    <>
-          <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
+        <WidgetLoader />
+      ) : DowDataError ? (
+        <ErrorComponent message={"An error occured while fetching details "} />
+      ) : (
+        <>
+          <React.Suspense
+            fallback={
+              <div className='card-loader'>
+                <WidgetLoader />
+              </div>
+            }>
             <MixedCharts
               id={`PickupBusinessChart-${index}`}
               chartSettings={{
@@ -137,28 +143,27 @@ const PickupBusinessMix = (props:any) => {
                   labelStyle: {
                     color: "transparent",
                   },
-                  visible:false,
+                  visible: false,
                 },
                 tooltip: { enable: true },
                 height: `${setHeight}px`,
-               // height:"200px"
+                // height:"200px"
               }}
               charts={Charts}
             />
           </React.Suspense>
-        <div className="sub-title">Business Mix</div>
+          <div className='sub-title'>Business Mix</div>
         </>
-                  )}
+      )}
 
-        <svg style={{ height: '0' }}>
-          <defs>
-              <linearGradient id="pickupmix-chart" x1="0" x2="0" y1="0" y2="1">
-                  <stop offset="0" />
-                  <stop offset="1" />
-              </linearGradient>
-          </defs>
+      <svg style={{ height: "0" }}>
+        <defs>
+          <linearGradient id='pickupmix-chart' x1='0' x2='0' y1='0' y2='1'>
+            <stop offset='0' />
+            <stop offset='1' />
+          </linearGradient>
+        </defs>
       </svg>
-
     </>
   );
 };
