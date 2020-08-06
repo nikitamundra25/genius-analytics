@@ -49,8 +49,9 @@ const MixedCharts = ({ charts = [], id, chartSettings = {},legend= true }: any) 
       legendSettings={legendSettings}
       //style={{ textAlign: "center", "height": "250px", "width": "100%" }}
       chartArea={{ border: { width: 0 } }}
-      width={"100%"}
-      height={"270px"}
+      // width={"100%"}
+      // height={"270px"}
+      height="100%" width="100%"
       // fill="transparent"
       // background='transparent'
       {...chartSettings}>

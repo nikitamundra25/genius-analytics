@@ -19,9 +19,10 @@ export const BarChartComponent = (barChart: any) => {
       id={`chart-${barChart.id}`}
       style={{ textAlign: "center" }}
       chartArea={{ border: { width: 0 } }}
-      height={barChart.height || "270px"}
+      height="100%" width="100%"
+      // height={barChart.height || "270px"}
       // width={Browser.isDevice ? '100%' : '80%'}
-      width={barChart.width || "100%"}
+      // width={barChart.width || "100%"}
       // fill="transparent"
       // background='transparent'
       {...(barChart.chartSettings || {

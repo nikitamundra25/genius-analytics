@@ -10,25 +10,39 @@ import GeoBusiness from "./GeoBusiness";
 import MTDPerformance from "./MTDPerformance";
 import RGIVariance from "./RGIVariance";
 import { IDashboardWidgetProps } from "../../../interfaces";
+import { PanelsDirective, PanelDirective } from "@syncfusion/ej2-react-layouts";
 
 const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   const getChart = (chartType: any) => {
     switch (chartType.name) {
       case "Business on the Books":
         return (
-          <div
-            id="one"
-            className="e-panel"
-            data-row="0"
-            data-col="0"
-            data-sizex="2"
-            data-sizey="0"
-          >
-            <span id="close" className="e-template-icon e-clear-icon" />
-            <div className="e-panel-container">
-              <BOB />
-            </div>
-          </div>
+          <PanelDirective
+            sizeX={2}
+            sizeY={0}
+            row={0}
+            col={0}
+            content={
+              // <Provider store={store}>
+              <div className="template">
+                <BOB />
+              </div>
+              // </Provider>
+            }
+          ></PanelDirective>
+          // <div
+          //   id="one"
+          //   className="e-panel"
+          //   data-row="0"
+          //   data-col="0"
+          //   data-sizex="2"
+          //   data-sizey="0"
+          // >
+          //   <span id="close" className="e-template-icon e-clear-icon" />
+          //   <div className="e-panel-container">
+          //     <BOB />
+          //   </div>
+          // </div>
         );
       case "Key Business Metrics":
         return (
@@ -138,7 +152,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
           >
             <span id="close" className="e-template-icon e-clear-icon" />
             <div className="e-panel-container">
-              <GeoBusiness key={"map"}/>
+              <GeoBusiness key={"map"} />
             </div>
           </div>
         );
@@ -179,14 +193,40 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
         return null;
     }
   };
+  const lineTemplate = () => {
+    console.log("hereeeeeeeeeee");
+    return (
+      // <Provider store={store}>
+        <div className="template">
+          <BOB />
+        </div>
+      // </Provider>
+    );
+  };
   return (
-    <>
-      {graphList.map((chartConfig: any, index: number) => {
+    
+      <PanelsDirective>
+        <PanelDirective
+          sizeX={2}
+          sizeY={1}
+          row={0}
+          col={0}
+          content={lineTemplate}
+        ></PanelDirective>
+        <PanelDirective
+          sizeX={2}
+          sizeY={1}
+          row={0}
+          col={2}
+          content={'<div class="content">1</div>'}
+        ></PanelDirective>
+        {/* {graphList.map((chartConfig: any, index: number) => {
         return (
           <React.Fragment key={index}>{getChart(chartConfig)}</React.Fragment>
         );
-      })}
-    </>
+      })} */}
+      </PanelsDirective>
+   
   );
 };
 
