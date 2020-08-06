@@ -24,10 +24,7 @@ const PickupBusinessMix = (props:any) => {
   } = useSelector((state: IRootState) => state.pickupSummaryDowDataReducer);
 
   useEffect(() => {
-    // dispatch(requestPickupSummarySegmentData());
-    // dispatch(requestPickupSummaryOCCDataData());
     dispatch(requestPickupSummaryDowDataData());
-
     // eslint-disable-next-line
   }, []);
   
