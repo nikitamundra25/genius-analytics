@@ -1,4 +1,4 @@
-import { RouteComponentProps } from 'react-router';
+import { RouteComponentProps } from "react-router";
 
 export interface IredirectPath {
   path: string;
@@ -6,13 +6,13 @@ export interface IredirectPath {
 
 export interface IDefaultLayoutProps extends RouteComponentProps {
   redirectTo: (data: IredirectPath) => void;
+  cookies: any;
 }
 
 export interface IDefaultLayoutState {
   isLoading: boolean;
   isAuthenticated: boolean;
   userDetails: {};
-
 }
 
 export interface IDefaultHeaderProps extends RouteComponentProps {
