@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import Loader from "../../../components/Loader/Loader";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
@@ -25,7 +25,7 @@ const MonthlyTable = (props: any) => {
   return (
     <>
      {isLoading ? (
-            <Loader />
+            <WidgetLoader />
           ) : isError ? (
             <ErrorComponent
               message={"An error occured while fetching details "}
@@ -34,7 +34,7 @@ const MonthlyTable = (props: any) => {
       <React.Suspense
         fallback={
           <div className="card-loader">
-            <Loader />
+            <WidgetLoader />
           </div>
         }
       >
