@@ -1,5 +1,4 @@
 import React, { FunctionComponent, useEffect } from "react";
-import DashboardMonthlyWidget from "./Widget";
 import TopBar from "../Home/TopBar";
 import { useSelector, useDispatch, Provider } from "react-redux";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";

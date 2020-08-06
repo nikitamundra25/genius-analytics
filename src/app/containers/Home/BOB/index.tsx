@@ -8,27 +8,27 @@ import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 
 const BOB = () => {
-  // const dispatch = useDispatch();
-  // const { isLoading, /* data */ isError } = useSelector(
-  //   (state: IRootState) => state.BOBReducer
-  // );
-  // useEffect(() => {
-  //   dispatch(requestBOBData());
-  //   // eslint-disable-next-line
-  // }, []);
+  const dispatch = useDispatch();
+  const { isLoading, /* data */ isError } = useSelector(
+    (state: IRootState) => state.BOBReducer
+  );
+  useEffect(() => {
+    dispatch(requestBOBData());
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>
       <Card>
         <WidgetHeader title={"Business on the Books"} activeToggle={"grid"} showToggle={false} />
       
-          {/* {isLoading ? (
+          {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
             <ErrorComponent
               message={"An error occured while fetching details "}
             />
-          ) : ( */}
+          ) : (
             <div className="business-table-section">
 
             
@@ -109,7 +109,7 @@ const BOB = () => {
               </tbody>
             </Table>
             </div>
-           {/* )}  */}
+           )}  
         
       </Card>
     </>
