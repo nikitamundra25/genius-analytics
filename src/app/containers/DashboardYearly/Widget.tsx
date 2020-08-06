@@ -32,7 +32,7 @@ const getChart = (chartType: any) => {
         <div
         id="second"
         className="e-panel"
-        data-row="1"
+        data-row="3"
         data-col="0"
         data-sizex="3"
         data-sizey="0"
@@ -50,7 +50,7 @@ const getChart = (chartType: any) => {
         <div
         id="three"
         className="e-panel"
-        data-row="1"
+        data-row="3"
         data-col="4"
         data-sizex="1"
         data-sizey="0"
@@ -67,7 +67,7 @@ const getChart = (chartType: any) => {
         <div
         id="four"
         className="e-panel"
-        data-row="1"
+        data-row="3"
         data-col="5"
         data-sizex="2"
         data-sizey="0"
@@ -85,7 +85,7 @@ const getChart = (chartType: any) => {
         <div
         id="five"
         className="e-panel"
-        data-row="2"
+        data-row="4"
         data-col="0"
         data-sizex="3"
         data-sizey="0"
@@ -102,7 +102,7 @@ const getChart = (chartType: any) => {
         <div
         id="six"
         className="e-panel"
-        data-row="2"
+        data-row="4"
         data-col="3"
         data-sizex="3"
         data-sizey="0"
@@ -120,7 +120,7 @@ const getChart = (chartType: any) => {
           <div
           id="seven"
           className="e-panel"
-          data-row="3"
+          data-row="5"
           data-col="0"
           data-sizex="2"
           data-sizey="0"
@@ -137,7 +137,7 @@ const getChart = (chartType: any) => {
           <div
           id="eight"
           className="e-panel"
-          data-row="3"
+          data-row="5"
           data-col="2"
           data-sizex="2"
           data-sizey="0"
@@ -154,7 +154,7 @@ const getChart = (chartType: any) => {
           <div
           id="nine"
           className="e-panel"
-          data-row="3"
+          data-row="5"
           data-col="4"
           data-sizex="2"
           data-sizey="0"

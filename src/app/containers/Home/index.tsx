@@ -15,7 +15,15 @@ const HomeComponent: FunctionComponent = () => {
   const dispatch = useDispatch();
   let restoreModel: any = [];
   let dashboardObj: any;
-
+  let panels = [
+    { "sizeX": 1, "sizeY": 1, "row": 0, "col": 0, content: '<div class="content">0</div>' },
+    { "sizeX": 3, "sizeY": 2, "row": 0, "col": 1, content: '<div class="content">1</div>' },
+    { "sizeX": 1, "sizeY": 3, "row": 0, "col": 4, content: '<div class="content">2</div>' },
+    { "sizeX": 1, "sizeY": 1, "row": 1, "col": 0, content: '<div class="content">3</div>' },
+    { "sizeX": 2, "sizeY": 1, "row": 2, "col": 0, content: '<div class="content">4</div>' },
+    { "sizeX": 1, "sizeY": 1, "row": 2, "col": 2, content: '<div class="content">5</div>' },
+    { "sizeX": 1, "sizeY": 1, "row": 2, "col": 3, content: '<div class="content">6</div>' }
+];
   const DashboardReducer = useSelector(
     (state: IRootState) => state.DashboardReducer
   );
@@ -56,6 +64,7 @@ const HomeComponent: FunctionComponent = () => {
             mediaQuery= {'max-width: 991px'}
             cellAspectRatio={100 / 100}
             created={created}
+            // panels={panels}
             ref={(scope: any) => {
               dashboardObj = scope;
             }}>
