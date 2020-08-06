@@ -44,19 +44,19 @@ const PickupSummary: FunctionComponent = () => {
             message={"An error occured while fetching dashboard details"}
           />
         ) : pickupSummaryList && pickupSummaryList.length ? (
-          // <DashboardLayoutComponent
-          //   id='defaultLayout'
-          //   cellSpacing={cellSpacing}
-          //   allowResizing={false}
-          //   columns={1}
-          //   cellAspectRatio={100 / 32}
-          //   created={created}
-          //   ref={(scope: any) => {
-          //     dashboardObj = scope;
-          //   }}>
-          <DashboardWidget graphList={pickupSummaryList} />
-        ) : // </DashboardLayoutComponent>
-        null}
+          <DashboardLayoutComponent
+            id='defaultLayout'
+            cellSpacing={cellSpacing}
+            allowResizing={false}
+            columns={1}
+            cellAspectRatio={100 / 32}
+            created={created}
+            ref={(scope: any) => {
+              dashboardObj = scope;
+            }}>
+            <DashboardWidget graphList={pickupSummaryList} />
+          </DashboardLayoutComponent>
+        ) : null}
       </div>
     </>
   );
