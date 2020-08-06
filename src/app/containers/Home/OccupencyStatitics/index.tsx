@@ -287,8 +287,8 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
-        // <Row className='row-inner'>
-        //   <Col sm={8}>
+        <Row className='row-inner'>
+          <Col sm={8}>
           <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
               <MixedCharts
                 id={"line-and-column"}
@@ -310,42 +310,42 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
                     visible:false,
                   },
                   tooltip: { enable: true },
-                  // height: "100%",
+                  height: setHeight,
                 }}
                 charts={Charts1}
                 
               />
           </React.Suspense>
-          // </Col>
-        //   <Col sm={4}>
-        //   <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
-        //     <MixedCharts
-        //       id={"line-and-bar"}
-        //       charts={Charts2}
-        //       chartSettings={{
-        //         primaryXAxis: {
-        //           valueType: "Category",
-        //           interval: 1,
-        //           majorGridLines: { width: 0 },
-        //         },
-        //         primaryYAxis: {
-        //           labelFormat: "{value}%",
-        //           edgeLabelPlacement: "Shift",
-        //           majorGridLines: { width: 0 },
-        //           majorTickLines: { width: 0},
-        //           lineStyle: { width: 0 },
-        //           labelStyle: {
-        //             color: "transparent",
-        //           },
-        //           visible:false,
-        //         },
-        //         tooltip: { enable: true },
-        //         height: setHeight,
-        //       }}
-        //     />       
-        //        </React.Suspense>   
-        //   </Col>
-        // </Row>
+          </Col>
+          <Col sm={4}>
+          <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
+            <MixedCharts
+              id={"line-and-bar"}
+              charts={Charts2}
+              chartSettings={{
+                primaryXAxis: {
+                  valueType: "Category",
+                  interval: 1,
+                  majorGridLines: { width: 0 },
+                },
+                primaryYAxis: {
+                  labelFormat: "{value}%",
+                  edgeLabelPlacement: "Shift",
+                  majorGridLines: { width: 0 },
+                  majorTickLines: { width: 0},
+                  lineStyle: { width: 0 },
+                  labelStyle: {
+                    color: "transparent",
+                  },
+                  visible:false,
+                },
+                tooltip: { enable: true },
+                height: setHeight,
+              }}
+            />       
+               </React.Suspense>   
+          </Col>
+        </Row>
          )} 
        </Card.Body>
       </Card>

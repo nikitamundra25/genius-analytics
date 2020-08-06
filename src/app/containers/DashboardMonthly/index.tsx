@@ -9,7 +9,7 @@ import "./index.scss";
 import Loader from "../../components/Loader/Loader";
 import { ErrorComponent } from "../../components/Error";
 import { PanelsDirective, PanelDirective } from "@syncfusion/ej2-react-layouts";
-import BOB from "../Home/BOB";
+import BOB from "./BOB";
 import MonthlyDailyOccupacy from "./MonthlyDailyOccupacy";
 import DailyOccupacy from "./DailyOccupacy";
 import { createBrowserHistory } from "history";
