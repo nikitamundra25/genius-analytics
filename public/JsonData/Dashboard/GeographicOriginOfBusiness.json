@@ -9,7 +9,8 @@
             "density": -1,
             "roomNights":3627,
             "ADR":169,
-            "revenue":612963
+            "revenue":612963,
+            "color": "#cfca76"
           },
           {
             "code": "SG",
@@ -19,7 +20,8 @@
             "density": 8358,
             "roomNights":788,
             "ADR":156,
-            "revenue":122928
+            "revenue":122928, 
+            "color": "#cfca76"
           },
           {
             "code": "BH",
@@ -29,7 +31,8 @@
             "density": -1,
             "roomNights":3627,
             "ADR":169,
-            "revenue":612963
+            "revenue":612963,
+            "color": "#cfca76"
           },
           {
             "code": "Ec",
@@ -39,7 +42,8 @@
             "density": -1,
             "roomNights":3627,
             "ADR":169,
-            "revenue":612963
+            "revenue":612963,
+            "color": "#abab0d"
           },
           {
             "code": "AF",
@@ -49,7 +53,8 @@
             "density": 119,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "AL",
@@ -59,7 +64,8 @@
             "density": 111,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "DZ",
@@ -69,7 +75,8 @@
             "density": 15,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#abab0d"
           },
           {
             "code": "AO",
@@ -79,7 +86,8 @@
             "density": 15,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#eae7c6"
           },
           {
             "code": "AR",
@@ -89,7 +97,8 @@
             "density": 14,
             "roomNights":91,
             "ADR":164,
-            "revenue":14924
+            "revenue":14924,
+            "color": "#abab0d"
           },
           {
             "code": "AM",
@@ -99,7 +108,8 @@
             "density": 108,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "AU",
@@ -109,7 +119,8 @@
             "density": 3.3,
             "roomNights":671,
             "ADR":188,
-            "revenue":126148
+            "revenue":126148,
+            "color": "#abab0d"
           },
           {
             "code": "AT",
@@ -119,7 +130,8 @@
             "density": 100,
             "roomNights":83,
             "ADR":170,
-            "revenue":14110
+            "revenue":14110,
+            "color": "#cfca76"
           },
           {
             "code": "AZ",
@@ -129,7 +141,8 @@
             "density": 106,
             "roomNights":4,
             "ADR":177,
-            "revenue":708
+            "revenue":708,
+            "color": "#cfca76"
           },
           {
             "code": "BS",
@@ -139,7 +152,8 @@
             "density": 25,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "BD",
@@ -149,7 +163,8 @@
             "density": 1118,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "BY",
@@ -159,7 +174,8 @@
             "density": 47,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "BE",
@@ -169,7 +185,8 @@
             "density": 355,
             "roomNights":133,
             "ADR":185,
-            "revenue":24605
+            "revenue":24605,
+            "color": "#cfca76"
           },
           {
             "code": "BZ",
@@ -179,7 +196,8 @@
             "density": 14,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "BJ",
@@ -189,7 +207,8 @@
             "density": 79,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "BO",
@@ -199,7 +218,8 @@
             "density": 9,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "BA",
@@ -209,7 +229,8 @@
             "density": 75,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "BW",
@@ -219,7 +240,8 @@
             "density": 3.4,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "BR",
@@ -229,7 +251,8 @@
             "density": 24,
             "roomNights":318,
             "ADR":181,
-            "revenue":57558
+            "revenue":57558,
+            "color": "#abab0d"
           },
           {
             "code": "BN",
@@ -239,7 +262,8 @@
             "density": 69,
             "roomNights":7,
             "ADR":162,
-            "revenue":1134
+            "revenue":1134,
+            "color": "#cfca76"
           },
           {
             "code": "BG",
@@ -249,7 +273,8 @@
             "density": 66,
             "roomNights":6,
             "ADR":172,
-            "revenue":1032  
+            "revenue":1032 ,
+            "color": "#cfca76" 
           },
           {
             "code": "BF",
@@ -259,7 +284,8 @@
             "density": 58,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "BI",
@@ -269,7 +295,8 @@
             "density": 298,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "KH",
@@ -279,7 +306,8 @@
             "density": 82,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "CM",
@@ -289,7 +317,8 @@
             "density": 106,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "CA",
@@ -299,7 +328,8 @@
             "density": 3.4,
             "roomNights":932,
             "ADR":179,
-            "revenue":166828
+            "revenue":166828,
+            "color": "#abab0d"
           },
           {
             "code": "CF",
@@ -309,7 +339,8 @@
             "density": 7.1,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#eae7c6"
           },
           {
             "code": "TD",
@@ -319,7 +350,8 @@
             "density": 8.8,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "CL",
@@ -329,7 +361,8 @@
             "density": 24,
             "roomNights":17,
             "ADR":175,
-            "revenue":2975
+            "revenue":2975,
+            "color": "#abab0d"
           },
           {
             "code": "CN",
@@ -339,7 +372,8 @@
             "density": 144,
             "roomNights":139,
             "ADR":162,
-            "revenue":22518
+            "revenue":22518,
+            "color": "#abab0d"
           },
           {
             "code": "CO",
@@ -349,7 +383,8 @@
             "density": 43,
             "roomNights":6,
             "ADR":186,
-            "revenue":1116
+            "revenue":1116,
+            "color": "#abab0d"
           },
           {
             "code": "CD",
@@ -359,7 +394,8 @@
             "density": 29,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#eae7c6"
           },
           {
             "code": "CG",
@@ -369,7 +405,8 @@
             "density": 12,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "CR",
@@ -379,7 +416,8 @@
             "density": 90,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "HR",
@@ -389,7 +427,8 @@
             "density": 79,
             "roomNights":5,
             "ADR":174,
-            "revenue":870 
+            "revenue":870 ,
+            "color": "#cfca76"
           },
           {
             "code": "CU",
@@ -399,7 +438,8 @@
             "density": 102,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "CY",
@@ -409,7 +449,8 @@
             "density": 87,
             "roomNights":18,
             "ADR":173,
-            "revenue":3114
+            "revenue":3114,
+            "color": "#cfca76"
           },
           {
             "code": "CZ",
@@ -419,7 +460,8 @@
             "density": 134,
             "roomNights":45,
             "ADR":172,
-            "revenue":7740
+            "revenue":7740,
+            "color": "#cfca76"
           },
           {
             "code": "DK",
@@ -429,7 +471,8 @@
             "density": 128,
             "roomNights":176,
             "ADR":172,
-            "revenue":30272
+            "revenue":30272,
+            "color": "#cfca76"
           },
           {
             "code": "DJ",
@@ -439,7 +482,8 @@
             "density": 38,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "DO",
@@ -449,7 +493,8 @@
             "density": 207,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "EG",
@@ -459,7 +504,8 @@
             "density": 90,
             "roomNights":8,
             "ADR":185,
-            "revenue":1480
+            "revenue":1480,
+            "color": "#abab0d"
           },
           {
             "code": "SV",
@@ -469,7 +515,8 @@
             "density": 293,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "GQ",
@@ -479,7 +526,8 @@
             "density": 41,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "ER",
@@ -489,7 +537,8 @@
             "density": 43,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "EE",
@@ -499,7 +548,8 @@
             "density": 29,
             "roomNights":2,
             "ADR":184,
-            "revenue":368
+            "revenue":368,
+            "color": "#cfca76"
           },
           {
             "code": "ET",
@@ -509,7 +559,8 @@
             "density": 72,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#d5d688"
           },
           {
             "code": "FJ",
@@ -519,7 +570,8 @@
             "density": 46,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"
           },
           {
             "code": "FI",
@@ -529,7 +581,8 @@
             "density": 16,
             "roomNights":69,
             "ADR":187,
-            "revenue":17952
+            "revenue":17952,
+            "color": "#abab0d"
           },
           {
             "code": "FR",
@@ -539,7 +592,8 @@
             "density": 114,
             "roomNights":1875,
             "ADR":185,
-            "revenue":346875
+            "revenue":346875,
+            "color": "#abab0d"
           },
           {
             "code": "GA",
@@ -549,7 +603,8 @@
             "density": 5.5,
             "roomNights":60,
             "ADR":182,
-            "revenue":10920
+            "revenue":10920,
+            "color": "#cfca76"         
           },
           {
             "code": "GM",
@@ -559,7 +614,8 @@
             "density": 151,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"    
           },
           {
             "code": "GE",
@@ -569,7 +625,8 @@
             "density": 64,
             "roomNights":7,
             "ADR":175,
-            "revenue":1225
+            "revenue":1225,
+            "color": "#cfca76"        
           },
           {
             "code": "DE",
@@ -579,7 +636,8 @@
             "density": 229,
             "roomNights":617,
             "ADR":188,
-            "revenue":115996
+            "revenue":115996,
+            "color": "#abab0d"          
           },
           {
             "code": "GH",
@@ -589,7 +647,8 @@
             "density": 100,
             "roomNights":9,
             "ADR":165 ,
-            "revenue":1485
+            "revenue":1485,
+            "color": "#cfca76"        
           },
           {
             "code": "GR",
@@ -599,8 +658,9 @@
             "density": 86,
             "roomNights":97,
             "ADR":170,
-            "revenue":16490
-          },
+            "revenue":16490,
+            "color": "#cfca76"        
+           },
           {
             "code": "GL",
             "value": 0.02,
@@ -609,7 +669,8 @@
             "density": 0.026,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#abab0d"     
           },
           {
             "code": "GT",
@@ -619,7 +680,8 @@
             "density": 129,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "GN",
@@ -629,7 +691,8 @@
             "density": 41,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "GW",
@@ -639,7 +702,8 @@
             "density": 45,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "GY",
@@ -649,7 +713,8 @@
             "density": 3.5,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#abab0d"     
           },
           {
             "code": "HT",
@@ -660,6 +725,8 @@
             "roomNights":0,
             "ADR":0,
             "revenue":0
+,
+            "color": "#cfca76"     
           },
           {
             "code": "HN",
@@ -670,7 +737,8 @@
             "roomNights":0,
             "ADR":0,
             "revenue":0
-          },
+,
+            "color": "#cfca76"     },
           {
             "code": "HU",
             "value": 112,
@@ -679,7 +747,8 @@
             "density": 108,
             "roomNights":86,
             "ADR":183,
-            "revenue":15738
+            "revenue":15738,
+            "color": "#cfca76"         
           },
           {
             "code": "IS",
@@ -689,7 +758,8 @@
             "density": 3.1,
             "roomNights":4,
             "ADR":175,
-            "revenue":700
+            "revenue":700,
+            "color": "#abab0d"       
           },
           {
             "code": "IN",
@@ -700,7 +770,8 @@
             "roomNights":587,
             "ADR":169,
             "revenue":99203
-          },
+  ,
+            "color": "#cfca76"         },
           {
             "code": "ID",
             "value": 132,
@@ -709,7 +780,8 @@
             "density": 121,
             "roomNights":64,
             "ADR":179,
-            "revenue":11456
+            "revenue":11456,
+            "color": "#cfca76"         
           },
           {
             "code": "IR",
@@ -719,7 +791,8 @@
             "density": 117,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#abab0d"     
           },
           {
             "code": "IQ",
@@ -729,7 +802,8 @@
             "density": 70,
             "roomNights":101,
             "ADR":178,
-            "revenue":17978
+            "revenue":17978,
+            "color": "#cfca76"         
           },
           {
             "code": "IE",
@@ -739,8 +813,8 @@
             "density": 65,
             "roomNights":141,
             "ADR":170,
-            "revenue":23970
-          },
+            "revenue":23970,
+            "color": "#abab0d"         },
           {
             "code": "IL",
             "value": 352,
@@ -750,7 +824,8 @@
             "roomNights":87,
             "ADR":186,
             "revenue":16182
-          },
+  ,
+            "color": "#cfca76"         },
           {
             "code": "IT",
             "value": 206,
@@ -760,7 +835,8 @@
             "roomNights":739,
             "ADR":171,
             "revenue":126369
-          },
+ ,
+            "color": "#abab0d"          },
           {
             "code": "JM",
             "value": 250,
@@ -769,8 +845,8 @@
             "density": 247,
             "roomNights":9,
             "ADR":184,
-            "revenue":1656
-          },
+            "revenue":1656,
+            "color": "#cfca76"        },
           {
             "code": "JP",
             "value": 350,
@@ -780,7 +856,8 @@
             "roomNights":285,
             "ADR":162,
             "revenue":46170
-          },
+  ,
+            "color": "#cfca76"         },
           {
             "code": "JO",
             "value": 69,
@@ -790,7 +867,8 @@
             "roomNights":148,
             "ADR":176,
             "revenue":26048
-          },
+  ,
+            "color": "#cfca76"         },
           {
             "code": "KZ",
             "value": 6,
@@ -799,8 +877,8 @@
             "density": 6.2,
             "roomNights":53,
             "ADR":165,
-            "revenue":8745
-          },
+            "revenue":8745,
+            "color": "#cfca76"        },
           {
             "code": "KE",
             "value": 71,
@@ -809,8 +887,8 @@
             "density": 69,
             "roomNights":41,
             "ADR":158,
-            "revenue":6478
-          },
+            "revenue":6478,
+            "color": "#eae7c6"        },
           {
             "code": "KP",
             "value": 202,
@@ -819,7 +897,8 @@
             "density": 200,
             "roomNights":30,
             "ADR":161,
-            "revenue":4830   
+            "revenue":4830 ,
+            "color": "#cfca76"
           },
           {
             "code": "KR",
@@ -830,7 +909,8 @@
             "roomNights":100,
             "ADR":188,
             "revenue":18800
-          },
+  ,
+            "color": "#cfca76"         },
           {
             "code": "XK",
             "value": 167,
@@ -840,7 +920,8 @@
             "roomNights":0,
             "ADR":0,
             "revenue":0
-          },
+,
+            "color": "#cfca76"     },
           {
             "code": "KW",
             "value": 154,
@@ -850,7 +931,8 @@
             "roomNights":103,
             "ADR":168,
             "revenue":17304
-          },
+  ,
+            "color": "#cfca76"         },
           {
             "code": "KG",
             "value": 28,
@@ -860,7 +942,8 @@
             "roomNights":0,
             "ADR":0,
             "revenue":0
-          },
+,
+            "color": "#cfca76"     },
           {
             "code": "LA",
             "value": 27,
@@ -870,7 +953,8 @@
             "roomNights":0,
             "ADR":0,
             "revenue":0
-          },
+,
+            "color": "#cfca76"     },
           {
             "code": "LV",
             "value": 36,
@@ -879,8 +963,8 @@
             "density": 35,
             "roomNights":4,
             "ADR":174,
-            "revenue":696
-          },
+            "revenue":696,
+            "color": "#cfca76"       },
           {
             "code": "LB",
             "value": 413,
@@ -889,8 +973,8 @@
             "density": 404,
             "roomNights":87,
             "ADR":160,
-            "revenue":13920
-            
+            "revenue":13920,
+            "color": "#cfca76"           
           },
           {
             "code": "LS",
@@ -900,7 +984,8 @@
             "density": 68,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "LR",
@@ -910,7 +995,8 @@
             "density": 38,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "LY",
@@ -920,7 +1006,8 @@
             "density": 3.6,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#bfbe32"     
           },
           {
             "code": "LT",
@@ -930,8 +1017,9 @@
             "density": 47,
             "roomNights":15,
             "ADR":184,
-            "revenue":2760
-          },
+            "revenue":2760,
+            "color": "#cfca76"       
+           },
           {
             "code": "LU",
             "value": 195,
@@ -940,7 +1028,8 @@
             "density": 194,
             "roomNights":29,
             "ADR":186,
-            "revenue":5397
+            "revenue":5397,
+            "color": "#cfca76"        
           },
           {
             "code": "MK",
@@ -950,8 +1039,9 @@
             "density": 82,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
-          },
+            "revenue":0,
+            "color": "#cfca76"    
+           },
           {
             "code": "MG",
             "value": 36,
@@ -960,7 +1050,8 @@
             "density": 35,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "MW",
@@ -970,7 +1061,8 @@
             "density": 129,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "MY",
@@ -980,8 +1072,9 @@
             "density": 86,
             "roomNights":141,
             "ADR":159,
-            "revenue":22419
-          },
+            "revenue":22419,
+            "color": "#cfca76"        
+           },
           {
             "code": "ML",
             "value": 13,
@@ -990,7 +1083,8 @@
             "density": 12,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#eae7c6"     
           },
           {
             "code": "MR",
@@ -1000,7 +1094,8 @@
             "density": 3.2,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "MX",
@@ -1010,7 +1105,8 @@
             "density": 57,
             "roomNights":70,
             "ADR":178,
-            "revenue":12460
+            "revenue":12460,
+            "color": "#abab0d"         
           },
           {
             "code": "MD",
@@ -1020,7 +1116,8 @@
             "density": 105,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "MC",
@@ -1030,7 +1127,8 @@
             "density": 16923,
             "roomNights":1,
             "ADR":164,
-            "revenue":164
+            "revenue":164,
+            "color": "#cfca76"       
           },
           {
             "code": "MN",
@@ -1040,7 +1138,8 @@
             "density": 1.7,
             "roomNights":11,
             "ADR":168,
-            "revenue":1848
+            "revenue":1848,
+            "color": "#cfca76"        
           },
           {
             "code": "ME",
@@ -1050,7 +1149,8 @@
             "density": 45,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "MA",
@@ -1060,7 +1160,8 @@
             "density": 77,
             "roomNights":5,
             "ADR":181,
-            "revenue":905
+            "revenue":905,
+            "color": "#cfca76"       
           },
           {
             "code": "MZ",
@@ -1070,8 +1171,9 @@
             "density": 29,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
-          },
+            "revenue":0,
+            "color": "#cfca76"    
+           },
           {
             "code": "MM",
             "value": 73,
@@ -1080,7 +1182,8 @@
             "density": 74,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "NA",
@@ -1090,7 +1193,8 @@
             "density": 2.6,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "NP",
@@ -1100,7 +1204,8 @@
             "density": 109,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "NL",
@@ -1110,7 +1215,8 @@
             "density": 415,
             "roomNights":216,
             "ADR":173,
-            "revenue":37368
+            "revenue":37368,
+            "color": "#cfca76"         
           },
           {
             "code": "NC",
@@ -1120,7 +1226,8 @@
             "density": 13,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "NZ",
@@ -1130,8 +1237,9 @@
             "density": 16,
             "roomNights":209,
             "ADR":180,
-            "revenue":37620
-          },
+            "revenue":37620,
+            "color": "#abab0d"        
+           },
           {
             "code": "NI",
             "value": 48,
@@ -1140,7 +1248,8 @@
             "density": 44,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "NE",
@@ -1150,7 +1259,8 @@
             "density": 12,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#eceac1"     
           },
           {
             "code": "NG",
@@ -1160,7 +1270,8 @@
             "density": 167,
             "roomNights":49,
             "ADR":186,
-            "revenue":9114
+            "revenue":9114,
+            "color": "#eceac1"        
           },
           {
             "code": "NO",
@@ -1170,7 +1281,9 @@
             "density": 14,
             "roomNights":258,
             "ADR":155,
-            "revenue":39990          },
+            "revenue":39990,
+            "color": "#abab0d"        
+          },
           {
             "code": "OM",
             "value": 9,
@@ -1179,7 +1292,8 @@
             "density": 9.2,
             "roomNights":49,
             "ADR":183,
-            "revenue":8967
+            "revenue":8967,
+            "color": "#adb432"        
           },
           {
             "code": "PK",
@@ -1189,7 +1303,8 @@
             "density": 245,
             "roomNights":17,
             "ADR":171,
-            "revenue":2907
+            "revenue":2907,
+            "color": "#cfca76"        
           },
           {
             "code": "PA",
@@ -1199,7 +1314,8 @@
             "density": 46,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "PG",
@@ -1209,7 +1325,8 @@
             "density": 15,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "PY",
@@ -1219,7 +1336,8 @@
             "density": 16,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "PE",
@@ -1229,7 +1347,8 @@
             "density": 23,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#abab0d"     
           },
           {
             "code": "PH",
@@ -1239,8 +1358,9 @@
             "density": 337,
             "roomNights":56,
             "ADR":188,
-            "revenue":10528
-          },
+            "revenue":10528,
+            "color": "#cfca76"        
+           },
           {
             "code": "PL",
             "value": 126,
@@ -1249,7 +1369,8 @@
             "density": 122,
             "roomNights":43,
             "ADR":178,
-            "revenue":7654
+            "revenue":7654,
+            "color": "#abab0d"        
           },
           {
             "code": "PT",
@@ -1259,8 +1380,9 @@
             "density": 115,
             "roomNights":65,
             "ADR":186,
-            "revenue":12090
-          },
+            "revenue":12090,
+            "color": "#abab0d"        
+           },
           {
             "code": "PR",
             "value": 449,
@@ -1269,7 +1391,8 @@
             "density": 449,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "WA",
@@ -1279,7 +1402,8 @@
             "density": 128,
             "roomNights":211,
             "ADR":164,
-            "revenue":34604
+            "revenue":34604,
+            "color": "#cfca76"         
           },
           {
             "code": "RO",
@@ -1289,7 +1413,8 @@
             "density": 90,
             "roomNights":102,
             "ADR":156,
-            "revenue":15912
+            "revenue":15912,
+            "color": "#cfca76"         
           },
           {
             "code": "RU",
@@ -1299,7 +1424,8 @@
             "density": 8.3,
             "roomNights":211,
             "ADR":171,
-            "revenue":36801
+            "revenue":36801,
+            "color": "#cccc68"         
           },
           {
             "code": "RW",
@@ -1309,7 +1435,8 @@
             "density": 380,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "SA",
@@ -1319,7 +1446,8 @@
             "density": 12,
             "roomNights":132,
             "ADR":156,
-            "revenue":20592
+            "revenue":20592,
+            "color": "#abab0d"         
           },
           {
             "code": "SN",
@@ -1329,7 +1457,8 @@
             "density": 64,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "RS",
@@ -1339,7 +1468,8 @@
             "density": 101,
             "roomNights":2,
             "ADR":184,
-            "revenue":368
+            "revenue":368,
+            "color": "#cfca76"       
           },
           {
             "code": "SL",
@@ -1349,7 +1479,8 @@
             "density": 79,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "SK",
@@ -1359,7 +1490,8 @@
             "density": 111,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "SI",
@@ -1369,7 +1501,8 @@
             "density": 108,
             "roomNights":13,
             "ADR":184,
-            "revenue":2392
+            "revenue":2392,
+            "color": "#cfca76"        
           },
           {
             "code": "SB",
@@ -1379,7 +1512,8 @@
             "density": 18,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "SO",
@@ -1389,7 +1523,8 @@
             "density": 14,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "ZA",
@@ -1399,7 +1534,8 @@
             "density": 41,
             "roomNights":75,
             "ADR":177,
-            "revenue":13275
+            "revenue":13275,
+            "color": "#e6e8b9"         
           },
           {
             "code": "SS",
@@ -1409,7 +1545,8 @@
             "density": 13,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#eae7c6"     
           },
           {
             "code": "ES",
@@ -1419,7 +1556,8 @@
             "density": 91,
             "roomNights":443,
             "ADR":182,
-            "revenue":80626
+            "revenue":80626,
+            "color": "#abab0d"         
           },
           {
             "code": "LK",
@@ -1429,7 +1567,8 @@
             "density": 308,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "SD",
@@ -1439,7 +1578,8 @@
             "density": 17,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "SR",
@@ -1449,7 +1589,8 @@
             "density": 3.2,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "SZ",
@@ -1459,7 +1600,8 @@
             "density": 68,
             "roomNights":347,
             "ADR":170,
-            "revenue":58990
+            "revenue":58990,
+            "color": "#cfca76"         
           },
           {
             "code": "SE",
@@ -1469,7 +1611,8 @@
             "density": 21,
             "roomNights":301,
             "ADR":187,
-            "revenue":56287
+            "revenue":56287,
+            "color": "#abab0d"         
           },
           {
             "code": "CH",
@@ -1479,7 +1622,8 @@
             "density": 191,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "SY",
@@ -1489,7 +1633,8 @@
             "density": 118,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "TJ",
@@ -1499,7 +1644,8 @@
             "density": 49,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "TZ",
@@ -1509,7 +1655,8 @@
             "density": 46,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "TH",
@@ -1519,7 +1666,8 @@
             "density": 125,
             "roomNights":134,
             "ADR":166,
-            "revenue":22244
+            "revenue":22244,
+            "color": "#cfca76"         
           },
           {
             "code": "TP",
@@ -1529,7 +1677,8 @@
             "density": 76,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "TG",
@@ -1539,8 +1688,9 @@
             "density": 117,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
-          },
+            "revenue":0,
+            "color": "#cfca76"    
+           },
           {
             "code": "TT",
             "value": 261,
@@ -1549,7 +1699,8 @@
             "density": 261,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "TN",
@@ -1559,8 +1710,9 @@
             "density": 63,
             "roomNights":19,
             "ADR":155,
-            "revenue":2945
-          },
+            "revenue":2945,
+            "color": "#cfca76"       
+           },
           {
             "code": "TR",
             "value": 95,
@@ -1569,8 +1721,9 @@
             "density": 93,
             "roomNights":78,
             "ADR":176,
-            "revenue":13728
-          },
+            "revenue":13728,
+            "color": "#abab0d"        
+           },
           {
             "code": "TM",
             "value": 11,
@@ -1579,7 +1732,8 @@
             "density": 11,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "UG",
@@ -1589,8 +1743,9 @@
             "density": 136,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
-          },
+            "revenue":0,
+            "color": "#cfca76"    
+           },
           {
             "code": "UA",
             "value": 79,
@@ -1599,7 +1754,8 @@
             "density": 78,
             "roomNights":64,
             "ADR":170,
-            "revenue":10880
+            "revenue":10880,
+            "color": "#cfca76"         
           },
           {
             "code": "AE",
@@ -1609,7 +1765,8 @@
             "density": 99,
             "roomNights":193,
             "ADR":159,
-            "revenue":30687
+            "revenue":30687,
+            "color": "#cfca76"         
           },
           {
             "code": "GB",
@@ -1619,7 +1776,8 @@
             "density": 255,
             "roomNights":3627,
             "ADR":169,
-            "revenue":612963
+            "revenue":612963,
+            "color": "#abab0d"          
           },
           {
             "code": "US",
@@ -1629,7 +1787,8 @@
             "density": 33,
             "roomNights":2162,
             "ADR":155,
-            "revenue":335110
+            "revenue":335110,
+            "color": "#abab0d"          
           },
           {
             "code": "UY",
@@ -1639,8 +1798,9 @@
             "density": 20,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
-          },
+            "revenue":0,
+            "color": "#cfca76"    
+           },
           {
             "code": "UZ",
             "value": 66,
@@ -1649,7 +1809,8 @@
             "density": 61,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "VU",
@@ -1659,7 +1820,8 @@
             "density": 20,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "VE",
@@ -1669,7 +1831,8 @@
             "density": 35,
             "roomNights":12,
             "ADR":162,
-            "revenue":1944
+            "revenue":1944,
+            "color": "#abab0d"        
           },
           {
             "code": "VN",
@@ -1679,7 +1842,8 @@
             "density": 259,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "EH",
@@ -1689,7 +1853,8 @@
             "density": 1.9,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "YE",
@@ -1699,7 +1864,8 @@
             "density": 45,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "ZM",
@@ -1709,7 +1875,8 @@
             "density": 17,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           },
           {
             "code": "ZW",
@@ -1719,7 +1886,8 @@
             "density": 33,
             "roomNights":0,
             "ADR":0,
-            "revenue":0
+            "revenue":0,
+            "color": "#cfca76"     
           }
         ]
       }

@@ -55,39 +55,40 @@ const WorldMap = ({ data }: any) => {
             //   valuePath: "name",
             // }}
             shapeSettings={{
-              colorValuePath: "density",
-              colorMapping: [
-                {
-                  from: 0.00001,
-                  to: 100,
-                  color: "rgb(153,174,214)",
-                  label: "<100",
-                },
-                {
-                  from: 100,
-                  to: 200,
-                  color: "rgb(115,143,199)",
-                  label: "100 - 200",
-                },
-                {
-                  from: 200,
-                  to: 300,
-                  color: "rgb(77,112,184)",
-                  label: "200 - 300",
-                },
-                {
-                  from: 300,
-                  to: 500,
-                  color: "rgb(38,82,168)",
-                  label: "300 - 500",
-                },
-                {
-                  from: 500,
-                  to: 19000,
-                  color: "rgb(0,51,153)",
-                  label: ">500",
-                },
-              ],
+              
+              colorValuePath: 'color',
+              // colorMapping: [
+              //   {
+              //     from: 0.00001,
+              //     to: 100,
+              //     color: "rgb(153,174,214)",
+              //     label: "<100",
+              //   },
+              //   {
+              //     from: 100,
+              //     to: 200,
+              //     color: "rgb(115,143,199)",
+              //     label: "100 - 200",
+              //   },
+              //   {
+              //     from: 200,
+              //     to: 300,
+              //     color: "rgb(77,112,184)",
+              //     label: "200 - 300",
+              //   },
+              //   {
+              //     from: 300,
+              //     to: 500,
+              //     color: "rgb(38,82,168)",
+              //     label: "300 - 500",
+              //   },
+              //   {
+              //     from: 500,
+              //     to: 19000,
+              //     color: "rgb(0,51,153)",
+              //     label: ">500",
+              //   },
+              // ],
             }}
           />
         </LayersDirective>
