@@ -11,7 +11,7 @@ const MixedCharts = React.lazy(() =>
 );
 
 const PickupDOWOCCSegment = (props: any) => {
-  const { index, setHeight, month } = props;
+  const { index, setHeight } = props;
   const dispatch = useDispatch();
 
   const labeltemplate = (args: any) => {
@@ -26,18 +26,12 @@ const PickupDOWOCCSegment = (props: any) => {
     isLoading: OCCLoading,
     data: OccData,
     isError: OCCError,
-  } = useSelector((state: IRootState) => {
-    const pickupSummaryOCCReducer = state.pickupSummaryOCCReducer;
-    const ind = pickupSummaryOCCReducer.findIndex((d) => d.month === month);
-    let actualData: any = {};
-    if (ind > -1) {
-      actualData = pickupSummaryOCCReducer[ind];
-    }
-    return actualData;
-  });
+  } = useSelector((state: IRootState) => state.pickupSummaryOCCReducer);
 
   useEffect(() => {
-    dispatch(requestPickupSummaryOCCDataData({ month }));
+    // dispatch(requestPickupSummarySegmentData());
+    dispatch(requestPickupSummaryOCCDataData());
+
     // eslint-disable-next-line
   }, []);
 

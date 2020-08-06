@@ -37,11 +37,11 @@ export interface IRootState {
   StayYTDReducer: IBookingChannelModel;
   RevPARYTDReducer: IBookingChannelModel;
   RGIPerformanceReducer: IBookingChannelModel;
-  pickupSummarySegmentReducer: IBookingChannelModel[];
-  pickupSummaryOCCReducer: IBookingChannelModel[];
-  pickupSummaryDowDataReducer: IBookingChannelModel[];
+  pickupSummarySegmentReducer: IBookingChannelModel;
+  pickupSummaryOCCReducer: IBookingChannelModel;
+  pickupSummaryDowDataReducer: IBookingChannelModel;
   pickupDetailTableReducer: IBookingChannelModel;
   MonthlyBOBReducer: IBookingChannelModel;
   pickupBlobReducer: IBookingChannelModel;
-  pickupSummaryTableReducer: IBookingChannelModel[];
+  pickupSummaryTableReducer: IBookingChannelModel;
 }

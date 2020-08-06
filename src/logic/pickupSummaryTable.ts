@@ -10,7 +10,6 @@ import { ApiHelper } from "../helper";
 const getpickupSummaryTableLogic = createLogic({
   type: pickupSummaryTableActionTypes.REQUETS_PICKUP_SUMMARY_TABLE_DATA,
   process: async ({ action }: any, dispatch: any, done) => {
-    const { month } = action.payload;
     dispatch(
       togglePickupSummaryTableLoader({
         isLoading: true,
@@ -23,20 +22,13 @@ const getpickupSummaryTableLogic = createLogic({
       "GET"
     );
     if (isError) {
-      dispatch(
-        pickupSummaryTableDataFailed({
-          month,
-        })
-      );
+      dispatch(pickupSummaryTableDataFailed());
       done();
       return;
     }
     dispatch(
       pickupSummaryTableDataSuccess({
         data: data.data,
-        isLoading: false,
-        isError: false,
-        month,
       })
     );
     done();

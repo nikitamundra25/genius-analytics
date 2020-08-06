@@ -11,7 +11,6 @@ const getpickupSummarySegmentLogic = createLogic({
   type:
     pickupSummarySegmentDataActionTypes.REQUETS_PICKUP_SUMMARY_SEGMENT_DATA_DATA,
   process: async ({ action }: any, dispatch: any, done) => {
-    const { month } = action.payload;
     dispatch(
       togglePickupSummarySegmentDataLoader({
         isLoading: true,
@@ -24,20 +23,13 @@ const getpickupSummarySegmentLogic = createLogic({
       "GET"
     );
     if (isError) {
-      dispatch(
-        pickupSummarySegmentDataDataFailed({
-          month,
-        })
-      );
+      dispatch(pickupSummarySegmentDataDataFailed());
       done();
       return;
     }
     dispatch(
       pickupSummarySegmentDataDataSuccess({
         data: data.data,
-        isLoading: false,
-        isError: false,
-        month,
       })
     );
     done();

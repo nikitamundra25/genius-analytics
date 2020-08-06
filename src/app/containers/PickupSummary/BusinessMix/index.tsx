@@ -19,15 +19,7 @@ const PickupBusinessMix = (props: any) => {
     isLoading: DowDataLoading,
     data: DowData,
     isError: DowDataError,
-  } = useSelector((state: IRootState) => {
-    const pickupSummaryDowDataReducer = state.pickupSummaryDowDataReducer;
-    const ind = pickupSummaryDowDataReducer.findIndex((d) => d.month === month);
-    let actualData: any = {};
-    if (ind > -1) {
-      actualData = pickupSummaryDowDataReducer[ind];
-    }
-    return actualData;
-  });
+  } = useSelector((state: IRootState) => state.pickupSummaryDowDataReducer);
 
   useEffect(() => {
     dispatch(requestPickupSummaryDowDataData({ month }));

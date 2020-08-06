@@ -10,7 +10,6 @@ import { ApiHelper } from "../helper";
 const getpickupSummaryDowDataLogic = createLogic({
   type: pickupSummaryDowDataActionTypes.REQUETS_PICKUP_SUMMARY_DOWDATA_DATA,
   process: async ({ action }: any, dispatch: any, done) => {
-    const { month } = action.payload;
     dispatch(
       togglePickupSummaryDowDataLoader({
         isLoading: true,
@@ -23,20 +22,13 @@ const getpickupSummaryDowDataLogic = createLogic({
       "GET"
     );
     if (isError) {
-      dispatch(
-        pickupSummaryDowDataDataFailed({
-          month,
-        })
-      );
+      dispatch(pickupSummaryDowDataDataFailed());
       done();
       return;
     }
     dispatch(
       pickupSummaryDowDataDataSuccess({
         data: data.data,
-        isLoading: false,
-        isError: false,
-        month,
       })
     );
     done();

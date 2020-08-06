@@ -13,15 +13,10 @@ const MixedCharts = React.lazy(() =>
 const PickupSegment = ({ index, setHeight, month }: any) => {
   const setHeight1 = setHeight + 140;
   const dispatch = useDispatch();
-  const pickupSummarySegmentReducer = useSelector(
+  const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.pickupSummarySegmentReducer
   );
-  const ind = pickupSummarySegmentReducer.findIndex((d) => d.month === month);
-  let actualData: any = {};
-  if (ind > -1) {
-    actualData = pickupSummarySegmentReducer[ind];
-  }
-  const { isLoading, data, isError } = actualData;
+
   useEffect(() => {
     dispatch(requestPickupSummarySegmentData({ month }));
     // eslint-disable-next-line

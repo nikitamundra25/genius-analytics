@@ -6,21 +6,16 @@ import { IRootState } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 
-const MonthlyTable = ({ month }: any) => {
+const MonthlyTable = (props: any) => {
   const dispatch = useDispatch();
 
-  const { isLoading, data, isError } = useSelector((state: IRootState) => {
-    const pickupSummaryTableReducer = state.pickupSummaryTableReducer;
-    const ind = pickupSummaryTableReducer.findIndex((d) => d.month === month);
-    let actualData: any = {};
-    if (ind > -1) {
-      actualData = pickupSummaryTableReducer[ind];
-    }
-    return actualData;
-  });
+  const { isLoading, data, isError } = useSelector(
+    (state: IRootState) => state.pickupSummaryTableReducer
+  );
 
   useEffect(() => {
-    dispatch(requestPickupSummaryTableData({ month }));
+    // dispatch(requestPickupSummarySegmentData());
+    dispatch(requestPickupSummaryTableData());
     // eslint-disable-next-line
   }, []);
 

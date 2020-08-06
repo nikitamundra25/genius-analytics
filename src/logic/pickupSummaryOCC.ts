@@ -10,7 +10,6 @@ import { ApiHelper } from "../helper";
 const getpickupSummaryOCCLogic = createLogic({
   type: pickupSummaryOCCDataActionTypes.REQUETS_PICKUP_SUMMARY_OCCDATA_DATA,
   process: async ({ action }: any, dispatch: any, done) => {
-    const { month } = action.payload;
     dispatch(
       togglePickupSummaryOCCDataLoader({
         isLoading: true,
@@ -23,20 +22,13 @@ const getpickupSummaryOCCLogic = createLogic({
       "GET"
     );
     if (isError) {
-      dispatch(
-        pickupSummaryOCCDataDataFailed({
-          month,
-        })
-      );
+      dispatch(pickupSummaryOCCDataDataFailed());
       done();
       return;
     }
     dispatch(
       pickupSummaryOCCDataDataSuccess({
         data: data.data,
-        isLoading: false,
-        isError: false,
-        month,
       })
     );
     done();
