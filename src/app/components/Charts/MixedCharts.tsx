@@ -40,7 +40,7 @@ const MixedCharts = ({ charts = [], id, chartSettings = {},legend= true }: any) 
       }, [])
 
 
-  return (
+  return (<div style={{ height: "100%", width: "100%" }}>
     <ChartComponent
       id={id}
       ref={(scope: any) => {
@@ -109,6 +109,7 @@ const MixedCharts = ({ charts = [], id, chartSettings = {},legend= true }: any) 
         })}
       </SeriesCollectionDirective>
     </ChartComponent>
+    </div>
   );
 };
 
