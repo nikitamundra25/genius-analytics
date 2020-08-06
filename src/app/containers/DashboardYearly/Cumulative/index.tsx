@@ -667,8 +667,6 @@ const CumulativeTable = () => {
                         <BarChartComponent
                           id={`tablebar${month.type}-${index}`}
                           data={pickupChartData[index]}
-                          height={"150px"}
-                          width={"250px"}
                           chartSettings={{
                             primaryXAxis: {
                               valueType: "Category",
@@ -686,6 +684,8 @@ const CumulativeTable = () => {
                               },
                             },
                             tooltip: { enable: false },
+                            height:"150px",
+                            width:"250px",
                           }}
                           title={"Business Mix ADR"}
                           color="#4473c5"
@@ -705,8 +705,8 @@ const CumulativeTable = () => {
                         <BarChartComponent
                           id={`tablebar2${month.type}-${index}`}
                           data={mixdata[index]}
-                          height={"250px"}
-                          width={"250px"}
+                          // height={"250px"}
+                          // width={"250px"}
                           chartSettings={{
                             primaryXAxis: {
                               valueType: "Category",
@@ -724,6 +724,8 @@ const CumulativeTable = () => {
                               },
                             },
                             tooltip: { enable: false },
+                            height:"250px",
+                            width:"250px",
                           }}
                           title={"Business Mix %"}
                           color="#4473c5"

@@ -1,5 +1,4 @@
 import React, { FunctionComponent, useEffect } from "react";
-import DashboardMonthlyWidget from "./Widget";
 import TopBar from "../Home/TopBar";
 import { useSelector, useDispatch, Provider } from "react-redux";
 import { DashboardLayoutComponent } from "@syncfusion/ej2-react-layouts";
@@ -9,7 +8,7 @@ import "./index.scss";
 import Loader from "../../components/Loader/Loader";
 import { ErrorComponent } from "../../components/Error";
 import { PanelsDirective, PanelDirective } from "@syncfusion/ej2-react-layouts";
-import BOB from "../Home/BOB";
+import BOB from "./BOB";
 import MonthlyDailyOccupacy from "./MonthlyDailyOccupacy";
 import DailyOccupacy from "./DailyOccupacy";
 import { createBrowserHistory } from "history";

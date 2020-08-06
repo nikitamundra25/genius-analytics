@@ -8,7 +8,7 @@ const PasswordProtection = () => {
   const [cookies, setCookie] = useCookies(["token"]);
   const submit = (e: any) => {
     e.preventDefault();
-    if (passcode === process.env.REACT_APP_APPLICATION_PASSCODE) {
+    if (passcode ===  process.env.REACT_APP_APPLICATION_PASSCODE) {
       setCookie("token", cookies.AWSELB, {
         path: "/",
         expires: new Date(new Date().getTime() + 3600),

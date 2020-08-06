@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
-import Loader from "../../../components/Loader/Loader";
 import { Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { IRootState } from "../../../../interfaces";
 import { requestPickupSummaryTableData } from "../../../../actions";
+import { IRootState } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 
