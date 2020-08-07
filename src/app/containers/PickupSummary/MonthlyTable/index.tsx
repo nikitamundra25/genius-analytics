@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
-import { requestPickupSummaryTableData } from "../../../../actions";
-import { IRootState, IBookingChannelModel } from "../../../../interfaces";
+import { ApiHelper } from "../../../../helper";
+import { IBookingChannelModel } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
-import { ApiHelper } from "../../../../helper";
 
 const MonthlyTable = (props: any) => {
   const [state, setState] = useState<IBookingChannelModel>({

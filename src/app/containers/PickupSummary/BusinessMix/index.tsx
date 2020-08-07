@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
-import { useDispatch, useSelector } from "react-redux";
-
-import { IRootState, IBookingChannelModel } from "../../../../interfaces";
-import { requestPickupSummaryDowDataData } from "../../../../actions";
-import { ErrorComponent } from "../../../components/Error";
 import { ApiHelper } from "../../../../helper";
+import { IBookingChannelModel } from "../../../../interfaces";
+import { ErrorComponent } from "../../../components/Error";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
 const PickupBusinessMix = (props: any) => {
-  const { index, setHeight, month } = props;
+  const { index, setHeight } = props;
 
   const [state, setState] = useState<IBookingChannelModel>({
     isLoading: true,

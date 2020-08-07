@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
-import { useDispatch, useSelector } from "react-redux";
-
-import { IRootState, IBookingChannelModel } from "../../../../interfaces";
-import { requestPickupSummaryOCCDataData } from "../../../../actions";
-import { ErrorComponent } from "../../../components/Error";
 import { ApiHelper } from "../../../../helper";
+import { IBookingChannelModel } from "../../../../interfaces";
+import { ErrorComponent } from "../../../components/Error";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
