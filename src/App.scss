@@ -99,7 +99,7 @@ body {
           background: transparent;
           position: relative;
           color: $gray-text;
-          box-shadow: none;
+          box-shadow: none !important;
           border: none;
           .user-info {
             display: flex;
@@ -619,7 +619,7 @@ body {
   text-align: center;
 }
 .e-dashboardlayout.e-control .e-panel {
-  background: #fff;
+  background: $white;
   -webkit-box-shadow: 0px 0px 30px 0px rgba(82, 63, 105, 0.05);
   box-shadow: 0px 0px 30px 0px rgba(82, 63, 105, 0.05);
   border: 0;
@@ -629,12 +629,15 @@ body {
 .e-dashboardlayout.e-control .e-panel:hover {
   border: 0px;
 }
-.form-control:focus {
-  color: #5c6873;
-  background-color: #fff;
-  border-color: #e4e7ea;
-  outline: 0;
-  box-shadow: none;
+.form-control {
+  border-color: $gray-text;
+  &:focus{
+    color: $secondary;
+    background-color: $white;
+    border-color: $gray-text;
+    outline: 0;
+    box-shadow: none;
+  }
 }
 #defaultLayout #maps{
   width: 100% !important;
