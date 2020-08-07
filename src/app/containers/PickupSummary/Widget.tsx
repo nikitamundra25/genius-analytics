@@ -87,18 +87,22 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                   />
                   <Row className='row-inner'>
                     <Col xs={12} md={6}>
+                      <div>
                       <PickupDOWOCCSegment
                         month={chartType.id}
                         index={index}
                         setHeight={setHeight}
                       />
+                      </div>
                     </Col>
                     <Col xs={12} md={6}>
-                      <PickupBusinessMix
-                        month={chartType.id}
-                        index={index}
-                        setHeight={setHeight}
-                      />
+                      <div>
+                        <PickupBusinessMix
+                          month={chartType.id}
+                          index={index}
+                          setHeight={setHeight}
+                        />
+                      </div>
                     </Col>
                   </Row>
                 </Col>

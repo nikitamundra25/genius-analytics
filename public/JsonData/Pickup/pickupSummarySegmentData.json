@@ -2,43 +2,51 @@
     "data": [
     {
       "name": "Best Flexible Rate",
+      "OCC": 88,
       "RoomNts": 8,
-      "ADR": 100
+      "ADR": 255
     },
     {
       "name": "Leisure Break",
+      "OCC": 75,
       "RoomNts": 17,
-      "ADR": 54
+      "ADR": 154
     },
     {
       "name": "Corporate Contracted",
+      "OCC": 70,
       "RoomNts": 63,
-      "ADR": 26
+      "ADR": 228
     },
     {
       "name": "Consortia",
+      "OCC": 40,
       "RoomNts": 38,
-      "ADR": 56
+      "ADR": 199
     },
     {
       "name": "Promotions",
+      "OCC": 90,
       "RoomNts": 25,
-      "ADR": 56
+      "ADR": 199
     },
     {
       "name": "Groups",
+      "OCC": 78,
       "RoomNts": 18,
-      "ADR": 46
+      "ADR": 186
     },
     {
       "name": "OTAs",
+      "OCC": 88,
       "RoomNts": 18,
-      "ADR": 60
+      "ADR": 171
     },
     {
       "name": "FIT",
+      "OCC": 50,
       "RoomNts": 12,
-      "ADR": 59
+      "ADR": 176
     }
   ]
 }

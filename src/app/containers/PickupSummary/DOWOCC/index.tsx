@@ -125,9 +125,10 @@ const PickupDOWOCCSegment = (props: any) => {
             }}
             charts={Charts}
           />
+          <div className='sub-title'>DOW OCC</div>
         </React.Suspense>
       )}
-      <div className='sub-title'>DOW OCC</div>
+      
     </>
   );
 };
