@@ -37,6 +37,22 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       }, 100);
       
     }
+    let temp = "occ";
+    let stemp:any = []
+    console.log("data",data);
+       data.map((key:any,index:number)=>{
+         
+           stemp.push({
+             name: key.name,
+             OCC: key[temp].data,
+             Budget: key[temp].Budget,
+             LY: key[temp].LY
+           })
+         
+       })
+     
+  console.log("stemp",stemp);
+  
     // eslint-disable-next-line
   }, [data]);
 
