@@ -1,10 +1,8 @@
-import React, { useEffect } from "react";
-import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
-import { useDispatch, useSelector } from "react-redux";
-
-import { IRootState } from "../../../../interfaces";
-import { requestPickupSummarySegmentData } from "../../../../actions";
+import React, { useEffect, useState } from "react";
+import { ApiHelper } from "../../../../helper";
+import { IBookingChannelModel } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
@@ -12,16 +10,37 @@ const MixedCharts = React.lazy(() =>
 
 const PickupSegment = ({ index, setHeight, month }: any) => {
   const setHeight1 = setHeight + 140;
-  const dispatch = useDispatch();
-  const { isLoading, data, isError } = useSelector(
-    (state: IRootState) => state.pickupSummarySegmentReducer
-  );
-
+  const [state, setState] = useState<IBookingChannelModel>({
+    isLoading: true,
+    isError: true,
+    data: [],
+  });
+  const getData = async () => {
+    const { isError, data } = await new ApiHelper().FetchFromLocalJSONFile(
+      "Pickup",
+      "/pickupSummarySegmentData.json",
+      "GET"
+    );
+    if (isError) {
+      setState({
+        isLoading: false,
+        data: [],
+        isError: true,
+      });
+      return;
+    }
+    setState({
+      isLoading: false,
+      data: data.data,
+      isError: false,
+    });
+  };
   useEffect(() => {
-    dispatch(requestPickupSummarySegmentData({ month }));
+    // dispatch(requestPickupSummarySegmentData({ month }));
     // eslint-disable-next-line
+    getData();
   }, []);
-
+  const { isLoading, data, isError } = state;
   const Charts = [
     {
       dataSource: data,
@@ -30,7 +49,7 @@ const PickupSegment = ({ index, setHeight, month }: any) => {
       type: "Column",
       fill: "#4684bd",
       name: "OCC%",
-      yAxisName:'yAxis1',
+      yAxisName: "yAxis1",
       visible: false,
       width: 1,
       cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
@@ -139,7 +158,6 @@ const PickupSegment = ({ index, setHeight, month }: any) => {
           <div className='sub-title'>Pick up by segment</div>
         </React.Suspense>
       )}
-      
     </>
   );
 };

@@ -1,10 +1,8 @@
-import React, { useEffect } from "react";
-import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
-import { useDispatch, useSelector } from "react-redux";
-
-import { IRootState } from "../../../../interfaces";
-import { requestPickupSummaryOCCDataData } from "../../../../actions";
+import React, { useEffect, useState } from "react";
+import { ApiHelper } from "../../../../helper";
+import { IBookingChannelModel } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
+import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
@@ -12,7 +10,31 @@ const MixedCharts = React.lazy(() =>
 
 const PickupDOWOCCSegment = (props: any) => {
   const { index, setHeight } = props;
-  const dispatch = useDispatch();
+  const [state, setState] = useState<IBookingChannelModel>({
+    isLoading: true,
+    isError: true,
+    data: [],
+  });
+  const getData = async () => {
+    const { isError, data } = await new ApiHelper().FetchFromLocalJSONFile(
+      "Pickup",
+      "/pickupSummaryDowData.json",
+      "GET"
+    );
+    if (isError) {
+      setState({
+        isLoading: false,
+        data: [],
+        isError: true,
+      });
+      return;
+    }
+    setState({
+      isLoading: false,
+      data: data.data,
+      isError: false,
+    });
+  };
 
   const labeltemplate = (args: any) => {
     return (
@@ -22,18 +44,11 @@ const PickupDOWOCCSegment = (props: any) => {
     );
   };
 
-  const {
-    isLoading: OCCLoading,
-    data: OccData,
-    isError: OCCError,
-  } = useSelector((state: IRootState) => state.pickupSummaryOCCReducer);
-
   useEffect(() => {
-    // dispatch(requestPickupSummarySegmentData());
-    dispatch(requestPickupSummaryOCCDataData());
-
+    getData();
     // eslint-disable-next-line
   }, []);
+  const { isLoading: OCCLoading, data: OccData, isError: OCCError } = state;
 
   const Charts = [
     {
@@ -128,7 +143,6 @@ const PickupDOWOCCSegment = (props: any) => {
           <div className='sub-title'>DOW OCC</div>
         </React.Suspense>
       )}
-      
     </>
   );
 };
