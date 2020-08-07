@@ -9,7 +9,7 @@ const WidgetHeader = ({
   showdropdowndaily = false,
   showdropdownlead = false,
   onToggle ,
-  selectedMonthlyData = "OCC",
+  selectedMonthlyData,
   handleChange
 }: IWidgetHeaderProps | any) => {
 
@@ -46,19 +46,24 @@ const onhanldeToggle = (str:any)=>{
             <Form>
               <Form.Group
                 controlId="exampleForm.ControlSelect2"
-                className="mb-2"
+                className="mb-2 cursor_pointer"
               >
-                <Form.Control as="select">
-                  <option>Bar</option>
-                  <option>2</option>
-                  <option>3</option>
+                <Form.Control as="select" value={selectedMonthlyData} onChange={handleChange}>
+                  <option value="bar">Bar</option>
+                  <option value="dis">DIS</option>
+                  <option value="corDis">COR DIS</option>
+                  <option value="mtg">MTG</option>
+                  <option value="cor">COR</option>
+                  <option value="corGrp">COR GRP</option>
+                  <option value="lesGrp">LES GRP</option>
+                  <option value="fit">FIT</option>
                 </Form.Control>
               </Form.Group>
             </Form>
           </div>
         ) : null}
         {showdropdowndaily ? (
-          <div className="action-wrap">
+          <div className="action-wrap cursor_pointer">
             <Form>
               <Form.Group
                 controlId="exampleForm.ControlSelect2"
