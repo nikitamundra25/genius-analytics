@@ -67,6 +67,22 @@ const tableData = [
       282,
       3510,
     ],
+    lyData: [
+      232,
+      191,
+      169,
+      268,
+      289,
+      272,
+      214,
+      152,
+      302,
+      154,
+      204,
+      383,
+      2830,
+    ],
+    budData: [362, 387, 340, 326, 304, 396, 319, 380, 283, 213, 204, 285, 3799],
   },
   {
     type: "occ",
@@ -86,6 +102,36 @@ const tableData = [
       "62%",
       "47%",
       "62%",
+    ],
+    lyData: [
+      "55%",
+      "86%",
+      "87%",
+      "96%",
+      "48%",
+      "80%",
+      "99%",
+      "60%",
+      "60%",
+      "71%",
+      "90%",
+      "89%",
+      "77%",
+    ],
+    budData: [
+      "55%",
+      "92%",
+      "62%",
+      "72%",
+      "80%",
+      "81%",
+      "56%",
+      "88%",
+      "55%",
+      "63%",
+      "64%",
+      "93%",
+      "72%",
     ],
   },
   {
@@ -107,6 +153,22 @@ const tableData = [
       225,
       324.8,
     ],
+    lyData: [255, 398, 377, 412, 367, 312, 401, 258, 410, 211, 403, 256, 338.3],
+    budData: [
+      206,
+      310,
+      416,
+      201,
+      202,
+      388,
+      398,
+      412,
+      250,
+      395,
+      288,
+      295,
+      313.4,
+    ],
   },
   {
     type: "revenue",
@@ -126,6 +188,36 @@ const tableData = [
       "1,43,318",
       " 63,450",
       "11,20,020",
+    ],
+    lyData: [
+      "59,160",
+      "76,018",
+      "63,713",
+      "1,10,416",
+      "1,06,063",
+      "84,864",
+      "85,814",
+      "39,216",
+      "1,23,820",
+      "32,494",
+      " 82,212",
+      "98,048",
+      "9,61,838",
+    ],
+    budData: [
+      74572,
+      119970,
+      141440,
+      65526,
+      61408,
+      153648,
+      126962,
+      156560,
+      70750,
+      84135,
+      58752,
+      84075,
+      1197798,
     ],
   },
   {
@@ -147,6 +239,37 @@ const tableData = [
       105.75,
       206.5,
     ],
+    lyData: [
+      140.25,
+      342.28,
+      327.99,
+      395.52,
+      176.16,
+      249.6,
+      396.99,
+      154.8,
+      246,
+      149.81,
+      362.7,
+      227,
+      84,
+      264.2,
+    ],
+    budData: [
+      113.3,
+      285.2,
+      257.92,
+      144.72,
+      161.6,
+      314.28,
+      222.88,
+      362.56,
+      137.5,
+      248.85,
+      184.32,
+      274.35,
+      225.6,
+    ],
   },
   // {
   //   type: "label",
@@ -154,7 +277,6 @@ const tableData = [
   //   months: data,
   //   monthData: [
   //     232	,191,	169	,268,	289	,272,	214,152	,302,	154	,204,	383,	2830
-
   //   ],
   // },
   // {
@@ -171,7 +293,6 @@ const tableData = [
   //   months: data,
   //   monthData: [
   //     255,	398,	377,	412,	367	,312,	401,	258,	410	,211	,403,	256,	338.3
-
   //   ],
   // },
   // {
@@ -205,7 +326,6 @@ const tableData = [
   //   months: data,
   //   monthData: [
   //     "55%",	"92%",	"62%",	"72%",	"80%",	"81%",	"56%",	"88%",	"55%",	"63%",	"64%",	"93%",	"72%",
-
   //   ],
   // },
   // {
@@ -214,7 +334,6 @@ const tableData = [
   //   months: data,
   //   monthData: [
   //     206,	310	,416	,201	,202	,388,	398,	412	,250,	395	,288,	295,	313.4
-
   //   ],
   // },
   // {
@@ -223,7 +342,6 @@ const tableData = [
   //   months: data,
   //   monthData: [
   //     74572 ,	 119970 ,	 141440 ,	 65526 ,	 61408 ,	 153648 ,	 126962 ,	 156560 ,	 70750, 	 84135 	, 58752 ,	 84075 	, 1197798
-
   //   ],
   // },
   // {
@@ -232,7 +350,6 @@ const tableData = [
   //   months: data,
   //   monthData: [
   //     113.3	,285.2,	257.92	,144.72,	161.6	,314.28	,222.88	,362.56,	137.5,	248.85,	184.32,	274.35,	225.6
-
   //   ],
   // },
   // {
@@ -370,130 +487,138 @@ const pickupChartData = [
   ],
 ];
 
-
-const mixdata = [[
-  { x: "BAR", y: 26 },
-  { x: "Discount", y: 11 },
-  { x: "COR Discount", y: 12 },
-  { x: "Meetings", y: 25 },
-  { x: "Corporate", y: 16 },
-  { x: "Cor Group", y: 10 },
-  { x: "Leisure Group", y: 13 },
-  { x: "FIT", y: 6 }
-],
-[
-  { x: "BAR", y: 20 },
-  { x: "Discount", y: 14 },
-  { x: "COR Discount", y: 9 },
-  { x: "Meetings", y: 20 },
-  { x: "Corporate", y: 16 },
-  { x: "Cor Group", y: 14 },
-  { x: "Leisure Group", y: 13 },
-  { x: "FIT", y: 5 },
-],
-[
-  { x: "BAR", y: 26 },
-  { x: "Discount", y: 11 },
-  { x: "COR Discount", y: 10 },
-  { x: "Meetings", y: 20 },
-  { x: "Corporate", y: 18 },
-  { x: "Cor Group", y: 14 },
-  { x: "Leisure Group", y: 8 },
-  { x: "FIT", y: 7 },
-],
-[
-  { x: "BAR", y: 24 },
-  { x: "Discount", y: 15 },
-  { x: "COR Discount", y: 10 },
-  { x: "Meetings", y: 19 },
-  { x: "Corporate", y: 18 },
-  { x: "Cor Group", y: 12 },
-  { x: "Leisure Group", y: 12 },
-  { x: "FIT", y: 9 },
-],[
-  { x: "BAR", y: 24 },
-  { x: "Discount", y: 16 },
-  { x: "COR Discount", y: 8 },
-  { x: "Meetings", y: 19 },
-  { x: "Corporate", y: 17 },
-  { x: "Cor Group", y: 11 },
-  { x: "Leisure Group", y: 8 },
-  { x: "FIT", y: 6 },
-],[
-  { x: "BAR", y: 24 },
-  { x: "Discount", y: 19 },
-  { x: "COR Discount", y: 10 },
-  { x: "Meetings", y: 19 },
-  { x: "Corporate", y: 17 },
-  { x: "Cor Group", y: 12 },
-  { x: "Leisure Group", y: 11 },
-  { x: "FIT", y: 6 },
-],[
-  { x: "BAR", y: 24 },
-  { x: "Discount", y: 18 },
-  { x: "COR Discount", y: 10 },
-  { x: "Meetings", y: 19 },
-  { x: "Corporate", y: 20 },
-  { x: "Cor Group", y: 14 },
-  { x: "Leisure Group", y: 11 },
-  { x: "FIT", y: 5 },
-],[
-  { x: "BAR", y: 23 },
-  { x: "Discount", y: 18 },
-  { x: "COR Discount", y: 12 },
-  { x: "Meetings", y: 29 },
-  { x: "Corporate", y: 17 },
-  { x: "Cor Group", y: 10 },
-  { x: "Leisure Group", y: 13 },
-  { x: "FIT", y: 6 },
-],[
-  { x: "BAR", y: 20 },
-  { x: "Discount", y: 11 },
-  { x: "COR Discount", y: 10 },
-  { x: "Meetings", y: 19 },
-  { x: "Corporate", y: 16 },
-  { x: "Cor Group", y: 12 },
-  { x: "Leisure Group", y: 10 },
-  { x: "FIT", y: 9 },
-],[
-  { x: "BAR", y: 26 },
-  { x: "Discount", y: 11 },
-  { x: "COR Discount", y: 11 },
-  { x: "Meetings", y: 19 },
-  { x: "Corporate", y: 17 },
-  { x: "Cor Group", y: 10 },
-  { x: "Leisure Group", y:12 },
-  { x: "FIT", y: 8 },
-],[
-  { x: "BAR", y: 20 },
-  { x: "Discount", y: 12 },
-  { x: "COR Discount", y: 8 },
-  { x: "Meetings", y: 23 },
-  { x: "Corporate", y: 16 },
-  { x: "Cor Group", y: 10 },
-  { x: "Leisure Group", y: 12 },
-  { x: "FIT", y: 5 },
-],
-[
-  { x: "BAR", y: 26 },
-  { x: "Discount", y: 11 },
-  { x: "COR Discount", y: 8 },
-  { x: "Meetings", y: 27 },
-  { x: "Corporate", y: 20 },
-  { x: "Cor Group", y: 11 },
-  { x: "Leisure Group", y: 8 },
-  { x: "FIT", y: 8 },
-],[
-  { x: "BAR", y: 24 },
-  { x: "Discount", y: 14 },
-  { x: "COR Discount", y: 10 },
-  { x: "Meetings", y: 22 },
-  { x: "Corporate", y: 17 },
-  { x: "Cor Group", y: 12 },
-  { x: "Leisure Group", y: 11 },
-  { x: "FIT", y: 7 },
-],
-]
+const mixdata = [
+  [
+    { x: "BAR", y: 26 },
+    { x: "Discount", y: 11 },
+    { x: "COR Discount", y: 12 },
+    { x: "Meetings", y: 25 },
+    { x: "Corporate", y: 16 },
+    { x: "Cor Group", y: 10 },
+    { x: "Leisure Group", y: 13 },
+    { x: "FIT", y: 6 },
+  ],
+  [
+    { x: "BAR", y: 20 },
+    { x: "Discount", y: 14 },
+    { x: "COR Discount", y: 9 },
+    { x: "Meetings", y: 20 },
+    { x: "Corporate", y: 16 },
+    { x: "Cor Group", y: 14 },
+    { x: "Leisure Group", y: 13 },
+    { x: "FIT", y: 5 },
+  ],
+  [
+    { x: "BAR", y: 26 },
+    { x: "Discount", y: 11 },
+    { x: "COR Discount", y: 10 },
+    { x: "Meetings", y: 20 },
+    { x: "Corporate", y: 18 },
+    { x: "Cor Group", y: 14 },
+    { x: "Leisure Group", y: 8 },
+    { x: "FIT", y: 7 },
+  ],
+  [
+    { x: "BAR", y: 24 },
+    { x: "Discount", y: 15 },
+    { x: "COR Discount", y: 10 },
+    { x: "Meetings", y: 19 },
+    { x: "Corporate", y: 18 },
+    { x: "Cor Group", y: 12 },
+    { x: "Leisure Group", y: 12 },
+    { x: "FIT", y: 9 },
+  ],
+  [
+    { x: "BAR", y: 24 },
+    { x: "Discount", y: 16 },
+    { x: "COR Discount", y: 8 },
+    { x: "Meetings", y: 19 },
+    { x: "Corporate", y: 17 },
+    { x: "Cor Group", y: 11 },
+    { x: "Leisure Group", y: 8 },
+    { x: "FIT", y: 6 },
+  ],
+  [
+    { x: "BAR", y: 24 },
+    { x: "Discount", y: 19 },
+    { x: "COR Discount", y: 10 },
+    { x: "Meetings", y: 19 },
+    { x: "Corporate", y: 17 },
+    { x: "Cor Group", y: 12 },
+    { x: "Leisure Group", y: 11 },
+    { x: "FIT", y: 6 },
+  ],
+  [
+    { x: "BAR", y: 24 },
+    { x: "Discount", y: 18 },
+    { x: "COR Discount", y: 10 },
+    { x: "Meetings", y: 19 },
+    { x: "Corporate", y: 20 },
+    { x: "Cor Group", y: 14 },
+    { x: "Leisure Group", y: 11 },
+    { x: "FIT", y: 5 },
+  ],
+  [
+    { x: "BAR", y: 23 },
+    { x: "Discount", y: 18 },
+    { x: "COR Discount", y: 12 },
+    { x: "Meetings", y: 29 },
+    { x: "Corporate", y: 17 },
+    { x: "Cor Group", y: 10 },
+    { x: "Leisure Group", y: 13 },
+    { x: "FIT", y: 6 },
+  ],
+  [
+    { x: "BAR", y: 20 },
+    { x: "Discount", y: 11 },
+    { x: "COR Discount", y: 10 },
+    { x: "Meetings", y: 19 },
+    { x: "Corporate", y: 16 },
+    { x: "Cor Group", y: 12 },
+    { x: "Leisure Group", y: 10 },
+    { x: "FIT", y: 9 },
+  ],
+  [
+    { x: "BAR", y: 26 },
+    { x: "Discount", y: 11 },
+    { x: "COR Discount", y: 11 },
+    { x: "Meetings", y: 19 },
+    { x: "Corporate", y: 17 },
+    { x: "Cor Group", y: 10 },
+    { x: "Leisure Group", y: 12 },
+    { x: "FIT", y: 8 },
+  ],
+  [
+    { x: "BAR", y: 20 },
+    { x: "Discount", y: 12 },
+    { x: "COR Discount", y: 8 },
+    { x: "Meetings", y: 23 },
+    { x: "Corporate", y: 16 },
+    { x: "Cor Group", y: 10 },
+    { x: "Leisure Group", y: 12 },
+    { x: "FIT", y: 5 },
+  ],
+  [
+    { x: "BAR", y: 26 },
+    { x: "Discount", y: 11 },
+    { x: "COR Discount", y: 8 },
+    { x: "Meetings", y: 27 },
+    { x: "Corporate", y: 20 },
+    { x: "Cor Group", y: 11 },
+    { x: "Leisure Group", y: 8 },
+    { x: "FIT", y: 8 },
+  ],
+  [
+    { x: "BAR", y: 24 },
+    { x: "Discount", y: 14 },
+    { x: "COR Discount", y: 10 },
+    { x: "Meetings", y: 22 },
+    { x: "Corporate", y: 17 },
+    { x: "Cor Group", y: 12 },
+    { x: "Leisure Group", y: 11 },
+    { x: "FIT", y: 7 },
+  ],
+];
 
 const CumulativeTable = () => {
   return (
@@ -539,12 +664,14 @@ const CumulativeTable = () => {
                               placement={"top"}
                               overlay={
                                 <Tooltip id={`tooltip-increase`}>
-                                  Increase 2%
+                                  {table.budData && table.budData.length
+                                ? table.budData[index]
+                                : 0}
                                 </Tooltip>
                               }
                             >
                               <div className="icon-col">
-                                <img src={caretup} alt="increase" width="15" />
+                                <img src= {parseInt(table.monthData[index]) <= parseInt (table.budData[index]) ? caretup : caretdown } alt="increase" width="15" />
                               </div>
                             </OverlayTrigger>
                             <OverlayTrigger
@@ -552,13 +679,15 @@ const CumulativeTable = () => {
                               placement={"top"}
                               overlay={
                                 <Tooltip id={`tooltip-decrease`}>
-                                  Decrease 2%
+                                {table.lyData && table.lyData.length
+                                ? table.lyData[index]
+                                : 0}
                                 </Tooltip>
                               }
                             >
                               <div className="icon-col">
                                 <img
-                                  src={caretdown}
+                                  src={parseInt(table.monthData[index]) <= parseInt(table.lyData[index]) ? caretup : caretdown } 
                                   alt="decrease"
                                   width="15"
                                 />
@@ -663,35 +792,40 @@ const CumulativeTable = () => {
                   {months.map((month: any, index: number) => (
                     <td key={`${month.type}-${index}`} className="content-col">
                       <div className="d-flex align-items-center flex-wrap">
-                        {pickupChartData[index] && pickupChartData[index].length ? 
-                        <BarChartComponent
-                          id={`tablebar${month.type}-${index}`}
-                          data={pickupChartData[index]}
-                          chartSettings={{
-                            primaryXAxis: {
-                              valueType: "Category",
-                              interval: 1,
-                              majorGridLines: { width: 0 },
-                            },
-                            primaryYAxis: {
-                              labelFormat: "{value}",
-                              edgeLabelPlacement: "Shift",
-                              majorGridLines: { width: 0 },
-                              majorTickLines: { width: 0 },
-                              lineStyle: { width: 0 },
-                              labelStyle: {
-                                color: "transparent",
+                        {pickupChartData[index] &&
+                        pickupChartData[index].length ? (
+                          <BarChartComponent
+                            id={`tablebar${month.type}-${index}`}
+                            data={pickupChartData[index]}
+                            chartSettings={{
+                              primaryXAxis: {
+                                valueType: "Category",
+                                interval: 1,
+                                majorGridLines: { width: 0 },
                               },
-                            },
-                            tooltip: { enable: false },
-                            height:"150px",
-                            width:"250px",
-                          }}
-                          title={"Business Mix ADR"}
-                          color="#4473c5"
-                        />
-                        : <div className="bg-white"  style={{ width: "250px", height: "150px" }}
-                        ></div> }
+                              primaryYAxis: {
+                                labelFormat: "{value}",
+                                edgeLabelPlacement: "Shift",
+                                majorGridLines: { width: 0 },
+                                majorTickLines: { width: 0 },
+                                lineStyle: { width: 0 },
+                                labelStyle: {
+                                  color: "transparent",
+                                },
+                              },
+                              tooltip: { enable: false },
+                              height: "150px",
+                              width: "250px",
+                            }}
+                            title={"Business Mix ADR"}
+                            color="#4473c5"
+                          />
+                        ) : (
+                          <div
+                            className="bg-white"
+                            style={{ width: "250px", height: "150px" }}
+                          ></div>
+                        )}
                       </div>
                     </td>
                   ))}
@@ -724,8 +858,8 @@ const CumulativeTable = () => {
                               },
                             },
                             tooltip: { enable: false },
-                            height:"250px",
-                            width:"250px",
+                            height: "250px",
+                            width: "250px",
                           }}
                           title={"Business Mix %"}
                           color="#4473c5"

@@ -2,28 +2,31 @@
     "data": [
         {
           "name": "Direct",
-          "RoomNts": 180,
-          "ARR": 228
+          "RoomNtsTY": 102,
+          "RoomNtsLY": 171,
+          "ADRTY": 211,
+          "ADRLY":448
         },
         {
           "name": "GDS",
-          "RoomNts": 110,
-          "ARR": 203
+          "RoomNtsTY": 175,
+          "RoomNtsLY": 267,
+          "ADRTY": 417,
+          "ADRLY":174
         },
         {
           "name": "OTAs",
-          "RoomNts": 200,
-          "ARR": 158
+          "RoomNtsTY": 133,
+          "RoomNtsLY": 89,
+          "ADRTY": 435,
+          "ADRLY":375
         },
         {
-          "name": "Brand Website",
-          "RoomNts": 120,
-          "ARR": 161
-        },
-        {
-          "name": "Corporate Website",
-          "RoomNts": 50,
-          "ARR": 198
+          "name": "Brand.com",
+          "RoomNtsTY": 88,
+          "RoomNtsLY": 102,
+          "ADRTY": 429,
+          "ADRLY":302
         }
       ]
 }
