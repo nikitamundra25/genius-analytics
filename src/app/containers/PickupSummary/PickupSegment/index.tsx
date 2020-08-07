@@ -23,7 +23,6 @@ const PickupSegment = ({ index, setHeight, month }: any) => {
   }, []);
 
   const Charts = [
-
     {
       dataSource: data,
       xName: "name",
@@ -32,6 +31,7 @@ const PickupSegment = ({ index, setHeight, month }: any) => {
       fill: "#4684bd",
       name: "OCC%",
       yAxisName:'yAxis1',
+      visible: false,
       width: 1,
       cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {

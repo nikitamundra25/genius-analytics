@@ -84,10 +84,10 @@ const BookingChannel = ({ graphdata = [] }:any) => {
     {
       dataSource: data,
       xName: "name",
-      yName: "RoomNts",
+      yName: "RoomNtsTY",
       type: "Column",
       fill: "#4f81bc",
-      name: "Room Nts",
+      name: "Room NtsTy",
       yAxisName:'yAxis1',
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
@@ -107,10 +107,10 @@ const BookingChannel = ({ graphdata = [] }:any) => {
     {
       dataSource: data,
       xName: "name",
-      yName: "ARR",
+      yName: "ADRTY",
       type: "Spline",
       fill: "#b73632",
-      name: "ARR",
+      name: "ADRTY",
       width: 2,
       dashArray:'4',
       marker: {

@@ -671,7 +671,7 @@ const CumulativeTable = () => {
                               }
                             >
                               <div className="icon-col">
-                                <img src= {parseInt(table.monthData[index]) <= parseInt(table.budData[index]) ? caretup : caretdown } alt="increase" width="15" />
+                                <img src= {parseInt(table.monthData[index]) <= parseInt (table.budData[index]) ? caretup : caretdown } alt="increase" width="15" />
                               </div>
                             </OverlayTrigger>
                             <OverlayTrigger
