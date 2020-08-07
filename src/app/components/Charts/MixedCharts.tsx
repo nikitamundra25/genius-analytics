@@ -18,7 +18,7 @@ import {
   AxesDirective, AxisDirective,
 } from "@syncfusion/ej2-react-charts";
 
-const MixedCharts = ({ charts = [], id, chartSettings = {},legend= true }: any) => {
+const MixedCharts = ({ charts = [], id="mixed-map", chartSettings = {},legend= true }: any) => {
   // class MixedCharts extends Component<any, any> {
       const legendSettings = { visible: legend };
 
