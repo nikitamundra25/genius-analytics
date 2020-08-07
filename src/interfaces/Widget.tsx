@@ -13,4 +13,6 @@ export interface IWidgetHeaderProps {
   showdropdowndaily?: boolean;
   showdropdownlead?: boolean;
   // onToggle?: (activeToggle?: any) => void  | any
+  handleChange?: (data:any)=> void;
+  selectedMonthlyData?:string 
 }

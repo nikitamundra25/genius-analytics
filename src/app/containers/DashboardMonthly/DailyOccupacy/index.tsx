@@ -24,6 +24,8 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
   }, []);
 
   const [setHeight, setsetHeight] = React.useState<string>("250px");
+  const [selectedValue, setselectedValue] = React.useState<string>("OCC");
+  const [occupacyList, setoccupacyList] = React.useState<any>([]);
 
  useEffect(() => {
     const modalbtn: HTMLElement | null = document.getElementById(`daily-occ-card`);
@@ -37,29 +39,22 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       }, 100);
       
     }
-    let temp = "occ";
+
     let stemp:any = []
-    console.log("data",data);
        data.map((key:any,index:number)=>{
-         
            stemp.push({
              name: key.name,
-             OCC: key[temp].data,
-             Budget: key[temp].Budget,
-             LY: key[temp].LY
+             OCC: key[selectedValue].data,
+             Budget: key[selectedValue].Budget,
+             LY: key[selectedValue].LY
            })
-         
        })
-     
-  console.log("stemp",stemp);
-  
+  setoccupacyList(stemp)
     // eslint-disable-next-line
   }, [data]);
 
   useEffect(() => {
-
     const resizeListener = () => {
-
       // // change width from the state object
       const modalbtn: HTMLElement | null = document.getElementById(
         `daily-occ-card`
@@ -87,18 +82,32 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
     // eslint-disable-next-line
   }, []);
 
-   
+  const handleChange = (event:any)=>{
+  setselectedValue(event.target.value)
+   let stemp:any = []
+       data.map((key:any,index:number)=>{
+         console.log("key[event.target.value]",key[event.target.value]);
+         
+           stemp.push({
+             name: key.name,
+             [event.target.value]: key[event.target.value].data,
+             Budget: key[event.target.value].Budget,
+             LY: key[event.target.value].LY
+           })
+       })
+  setoccupacyList(stemp)
+  }
 
 
 
   const Charts = [
     {
-      dataSource: data,
+      dataSource: occupacyList,
       xName: "name",
-      yName: "OCC",
+      yName: selectedValue,
       type: "Spline",
       fill: "#4176b9",
-      name: "OCC",
+      name: selectedValue,
       width: 3,
       marker: {
         visible: false,
@@ -117,7 +126,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       },
     },
     {
-      dataSource: data,
+      dataSource: occupacyList,
       xName: "name",
       yName: "Budget",
       type: "Spline",
@@ -142,7 +151,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       },
     },
     {
-      dataSource: data,
+      dataSource: occupacyList,
       xName: "name",
       yName: "LY",
       type: "Spline",
@@ -175,6 +184,8 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
         activeToggle={"graph"}
         showToggle={false}
         showdropdowndaily={true}
+        selectedMonthlyData = {selectedValue}
+        handleChange={handleChange}
       />
 
       <Card.Body>
@@ -195,7 +206,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
                 majorGridLines: { width: 0 },
               },
               primaryYAxis: {
-                labelFormat: "{value}%",
+                labelFormat: `${selectedValue === "OCC" ? '{value}%' : '{value}' } `,
                 edgeLabelPlacement: "Shift",
                 majorGridLines: { width: 0 },
                 majorTickLines: { width: 0 },
