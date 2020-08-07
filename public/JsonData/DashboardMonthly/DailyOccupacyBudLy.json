@@ -1,196 +1,304 @@
 {
-    "data":[
-        {
-          "name": "1",
-          "OCC": 99,
-          "Budget": 90,
-          "LY": 91
-        },
-        {
-          "name": "2",
-          "OCC": 89,
-          "Budget": 93,
-          "LY": 93
-        },
-        {
-          "name": "3",
-          "OCC": 100,
-          "Budget": 99,
-          "LY": 98
-        },
-        {
-          "name": "4",
-          "OCC": 72,
-          "Budget": 96,
-          "LY": 67
-        },
-        {
-          "name": "5",
-          "OCC": 92,
-          "Budget": 104,
-          "LY": 65
-        },
-        {
-          "name": "6",
-          "OCC": 96,
-          "Budget": 97,
-          "LY": 93
-        },
-        {
-          "name": "7",
-          "OCC": 98,
-          "Budget": 94,
-          "LY": 94
-        },
-        {
-          "name": "8",
-          "OCC": 98,
-          "Budget": 96,
-          "LY": 93
-        },
-        {
-          "name": "9",
-          "OCC": 96,
-          "Budget": 104,
-          "LY": 82
-        },
-        {
-          "name": "10",
-          "OCC": 93,
-          "Budget": 101,
-          "LY": 89
-        },
-        {
-          "name": "11",
-          "OCC": 60,
-          "Budget": 75,
-          "LY": 82
-        },
-        {
-          "name": "12",
-          "OCC": 78,
-          "Budget": 98,
-          "LY": 66
-        },
-        {
-          "name": "13",
-          "OCC": 95,
-          "Budget": 98,
-          "LY": 75
-        },
-        {
-          "name": "14",
-          "OCC": 98,
-          "Budget": 98,
-          "LY": 71
-        },
-        {
-          "name": "15",
-          "OCC": 90,
-          "Budget": 80,
-          "LY": 68
-        },
-        {
-          "name": "16",
-          "OCC": 77,
-          "Budget": 91,
-          "LY": 78
-        },
-        {
-          "name": "17",
-          "OCC": 93,
-          "Budget": 97,
-          "LY": 86
-        },
-        {
-          "name": "18",
-          "OCC": 80,
-          "Budget": 70,
-          "LY": 74
-        },
-        {
-          "name": "19",
-          "OCC": 86,
-          "Budget": 73,
-          "LY": 74
-        },
-        {
-          "name": "20",
-          "OCC": 84,
-          "Budget": 73,
-          "LY": 64
-        },
-        {
-          "name": "21",
-          "OCC": 83,
-          "Budget": 67,
-          "LY": 54
-        },
-        {
-          "name": "22",
-          "OCC": 73,
-          "Budget": 67,
-          "LY": 59
-        },
-        {
-          "name": "23",
-          "OCC": 75,
-          "Budget": 72,
-          "LY": 61
-        },
-        {
-          "name": "24",
-          "OCC": 89,
-          "Budget": 70,
-          "LY": 61
-        },
-        {
-          "name": "25",
-          "OCC": 93,
-          "Budget": 73,
-          "LY": 64
-        },
-        {
-          "name": "26",
-          "OCC": 91,
-          "Budget": 84,
-          "LY": 92
-        },
-        {
-          "name": "27",
-          "OCC": 96,
-          "Budget": 89,
-          "LY": 92
-        },
-        {
-          "name": "28",
-          "OCC": 90,
-          "Budget": 84,
-          "LY": 89
-        },
-        {
-          "name": "29",
-          "OCC": 82,
-          "Budget": 62,
-          "LY": 82
-        },
-        {
-          "name": "30",
-          "OCC": 91,
-          "Budget": 70,
-          "LY": 79
-        },
-        {
-          "name": "31",
-          "OCC": 86,
-          "Budget": 73,
-          "LY": 74
-        },
-        {
-          "name": "Total",
-          "OCC": 88,
-          "Budget": 86,
-          "LY": 79
-        }
-      ]
+  "data": [
+    {
+      "name": "1",
+      "occ": {
+        "data": 99,
+        "budget": 90,
+        "lY": 91
+      },
+      "adr": {
+        "data": 213,
+        "budget": 221,
+        "lY": 205
+      },
+      "revpar": {
+        "data": 229,
+        "budget": 391,
+        "lY": 265
+      }
+    },
+    {
+      "name": "2",
+      "OCC": {
+        "data": 89,
+        "budget": 93,
+        "lY": 93
+      },
+      "ADR": {
+        "data": 482,
+        "budget": 307,
+        "lY": 477
+      },
+      "RevPAR": {
+        "data": 329,
+        "budget": 373,
+        "lY": 330
+      }
+    },
+    {
+      "name": "3",
+      "OCC": {
+        "data": 100,
+        "budget": 99,
+        "lY": 98
+      },
+      "ADR": {
+        "data": 388,
+        "budget": 460,
+        "lY": 242
+      },
+      "RevPAR": {
+        "data": 449,
+        "budget": 389,
+        "lY": 327
+      }
+    },
+    {
+      "name": "4",
+      "OCC": {
+        "data": 72,
+        "budget": 96,
+        "lY": 67
+      },
+      "ADR": {
+        "data": 388,
+        "budget": 460,
+        "lY": 242
+      },
+      "RevPAR": {
+        "data": 449,
+        "budget": 389,
+        "lY": 327
+      }
+    },
+    {
+      "name": "5",
+      "OCC": {
+        "data": 92,
+        "budget": 104,
+        "lY": 65
+      },
+      "ADR": {
+        "data": 462,
+        "budget": 408,
+        "lY": 333
+      },
+      "RevPAR": {
+        "data": 184,
+        "budget": 246,
+        "lY": 329
+      }
+    },
+    {
+      "name": "6",
+      "OCC": {
+        "data": 96,
+        "Budget": 97,
+        "LY": 93
+      },
+      "ADR": {
+        "data": 370,
+        "budget": 451,
+        "lY": 234
+      },
+      "RevPAR": {
+        "data": 388,
+        "budget": 269,
+        "lY": 239
+      }
+    },
+    {
+      "name": "7",
+      "OCC": {
+        "data": 98,
+        "Budget": 94,
+        "LY": 94
+      },
+      "ADR": {
+        "data": 239,
+        "budget": 279,
+        "lY": 429
+      },
+      "RevPAR": {
+        "data": 218,
+        "budget": 228,
+        "lY": 268
+      }
+    },
+    {
+      "name": "8",
+      "OCC": {
+        "data": 98,
+        "Budget": 96,
+        "LY": 93
+      },
+      "ADR": {
+        "data": 386,
+        "budget": 220,
+        "lY": 325
+      },
+      "RevPAR": {
+        "data": 388,
+        "budget": 241,
+        "lY": 341
+      }
+    },
+    {
+      "name": "9",
+      "OCC": {
+        "data": 96,
+        "Budget": 104,
+        "LY": 82
+      },
+      "ADR": {
+        "data": 462,
+        "budget": 281,
+        "lY": 484
+      },
+      "RevPAR": {
+        "data": 408,
+        "budget": 434,
+        "lY": 255
+      }
+    },
+    {
+      "name": "10",
+      "OCC": 93,
+      "Budget": 101,
+      "LY": 89
+    },
+    {
+      "name": "11",
+      "OCC": 60,
+      "Budget": 75,
+      "LY": 82
+    },
+    {
+      "name": "12",
+      "OCC": 78,
+      "Budget": 98,
+      "LY": 66
+    },
+    {
+      "name": "13",
+      "OCC": 95,
+      "Budget": 98,
+      "LY": 75
+    },
+    {
+      "name": "14",
+      "OCC": 98,
+      "Budget": 98,
+      "LY": 71
+    },
+    {
+      "name": "15",
+      "OCC": 90,
+      "Budget": 80,
+      "LY": 68
+    },
+    {
+      "name": "16",
+      "OCC": 77,
+      "Budget": 91,
+      "LY": 78
+    },
+    {
+      "name": "17",
+      "OCC": 93,
+      "Budget": 97,
+      "LY": 86
+    },
+    {
+      "name": "18",
+      "OCC": 80,
+      "Budget": 70,
+      "LY": 74
+    },
+    {
+      "name": "19",
+      "OCC": 86,
+      "Budget": 73,
+      "LY": 74
+    },
+    {
+      "name": "20",
+      "OCC": 84,
+      "Budget": 73,
+      "LY": 64
+    },
+    {
+      "name": "21",
+      "OCC": 83,
+      "Budget": 67,
+      "LY": 54
+    },
+    {
+      "name": "22",
+      "OCC": 73,
+      "Budget": 67,
+      "LY": 59
+    },
+    {
+      "name": "23",
+      "OCC": 75,
+      "Budget": 72,
+      "LY": 61
+    },
+    {
+      "name": "24",
+      "OCC": 89,
+      "Budget": 70,
+      "LY": 61
+    },
+    {
+      "name": "25",
+      "OCC": 93,
+      "Budget": 73,
+      "LY": 64
+    },
+    {
+      "name": "26",
+      "OCC": 91,
+      "Budget": 84,
+      "LY": 92
+    },
+    {
+      "name": "27",
+      "OCC": 96,
+      "Budget": 89,
+      "LY": 92
+    },
+    {
+      "name": "28",
+      "OCC": 90,
+      "Budget": 84,
+      "LY": 89
+    },
+    {
+      "name": "29",
+      "OCC": 82,
+      "Budget": 62,
+      "LY": 82
+    },
+    {
+      "name": "30",
+      "OCC": 91,
+      "Budget": 70,
+      "LY": 79
+    },
+    {
+      "name": "31",
+      "OCC": 86,
+      "Budget": 73,
+      "LY": 74
+    },
+    {
+      "name": "Total",
+      "OCC": 88,
+      "Budget": 86,
+      "LY": 79
+    }
+  ]
 }
