@@ -42,7 +42,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
 
     let stemp:any = []
        data.map((key:any,index:number)=>{
-           stemp.push({
+        return stemp.push({
              name: key.name,
              OCC: key[selectedValue].data,
              Budget: key[selectedValue].Budget,
@@ -86,9 +86,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
   setselectedValue(event.target.value)
    let stemp:any = []
        data.map((key:any,index:number)=>{
-         console.log("key[event.target.value]",key[event.target.value]);
-         
-           stemp.push({
+          return stemp.push({
              name: key.name,
              [event.target.value]: key[event.target.value].data,
              Budget: key[event.target.value].Budget,
