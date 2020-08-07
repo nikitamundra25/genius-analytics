@@ -12,7 +12,6 @@ import {
 // import { Browser } from '@syncfusion/ej2-base';
 
 export const BarChartComponent = (barChart: any) => {
-  console.log("barChartbarChart",barChart.height);
   
   return (
     <ChartComponent
