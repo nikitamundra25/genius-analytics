@@ -69,13 +69,14 @@
         {
           "name": "Dec",
           "OCC": 51,
-          "ADR": 346
+          "ADR": 346,
+          "Room Nights":333
         },
         {
           "name": "Total",
           "OCC": 66,
           "ADR": 297.5,
-          "Room Nights":3553
+          "Room Nights":296.08
         }
       ]
 }

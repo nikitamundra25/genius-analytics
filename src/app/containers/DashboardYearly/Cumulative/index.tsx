@@ -687,7 +687,7 @@ const CumulativeTable = () => {
                   {months.map((month: string, index: number) => (
                     <th key={month} className="head-col">
                       {month}
-                      <br /> Actual
+                      <br /> { month === "Total" ? "": index >= 9 && index <=11 ? "BOB": "Actual"}
                     </th>
                   ))}
                 </tr>

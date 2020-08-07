@@ -103,6 +103,7 @@ const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
         },
       },
     },
+     
     {
       dataSource: data,
       xName: "name",
@@ -121,6 +122,30 @@ const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
           visible: true,
           position: "Top",
           
+          font: {
+            fontWeight: "600",
+            color: "#000000",
+          },
+        },
+      },
+    },
+    {
+      dataSource: data,
+      xName: "name",
+      yName: "RoomNights",
+      type: "Spline",
+      fill: "#01224e",
+      name: "Room Nights",
+      width: 2,
+      marker: {
+        visible: true,
+        width: 8,
+        height: 8,
+        fill: "#01224e",
+        border: { width: 0, color: "#01224e" },
+        dataLabel: {
+          visible: true,
+          position: "Bottom",
           font: {
             fontWeight: "600",
             color: "#000000",

@@ -15,7 +15,7 @@
     font-size: 12px;
     text-align: center;
     vertical-align: middle;
-    max-width: 265px;
+    max-width: 300px;
    }
   thead{
     th{
@@ -33,7 +33,7 @@
     border: 1px solid #e0e0e0;
     padding-bottom: 20px;
     position: relative;
-    min-width: 150px;
+    min-width: 255px;
   }
   .row-title{
     background: $theme-dark-color;
@@ -51,8 +51,8 @@
     padding: 0px 10px;
   }
   .icon-col {
-    flex: 0 0 30px;
-    max-width: 30px;
+    flex: 0 0 43px;
+    max-width: 43px;
   }
   .content-col{
     background:#cdeaf8;
@@ -63,8 +63,10 @@
     right:5px;
     color:$white;
     span{
-      width: 30px;
+      width: 43px;
       display: inline-block;
+      text-align: center;
+      font-size: 12px;
     }
   }
  
