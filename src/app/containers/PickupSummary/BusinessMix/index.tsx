@@ -143,8 +143,9 @@ const PickupBusinessMix = (props: any) => {
               }}
               charts={Charts}
             />
-          </React.Suspense>
+          
           <div className='sub-title'>Business Mix</div>
+          </React.Suspense>
         </>
       )}
 

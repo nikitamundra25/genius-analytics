@@ -23,6 +23,30 @@ const PickupSegment = ({ index, setHeight, month }: any) => {
   }, []);
 
   const Charts = [
+
+    {
+      dataSource: data,
+      xName: "name",
+      yName: "OCC",
+      type: "Column",
+      fill: "#4684bd",
+      name: "OCC%",
+      yAxisName:'yAxis1',
+      width: 1,
+      cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
+      marker: {
+        dataLabel: {
+          visible: true,
+          rx: 10,
+          ry: 10,
+          font: {
+            fontWeight: "600",
+            color: "#000",
+          },
+        },
+      },
+    },
+
     {
       dataSource: data,
       xName: "name",
@@ -112,9 +136,10 @@ const PickupSegment = ({ index, setHeight, month }: any) => {
             }}
             charts={Charts}
           />
+          <div className='sub-title'>Pick up by segment</div>
         </React.Suspense>
       )}
-      <div className='sub-title'>Pick up by segment</div>
+      
     </>
   );
 };
