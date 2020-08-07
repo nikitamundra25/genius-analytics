@@ -1,23 +1,43 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { requestPickupSummaryTableData } from "../../../../actions";
-import { IRootState } from "../../../../interfaces";
+import { IRootState, IBookingChannelModel } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import { ApiHelper } from "../../../../helper";
 
 const MonthlyTable = (props: any) => {
-  const dispatch = useDispatch();
-
-  const { isLoading, data, isError } = useSelector(
-    (state: IRootState) => state.pickupSummaryTableReducer
-  );
-
+  const [state, setState] = useState<IBookingChannelModel>({
+    isLoading: true,
+    isError: true,
+    data: [],
+  });
+  const getData = async () => {
+    const { isError, data } = await new ApiHelper().FetchFromLocalJSONFile(
+      "Pickup",
+      "/pickupSummaryTable.json",
+      "GET"
+    );
+    if (isError) {
+      setState({
+        isLoading: false,
+        data: [],
+        isError: true,
+      });
+      return;
+    }
+    setState({
+      isLoading: false,
+      data: data.data,
+      isError: false,
+    });
+  };
   useEffect(() => {
-    // dispatch(requestPickupSummarySegmentData());
-    dispatch(requestPickupSummaryTableData());
+    getData();
     // eslint-disable-next-line
   }, []);
+  const { isLoading, data, isError } = state;
 
   return (
     <>

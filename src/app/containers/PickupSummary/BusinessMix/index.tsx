@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { useDispatch, useSelector } from "react-redux";
 
-import { IRootState } from "../../../../interfaces";
+import { IRootState, IBookingChannelModel } from "../../../../interfaces";
 import { requestPickupSummaryDowDataData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
+import { ApiHelper } from "../../../../helper";
 
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
@@ -13,16 +14,33 @@ const MixedCharts = React.lazy(() =>
 const PickupBusinessMix = (props: any) => {
   const { index, setHeight, month } = props;
 
-  const dispatch = useDispatch();
-
-  const {
-    isLoading: DowDataLoading,
-    data: DowData,
-    isError: DowDataError,
-  } = useSelector((state: IRootState) => state.pickupSummaryDowDataReducer);
-
+  const [state, setState] = useState<IBookingChannelModel>({
+    isLoading: true,
+    isError: true,
+    data: [],
+  });
+  const getData = async () => {
+    const { isError, data } = await new ApiHelper().FetchFromLocalJSONFile(
+      "Pickup",
+      "/pickupSummaryDowData.json",
+      "GET"
+    );
+    if (isError) {
+      setState({
+        isLoading: false,
+        data: [],
+        isError: true,
+      });
+      return;
+    }
+    setState({
+      isLoading: false,
+      data: data.data,
+      isError: false,
+    });
+  };
   useEffect(() => {
-    dispatch(requestPickupSummaryDowDataData({ month }));
+    getData();
     // eslint-disable-next-line
   }, []);
 
@@ -38,6 +56,11 @@ const PickupBusinessMix = (props: any) => {
       </div>
     );
   };
+  const {
+    isLoading: DowDataLoading,
+    data: DowData,
+    isError: DowDataError,
+  } = state;
 
   const Charts = [
     {
@@ -143,8 +166,8 @@ const PickupBusinessMix = (props: any) => {
               }}
               charts={Charts}
             />
-          
-          <div className='sub-title'>Business Mix</div>
+
+            <div className='sub-title'>Business Mix</div>
           </React.Suspense>
         </>
       )}
