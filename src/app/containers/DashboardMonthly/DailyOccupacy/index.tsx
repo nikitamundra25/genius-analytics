@@ -37,7 +37,6 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
         //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
         setsetHeight(`${setgraphHeight}px`)
       }, 100);
-      
     }
 
     let stemp:any = []
