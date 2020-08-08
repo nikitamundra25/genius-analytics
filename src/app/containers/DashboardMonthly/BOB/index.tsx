@@ -25,7 +25,7 @@ const MonthlyBOB = (props: any) => {
     data.map((list: any, index: number) => {
       return list.subData.map((subdata: any, i: number) =>
         months.map((key: any, ind: number) => {
-          data[index].subData[i].data[ind].date = moment(key).day();
+          return data[index].subData[i].data[ind].date = moment(key).day();
         })
       );
     });
