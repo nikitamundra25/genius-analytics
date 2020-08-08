@@ -119,9 +119,9 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
     <>
       {graphList.map((chartConfig: any, index: number) => {
         return (
-          // <React.Fragment key={index}>
-            getChart(chartConfig, index)
-          // </React.Fragment>
+           <React.Fragment key={index}>
+            {getChart(chartConfig, index)}
+           </React.Fragment>
         );
       })}
     </>

@@ -6,7 +6,7 @@ import { IRootState } from "../../../../interfaces";
 import { requestPickupBlobData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 
-const BOBMonthlyTable = () => {
+const BOBMonthlyTable = ({index}:any) => {
   const dispatch = useDispatch();
 
   const { isLoading, data: graphdata, isError } = useSelector(
