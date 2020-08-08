@@ -1,53 +1,53 @@
  [
     {
       "title": "Room Nights",
-      "BOBValue": "3454",
-      "budget": "4836",
-      "ly": "4347",
-      "stlyValue": "5120",
-      "VSbud": "15",
-      "VSly": "-25",
-      "VSstly": "55"
+      "BOBValue": 8124,
+      "budget": 8845,
+      "ly": 7943,
+      "stlyValue": 6943,
+      "VSbud": -721,
+      "VSly": 181,
+      "VSstly": 1181
     },
     {
       "title": "OCC",
-      "BOBValue": "76.01",
-      "budget": "67.8",
-      "ly": "71.0",
-      "stlyValue": "61.05",
-      "VSbud": "-0.8",
-      "VSly": "-0.8",
-      "VSstly": "5.1"
+      "BOBValue": "65.07%",
+      "budget": "71.5%",
+      "ly": "64.2%",
+      "stlyValue": "56.1%",
+      "VSbud": "-6%",
+      "VSly": "1.5%",
+      "VSstly": "9.5%"
     },
     {
       "title": "Revenue",
-      "BOBValue": "970,365",
-      "budget": "845,365",
-      "ly": "733,395",
-      "stlyValue": "865,333",
-      "VSbud": "75,965",
-      "VSly": "15,965",
-      "VSstly": "118,032"
+      "BOBValue": "1,480,599",
+      "budget": "1,718,849",
+      "ly": "1,518,702",
+      "stlyValue": "1,249,740",
+      "VSbud": "",
+      "VSly": "-38,103",
+      "VSstly": "230,859"
     },
     {
       "title": "ADR",
-      "BOBValue": "178.9",
-      "budget": "174.9",
-      "ly": "168.7",
-      "stlyValue": "166.5",
-      "VSbud": "14.9",
-      "VSly": "14.9",
-      "VSstly": "11.2"
+      "BOBValue": "182.3",
+      "budget": "194.3",
+      "ly": "191.2",
+      "stlyValue": "180.0",
+      "VSbud": "-12",
+      "VSly": "-8.9",
+      "VSstly": "2.3"
     },
     {
       "title": "RevPar",
-      "BOBValue": "136.1",
-      "budget": "118.6",
-      "ly": "102.9",
-      "stlyValue": "118.5",
-      "VSbud": "8.6",
-      "VSly": "3.6",
-      "VSstly": "17.9"
+      "BOBValue": "119.7",
+      "budget": "139.0",
+      "ly": "122.8",
+      "stlyValue": "101.04",
+      "VSbud": "-19",
+      "VSly": "-3.1",
+      "VSstly": "18.7"
     }
   ]
 

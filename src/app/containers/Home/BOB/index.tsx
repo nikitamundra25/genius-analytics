@@ -9,7 +9,7 @@ import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 
 const BOB = () => {
   const dispatch = useDispatch();
-  const { isLoading, /* data */ isError } = useSelector(
+  const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.BOBReducer
   );
   useEffect(() => {
@@ -20,97 +20,158 @@ const BOB = () => {
   return (
     <>
       <Card>
-        <WidgetHeader title={"Business on the Books"} activeToggle={"grid"} showToggle={false} />
-      
-          {isLoading ? (
-            <WidgetLoader />
-          ) : isError ? (
-            <ErrorComponent
-              message={"An error occured while fetching details "}
-            />
-          ) : (
-            <div className="business-table-section">
+        <WidgetHeader
+          title={"Business on the Books"}
+          activeToggle={"grid"}
+          showToggle={false}
+        />
 
-            
-            <Table responsive className='business-table mb-0'>
+        {isLoading ? (
+          <WidgetLoader />
+        ) : isError ? (
+          <ErrorComponent
+            message={"An error occured while fetching details "}
+          />
+        ) : (
+          <div className="business-table-section">
+            <Table responsive className="business-table mb-0">
               <thead>
-                <tr className='business-top-row'>
+                <tr className="business-top-row">
                   <th></th>
                   <th></th>
                   <th></th>
                   <th></th>
                   <th></th>
-                  <th colSpan={3} className='variance-col'>
+                  <th colSpan={3} className="variance-col">
                     VARIANCES
                   </th>
                 </tr>
                 <tr>
                   <th></th>
-                  <th className='head-col'>BOB</th>
-                  <th className='head-col'>BUDGET</th>
-                  <th className='head-col'>2016</th>
-                  <th className='head-col'>STLY</th>
-                  <th className='head-col'>Vs.BUD</th>
-                  <th className='head-col'>Vs.LY</th>
-                  <th className='head-col'>Vs.STLY</th>
+                  <th className="head-col">BOB</th>
+                  <th className="head-col">BUDGET</th>
+                  <th className="head-col">2016</th>
+                  <th className="head-col">STLY</th>
+                  <th className="head-col">Vs.BUD</th>
+                  <th className="head-col">Vs.LY</th>
+                  <th className="head-col">Vs.STLY</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td className='title-col'>Room Nights</td>
-                  <td className='content-col'>8124</td>
-                  <td className='content-col'>8,845</td>
-                  <td className='content-col'>7,943</td>
-                  <td className='content-col'>6,943</td>
-                  <td className='content-col bg-2 text-danger'>-721</td>
-                  <td className='content-col bg-2 '>181</td>
-                  <td className='content-col bg-2'>1,181</td>
-                </tr>
-                <tr>
-                  <td className='title-col'>OCC</td>
-                  <td className='content-col'>75.7%</td>
-                  <td className='content-col'>71.5%</td>
-                  <td className='content-col'>64.2%</td>
-                  <td className='content-col'>56.1%</td>
-                  <td className='content-col bg-2 text-danger'>-6%</td>
-                  <td className='content-col bg-2 text-danger'>1.5%</td>
-                  <td className='content-col bg-2'>9.5%</td>
-                </tr>
-                <tr>
-                  <td className='title-col'>Revenue</td>
-                  <td className='content-col'>&pound;14,80,599</td>
-                  <td className='content-col'>&pound;17,18,849</td>
-                  <td className='content-col'>&pound;15,18,702</td>
-                  <td className='content-col'>&pound;12,49,740</td>
-                  <td className='content-col bg-2'>&pound;75,965</td>
-                  <td className='content-col bg-2 text-danger'>-&pound;38,103</td>
-                  <td className='content-col bg-2'>&pound;2,30,859</td>
-                </tr>
-                <tr>
-                  <td className='title-col'>ARR</td>
-                  <td className='content-col'>&pound;182.3</td>
-                  <td className='content-col'>&pound;194.3</td>
-                  <td className='content-col'>&pound;191.2</td>
-                  <td className='content-col'>&pound;180.0</td>
-                  <td className='content-col bg-2 text-danger'>-12</td>
-                  <td className='content-col bg-2 text-danger'>-&pound;8.9</td>
-                  <td className='content-col bg-2'>&pound;2.3</td>
-                </tr>
-                <tr>
-                  <td className='title-col'>RevPar</td>
-                  <td className='content-col'>&pound;119.7</td>
-                  <td className='content-col'>&pound;139.0</td>
-                  <td className='content-col'>&pound;122.8</td>
-                  <td className='content-col'>&pound;101.04</td>
-                  <td className='content-col bg-2 text-danger'>-19</td>
-                  <td className='content-col bg-2 text-danger'>-&pound;3.1</td>
-                  <td className='content-col bg-2'>&pound;18.7</td>
-                </tr>
+                {data && data.length
+                  ? data.map((list: any, index: number) => {
+                      return (
+                        <tr key={index}>
+                          <td className="title-col">{list.title} </td>
+                          <td
+                            className={`content-col ${
+                              list.BOBValue && parseInt(list.BOBValue) < 0
+                                ? "text-danger"
+                                : ""
+                            }`}
+                          >
+                            {list.BOBValue
+                              ? list.title === "Revenue" ||
+                                list.title === "ADR" ||
+                                list.title === "RevPar"
+                                ? `£${list.BOBValue}`
+                                : list.BOBValue
+                              : "-"}{" "}
+                          </td>
+                          <td
+                            className={`content-col ${
+                              list.budget && parseInt(list.budget) < 0
+                                ? "text-danger"
+                                : ""
+                            }`}
+                          >
+                            {list.budget
+                              ? list.title === "Revenue" ||
+                                list.title === "ADR" ||
+                                list.title === "RevPar"
+                                ? `£${list.budget}`
+                                : list.budget
+                              : "-"}
+                          </td>
+                          <td
+                            className={`content-col ${
+                              list.ly && parseInt(list.ly) < 0
+                                ? "text-danger"
+                                : ""
+                            }`}
+                          >
+                            {list.ly
+                              ? list.title === "Revenue" ||
+                                list.title === "ADR" ||
+                                list.title === "RevPar"
+                                ? `£${list.ly}`
+                                : list.ly
+                              : "-"}
+                          </td>
+                          <td
+                            className={`content-col ${
+                              list.stlyValue && parseInt(list.stlyValue) < 0
+                                ? "text-danger"
+                                : ""
+                            }`}
+                          >
+                            {list.stlyValue
+                              ? list.title === "Revenue" ||
+                                list.title === "ADR" ||
+                                list.title === "RevPar"
+                                ? `£${list.stlyValue}`
+                                : list.stlyValue
+                              : "-"}
+                          </td>
+                          <td
+                            className={`content-col ${
+                              list.VSbud && parseInt(list.VSbud) < 0
+                                ? "text-danger"
+                                : ""
+                            }`}
+                          >
+                            {list.VSbud
+                              ?  list.VSbud
+                              : "-"}
+                          </td>
+                          <td
+                            className={`content-col bg-2 ${
+                              list.VSly && parseInt(list.VSly) < 0
+                                ? "text-danger"
+                                : ""
+                            }`}
+                          >
+                            {list.VSly
+                              ? list.title === "Revenue" ||
+                                list.title === "ADR" ||
+                                list.title === "RevPar"
+                                ? `£${list.VSly}`
+                                : list.VSly
+                              : "-"}
+                          </td>
+                          <td
+                            className={`content-col bg-2 ${
+                              list.VSstly && parseInt(list.VSstly) < 0
+                                ? "text-danger"
+                                : ""
+                            }`}
+                          >
+                            {list.VSstly
+                              ? list.title === "Revenue" ||
+                                list.title === "ADR" ||
+                                list.title === "RevPar"
+                                ? `£${list.VSstly}`
+                                : list.VSstly
+                              : "-"}
+                          </td>
+                        </tr>
+                      );
+                    })
+                  : null}
               </tbody>
             </Table>
-            </div>
-           )}  
-        
+          </div>
+        )}
       </Card>
     </>
   );

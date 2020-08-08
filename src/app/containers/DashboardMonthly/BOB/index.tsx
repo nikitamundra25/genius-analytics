@@ -9,7 +9,7 @@ import { getMonthsData } from "../../../../helper";
 import moment from "moment";
 
 const MonthlyBOB = (props: any) => {
-  const months = getMonthsData(new Date());
+  const months = getMonthsData(props.selectedDate);
   const dispatch = useDispatch();
   const [bobList, setbobList] = React.useState<any>([]);
 
@@ -22,6 +22,7 @@ const MonthlyBOB = (props: any) => {
   }, []);
 
   useEffect(() => {
+    if(data && data.length){
     data.map((list: any, index: number) => {
       return list.subData.map((subdata: any, i: number) =>
         months.map((key: any, ind: number) => {
@@ -30,8 +31,9 @@ const MonthlyBOB = (props: any) => {
       );
     });
     setbobList(data);
+  }
     // eslint-disable-next-line
-  }, [data]);
+  }, [data,months]);
 
   return (
     <>
