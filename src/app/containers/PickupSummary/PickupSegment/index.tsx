@@ -8,8 +8,8 @@ const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
-const PickupSegment = ({ index, setHeight, month }: any) => {
-  const setHeight1 = setHeight + 140;
+const PickupSegment = ({ index, month }: any) => {
+  //const setHeight1 = setHeight + 140;
   const [state, setState] = useState<IBookingChannelModel>({
     isLoading: true,
     isError: true,
@@ -150,8 +150,8 @@ const PickupSegment = ({ index, setHeight, month }: any) => {
                 visible: false,
               },
               tooltip: { enable: true },
-              //height:"200px"
-              height: `${setHeight1}px`,
+              height:"325px"
+              //height: `${setHeight1}px`,
             }}
             charts={Charts}
           />

@@ -1,8 +1,8 @@
 .business-table-section{
-  height: calc(100% - 80px);
+  height: calc(100% - 70px);
   overflow-y: auto;
   overflow-x: hidden;
-  margin: 15px 15px;
+  margin: 0px 15px;
 }
 .template{
   height: 100%;
@@ -13,11 +13,21 @@
   border-collapse: separate;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   th, td {
-    padding: 8px 6px;
+    padding: 9px 6px;
     border: 0px;
     font-size:12px;
     text-align:center;
     vertical-align: middle;
+   
+    @media only screen and (max-width: 1539px) {
+      padding: 8px 6px;
+    }
+    @media only screen and (max-width: 1485px) {
+      padding: 6px 6px;
+    }
+    @media only screen and (max-width: 1390px)  {
+      padding: 5px 6px;
+    }
    }
   thead{
     th{
@@ -37,6 +47,13 @@
     color:#fff;
     font-weight: 500;
     padding:8px 5px;
+    @media only screen and (max-width: 1540px) {
+      padding: 7px 6px;
+    }
+    @media only screen and (max-width: 1390px)  {
+      padding:  6px 6px;
+    }
+    
   }
   .title-col{
     background: #6ea0b7;

@@ -16,6 +16,14 @@
     text-align: center;
     vertical-align: middle;
     max-width: 300px;
+    @media only screen and (max-width: 1480px) {
+      padding: 2px 3px;
+      font-size:11px;
+    }
+    @media only screen and (max-width: 1440px) {
+      padding: 1px 3px;
+      font-size:11px;
+    }
    }
   thead{
     th{
@@ -34,6 +42,12 @@
     padding-bottom: 20px;
     position: relative;
     min-width: 255px;
+    @media only screen and (max-width: 1480px) {
+      font-size:12px;
+    }
+    @media only screen and (max-width: 1440px) {
+      font-size:12px;
+    }
   }
   .row-title{
     background: $theme-dark-color;
@@ -44,11 +58,17 @@
     border: 1px solid #e0e0e0;
     white-space: nowrap;
     text-align: left;
+    @media only screen and (max-width: 1480px) {
+      font-size:12px;
+    }
+    @media only screen and (max-width: 1440px) {
+      font-size:12px;
+    }
   }
   .text-col {
     flex: 1;
     text-align: left;
-    padding: 0px 10px;
+    padding: 0px 0px 0px 5px;
   }
   .icon-col {
     flex: 0 0 43px;
@@ -67,6 +87,12 @@
       display: inline-block;
       text-align: center;
       font-size: 12px;
+      @media only screen and (max-width: 1480px) {
+        font-size:12px;
+      }
+      @media only screen and (max-width: 1440px) {
+        font-size:11px;
+      }
     }
   }
  

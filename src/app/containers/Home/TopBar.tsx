@@ -65,7 +65,7 @@ const TopBar = (props: any) => {
       setMonthForDays.getMonth() - 1,
       1
     );
-    props.handleReset();
+    props.handleReset(setNewDate);
     setState({
       ...state,
       activeMonth: month,
@@ -94,7 +94,7 @@ const TopBar = (props: any) => {
       activeMonth: month,
       startDate: setNewDate,
     });
-    props.handleReset();
+    props.handleReset(setNewDate);
   };
   const CustomInput = ({ value, onClick }:any) => (
     <span className="custom-datepicker  cursor-pointer" onClick={onClick}>

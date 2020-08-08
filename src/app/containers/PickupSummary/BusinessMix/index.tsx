@@ -9,7 +9,7 @@ const MixedCharts = React.lazy(() =>
 );
 
 const PickupBusinessMix = (props: any) => {
-  const { index, setHeight } = props;
+  const { index } = props;
 
   const [state, setState] = useState<IBookingChannelModel>({
     isLoading: true,
@@ -158,8 +158,8 @@ const PickupBusinessMix = (props: any) => {
                   visible: false,
                 },
                 tooltip: { enable: true },
-                height: `${setHeight}px`,
-                // height:"200px"
+                //height: `${setHeight}px`,
+                height:"180px"
               }}
               charts={Charts}
             />
@@ -169,9 +169,9 @@ const PickupBusinessMix = (props: any) => {
         </>
       )}
 
-      <svg style={{ height: "0" }}>
+      <svg style={{ height: "0" }} >
         <defs>
-          <linearGradient id='pickupmix-chart' x1='0' x2='0' y1='0' y2='1'>
+          <linearGradient  id='pickupmix-chart' x1='0' x2='0' y1='0' y2='1'>
             <stop offset='0' />
             <stop offset='1' />
           </linearGradient>

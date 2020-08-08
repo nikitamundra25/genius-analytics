@@ -87,6 +87,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           // fill: "#244d81",
           fill: "url(#occty-chart)",
           name: "OCC TY",
+          yAxisName:'yAxis1',
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
           marker: {
             visible: false,
@@ -113,6 +114,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           //fill: "#4f81bc",
           fill: "url(#occly-chart)",
           name: "OCC LY",
+          yAxisName:'yAxis1',
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
           marker: {
             visible: false,
