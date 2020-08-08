@@ -9,7 +9,7 @@ const MixedCharts = React.lazy(() =>
 );
 
 const PickupDOWOCCSegment = (props: any) => {
-  const { index, setHeight } = props;
+  const { index } = props;
   const [state, setState] = useState<IBookingChannelModel>({
     isLoading: true,
     isError: true,
@@ -135,8 +135,8 @@ const PickupDOWOCCSegment = (props: any) => {
                 visible: false,
               },
               tooltip: { enable: true },
-              //height:"200px"
-              height: `${setHeight}px`,
+              height:"180px"
+             // height: `${setHeight}px`,
             }}
             charts={Charts}
           />

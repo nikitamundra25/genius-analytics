@@ -9,51 +9,51 @@ import TableForm from "./MonthlyTable";
 
 const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   console.log("graphList", graphList);
-  const [setHeight, setsetHeight] = React.useState<number>(250);
+ // const [setHeight, setsetHeight] = React.useState<number>(250);
 
-  useEffect(() => {
-    const modalbtn: HTMLElement | null = document.getElementById(
-      `summary-card0`
-    );
-    if (modalbtn) {
-      setTimeout(() => {
-        const check = modalbtn.getBoundingClientRect();
-        const getHeight = check.height;
-        const setgraphHeight = getHeight - 225;
-        setsetHeight(setgraphHeight);
-      }, 100);
-    }
-    // eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   const modalbtn: HTMLElement | null = document.getElementById(
+  //     `summary-card0`
+  //   );
+  //   if (modalbtn) {
+  //     setTimeout(() => {
+  //       const check = modalbtn.getBoundingClientRect();
+  //       const getHeight = check.height;
+  //       const setgraphHeight = getHeight - 225;
+  //       setsetHeight(setgraphHeight);
+  //     }, 100);
+  //   }
+  //   // eslint-disable-next-line
+  // }, []);
 
-  useEffect(() => {
-    const resizeListener = () => {
-      // // change width from the state object
-      const modalbtn: HTMLElement | null = document.getElementById(
-        `summary-card0`
-      );
-      // console.log("modalbtn", modalbtn);
+  // useEffect(() => {
+  //   const resizeListener = () => {
+  //     // // change width from the state object
+  //     const modalbtn: HTMLElement | null = document.getElementById(
+  //       `summary-card0`
+  //     );
+  //     // console.log("modalbtn", modalbtn);
 
-      if (modalbtn) {
-        setTimeout(() => {
-          const check = modalbtn.getBoundingClientRect();
-          const getHeight = check.height;
-          const setgraphHeight = getHeight - 225;
+  //     if (modalbtn) {
+  //       setTimeout(() => {
+  //         const check = modalbtn.getBoundingClientRect();
+  //         const getHeight = check.height;
+  //         const setgraphHeight = getHeight - 225;
 
-          setsetHeight(setgraphHeight);
-        }, 100);
-      }
-    };
-    // set resize listener
-    window.addEventListener("resize", resizeListener);
+  //         setsetHeight(setgraphHeight);
+  //       }, 100);
+  //     }
+  //   };
+  //   // set resize listener
+  //   window.addEventListener("resize", resizeListener);
 
-    // clean up function
-    return () => {
-      // remove resize listener
-      window.removeEventListener("resize", resizeListener);
-    };
-    // eslint-disable-next-line
-  }, []);
+  //   // clean up function
+  //   return () => {
+  //     // remove resize listener
+  //     window.removeEventListener("resize", resizeListener);
+  //   };
+  //   // eslint-disable-next-line
+  // }, []);
 
   const getChart = (chartType: any, index: number) => {
     const rowId = index;
@@ -67,8 +67,8 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
       //   data-sizey='0'>
       //   <span id='close' className='e-template-icon e-clear-icon' />
       //   <div className='e-panel-container template'>
-          <Card id={`summary-card${rowId}`}>
-            <Card.Body>
+          <Card id={`summary-card${rowId}`} className="bg-white h-auto mb-3">
+            <Card.Body className="pb-0">
               <Row className='row-inner'>
                 <Col xs={12} md={5}>
                   <div className='sub-title text-left'>{chartType.name}</div>
@@ -76,7 +76,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                     <PickupSegment
                        month={chartType.id}
                       index={rowId}
-                      setHeight={setHeight}
+                      //setHeight={setHeight}
                     />
                   </div>
                 </Col>
@@ -92,7 +92,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       <PickupDOWOCCSegment
                         month={chartType.id}
                         index={rowId}
-                        setHeight={setHeight}
+                        //setHeight={setHeight}
                       />
                       </div>
                     </Col>
@@ -101,7 +101,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                         <PickupBusinessMix
                           month={chartType.id}
                           index={rowId}
-                          setHeight={setHeight}
+                          //setHeight={setHeight}
                         />
                       </div>
                     </Col>
