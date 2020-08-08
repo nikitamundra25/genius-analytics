@@ -135,9 +135,9 @@ const tableData = [
       "93%",
       "72%",
     ],
-    vsLy:["0%",	-"30%",	-"43%",	-"38%",	"40%","	1%",	-"49%","	3%",	"31%",	-"25%",	-"28%",	-"42%",	-"15%"
+    vsLy:["0%",	"-30%",	"-43%",	-"38%",	"40%","	1%",	"-49%","	3%",	"31%",	"-25%",	"-28%",	"-42%",	"-15%"
     ],
-    vsBud:[" 0%",	-"36%",	-"18%",	-"14%",  "	8%",  "	0%", 	"-6%",	  -"25%",	 "36%",	 -"17%","-2%",	 -"46%", -"10%"
+    vsBud:[" 0%",	"-36%",	"-18%",	"-14%",  "	8%",  "	0%", 	"-6%",	  "-25%",	 "36%",	 "-17%","-2%",	 "-46%", "-10%"
     ]
   },
   {
@@ -599,76 +599,6 @@ const CumulativeTable = () => {
                                 />
                               </div>
                             </OverlayTrigger>
-                            {/* {month.data.map((d: any, ind: number) => (
-                              <React.Fragment
-                              key={`${table.type}-${index}-${d.label}-${ind}`}
-                              >
-                                {month.type === "label" ? (
-                                  console.log("++++++++++++++Month",d),
-                                
-                                  <>
-                                   
-                                    {table.monthData && table.monthData.length
-                                      ? table.monthData[index]
-                                      : 251}
-                                  </>
-                                ) : d.type === "bar" ? (
-                                  <BarChartComponent
-                                    id={`${table.name}-${d.type}-${index}-${ind}`}
-                                    data={d.data}
-                                    height={"250px"}
-                                    width={"250px"}
-                                    chartSettings={{
-                                      primaryXAxis: {
-                                        valueType: "Category",
-                                        interval: 1,
-                                        majorGridLines: { width: 0 },
-                                      },
-                                      primaryYAxis: {
-                                        labelFormat: "{value}",
-                                        edgeLabelPlacement: "Shift",
-                                        majorGridLines: { width: 0 },
-                                        majorTickLines: { width: 0 },
-                                        lineStyle: { width: 0 },
-                                        labelStyle: {
-                                          color: "transparent",
-                                        },
-                                      },
-                                      tooltip: { enable: false },
-                                    }}
-                                    title={"Business Mix ADR"}
-                                    color="#4473c5"
-                                  />
-                                ) : d.type === "pie" ? (
-                                  <PieChartComponent
-                                    height={"250px"}
-                                    width={"250px"}
-                                    id={`${table.name}-${d.type}-${index}-${ind}`}
-                                    data={d.data}
-                                    chartSettings={{
-                                      SeriesDirective: {
-                                        explode: true,
-                                        explodeAll: true,
-                                        explodeOffset: "5%",
-                                        explodeIndex: 0,
-                                        radius: "70%",
-                                        palettes: [
-                                          "#5b9cd6",
-                                          "#ed7d31",
-                                          "#a5a5a5",
-                                          "#ffbf00",
-                                        ],
-                                      },
-                                      chartComponent: {
-                                        enableSmartLabels: true,
-                                        enableAnimation: false,
-                                        center: { x: "50%", y: "50%" },
-                                      },
-                                    }}
-                                  />
-                                ) : null}
-                              </React.Fragment>
-                            ))} */}
                           </div>
                         </td>
                       ))}

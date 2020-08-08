@@ -32,7 +32,7 @@ const PickupSummary: FunctionComponent = () => {
   };
 
   const { pickupSummaryList, isPickupLoading, isPickupError } = PickupReducer;
-  console.log("pickupSummaryList", pickupSummaryList);
+
   return (
     <>
       <TopBar handleReset={RestorePanel} />
