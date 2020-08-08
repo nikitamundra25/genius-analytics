@@ -497,7 +497,7 @@ const CumulativeTable = () => {
                   {months.map((month: string,indx:number) => (
                     <th key={month} className="head-col">
                       {month}
-                      <br /> { month === "Total" ? "": indx >= 9 && indx <=11 ? "BOB": "Actual"}  
+                      <br /> { month === "Total" ? "2018" : indx === 9 ? "BOB/Actual" : indx >= 10 && indx <=11 ? "BOB": "Actual" }  
                       <div className="header-sub-title">
                         <span>BUD</span>
                         <span>LY</span>
@@ -687,7 +687,7 @@ const CumulativeTable = () => {
                   {months.map((month: string, index: number) => (
                     <th key={month} className="head-col">
                       {month}
-                      <br /> { month === "Total" ? "": index >= 9 && index <=11 ? "BOB": "Actual"}
+                      <br /> { month === "Total" ? "2018" : index === 9 ? "BOB/Actual" : index >= 10 && index <=11 ? "BOB": "Actual" }
                     </th>
                   ))}
                 </tr>
