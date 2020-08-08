@@ -19,6 +19,7 @@ import MarketSegmentation from "./MarketSegmentation";
 import RoomTypeStatistics from "./RoomTypeStatistics";
 const history = createBrowserHistory();
 
+let selectedDate: any =  new Date()
 const DashboardMonthly: FunctionComponent = () => {
   const cellSpacing = [15, 20];
   let restoreModel: any = [];
@@ -35,7 +36,8 @@ const DashboardMonthly: FunctionComponent = () => {
   }, []);
 
   // To reset drag & drop when select date
-  const RestorePanel = () => {
+  const RestorePanel = (date:any) => {
+    selectedDate = date
     dashboardObj.panels = restoreModel;
   };
 
@@ -56,7 +58,7 @@ const DashboardMonthly: FunctionComponent = () => {
         return (
           <Provider store={store}>
           <div className="template">
-              <BOB />
+              <BOB selectedDate={selectedDate}/>
             </div>
           </Provider>
         );
