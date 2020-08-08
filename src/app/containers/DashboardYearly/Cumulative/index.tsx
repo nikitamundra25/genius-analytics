@@ -679,13 +679,13 @@ const CumulativeTable = () => {
             </Table>
           </div>
 
-          <div className="dashboard-yearly-table">
+          <div className="dashboard-yearly-table ">
             <Table className="yearly-table mb-0" responsive>
               <thead>
                 <tr className="business-top-row">
                   <th></th>
                   {months.map((month: string, index: number) => (
-                    <th key={month} className="head-col">
+                    <th key={month} className="head-col pb-1">
                       {month}
                       <br /> { month === "Total" ? "2018" : index === 9 ? "BOB/Actual" : index >= 10 && index <=11 ? "BOB": "Actual" }
                     </th>
@@ -718,6 +718,7 @@ const CumulativeTable = () => {
                                 labelStyle: {
                                   color: "transparent",
                                 },
+                                visible: false,
                               },
                               tooltip: { enable: false },
                               height: "150px",
@@ -762,9 +763,10 @@ const CumulativeTable = () => {
                               labelStyle: {
                                 color: "transparent",
                               },
+                              visible: false,
                             },
                             tooltip: { enable: false },
-                            height: "250px",
+                            height: "230px",
                             width: "250px",
                           }}
                           title={"Business Mix %"}

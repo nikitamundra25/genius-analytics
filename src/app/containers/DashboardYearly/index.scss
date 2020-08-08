@@ -16,6 +16,10 @@
     text-align: center;
     vertical-align: middle;
     max-width: 300px;
+    @media only screen and (min-width: 1300px) {
+      padding: 2px 3px;
+      font-size:11px;
+    }
    }
   thead{
     th{
@@ -34,6 +38,9 @@
     padding-bottom: 20px;
     position: relative;
     min-width: 255px;
+    @media only screen and (min-width: 1300px) {
+      font-size:12px;
+    }
   }
   .row-title{
     background: $theme-dark-color;
@@ -44,6 +51,9 @@
     border: 1px solid #e0e0e0;
     white-space: nowrap;
     text-align: left;
+    @media only screen and (min-width: 1300px) {
+      font-size:12px;
+    }
   }
   .text-col {
     flex: 1;
@@ -67,6 +77,9 @@
       display: inline-block;
       text-align: center;
       font-size: 12px;
+      @media only screen and (min-width: 1300px) {
+        font-size:11px;
+      }
     }
   }
  

@@ -182,6 +182,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={1}
                 row={0}
                 col={0}
+                minSizeY={1}
                 content={() => getChart(widgets[0].name)}
               ></PanelDirective>
               <PanelDirective
