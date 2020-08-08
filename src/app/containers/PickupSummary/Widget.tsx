@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Row, Col, Card } from "react-bootstrap";
 import { IDashboardWidgetProps } from "../../../interfaces";
 import PickupSegment from "./PickupSegment";
@@ -67,7 +67,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
       //   data-sizey='0'>
       //   <span id='close' className='e-template-icon e-clear-icon' />
       //   <div className='e-panel-container template'>
-          <Card id={`summary-card${rowId}`} className="bg-white h-auto mb-3">
+          <Card id={`summary-card${rowId}`} className="bg-white h-auto mb-3 pickup-section-card">
             <Card.Body className="pb-0">
               <Row className='row-inner'>
                 <Col xs={12} md={5}>

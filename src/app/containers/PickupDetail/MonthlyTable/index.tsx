@@ -74,7 +74,7 @@ const MonthlyTable = ({ index }: any) => {
                               }`}
                             >
                               {" "}
-                              {list.barValue ? list.barValue : ""}{" "}
+                              {list.barValue ? list.barValue : "-"}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -84,7 +84,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.leisureBreak ? list.leisureBreak : ""}{" "}
+                              {list.leisureBreak ? list.leisureBreak : "-"}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -93,7 +93,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.corporate ? list.corporate : ""}
+                              {list.corporate ? list.corporate : "-"}
                             </td>
                             <td
                               className={`content-col ${
@@ -102,7 +102,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.consortia ? list.consortia : ""}
+                              {list.consortia ? list.consortia : "-"}
                             </td>
                             <td
                               className={`content-col ${
@@ -111,7 +111,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.promotions ? list.promotions : ""}
+                              {list.promotions ? list.promotions : "-"}
                             </td>
                             <td
                               className={`content-col ${
@@ -120,7 +120,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.groups ? list.groups : ""}
+                              {list.groups ? list.groups : "-"}
                             </td>
                             <td
                               className={`content-col ${
@@ -129,7 +129,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.ota ? list.ota : ""}
+                              {list.ota ? list.ota : "-"}
                             </td>
                             <td
                               className={`content-col ${
@@ -138,7 +138,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.fit ? list.fit : ""}
+                              {list.fit ? list.fit : "-"}
                             </td>
                             <td
                               className={`content-col total-content  ${
@@ -147,7 +147,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.total ? list.total : ""}
+                              {list.total ? list.total : "-"}
                             </td>
                           </tr>
 
@@ -161,7 +161,7 @@ const MonthlyTable = ({ index }: any) => {
                               }`}
                             >
                               {" "}
-                              {list.barValue ? list.barValue : ""}{" "}
+                              {list.barValue ? list.barValue : "-"}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -171,7 +171,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.leisureBreak ? list.leisureBreak : ""}{" "}
+                              {list.leisureBreak ? list.leisureBreak : "-"}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -180,7 +180,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.corporate ? list.corporate : ""}
+                              {list.corporate ? list.corporate : "-"}
                             </td>
                             <td
                               className={`content-col ${
@@ -189,7 +189,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.consortia ? list.consortia : ""}
+                              {list.consortia ? list.consortia : "-"}
                             </td>
                             <td
                               className={`content-col ${
@@ -198,7 +198,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.promotions ? list.promotions : ""}
+                              {list.promotions ? list.promotions : "-"}
                             </td>
                             <td
                               className={`content-col ${
@@ -207,7 +207,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.groups ? list.groups : ""}
+                              {list.groups ? list.groups : "-"}
                             </td>
                             <td
                               className={`content-col ${
@@ -216,7 +216,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.ota ? list.ota : ""}
+                              {list.ota ? list.ota : "-"}
                             </td>
                             <td
                               className={`content-col ${
@@ -225,7 +225,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.fit ? list.fit : ""}
+                              {list.fit ? list.fit : "-"}
                             </td>
                             <td
                               className={`content-col total-content  ${
@@ -234,7 +234,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.total ? list.total : ""}
+                              {list.total ? list.total : "-"}
                             </td>
                           </tr>
 
@@ -248,7 +248,7 @@ const MonthlyTable = ({ index }: any) => {
                               }`}
                             >
                               {" "}
-                              {list.barValue ? list.barValue : ""}{" "}
+                              {list.barValue ? list.barValue : "-"}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -258,7 +258,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.leisureBreak ? list.leisureBreak : ""}{" "}
+                              {list.leisureBreak ? list.leisureBreak : "-"}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -267,7 +267,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.corporate ? list.corporate : ""}
+                              {list.corporate ? list.corporate : "-"}
                             </td>
                             <td
                               className={`content-col ${
@@ -276,7 +276,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.consortia ? list.consortia : ""}
+                              {list.consortia ? list.consortia : "-"}
                             </td>
                             <td
                               className={`content-col ${
@@ -285,7 +285,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.promotions ? list.promotions : ""}
+                              {list.promotions ? list.promotions : "-"}
                             </td>
                             <td
                               className={`content-col ${
@@ -294,7 +294,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.groups ? list.groups : ""}
+                              {list.groups ? list.groups : "-"}
                             </td>
                             <td
                               className={`content-col ${
@@ -303,7 +303,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.ota ? list.ota : ""}
+                              {list.ota ? list.ota : "-"}
                             </td>
                             <td
                               className={`content-col ${
@@ -312,7 +312,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.fit ? list.fit : ""}
+                              {list.fit ? list.fit : "-"}
                             </td>
                             <td
                               className={`content-col total-content  ${
@@ -321,7 +321,7 @@ const MonthlyTable = ({ index }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.total ? list.total : ""}
+                              {list.total ? list.total : "-"}
                             </td>
                           </tr>
                         </>
