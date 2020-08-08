@@ -16,7 +16,7 @@
     text-align: center;
     vertical-align: middle;
     max-width: 300px;
-    @media only screen and (max-width: 1599px) {
+    @media only screen and (max-width: 1440px) {
       padding: 2px 3px;
       font-size:11px;
     }
@@ -38,7 +38,7 @@
     padding-bottom: 20px;
     position: relative;
     min-width: 255px;
-    @media only screen and (max-width: 1599px) {
+    @media only screen and (max-width: 1440px) {
       font-size:12px;
     }
   }
@@ -51,7 +51,7 @@
     border: 1px solid #e0e0e0;
     white-space: nowrap;
     text-align: left;
-    @media only screen and (max-width: 1599px) {
+    @media only screen and (max-width: 1440px) {
       font-size:12px;
     }
   }
@@ -77,7 +77,7 @@
       display: inline-block;
       text-align: center;
       font-size: 12px;
-      @media only screen and (max-width: 1599px) {
+      @media only screen and (max-width: 1440px) {
         font-size:11px;
       }
     }
