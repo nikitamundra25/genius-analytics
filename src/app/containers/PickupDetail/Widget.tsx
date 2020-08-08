@@ -11,12 +11,12 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
 
     return (
       <div>
-        <Card>
+        <Card className="bg-white h-auto mb-3 pickup-section-card">
           <Card.Body>
-            <>
+            
               <div className="sub-title text-left  mb-3 ">{chartType.name}</div>
               <TableForm index={index} />
-            </>
+           
           </Card.Body>
         </Card>
       </div>

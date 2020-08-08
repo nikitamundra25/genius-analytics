@@ -326,6 +326,9 @@ body {
     font-size: 14px;
     margin-top: 30px;
   }
+  .h-auto{
+    height:auto !important;
+  }
 
   // card css
   .card {
@@ -337,6 +340,10 @@ body {
     height: 100%;
     width: 100%;
     margin-bottom: 0px;
+    &.pickup-section-card{
+      -webkit-box-shadow: 0px 0px 30px 0px rgba(82, 63, 105, 0.05);
+      box-shadow: 0px 0px 30px 0px rgba(82, 63, 105, 0.05);
+    }
     .card-header {
       padding: 20px 15px 0px;
       background: $white;

@@ -287,7 +287,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
           </Card.Body>
         ) : (
           <div className="business-table-section">
-            <Table responsive className="business-table mb-0">
+            <Table responsive className="business-table mt-3 mb-0">
               <thead>
                 <tr>
                   <th></th>
