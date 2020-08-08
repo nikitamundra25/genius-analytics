@@ -12,10 +12,22 @@
     font-size:12px;
     text-align:center;
     vertical-align: middle;
-    @media only screen and (max-width: 1599px) {
+    @media only screen and (max-width: 1540px) {
+      padding: 4px 3px;
+      font-size:11px;
+    }
+    @media only screen and (max-width: 1539px) {
+      padding: 3px 3px;
+      font-size:11px;
+    }
+    @media only screen and (max-width: 1444px)  {
       padding: 2px 3px;
       font-size:11px;
     }
+    // @media only screen and (max-width: 1440px) {
+    //   padding: 2px 3px;
+    //   font-size:11px;
+    // }
    }
   thead{
     th{
