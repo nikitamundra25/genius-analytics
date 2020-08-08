@@ -24,10 +24,10 @@ import REVPARYTD from "./RevparYTD";
 
 const history = createBrowserHistory();
 
-
+let restoreModel: any = [];
+let selectedDate: any = new Date()
 const DashboardYearly: FunctionComponent = () => {
   const cellSpacing = [15, 20];
-  let restoreModel: any = [];
   let dashboardObj: any;
   const store: Store = configureStore(history);
   const dispatch = useDispatch();
@@ -40,10 +40,13 @@ const DashboardYearly: FunctionComponent = () => {
     // eslint-disable-next-line
   }, []);
 
+
   // To reset drag & drop when select date
-  const RestorePanel = () => {
+  const RestorePanel = (date:any) => {
+    selectedDate= date
     dashboardObj.panels = restoreModel;
   };
+
 
   // To store dashboard data initially
   const created = () => {
@@ -60,12 +63,13 @@ const DashboardYearly: FunctionComponent = () => {
   };
 
   const getChart = (chartType: any) => {
+    
     switch (chartType) {
       case "Cumulative":
         return (
           <Provider store={store}>
           <div className="template">
-            <CumulativeTable />
+            <CumulativeTable selectedDate={selectedDate} />
           </div>
           </Provider>
         );
@@ -153,7 +157,7 @@ const DashboardYearly: FunctionComponent = () => {
 
   return (
     <>
-        <TopBar handleReset={RestorePanel} />
+        <TopBar handleReset={ RestorePanel} />
       <div className="animated fadeIn">
       {isYearlyLoading ? (
           <Loader />

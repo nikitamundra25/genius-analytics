@@ -1,4 +1,5 @@
 import React from "react";
+import moment from "moment";
 import { Card, Table, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { getMonths } from "../../../../helper";
 import BarChartComponent from "../../../components/Charts/BarChart";
@@ -484,7 +485,7 @@ const mixdata = [
   ],
 ];
 
-const CumulativeTable = () => {
+const CumulativeTable = ({selectedDate}:any) => {
   return (
     <>
       <Card>
@@ -497,7 +498,7 @@ const CumulativeTable = () => {
                   {months.map((month: string,indx:number) => (
                     <th key={month} className="head-col">
                       {month}
-                      <br /> { month === "Total" ? "2018" : indx === 9 ? "BOB/Actual" : indx >= 10 && indx <=11 ? "BOB": "Actual" }  
+                      <br /> { month === "Total" ? moment(selectedDate).format('YYYY')  : indx === 9 ? "BOB/Actual" : indx >= 10 && indx <=11 ? "BOB": "Actual" }  
                       <div className="header-sub-title">
                         <span>BUD</span>
                         <span>LY</span>
