@@ -102,8 +102,8 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       dataSource: occupacyList,
       xName: "name",
       yName: selectedValue,
-      type: "Spline",
-      fill: "#4176b9",
+      type: "SplineArea",
+      fill: "#c0d2e8",
       name: selectedValue,
       width: 3,
       marker: {

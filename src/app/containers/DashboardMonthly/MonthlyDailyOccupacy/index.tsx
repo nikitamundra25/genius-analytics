@@ -77,7 +77,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }: any) => {
     </div>);
 };
 const labeltemplateline = (args:any) => {
-  return (<div  style={{fontSize: '11px'}}>
+  return (<div  style={{fontSize: '10px',  background: '#e46d09', padding: "3px 3px", borderRadius: "3px"}}>
     <span>{args.point.y}</span>
   </div>);
 };
@@ -95,7 +95,7 @@ const labeltemplateline = (args:any) => {
       marker: {
         dataLabel: {
           visible: true,
-          position: "Middle",
+          position: "Bottom",
           template: labeltemplate,
           font: {
             fontWeight: "600",
@@ -137,13 +137,14 @@ const labeltemplateline = (args:any) => {
       width: 3,
       marker: {
         visible: false,
-        width: 10,
-        height: 10,
+        width: 8,
+        height: 8,
         fill: "#2f5891",
         border: { width: 1, color: "#e46d09" },
         dataLabel: {
-          visible: false,
+          visible: true,
           position: "Top",
+         
           template: labeltemplateline,
           font: {
             fontWeight: "600",
@@ -218,6 +219,7 @@ const labeltemplateline = (args:any) => {
           visible: true,
           position: "Bottom",
           template: labeltemplateline,
+         
           font: {
             fontWeight: "600",
             color: "#000000",
