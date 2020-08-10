@@ -111,7 +111,7 @@ const MonthlyBOB = (props: any) => {
                                       {key.data.map((data: any, i: number) => {
                                         return i > months.length - 1 ? null : (
                                           <td
-                                            className={` content-col  
+                                            className={`content-col  
                                             ${
                                               parseInt(data.num) < 0
                                                 ? "bg-negative"
