@@ -24,10 +24,14 @@
       padding: 2px 3px;
       font-size:11px;
     }
-    // @media only screen and (max-width: 1440px) {
-    //   padding: 2px 3px;
-    //   font-size:11px;
-    // }
+    @media only screen and (max-width: 1440px) {
+      padding: 2px 3px;
+      font-size:11px;
+    }
+    @media only screen and (max-width: 1280px) {
+      padding: 1px 3px;
+      font-size:10px;
+    }
    }
   thead{
     th{
@@ -50,16 +54,23 @@
       align-items: center;
       justify-content: center;
       min-width: 43px;
+      @media only screen and (max-width: 1280px) {
+     
+        font-size:10px;
+      }
     }
   }
   
   .title-col{
-    background: #2f74b5;
+    background: #203763;
     color:#fff;
     text-align:left;
     font-weight: 600;
     &.bg-1{
-      background:#203763;
+      background:#fff;
+      color:#000;
+      border:1px solid #000;
+      font-weight: 700;
     }
   }
   .total-col{
@@ -75,9 +86,25 @@
     &.bg-2{
       background: #f7f6f2;
     }
+    &.bg-negative{
+      color: #e91f34;
+      background: #fdc9cb;
+    }
   }
 }
 .template{
   height: 100%;
   width: 100%;
+}
+
+.bg-min{
+  background:#f9686b !important;
+}
+
+.bg-mid{
+  background:#ffeb82 !important;
+}
+
+.bg-max{
+  background:#62be7b !important;
 }

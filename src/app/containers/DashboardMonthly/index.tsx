@@ -131,7 +131,7 @@ const DashboardMonthly: FunctionComponent = () => {
             mediaQuery={"max-width: 991px"}
             allowResizing={false}
             columns={6}
-            cellAspectRatio={50 / 98}
+            cellAspectRatio={50 / 68}
             created={created}
             ref={(scope: any) => {
               dashboardObj = scope;
@@ -140,7 +140,7 @@ const DashboardMonthly: FunctionComponent = () => {
             <PanelsDirective>
               <PanelDirective
                 sizeX={6}
-                sizeY={0}
+                sizeY={2}
                 row={0}
                 col={0}
                 content={() => getChart(dashboardMonthlyList[0].name)}
@@ -148,35 +148,35 @@ const DashboardMonthly: FunctionComponent = () => {
                 <PanelDirective
                 sizeX={6}
                 sizeY={0}
-                row={1}
+                row={2}
                 col={0}
                 content={() => getChart(dashboardMonthlyList[1].name)}
               ></PanelDirective>
               <PanelDirective
                 sizeX={4}
                 sizeY={0}
-                row={2}
+                row={3}
                 col={0}
                 content={() => getChart(dashboardMonthlyList[2].name)}
               ></PanelDirective>
               <PanelDirective
                 sizeX={2}
                 sizeY={0}
-                row={2}
+                row={3}
                 col={4}
                 content={() => getChart(dashboardMonthlyList[3].name)}
               ></PanelDirective>
               <PanelDirective
                 sizeX={3}
                 sizeY={0}
-                row={3}
+                row={4}
                 col={0}
                 content={() => getChart(dashboardMonthlyList[4].name)}
               ></PanelDirective>
               <PanelDirective
                 sizeX={3}
                 sizeY={0}
-                row={3}
+                row={4}
                 col={3}
                 content={() => getChart(dashboardMonthlyList[5].name)}
               ></PanelDirective>

@@ -21,7 +21,11 @@ import {
 const MixedCharts = ({ charts = [], id="mixed-map", chartSettings = {},legend= true }: any) => {
   // class MixedCharts extends Component<any, any> {
       const legendSettings = { visible: legend };
-
+      const textRender = (args:any) => {
+        if (parseInt(args.text) < 0) {
+            args.font.color = 'red';
+        }
+      };
   return (<div style={{ height: "100%", width: "100%" }}>
     <ChartComponent
       id={id}
@@ -31,6 +35,8 @@ const MixedCharts = ({ charts = [], id="mixed-map", chartSettings = {},legend= t
       // width={"100%"}
       // height={"270px"}
       height="100%" width="100%"
+      textRender = {textRender}
+
       // fill="transparent"
       // background='transparent'
       {...chartSettings}>

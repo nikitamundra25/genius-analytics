@@ -66,16 +66,12 @@ const BOB = () => {
                           <td
                             className={`content-col ${
                               list.BOBValue && parseInt(list.BOBValue) < 0
-                                ? "text-danger"
-                                : ""
+                                  ? "text-danger"
+                                  : ""
                             }`}
                           >
                             {list.BOBValue
-                              ? list.title === "Revenue" ||
-                                list.title === "ADR" ||
-                                list.title === "RevPar"
-                                ? `£${list.BOBValue}`
-                                : list.BOBValue
+                              ?  list.BOBValue
                               : "-"}{" "}
                           </td>
                           <td
@@ -86,11 +82,7 @@ const BOB = () => {
                             }`}
                           >
                             {list.budget
-                              ? list.title === "Revenue" ||
-                                list.title === "ADR" ||
-                                list.title === "RevPar"
-                                ? `£${list.budget}`
-                                : list.budget
+                              ?  list.budget
                               : "-"}
                           </td>
                           <td
@@ -101,11 +93,7 @@ const BOB = () => {
                             }`}
                           >
                             {list.ly
-                              ? list.title === "Revenue" ||
-                                list.title === "ADR" ||
-                                list.title === "RevPar"
-                                ? `£${list.ly}`
-                                : list.ly
+                              ?  list.ly
                               : "-"}
                           </td>
                           <td
@@ -116,37 +104,37 @@ const BOB = () => {
                             }`}
                           >
                             {list.stlyValue
-                              ? list.title === "Revenue" ||
-                                list.title === "ADR" ||
-                                list.title === "RevPar"
-                                ? `£${list.stlyValue}`
-                                : list.stlyValue
+                              ? list.stlyValue
                               : "-"}
                           </td>
                           <td
                             className={`content-col ${
-                              list.VSbud && parseInt(list.VSbud) < 0
+                              (  list.title === "Revenue" ||
+                              list.title === "ADR" ||
+                              list.title === "RevPar") && list.VSbud &&
+                              parseInt(list.VSbud.replace("£", "")) < 0
                                 ? "text-danger"
-                                : ""
+                                : list.VSbud && parseInt(list.VSbud) < 0
+                                  ? "text-danger"
+                                  : ""
                             }`}
                           >
-                            {list.VSbud
-                              ?  list.VSbud
-                              : "-"}
+                            {list.VSbud ? list.VSbud : "-"}
                           </td>
                           <td
                             className={`content-col bg-2 ${
-                              list.VSly && parseInt(list.VSly) < 0
+                            (  list.title === "Revenue" ||
+                              list.title === "ADR" ||
+                              list.title === "RevPar") && list.VSly &&
+                              parseInt(list.VSly.replace("£", "")) < 0
                                 ? "text-danger"
-                                : ""
+                                : list.VSly && parseInt(list.VSly) < 0
+                                  ? "text-danger"
+                                  : ""
                             }`}
                           >
                             {list.VSly
-                              ? list.title === "Revenue" ||
-                                list.title === "ADR" ||
-                                list.title === "RevPar"
-                                ? `£${list.VSly}`
-                                : list.VSly
+                              ? list.VSly
                               : "-"}
                           </td>
                           <td
@@ -157,11 +145,7 @@ const BOB = () => {
                             }`}
                           >
                             {list.VSstly
-                              ? list.title === "Revenue" ||
-                                list.title === "ADR" ||
-                                list.title === "RevPar"
-                                ? `£${list.VSstly}`
-                                : list.VSstly
+                              ? list.VSstly
                               : "-"}
                           </td>
                         </tr>

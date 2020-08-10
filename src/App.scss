@@ -351,11 +351,19 @@ body {
       .card-title {
         font-weight: 500;
         color: $light-black-opaque;
+        @media only screen and (max-width: 1400px) {
+          font-size:16px;
+        }
       }
     }
     .card-body {
       padding: 15px 15px;
       height: 100%;
+      &.month-table-card{
+        @media only screen and (max-width: 1233px) {
+          padding: 10px 15px;
+        }
+      }
     }
   }
 
