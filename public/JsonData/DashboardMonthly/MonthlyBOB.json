@@ -40,7 +40,7 @@
           ]
         },
         {
-          "title": "OCC%",
+          "title": "OCC",
           "data": [
             { "num": 55, "isWeekend": false },
             { "num": 92, "isWeekend": true },
