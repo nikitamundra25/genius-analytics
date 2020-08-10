@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import moment from "moment";
 import {
   Card,
@@ -438,60 +438,7 @@ const SecondtableData = [
 
 
 const CumulativeTable = ({ selectedDate }: any) => {
-  const [setHeight, setsetHeight] = React.useState<string>("230px");
-  const [setHeightsm, setsetHeightsm] = React.useState<string>("150px");
-
-  useEffect(() => {
-    const window_width = window.innerWidth;
-
-    if (window_width < 1340) {
-      setTimeout(() => {
-        const setgraphHeight = 200;
-        const setgraphHeightsm = 100;
-        setsetHeight(`${setgraphHeight}px`);
-        setsetHeightsm(`${setgraphHeightsm}px`);
-      }, 100);
-    } else {
-      setTimeout(() => {
-        const setgraphHeight = 230;
-        const setgraphHeightsm = 150;
-        setsetHeight(`${setgraphHeight}px`);
-        setsetHeightsm(`${setgraphHeightsm}px`);
-      }, 100);
-    }
-    // eslint-disable-next-line
-  }, [data]);
-
-  useEffect(() => {
-    const resizeListener = () => {
-      const window_width = window.innerWidth;
-
-      if (window_width < 1340) {
-        setTimeout(() => {
-          const setgraphHeight = 200;
-          const setgraphHeightsm = 100;
-          setsetHeight(`${setgraphHeight}px`);
-          setsetHeightsm(`${setgraphHeightsm}px`);
-        }, 100);
-      } else {
-        setTimeout(() => {
-          const setgraphHeight = 230;
-          const setgraphHeightsm = 150;
-          setsetHeight(`${setgraphHeight}px`);
-          setsetHeightsm(`${setgraphHeightsm}px`);
-        }, 100);
-      }
-    };
-    // set resize listener
-    window.addEventListener("resize", resizeListener);
-
-    // clean up function
-    return () => {
-      // remove resize listener
-      window.removeEventListener("resize", resizeListener);
-    };
-    // eslint-disable-next-line
-  }, []);
+ 
 
   return (
     <>
