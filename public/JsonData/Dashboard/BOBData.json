@@ -21,33 +21,33 @@
     },
     {
       "title": "Revenue",
-      "BOBValue": "1,480,599",
-      "budget": "1,718,849",
-      "ly": "1,518,702",
-      "stlyValue": "1,249,740",
+      "BOBValue": "£1,480,599",
+      "budget": "£1,718,849",
+      "ly": "£1,518,702",
+      "stlyValue": "£1,249,740",
       "VSbud": "",
-      "VSly": "-38,103",
-      "VSstly": "230,859"
+      "VSly": "-£38,103",
+      "VSstly": "£230,859"
     },
     {
       "title": "ADR",
-      "BOBValue": "182.3",
-      "budget": "194.3",
-      "ly": "191.2",
-      "stlyValue": "180.0",
+      "BOBValue": "£182.3",
+      "budget": "£194.3",
+      "ly": "£191.2",
+      "stlyValue": "£180.0",
       "VSbud": "-12",
-      "VSly": "-8.9",
-      "VSstly": "2.3"
+      "VSly": "-£8.9",
+      "VSstly": "£2.3"
     },
     {
       "title": "RevPar",
-      "BOBValue": "119.7",
-      "budget": "139.0",
-      "ly": "122.8",
-      "stlyValue": "101.04",
-      "VSbud": "-19",
-      "VSly": "-3.1",
-      "VSstly": "18.7"
+      "BOBValue": "£119.7",
+      "budget": "£139.0",
+      "ly": "£122.8",
+      "stlyValue": "£101.04",
+      "VSbud": "-£19",
+      "VSly": "-£3.1",
+      "VSstly": "£18.7"
     }
   ]
 

@@ -7,6 +7,7 @@ import { IRootState } from "../../../../interfaces";
 import { requestPickupDetailTableData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 
+
 const MonthlyTable = ({ index }: any) => {
   const dispatch = useDispatch();
 
@@ -18,6 +19,23 @@ const MonthlyTable = ({ index }: any) => {
     dispatch(requestPickupDetailTableData());
     // eslint-disable-next-line
   }, []);
+  let result:any  = []
+
+
+
+// const sumCount = (list = []) => {
+//   const sum:any = {};
+//   // count number
+//   list.map((item:any) => {
+//       Object.entries(item).map(([key, val] : any) => {  
+//           if (key === "barValue" || key === "leisureBreak" ||key === "corporate" ||key === "consortia" ||key === "promotions" ||key === "groups" ||key === "ota" ||key === "fit"|| key === "total" ) {
+//             sum[key] = sum[key] ? (sum[key] + parseInt(val)) : parseInt(val);
+//           }
+//       })
+//   });
+  
+//   return sum;
+// }
 
   return (
     <>
@@ -53,6 +71,7 @@ const MonthlyTable = ({ index }: any) => {
               <tbody>
                 {graphdata && graphdata.length
                   ? graphdata.map((list: any, index: number) => {
+                    
                       return (
                         <>
                           <tr
@@ -330,6 +349,7 @@ const MonthlyTable = ({ index }: any) => {
                   : null}
               </tbody>
               <tfoot>
+                {console.log("+++++++++++++++result", result)}
                 <tr>
                   <td></td>
                   <td></td>
