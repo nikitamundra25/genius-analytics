@@ -84,7 +84,7 @@
     text-align:center;
     font-weight: 500;
     &.bg-2{
-      background: #f7f6f2;
+      background: #9e9e9b;
     }
     &.bg-negative{
       color: #e91f34;
@@ -95,4 +95,16 @@
 .template{
   height: 100%;
   width: 100%;
+}
+
+.bg-min{
+  background:#f9686b !important;
+}
+
+.bg-mid{
+  background:#ffeb82 !important;
+}
+
+.bg-max{
+  background:#62be7b !important;
 }

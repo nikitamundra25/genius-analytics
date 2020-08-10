@@ -7,6 +7,7 @@ import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { getMonthsData } from "../../../../helper";
 import moment from "moment";
+import "../index.scss";
 
 const MonthlyBOB = (props: any) => {
   const months = getMonthsData(props.selectedDate);
@@ -22,18 +23,21 @@ const MonthlyBOB = (props: any) => {
   }, []);
 
   useEffect(() => {
-    if(data && data.length){
-    data.map((list: any, index: number) => {
-      return list.subData.map((subdata: any, i: number) =>
+    if (data && data.length) {
+      data.map((list: any, index: number) => {
+        return list.subData.map((subdata: any, i: number) =>
         months.map((key: any, ind: number) => {
-          return data[index].subData[i].data[ind].date = moment(key).day();
-        })
-      );
-    });
-    setbobList(data);
-  }
+            return (data[index].subData[i].data[ind].date = moment(key).day() 
+            );
+          })
+        );
+      });
+      setbobList(data);
+    }
     // eslint-disable-next-line
-  }, [data,months]);
+  }, [data, months]);
+
+  
 
   return (
     <>
@@ -58,7 +62,7 @@ const MonthlyBOB = (props: any) => {
                   <thead>
                     <tr className="business-top-row">
                       <th></th>
-                      
+
                       {months.map((month: any) => {
                         let weekendDay = moment(month).day();
                         return (
@@ -87,48 +91,67 @@ const MonthlyBOB = (props: any) => {
                           return (
                             <>
                               {list.subData.map((key: any, ind: number) => {
+
                                 return (
                                   <>
-                                  <tr>
-                                    {ind === 0 ? (
-                                      <td
-                                        colSpan={33}
-                                        className="title-col bg-1 "
-                                      >
-                                        {list.title}
-                                      </td>
-                                     ) : null}
-                                  </tr>
-                                  <tr key={ind} >
-                                    
-                                    <td className="title-col white-nowrap">
-                                      {key.title}{" "}
-                                    </td>
-                                    {key.data.map((data: any, i: number) => {                         
-                                      return (
+                                    <tr>
+                                      {ind === 0 ? (
                                         <td
-                                          className={`content-col ${
-                                            parseInt(data.num) < 0
-                                              ? "bg-negative"
-                                              : ""
-                                          } ${
-                                            parseInt(data.date) === 0 ||
-                                            parseInt(data.date) === 5 ||
-                                            parseInt(data.date) === 6
-                                              ? "weekend-bg"
-                                              : "bg-2"
-                                          } `}
-                                          key={i}
+                                          colSpan={
+                                            months.length
+                                              ? months.length + 2
+                                              : 33
+                                          }
+                                          className="title-col bg-1 "
                                         >
-                                          {data.num}{" "}
+                                          {list.title}
                                         </td>
-                                      );
-                                    })}
-                                    <td className="total-col  ">
-                                      {" "}
-                                      {key.total}
-                                    </td>
-                                  </tr>
+                                      ) : null}
+                                    </tr>
+                                    <tr key={ind}   >
+                                      <td className="title-col white-nowrap">
+                                        {key.title}{" "}
+                                      </td>
+                                      {key.data.map((data: any, i: number) => {
+                                        
+                                        return i > months.length -1 ?null :  ( 
+                                          <td 
+                                            className={` content-col  
+                                            ${
+                                              parseInt(data.num) < 0
+                                                ? "bg-negative"
+                                                : ""
+                                            } ${
+                                              key.title === "OCC" &&
+                                              parseInt(data.num) >= 0 &&
+                                              parseInt(data.num) < 50
+                                                ? "bg-min"
+                                                : key.title === "OCC" &&
+                                                  parseInt(data.num) >= 50 &&
+                                                  parseInt(data.num) < 100
+                                                ? "bg-mid"
+                                                : key.title === "OCC" &&
+                                                  parseInt(data.num) < 100
+                                                ? "bg-max"
+                                                : parseInt(data.date) === 0 ||
+                                                  parseInt(data.date) === 5 ||
+                                                  parseInt(data.date) === 6
+                                                ? "weekend-bg"
+                                                : "bg-2"
+                                            } `}
+                                            key={i}
+                                          >
+                                            {key.title === "OCC"
+                                              ? `${data.num}%`
+                                              : data.num}{" "}
+                                          </td>
+                                        );
+                                      })}
+                                      <td className="total-col  ">
+                                        {" "}
+                                        {key.total}
+                                      </td>
+                                    </tr>
                                   </>
                                 );
                               })}
