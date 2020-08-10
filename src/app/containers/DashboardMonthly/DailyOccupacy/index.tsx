@@ -103,7 +103,8 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       xName: "name",
       yName: selectedValue,
       type: "SplineArea",
-      fill: "#c0d2e8",
+      fill: "url(#gradient-daily)",
+     // fill: "#c0d2e8",
       name: selectedValue,
       width: 3,
       marker: {
@@ -174,8 +175,23 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
     },
   ];
 
+  const SAMPLE_CSS = `
+  #gradient-daily stop {
+  stop-color: #c0d2e8;
+}
+#gradient-daily stop[offset="0"] {
+  stop-opacity: 0.75;
+}
+#gradient-daily stop[offset="1"] {
+  stop-opacity: 0.2;
+}`;
+
   return (
+    <>
     <Card id="daily-occ-card">
+      <style>
+          {SAMPLE_CSS}
+      </style>
       <WidgetHeader
         title={"Daily Occupacy Vs. BUD Vs. LY"}
         activeToggle={"graph"}
@@ -222,7 +238,17 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
           </React.Suspense>
           )}
       </Card.Body>
-    </Card>
+      </Card>
+      <svg style={{ height: '0' }}>
+                    <defs>
+                        <linearGradient id="gradient-daily" x1="0" x2="0" y1="0" y2="1">
+                            <stop offset="0"/>
+                            <stop offset="1"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+   
+    </>
   );
 };
 

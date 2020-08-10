@@ -358,198 +358,84 @@ const tableData = [
   },
 ];
 
-const pickupChartData = [
-  [],
-  [],
-  [
-    { x: "Room Nights", y: 55 },
-    { x: "ADR", y: -1 },
-    { x: "Revenue", y: -599 },
-  ],
-  [
-    { x: "Room Nights", y: -11 },
-    { x: "ADR", y: 2 },
-    { x: "Revenue", y: -3804 },
-  ],
-  [
-    { x: "Room Nights", y: 12 },
-    { x: "ADR", y: 1 },
-    { x: "Revenue", y: 7800 },
-  ],
-  [
-    { x: "Room Nights", y: 0 },
-    { x: "ADR", y: -1 },
-    { x: "Revenue", y: 3022 },
-  ],
-  [
-    { x: "Room Nights", y: 29 },
-    { x: "ADR", y: 8 },
-    { x: "Revenue", y: 1655 },
-  ],
-  [
-    { x: "Room Nights", y: 49 },
-    { x: "ADR", y: -2 },
-    { x: "Revenue", y: -2538 },
-  ],
-  [
-    { x: "Room Nights", y: 43 },
-    { x: "ADR", y: -2 },
-    { x: "Revenue", y: -2538 },
-  ],
-  [
-    { x: "Room Nights", y: 30 },
-    { x: "ADR", y: -3 },
-    { x: "Revenue", y: 6155 },
-  ],
-  [
-    { x: "Room Nights", y: 20 },
-    { x: "ADR", y: 1 },
-    { x: "Revenue", y: -1297 },
-  ],
-  [
-    { x: "Room Nights", y: 53 },
-    { x: "ADR", y: 0 },
-    { x: "Revenue", y: 7519 },
-  ],
-  [
-    { x: "Room Nights", y: 280 },
-    { x: "ADR", y: 0.7 },
-    { x: "Revenue", y: 23609 },
-  ],
-];
 
-const mixdata = [
-  [
-    { x: "BAR", y: 26 },
-    { x: "Discount", y: 11 },
-    { x: "COR Discount", y: 12 },
-    { x: "Meetings", y: 25 },
-    { x: "Corporate", y: 16 },
-    { x: "Cor Group", y: 10 },
-    { x: "Leisure Group", y: 13 },
-    { x: "FIT", y: 6 },
-  ],
-  [
-    { x: "BAR", y: 20 },
-    { x: "Discount", y: 14 },
-    { x: "COR Discount", y: 9 },
-    { x: "Meetings", y: 20 },
-    { x: "Corporate", y: 16 },
-    { x: "Cor Group", y: 14 },
-    { x: "Leisure Group", y: 13 },
-    { x: "FIT", y: 5 },
-  ],
-  [
-    { x: "BAR", y: 26 },
-    { x: "Discount", y: 11 },
-    { x: "COR Discount", y: 10 },
-    { x: "Meetings", y: 20 },
-    { x: "Corporate", y: 18 },
-    { x: "Cor Group", y: 14 },
-    { x: "Leisure Group", y: 8 },
-    { x: "FIT", y: 7 },
-  ],
-  [
-    { x: "BAR", y: 24 },
-    { x: "Discount", y: 15 },
-    { x: "COR Discount", y: 10 },
-    { x: "Meetings", y: 19 },
-    { x: "Corporate", y: 18 },
-    { x: "Cor Group", y: 12 },
-    { x: "Leisure Group", y: 12 },
-    { x: "FIT", y: 9 },
-  ],
-  [
-    { x: "BAR", y: 24 },
-    { x: "Discount", y: 16 },
-    { x: "COR Discount", y: 8 },
-    { x: "Meetings", y: 19 },
-    { x: "Corporate", y: 17 },
-    { x: "Cor Group", y: 11 },
-    { x: "Leisure Group", y: 8 },
-    { x: "FIT", y: 6 },
-  ],
-  [
-    { x: "BAR", y: 24 },
-    { x: "Discount", y: 19 },
-    { x: "COR Discount", y: 10 },
-    { x: "Meetings", y: 19 },
-    { x: "Corporate", y: 17 },
-    { x: "Cor Group", y: 12 },
-    { x: "Leisure Group", y: 11 },
-    { x: "FIT", y: 6 },
-  ],
-  [
-    { x: "BAR", y: 24 },
-    { x: "Discount", y: 18 },
-    { x: "COR Discount", y: 10 },
-    { x: "Meetings", y: 19 },
-    { x: "Corporate", y: 20 },
-    { x: "Cor Group", y: 14 },
-    { x: "Leisure Group", y: 11 },
-    { x: "FIT", y: 5 },
-  ],
-  [
-    { x: "BAR", y: 23 },
-    { x: "Discount", y: 18 },
-    { x: "COR Discount", y: 12 },
-    { x: "Meetings", y: 29 },
-    { x: "Corporate", y: 17 },
-    { x: "Cor Group", y: 10 },
-    { x: "Leisure Group", y: 13 },
-    { x: "FIT", y: 6 },
-  ],
-  [
-    { x: "BAR", y: 20 },
-    { x: "Discount", y: 11 },
-    { x: "COR Discount", y: 10 },
-    { x: "Meetings", y: 19 },
-    { x: "Corporate", y: 16 },
-    { x: "Cor Group", y: 12 },
-    { x: "Leisure Group", y: 10 },
-    { x: "FIT", y: 9 },
-  ],
-  [
-    { x: "BAR", y: 26 },
-    { x: "Discount", y: 11 },
-    { x: "COR Discount", y: 11 },
-    { x: "Meetings", y: 19 },
-    { x: "Corporate", y: 17 },
-    { x: "Cor Group", y: 10 },
-    { x: "Leisure Group", y: 12 },
-    { x: "FIT", y: 8 },
-  ],
-  [
-    { x: "BAR", y: 20 },
-    { x: "Discount", y: 12 },
-    { x: "COR Discount", y: 8 },
-    { x: "Meetings", y: 23 },
-    { x: "Corporate", y: 16 },
-    { x: "Cor Group", y: 10 },
-    { x: "Leisure Group", y: 12 },
-    { x: "FIT", y: 5 },
-  ],
-  [
-    { x: "BAR", y: 26 },
-    { x: "Discount", y: 11 },
-    { x: "COR Discount", y: 8 },
-    { x: "Meetings", y: 27 },
-    { x: "Corporate", y: 20 },
-    { x: "Cor Group", y: 11 },
-    { x: "Leisure Group", y: 8 },
-    { x: "FIT", y: 8 },
-  ],
-  [
-    { x: "BAR", y: 24 },
-    { x: "Discount", y: 14 },
-    { x: "COR Discount", y: 10 },
-    { x: "Meetings", y: 22 },
-    { x: "Corporate", y: 17 },
-    { x: "Cor Group", y: 12 },
-    { x: "Leisure Group", y: 11 },
-    { x: "FIT", y: 7 },
-  ],
-];
+const SecondtableData = [
+  {
+    type: "label",
+    title:  "Pick-up",
+    subData:[
+      {
+      name: "Rooms Nights",
+      value: [ ""	,""	,55,	-11	,12	,0,	29,	49,	43,	30,	20,	53,	280
+      ]
+    },
+    {
+      name: "ADR",
+    value: [	"", "" ,	-1,	2,	1,	-1,	8	,-2,	2	,-3	,1,	0	,0.7
+    ]
+    },
+    {
+      name: "Revenue",
+      value: [	"","" ,	-599,	-3804	,7800	,3022,	1655,	5696,	-2538	,6155,	-1297,	7519,	23609
+      ]
+    }
+  ]
+  },
+  {
+    type: "progressBar",
+    title: "Business Mix",
+    subData: [
+      {
+        name: "Bar",
+        value: [26,	20,	26,	24,	24,	24,	24,	23,	20,	26,	20,	26,	24
+        ]
+      },
+      {
+        name: "Discount",
+        value: [11,	14,	11,	15,	16,	19,	18,	18,	11,	11,	12,	11,	14
+          ,
+        ]
+      },
+      {
+        name: "COR Discount",
+        value: [12,	 9,	 10,	10,	 8,	 10,	10,	 12,	10,	 11,	8,	8,	10
+      
+        ]
+      },
+      {
+        name: "Meetings",
+        value: [25	,20,	20,	19,	19,	19,	19,	29,	19,	19,	23,	27,	22
+
+        ]
+      },
+      {
+        name: "Corporate",
+        value: [16,	16,	18,	18,	17,	17,	20,	17,	16,	17,	16,	20,	17
+
+        ]
+      },
+      {
+        name: "Cor Group",
+        value: [10,	14,	14,	12,	11,	12,	14,	10,	12,	10,	10,	11,	12
+
+        ]
+      },
+      {
+        name: "Leisure Group",
+        value: [13, 	13,	 8,	 12,	8,	11,	 11,	13, 	10,	 12,	12, 	8, 	11
+
+        ]
+      },
+      {
+        name: "FIT",
+        value: [6,	5,	7,	9,	6,	6,	5,	6,	9,	8,	5,	8,	7
+        ]
+      },
+    ]
+  }
+]
+
+
 
 const CumulativeTable = ({ selectedDate }: any) => {
  
@@ -721,195 +607,44 @@ const CumulativeTable = ({ selectedDate }: any) => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td className="row-title" rowSpan={3}>
-                    Pick-up
+              {SecondtableData && SecondtableData.length ? 
+              SecondtableData.map((list:any,index:number)=>{
+               return ( list.subData.map((subdata : any, ind:number)=>(
+                <tr key={index} >
+                 {ind === 0 ? (
+                <td className="row-title" rowSpan={list.subData.length}>
+                  {list.title}
+                </td>
+                   ) : null}
+                  <>
+                  <td className="row-title sub-bg"> {subdata.name} </td>
+                 { subdata.value.map((value: any, i: number) => (
+                      list.type === "label" ?
+                    <td key={`${i}`}  className={`content-col  
+                    ${
+                      parseInt(value) < 0
+                        ? "bg-negative"
+                        : ""
+                    }`}>
+                      {value ? value : "-"}
+                    </td>
+                    : <td
+                    key={`${i}`}
+                    className="content-col bg-white"
+                  >
+                    <ProgressBar
+                      now={value}
+                      className="custom-bar"
+                      label={`${value}%`}
+                    />
                   </td>
-                  <td className="row-title sub-bg">Rooms</td>
-                  {months.map((month: any, index: number) => (
-                    <td key={`${month.type}-${index}`} className="content-col">
-                      12
-                    </td>
                   ))}
-                </tr>
-
-                <tr>
-                  <td className="row-title sub-bg">ADR</td>
-                  {months.map((month: any, index: number) => (
-                    <td key={`${month.type}-${index}`} className="content-col">
-                      12
-                    </td>
-                  ))}
-                </tr>
-
-                <tr>
-                  <td className="row-title sub-bg">Revenue</td>
-                  {months.map((month: any, index: number) => (
-                    <td key={`${month.type}-${index}`} className="content-col">
-                      12
-                    </td>
-                  ))}
-                </tr>
-
-                <tr>
-                  <td className="row-title" rowSpan={8}>
-                    Business Mix
-                  </td>
-                  <td className="row-title sub-bg">Bar</td>
-                  {months.map((month: any, index: number) => (
-                    <td
-                      key={`${month.type}-${index}`}
-                      className="content-col bg-white"
-                    >
-                      {/* <div className="d-flex align-items-center flex-wrap">
-                        <BarChartComponent
-                          id={`tablebar2${month.type}-${index}`}
-                          data={mixdata[index]}
-                          // height={"250px"}
-                          // width={"250px"}
-                          chartSettings={{
-                            primaryXAxis: {
-                              valueType: "Category",
-                              interval: 1,
-                              majorGridLines: { width: 0 },
-                            },
-                            primaryYAxis: {
-                              labelFormat: "{value}%",
-                              edgeLabelPlacement: "Shift",
-                              majorGridLines: { width: 0 },
-                              majorTickLines: { width: 0 },
-                              lineStyle: { width: 0 },
-                              labelStyle: {
-                                color: "transparent",
-                              },
-                              visible: false,
-                            },
-                            tooltip: { enable: false },
-                            height: setHeight,
-                            width: "250px",
-                          }}
-                          title={"Business Mix %"}
-                          color="#4473c5"
-                        />
-                      </div> */}
-                      <ProgressBar
-                        now={32}
-                        className="custom-bar"
-                        label={`32%`}
-                      />
-                    </td>
-                  ))}
-                </tr>
-                <tr>
-                  <td className="row-title sub-bg">Discount</td>
-                  {months.map((month: any, index: number) => (
-                    <td
-                      key={`${month.type}-${index}`}
-                      className="content-col bg-white"
-                    >
-                      <ProgressBar
-                        now={42}
-                        className="custom-bar"
-                        label={`42%`}
-                      />
-                    </td>
-                  ))}
-                </tr>
-                <tr>
-                  <td className="row-title sub-bg">Cor Discount</td>
-                  {months.map((month: any, index: number) => (
-                    <td
-                      key={`${month.type}-${index}`}
-                      className="content-col bg-white"
-                    >
-                      <ProgressBar
-                        now={79}
-                        className="custom-bar"
-                        label={`79%`}
-                      />
-                    </td>
-                  ))}
-                </tr>
-
-                <tr>
-                  <td className="row-title sub-bg">Meetings</td>
-                  {months.map((month: any, index: number) => (
-                    <td
-                      key={`${month.type}-${index}`}
-                      className="content-col bg-white"
-                    >
-                      <ProgressBar
-                        now={55}
-                        className="custom-bar"
-                        label={`55%`}
-                      />
-                    </td>
-                  ))}
-                </tr>
-
-                <tr>
-                  <td className="row-title sub-bg">Corporate</td>
-                  {months.map((month: any, index: number) => (
-                    <td
-                      key={`${month.type}-${index}`}
-                      className="content-col bg-white"
-                    >
-                      <ProgressBar
-                        now={80}
-                        className="custom-bar"
-                        label={`80%`}
-                      />
-                    </td>
-                  ))}
-                </tr>
-
-                <tr>
-                  <td className="row-title sub-bg">Cor Group</td>
-                  {months.map((month: any, index: number) => (
-                    <td
-                      key={`${month.type}-${index}`}
-                      className="content-col bg-white"
-                    >
-                      <ProgressBar
-                        now={40}
-                        className="custom-bar"
-                        label={`40%`}
-                      />
-                    </td>
-                  ))}
-                </tr>
-
-                <tr>
-                  <td className="row-title sub-bg">Leisure Group</td>
-                  {months.map((month: any, index: number) => (
-                    <td
-                      key={`${month.type}-${index}`}
-                      className="content-col bg-white"
-                    >
-                      <ProgressBar
-                        now={60}
-                        className="custom-bar"
-                        label={`60%`}
-                      />
-                    </td>
-                  ))}
-                </tr>
-
-                <tr>
-                  <td className="row-title sub-bg">FIT</td>
-                  {months.map((month: any, index: number) => (
-                    <td
-                      key={`${month.type}-${index}`}
-                      className="content-col bg-white"
-                    >
-                      <ProgressBar
-                        now={50}
-                        className="custom-bar"
-                        label={`50%`}
-                      />
-                    </td>
-                  ))}
-                </tr>
+                  </>
+              </tr>
+                )))
+              })
+            : null
+            }
               </tbody>
             </Table>
           </div>
