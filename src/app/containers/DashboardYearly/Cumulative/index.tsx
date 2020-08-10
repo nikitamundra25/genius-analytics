@@ -620,7 +620,12 @@ const CumulativeTable = ({ selectedDate }: any) => {
                   <td className="row-title sub-bg"> {subdata.name} </td>
                  { subdata.value.map((value: any, i: number) => (
                       list.type === "label" ?
-                    <td key={`${i}`} className="content-col">
+                    <td key={`${i}`}  className={`content-col  
+                    ${
+                      parseInt(value) < 0
+                        ? "bg-negative"
+                        : ""
+                    }`}>
                       {value ? value : "-"}
                     </td>
                     : <td
