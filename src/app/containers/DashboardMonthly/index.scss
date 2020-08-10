@@ -62,12 +62,15 @@
   }
   
   .title-col{
-    background: #2f74b5;
+    background: #203763;
     color:#fff;
     text-align:left;
     font-weight: 600;
     &.bg-1{
-      background:#203763;
+      background:#fff;
+      color:#000;
+      border:1px solid #000;
+      font-weight: 700;
     }
   }
   .total-col{
@@ -82,6 +85,10 @@
     font-weight: 500;
     &.bg-2{
       background: #f7f6f2;
+    }
+    &.bg-negative{
+      color: #e91f34;
+      background: #fdc9cb;
     }
   }
 }

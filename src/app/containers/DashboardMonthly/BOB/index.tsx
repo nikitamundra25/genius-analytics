@@ -58,7 +58,7 @@ const MonthlyBOB = (props: any) => {
                   <thead>
                     <tr className="business-top-row">
                       <th></th>
-                      <th></th>
+                      
                       {months.map((month: any) => {
                         let weekendDay = moment(month).day();
                         return (
@@ -88,15 +88,19 @@ const MonthlyBOB = (props: any) => {
                             <>
                               {list.subData.map((key: any, ind: number) => {
                                 return (
-                                  <tr key={ind}>
+                                  <>
+                                  <tr>
                                     {ind === 0 ? (
                                       <td
-                                        rowSpan={list.subData.length}
-                                        className="title-col bg-1 text-center"
+                                        colSpan={33}
+                                        className="title-col bg-1 "
                                       >
                                         {list.title}
                                       </td>
-                                    ) : null}
+                                     ) : null}
+                                  </tr>
+                                  <tr key={ind} >
+                                    
                                     <td className="title-col white-nowrap">
                                       {key.title}{" "}
                                     </td>
@@ -105,7 +109,7 @@ const MonthlyBOB = (props: any) => {
                                         <td
                                           className={`content-col ${
                                             parseInt(data.num) < 0
-                                              ? "text-danger"
+                                              ? "bg-negative"
                                               : ""
                                           } ${
                                             parseInt(data.date) === 0 ||
@@ -125,6 +129,7 @@ const MonthlyBOB = (props: any) => {
                                       {key.total}
                                     </td>
                                   </tr>
+                                  </>
                                 );
                               })}
                             </>
