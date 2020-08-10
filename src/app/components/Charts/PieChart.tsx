@@ -19,6 +19,12 @@ export const PieChartComponent = ({
   color,
   chartSettings
 }: any) => {
+
+  const textRender = (args:any) => { 
+    if (parseInt(args.text) < 0) {
+      args.font.color = 'red';
+  }
+  };
   return (
     <AccumulationChartComponent
       id={`pie${id}`}
@@ -28,6 +34,7 @@ export const PieChartComponent = ({
       }}
       width={width}
       height={height}
+      textRender ={textRender}
       // background='transparent'
       tooltip={{
         enable: true,

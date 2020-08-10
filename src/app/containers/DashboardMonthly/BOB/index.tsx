@@ -26,9 +26,8 @@ const MonthlyBOB = (props: any) => {
     if (data && data.length) {
       data.map((list: any, index: number) => {
         return list.subData.map((subdata: any, i: number) =>
-        months.map((key: any, ind: number) => {
-            return (data[index].subData[i].data[ind].date = moment(key).day() 
-            );
+          months.map((key: any, ind: number) => {
+            return (data[index].subData[i].data[ind].date = moment(key).day());
           })
         );
       });
@@ -36,8 +35,6 @@ const MonthlyBOB = (props: any) => {
     }
     // eslint-disable-next-line
   }, [data, months]);
-
-  
 
   return (
     <>
@@ -91,7 +88,6 @@ const MonthlyBOB = (props: any) => {
                           return (
                             <>
                               {list.subData.map((key: any, ind: number) => {
-
                                 return (
                                   <>
                                     <tr>
@@ -108,14 +104,13 @@ const MonthlyBOB = (props: any) => {
                                         </td>
                                       ) : null}
                                     </tr>
-                                    <tr key={ind}   >
+                                    <tr key={ind}>
                                       <td className="title-col white-nowrap">
                                         {key.title}{" "}
                                       </td>
                                       {key.data.map((data: any, i: number) => {
-                                        
-                                        return i > months.length -1 ?null :  ( 
-                                          <td 
+                                        return i > months.length - 1 ? null : (
+                                          <td
                                             className={` content-col  
                                             ${
                                               parseInt(data.num) < 0

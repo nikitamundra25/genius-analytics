@@ -12,13 +12,19 @@ import {
 // import { Browser } from '@syncfusion/ej2-base';
 
 export const BarChartComponent = (barChart: any) => {
-  
+ const textRender = (args:any) => { 
+  if (parseInt(args.text) < 0) {
+    args.font.color = 'red';
+}
+};
   return (
     <ChartComponent
       id={`chart-${barChart.id}`}
       style={{ textAlign: "center" }}
       chartArea={{ border: { width: 0 } }}
       height="100%" width="100%"
+
+      textRender = {textRender}
       // height={barChart.height || "270px"}
       // width={Browser.isDevice ? '100%' : '80%'}
       // width={barChart.width || "100%"}
