@@ -50,14 +50,13 @@
     .date-div {
       display: flex;
       flex-flow: column;
-      font-size: 12px;
+      font-size: 9px;
       align-items: center;
       justify-content: center;
-      min-width: 43px;
-      @media only screen and (max-width: 1280px) {
-     
-        font-size:10px;
-      }
+      min-width: 30px;
+      // @media only screen and (max-width: 1280px) {
+      //   font-size:10px;
+      // }
     }
   }
   
@@ -76,7 +75,7 @@
   .total-col{
     color:#fff;
     background: #2f74b5;text-align:right;
-    min-width:80px;
+    min-width:40px;
   }
   .content-col{
     background: #e1eef4;
