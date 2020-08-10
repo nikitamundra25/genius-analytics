@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import moment from "moment";
-import { Card, Table, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Card, Table, OverlayTrigger, Tooltip , ProgressBar} from "react-bootstrap";
 import { getMonths } from "../../../../helper";
 import BarChartComponent from "../../../components/Charts/BarChart";
 // import PieChartComponent from "../../../components/Charts/PieChart";
@@ -572,8 +572,8 @@ useEffect(() => {
                       <div className="header-sub-title">
                         <span>BUD</span>
                         <span>LY</span>
-                        <span>VS.BUD</span>
-                        <span>VS.LY</span>
+                        {/* <span>VS.BUD</span>
+                        <span>VS.LY</span> */}
                       </div>
                     </th>
                   ))}
@@ -631,7 +631,7 @@ useEffect(() => {
                               </div>
                             </OverlayTrigger>
 
-                            <OverlayTrigger
+                            {/* <OverlayTrigger
                               key={"top3"}
                               placement={"top"}
                               overlay={
@@ -669,7 +669,7 @@ useEffect(() => {
                                   width="15"
                                 />
                               </div>
-                            </OverlayTrigger>
+                            </OverlayTrigger> */}
                           </div>
                         </td>
                       ))}
@@ -685,8 +685,9 @@ useEffect(() => {
               <thead>
                 <tr className="business-top-row">
                   <th></th>
+                  <th></th>
                   {months.map((month: string, index: number) => (
-                    <th key={month} className="head-col pb-1">
+                    <th key={month} className="head-col min-wauto pb-1">
                       {month}
                       <br /> { month === "Total" ? "2018" : index === 9 ? "BOB/Actual" : index >= 10 && index <=11 ? "BOB": "Actual" }
                     </th>
@@ -695,10 +696,11 @@ useEffect(() => {
               </thead>
               <tbody>
                 <tr>
-                  <td className="row-title">Pick-up</td>
+                  <td className="row-title" rowSpan={3}>Pick-up</td>
+                  <td className="row-title sub-bg">Rooms</td>
                   {months.map((month: any, index: number) => (
                     <td key={`${month.type}-${index}`} className="content-col">
-                      <div className="d-flex align-items-center flex-wrap">
+                      {/* <div className="d-flex align-items-center flex-wrap">
                         {pickupChartData[index] &&
                         pickupChartData[index].length ? (
                           <BarChartComponent
@@ -731,19 +733,43 @@ useEffect(() => {
                         ) : (
                           <div
                             className="bg-white graph-empty-box"
-                           // style={{ width: "250px", height: "150px" }}
+                           
                           ></div>
                         )}
-                      </div>
+                      </div> */}
+                      12
+                    </td>
+                  ))}
+                </tr>
+
+                
+                <tr>
+                  
+                  <td className="row-title sub-bg">ADR</td>
+                  {months.map((month: any, index: number) => (
+                    <td key={`${month.type}-${index}`} className="content-col">
+                     12 
+                    </td>
+                  ))}
+                </tr>
+
+
+                <tr>
+                 
+                  <td className="row-title sub-bg">Revenue</td>
+                  {months.map((month: any, index: number) => (
+                    <td key={`${month.type}-${index}`} className="content-col">
+                     12 
                     </td>
                   ))}
                 </tr>
 
                 <tr>
-                  <td className="row-title">Business Mix</td>
+                  <td className="row-title" rowSpan={8}>Business Mix</td>
+                  <td className="row-title sub-bg">Bar</td>
                   {months.map((month: any, index: number) => (
-                    <td key={`${month.type}-${index}`} className="content-col">
-                      <div className="d-flex align-items-center flex-wrap">
+                    <td key={`${month.type}-${index}`} className="content-col bg-white">
+                      {/* <div className="d-flex align-items-center flex-wrap">
                         <BarChartComponent
                           id={`tablebar2${month.type}-${index}`}
                           data={mixdata[index]}
@@ -773,10 +799,74 @@ useEffect(() => {
                           title={"Business Mix %"}
                           color="#4473c5"
                         />
-                      </div>
+                      </div> */}
+                      <ProgressBar now={32} className="custom-bar" label={`32%`} />
                     </td>
                   ))}
                 </tr>
+                <tr>
+                  
+                  <td className="row-title sub-bg">Discount</td>
+                  {months.map((month: any, index: number) => (
+                    <td key={`${month.type}-${index}`} className="content-col bg-white">
+                    <ProgressBar now={42} className="custom-bar" label={`42%`} />
+                    </td>
+                  ))}
+                </tr>
+                <tr>
+                  <td className="row-title sub-bg">Cor Discount</td>
+                  {months.map((month: any, index: number) => (
+                    <td key={`${month.type}-${index}`} className="content-col bg-white">
+                     <ProgressBar now={79} className="custom-bar" label={`79%`} />
+                    </td>
+                  ))}
+                </tr>
+
+                <tr>
+                  <td className="row-title sub-bg">Meetings</td>
+                  {months.map((month: any, index: number) => (
+                    <td key={`${month.type}-${index}`} className="content-col bg-white">
+                     <ProgressBar now={55} className="custom-bar" label={`55%`} />
+                    </td>
+                  ))}
+                </tr>
+
+                <tr>
+                  <td className="row-title sub-bg">Corporate</td>
+                  {months.map((month: any, index: number) => (
+                    <td key={`${month.type}-${index}`} className="content-col bg-white">
+                     <ProgressBar now={80} className="custom-bar" label={`80%`} />
+                    </td>
+                  ))}
+                </tr>
+
+                <tr>
+                  <td className="row-title sub-bg">Cor Group</td>
+                  {months.map((month: any, index: number) => (
+                    <td key={`${month.type}-${index}`} className="content-col bg-white">
+                     <ProgressBar now={40} className="custom-bar" label={`40%`} />
+                    </td>
+                  ))}
+                </tr>
+
+                <tr>
+                  <td className="row-title sub-bg">Leisure Group</td>
+                  {months.map((month: any, index: number) => (
+                    <td key={`${month.type}-${index}`} className="content-col bg-white">
+                     <ProgressBar now={60} className="custom-bar" label={`60%`} />
+                    </td>
+                  ))}
+                </tr>
+
+                <tr>
+                  <td className="row-title sub-bg">FIT</td>
+                  {months.map((month: any, index: number) => (
+                    <td key={`${month.type}-${index}`} className="content-col bg-white">
+                      <ProgressBar now={50} className="custom-bar" label={`50%`} />
+                    </td>
+                  ))}
+                </tr>
+
               </tbody>
             </Table>
           </div>

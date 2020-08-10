@@ -85,16 +85,16 @@ const StayYTD = ({ id, graphdata = [] }: any) => {
       type: "Column",
       name: "LOS",
       width: 1,
-      //yAxisName:'yAxis1',
+      yAxisName:'yAxis1',
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: true,
-          position: "Top",
+          position: "Bottom",
           template: labeltemplate,
           font: {
             fontWeight: "600",
-            color: "#000000",
+            color: "#000000",  
           },
         },
       },

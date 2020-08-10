@@ -24,6 +24,19 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
       <span>{args.point.y}%</span>
     </div>);
 };
+const labeltemplate1 = (args: any) => {
+  return (
+    <div
+      style={{
+        fontSize: "10px",
+        padding: "4px 5px 4px 5px",
+        background: '#26405d',
+        borderRadius: "3px"
+      }}>
+      <span>{args.point.y}</span>
+    </div>
+  );
+};
 
   useEffect(() => {
     dispatch(requestOccupacyStaticsData());
@@ -101,7 +114,7 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
               font: {
                 fontWeight: "600",
                 color: "#ffffff",
-                fontSize:"7px",
+                
               },
             },
           },
@@ -142,19 +155,25 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           dashArray: "5",
           width: 2,
           marker: {
-            visible: false,
+            visible: true,
             width: 8,
             height: 8,
-            border: { width: 2, color: "#2bb5ec" },
+            fill: "#2f5891",
+            border: { width: 1, color: "#ddd" },
             dataLabel: {
               visible: true,
               position: "Top",
+              //fill: "#26405d",
+              template: labeltemplate1,
               font: {
                 fontWeight: "600",
-                color: "#000000",
+                color: "#ffffff",
+                
               },
             },
           },
+
+          
         },
         {
           dataSource: data && data.length && data[0] ? data[0].data : [],
@@ -166,19 +185,24 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
           dashArray: "20 10",
           width: 2,
           marker: {
-            visible: false,
+            visible: true,
             width: 8,
             height: 8,
-            border: { width: 2, color: "#293046" },
+            fill: "#2f5891",
+            border: { width: 1, color: "#ddd" },
             dataLabel: {
               visible: true,
               position: "Bottom",
+              //fill: "#26405d",
+              template: labeltemplate1,
               font: {
                 fontWeight: "600",
-                color: "#000000",
+                color: "#ffffff",
+                
               },
             },
           },
+          
         },
       ];
       const Charts2 = [
@@ -223,7 +247,8 @@ const OccupencyStatitics = ({ graphdata = [] }:any) => {
             dataLabel: {
               visible: true,
               position: "Top",
-              fill: "#26405d",
+              //fill: "#26405d",
+              template: labeltemplate1,
               font: {
                 fontWeight: "600",
                 color: "#ffffff",
