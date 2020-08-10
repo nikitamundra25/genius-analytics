@@ -112,6 +112,43 @@
             { "num": 390, "isWeekend": true }
           ],
           "total": 321.5
+        },
+        {
+          "title": "Revenue",
+          "data": [
+            { "num": 917, "isWeekend": false },
+            { "num": 285, "isWeekend": true },
+            { "num": 622, "isWeekend": true },
+            { "num": -667, "isWeekend": true },
+            { "num": 2125, "isWeekend": false },
+            { "num": 1048, "isWeekend": false },
+            { "num": -1006, "isWeekend": false },
+            { "num": 869, "isWeekend": false },
+            { "num": -689, "isWeekend": true },
+            { "num": 1512, "isWeekend": true },
+            { "num": 730, "isWeekend": true },
+            { "num": -555, "isWeekend": false },
+            { "num": 2028, "isWeekend": false },
+            { "num": 1637, "isWeekend": false },
+            { "num": 1636, "isWeekend": false },
+            { "num": 2515, "isWeekend": true },
+            { "num": 444, "isWeekend": true },
+            { "num": 1237, "isWeekend": true },
+            { "num": -455, "isWeekend": false },
+            { "num": 2076, "isWeekend": false },
+            { "num": -1198, "isWeekend": false },
+            { "num": 780, "isWeekend": false },
+            { "num": -174, "isWeekend": true },
+            { "num": 1901, "isWeekend": true },
+            { "num": 1080, "isWeekend": true },
+            { "num": 460, "isWeekend": false },
+            { "num": -1148, "isWeekend": false },
+            { "num": 1476, "isWeekend": false },
+            { "num": 468, "isWeekend": false },
+            { "num": 2178, "isWeekend": true },
+            { "num": 1036, "isWeekend": true }
+          ],
+          "total": 3321.5
         }
       ]
     },
@@ -191,6 +228,43 @@
             { "num": 2, "isWeekend": true }
           ],
           "total": 4.1
+        },
+        {
+          "title": "Revenue",
+          "data": [
+            { "num": 917, "isWeekend": false },
+            { "num": 2855, "isWeekend": true },
+            { "num": -742, "isWeekend": true },
+            { "num": -667, "isWeekend": true },
+            { "num": 2125, "isWeekend": false },
+            { "num": 1048, "isWeekend": false },
+            { "num": -1006, "isWeekend": false },
+            { "num": 869, "isWeekend": false },
+            { "num": -689, "isWeekend": true },
+            { "num": 1512, "isWeekend": true },
+            { "num": 730, "isWeekend": true },
+            { "num": -555, "isWeekend": false },
+            { "num": 2028, "isWeekend": false },
+            { "num": 1637, "isWeekend": false },
+            { "num": 1636, "isWeekend": false },
+            { "num": 2515, "isWeekend": true },
+            { "num": 444, "isWeekend": true },
+            { "num": 1237, "isWeekend": true },
+            { "num": -455, "isWeekend": false },
+            { "num": 2076, "isWeekend": false },
+            { "num": -1198, "isWeekend": false },
+            { "num": 780, "isWeekend": false },
+            { "num": -174, "isWeekend": true },
+            { "num": 1901, "isWeekend": true },
+            { "num": 1080, "isWeekend": true },
+            { "num": 460, "isWeekend": false },
+            { "num": -1148, "isWeekend": false },
+            { "num": 1476, "isWeekend": false },
+            { "num": 468, "isWeekend": false },
+            { "num": 2178, "isWeekend": true },
+            { "num": 1036, "isWeekend": true }
+          ],
+          "total": 3321.5
         }
       ]
     },

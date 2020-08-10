@@ -12,7 +12,11 @@ import {
 // import { Browser } from '@syncfusion/ej2-base';
 
 export default ({ id, color, title, data, chartSettings = {} }: any) => {
-  console.log(data, id);
+  const textRender = (args:any) => { 
+    if (parseInt(args.text) < 0) {
+      args.font.color = 'red';
+  }
+  };
   return (
     <ChartComponent
       id={`Ychart${id}`}
@@ -21,6 +25,7 @@ export default ({ id, color, title, data, chartSettings = {} }: any) => {
       width={"100%"}
       // width={Browser.isDevice ? '100%' : '80%'}
       height={"270px"}
+      textRender={textRender}
       // fill="transparent"
       // background='transparent'
       {...chartSettings}>

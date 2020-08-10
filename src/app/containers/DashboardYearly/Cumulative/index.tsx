@@ -1,9 +1,13 @@
 import React, { useEffect } from "react";
 import moment from "moment";
-import { Card, Table, OverlayTrigger, Tooltip , ProgressBar} from "react-bootstrap";
+import {
+  Card,
+  Table,
+  OverlayTrigger,
+  Tooltip,
+  ProgressBar,
+} from "react-bootstrap";
 import { getMonths } from "../../../../helper";
-import BarChartComponent from "../../../components/Charts/BarChart";
-// import PieChartComponent from "../../../components/Charts/PieChart";
 import caretup from "../../../../assets/img/caret-up.svg";
 import caretdown from "../../../../assets/img/caret-down.svg";
 const months = getMonths();
@@ -68,24 +72,10 @@ const tableData = [
       282,
       3510,
     ],
-    lyData: [
-      232,
-      191,
-      169,
-      268,
-      289,
-      272,
-      214,
-      152,
-      302,
-      154,
-      204,
-      383,
-      2830,
-    ],
+    lyData: [232, 191, 169, 268, 289, 272, 214, 152, 302, 154, 204, 383, 2830],
     budData: [362, 387, 340, 326, 304, 396, 319, 380, 283, 213, 204, 285, 3799],
-    vsLy:[94,	-7,	133	,-39,	87,	-20	,128,	146	,-103,	213,	149,	-101	,680 ],
-    vsBud:[-36,	-203,	-38	,-97,	72	,-144	,23,	-82	,-84,	154	,149,	-3,	-289]
+    vsLy: [94, -7, 133, -39, 87, -20, 128, 146, -103, 213, 149, -101, 680],
+    vsBud: [-36, -203, -38, -97, 72, -144, 23, -82, -84, 154, 149, -3, -289],
   },
   {
     type: "occ",
@@ -136,10 +126,36 @@ const tableData = [
       "93%",
       "72%",
     ],
-    vsLy:["0%",	"-30%",	"-43%",	-"38%",	"40%","	1%",	"-49%","	3%",	"31%",	"-25%",	"-28%",	"-42%",	"-15%"
+    vsLy: [
+      "0%",
+      "-30%",
+      "-43%",
+      -"38%",
+      "40%",
+      "	1%",
+      "-49%",
+      "	3%",
+      "31%",
+      "-25%",
+      "-28%",
+      "-42%",
+      "-15%",
     ],
-    vsBud:[" 0%",	"-36%",	"-18%",	"-14%",  "	8%",  "	0%", 	"-6%",	  "-25%",	 "36%",	 "-17%","-2%",	 "-46%", "-10%"
-    ]
+    vsBud: [
+      " 0%",
+      "-36%",
+      "-18%",
+      "-14%",
+      "	8%",
+      "	0%",
+      "-6%",
+      "-25%",
+      "36%",
+      "-17%",
+      "-2%",
+      "-46%",
+      "-10%",
+    ],
   },
   {
     type: "adr",
@@ -176,10 +192,8 @@ const tableData = [
       295,
       313.4,
     ],
-    vsLy:[83,	-26	,-119	,-95,	-74	,70,	-195,	159,	-7,	69,	3	,-31,	-13.6
-    ],
-    vsBud:[132,	62	,-158,	116	,91,	-6,	-192,	5	,153,	-115,	118	,-70,	11.3
-    ]
+    vsLy: [83, -26, -119, -95, -74, 70, -195, 159, -7, 69, 3, -31, -13.6],
+    vsBud: [132, 62, -158, 116, 91, -6, -192, 5, 153, -115, 118, -70, 11.3],
   },
   {
     type: "revenue",
@@ -230,10 +244,36 @@ const tableData = [
       84075,
       1197798,
     ],
-    vsLy:[51028,	-7570,	14203	,-37823,	4105,	11400,	-15362,	85050	,-43623,	70266,	61106,	-34598,	158182
+    vsLy: [
+      51028,
+      -7570,
+      14203,
+      -37823,
+      4105,
+      11400,
+      -15362,
+      85050,
+      -43623,
+      70266,
+      61106,
+      -34598,
+      158182,
     ],
-    vsBud:[35616,	-51522,	-63524,	7067,	48760	,-57384	,-56510	,-32294	,9447,	18625,	84566,	-20625,	-77778
-    ]
+    vsBud: [
+      35616,
+      -51522,
+      -63524,
+      7067,
+      48760,
+      -57384,
+      -56510,
+      -32294,
+      9447,
+      18625,
+      84566,
+      -20625,
+      -77778,
+    ],
   },
   {
     type: "room-dev",
@@ -285,10 +325,36 @@ const tableData = [
       274.35,
       225.6,
     ],
-    vsLy:[45.65	,-133.96,	-214.47	,-211.66,	81.68	,59.82,	-293.99,	107.91,	120.73,	-21.01,	-110.98,	-122.09,	-57.7
+    vsLy: [
+      45.65,
+      -133.96,
+      -214.47,
+      -211.66,
+      81.68,
+      59.82,
+      -293.99,
+      107.91,
+      120.73,
+      -21.01,
+      -110.98,
+      -122.09,
+      -57.7,
     ],
-    vsBud:[72.6,	-76.88,	-144.4,	39.14	,96.24	,-4.86,	-119.88	,-99.85,	229.23	,-120.05,	67.4,	-168.6	,-19.2
-    ]
+    vsBud: [
+      72.6,
+      -76.88,
+      -144.4,
+      39.14,
+      96.24,
+      -4.86,
+      -119.88,
+      -99.85,
+      229.23,
+      -120.05,
+      67.4,
+      -168.6,
+      -19.2,
+    ],
   },
 ];
 
@@ -485,76 +551,61 @@ const mixdata = [
   ],
 ];
 
+const CumulativeTable = ({ selectedDate }: any) => {
+  const [setHeight, setsetHeight] = React.useState<string>("230px");
+  const [setHeightsm, setsetHeightsm] = React.useState<string>("150px");
 
-
-const CumulativeTable = ({selectedDate}:any) => {
-
-const [setHeight, setsetHeight] = React.useState<string>("230px");
-const [setHeightsm, setsetHeightsm] = React.useState<string>("150px");
-
-useEffect(() => {
-  const window_width = window.innerWidth;
- 
-  if (window_width < 1340 ) {
-     setTimeout(() => {
-      console.log("window_width", window_width);
-       const setgraphHeight =  200;
-       const setgraphHeightsm =  100;
-       setsetHeight(`${setgraphHeight}px`);
-       setsetHeightsm(`${setgraphHeightsm}px`);
-     }, 100);
-     
-   }
-   else{
-    setTimeout(() => {
-      console.log("window_width", window_width);
-       const setgraphHeight =  230;
-       const setgraphHeightsm =  150;
-       setsetHeight(`${setgraphHeight}px`);
-       setsetHeightsm(`${setgraphHeightsm}px`);
-     }, 100);
-   }
-   // eslint-disable-next-line
- }, [data]);
-
- useEffect(() => {
-
-   const resizeListener = () => {
-     
+  useEffect(() => {
     const window_width = window.innerWidth;
-   
-   
-    if (window_width < 1340 ) {
-       setTimeout(() => {
-        console.log("window_width", window_width);
-        const setgraphHeight =  200;
-        const setgraphHeightsm =  100;
+
+    if (window_width < 1340) {
+      setTimeout(() => {
+        const setgraphHeight = 200;
+        const setgraphHeightsm = 100;
         setsetHeight(`${setgraphHeight}px`);
         setsetHeightsm(`${setgraphHeightsm}px`);
-       }, 100);
-       
-     }
-     else{
+      }, 100);
+    } else {
       setTimeout(() => {
-        console.log("window_width", window_width);
-         const setgraphHeight =  230;
-         const setgraphHeightsm =  150;
-         setsetHeight(`${setgraphHeight}px`);
-         setsetHeightsm(`${setgraphHeightsm}px`);
-       }, 100);
-     }
-   };
-   // set resize listener
-   window.addEventListener("resize", resizeListener);
+        const setgraphHeight = 230;
+        const setgraphHeightsm = 150;
+        setsetHeight(`${setgraphHeight}px`);
+        setsetHeightsm(`${setgraphHeightsm}px`);
+      }, 100);
+    }
+    // eslint-disable-next-line
+  }, [data]);
 
-   // clean up function
-   return () => {
-     // remove resize listener
-     window.removeEventListener("resize", resizeListener);
-   };
-   // eslint-disable-next-line
- }, []);
+  useEffect(() => {
+    const resizeListener = () => {
+      const window_width = window.innerWidth;
 
+      if (window_width < 1340) {
+        setTimeout(() => {
+          const setgraphHeight = 200;
+          const setgraphHeightsm = 100;
+          setsetHeight(`${setgraphHeight}px`);
+          setsetHeightsm(`${setgraphHeightsm}px`);
+        }, 100);
+      } else {
+        setTimeout(() => {
+          const setgraphHeight = 230;
+          const setgraphHeightsm = 150;
+          setsetHeight(`${setgraphHeight}px`);
+          setsetHeightsm(`${setgraphHeightsm}px`);
+        }, 100);
+      }
+    };
+    // set resize listener
+    window.addEventListener("resize", resizeListener);
+
+    // clean up function
+    return () => {
+      // remove resize listener
+      window.removeEventListener("resize", resizeListener);
+    };
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>
@@ -565,10 +616,17 @@ useEffect(() => {
               <thead>
                 <tr className="business-top-row">
                   <th></th>
-                  {months.map((month: string,indx:number) => (
+                  {months.map((month: string, indx: number) => (
                     <th key={month} className="head-col">
                       {month}
-                      <br /> { month === "Total" ? moment(selectedDate).format('YYYY')  : indx === 9 ? "BOB/Actual" : indx >= 10 && indx <=11 ? "BOB": "Actual" }  
+                      <br />{" "}
+                      {month === "Total"
+                        ? moment(selectedDate).format("YYYY")
+                        : indx === 9
+                        ? "BOB/Actual"
+                        : indx >= 10 && indx <= 11
+                        ? "BOB"
+                        : "Actual"}
                       <div className="header-sub-title">
                         <span>BUD</span>
                         <span>LY</span>
@@ -602,13 +660,22 @@ useEffect(() => {
                               overlay={
                                 <Tooltip id={`tooltip-increase`}>
                                   {table.budData && table.budData.length
-                                ? table.budData[index]
-                                : 0}
+                                    ? table.budData[index]
+                                    : 0}
                                 </Tooltip>
                               }
                             >
                               <div className="icon-col">
-                                <img src= {parseInt(table.monthData[index]) <= parseInt (table.budData[index]) ? caretup : caretdown } alt="increase" width="15" />
+                                <img
+                                  src={
+                                    parseInt(table.monthData[index]) <=
+                                    parseInt(table.budData[index])
+                                      ? caretup
+                                      : caretdown
+                                  }
+                                  alt="increase"
+                                  width="15"
+                                />
                               </div>
                             </OverlayTrigger>
                             <OverlayTrigger
@@ -616,15 +683,20 @@ useEffect(() => {
                               placement={"top"}
                               overlay={
                                 <Tooltip id={`tooltip-decrease`}>
-                                {table.lyData && table.lyData.length
-                                ? table.lyData[index]
-                                : 0}
+                                  {table.lyData && table.lyData.length
+                                    ? table.lyData[index]
+                                    : 0}
                                 </Tooltip>
                               }
                             >
                               <div className="icon-col">
                                 <img
-                                  src={parseInt(table.monthData[index]) <= parseInt(table.lyData[index]) ? caretup : caretdown } 
+                                  src={
+                                    parseInt(table.monthData[index]) <=
+                                    parseInt(table.lyData[index])
+                                      ? caretup
+                                      : caretdown
+                                  }
                                   alt="decrease"
                                   width="15"
                                 />
@@ -689,86 +761,59 @@ useEffect(() => {
                   {months.map((month: string, index: number) => (
                     <th key={month} className="head-col min-wauto pb-1">
                       {month}
-                      <br /> { month === "Total" ? "2018" : index === 9 ? "BOB/Actual" : index >= 10 && index <=11 ? "BOB": "Actual" }
+                      <br />{" "}
+                      {month === "Total"
+                        ? "2018"
+                        : index === 9
+                        ? "BOB/Actual"
+                        : index >= 10 && index <= 11
+                        ? "BOB"
+                        : "Actual"}
                     </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="row-title" rowSpan={3}>Pick-up</td>
+                  <td className="row-title" rowSpan={3}>
+                    Pick-up
+                  </td>
                   <td className="row-title sub-bg">Rooms</td>
                   {months.map((month: any, index: number) => (
                     <td key={`${month.type}-${index}`} className="content-col">
-                      {/* <div className="d-flex align-items-center flex-wrap">
-                        {pickupChartData[index] &&
-                        pickupChartData[index].length ? (
-                          <BarChartComponent
-                            id={`tablebar${month.type}-${index}`}
-                            data={pickupChartData[index]}
-                            chartSettings={{
-                              primaryXAxis: {
-                                valueType: "Category",
-                                interval: 1,
-                                majorGridLines: { width: 0 },
-                              },
-                              primaryYAxis: {
-                                labelFormat: "{value}",
-                                edgeLabelPlacement: "Shift",
-                                majorGridLines: { width: 0 },
-                                majorTickLines: { width: 0 },
-                                lineStyle: { width: 0 },
-                                labelStyle: {
-                                  color: "transparent",
-                                },
-                                visible: false,
-                              },
-                              tooltip: { enable: false },
-                              height: setHeightsm,
-                              width: "250px",
-                            }}
-                            title={"Business Mix ADR"}
-                            color="#4473c5"
-                          />
-                        ) : (
-                          <div
-                            className="bg-white graph-empty-box"
-                           
-                          ></div>
-                        )}
-                      </div> */}
                       12
                     </td>
                   ))}
                 </tr>
 
-                
                 <tr>
-                  
                   <td className="row-title sub-bg">ADR</td>
                   {months.map((month: any, index: number) => (
                     <td key={`${month.type}-${index}`} className="content-col">
-                     12 
+                      12
                     </td>
                   ))}
                 </tr>
 
-
                 <tr>
-                 
                   <td className="row-title sub-bg">Revenue</td>
                   {months.map((month: any, index: number) => (
                     <td key={`${month.type}-${index}`} className="content-col">
-                     12 
+                      12
                     </td>
                   ))}
                 </tr>
 
                 <tr>
-                  <td className="row-title" rowSpan={8}>Business Mix</td>
+                  <td className="row-title" rowSpan={8}>
+                    Business Mix
+                  </td>
                   <td className="row-title sub-bg">Bar</td>
                   {months.map((month: any, index: number) => (
-                    <td key={`${month.type}-${index}`} className="content-col bg-white">
+                    <td
+                      key={`${month.type}-${index}`}
+                      className="content-col bg-white"
+                    >
                       {/* <div className="d-flex align-items-center flex-wrap">
                         <BarChartComponent
                           id={`tablebar2${month.type}-${index}`}
@@ -800,24 +845,41 @@ useEffect(() => {
                           color="#4473c5"
                         />
                       </div> */}
-                      <ProgressBar now={32} className="custom-bar" label={`32%`} />
+                      <ProgressBar
+                        now={32}
+                        className="custom-bar"
+                        label={`32%`}
+                      />
                     </td>
                   ))}
                 </tr>
                 <tr>
-                  
                   <td className="row-title sub-bg">Discount</td>
                   {months.map((month: any, index: number) => (
-                    <td key={`${month.type}-${index}`} className="content-col bg-white">
-                    <ProgressBar now={42} className="custom-bar" label={`42%`} />
+                    <td
+                      key={`${month.type}-${index}`}
+                      className="content-col bg-white"
+                    >
+                      <ProgressBar
+                        now={42}
+                        className="custom-bar"
+                        label={`42%`}
+                      />
                     </td>
                   ))}
                 </tr>
                 <tr>
                   <td className="row-title sub-bg">Cor Discount</td>
                   {months.map((month: any, index: number) => (
-                    <td key={`${month.type}-${index}`} className="content-col bg-white">
-                     <ProgressBar now={79} className="custom-bar" label={`79%`} />
+                    <td
+                      key={`${month.type}-${index}`}
+                      className="content-col bg-white"
+                    >
+                      <ProgressBar
+                        now={79}
+                        className="custom-bar"
+                        label={`79%`}
+                      />
                     </td>
                   ))}
                 </tr>
@@ -825,8 +887,15 @@ useEffect(() => {
                 <tr>
                   <td className="row-title sub-bg">Meetings</td>
                   {months.map((month: any, index: number) => (
-                    <td key={`${month.type}-${index}`} className="content-col bg-white">
-                     <ProgressBar now={55} className="custom-bar" label={`55%`} />
+                    <td
+                      key={`${month.type}-${index}`}
+                      className="content-col bg-white"
+                    >
+                      <ProgressBar
+                        now={55}
+                        className="custom-bar"
+                        label={`55%`}
+                      />
                     </td>
                   ))}
                 </tr>
@@ -834,8 +903,15 @@ useEffect(() => {
                 <tr>
                   <td className="row-title sub-bg">Corporate</td>
                   {months.map((month: any, index: number) => (
-                    <td key={`${month.type}-${index}`} className="content-col bg-white">
-                     <ProgressBar now={80} className="custom-bar" label={`80%`} />
+                    <td
+                      key={`${month.type}-${index}`}
+                      className="content-col bg-white"
+                    >
+                      <ProgressBar
+                        now={80}
+                        className="custom-bar"
+                        label={`80%`}
+                      />
                     </td>
                   ))}
                 </tr>
@@ -843,8 +919,15 @@ useEffect(() => {
                 <tr>
                   <td className="row-title sub-bg">Cor Group</td>
                   {months.map((month: any, index: number) => (
-                    <td key={`${month.type}-${index}`} className="content-col bg-white">
-                     <ProgressBar now={40} className="custom-bar" label={`40%`} />
+                    <td
+                      key={`${month.type}-${index}`}
+                      className="content-col bg-white"
+                    >
+                      <ProgressBar
+                        now={40}
+                        className="custom-bar"
+                        label={`40%`}
+                      />
                     </td>
                   ))}
                 </tr>
@@ -852,8 +935,15 @@ useEffect(() => {
                 <tr>
                   <td className="row-title sub-bg">Leisure Group</td>
                   {months.map((month: any, index: number) => (
-                    <td key={`${month.type}-${index}`} className="content-col bg-white">
-                     <ProgressBar now={60} className="custom-bar" label={`60%`} />
+                    <td
+                      key={`${month.type}-${index}`}
+                      className="content-col bg-white"
+                    >
+                      <ProgressBar
+                        now={60}
+                        className="custom-bar"
+                        label={`60%`}
+                      />
                     </td>
                   ))}
                 </tr>
@@ -861,12 +951,18 @@ useEffect(() => {
                 <tr>
                   <td className="row-title sub-bg">FIT</td>
                   {months.map((month: any, index: number) => (
-                    <td key={`${month.type}-${index}`} className="content-col bg-white">
-                      <ProgressBar now={50} className="custom-bar" label={`50%`} />
+                    <td
+                      key={`${month.type}-${index}`}
+                      className="content-col bg-white"
+                    >
+                      <ProgressBar
+                        now={50}
+                        className="custom-bar"
+                        label={`50%`}
+                      />
                     </td>
                   ))}
                 </tr>
-
               </tbody>
             </Table>
           </div>
