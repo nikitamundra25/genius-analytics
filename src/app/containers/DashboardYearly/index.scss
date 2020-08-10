@@ -17,12 +17,16 @@
     vertical-align: middle;
     max-width: 300px;
     @media only screen and (max-width: 1480px) {
-      padding: 2px 3px;
-      font-size:11px;
+      padding: 3px 3px;
+      font-size:12px;
     }
     @media only screen and (max-width: 1440px) {
-      padding: 1px 3px;
-      font-size:11px;
+      padding: 3px 3px;
+      font-size:12px;
+    }
+    @media only screen and (max-width: 1370px) {
+      padding: 2px 3px;
+      font-size:12px;
     }
    }
   thead{
@@ -51,6 +55,9 @@
     @media only screen and (max-width: 1440px) {
       font-size:12px;
     }
+    @media only screen and (max-width: 1280px) {
+      font-size:11px;
+    }
   }
   .row-title{
     background: $theme-dark-color;
@@ -71,7 +78,7 @@
       font-size:12px;
     }
     @media only screen and (max-width: 1280px) {
-      font-size:10px;
+      font-size:11px;
     }
   }
   .text-col {
@@ -104,10 +111,10 @@
         font-size:12px;
       }
       @media only screen and (max-width: 1440px) {
-        font-size:11px;
+        font-size:12px;
       }
       @media only screen and (max-width: 1280px) {
-        font-size:10px;
+        font-size:11px;
       }
     }
   }
@@ -128,6 +135,9 @@
   background-color: #ffffff;
     border-radius: 0px;
     height: 27px;
+    @media only screen and (max-width: 1320px) {
+      height: 22px;
+    }
     .progress-bar{
       color:#000;
       background:linear-gradient(to right, #007db9 0%, #ffffff 100%);
