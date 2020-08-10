@@ -130,7 +130,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
     },
     {
       id: "3",
-      title: "Revenue",
+      title: "RevPAR",
       color: "url(#revnue-chart)",
       // color: "#1f4e79",
       chartSettings: { 
@@ -150,7 +150,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
           },
           visible: false,
         },
-        title: "Revenue",
+        title: "RevPAR",
         tooltip: { enable: false,  position: "Top" },
         height: setHeight,
       },
@@ -160,7 +160,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
     },
     {
       id: "4",
-      title: "Revpar",
+      title: "Revenue",
       color: "url(#revpar-chart)",
       // color: "#9dc3e7",
       chartSettings: { 
@@ -180,7 +180,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
           },
           visible: false,
         },
-        title: "Revpar",
+        title: "Revenue",
         tooltip: { enable: false,  position: "Top" },
         height: setHeight,
       },
@@ -293,8 +293,9 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
                   <th></th>
                   <th className="head-col">OCC</th>
                   <th className="head-col">ADR</th>
-                  <th className="head-col">Revenue</th>
                   <th className="head-col">RevPAR</th>
+                  <th className="head-col">Revenue</th>
+                  
                 </tr>
               </thead>
               <tbody>

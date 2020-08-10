@@ -64,6 +64,9 @@
     @media only screen and (max-width: 1440px) {
       font-size:12px;
     }
+    @media only screen and (max-width: 1280px) {
+      font-size:10px;
+    }
   }
   .text-col {
     flex: 1;
@@ -93,6 +96,9 @@
       @media only screen and (max-width: 1440px) {
         font-size:11px;
       }
+      @media only screen and (max-width: 1280px) {
+        font-size:10px;
+      }
     }
   }
  
@@ -100,4 +106,11 @@
 .template{
   height: 100%;
   width: 100%;
+}
+.graph-empty-box{
+  width: 250px;
+  height: 150px;
+  @media only screen and (max-width: 1280px) {
+    height: 100px;
+  }
 }

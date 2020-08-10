@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import moment from "moment";
 import { Card, Table, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { getMonths } from "../../../../helper";
@@ -485,7 +485,77 @@ const mixdata = [
   ],
 ];
 
+
+
 const CumulativeTable = ({selectedDate}:any) => {
+
+const [setHeight, setsetHeight] = React.useState<string>("230px");
+const [setHeightsm, setsetHeightsm] = React.useState<string>("150px");
+
+useEffect(() => {
+  const window_width = window.innerWidth;
+ 
+  if (window_width < 1340 ) {
+     setTimeout(() => {
+      console.log("window_width", window_width);
+       const setgraphHeight =  200;
+       const setgraphHeightsm =  100;
+       setsetHeight(`${setgraphHeight}px`);
+       setsetHeightsm(`${setgraphHeightsm}px`);
+     }, 100);
+     
+   }
+   else{
+    setTimeout(() => {
+      console.log("window_width", window_width);
+       const setgraphHeight =  230;
+       const setgraphHeightsm =  150;
+       setsetHeight(`${setgraphHeight}px`);
+       setsetHeightsm(`${setgraphHeightsm}px`);
+     }, 100);
+   }
+   // eslint-disable-next-line
+ }, [data]);
+
+ useEffect(() => {
+
+   const resizeListener = () => {
+     
+    const window_width = window.innerWidth;
+   
+   
+    if (window_width < 1340 ) {
+       setTimeout(() => {
+        console.log("window_width", window_width);
+        const setgraphHeight =  200;
+        const setgraphHeightsm =  100;
+        setsetHeight(`${setgraphHeight}px`);
+        setsetHeightsm(`${setgraphHeightsm}px`);
+       }, 100);
+       
+     }
+     else{
+      setTimeout(() => {
+        console.log("window_width", window_width);
+         const setgraphHeight =  230;
+         const setgraphHeightsm =  150;
+         setsetHeight(`${setgraphHeight}px`);
+         setsetHeightsm(`${setgraphHeightsm}px`);
+       }, 100);
+     }
+   };
+   // set resize listener
+   window.addEventListener("resize", resizeListener);
+
+   // clean up function
+   return () => {
+     // remove resize listener
+     window.removeEventListener("resize", resizeListener);
+   };
+   // eslint-disable-next-line
+ }, []);
+
+
   return (
     <>
       <Card>
@@ -652,7 +722,7 @@ const CumulativeTable = ({selectedDate}:any) => {
                                 visible: false,
                               },
                               tooltip: { enable: false },
-                              height: "150px",
+                              height: setHeightsm,
                               width: "250px",
                             }}
                             title={"Business Mix ADR"}
@@ -660,8 +730,8 @@ const CumulativeTable = ({selectedDate}:any) => {
                           />
                         ) : (
                           <div
-                            className="bg-white"
-                            style={{ width: "250px", height: "150px" }}
+                            className="bg-white graph-empty-box"
+                           // style={{ width: "250px", height: "150px" }}
                           ></div>
                         )}
                       </div>
@@ -697,7 +767,7 @@ const CumulativeTable = ({selectedDate}:any) => {
                               visible: false,
                             },
                             tooltip: { enable: false },
-                            height: "230px",
+                            height: setHeight,
                             width: "250px",
                           }}
                           title={"Business Mix %"}

@@ -38,7 +38,7 @@ const MonthlyBOB = (props: any) => {
   return (
     <>
       <Card>
-        <Card.Body>
+        <Card.Body className="month-table-card">
           {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
