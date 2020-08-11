@@ -1,38 +1,44 @@
 import React, { FunctionComponent, useEffect } from "react";
 import DashboardWidget from "./Widget";
-import { useSelector, useDispatch } from "react-redux";
+// import { useSelector, useDispatch } from "react-redux";
 import TopBar from "./TopBar";
-import { IRootState } from "../../../interfaces";
-import { PickupSummaryRequest } from "../../../actions";
-import Loader from "../../components/Loader/Loader";
+// import { IRootState } from "../../../interfaces";
+// import { PickupSummaryRequest } from "../../../actions";
+// import Loader from "../../components/Loader/Loader";
 import "./index.scss";
-import { ErrorComponent } from "../../components/Error";
+// import { ErrorComponent } from "../../components/Error";
+import { generateArrayOfMonths } from "../../../helper";
 
 const PickupSummary: FunctionComponent = () => {
-  const dispatch = useDispatch();
-  const PickupReducer = useSelector((state: IRootState) => state.PickupReducer);
+  // const dispatch = useDispatch();
+  const [pickupList, setpickupList] = React.useState([]);
+
+  // const PickupReducer = useSelector((state: IRootState) => state.PickupReducer);
 
   useEffect(() => {
-    dispatch(PickupSummaryRequest());
+    // dispatch(PickupSummaryRequest());
+    let temp = generateArrayOfMonths()
+    setpickupList(temp)
     // eslint-disable-next-line
   }, []);
 
 
-  const { pickupSummaryList, isPickupLoading, isPickupError } = PickupReducer;
+  // const { pickupSummaryList, isPickupLoading, isPickupError } = PickupReducer;
 
   return (
     <>
       <TopBar />
       <div className='animated fadeIn'>
-        {isPickupLoading ? (
+        {/* {isPickupLoading ? (
           <Loader />
         ) : isPickupError ? (
           <ErrorComponent
             message={"An error occured while fetching dashboard details"}
-          />
-        ) : pickupSummaryList && pickupSummaryList.length ? (
+          /> 
+        ) : */}
+        { pickupList && pickupList.length ? (
          
-            <DashboardWidget graphList={pickupSummaryList} />
+            <DashboardWidget graphList={pickupList} />
           
         ) : null}
       </div>
