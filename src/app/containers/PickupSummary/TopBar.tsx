@@ -25,7 +25,7 @@ const TopBar = (props: any) => {
       setMonthForDays.getMonth() - 1,
       1
     );
-    props.handleReset();
+    // props.handleReset(setNewDate);
     setStartDate(setNewDate);
   };
 

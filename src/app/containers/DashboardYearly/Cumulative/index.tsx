@@ -596,7 +596,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                       {month}
                       <br />{" "}
                       {month === "Total"
-                        ? "2018"
+                        ? moment(selectedDate).format("YYYY")
                         : index === 9
                         ? "BOB/Actual"
                         : index >= 10 && index <= 11
