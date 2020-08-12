@@ -143,8 +143,11 @@ const MonthlyBOB = (props: any) => {
                                         );
                                       })}
                                       <td className={`${key.total ? "total-col": "bg-white" }`  } >
-                                        {" "}
-                                        {key.total}
+                                        
+                                        {key.title === "OCC"
+                                              ? `${key.total}%`
+                                              : key.total}{" "}
+                                       
                                       </td>
                                     </tr>
                                   </>
