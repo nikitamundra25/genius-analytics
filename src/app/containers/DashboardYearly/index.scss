@@ -10,23 +10,23 @@
   border-collapse: separate;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   th, td {
-    padding: 5px 5px;
+    padding: 5px 2px;
     border: 1px solid #e0e0e0;
-    font-size: 12px;
+    font-size: 11px;
     text-align: center;
     vertical-align: middle;
     max-width: 300px;
     @media only screen and (max-width: 1480px) {
-      padding: 3px 3px;
-      font-size:12px;
+      padding: 3px 1px;
+      font-size: 10px;
     }
     @media only screen and (max-width: 1440px) {
-      padding: 3px 3px;
-      font-size:12px;
+      padding: 3px 1px;
+      
     }
     @media only screen and (max-width: 1370px) {
-      padding: 2px 3px;
-      font-size:12px;
+      padding: 2px 1px;
+     
     }
    }
   thead{
@@ -40,23 +40,25 @@
     color: $white;
     font-weight: 500;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 11px;
     text-align: center;
     border: 1px solid #e0e0e0;
     padding-bottom: 20px;
     position: relative;
-    min-width: 150px;
+    min-width: 95px;
    &.min-wauto{
-    min-width: 85px;
+    min-width: auto;
    }
     @media only screen and (max-width: 1480px) {
-      font-size:12px;
+      font-size:10px;
+      min-width: 85px;
     }
+    // @media only screen and (max-width: 1440px) {
+    //   font-size:12px;
+    // }
     @media only screen and (max-width: 1440px) {
-      font-size:12px;
-    }
-    @media only screen and (max-width: 1280px) {
-      font-size:11px;
+      font-size:9px;
+      min-width: 76px;
     }
   }
   .row-title{
@@ -64,7 +66,7 @@
     color: $white;
     font-weight: 500;
     min-width: 80px;
-    font-size: 13px;
+    font-size: 11px;
     border: 1px solid #e0e0e0;
     white-space: nowrap;
     text-align: left;
@@ -72,23 +74,35 @@
       background:#203763;
     }
     @media only screen and (max-width: 1480px) {
-      font-size:12px;
+      font-size:10px;
+      min-width: 68px;
     }
-    @media only screen and (max-width: 1440px) {
-      font-size:12px;
-    }
+    // @media only screen and (max-width: 1440px) {
+    //   font-size:12px;
+    // }
     @media only screen and (max-width: 1280px) {
-      font-size:11px;
+      font-size:10px;
     }
   }
   .text-col {
     flex: 1;
     text-align: left;
-    padding: 0px 0px 0px 5px;
+    
   }
   .icon-col {
-    flex: 0 0 30px;
-    max-width: 30px;
+    flex: 0 0 23px;
+    max-width: 23px;
+    @media only screen and (max-width: 1480px) {
+      flex: 0 0 16px;
+      max-width: 16px;
+    }
+    
+    img{
+      width:12px;
+      @media only screen and (max-width: 1480px) {
+        width:9px;
+      }
+    }
   }
   .content-col{
     background:#cdeaf8;
@@ -100,22 +114,22 @@
   .header-sub-title{
     position: absolute;
     bottom:3px;
-    right:5px;
+    right:3px;
     color:$white;
     span{
-      width: 30px;
+      width: 23px;
       display: inline-block;
       text-align: center;
-      font-size: 12px;
+      font-size: 11px;
       @media only screen and (max-width: 1480px) {
-        font-size:12px;
+        font-size:10px;
+        width: 21px;
       }
       @media only screen and (max-width: 1440px) {
-        font-size:12px;
+        font-size:9px;
+        width: 19px;
       }
-      @media only screen and (max-width: 1280px) {
-        font-size:11px;
-      }
+      
     }
   }
  

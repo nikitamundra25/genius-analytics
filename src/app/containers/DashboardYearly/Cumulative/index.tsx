@@ -507,7 +507,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                       : caretdown
                                   }
                                   alt="increase"
-                                  width="15"
+                                  width="12"
                                 />
                               </div>
                             </OverlayTrigger>
@@ -531,7 +531,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                       : caretdown
                                   }
                                   alt="decrease"
-                                  width="15"
+                                  width="12"
                                 />
                               </div>
                             </OverlayTrigger>
