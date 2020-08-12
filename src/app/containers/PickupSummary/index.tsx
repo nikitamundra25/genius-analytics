@@ -17,11 +17,10 @@ const PickupSummary: FunctionComponent = () => {
 
   useEffect(() => {
     // dispatch(PickupSummaryRequest());
-    let temp = generateArrayOfMonths()
-    setpickupList(temp)
+    let temp = generateArrayOfMonths();
+    setpickupList(temp);
     // eslint-disable-next-line
   }, []);
-
 
   // const { pickupSummaryList, isPickupLoading, isPickupError } = PickupReducer;
 
@@ -36,10 +35,8 @@ const PickupSummary: FunctionComponent = () => {
             message={"An error occured while fetching dashboard details"}
           /> 
         ) : */}
-        { pickupList && pickupList.length ? (
-         
-            <DashboardWidget graphList={pickupList} />
-          
+        {pickupList && pickupList.length ? (
+          <DashboardWidget graphList={pickupList} />
         ) : null}
       </div>
     </>
