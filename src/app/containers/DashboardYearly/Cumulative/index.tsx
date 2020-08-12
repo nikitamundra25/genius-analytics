@@ -609,19 +609,19 @@ const CumulativeTable = ({ selectedDate }: any) => {
               <tbody>
               {SecondtableData && SecondtableData.length ? 
               SecondtableData.map((list:any,index:number)=>{
-                let newArr:any = []
-                for (let index = 0; index < list.subData.length; index++) {
-                  const element: any = list.subData[index].value;
-                  newArr.push(element)
-                }
-                let maxArr = newArr.reduce(function(final:any, current:any) {
-                  for (let i = 0; i < final.length; ++i) {
-                    if (current[i] > final[i]) {
-                      final[i] = current[i];
-                    }
-                  }
-                  return final;
-                });
+                // let newArr:any = []
+                // for (let index = 0; index < list.subData.length; index++) {
+                //   const element: any = list.subData[index].value;
+                //   newArr.push(element)
+                // }
+                // let maxArr = newArr.reduce(function(final:any, current:any) {
+                //   for (let i = 0; i < final.length; ++i) {
+                //     if (current[i] > final[i]) {
+                //       final[i] = current[i];
+                //     }
+                //   }
+                //   return final;
+                // });
                return ( list.subData.map((subdata : any, ind:number)=>{      
                return <tr key={ind} >
                  {ind === 0 ? (
@@ -647,7 +647,6 @@ const CumulativeTable = ({ selectedDate }: any) => {
                   >
                     <ProgressBar
                       now={value}
-                      max ={maxArr[i]}
                       className="custom-bar"
                       label={`${value}%`}
                     />
