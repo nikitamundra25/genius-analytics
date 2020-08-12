@@ -114,6 +114,14 @@
         "color": "#cfca76"
       },
       {
+        "code": "BH",
+        "name": "Bahrain",
+        "roomNights": 88,
+        "ADR": 175,
+        "revenue": 15400,
+        "color": "#cfca76"
+      },
+      {
         "code": "BD",
         "name": "Bangladesh",
 
@@ -208,6 +216,14 @@
         "roomNights": 0,
         "ADR": 0,
         "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BD",
+        "name": "Brunei Darussalam",
+        "roomNights": 7,
+        "ADR": 162,
+        "revenue":1134,
         "color": "#cfca76"
       },
       {
@@ -333,7 +349,7 @@
       },
       {
         "code": "CZ",
-        "name": "Czech Rep.",
+        "name": "Czech Republic",
         "roomNights": 45,
         "ADR": 172,
         "revenue": 7740,
@@ -422,7 +438,7 @@
       {
         "code": "FI",
         "name": "Finland",
-        "roomNights": 69,
+        "roomNights": 96,
         "ADR": 187,
         "revenue": 17952,
         "color": "#abab0d"
@@ -484,6 +500,14 @@
         "color": "#cfca76"
       },
       {
+        "code": "GN",
+        "name": "Grenada",
+        "roomNights": 13,
+        "ADR": 187,
+        "revenue": 2431,
+        "color": "#cfca76"
+      },
+      {
         "code": "GL",
         "name": "Greenland",
         "roomNights": 0,
@@ -537,6 +561,14 @@
         "roomNights": 0,
         "ADR": 0,
         "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "HK",
+        "name": "Hong Kong",
+        "roomNights": 30,
+        "ADR": 178,
+        "revenue": 5340,
         "color": "#cfca76"
       },
       {
@@ -654,7 +686,7 @@
       },
       {
         "code": "KP",
-        "name": "Dem. Rep. Korea",
+        "name": "Korea, Democratic Republic Of",
         "roomNights": 30,
         "ADR": 161,
         "revenue": 4830,
@@ -662,7 +694,7 @@
       },
       {
         "code": "KR",
-        "name": "Korea",
+        "name": "Korea, Republic Of (South)",
         "roomNights": 100,
         "ADR": 188,
         "revenue": 18800,
@@ -706,6 +738,14 @@
         "roomNights": 4,
         "ADR": 174,
         "revenue": 696,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LS",
+        "name": "Liechtenstein",
+        "roomNights": 3,
+        "ADR": 174,
+        "revenue": 522,
         "color": "#cfca76"
       },
       {
@@ -753,7 +793,7 @@
         "name": "Luxembourg",
         "roomNights": 29,
         "ADR": 186,
-        "revenue": 5397,
+        "revenue": 5394,
         "color": "#cfca76"
       },
       {
@@ -778,6 +818,14 @@
         "roomNights": 0,
         "ADR": 0,
         "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ML",
+        "name": "Malta",
+        "roomNights": 15,
+        "ADR": 160,
+        "revenue": 2400,
         "color": "#cfca76"
       },
       {
@@ -1045,6 +1093,14 @@
         "color": "#cccc68"
       },
       {
+        "code": "RF",
+        "name": "Russian Federation",
+        "roomNights": 211,
+        "ADR": 171,
+        "revenue": 36801,
+        "color": "#cccc68"
+      },
+      {
         "code": "RW",
         "name": "Rwanda",
         "roomNights": 0,
@@ -1167,9 +1223,9 @@
       {
         "code": "SZ",
         "name": "Swaziland",
-        "roomNights": 347,
-        "ADR": 170,
-        "revenue": 58990,
+        "roomNights": 22,
+        "ADR": 182,
+        "revenue": 4004,
         "color": "#cfca76"
       },
       {
@@ -1183,9 +1239,9 @@
       {
         "code": "CH",
         "name": "Switzerland",
-        "roomNights": 0,
-        "ADR": 0,
-        "revenue": 0,
+        "roomNights": 347,
+        "ADR": 170,
+        "revenue": 58990,
         "color": "#cfca76"
       },
       {
@@ -1213,6 +1269,14 @@
         "color": "#cfca76"
       },
       {
+        "code": "TC",
+        "name": "Taiwan, Province Of China",
+        "roomNights": 4,
+        "ADR": 179,
+        "revenue": 716,
+        "color": "#cfca76"
+      },
+      {
         "code": "TH",
         "name": "Thailand",
         "roomNights": 134,
@@ -1234,6 +1298,14 @@
         "roomNights": 0,
         "ADR": 0,
         "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TO",
+        "name": "To Be Advised",
+        "roomNights": 915,
+        "ADR": 182,
+        "revenue": 166530,
         "color": "#cfca76"
       },
       {
