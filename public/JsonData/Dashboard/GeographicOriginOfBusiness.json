@@ -1,1894 +1,1385 @@
 {
-    "data": {
-        "legend": [
-          {
-            "code": "Côte",
-            "value": "1000",
-            "name": "Côte d'Ivoire",
-            "population": 1000000000,
-            "density": -1,
-            "roomNights":3627,
-            "ADR":169,
-            "revenue":612963,
-            "color": "#cfca76"
-          },
-          {
-            "code": "SG",
-            "value": "1000",
-            "name": "Singapore",
-            "population": 1000000000,
-            "density": 8358,
-            "roomNights":788,
-            "ADR":156,
-            "revenue":122928, 
-            "color": "#cfca76"
-          },
-          {
-            "code": "BH",
-            "value": "2000",
-            "name": "Bhutan",
-            "population": 202002020,
-            "density": -1,
-            "roomNights":3627,
-            "ADR":169,
-            "revenue":612963,
-            "color": "#cfca76"
-          },
-          {
-            "code": "Ec",
-            "value": "2000",
-            "name": "Ecuador",
-            "population": 10102002,
-            "density": -1,
-            "roomNights":3627,
-            "ADR":169,
-            "revenue":612963,
-            "color": "#abab0d"
-          },
-          {
-            "code": "AF",
-            "value": 53,
-            "name": "Afghanistan",
-            "population": 29863010,
-            "density": 119,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "AL",
-            "value": 117,
-            "name": "Albania",
-            "population": 3195000,
-            "density": 111,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "DZ",
-            "value": 15,
-            "name": "Algeria",
-            "population": 34895000,
-            "density": 15,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#abab0d"
-          },
-          {
-            "code": "AO",
-            "value": 15,
-            "name": "Angola",
-            "population": 18498000,
-            "density": 15,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#eae7c6"
-          },
-          {
-            "code": "AR",
-            "value": 15,
-            "name": "Argentina",
-            "population": 40091359,
-            "density": 14,
-            "roomNights":91,
-            "ADR":164,
-            "revenue":14924,
-            "color": "#abab0d"
-          },
-          {
-            "code": "AM",
-            "value": 109,
-            "name": "Armenia",
-            "population": 3230100,
-            "density": 108,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "AU",
-            "value": 3,
-            "name": "Australia",
-            "population": 23839595,
-            "density": 3.3,
-            "roomNights":671,
-            "ADR":188,
-            "revenue":126148,
-            "color": "#abab0d"
-          },
-          {
-            "code": "AT",
-            "value": 102,
-            "name": "Austria",
-            "population": 8372930,
-            "density": 100,
-            "roomNights":83,
-            "ADR":170,
-            "revenue":14110,
-            "color": "#cfca76"
-          },
-          {
-            "code": "AZ",
-            "value": 110,
-            "name": "Azerbaijan",
-            "population": 9165000,
-            "density": 106,
-            "roomNights":4,
-            "ADR":177,
-            "revenue":708,
-            "color": "#cfca76"
-          },
-          {
-            "code": "BS",
-            "value": 34,
-            "name": "Bahamas",
-            "population": 342000,
-            "density": 25,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "BD",
-            "value": 1142,
-            "name": "Bangladesh",
-            "population": 164994076,
-            "density": 1118,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "BY",
-            "value": 47,
-            "name": "Belarus",
-            "population": 9755106,
-            "density": 47,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "BE",
-            "value": 359,
-            "name": "Belgium",
-            "population": 10827519,
-            "density": 355,
-            "roomNights":133,
-            "ADR":185,
-            "revenue":24605,
-            "color": "#cfca76"
-          },
-          {
-            "code": "BZ",
-            "value": 15,
-            "name": "Belize",
-            "population": 322000,
-            "density": 14,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "BJ",
-            "value": 80,
-            "name": "Benin",
-            "population": 8935000,
-            "density": 79,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "BO",
-            "value": 9,
-            "name": "Bolivia",
-            "population": 9879000,
-            "density": 9,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "BA",
-            "value": 73,
-            "name": "Bosnia and Herz.",
-            "population": 3843126,
-            "density": 75,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "BW",
-            "value": 4,
-            "name": "Botswana",
-            "population": 1950000,
-            "density": 3.4,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "BR",
-            "value": 23,
-            "name": "Brazil",
-            "population": 206598985,
-            "density": 24,
-            "roomNights":318,
-            "ADR":181,
-            "revenue":57558,
-            "color": "#abab0d"
-          },
-          {
-            "code": "BN",
-            "value": 76,
-            "name": "Brunei",
-            "population": 400000,
-            "density": 69,
-            "roomNights":7,
-            "ADR":162,
-            "revenue":1134,
-            "color": "#cfca76"
-          },
-          {
-            "code": "BG",
-            "value": 69,
-            "name": "Bulgaria",
-            "population": 7351234,
-            "density": 66,
-            "roomNights":6,
-            "ADR":172,
-            "revenue":1032 ,
-            "color": "#cfca76" 
-          },
-          {
-            "code": "BF",
-            "value": 60,
-            "name": "Burkina Faso",
-            "population": 15757000,
-            "density": 58,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "BI",
-            "value": 326,
-            "name": "Burundi",
-            "population": 8303000,
-            "density": 298,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "KH",
-            "value": 80,
-            "name": "Cambodia",
-            "population": 14805000,
-            "density": 82,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "CM",
-            "value": 41,
-            "name": "Cameroon",
-            "population": 19522000,
-            "density": 106,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "CA",
-            "value": 4,
-            "name": "Canada",
-            "population": 35151728,
-            "density": 3.4,
-            "roomNights":932,
-            "ADR":179,
-            "revenue":166828,
-            "color": "#abab0d"
-          },
-          {
-            "code": "CF",
-            "value": 7,
-            "name": "Central African Rep.",
-            "population": 4422000,
-            "density": 7.1,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#eae7c6"
-          },
-          {
-            "code": "TD",
-            "value": 9,
-            "name": "Chad",
-            "population": 11274106,
-            "density": 8.8,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "CL",
-            "value": 23,
-            "name": "Chile",
-            "population": 18349928,
-            "density": 24,
-            "roomNights":17,
-            "ADR":175,
-            "revenue":2975,
-            "color": "#abab0d"
-          },
-          {
-            "code": "CN",
-            "value": 143,
-            "name": "China",
-            "population": 1389750000,
-            "density": 144,
-            "roomNights":139,
-            "ADR":162,
-            "revenue":22518,
-            "color": "#abab0d"
-          },
-          {
-            "code": "CO",
-            "value": 42,
-            "name": "Colombia",
-            "population": 49471496,
-            "density": 43,
-            "roomNights":6,
-            "ADR":186,
-            "revenue":1116,
-            "color": "#abab0d"
-          },
-          {
-            "code": "CD",
-            "value": 29,
-            "name": "Dem. Rep. Congo",
-            "population": 68692542,
-            "density": 29,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#eae7c6"
-          },
-          {
-            "code": "CG",
-            "value": 12,
-            "name": "Congo",
-            "population": 3998904,
-            "density": 12,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "CR",
-            "value": 91,
-            "name": "Costa Rica",
-            "population": 4579000,
-            "density": 90,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "HR",
-            "value": 79,
-            "name": "Croatia",
-            "population": 4443000,
-            "density": 79,
-            "roomNights":5,
-            "ADR":174,
-            "revenue":870 ,
-            "color": "#cfca76"
-          },
-          {
-            "code": "CU",
-            "value": 106,
-            "name": "Cuba",
-            "population": 11241894,
-            "density": 102,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "CY",
-            "value": 119,
-            "name": "Cyprus",
-            "population": 801851,
-            "density": 87,
-            "roomNights":18,
-            "ADR":173,
-            "revenue":3114,
-            "color": "#cfca76"
-          },
-          {
-            "code": "CZ",
-            "value": 136,
-            "name": "Czech Rep.",
-            "population": 10532770,
-            "density": 134,
-            "roomNights":45,
-            "ADR":172,
-            "revenue":7740,
-            "color": "#cfca76"
-          },
-          {
-            "code": "DK",
-            "value": 131,
-            "name": "Denmark",
-            "population": 5532531,
-            "density": 128,
-            "roomNights":176,
-            "ADR":172,
-            "revenue":30272,
-            "color": "#cfca76"
-          },
-          {
-            "code": "DJ",
-            "value": 38,
-            "name": "Djibouti",
-            "population": 864000,
-            "density": 38,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "DO",
-            "value": 205,
-            "name": "Dominican Rep.",
-            "population": 10090000,
-            "density": 207,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "EG",
-            "value": 81,
-            "name": "Egypt",
-            "population": 90177649,
-            "density": 90,
-            "roomNights":8,
-            "ADR":185,
-            "revenue":1480,
-            "color": "#abab0d"
-          },
-          {
-            "code": "SV",
-            "value": 299,
-            "name": "El Salvador",
-            "population": 6163000,
-            "density": 293,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "GQ",
-            "value": 25,
-            "name": "Guinea",
-            "population": 10069000,
-            "density": 41,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "ER",
-            "value": 52,
-            "name": "Eritrea",
-            "population": 5073000,
-            "density": 43,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "EE",
-            "value": 32,
-            "name": "Estonia",
-            "population": 1315819,
-            "density": 29,
-            "roomNights":2,
-            "ADR":184,
-            "revenue":368,
-            "color": "#cfca76"
-          },
-          {
-            "code": "ET",
-            "value": 83,
-            "name": "Ethiopia",
-            "population": 79221000,
-            "density": 72,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#d5d688"
-          },
-          {
-            "code": "FJ",
-            "value": 47,
-            "name": "Fiji",
-            "population": 849000,
-            "density": 46,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"
-          },
-          {
-            "code": "FI",
-            "value": 18,
-            "name": "Finland",
-            "population": 5538741,
-            "density": 16,
-            "roomNights":69,
-            "ADR":187,
-            "revenue":17952,
-            "color": "#abab0d"
-          },
-          {
-            "code": "FR",
-            "value": 118,
-            "name": "France",
-            "population": 62793432,
-            "density": 114,
-            "roomNights":1875,
-            "ADR":185,
-            "revenue":346875,
-            "color": "#abab0d"
-          },
-          {
-            "code": "GA",
-            "value": 6,
-            "name": "Gabon",
-            "population": 1475000,
-            "density": 5.5,
-            "roomNights":60,
-            "ADR":182,
-            "revenue":10920,
-            "color": "#cfca76"         
-          },
-          {
-            "code": "GM",
-            "value": 173,
-            "name": "Gambia",
-            "population": 1705000,
-            "density": 151,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"    
-          },
-          {
-            "code": "GE",
-            "value": 78,
-            "name": "Georgia",
-            "population": 4465000,
-            "density": 64,
-            "roomNights":7,
-            "ADR":175,
-            "revenue":1225,
-            "color": "#cfca76"        
-          },
-          {
-            "code": "DE",
-            "value": 234,
-            "name": "Germany",
-            "population": 81757600,
-            "density": 229,
-            "roomNights":617,
-            "ADR":188,
-            "revenue":115996,
-            "color": "#abab0d"          
-          },
-          {
-            "code": "GH",
-            "value": 107,
-            "name": "Ghana",
-            "population": 23837000,
-            "density": 100,
-            "roomNights":9,
-            "ADR":165 ,
-            "revenue":1485,
-            "color": "#cfca76"        
-          },
-          {
-            "code": "GR",
-            "value": 88,
-            "name": "Greece",
-            "population": 11306183,
-            "density": 86,
-            "roomNights":97,
-            "ADR":170,
-            "revenue":16490,
-            "color": "#cfca76"        
-           },
-          {
-            "code": "GL",
-            "value": 0.02,
-            "name": "Greenland",
-            "population": 57001,
-            "density": 0.026,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#eceac1"     
-          },
-          {
-            "code": "GT",
-            "value": 134,
-            "name": "Guatemala",
-            "population": 14027000,
-            "density": 129,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "GN",
-            "value": 41,
-            "name": "Guinea",
-            "population": 10069000,
-            "density": 41,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "GW",
-            "value": 54,
-            "name": "Guinea-Bissau",
-            "population": 1611000,
-            "density": 45,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "GY",
-            "value": 4,
-            "name": "Guyana",
-            "population": 762000,
-            "density": 3.5,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#abab0d"     
-          },
-          {
-            "code": "HT",
-            "value": 363,
-            "name": "Haiti",
-            "population": 10033000,
-            "density": 362,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0
-,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "HN",
-            "value": 68,
-            "name": "Honduras",
-            "population": 7466000,
-            "density": 66,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0
-,
-            "color": "#cfca76"     },
-          {
-            "code": "HU",
-            "value": 112,
-            "name": "Hungary",
-            "population": 10013628,
-            "density": 108,
-            "roomNights":86,
-            "ADR":183,
-            "revenue":15738,
-            "color": "#cfca76"         
-          },
-          {
-            "code": "IS",
-            "value": 3,
-            "name": "Iceland",
-            "population": 318452,
-            "density": 3.1,
-            "roomNights":4,
-            "ADR":175,
-            "revenue":700,
-            "color": "#abab0d"       
-          },
-          {
-            "code": "IN",
-            "value": 394,
-            "name": "India",
-            "population": 1198003000,
-            "density": 364,
-            "roomNights":587,
-            "ADR":169,
-            "revenue":99203
-  ,
-            "color": "#cfca76"         },
-          {
-            "code": "ID",
-            "value": 132,
-            "name": "Indonesia",
-            "population": 237556363,
-            "density": 121,
-            "roomNights":64,
-            "ADR":179,
-            "revenue":11456,
-            "color": "#cfca76"         
-          },
-          {
-            "code": "IR",
-            "value": 45,
-            "name": "Iran",
-            "population": 74196000,
-            "density": 117,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#abab0d"     
-          },
-          {
-            "code": "IQ",
-            "value": 73,
-            "name": "Iraq",
-            "population": 30747000,
-            "density": 70,
-            "roomNights":101,
-            "ADR":178,
-            "revenue":17978,
-            "color": "#cfca76"         
-          },
-          {
-            "code": "IE",
-            "value": 65,
-            "name": "Ireland",
-            "population": 4581269,
-            "density": 65,
-            "roomNights":141,
-            "ADR":170,
-            "revenue":23970,
-            "color": "#abab0d"         },
-          {
-            "code": "IL",
-            "value": 352,
-            "name": "Israel",
-            "population": 7697600,
-            "density": 371,
-            "roomNights":87,
-            "ADR":186,
-            "revenue":16182
-  ,
-            "color": "#cfca76"         },
-          {
-            "code": "IT",
-            "value": 206,
-            "name": "Italy",
-            "population": 60200060,
-            "density": 200,
-            "roomNights":739,
-            "ADR":171,
-            "revenue":126369
- ,
-            "color": "#abab0d"          },
-          {
-            "code": "JM",
-            "value": 250,
-            "name": "Jamaica",
-            "population": 2719000,
-            "density": 247,
-            "roomNights":9,
-            "ADR":184,
-            "revenue":1656,
-            "color": "#cfca76"        },
-          {
-            "code": "JP",
-            "value": 350,
-            "name": "Japan",
-            "population": 127387000,
-            "density": 337,
-            "roomNights":285,
-            "ADR":162,
-            "revenue":46170
-  ,
-            "color": "#cfca76"         },
-          {
-            "code": "JO",
-            "value": 69,
-            "name": "Jordan",
-            "population": 6316000,
-            "density": 67,
-            "roomNights":148,
-            "ADR":176,
-            "revenue":26048
-  ,
-            "color": "#cfca76"         },
-          {
-            "code": "KZ",
-            "value": 6,
-            "name": "Kazakhstan",
-            "population": 17010000,
-            "density": 6.2,
-            "roomNights":53,
-            "ADR":165,
-            "revenue":8745,
-            "color": "#cfca76"        },
-          {
-            "code": "KE",
-            "value": 71,
-            "name": "Kenya",
-            "population": 39802000,
-            "density": 69,
-            "roomNights":41,
-            "ADR":158,
-            "revenue":6478,
-            "color": "#eae7c6"        },
-          {
-            "code": "KP",
-            "value": 202,
-            "name": "Dem. Rep. Korea",
-            "population": 24051706,
-            "density": 200,
-            "roomNights":30,
-            "ADR":161,
-            "revenue":4830 ,
-            "color": "#cfca76"
-          },
-          {
-            "code": "KR",
-            "value": 504,
-            "name": "Korea",
-            "population": 48456369,
-            "density": 487,
-            "roomNights":100,
-            "ADR":188,
-            "revenue":18800
-  ,
-            "color": "#cfca76"         },
-          {
-            "code": "XK",
-            "value": 167,
-            "name": "Kosovo",
-            "population": 7800000,
-            "density": 101,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0
-,
-            "color": "#cfca76"     },
-          {
-            "code": "KW",
-            "value": 154,
-            "name": "Kuwait",
-            "population": 3566437,
-            "density": 200,
-            "roomNights":103,
-            "ADR":168,
-            "revenue":17304
-  ,
-            "color": "#cfca76"         },
-          {
-            "code": "KG",
-            "value": 28,
-            "name": "Kyrgyzstan",
-            "population": 5482000,
-            "density": 27,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0
-,
-            "color": "#cfca76"     },
-          {
-            "code": "LA",
-            "value": 27,
-            "name": "Lao PDR",
-            "population": 6320000,
-            "density": 27,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0
-,
-            "color": "#cfca76"     },
-          {
-            "code": "LV",
-            "value": 36,
-            "name": "Latvia",
-            "population": 2248961,
-            "density": 35,
-            "roomNights":4,
-            "ADR":174,
-            "revenue":696,
-            "color": "#cfca76"       },
-          {
-            "code": "LB",
-            "value": 413,
-            "name": "Lebanon",
-            "population": 4224000,
-            "density": 404,
-            "roomNights":87,
-            "ADR":160,
-            "revenue":13920,
-            "color": "#cfca76"           
-          },
-          {
-            "code": "LS",
-            "value": 72,
-            "name": "Lesotho",
-            "population": 2067000,
-            "density": 68,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "LR",
-            "value": 41,
-            "name": "Liberia",
-            "population": 3476608,
-            "density": 38,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "LY",
-            "value": 4,
-            "name": "Libya",
-            "population": 6420000,
-            "density": 3.6,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#bfbe32"     
-          },
-          {
-            "code": "LT",
-            "value": 53,
-            "name": "Lithuania",
-            "population": 3053800,
-            "density": 47,
-            "roomNights":15,
-            "ADR":184,
-            "revenue":2760,
-            "color": "#cfca76"       
-           },
-          {
-            "code": "LU",
-            "value": 195,
-            "name": "Luxembourg",
-            "population": 502207,
-            "density": 194,
-            "roomNights":29,
-            "ADR":186,
-            "revenue":5397,
-            "color": "#cfca76"        
-          },
-          {
-            "code": "MK",
-            "value": 82,
-            "name": "Macedonia",
-            "population": 2114550,
-            "density": 82,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"    
-           },
-          {
-            "code": "MG",
-            "value": 36,
-            "name": "Madagascar",
-            "population": 20653556,
-            "density": 35,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "MW",
-            "value": 158,
-            "name": "Malawi",
-            "population": 15263000,
-            "density": 129,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "MY",
-            "value": 86,
-            "name": "Malaysia",
-            "population": 28306700,
-            "density": 86,
-            "roomNights":141,
-            "ADR":159,
-            "revenue":22419,
-            "color": "#cfca76"        
-           },
-          {
-            "code": "ML",
-            "value": 13,
-            "name": "Mali",
-            "population": 14517176,
-            "density": 12,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#eae7c6"     
-          },
-          {
-            "code": "MR",
-            "value": 3,
-            "name": "Mauritania",
-            "population": 3291000,
-            "density": 3.2,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "MX",
-            "value": 58,
-            "name": "Mexico",
-            "population": 107550697,
-            "density": 57,
-            "roomNights":70,
-            "ADR":178,
-            "revenue":12460,
-            "color": "#abab0d"         
-          },
-          {
-            "code": "MD",
-            "value": 124,
-            "name": "Moldova",
-            "population": 3567500,
-            "density": 105,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "MC",
-            "value": 17704,
-            "name": "Monaco",
-            "population": 33000,
-            "density": 16923,
-            "roomNights":1,
-            "ADR":164,
-            "revenue":164,
-            "color": "#cfca76"       
-          },
-          {
-            "code": "MN",
-            "value": 2,
-            "name": "Mongolia",
-            "population": 2671000,
-            "density": 1.7,
-            "roomNights":11,
-            "ADR":168,
-            "revenue":1848,
-            "color": "#cfca76"        
-          },
-          {
-            "code": "ME",
-            "value": 47,
-            "name": "Montenegro",
-            "population": 630548,
-            "density": 45,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "MA",
-            "value": 72,
-            "name": "Morocco",
-            "population": 34407605,
-            "density": 77,
-            "roomNights":5,
-            "ADR":181,
-            "revenue":905,
-            "color": "#cfca76"       
-          },
-          {
-            "code": "MZ",
-            "value": 30,
-            "name": "Mozambique",
-            "population": 22894000,
-            "density": 29,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"    
-           },
-          {
-            "code": "MM",
-            "value": 73,
-            "name": "Myanmar",
-            "population": 50020000,
-            "density": 74,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "NA",
-            "value": 3,
-            "name": "Namibia",
-            "population": 2171000,
-            "density": 2.6,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "NP",
-            "value": 209,
-            "name": "Nepal",
-            "population": 29331000,
-            "density": 109,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "NL",
-            "value": 492,
-            "name": "Netherlands",
-            "population": 17250000,
-            "density": 415,
-            "roomNights":216,
-            "ADR":173,
-            "revenue":37368,
-            "color": "#cfca76"         
-          },
-          {
-            "code": "NC",
-            "value": 14,
-            "name": "New Caledonia",
-            "population": 244410,
-            "density": 13,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "NZ",
-            "value": 17,
-            "name": "New Zealand",
-            "population": 4315800,
-            "density": 16,
-            "roomNights":209,
-            "ADR":180,
-            "revenue":37620,
-            "color": "#abab0d"        
-           },
-          {
-            "code": "NI",
-            "value": 48,
-            "name": "Nicaragua",
-            "population": 5743000,
-            "density": 44,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "NE",
-            "value": 12,
-            "name": "Niger",
-            "population": 15290000,
-            "density": 12,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#eceac1"     
-          },
-          {
-            "code": "NG",
-            "value": 174,
-            "name": "Nigeria",
-            "population": 154729000,
-            "density": 167,
-            "roomNights":49,
-            "ADR":186,
-            "revenue":9114,
-            "color": "#eceac1"        
-          },
-          {
-            "code": "NO",
-            "value": 16,
-            "name": "Norway",
-            "population": 5279970,
-            "density": 14,
-            "roomNights":258,
-            "ADR":155,
-            "revenue":39990,
-            "color": "#abab0d"        
-          },
-          {
-            "code": "OM",
-            "value": 9,
-            "name": "Oman",
-            "population": 2845000,
-            "density": 9.2,
-            "roomNights":49,
-            "ADR":183,
-            "revenue":8967,
-            "color": "#adb432"        
-          },
-          {
-            "code": "PK",
-            "value": 225,
-            "name": "Pakistan",
-            "population": 193231420,
-            "density": 245,
-            "roomNights":17,
-            "ADR":171,
-            "revenue":2907,
-            "color": "#cfca76"        
-          },
-          {
-            "code": "PA",
-            "value": 47,
-            "name": "Panama",
-            "population": 3454000,
-            "density": 46,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "PG",
-            "value": 15,
-            "name": "Papua New Guinea",
-            "population": 6732000,
-            "density": 15,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "PY",
-            "value": 16,
-            "name": "Paraguay",
-            "population": 6349000,
-            "density": 16,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "PE",
-            "value": 23,
-            "name": "Peru",
-            "population": 29461933,
-            "density": 23,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#abab0d"     
-          },
-          {
-            "code": "PH",
-            "value": 313,
-            "name": "Philippines",
-            "population": 100981437,
-            "density": 337,
-            "roomNights":56,
-            "ADR":188,
-            "revenue":10528,
-            "color": "#cfca76"        
-           },
-          {
-            "code": "PL",
-            "value": 126,
-            "name": "Poland",
-            "population": 38163895,
-            "density": 122,
-            "roomNights":43,
-            "ADR":178,
-            "revenue":7654,
-            "color": "#abab0d"        
-          },
-          {
-            "code": "PT",
-            "value": 116,
-            "name": "Portugal",
-            "population": 10636888,
-            "density": 115,
-            "roomNights":65,
-            "ADR":186,
-            "revenue":12090,
-            "color": "#abab0d"        
-           },
-          {
-            "code": "PR",
-            "value": 449,
-            "name": "Puerto Rico",
-            "population": 3982000,
-            "density": 449,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "WA",
-            "value": 152,
-            "name": "Qatar",
-            "population": 1409000,
-            "density": 128,
-            "roomNights":211,
-            "ADR":164,
-            "revenue":34604,
-            "color": "#cfca76"         
-          },
-          {
-            "code": "RO",
-            "value": 93,
-            "name": "Romania",
-            "population": 21466174,
-            "density": 90,
-            "roomNights":102,
-            "ADR":156,
-            "revenue":15912,
-            "color": "#cfca76"         
-          },
-          {
-            "code": "RU",
-            "value": 9,
-            "name": "Russia",
-            "population": 142905208,
-            "density": 8.3,
-            "roomNights":211,
-            "ADR":171,
-            "revenue":36801,
-            "color": "#cccc68"         
-          },
-          {
-            "code": "RW",
-            "value": 431,
-            "name": "Rwanda",
-            "population": 9998000,
-            "density": 380,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "SA",
-            "value": 14,
-            "name": "Saudi Arabia",
-            "population": 28146658,
-            "density": 12,
-            "roomNights":132,
-            "ADR":156,
-            "revenue":20592,
-            "color": "#abab0d"         
-          },
-          {
-            "code": "SN",
-            "value": 65,
-            "name": "Senegal",
-            "population": 12534000,
-            "density": 64,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "RS",
-            "value": 83,
-            "name": "Serbia",
-            "population": 7800000,
-            "density": 101,
-            "roomNights":2,
-            "ADR":184,
-            "revenue":368,
-            "color": "#cfca76"       
-          },
-          {
-            "code": "SL",
-            "value": 82,
-            "name": "Sierra Leone",
-            "population": 5696000,
-            "density": 79,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "SK",
-            "value": 113,
-            "name": "Slovakia",
-            "population": 5424057,
-            "density": 111,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "SI",
-            "value": 102,
-            "name": "Slovenia",
-            "population": 2192912,
-            "density": 108,
-            "roomNights":13,
-            "ADR":184,
-            "revenue":2392,
-            "color": "#cfca76"        
-          },
-          {
-            "code": "SB",
-            "value": 19,
-            "name": "Solomon Is.",
-            "population": 523000,
-            "density": 18,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "SO",
-            "value": 15,
-            "name": "Somalia",
-            "population": 9133000,
-            "density": 14,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "ZA",
-            "value": 41,
-            "name": "South Africa",
-            "population": 50586757,
-            "density": 41,
-            "roomNights":75,
-            "ADR":177,
-            "revenue":13275,
-            "color": "#e6e8b9"         
-          },
-          {
-            "code": "SS",
-            "value": 13,
-            "name": "S. Sudan",
-            "population": 8260490,
-            "density": 13,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#eae7c6"     
-          },
-          {
-            "code": "ES",
-            "value": 92,
-            "name": "Spain",
-            "population": 46087170,
-            "density": 91,
-            "roomNights":443,
-            "ADR":182,
-            "revenue":80626,
-            "color": "#abab0d"         
-          },
-          {
-            "code": "LK",
-            "value": 333,
-            "name": "Sri Lanka",
-            "population": 20238000,
-            "density": 308,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "SD",
-            "value": 16,
-            "name": "Sudan",
-            "population": 31894000,
-            "density": 17,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "SR",
-            "value": 3,
-            "name": "Suriname",
-            "population": 520000,
-            "density": 3.2,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "SZ",
-            "value": 69,
-            "name": "Swaziland",
-            "population": 1185000,
-            "density": 68,
-            "roomNights":347,
-            "ADR":170,
-            "revenue":58990,
-            "color": "#cfca76"         
-          },
-          {
-            "code": "SE",
-            "value": 23,
-            "name": "Sweden",
-            "population": 9366092,
-            "density": 21,
-            "roomNights":301,
-            "ADR":187,
-            "revenue":56287,
-            "color": "#abab0d"         
-          },
-          {
-            "code": "CH",
-            "value": 196,
-            "name": "Switzerland",
-            "population": 7866500,
-            "density": 191,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "SY",
-            "value": 111,
-            "name": "Syria",
-            "population": 21906000,
-            "density": 118,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "TJ",
-            "value": 49,
-            "name": "Tajikistan",
-            "population": 6952000,
-            "density": 49,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "TZ",
-            "value": 51,
-            "name": "Tanzania",
-            "population": 43739000,
-            "density": 46,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "TH",
-            "value": 135,
-            "name": "Thailand",
-            "population": 64232760,
-            "density": 125,
-            "roomNights":134,
-            "ADR":166,
-            "revenue":22244,
-            "color": "#cfca76"         
-          },
-          {
-            "code": "TP",
-            "value": 76,
-            "name": "Timor-Leste",
-            "population": 1134000,
-            "density": 76,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "TG",
-            "value": 111,
-            "name": "Togo",
-            "population": 6619000,
-            "density": 117,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"    
-           },
-          {
-            "code": "TT",
-            "value": 261,
-            "name": "Trinidad and Tobago",
-            "population": 1339000,
-            "density": 261,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "TN",
-            "value": 68,
-            "name": "Tunisia",
-            "population": 10327800,
-            "density": 63,
-            "roomNights":19,
-            "ADR":155,
-            "revenue":2945,
-            "color": "#cfca76"       
-           },
-          {
-            "code": "TR",
-            "value": 95,
-            "name": "Turkey",
-            "population": 77804122,
-            "density": 93,
-            "roomNights":78,
-            "ADR":176,
-            "revenue":13728,
-            "color": "#abab0d"        
-           },
-          {
-            "code": "TM",
-            "value": 11,
-            "name": "Turkmenistan",
-            "population": 5110000,
-            "density": 11,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "UG",
-            "value": 170,
-            "name": "Uganda",
-            "population": 32710000,
-            "density": 136,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"    
-           },
-          {
-            "code": "UA",
-            "value": 79,
-            "name": "Ukraine",
-            "population": 46936000,
-            "density": 78,
-            "roomNights":64,
-            "ADR":170,
-            "revenue":10880,
-            "color": "#cfca76"         
-          },
-          {
-            "code": "AE",
-            "value": 90,
-            "name": "United Arab Emirates",
-            "population": 8264070,
-            "density": 99,
-            "roomNights":193,
-            "ADR":159,
-            "revenue":30687,
-            "color": "#cfca76"         
-          },
-          {
-            "code": "GB",
-            "value": 257,
-            "name": "United Kingdom",
-            "population": 62041708,
-            "density": 255,
-            "roomNights":3627,
-            "ADR":169,
-            "revenue":612963,
-            "color": "#abab0d"          
-          },
-          {
-            "code": "US",
-            "value": 34,
-            "name": "United States",
-            "population": 325020000,
-            "density": 33,
-            "roomNights":2162,
-            "ADR":155,
-            "revenue":335110,
-            "color": "#abab0d"          
-          },
-          {
-            "code": "UY",
-            "value": 19,
-            "name": "Uruguay",
-            "population": 3463197,
-            "density": 20,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"    
-           },
-          {
-            "code": "UZ",
-            "value": 66,
-            "name": "Uzbekistan",
-            "population": 27488000,
-            "density": 61,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "VU",
-            "value": 20,
-            "name": "Vanuatu",
-            "population": 240000,
-            "density": 20,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "VE",
-            "value": 33,
-            "name": "Venezuela",
-            "population": 32240855,
-            "density": 35,
-            "roomNights":12,
-            "ADR":162,
-            "revenue":1944,
-            "color": "#abab0d"        
-          },
-          {
-            "code": "VN",
-            "value": 280,
-            "name": "Vietnam",
-            "population": 85789573,
-            "density": 259,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "EH",
-            "value": 2,
-            "name": "W. Sahara",
-            "population": 513000,
-            "density": 1.9,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "YE",
-            "value": 46,
-            "name": "Yemen",
-            "population": 23580000,
-            "density": 45,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "ZM",
-            "value": 17,
-            "name": "Zambia",
-            "population": 12935000,
-            "density": 17,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          },
-          {
-            "code": "ZW",
-            "value": 32,
-            "name": "Zimbabwe",
-            "population": 13009530,
-            "density": 33,
-            "roomNights":0,
-            "ADR":0,
-            "revenue":0,
-            "color": "#cfca76"     
-          }
-        ]
+  "data": {
+    "legend": [
+      {
+        "code": "Côte",
+        "name": "Côte d'Ivoire",
+        "roomNights": 3627,
+        "ADR": 169,
+        "revenue": 612963,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SG",
+        "name": "Singapore",
+        "roomNights": 788,
+        "ADR": 156,
+        "revenue": 122928,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BH",
+        "name": "Bhutan",
+        "roomNights": 3627,
+        "ADR": 169,
+        "revenue": 612963,
+        "color": "#cfca76"
+      },
+      {
+        "code": "Ec",
+        "name": "Ecuador",
+        "roomNights": 3627,
+        "ADR": 169,
+        "revenue": 612963,
+        "color": "#abab0d"
+      },
+      {
+        "code": "AF",
+        "name": "Afghanistan",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "AL",
+        "name": "Albania",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "DZ",
+        "name": "Algeria",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#abab0d"
+      },
+      {
+        "code": "AO",
+        "name": "Angola",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#eae7c6"
+      },
+      {
+        "code": "AR",
+        "name": "Argentina",
+        "roomNights": 91,
+        "ADR": 164,
+        "revenue": 14924,
+        "color": "#abab0d"
+      },
+      {
+        "code": "AM",
+        "name": "Armenia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "AU",
+        "name": "Australia",
+        "roomNights": 671,
+        "ADR": 188,
+        "revenue": 126148,
+        "color": "#abab0d"
+      },
+      {
+        "code": "AT",
+        "name": "Austria",
+        "roomNights": 83,
+        "ADR": 170,
+        "revenue": 14110,
+        "color": "#cfca76"
+      },
+      {
+        "code": "AZ",
+        "name": "Azerbaijan",
+        "roomNights": 4,
+        "ADR": 177,
+        "revenue": 708,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BS",
+        "name": "Bahamas",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BD",
+        "name": "Bangladesh",
+
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BY",
+        "name": "Belarus",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BE",
+        "name": "Belgium",
+        "roomNights": 133,
+        "ADR": 185,
+        "revenue": 24605,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BZ",
+        "name": "Belize",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BJ",
+        "name": "Benin",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BO",
+        "name": "Bolivia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BA",
+        "name": "Bosnia and Herz.",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BW",
+        "name": "Botswana",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BR",
+        "name": "Brazil",
+        "roomNights": 318,
+        "ADR": 181,
+        "revenue": 57558,
+        "color": "#abab0d"
+      },
+      {
+        "code": "BN",
+        "name": "Brunei",
+        "roomNights": 7,
+        "ADR": 162,
+        "revenue": 1134,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BG",
+        "name": "Bulgaria",
+        "roomNights": 6,
+        "ADR": 172,
+        "revenue": 1032,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BF",
+        "name": "Burkina Faso",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BI",
+        "name": "Burundi",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "KH",
+        "name": "Cambodia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "CM",
+        "name": "Cameroon",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "CA",
+        "name": "Canada",
+        "roomNights": 932,
+        "ADR": 179,
+        "revenue": 166828,
+        "color": "#abab0d"
+      },
+      {
+        "code": "CF",
+        "name": "Central African Rep.",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#eae7c6"
+      },
+      {
+        "code": "TD",
+        "name": "Chad",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "CL",
+        "name": "Chile",
+        "roomNights": 17,
+        "ADR": 175,
+        "revenue": 2975,
+        "color": "#abab0d"
+      },
+      {
+        "code": "CN",
+        "name": "China",
+
+        "roomNights": 139,
+        "ADR": 162,
+        "revenue": 22518,
+        "color": "#abab0d"
+      },
+      {
+        "code": "CO",
+        "name": "Colombia",
+        "roomNights": 6,
+        "ADR": 186,
+        "revenue": 1116,
+        "color": "#abab0d"
+      },
+      {
+        "code": "CD",
+        "name": "Dem. Rep. Congo",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#eae7c6"
+      },
+      {
+        "code": "CG",
+        "name": "Congo",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "CR",
+        "name": "Costa Rica",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "HR",
+        "name": "Croatia",
+        "roomNights": 5,
+        "ADR": 174,
+        "revenue": 870,
+        "color": "#cfca76"
+      },
+      {
+        "code": "CU",
+        "name": "Cuba",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "CY",
+        "name": "Cyprus",
+        "roomNights": 18,
+        "ADR": 173,
+        "revenue": 3114,
+        "color": "#cfca76"
+      },
+      {
+        "code": "CZ",
+        "name": "Czech Rep.",
+        "roomNights": 45,
+        "ADR": 172,
+        "revenue": 7740,
+        "color": "#cfca76"
+      },
+      {
+        "code": "DK",
+        "name": "Denmark",
+        "roomNights": 176,
+        "ADR": 172,
+        "revenue": 30272,
+        "color": "#cfca76"
+      },
+      {
+        "code": "DJ",
+        "name": "Djibouti",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "DO",
+        "name": "Dominican Rep.",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "EG",
+        "name": "Egypt",
+        "roomNights": 8,
+        "ADR": 185,
+        "revenue": 1480,
+        "color": "#abab0d"
+      },
+      {
+        "code": "SV",
+        "name": "El Salvador",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GQ",
+        "name": "Guinea",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ER",
+        "name": "Eritrea",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "EE",
+        "name": "Estonia",
+        "roomNights": 2,
+        "ADR": 184,
+        "revenue": 368,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ET",
+        "name": "Ethiopia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#d5d688"
+      },
+      {
+        "code": "FJ",
+        "name": "Fiji",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "FI",
+        "name": "Finland",
+        "roomNights": 69,
+        "ADR": 187,
+        "revenue": 17952,
+        "color": "#abab0d"
+      },
+      {
+        "code": "FR",
+        "name": "France",
+        "roomNights": 1875,
+        "ADR": 185,
+        "revenue": 346875,
+        "color": "#abab0d"
+      },
+      {
+        "code": "GA",
+        "name": "Gabon",
+        "roomNights": 60,
+        "ADR": 182,
+        "revenue": 10920,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GM",
+        "name": "Gambia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GE",
+        "name": "Georgia",
+        "roomNights": 7,
+        "ADR": 175,
+        "revenue": 1225,
+        "color": "#cfca76"
+      },
+      {
+        "code": "DE",
+        "name": "Germany",
+        "roomNights": 617,
+        "ADR": 188,
+        "revenue": 115996,
+        "color": "#abab0d"
+      },
+      {
+        "code": "GH",
+        "name": "Ghana",
+        "roomNights": 9,
+        "ADR": 165,
+        "revenue": 1485,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GR",
+        "name": "Greece",
+        "roomNights": 97,
+        "ADR": 170,
+        "revenue": 16490,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GL",
+        "name": "Greenland",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#eceac1"
+      },
+      {
+        "code": "GT",
+        "name": "Guatemala",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GN",
+        "name": "Guinea",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GW",
+        "name": "Guinea-Bissau",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GY",
+        "name": "Guyana",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#abab0d"
+      },
+      {
+        "code": "HT",
+        "name": "Haiti",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "HN",
+        "name": "Honduras",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "HU",
+        "name": "Hungary",
+        "roomNights": 86,
+        "ADR": 183,
+        "revenue": 15738,
+        "color": "#cfca76"
+      },
+      {
+        "code": "IS",
+        "name": "Iceland",
+        "roomNights": 4,
+        "ADR": 175,
+        "revenue": 700,
+        "color": "#abab0d"
+      },
+      {
+        "code": "IN",
+        "name": "India",
+
+        "roomNights": 587,
+        "ADR": 169,
+        "revenue": 99203,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ID",
+        "name": "Indonesia",
+        "roomNights": 64,
+        "ADR": 179,
+        "revenue": 11456,
+        "color": "#cfca76"
+      },
+      {
+        "code": "IR",
+        "name": "Iran",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#abab0d"
+      },
+      {
+        "code": "IQ",
+        "name": "Iraq",
+        "roomNights": 101,
+        "ADR": 178,
+        "revenue": 17978,
+        "color": "#cfca76"
+      },
+      {
+        "code": "IE",
+        "name": "Ireland",
+        "roomNights": 141,
+        "ADR": 170,
+        "revenue": 23970,
+        "color": "#abab0d"
+      },
+      {
+        "code": "IL",
+        "name": "Israel",
+        "roomNights": 87,
+        "ADR": 186,
+        "revenue": 16182,
+        "color": "#cfca76"
+      },
+      {
+        "code": "IT",
+        "name": "Italy",
+        "roomNights": 739,
+        "ADR": 171,
+        "revenue": 126369,
+        "color": "#abab0d"
+      },
+      {
+        "code": "JM",
+        "name": "Jamaica",
+        "roomNights": 9,
+        "ADR": 184,
+        "revenue": 1656,
+        "color": "#cfca76"
+      },
+      {
+        "code": "JP",
+        "name": "Japan",
+        "roomNights": 285,
+        "ADR": 162,
+        "revenue": 46170,
+        "color": "#cfca76"
+      },
+      {
+        "code": "JO",
+        "name": "Jordan",
+        "roomNights": 148,
+        "ADR": 176,
+        "revenue": 26048,
+        "color": "#cfca76"
+      },
+      {
+        "code": "KZ",
+        "name": "Kazakhstan",
+        "roomNights": 53,
+        "ADR": 165,
+        "revenue": 8745,
+        "color": "#cfca76"
+      },
+      {
+        "code": "KE",
+        "name": "Kenya",
+        "roomNights": 41,
+        "ADR": 158,
+        "revenue": 6478,
+        "color": "#eae7c6"
+      },
+      {
+        "code": "KP",
+        "name": "Dem. Rep. Korea",
+        "roomNights": 30,
+        "ADR": 161,
+        "revenue": 4830,
+        "color": "#cfca76"
+      },
+      {
+        "code": "KR",
+        "name": "Korea",
+        "roomNights": 100,
+        "ADR": 188,
+        "revenue": 18800,
+        "color": "#cfca76"
+      },
+      {
+        "code": "XK",
+        "name": "Kosovo",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "KW",
+        "name": "Kuwait",
+        "roomNights": 103,
+        "ADR": 168,
+        "revenue": 17304,
+        "color": "#cfca76"
+      },
+      {
+        "code": "KG",
+        "name": "Kyrgyzstan",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LA",
+        "name": "Lao PDR",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LV",
+        "name": "Latvia",
+        "roomNights": 4,
+        "ADR": 174,
+        "revenue": 696,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LB",
+        "name": "Lebanon",
+        "roomNights": 87,
+        "ADR": 160,
+        "revenue": 13920,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LS",
+        "name": "Lesotho",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LR",
+        "name": "Liberia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LY",
+        "name": "Libya",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#bfbe32"
+      },
+      {
+        "code": "LT",
+        "name": "Lithuania",
+        "roomNights": 15,
+        "ADR": 184,
+        "revenue": 2760,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LU",
+        "name": "Luxembourg",
+        "roomNights": 29,
+        "ADR": 186,
+        "revenue": 5397,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MK",
+        "name": "Macedonia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MG",
+        "name": "Madagascar",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MW",
+        "name": "Malawi",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MY",
+        "name": "Malaysia",
+        "roomNights": 141,
+        "ADR": 159,
+        "revenue": 22419,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ML",
+        "name": "Mali",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#eae7c6"
+      },
+      {
+        "code": "MR",
+        "name": "Mauritania",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MX",
+        "name": "Mexico",
+        "roomNights": 70,
+        "ADR": 178,
+        "revenue": 12460,
+        "color": "#abab0d"
+      },
+      {
+        "code": "MD",
+        "name": "Moldova",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MC",
+        "name": "Monaco",
+        "roomNights": 1,
+        "ADR": 164,
+        "revenue": 164,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MN",
+        "name": "Mongolia",
+        "roomNights": 11,
+        "ADR": 168,
+        "revenue": 1848,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ME",
+        "name": "Montenegro",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MA",
+        "name": "Morocco",
+        "roomNights": 5,
+        "ADR": 181,
+        "revenue": 905,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MZ",
+        "name": "Mozambique",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MM",
+        "name": "Myanmar",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "NA",
+        "name": "Namibia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "NP",
+        "name": "Nepal",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "NL",
+        "name": "Netherlands",
+        "roomNights": 216,
+        "ADR": 173,
+        "revenue": 37368,
+        "color": "#cfca76"
+      },
+      {
+        "code": "NC",
+        "name": "New Caledonia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "NZ",
+        "name": "New Zealand",
+        "roomNights": 209,
+        "ADR": 180,
+        "revenue": 37620,
+        "color": "#abab0d"
+      },
+      {
+        "code": "NI",
+        "name": "Nicaragua",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "NE",
+        "name": "Niger",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#eceac1"
+      },
+      {
+        "code": "NG",
+        "name": "Nigeria",
+        "roomNights": 49,
+        "ADR": 186,
+        "revenue": 9114,
+        "color": "#eceac1"
+      },
+      {
+        "code": "NO",
+        "name": "Norway",
+        "roomNights": 258,
+        "ADR": 155,
+        "revenue": 39990,
+        "color": "#abab0d"
+      },
+      {
+        "code": "OM",
+        "name": "Oman",
+        "roomNights": 49,
+        "ADR": 183,
+        "revenue": 8967,
+        "color": "#adb432"
+      },
+      {
+        "code": "PK",
+        "name": "Pakistan",
+        "roomNights": 17,
+        "ADR": 171,
+        "revenue": 2907,
+        "color": "#cfca76"
+      },
+      {
+        "code": "PA",
+        "name": "Panama",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "PG",
+        "name": "Papua New Guinea",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "PY",
+        "name": "Paraguay",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "PE",
+        "name": "Peru",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#abab0d"
+      },
+      {
+        "code": "PH",
+        "name": "Philippines",
+        "roomNights": 56,
+        "ADR": 188,
+        "revenue": 10528,
+        "color": "#cfca76"
+      },
+      {
+        "code": "PL",
+        "name": "Poland",
+        "roomNights": 43,
+        "ADR": 178,
+        "revenue": 7654,
+        "color": "#abab0d"
+      },
+      {
+        "code": "PT",
+        "name": "Portugal",
+        "roomNights": 65,
+        "ADR": 186,
+        "revenue": 12090,
+        "color": "#abab0d"
+      },
+      {
+        "code": "PR",
+        "name": "Puerto Rico",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "WA",
+        "name": "Qatar",
+        "roomNights": 211,
+        "ADR": 164,
+        "revenue": 34604,
+        "color": "#cfca76"
+      },
+      {
+        "code": "RO",
+        "name": "Romania",
+        "roomNights": 102,
+        "ADR": 156,
+        "revenue": 15912,
+        "color": "#cfca76"
+      },
+      {
+        "code": "RU",
+        "name": "Russia",
+        "roomNights": 211,
+        "ADR": 171,
+        "revenue": 36801,
+        "color": "#cccc68"
+      },
+      {
+        "code": "RW",
+        "name": "Rwanda",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SA",
+        "name": "Saudi Arabia",
+        "roomNights": 132,
+        "ADR": 156,
+        "revenue": 20592,
+        "color": "#abab0d"
+      },
+      {
+        "code": "SN",
+        "name": "Senegal",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "RS",
+        "name": "Serbia",
+        "roomNights": 2,
+        "ADR": 184,
+        "revenue": 368,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SL",
+        "name": "Sierra Leone",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SK",
+        "name": "Slovakia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SI",
+        "name": "Slovenia",
+        "roomNights": 13,
+        "ADR": 184,
+        "revenue": 2392,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SB",
+        "name": "Solomon Is.",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SO",
+        "name": "Somalia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ZA",
+        "name": "South Africa",
+        "roomNights": 75,
+        "ADR": 177,
+        "revenue": 13275,
+        "color": "#e6e8b9"
+      },
+      {
+        "code": "SS",
+        "name": "S. Sudan",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#eae7c6"
+      },
+      {
+        "code": "ES",
+        "name": "Spain",
+        "roomNights": 443,
+        "ADR": 182,
+        "revenue": 80626,
+        "color": "#abab0d"
+      },
+      {
+        "code": "LK",
+        "name": "Sri Lanka",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SD",
+        "name": "Sudan",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SR",
+        "name": "Suriname",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SZ",
+        "name": "Swaziland",
+        "roomNights": 347,
+        "ADR": 170,
+        "revenue": 58990,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SE",
+        "name": "Sweden",
+        "roomNights": 301,
+        "ADR": 187,
+        "revenue": 56287,
+        "color": "#abab0d"
+      },
+      {
+        "code": "CH",
+        "name": "Switzerland",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SY",
+        "name": "Syria",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TJ",
+        "name": "Tajikistan",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TZ",
+        "name": "Tanzania",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TH",
+        "name": "Thailand",
+        "roomNights": 134,
+        "ADR": 166,
+        "revenue": 22244,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TP",
+        "name": "Timor-Leste",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TG",
+        "name": "Togo",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TT",
+        "name": "Trinidad and Tobago",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TN",
+        "name": "Tunisia",
+        "roomNights": 19,
+        "ADR": 155,
+        "revenue": 2945,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TR",
+        "name": "Turkey",
+        "roomNights": 78,
+        "ADR": 176,
+        "revenue": 13728,
+        "color": "#abab0d"
+      },
+      {
+        "code": "TM",
+        "name": "Turkmenistan",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "UG",
+        "name": "Uganda",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "UA",
+        "name": "Ukraine",
+        "roomNights": 64,
+        "ADR": 170,
+        "revenue": 10880,
+        "color": "#cfca76"
+      },
+      {
+        "code": "AE",
+        "name": "United Arab Emirates",
+        "roomNights": 193,
+        "ADR": 159,
+        "revenue": 30687,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GB",
+        "name": "United Kingdom",
+        "roomNights": 3627,
+        "ADR": 169,
+        "revenue": 612963,
+        "color": "#abab0d"
+      },
+      {
+        "code": "US",
+        "name": "United States",
+        "roomNights": 2162,
+        "ADR": 155,
+        "revenue": 335110,
+        "color": "#abab0d"
+      },
+      {
+        "code": "UY",
+        "name": "Uruguay",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "UZ",
+        "name": "Uzbekistan",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "VU",
+        "name": "Vanuatu",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "VE",
+        "name": "Venezuela",
+        "roomNights": 12,
+        "ADR": 162,
+        "revenue": 1944,
+        "color": "#abab0d"
+      },
+      {
+        "code": "VN",
+        "name": "Vietnam",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "EH",
+        "name": "W. Sahara",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "YE",
+        "name": "Yemen",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ZM",
+        "name": "Zambia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ZW",
+        "name": "Zimbabwe",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
       }
+    ]
+  }
 }
