@@ -116,7 +116,7 @@ const PickupDOWOCCSegment = (props: any) => {
           }>
           <MixedCharts
             id={`DOWChart-${index}`}
-            legend={false}
+            
             chartSettings={{
               primaryXAxis: {
                 valueType: "Category",
@@ -135,7 +135,7 @@ const PickupDOWOCCSegment = (props: any) => {
                 visible: false,
               },
               tooltip: { enable: true },
-              height:"170px"
+              height:"180px"
              // height: `${setHeight}px`,
             }}
             charts={Charts}

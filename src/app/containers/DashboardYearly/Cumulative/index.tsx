@@ -507,7 +507,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                       : caretdown
                                   }
                                   alt="increase"
-                                  width="15"
+                                  width="12"
                                 />
                               </div>
                             </OverlayTrigger>
@@ -531,7 +531,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                       : caretdown
                                   }
                                   alt="decrease"
-                                  width="15"
+                                  width="12"
                                 />
                               </div>
                             </OverlayTrigger>
@@ -609,8 +609,21 @@ const CumulativeTable = ({ selectedDate }: any) => {
               <tbody>
               {SecondtableData && SecondtableData.length ? 
               SecondtableData.map((list:any,index:number)=>{
-               return ( list.subData.map((subdata : any, ind:number)=>(
-                <tr key={index} >
+                let newArr:any = []
+                for (let index = 0; index < list.subData.length; index++) {
+                  const element: any = list.subData[index].value;
+                  newArr.push(element)
+                }
+                let maxArr = newArr.reduce(function(final:any, current:any) {
+                  for (let i = 0; i < final.length; ++i) {
+                    if (current[i] > final[i]) {
+                      final[i] = current[i];
+                    }
+                  }
+                  return final;
+                });
+               return ( list.subData.map((subdata : any, ind:number)=>{      
+               return <tr key={ind} >
                  {ind === 0 ? (
                 <td className="row-title" rowSpan={list.subData.length}>
                   {list.title}
@@ -634,6 +647,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                   >
                     <ProgressBar
                       now={value}
+                      max ={maxArr[i]}
                       className="custom-bar"
                       label={`${value}%`}
                     />
@@ -641,7 +655,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                   ))}
                   </>
               </tr>
-                )))
+              }))
               })
             : null
             }

@@ -33,8 +33,8 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                     tabledata={chartType.tabledata}
                   />
                   <Row className='row-inner'>
-                    <Col xs={12} md={6} className="align-self-end">
-                      <div className="mb-20"> 
+                    <Col xs={12} md={6} >
+                      <div > 
                       <PickupDOWOCCSegment
                       
                         index={rowId}
