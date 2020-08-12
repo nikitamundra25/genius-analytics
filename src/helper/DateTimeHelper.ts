@@ -18,7 +18,10 @@ export const generateArrayOfMonths = () => {
   const dateStart = moment();
   const dateEnd = moment(dateStart).add(17, "months");
   while (dateEnd.diff(dateStart, "months") >= 0) {
-    months.push({ name: dateStart.format("MMMM"), id: dateStart.format("M") });
+    months.push({
+      name: dateStart.format("MMMM YYYY"),
+      id: dateStart.format("M"),
+    });
     dateStart.add(1, "month");
   }
   return months;
