@@ -1,6 +1,5 @@
 import React,{useEffect} from "react";
 import { Card, Row, Col } from "react-bootstrap";
-import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
@@ -75,17 +74,17 @@ export default ({ graphdata = [] }: any) => {
 
   const RGIBarChart = [
     {
-      id: "r1",
+      id: "rgi-1",
       color: "#244d7b",
       data:  data && data.length && data[0].data? data[0].data : [],
     },
     {
-      id: "r2",
+      id: "rgi-2",
       color: "#3873b7",
       data: data && data.length && data[1].data? data[1].data : [],
     },
     {
-      id: "r3",
+      id: "rgi-3",
       color: "#99c0eb",
       data: data && data.length && data[2].data? data[2].data : [],
     },
@@ -106,7 +105,7 @@ export default ({ graphdata = [] }: any) => {
           {RGIBarChart.map((key: any, index: number) => {
             return (
               <Col key={index} sm={4} md={4}>
-                <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+                <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
                   <ColumnChart
                     chartSettings={{
                       primaryXAxis: {

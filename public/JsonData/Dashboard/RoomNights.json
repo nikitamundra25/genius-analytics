@@ -1,5 +1,6 @@
 {
-    "data":[
+  "data": {
+    "graph":[
         {
           "data": [
             { "x": "BAR", "y": 81 },
@@ -27,5 +28,11 @@
             { "x": "GROUPS", "y": -2000 }
           ]
         }
-      ]
-}
+      ],
+      "range":{
+        "roomNights": 202,
+        "ADR":-1.3,
+        "revenue":"21,203"
+      }
+    }
+  }

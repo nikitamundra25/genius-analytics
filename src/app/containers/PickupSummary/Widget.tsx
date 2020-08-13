@@ -9,6 +9,7 @@ import TableForm from "./MonthlyTable";
 const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   const getChart = (chartType: any, index: number) => {
     const rowId = index;
+    
     return (
       <Card
         id={`summary-card${rowId}`}
@@ -20,7 +21,6 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
               <div>
                 <PickupSegment
                   index={rowId}
-                  //setHeight={setHeight}
                 />
               </div>
             </Col>
@@ -31,7 +31,6 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                   <div>
                     <PickupDOWOCCSegment
                       index={rowId}
-                      //setHeight={setHeight}
                     />
                   </div>
                 </Col>
@@ -39,7 +38,6 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                   <div>
                     <PickupBusinessMix
                       index={rowId}
-                      //setHeight={setHeight}
                     />
                   </div>
                 </Col>

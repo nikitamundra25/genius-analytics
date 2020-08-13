@@ -2,6 +2,7 @@ export type ToggleType = "graph" | "grid" ;
 export interface IGraphListsModel {
   name: string;
   id: string | number;
+  date?: Date
 }
 export interface IDashboardWidgetProps {
   graphList: IGraphListsModel[];

@@ -38,6 +38,8 @@ export * from "./MonthlyBOB";
 export * from "./pickupBlob";
 export * from "./pickupSummaryTable";
 
+export * from "./CumulativeTable";
+
 //
 export const redirectTo = createAction("REDIRET_TO");
 //

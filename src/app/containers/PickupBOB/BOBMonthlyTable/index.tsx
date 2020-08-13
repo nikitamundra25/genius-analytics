@@ -5,9 +5,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { requestPickupBlobData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
+import { getMonthsData } from "../../../../helper";
+import moment from "moment";
 
-const BOBMonthlyTable = ({index}:any) => {
+const BOBMonthlyTable = ({date}:any) => {
   const dispatch = useDispatch();
+  const months:any = getMonthsData(new Date(date));
 
   const { isLoading, data: graphdata, isError } = useSelector(
     (state: IRootState) => state.pickupBlobReducer
@@ -92,18 +95,21 @@ const BOBMonthlyTable = ({index}:any) => {
               <tbody>
                 {graphdata && graphdata.length
                   ? graphdata.map((list: any, index: number) => {
-                    
-                      return (
+                    let weekendDay = moment(months[index]).day();
+                      return ( index > months.length - 1 ? null :
                         <>
                           <tr
                             key={`monthly-${index}`}
-                            className={list.isWeekend ? "weekend-bg" : ""}
+                            className={weekendDay === 5 ||
+                              weekendDay === 6 ||
+                              weekendDay === 0 ? "weekend-bg" : ""}
                           >
                             <td
                            
                               className="title-col  text-center"
                             >
-                              {list.title}{" "}
+                              {moment(months[index]).format("ddd DD MMM")}
+                              {/* {list.title}{" "} */}
                             </td>
                             
                             <td

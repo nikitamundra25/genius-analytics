@@ -25,7 +25,7 @@ const TopBar = (props: any) => {
       setMonthForDays.getMonth() - 1,
       1
     );
-    // props.handleReset(setNewDate);
+    props.handleDate(setNewDate);
     setStartDate(setNewDate);
   };
 
@@ -50,7 +50,7 @@ const TopBar = (props: any) => {
             <DatePicker
               selected={startDate}
               onChange={(date: any) => {
-                props.handleReset();
+                props.handleDate(date);
                 setStartDate(date);
               }}
               showYearPicker

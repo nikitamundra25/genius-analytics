@@ -6,10 +6,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { requestPickupDetailTableData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
+import { getMonthsData } from "../../../../helper";
+import moment from "moment";
 
 
-const MonthlyTable = ({ index }: any) => {
+const MonthlyTable = ({ date }: any) => {
   const dispatch = useDispatch();
+  const months:any = getMonthsData(new Date(date));
 
   const { isLoading, data: graphdata, isError } = useSelector(
     (state: IRootState) => state.pickupDetailTableReducer
@@ -21,21 +24,28 @@ const MonthlyTable = ({ index }: any) => {
   }, []);
   // let result:any  = []
 
+  // useEffect(() => {
+  //   if(graphdata && graphdata.length){
+  //     var result = [ graphdata.reduce((acc:any, n:any) => {
+  //       for (var prop in n) {
+  //         if(prop !== "title"){
+  //           if (acc.hasOwnProperty(prop)){
+  //             acc[prop] += n[prop] ?  parseInt(n[prop]) : 0;
+  //           } 
+  //           else{ 
+  //             acc[prop] =n[prop] ? parseInt(n[prop]) : 0
+  //           }
+  //         }
+  //       }
+  //       return acc;
+  //     }, {})]
+  //     console.log(result,"resultttttttt")
+  //   }
+  //   // eslint-disable-next-line
+  // }, [graphdata]);
 
 
-// const sumCount = (list = []) => {
-//   const sum:any = {};
-//   // count number
-//   list.map((item:any) => {
-//       Object.entries(item).map(([key, val] : any) => {  
-//           if (key === "barValue" || key === "leisureBreak" ||key === "corporate" ||key === "consortia" ||key === "promotions" ||key === "groups" ||key === "ota" ||key === "fit"|| key === "total" ) {
-//             sum[key] = sum[key] ? (sum[key] + parseInt(val)) : parseInt(val);
-//           }
-//       })
-//   });
-  
-//   return sum;
-// }
+
 
   return (
     <>
@@ -112,18 +122,20 @@ const MonthlyTable = ({ index }: any) => {
               <tbody>
                 {graphdata && graphdata.length
                   ? graphdata.map((list: any, index: number) => {
-                    
-                      return (
+                    let weekendDay = moment(months[index]).day();
+                      return ( index > months.length - 1 ? null :
                         <>
                           <tr
                             key={`monthly-${index}`}
-                            className={list.isWeekend ? "weekend-bg" : ""}
+                            className={weekendDay === 5 ||
+                              weekendDay === 6 ||
+                              weekendDay === 0 ? "weekend-bg" : ""}
                           >
                             <td
-                           
                               className="title-col  text-center"
                             >
-                              {list.title}{" "}
+                              {moment(months[index]).format("ddd DD MMM")}
+                              {/* {list.title}{" "} */}
                             </td>
                             
                             <td
