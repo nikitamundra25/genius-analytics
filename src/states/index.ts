@@ -36,3 +36,4 @@ export * from "./PickupDetailTable";
 export * from "./MonthlyBOB";
 export * from "./pickupBlob";
 export * from "./pickupSummaryTable";
+export * from "./CumulativeTable";
