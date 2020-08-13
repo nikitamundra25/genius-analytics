@@ -26,6 +26,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                   </div>
                   <BOBMonthlyTable
                    index={index}
+                   date = {chartType.date}
                   />
                  
              

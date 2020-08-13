@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useEffect } from "react";
-import DashboardWidget from "./Widget";
+import PickupDetailWidget from "./Widget";
 import TopBar from "../PickupSummary/TopBar";
 import "./index.scss";
 import { generateArrayOfMonths } from "../../../helper";
@@ -35,7 +35,7 @@ const PickupDetail: FunctionComponent = () => {
           />
         ) :  */}
          {pickupList && pickupList.length ? (
-            <DashboardWidget graphList={pickupList} />
+            <PickupDetailWidget graphList={pickupList} />
         ) : null}
       </div>
     </>

@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 import { IDashboardWidgetProps } from "../../../interfaces";
 import TableForm from "./MonthlyTable";
 
-const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
+const PickupDetailWidget = ({ graphList }: IDashboardWidgetProps) => {
   
   const getChart = (chartType: any, index: number) => {
     // switch (chartType.name) {
@@ -15,7 +15,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
           <Card.Body>
             
               <div className="sub-title text-left  mb-3 ">{chartType.name}</div>
-              <TableForm index={index} />
+              <TableForm index={index} date={chartType.date} />
            
           </Card.Body>
         </Card>
@@ -39,4 +39,4 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   );
 };
 
-export default DashboardWidget;
+export default PickupDetailWidget;
