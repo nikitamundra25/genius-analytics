@@ -24,21 +24,28 @@ const MonthlyTable = ({ date }: any) => {
   }, []);
   // let result:any  = []
 
+  // useEffect(() => {
+  //   if(graphdata && graphdata.length){
+  //     var result = [ graphdata.reduce((acc:any, n:any) => {
+  //       for (var prop in n) {
+  //         if(prop !== "title"){
+  //           if (acc.hasOwnProperty(prop)){
+  //             acc[prop] += n[prop] ?  parseInt(n[prop]) : 0;
+  //           } 
+  //           else{ 
+  //             acc[prop] =n[prop] ? parseInt(n[prop]) : 0
+  //           }
+  //         }
+  //       }
+  //       return acc;
+  //     }, {})]
+  //     console.log(result,"resultttttttt")
+  //   }
+  //   // eslint-disable-next-line
+  // }, [graphdata]);
 
 
-// const sumCount = (list = []) => {
-//   const sum:any = {};
-//   // count number
-//   list.map((item:any) => {
-//       Object.entries(item).map(([key, val] : any) => {  
-//           if (key === "barValue" || key === "leisureBreak" ||key === "corporate" ||key === "consortia" ||key === "promotions" ||key === "groups" ||key === "ota" ||key === "fit"|| key === "total" ) {
-//             sum[key] = sum[key] ? (sum[key] + parseInt(val)) : parseInt(val);
-//           }
-//       })
-//   });
-  
-//   return sum;
-// }
+
 
   return (
     <>

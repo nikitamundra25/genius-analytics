@@ -1,6 +1,5 @@
 import React,{useEffect} from "react";
 import { Card, Row, Col } from "react-bootstrap";
-import Loader from "../../../components/Loader/Loader";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
@@ -106,7 +105,7 @@ export default ({ graphdata = [] }: any) => {
           {RGIBarChart.map((key: any, index: number) => {
             return (
               <Col key={index} sm={4} md={4}>
-                <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
+                <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
                   <ColumnChart
                     chartSettings={{
                       primaryXAxis: {
