@@ -9,6 +9,8 @@ import TableForm from "./MonthlyTable";
 const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
   const getChart = (chartType: any, index: number) => {
     const rowId = index;
+    console.log("rowIdrowId",rowId);
+    
     return (
       <Card
         id={`summary-card${rowId}`}

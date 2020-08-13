@@ -58,12 +58,12 @@ const MonthlyBOB = (props: any) => {
                 <Table responsive className="mb-0">
                   <thead>
                     <tr className="business-top-row">
-                      <th></th>
-
-                      {months.map((month: any) => {
+                      <th ></th>
+                      {months.map((month: any,indx:number) => {
                         let weekendDay = moment(month).day();
                         return (
                           <th
+                            key ={indx}
                             className={`date-col ${
                               weekendDay === 5 ||
                               weekendDay === 6 ||
