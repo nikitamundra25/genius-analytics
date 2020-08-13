@@ -299,34 +299,17 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td className="title-col">STLY</td>
-                  <td className="content-col">82.0%</td>
-                  <td className="content-col">168.47</td>
-                  <td className="content-col">&pound;138.15</td>
-                  <td className="content-col">&pound;1,169,687</td>
-                </tr>
-                <tr>
-                  <td className="title-col">LY</td>
-                  <td className="content-col">68.5%</td>
-                  <td className="content-col">151.30</td>
-                  <td className="content-col">&pound;103.64</td>
-                  <td className="content-col">&pound;1,201,776</td>
-                </tr>
-                <tr>
-                  <td className="title-col">BUD</td>
-                  <td className="content-col">88.0%</td>
-                  <td className="content-col">175.10</td>
-                  <td className="content-col">&pound;154.09</td>
-                  <td className="content-col">&pound;1,548,760</td>
-                </tr>
-                <tr>
-                  <td className="title-col">BOB</td>
-                  <td className="content-col">85.2%</td>
-                  <td className="content-col">178.87</td>
-                  <td className="content-col">&pound;152.40</td>
-                  <td className="content-col">&pound;1,453,133</td>
-                </tr>
+              {data && data.grid ? 
+              data.grid.map((list:any,index:number)=>{
+                return <tr key={index} >
+                <td className="title-col">{list.title} </td>
+                <td className="content-col">{`${list.OCC}%`} </td>
+                <td className="content-col">{list.ADR} </td>
+                <td className="content-col">&pound;{list.revpar} </td>
+                <td className="content-col">&pound;{list.revenue} </td>
+              </tr>
+              })
+                : null}
               </tbody>
             </Table>
           </div>
