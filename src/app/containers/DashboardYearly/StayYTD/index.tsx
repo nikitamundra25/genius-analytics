@@ -76,6 +76,19 @@ const StayYTD = ({ id, graphdata = [] }: any) => {
       <span>{args.point.y}</span>
     </div>);
 };
+
+const pointRender = (args:any) => {
+  let materialColors = ['#6a94c8', '#c96a68', '#aac672', '#9a82b6', '#74c9de', '#f7b26d', '#577597'];
+  
+  if (args.shape ) {
+    return
+  }
+  else {
+      args.fill = materialColors[args.point.index];
+  }
+};
+
+
   const Charts = [
     {
       dataSource: data,
@@ -86,6 +99,7 @@ const StayYTD = ({ id, graphdata = [] }: any) => {
       name: "LOS",
       width: 1,
       yAxisName:'yAxis1',
+     
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
@@ -167,6 +181,7 @@ const StayYTD = ({ id, graphdata = [] }: any) => {
                 },
                 tooltip: { enable: true },
                 height: setHeight,
+                pointRender:pointRender,
               }}
               charts={Charts}
             />

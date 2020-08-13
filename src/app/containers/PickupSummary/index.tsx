@@ -17,16 +17,21 @@ const PickupSummary: FunctionComponent = () => {
 
   useEffect(() => {
     // dispatch(PickupSummaryRequest());
-    let temp = generateArrayOfMonths();
+    let temp = generateArrayOfMonths(new Date());
     setpickupList(temp);
     // eslint-disable-next-line
   }, []);
+
+  const handleDate = (date:Date)=>{
+    let temp = generateArrayOfMonths(date)
+    setpickupList(temp)
+    }
 
   // const { pickupSummaryList, isPickupLoading, isPickupError } = PickupReducer;
 
   return (
     <>
-      <TopBar />
+      <TopBar handleDate={handleDate} />
       <div className='animated fadeIn'>
         {/* {isPickupLoading ? (
           <Loader />

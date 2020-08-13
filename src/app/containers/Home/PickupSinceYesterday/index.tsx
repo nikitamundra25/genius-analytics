@@ -75,11 +75,11 @@ useEffect(() => {
     {
       id: "1",
       title: "Room Nights",
-      range: "202",
+      range: data && data.range ? data.range.roomNights : 0 ,
       arrowClass: caretup,
       textClass: "text-green",
       charts: {
-        dataSource:data && data.length && data[0] ? data[0].data : [],
+        dataSource:data && data.graph && data.graph.length && data.graph[0] ? data.graph[0].data : [],
         xName: "x",
         yName: "y",
         type: "Column",
@@ -104,11 +104,11 @@ useEffect(() => {
     {
       id: "2",
       title: "ADR",
-      range: "-1.3",
+      range: data && data.range ? data.range.ADR : 0 ,
       arrowClass: caretdown,
       textClass: "text-red",
       charts: {
-        dataSource: data && data.length && data[1] ? data[1].data : [],
+        dataSource: data && data.graph && data.graph.length && data.graph[1] ? data.graph[1].data : [],
         xName: "x",
         yName: "y",
         type: "Column",
@@ -133,11 +133,11 @@ useEffect(() => {
     {
       id: "3",
       title: "Revenue",
-      range: "21,203",
+      range: data && data.range ? data.range.revenue : 0 ,
       arrowClass: caretup,
       textClass: "text-green",
       charts: {
-        dataSource: data && data.length && data[2] ? data[2].data : [],
+        dataSource: data && data.graph && data.graph.length && data.graph[2] ? data.graph[2].data : [],
         xName: "x",
         yName: "y",
         type: "Column",
