@@ -131,7 +131,7 @@ const DashboardMonthly: FunctionComponent = () => {
             mediaQuery={"max-width: 991px"}
             allowResizing={false}
             columns={6}
-            cellAspectRatio={50 / 68}
+            cellAspectRatio={50 / 69}
             created={created}
             ref={(scope: any) => {
               dashboardObj = scope;

@@ -343,7 +343,7 @@
             { "num": 254, "isWeekend": true },
             { "num": 432, "isWeekend": true }
           ],
-          "total": 362.5
+          "total": ""
         },
         {
           "title": "Market Rate",
@@ -380,7 +380,7 @@
             { "num": 323, "isWeekend": true },
             { "num": 176, "isWeekend": true }
           ],
-          "total": 333.4
+          "total": ""
         }
       ]
     },
