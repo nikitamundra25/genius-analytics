@@ -92,7 +92,7 @@ const MonthlyTable = (props: any) => {
                                 ? "text-danger"
                                 : ""
                             }`}>
-                            {list.pickupValue ? list.pickupValue : "-"}{" "}
+                            {list.pickupValue ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.pickupValue).toLocaleString()  : list.pickupValue : "-"}{" "}
                           </td>
                           <td
                             className={`content-col ${
@@ -100,7 +100,7 @@ const MonthlyTable = (props: any) => {
                                 ? "text-danger"
                                 : ""
                             }`}>
-                            {list.bob ? list.bob : "-"}
+                            {list.bob ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.bob).toLocaleString()  :list.bob : "-"}
                           </td>
                           <td
                             className={`content-col ${
@@ -108,7 +108,7 @@ const MonthlyTable = (props: any) => {
                                 ? "text-danger"
                                 : ""
                             }`}>
-                            {list.budget ? list.budget : "-"}
+                            {list.budget ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.budget).toLocaleString()  :list.budget : "-"}
                           </td>
                           <td
                             className={`content-col ${
@@ -116,7 +116,7 @@ const MonthlyTable = (props: any) => {
                                 ? "text-danger"
                                 : ""
                             }`}>
-                            {list.ly ? list.ly : "-"}
+                            {list.ly ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.ly).toLocaleString()  :list.ly : "-"}
                           </td>
                           <td
                             className={`content-col ${
@@ -124,7 +124,7 @@ const MonthlyTable = (props: any) => {
                                 ? "text-danger"
                                 : ""
                             }`}>
-                            {list.stly ? list.stly : "-"}
+                            {list.stly ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.stly).toLocaleString()  :list.stly : "-"}
                           </td>
                           <td
                             className={`content-col bg-2 ${
@@ -132,7 +132,7 @@ const MonthlyTable = (props: any) => {
                                 ? "text-danger"
                                 : ""
                             }`}>
-                            {list.vsBud ? list.vsBud : "-"}
+                            {list.vsBud ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.vsBud).toLocaleString()  : list.vsBud: "-"}
                           </td>
                           <td
                             className={`content-col bg-2 ${
@@ -140,7 +140,7 @@ const MonthlyTable = (props: any) => {
                                 ? "text-danger"
                                 : ""
                             }`}>
-                            {list.vsLy ? list.vsLy : "-"}
+                            {list.vsLy ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.vsLy).toLocaleString()  : list.vsLy: "-"}
                           </td>
                           <td
                             className={`content-col bg-2 ${
@@ -148,7 +148,7 @@ const MonthlyTable = (props: any) => {
                                 ? "text-danger"
                                 : ""
                             }`}>
-                            {list.vsStly ? list.vsStly : "-"}
+                            {list.vsStly ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.vsStly).toLocaleString()  :list.vsStly : "-"}
                           </td>
                         </tr>
                       );
