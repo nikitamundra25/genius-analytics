@@ -21,16 +21,18 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
               <div>
                 <PickupSegment
                   index={rowId}
+                  date={chartType.date}
                 />
               </div>
             </Col>
             <Col xs={12} md={7}>
-              <TableForm index={rowId} tabledata={chartType.tabledata} />
+              <TableForm index={rowId} tabledata={chartType.tabledata} date={chartType.date}/>
               <Row className='row-inner'>
                 <Col xs={12} md={6}>
                   <div>
                     <PickupDOWOCCSegment
                       index={rowId}
+                      date={chartType.date}
                     />
                   </div>
                 </Col>
@@ -38,6 +40,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                   <div>
                     <PickupBusinessMix
                       index={rowId}
+                      date={chartType.date}
                     />
                   </div>
                 </Col>

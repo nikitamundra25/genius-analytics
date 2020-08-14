@@ -4,6 +4,7 @@ import { ApiHelper } from "../../../../helper";
 import { IBookingChannelModel } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import moment from "moment";
 
 const MonthlyTable = (props: any) => {
   const [state, setState] = useState<IBookingChannelModel>({
@@ -25,9 +26,12 @@ const MonthlyTable = (props: any) => {
       });
       return;
     }
+    let filterData:any =  data.data.filter((list:any) => {
+      return list.month === moment(props.date).format("MMMM-YY");
+    })[0];
     setState({
       isLoading: false,
-      data: data.data,
+      data: filterData && filterData.summaryTableData && filterData.summaryTableData.length ? filterData.summaryTableData : [],
       isError: false,
     });
   };
@@ -85,66 +89,66 @@ const MonthlyTable = (props: any) => {
                           <td
                             className={`content-col ${
                               list.pickupValue && parseInt(list.pickupValue) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
-                            {list.pickupValue ? list.pickupValue : "-"}{" "}
+                            {list.pickupValue ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.pickupValue).toLocaleString()  : list.pickupValue : "-"}{" "}
                           </td>
                           <td
                             className={`content-col ${
                               list.bob && parseInt(list.bob) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
-                            {list.bob ? list.bob : "-"}
+                            {list.bob ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.bob).toLocaleString()  :list.bob : "-"}
                           </td>
                           <td
                             className={`content-col ${
                               list.budget && parseInt(list.budget) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
-                            {list.budget ? list.budget : "-"}
+                            {list.budget ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.budget).toLocaleString()  :list.budget : "-"}
                           </td>
                           <td
                             className={`content-col ${
                               list.ly && parseInt(list.ly) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
-                            {list.ly ? list.ly : "-"}
+                            {list.ly ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.ly).toLocaleString()  :list.ly : "-"}
                           </td>
                           <td
                             className={`content-col ${
                               list.stly && parseInt(list.stly) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
-                            {list.stly ? list.stly : "-"}
+                            {list.stly ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.stly).toLocaleString()  :list.stly : "-"}
                           </td>
                           <td
                             className={`content-col bg-2 ${
                               list.vsBud && parseInt(list.vsBud) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
-                            {list.vsBud ? list.vsBud : "-"}
+                            {list.vsBud ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.vsBud).toLocaleString()  : list.vsBud: "-"}
                           </td>
                           <td
                             className={`content-col bg-2 ${
                               list.vsLy && parseInt(list.vsLy) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
-                            {list.vsLy ? list.vsLy : "-"}
+                            {list.vsLy ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.vsLy).toLocaleString()  : list.vsLy: "-"}
                           </td>
                           <td
                             className={`content-col bg-2 ${
                               list.vsStly && parseInt(list.vsStly) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
-                            {list.vsStly ? list.vsStly : "-"}
+                            {list.vsStly ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.vsStly).toLocaleString()  :list.vsStly : "-"}
                           </td>
                         </tr>
                       );
