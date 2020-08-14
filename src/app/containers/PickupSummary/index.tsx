@@ -27,6 +27,8 @@ const PickupSummary: FunctionComponent = () => {
     setpickupList(temp)
     }
 
+    console.log("pickupList",pickupList);
+    
   // const { pickupSummaryList, isPickupLoading, isPickupError } = PickupReducer;
 
   return (

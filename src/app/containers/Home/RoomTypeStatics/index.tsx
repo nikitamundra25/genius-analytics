@@ -30,7 +30,9 @@ export default () => {
         const getHeight =check.height;
         const setgraphHeight = getHeight - 75 ;
         //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-        setsetHeight(`${setgraphHeight}px`)
+        if(setgraphHeight >= 0){
+          setsetHeight(`${setgraphHeight}px`)
+        }
       }, 100);
       
     }
@@ -53,7 +55,9 @@ export default () => {
           const getHeight =check.height;
           const setgraphHeight = getHeight - 75 ;
           //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-          setsetHeight(`${setgraphHeight}px`)
+          if(setgraphHeight >= 0){
+            setsetHeight(`${setgraphHeight}px`)
+          }
         }, 100);
       }
     };
