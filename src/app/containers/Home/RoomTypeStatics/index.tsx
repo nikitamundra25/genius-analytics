@@ -79,7 +79,7 @@ export default () => {
 };
 const labeltemplateline = (args:any) => {
   return (<div  style={{fontSize: '11px'}}>
-    <span>&pound;{args.point.y}</span>
+    <span>{args.point.y}</span>
   </div>);
 };
 

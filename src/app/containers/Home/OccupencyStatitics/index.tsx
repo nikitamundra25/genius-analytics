@@ -37,6 +37,19 @@ const labeltemplate1 = (args: any) => {
     </div>
   );
 };
+const labeltemplate2 = (args: any) => {
+  return (
+    <div
+      style={{
+        fontSize: "10px",
+        padding: "4px 5px 4px 5px",
+        background: '#26405d',
+        borderRadius: "3px"
+      }}>
+      <span>{args.point.y}%</span>
+    </div>
+  );
+};
 
   useEffect(() => {
     dispatch(requestOccupacyStaticsData());
@@ -248,7 +261,7 @@ const labeltemplate1 = (args: any) => {
               visible: true,
               position: "Top",
               //fill: "#26405d",
-              template: labeltemplate1,
+              template: labeltemplate2,
               font: {
                 fontWeight: "600",
                 color: "#ffffff",
@@ -260,7 +273,7 @@ const labeltemplate1 = (args: any) => {
 
   const SAMPLE_CSS = `
       #occty-chart stop {
-      stop-color: #244d81;
+      stop-color: #8293b1;
     }
     #occty-chart stop[offset="0"] {
       stop-opacity: 1;
@@ -270,7 +283,7 @@ const labeltemplate1 = (args: any) => {
     }
 
     #occly-chart stop {
-      stop-color: #4f81bc;
+      stop-color: #3269aa;
     }
     #occly-chart stop[offset="0"] {
       stop-opacity: 1;

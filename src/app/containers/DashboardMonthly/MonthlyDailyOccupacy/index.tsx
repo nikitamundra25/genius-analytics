@@ -91,6 +91,7 @@ const labeltemplateline = (args:any) => {
       fill: "#2b588f",
       name: "Occupied Rooms",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       yAxisName:'yAxis1',
       marker: {
         dataLabel: {
@@ -113,6 +114,7 @@ const labeltemplateline = (args:any) => {
       fill: "#dce8fc",
       name: "Empty Rooms",
       width: 1,
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       yAxisName:'yAxis1',
       marker: {
         dataLabel: {
@@ -135,6 +137,7 @@ const labeltemplateline = (args:any) => {
       fill: "#e46d09",
       name: "ADR",
       width: 3,
+      dashArray:'5',
       marker: {
         visible: false,
         width: 8,
@@ -164,6 +167,7 @@ const labeltemplateline = (args:any) => {
       type: "StackingColumn100",
       fill: "#2b588f",
       name: "Occupied Rooms",
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       yAxisName:'yAxis1',
       width: 1,
       marker: {
@@ -188,6 +192,7 @@ const labeltemplateline = (args:any) => {
       name: "Empty Rooms",
       width: 1,
       yAxisName:'yAxis1',
+      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
           visible: false,
@@ -209,6 +214,7 @@ const labeltemplateline = (args:any) => {
       fill: "#e46d09",
       name: "ADR",
       width: 3,
+      dashArray:'5',
       marker: {
         visible: false,
         width: 10,

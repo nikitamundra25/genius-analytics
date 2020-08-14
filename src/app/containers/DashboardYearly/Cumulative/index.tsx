@@ -249,6 +249,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                       now={value}
                       className="custom-bar"
                       label={`${value}%`}
+                      max ={80}
                     />
                   </td>
                   ))}

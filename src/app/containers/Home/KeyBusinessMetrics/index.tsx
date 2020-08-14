@@ -82,7 +82,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
           majorGridLines: { width: 0 },
         },
         primaryYAxis: {
-          labelFormat: "{value}",
+          labelFormat: "{value}%",
           edgeLabelPlacement: "Shift",
           majorGridLines: { width: 0 },
           majorTickLines: { width: 0 },
@@ -140,7 +140,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
           majorGridLines: { width: 0 },
         },
         primaryYAxis: {
-          labelFormat: "£{value}",
+          labelFormat: "{value}",
           edgeLabelPlacement: "Shift",
           majorGridLines: { width: 0 },
           majorTickLines: { width: 0 },
@@ -154,7 +154,6 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
         tooltip: { enable: false,  position: "Top" },
         height: setHeight,
       },
-     
       data: data &&  data.graph && data.graph.length ? data.graph[2].Revpar : [],
       
     },
@@ -170,7 +169,7 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
           majorGridLines: { width: 0 },
         },
         primaryYAxis: {
-          labelFormat: "£{value}",
+          labelFormat: "{value}",
           edgeLabelPlacement: "Shift",
           majorGridLines: { width: 0 },
           majorTickLines: { width: 0 },
@@ -303,10 +302,10 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
               data.grid.map((list:any,index:number)=>{
                 return <tr key={index} >
                 <td className="title-col">{list.title} </td>
-                <td className="content-col">{`${list.OCC}%`} </td>
-                <td className="content-col">{list.ADR} </td>
-                <td className="content-col">&pound;{list.revpar} </td>
-                <td className="content-col">&pound;{list.revenue} </td>
+                <td className="content-col">{list.OCC ? `${list.OCC}%` : "-" }</td>
+                <td className="content-col">{list.ADR ? parseInt(list.ADR).toLocaleString() : "-"} </td>
+                <td className="content-col">{list.revpar ? parseInt(list.revpar).toLocaleString() : "-"} </td>
+                <td className="content-col">{list.revenue ? parseInt(list.revenue).toLocaleString() : "-"} </td>
               </tr>
               })
                 : null}
