@@ -37,10 +37,6 @@ const MonthlyBOB = (props: any) => {
   }, [data, months]);
 
 
-
-
-
-
   return (
     <>
       <Card>
@@ -114,7 +110,6 @@ const MonthlyBOB = (props: any) => {
                                         {key.title}{" "}
                                       </td>
                                       {key.data.map((data: any, i: number) => {
-                                       
                                         return i > months.length - 1 ? null : (
                                           <td
                                             className={`content-col  
@@ -140,7 +135,6 @@ const MonthlyBOB = (props: any) => {
                                                 ? "weekend-bg"
                                                 : "bg-2"
                                             } `}
-                                            
                                             key={i}
                                           >
                                             {key.title === "OCC"

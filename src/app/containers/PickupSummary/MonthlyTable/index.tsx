@@ -89,7 +89,7 @@ const MonthlyTable = (props: any) => {
                           <td
                             className={`content-col ${
                               list.pickupValue && parseInt(list.pickupValue) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
                             {list.pickupValue ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.pickupValue).toLocaleString()  : list.pickupValue : "-"}{" "}
@@ -97,7 +97,7 @@ const MonthlyTable = (props: any) => {
                           <td
                             className={`content-col ${
                               list.bob && parseInt(list.bob) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
                             {list.bob ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.bob).toLocaleString()  :list.bob : "-"}
@@ -105,7 +105,7 @@ const MonthlyTable = (props: any) => {
                           <td
                             className={`content-col ${
                               list.budget && parseInt(list.budget) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
                             {list.budget ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.budget).toLocaleString()  :list.budget : "-"}
@@ -113,7 +113,7 @@ const MonthlyTable = (props: any) => {
                           <td
                             className={`content-col ${
                               list.ly && parseInt(list.ly) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
                             {list.ly ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.ly).toLocaleString()  :list.ly : "-"}
@@ -121,7 +121,7 @@ const MonthlyTable = (props: any) => {
                           <td
                             className={`content-col ${
                               list.stly && parseInt(list.stly) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
                             {list.stly ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.stly).toLocaleString()  :list.stly : "-"}
@@ -129,7 +129,7 @@ const MonthlyTable = (props: any) => {
                           <td
                             className={`content-col bg-2 ${
                               list.vsBud && parseInt(list.vsBud) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
                             {list.vsBud ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.vsBud).toLocaleString()  : list.vsBud: "-"}
@@ -137,7 +137,7 @@ const MonthlyTable = (props: any) => {
                           <td
                             className={`content-col bg-2 ${
                               list.vsLy && parseInt(list.vsLy) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
                             {list.vsLy ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.vsLy).toLocaleString()  : list.vsLy: "-"}
@@ -145,7 +145,7 @@ const MonthlyTable = (props: any) => {
                           <td
                             className={`content-col bg-2 ${
                               list.vsStly && parseInt(list.vsStly) < 0
-                                ? "text-danger"
+                                ? "bg-negative"
                                 : ""
                             }`}>
                             {list.vsStly ? list.title === "Room Nts" || list.title === "Revenue" ?  parseInt(list.vsStly).toLocaleString()  :list.vsStly : "-"}
