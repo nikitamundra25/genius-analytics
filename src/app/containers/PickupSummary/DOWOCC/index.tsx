@@ -3,13 +3,14 @@ import { ApiHelper } from "../../../../helper";
 import { IBookingChannelModel } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import moment from "moment";
 
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
 const PickupDOWOCCSegment = (props: any) => {
-  const { index } = props;
+  const { index,date } = props;
   const [state, setState] = useState<IBookingChannelModel>({
     isLoading: true,
     isError: true,
@@ -29,9 +30,12 @@ const PickupDOWOCCSegment = (props: any) => {
       });
       return;
     }
+    let filterData:any =  data.data.filter((list:any) => {
+      return list.month === moment(date).format("MMMM-YY");
+    })[0];
     setState({
       isLoading: false,
-      data: data.data,
+      data: filterData && filterData.dowData && filterData.dowData.length ? filterData.dowData : [],
       isError: false,
     });
   };
@@ -54,10 +58,10 @@ const PickupDOWOCCSegment = (props: any) => {
     {
       dataSource: OccData,
       xName: "name",
-      yName: "RoomNts",
+      yName: "OCC",
       type: "Column",
       fill: "#4684bd",
-      name: "Room Nts",
+      name: "OCC",
       yAxisName: "yAxis1",
       width: 1,
       cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },

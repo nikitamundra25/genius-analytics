@@ -1,1087 +1,32 @@
 {
-  "data":[
+  "data": [
     {
-    "month" : "August-20",
-    "segmentData": [
-      {
-        "name": "Bar",
-        "RoomNts": 16,
-        "ADR": 205
-      },
-      {
-        "name": "Public Discount",
-        "RoomNts": 11,
-        "ADR": 155
-      },
-      {
-        "name": "Corporate Discount",
-        "RoomNts": 17,
-        "ADR": 125
-      },
-      {
-        "name": "Partnership Discount",
-        "RoomNts": 5,
-        "ADR": 171
-      },
-      {
-        "name": "Online Advantage",
-        "RoomNts": 8,
-        "ADR": 209
-      },
-      {
-        "name": "Employee Travel",
-        "RoomNts": -1,
-        "ADR": 103
-      },
-      {
-        "name": "Corporate",
-        "RoomNts": 11,
-        "ADR": 187
-      },
-      {
-        "name": "Monthly Contract",
-        "RoomNts": 2,
-        "ADR": 198
-      },
-      {
-        "name": "Long Term Contract",
-        "RoomNts": 2,
-        "ADR": 192
-      },
-      {
-        "name": "Wholesale",
-        "RoomNts": -3,
-        "ADR": 203
-      },
-      {
-        "name": "Corporate Group",
-        "RoomNts": 5,
-        "ADR": 201
-      },
-      {
-        "name": "Corporate Monthly Group",
-        "RoomNts": -1,
-        "ADR": 207
-      },
-      {
-        "name": "Leisure Group",
-        "RoomNts": 1,
-        "ADR": 207
-      },
-      {
-        "name": "Airline Crew Group",
-        "RoomNts": 0,
-        "ADR": 208
-      }
-    ]
-    },
-    {
-      "month" : "September-20",
-      "segmentData": [
+      "month": "August-20",
+      "businessMixData": [
         {
           "name": "Bar",
-          "RoomNts": 15,
-          "ADR": 200
-        },
-        {
-          "name": "Public Discount",
-          "RoomNts": 3,
-          "ADR": 178
-        },
-        {
-          "name": "Corporate Discount",
-          "RoomNts": 1,
-          "ADR": 159
-        },
-        {
-          "name": "Partnership Discount",
-          "RoomNts": 0,
-          "ADR": 185
-        },
-        {
-          "name": "Online Advantage",
-          "RoomNts": -5,
-          "ADR": 193
-        },
-        {
-          "name": "Employee Travel",
-          "RoomNts": -2,
-          "ADR": 107
-        },
-        {
-          "name": "Corporate",
-          "RoomNts": 10,
-          "ADR": 168
-        },
-        {
-          "name": "Monthly Contract",
-          "RoomNts": 1,
-          "ADR": 197
-        },
-        {
-          "name": "Long Term Contract",
-          "RoomNts": -2,
-          "ADR": 200
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": -5,
-          "ADR": 209
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": -1,
-          "ADR": 196
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": -1,
-          "ADR": 198
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": -4,
-          "ADR": 195
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 3,
-          "ADR": 196
-        }
-      ]
-    },
-
-    {
-      "month" : "October-20",
-      "segmentData": [
-        {
-          "name": "Bar",
-          "RoomNts": 9,
-          "ADR": 193
-        },
-        {
-          "name": "Public Discount",
-          "RoomNts": 5,
-          "ADR": 144
-        },
-        {
-          "name": "Corporate Discount",
-          "RoomNts": 2,
-          "ADR": 155
-        },
-        {
-          "name": "Partnership Discount",
-          "RoomNts": -5,
-          "ADR": 159
-        },
-        {
-          "name": "Online Advantage",
-          "RoomNts": 5,
-          "ADR": 193
-        },
-        {
-          "name": "Employee Travel",
-          "RoomNts": -1,
-          "ADR": 105
-        },
-        {
-          "name": "Corporate",
-          "RoomNts": 0,
-          "ADR": 185
-        },
-        {
-          "name": "Monthly Contract",
-          "RoomNts": 0,
-          "ADR": 195
-        },
-        {
-          "name": "Long Term Contract",
-          "RoomNts": -2,
-          "ADR": 203
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": 5,
-          "ADR": 207
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": -1,
-          "ADR": 203
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": -2,
-          "ADR": 200
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 3,
-          "ADR": 204
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": -5,
-          "ADR": 194
-        }
-      ]
-    },
-
-    {
-      "month" : "November-20",
-      "segmentData": [
-        {
-          "name": "Bar",
-          "RoomNts": 18,
-          "ADR": 191
-        },
-        {
-          "name": "Public Discount",
-          "RoomNts": 0,
-          "ADR": 144
-        },
-        {
-          "name": "Corporate Discount",
-          "RoomNts": 1,
-          "ADR": 130
-        },
-        {
-          "name": "Partnership Discount",
-          "RoomNts": 5,
-          "ADR": 144
-        },
-        {
-          "name": "Online Advantage",
-          "RoomNts": -2,
+          "RoomNts": 26,
           "ADR": 206
         },
         {
-          "name": "Employee Travel",
-          "RoomNts": -1,
-          "ADR": 106
-        },
-        {
-          "name": "Corporate",
-          "RoomNts": 0,
-          "ADR": 163
-        },
-        {
-          "name": "Monthly Contract",
-          "RoomNts": -2,
-          "ADR": 202
-        },
-        {
-          "name": "Long Term Contract",
-          "RoomNts": 2,
-          "ADR": 193
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": 3,
-          "ADR": 201
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 3,
-          "ADR": 192
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 0,
-          "ADR": 200
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": -4,
-          "ADR": 197
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 9,
-          "ADR": 199
-        }
-      ]
-    },
-
-    {
-      "month" : "December-20",
-      "segmentData": [
-        {
-          "name": "Bar",
-          "RoomNts": 8,
-          "ADR": 190
-        },
-        {
           "name": "Public Discount",
-          "RoomNts": 3,
-          "ADR": 171
-        },
-        {
-          "name": "Corporate Discount",
-          "RoomNts": -4,
-          "ADR": 134
-        },
-        {
-          "name": "Partnership Discount",
-          "RoomNts": -7,
-          "ADR": 153
-        },
-        {
-          "name": "Online Advantage",
-          "RoomNts": 8,
-          "ADR": 203
-        },
-        {
-          "name": "Employee Travel",
-          "RoomNts": 0,
-          "ADR": 100
-        },
-        {
-          "name": "Corporate",
-          "RoomNts": 4,
-          "ADR": 170
-        },
-        {
-          "name": "Monthly Contract",
-          "RoomNts": 1,
-          "ADR": 194
-        },
-        {
-          "name": "Long Term Contract",
-          "RoomNts": 0,
-          "ADR": 207
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": 3,
-          "ADR": 194
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": -4,
-          "ADR": 191
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 0,
-          "ADR": 205
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 3,
-          "ADR": 188
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": -1,
-          "ADR": 196
-        }
-      ]
-    },
-    {
-      "month" : "January-21",
-      "segmentData": [
-        {
-          "name": "Bar",
-          "RoomNts": 3,
-          "ADR": 209
-        },
-        {
-          "name": "Public Discount",
-          "RoomNts": -3,
-          "ADR": 162
-        },
-        {
-          "name": "Corporate Discount",
-          "RoomNts": 2,
-          "ADR": 140
-        },
-        {
-          "name": "Partnership Discount",
-          "RoomNts": 5,
-          "ADR": 180
-        },
-        {
-          "name": "Online Advantage",
-          "RoomNts": 6,
-          "ADR": 188
-        },
-        {
-          "name": "Employee Travel",
-          "RoomNts": 0,
-          "ADR": 108
-        },
-        {
-          "name": "Corporate",
-          "RoomNts": 7,
-          "ADR": 150
-        },
-        {
-          "name": "Monthly Contract",
-          "RoomNts": 1,
-          "ADR": 194
-        },
-        {
-          "name": "Long Term Contract",
-          "RoomNts": 1,
-          "ADR": 206
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": 6,
-          "ADR": 203
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 4,
-          "ADR": 195
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": -3,
-          "ADR": 194
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": -1,
-          "ADR": 189
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 3,
-          "ADR": 188
-        }
-      ]
-    },
-
-    {
-      "month" : "February-21",
-      "segmentData": [
-        {
-          "name": "Bar",
-          "RoomNts": 4,
-          "ADR": 193
-        },
-        {
-          "name": "Public Discount",
-          "RoomNts": 22,
-          "ADR": 147
-        },
-        {
-          "name": "Corporate Discount",
-          "RoomNts": 9,
-          "ADR": 135
-        },
-        {
-          "name": "Partnership Discount",
-          "RoomNts": -7,
-          "ADR": 140
-        },
-        {
-          "name": "Online Advantage",
-          "RoomNts": -5,
-          "ADR": 208
-        },
-        {
-          "name": "Employee Travel",
-          "RoomNts": 0,
-          "ADR": 101
-        },
-        {
-          "name": "Corporate",
-          "RoomNts": 2,
-          "ADR": 158
-        },
-        {
-          "name": "Monthly Contract",
-          "RoomNts": -1,
-          "ADR": 188
-        },
-        {
-          "name": "Long Term Contract",
-          "RoomNts": 0,
-          "ADR": 195
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": -5,
-          "ADR": 200
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 7,
-          "ADR": 202
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": -1,
-          "ADR": 201
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": -5,
-          "ADR": 196
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 1,
-          "ADR": 188
-        }
-      ]
-    },
-    {
-      "month" : "March-21",
-      "segmentData": [
-        {
-          "name": "Bar",
-          "RoomNts": 16,
-          "ADR": 196
-        },
-        {
-          "name": "Public Discount",
-          "RoomNts": 18,
-          "ADR": 166
-        },
-        {
-          "name": "Corporate Discount",
-          "RoomNts": 1,
-          "ADR": 126
-        },
-        {
-          "name": "Partnership Discount",
-          "RoomNts": 5,
-          "ADR": 168
-        },
-        {
-          "name": "Online Advantage",
-          "RoomNts": 1,
-          "ADR": 199
-        },
-        {
-          "name": "Employee Travel",
-          "RoomNts": 2,
-          "ADR": 100
-        },
-        {
-          "name": "Corporate",
-          "RoomNts": 4,
-          "ADR": 178
-        },
-        {
-          "name": "Monthly Contract",
-          "RoomNts": 1,
-          "ADR": 204
-        },
-        {
-          "name": "Long Term Contract",
-          "RoomNts": -2,
-          "ADR": 201
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": 4,
-          "ADR": 207
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": -3,
-          "ADR": 206
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 2,
-          "ADR": 190
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": -5,
-          "ADR": 201
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 2,
-          "ADR": 208
-        }
-      ]
-    },
-    {
-      "month" : "April-21",
-      "segmentData": [
-        {
-          "name": "Bar",
-          "RoomNts": 1,
-          "ADR": 204
-        },
-        {
-          "name": "Public Discount",
-          "RoomNts": 15,
-          "ADR": 165
+          "RoomNts": 26,
+          "ADR": 179
         },
         {
           "name": "Corporate Discount",
           "RoomNts": 12,
-          "ADR": 158
-        },
-        {
-          "name": "Partnership Discount",
-          "RoomNts": -2,
-          "ADR": 163
-        },
-        {
-          "name": "Online Advantage",
-          "RoomNts": 6,
-          "ADR": 202
-        },
-        {
-          "name": "Employee Travel",
-          "RoomNts": -3,
-          "ADR": 104
-        },
-        {
-          "name": "Corporate",
-          "RoomNts": 1,
-          "ADR": 175
-        },
-        {
-          "name": "Monthly Contract",
-          "RoomNts": -2,
-          "ADR": 206
-        },
-        {
-          "name": "Long Term Contract",
-          "RoomNts": 1,
-          "ADR": 191
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": -2,
-          "ADR": 200
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": -2,
-          "ADR": 206
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 3,
-          "ADR": 201
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 1,
-          "ADR": 199
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": -3,
-          "ADR": 194
-        }
-      ]
-    },
-
-    {
-      "month" : "May-21",
-      "segmentData": [
-        {
-          "name": "Bar",
-          "RoomNts": 2,
-          "ADR": 201
-        },
-        {
-          "name": "Public Discount",
-          "RoomNts": 5,
-          "ADR": 175
-        },
-        {
-          "name": "Corporate Discount",
-          "RoomNts": 0,
-          "ADR": 143
-        },
-        {
-          "name": "Partnership Discount",
-          "RoomNts": 1,
-          "ADR": 142
-        },
-        {
-          "name": "Online Advantage",
-          "RoomNts": 1,
-          "ADR": 195
-        },
-        {
-          "name": "Employee Travel",
-          "RoomNts": 3,
-          "ADR": 104
-        },
-        {
-          "name": "Corporate",
-          "RoomNts": 11,
-          "ADR": 150
-        },
-        {
-          "name": "Monthly Contract",
-          "RoomNts": 1,
-          "ADR": 200
-        },
-        {
-          "name": "Long Term Contract",
-          "RoomNts": 2,
-          "ADR": 201
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": 2,
-          "ADR": 189
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": -4,
-          "ADR": 202
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 4,
-          "ADR": 209
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 3,
-          "ADR": 203
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": -2,
-          "ADR": 200
-        }
-      ]
-    },
-    {
-      "month" : "June-21",
-      "segmentData": [
-        {
-          "name": "Bar",
-          "RoomNts": 13,
-          "ADR": 188
-        },
-        {
-          "name": "Public Discount",
-          "RoomNts": 18,
-          "ADR": 147
-        },
-        {
-          "name": "Corporate Discount",
-          "RoomNts": 13,
-          "ADR": 126
-        },
-        {
-          "name": "Partnership Discount",
-          "RoomNts": 4,
-          "ADR": 171
-        },
-        {
-          "name": "Online Advantage",
-          "RoomNts": -1,
-          "ADR": 208
-        },
-        {
-          "name": "Employee Travel",
-          "RoomNts": 2,
-          "ADR": 107
-        },
-        {
-          "name": "Corporate",
-          "RoomNts": 12,
-          "ADR": 165
-        },
-        {
-          "name": "Monthly Contract",
-          "RoomNts": -1,
-          "ADR": 201
-        },
-        {
-          "name": "Long Term Contract",
-          "RoomNts": 0,
-          "ADR": 207
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": 5,
-          "ADR": 197
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 3,
-          "ADR": 188
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": -2,
-          "ADR": 192
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 3,
-          "ADR": 189
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 6,
-          "ADR": 195
-        }
-      ]
-    },
-    {
-      "month" : "July-21",
-      "segmentData": [
-        {
-          "name": "Bar",
-          "RoomNts": 14,
-          "ADR": 193
-        },
-        {
-          "name": "Public Discount",
-          "RoomNts": 1,
-          "ADR": 147
-        },
-        {
-          "name": "Corporate Discount",
-          "RoomNts": 7,
           "ADR": 154
         },
         {
           "name": "Partnership Discount",
-          "RoomNts": 2,
-          "ADR": 142
-        },
-        {
-          "name": "Online Advantage",
-          "RoomNts": -2,
-          "ADR": 205
-        },
-        {
-          "name": "Employee Travel",
-          "RoomNts": -2,
-          "ADR": 108
-        },
-        {
-          "name": "Corporate",
-          "RoomNts": 4,
-          "ADR": 179
-        },
-        {
-          "name": "Monthly Contract",
-          "RoomNts": 2,
-          "ADR": 197
-        },
-        {
-          "name": "Long Term Contract",
-          "RoomNts": 0,
-          "ADR": 206
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": 4,
-          "ADR": 195
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": -1,
-          "ADR": 192
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 0,
-          "ADR": 198
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 3,
-          "ADR": 203
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 9,
-          "ADR": 204
-        }
-      ]
-    },
-    {
-      "month" : "August-21",
-      "segmentData": [
-        {
-          "name": "Bar",
-          "RoomNts": 0,
-          "ADR": 198
-        },
-        {
-          "name": "Public Discount",
-          "RoomNts": 14,
-          "ADR": 158
-        },
-        {
-          "name": "Corporate Discount",
           "RoomNts": 5,
-          "ADR": 126
-        },
-        {
-          "name": "Partnership Discount",
-          "RoomNts": 3,
-          "ADR": 157
+          "ADR": 185
         },
         {
           "name": "Online Advantage",
-          "RoomNts": 4,
-          "ADR": 190
-        },
-        {
-          "name": "Employee Travel",
-          "RoomNts": -2,
-          "ADR": 108
-        },
-        {
-          "name": "Corporate",
-          "RoomNts": 1,
-          "ADR": 182
-        },
-        {
-          "name": "Monthly Contract",
-          "RoomNts": -1,
-          "ADR": 209
-        },
-        {
-          "name": "Long Term Contract",
-          "RoomNts": 1,
-          "ADR": 208
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": -1,
-          "ADR": 191
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": -1,
-          "ADR": 199
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": -4,
-          "ADR": 208
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 3,
-          "ADR": 188
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 1,
-          "ADR": 197
-        }
-      ]
-    },
-    {
-      "month" : "September-21",
-      "segmentData": [
-        {
-          "name": "Bar",
-          "RoomNts": 3,
-          "ADR": 190
-        },
-        {
-          "name": "Public Discount",
-          "RoomNts": -1,
-          "ADR": 167
-        },
-        {
-          "name": "Corporate Discount",
-          "RoomNts": 5,
-          "ADR": 135
-        },
-        {
-          "name": "Partnership Discount",
-          "RoomNts": 1,
-          "ADR": 179
-        },
-        {
-          "name": "Online Advantage",
-          "RoomNts": -1,
-          "ADR": 196
-        },
-        {
-          "name": "Employee Travel",
-          "RoomNts": 3,
-          "ADR": 105
-        },
-        {
-          "name": "Corporate",
-          "RoomNts": 4,
-          "ADR": 151
-        },
-        {
-          "name": "Monthly Contract",
-          "RoomNts": -1,
-          "ADR": 200
-        },
-        {
-          "name": "Long Term Contract",
-          "RoomNts": -2,
-          "ADR": 198
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": 1,
-          "ADR": 196
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 2,
-          "ADR": 196
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 4,
-          "ADR": 205
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 3,
+          "RoomNts": 15,
           "ADR": 201
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 1,
-          "ADR": 194
-        }
-      ]
-    },
-    {
-      "month" : "October-21",
-      "segmentData": [
-        {
-          "name": "Bar",
-          "RoomNts": 0,
-          "ADR": 203
-        },
-        {
-          "name": "Public Discount",
-          "RoomNts": 19,
-          "ADR": 171
-        },
-        {
-          "name": "Corporate Discount",
-          "RoomNts": 19,
-          "ADR": 149
-        },
-        {
-          "name": "Partnership Discount",
-          "RoomNts": 0,
-          "ADR": 142
-        },
-        {
-          "name": "Online Advantage",
-          "RoomNts": -5,
-          "ADR": 192
         },
         {
           "name": "Employee Travel",
@@ -1090,269 +35,1324 @@
         },
         {
           "name": "Corporate",
-          "RoomNts": 11,
-          "ADR": 183
+          "RoomNts": 12,
+          "ADR": 188
         },
         {
           "name": "Monthly Contract",
-          "RoomNts": 1,
-          "ADR": 202
+          "RoomNts": 7,
+          "ADR": 199
         },
         {
           "name": "Long Term Contract",
-          "RoomNts": -2,
-          "ADR": 202
+          "RoomNts": 2,
+          "ADR": 195
         },
         {
           "name": "Wholesale",
           "RoomNts": 6,
-          "ADR": 203
+          "ADR": 198
         },
         {
           "name": "Corporate Group",
-          "RoomNts": -2,
-          "ADR": 208
+          "RoomNts": 4,
+          "ADR": 191
         },
         {
           "name": "Corporate Monthly Group",
-          "RoomNts": 4,
-          "ADR": 209
+          "RoomNts": 2,
+          "ADR": 195
         },
         {
           "name": "Leisure Group",
-          "RoomNts": -2,
-          "ADR": 199
+          "RoomNts": 5,
+          "ADR": 201
         },
         {
           "name": "Airline Crew Group",
+          "RoomNts": 3,
+          "ADR": 194
+        }
+      ]
+    },
+    {
+      "month": "September-20",
+      "businessMixData": [
+        {
+          "name": "Bar",
+          "RoomNts": 25,
+          "ADR": 196
+        },
+        {
+          "name": "Public Discount",
+          "RoomNts": 25,
+          "ADR": 161
+        },
+        {
+          "name": "Corporate Discount",
+          "RoomNts": 11,
+          "ADR": 144
+        },
+        {
+          "name": "Partnership Discount",
+          "RoomNts": 7,
+          "ADR": 184
+        },
+        {
+          "name": "Online Advantage",
+          "RoomNts": 13,
+          "ADR": 203
+        },
+        {
+          "name": "Employee Travel",
+          "RoomNts": 3,
+          "ADR": 103
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 13,
+          "ADR": 162
+        },
+        {
+          "name": "Monthly Contract",
+          "RoomNts": 7,
+          "ADR": 195
+        },
+        {
+          "name": "Long Term Contract",
+          "RoomNts": 2,
+          "ADR": 209
+        },
+        {
+          "name": "Wholesale",
           "RoomNts": 4,
-          "ADR": 206
+          "ADR": 188
+        },
+        {
+          "name": "Corporate Group",
+          "RoomNts": 3,
+          "ADR": 192
+        },
+        {
+          "name": "Corporate Monthly Group",
+          "RoomNts": 2,
+          "ADR": 188
+        },
+        {
+          "name": "Leisure Group",
+          "RoomNts": 4,
+          "ADR": 203
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 2,
+          "ADR": 199
         }
       ]
     },
 
     {
-      "month" : "November-21",
-      "segmentData": [
+      "month": "October-20",
+      "businessMixData": [
         {
           "name": "Bar",
-          "RoomNts": 1,
-          "ADR": 207
+          "RoomNts": 26,
+          "ADR": 190
         },
         {
           "name": "Public Discount",
-          "RoomNts": 3,
-          "ADR": 163
+          "RoomNts": 25,
+          "ADR": 148
         },
         {
           "name": "Corporate Discount",
-          "RoomNts": 19,
-          "ADR": 150
+          "RoomNts": 14,
+          "ADR": 134
         },
         {
           "name": "Partnership Discount",
-          "RoomNts": 4,
-          "ADR": 169
+          "RoomNts": 7,
+          "ADR": 171
         },
         {
           "name": "Online Advantage",
-          "RoomNts": 4,
-          "ADR": 201
-        },
-        {
-          "name": "Employee Travel",
-          "RoomNts": -3,
-          "ADR": 108
-        },
-        {
-          "name": "Corporate",
-          "RoomNts": 6,
-          "ADR": 179
-        },
-        {
-          "name": "Monthly Contract",
-          "RoomNts": 1,
-          "ADR": 206
-        },
-        {
-          "name": "Long Term Contract",
-          "RoomNts": 2,
-          "ADR": 197
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": 4,
-          "ADR": 204
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 6,
-          "ADR": 203
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 2,
-          "ADR": 190
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": -1,
-          "ADR": 190
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": -3,
-          "ADR": 201
-        }
-      ]
-    },
-    {
-      "month" : "December-21",
-      "segmentData": [
-        {
-          "name": "Bar",
-          "RoomNts": 2,
+          "RoomNts": 15,
           "ADR": 209
         },
         {
-          "name": "Public Discount",
-          "RoomNts": 20,
-          "ADR": 161
-        },
-        {
-          "name": "Corporate Discount",
-          "RoomNts": 15,
-          "ADR": 139
-        },
-        {
-          "name": "Partnership Discount",
-          "RoomNts": -4,
-          "ADR": 137
-        },
-        {
-          "name": "Online Advantage",
-          "RoomNts": -5,
-          "ADR": 194
-        },
-        {
           "name": "Employee Travel",
-          "RoomNts": -1,
+          "RoomNts": 4,
           "ADR": 108
         },
         {
           "name": "Corporate",
-          "RoomNts": 9,
-          "ADR": 157
+          "RoomNts": 14,
+          "ADR": 185
         },
         {
           "name": "Monthly Contract",
-          "RoomNts": -2,
-          "ADR": 202
-        },
-        {
-          "name": "Long Term Contract",
-          "RoomNts": -2,
-          "ADR": 194
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": -3,
-          "ADR": 205
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 5,
-          "ADR": 198
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": -1,
-          "ADR": 201
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 1,
+          "RoomNts": 6,
           "ADR": 196
         },
         {
-          "name": "Airline Crew Group",
+          "name": "Long Term Contract",
+          "RoomNts": 2,
+          "ADR": 194
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 5,
+          "ADR": 188
+        },
+        {
+          "name": "Corporate Group",
           "RoomNts": 3,
-          "ADR": 206
+          "ADR": 194
+        },
+        {
+          "name": "Corporate Monthly Group",
+          "RoomNts": 1,
+          "ADR": 204
+        },
+        {
+          "name": "Leisure Group",
+          "RoomNts": 5,
+          "ADR": 190
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 1,
+          "ADR": 188
         }
       ]
     },
+
     {
-      "month" : "January-22",
-      "segmentData": [
+      "month": "November-20",
+      "businessMixData": [
         {
           "name": "Bar",
-          "RoomNts": 9,
-          "ADR": 192
+          "RoomNts": 29,
+          "ADR": 205
         },
         {
           "name": "Public Discount",
-          "RoomNts": 9,
+          "RoomNts": 26,
           "ADR": 157
         },
         {
           "name": "Corporate Discount",
-          "RoomNts": -5,
-          "ADR": 129
+          "RoomNts": 11,
+          "ADR": 135
         },
         {
           "name": "Partnership Discount",
-          "RoomNts": -6,
-          "ADR": 187
+          "RoomNts": 7,
+          "ADR": 142
         },
         {
           "name": "Online Advantage",
-          "RoomNts": -4,
-          "ADR": 189
+          "RoomNts": 12,
+          "ADR": 197
         },
         {
           "name": "Employee Travel",
-          "RoomNts": 0,
-          "ADR": 106
+          "RoomNts": 4,
+          "ADR": 102
         },
         {
           "name": "Corporate",
-          "RoomNts": 2,
-          "ADR": 161
+          "RoomNts": 13,
+          "ADR": 166
         },
         {
           "name": "Monthly Contract",
-          "RoomNts": -1,
-          "ADR": 209
+          "RoomNts": 6,
+          "ADR": 208
         },
         {
           "name": "Long Term Contract",
-          "RoomNts": 1,
+          "RoomNts": 6,
           "ADR": 188
         },
         {
           "name": "Wholesale",
-          "RoomNts": 1,
-          "ADR": 203
+          "RoomNts": 6,
+          "ADR": 189
         },
         {
           "name": "Corporate Group",
-          "RoomNts": -5,
-          "ADR": 200
+          "RoomNts": 4,
+          "ADR": 197
         },
         {
           "name": "Corporate Monthly Group",
-          "RoomNts": 4,
-          "ADR": 195
+          "RoomNts": 3,
+          "ADR": 196
         },
         {
           "name": "Leisure Group",
+          "RoomNts": 6,
+          "ADR": 188
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 2,
+          "ADR": 191
+        }
+      ]
+    },
+
+    {
+      "month": "December-20",
+      "businessMixData": [
+        {
+          "name": "Bar",
+          "RoomNts": 29,
+          "ADR": 208
+        },
+        {
+          "name": "Public Discount",
+          "RoomNts": 26,
+          "ADR": 166
+        },
+        {
+          "name": "Corporate Discount",
+          "RoomNts": 10,
+          "ADR": 139
+        },
+        {
+          "name": "Partnership Discount",
+          "RoomNts": 5,
+          "ADR": 154
+        },
+        {
+          "name": "Online Advantage",
+          "RoomNts": 14,
+          "ADR": 208
+        },
+        {
+          "name": "Employee Travel",
+          "RoomNts": 3,
+          "ADR": 103
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 15,
+          "ADR": 158
+        },
+        {
+          "name": "Monthly Contract",
+          "RoomNts": 5,
+          "ADR": 203
+        },
+        {
+          "name": "Long Term Contract",
+          "RoomNts": 3,
+          "ADR": 208
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 6,
+          "ADR": 205
+        },
+        {
+          "name": "Corporate Group",
+          "RoomNts": 4,
+          "ADR": 201
+        },
+        {
+          "name": "Corporate Monthly Group",
+          "RoomNts": 3,
+          "ADR": 199
+        },
+        {
+          "name": "Leisure Group",
+          "RoomNts": 5,
+          "ADR": 191
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 2,
+          "ADR": 207
+        }
+      ]
+    },
+    {
+      "month": "January-21",
+      "businessMixData": [
+        {
+          "name": "Bar",
+          "RoomNts": 26,
+          "ADR": 198
+        },
+        {
+          "name": "Public Discount",
+          "RoomNts": 25,
+          "ADR": 182
+        },
+        {
+          "name": "Corporate Discount",
+          "RoomNts": 11,
+          "ADR": 137
+        },
+        {
+          "name": "Partnership Discount",
+          "RoomNts": 5,
+          "ADR": 170
+        },
+        {
+          "name": "Online Advantage",
+          "RoomNts": 14,
+          "ADR": 192
+        },
+        {
+          "name": "Employee Travel",
+          "RoomNts": 3,
+          "ADR": 107
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 15,
+          "ADR": 168
+        },
+        {
+          "name": "Monthly Contract",
+          "RoomNts": 7,
+          "ADR": 209
+        },
+        {
+          "name": "Long Term Contract",
+          "RoomNts": 3,
+          "ADR": 192
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 6,
+          "ADR": 193
+        },
+        {
+          "name": "Corporate Group",
+          "RoomNts": 3,
+          "ADR": 203
+        },
+        {
+          "name": "Corporate Monthly Group",
+          "RoomNts": 1,
+          "ADR": 190
+        },
+        {
+          "name": "Leisure Group",
+          "RoomNts": 6,
+          "ADR": 204
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 1,
+          "ADR": 199
+        }
+      ]
+    },
+
+    {
+      "month": "February-21",
+      "businessMixData": [
+        {
+          "name": "Bar",
+          "RoomNts": 28,
+          "ADR": 203
+        },
+        {
+          "name": "Public Discount",
+          "RoomNts": 25,
+          "ADR": 149
+        },
+        {
+          "name": "Corporate Discount",
+          "RoomNts": 13,
+          "ADR": 126
+        },
+        {
+          "name": "Partnership Discount",
+          "RoomNts": 8,
+          "ADR": 147
+        },
+        {
+          "name": "Online Advantage",
+          "RoomNts": 14,
+          "ADR": 206
+        },
+        {
+          "name": "Employee Travel",
+          "RoomNts": 4,
+          "ADR": 108
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 15,
+          "ADR": 170
+        },
+        {
+          "name": "Monthly Contract",
+          "RoomNts": 5,
+          "ADR": 201
+        },
+        {
+          "name": "Long Term Contract",
+          "RoomNts": 5,
+          "ADR": 201
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 4,
+          "ADR": 190
+        },
+        {
+          "name": "Corporate Group",
+          "RoomNts": 5,
+          "ADR": 192
+        },
+        {
+          "name": "Corporate Monthly Group",
+          "RoomNts": 1,
+          "ADR": 202
+        },
+        {
+          "name": "Leisure Group",
+          "RoomNts": 5,
+          "ADR": 205
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 2,
+          "ADR": 206
+        }
+      ]
+    },
+    {
+      "month": "March-21",
+      "businessMixData": [
+        {
+          "name": "Bar",
+          "RoomNts": 25,
+          "ADR": 190
+        },
+        {
+          "name": "Public Discount",
+          "RoomNts": 25,
+          "ADR": 171
+        },
+        {
+          "name": "Corporate Discount",
+          "RoomNts": 10,
+          "ADR": 126
+        },
+        {
+          "name": "Partnership Discount",
+          "RoomNts": 7,
+          "ADR": 187
+        },
+        {
+          "name": "Online Advantage",
+          "RoomNts": 13,
+          "ADR": 202
+        },
+        {
+          "name": "Employee Travel",
+          "RoomNts": 4,
+          "ADR": 103
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 16,
+          "ADR": 178
+        },
+        {
+          "name": "Monthly Contract",
+          "RoomNts": 7,
+          "ADR": 193
+        },
+        {
+          "name": "Long Term Contract",
+          "RoomNts": 6,
+          "ADR": 205
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 6,
+          "ADR": 189
+        },
+        {
+          "name": "Corporate Group",
+          "RoomNts": 4,
+          "ADR": 207
+        },
+        {
+          "name": "Corporate Monthly Group",
+          "RoomNts": 2,
+          "ADR": 201
+        },
+        {
+          "name": "Leisure Group",
+          "RoomNts": 5,
+          "ADR": 205
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 1,
+          "ADR": 207
+        }
+      ]
+    },
+    {
+      "month": "April-21",
+      "businessMixData": [
+        {
+          "name": "Bar",
+          "RoomNts": 25,
+          "ADR": 193
+        },
+        {
+          "name": "Public Discount",
+          "RoomNts": 25,
+          "ADR": 156
+        },
+        {
+          "name": "Corporate Discount",
+          "RoomNts": 13,
+          "ADR": 131
+        },
+        {
+          "name": "Partnership Discount",
+          "RoomNts": 6,
+          "ADR": 180
+        },
+        {
+          "name": "Online Advantage",
+          "RoomNts": 13,
+          "ADR": 189
+        },
+        {
+          "name": "Employee Travel",
+          "RoomNts": 3,
+          "ADR": 104
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 16,
+          "ADR": 160
+        },
+        {
+          "name": "Monthly Contract",
+          "RoomNts": 5,
+          "ADR": 196
+        },
+        {
+          "name": "Long Term Contract",
+          "RoomNts": 5,
+          "ADR": 195
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 4,
+          "ADR": 189
+        },
+        {
+          "name": "Corporate Group",
+          "RoomNts": 5,
+          "ADR": 193
+        },
+        {
+          "name": "Corporate Monthly Group",
+          "RoomNts": 2,
+          "ADR": 193
+        },
+        {
+          "name": "Leisure Group",
+          "RoomNts": 5,
+          "ADR": 189
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 3,
+          "ADR": 200
+        }
+      ]
+    },
+
+    {
+      "month": "May-21",
+      "businessMixData": [
+        {
+          "name": "Bar",
+          "RoomNts": 29,
+          "ADR": 196
+        },
+        {
+          "name": "Public Discount",
+          "RoomNts": 25,
+          "ADR": 144
+        },
+        {
+          "name": "Corporate Discount",
+          "RoomNts": 10,
+          "ADR": 133
+        },
+        {
+          "name": "Partnership Discount",
+          "RoomNts": 7,
+          "ADR": 185
+        },
+        {
+          "name": "Online Advantage",
+          "RoomNts": 15,
+          "ADR": 198
+        },
+        {
+          "name": "Employee Travel",
+          "RoomNts": 3,
+          "ADR": 107
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 14,
+          "ADR": 157
+        },
+        {
+          "name": "Monthly Contract",
+          "RoomNts": 5,
+          "ADR": 197
+        },
+        {
+          "name": "Long Term Contract",
+          "RoomNts": 6,
+          "ADR": 191
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 4,
+          "ADR": 190
+        },
+        {
+          "name": "Corporate Group",
+          "RoomNts": 5,
+          "ADR": 209
+        },
+        {
+          "name": "Corporate Monthly Group",
           "RoomNts": 3,
           "ADR": 207
         },
         {
+          "name": "Leisure Group",
+          "RoomNts": 6,
+          "ADR": 195
+        },
+        {
           "name": "Airline Crew Group",
-          "RoomNts": 0,
+          "RoomNts": 1,
+          "ADR": 190
+        }
+      ]
+    },
+    {
+      "month": "June-21",
+      "businessMixData": [
+        {
+          "name": "Bar",
+          "RoomNts": 25,
+          "ADR": 199
+        },
+        {
+          "name": "Public Discount",
+          "RoomNts": 25,
+          "ADR": 160
+        },
+        {
+          "name": "Corporate Discount",
+          "RoomNts": 12,
+          "ADR": 144
+        },
+        {
+          "name": "Partnership Discount",
+          "RoomNts": 8,
+          "ADR": 161
+        },
+        {
+          "name": "Online Advantage",
+          "RoomNts": 13,
+          "ADR": 200
+        },
+        {
+          "name": "Employee Travel",
+          "RoomNts": 3,
+          "ADR": 100
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 12,
+          "ADR": 185
+        },
+        {
+          "name": "Monthly Contract",
+          "RoomNts": 7,
+          "ADR": 209
+        },
+        {
+          "name": "Long Term Contract",
+          "RoomNts": 4,
           "ADR": 206
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 5,
+          "ADR": 194
+        },
+        {
+          "name": "Corporate Group",
+          "RoomNts": 3,
+          "ADR": 188
+        },
+        {
+          "name": "Corporate Monthly Group",
+          "RoomNts": 1,
+          "ADR": 188
+        },
+        {
+          "name": "Leisure Group",
+          "RoomNts": 5,
+          "ADR": 190
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 2,
+          "ADR": 207
+        }
+      ]
+    },
+    {
+      "month": "July-21",
+      "businessMixData": [
+        {
+          "name": "Bar",
+          "RoomNts": 28,
+          "ADR": 195
+        },
+        {
+          "name": "Public Discount",
+          "RoomNts": 26,
+          "ADR": 160
+        },
+        {
+          "name": "Corporate Discount",
+          "RoomNts": 12,
+          "ADR": 146
+        },
+        {
+          "name": "Partnership Discount",
+          "RoomNts": 7,
+          "ADR": 163
+        },
+        {
+          "name": "Online Advantage",
+          "RoomNts": 14,
+          "ADR": 193
+        },
+        {
+          "name": "Employee Travel",
+          "RoomNts": 4,
+          "ADR": 102
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 15,
+          "ADR": 163
+        },
+        {
+          "name": "Monthly Contract",
+          "RoomNts": 6,
+          "ADR": 190
+        },
+        {
+          "name": "Long Term Contract",
+          "RoomNts": 4,
+          "ADR": 208
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 6,
+          "ADR": 189
+        },
+        {
+          "name": "Corporate Group",
+          "RoomNts": 5,
+          "ADR": 190
+        },
+        {
+          "name": "Corporate Monthly Group",
+          "RoomNts": 3,
+          "ADR": 192
+        },
+        {
+          "name": "Leisure Group",
+          "RoomNts": 5,
+          "ADR": 204
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 2,
+          "ADR": 199
+        }
+      ]
+    },
+    {
+      "month": "August-21",
+      "businessMixData": [
+        {
+          "name": "Bar",
+          "RoomNts": 27,
+          "ADR": 193
+        },
+        {
+          "name": "Public Discount",
+          "RoomNts": 25,
+          "ADR": 163
+        },
+        {
+          "name": "Corporate Discount",
+          "RoomNts": 10,
+          "ADR": 140
+        },
+        {
+          "name": "Partnership Discount",
+          "RoomNts": 7,
+          "ADR": 143
+        },
+        {
+          "name": "Online Advantage",
+          "RoomNts": 13,
+          "ADR": 203
+        },
+        {
+          "name": "Employee Travel",
+          "RoomNts": 3,
+          "ADR": 103
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 12,
+          "ADR": 151
+        },
+        {
+          "name": "Monthly Contract",
+          "RoomNts": 5,
+          "ADR": 199
+        },
+        {
+          "name": "Long Term Contract",
+          "RoomNts": 5,
+          "ADR": 207
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 4,
+          "ADR": 197
+        },
+        {
+          "name": "Corporate Group",
+          "RoomNts": 3,
+          "ADR": 188
+        },
+        {
+          "name": "Corporate Monthly Group",
+          "RoomNts": 1,
+          "ADR": 197
+        },
+        {
+          "name": "Leisure Group",
+          "RoomNts": 5,
+          "ADR": 199
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 1,
+          "ADR": 192
+        }
+      ]
+    },
+    {
+      "month": "September-21",
+      "businessMixData": [
+        {
+          "name": "Bar",
+          "RoomNts": 30,
+          "ADR": 196
+        },
+        {
+          "name": "Public Discount",
+          "RoomNts": 26,
+          "ADR": 174
+        },
+        {
+          "name": "Corporate Discount",
+          "RoomNts": 10,
+          "ADR": 154
+        },
+        {
+          "name": "Partnership Discount",
+          "RoomNts": 6,
+          "ADR": 178
+        },
+        {
+          "name": "Online Advantage",
+          "RoomNts": 15,
+          "ADR": 191
+        },
+        {
+          "name": "Employee Travel",
+          "RoomNts": 4,
+          "ADR": 100
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 13,
+          "ADR": 171
+        },
+        {
+          "name": "Monthly Contract",
+          "RoomNts": 7,
+          "ADR": 207
+        },
+        {
+          "name": "Long Term Contract",
+          "RoomNts": 2,
+          "ADR": 206
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 4,
+          "ADR": 188
+        },
+        {
+          "name": "Corporate Group",
+          "RoomNts": 5,
+          "ADR": 202
+        },
+        {
+          "name": "Corporate Monthly Group",
+          "RoomNts": 3,
+          "ADR": 203
+        },
+        {
+          "name": "Leisure Group",
+          "RoomNts": 5,
+          "ADR": 200
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 2,
+          "ADR": 204
+        }
+      ]
+    },
+    {
+      "month": "October-21",
+      "businessMixData": [
+        {
+          "name": "Bar",
+          "RoomNts": 29,
+          "ADR": 207
+        },
+        {
+          "name": "Public Discount",
+          "RoomNts": 25,
+          "ADR": 148
+        },
+        {
+          "name": "Corporate Discount",
+          "RoomNts": 12,
+          "ADR": 142
+        },
+        {
+          "name": "Partnership Discount",
+          "RoomNts": 5,
+          "ADR": 183
+        },
+        {
+          "name": "Online Advantage",
+          "RoomNts": 14,
+          "ADR": 204
+        },
+        {
+          "name": "Employee Travel",
+          "RoomNts": 4,
+          "ADR": 107
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 14,
+          "ADR": 177
+        },
+        {
+          "name": "Monthly Contract",
+          "RoomNts": 5,
+          "ADR": 199
+        },
+        {
+          "name": "Long Term Contract",
+          "RoomNts": 6,
+          "ADR": 192
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 6,
+          "ADR": 193
+        },
+        {
+          "name": "Corporate Group",
+          "RoomNts": 5,
+          "ADR": 209
+        },
+        {
+          "name": "Corporate Monthly Group",
+          "RoomNts": 3,
+          "ADR": 209
+        },
+        {
+          "name": "Leisure Group",
+          "RoomNts": 4,
+          "ADR": 198
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 1,
+          "ADR": 201
+        }
+      ]
+    },
+
+    {
+      "month": "November-21",
+      "businessMixData": [
+        {
+          "name": "Bar",
+          "RoomNts": 29,
+          "ADR": 208
+        },
+        {
+          "name": "Public Discount",
+          "RoomNts": 26,
+          "ADR": 177
+        },
+        {
+          "name": "Corporate Discount",
+          "RoomNts": 11,
+          "ADR": 152
+        },
+        {
+          "name": "Partnership Discount",
+          "RoomNts": 7,
+          "ADR": 157
+        },
+        {
+          "name": "Online Advantage",
+          "RoomNts": 13,
+          "ADR": 204
+        },
+        {
+          "name": "Employee Travel",
+          "RoomNts": 3,
+          "ADR": 101
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 12,
+          "ADR": 172
+        },
+        {
+          "name": "Monthly Contract",
+          "RoomNts": 5,
+          "ADR": 200
+        },
+        {
+          "name": "Long Term Contract",
+          "RoomNts": 2,
+          "ADR": 205
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 5,
+          "ADR": 189
+        },
+        {
+          "name": "Corporate Group",
+          "RoomNts": 5,
+          "ADR": 207
+        },
+        {
+          "name": "Corporate Monthly Group",
+          "RoomNts": 1,
+          "ADR": 209
+        },
+        {
+          "name": "Leisure Group",
+          "RoomNts": 4,
+          "ADR": 199
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 1,
+          "ADR": 198
+        }
+      ]
+    },
+    {
+      "month": "December-21",
+      "businessMixData": [
+        {
+          "name": "Bar",
+          "RoomNts": 27,
+          "ADR": 189
+        },
+        {
+          "name": "Public Discount",
+          "RoomNts": 25,
+          "ADR": 159
+        },
+        {
+          "name": "Corporate Discount",
+          "RoomNts": 14,
+          "ADR": 141
+        },
+        {
+          "name": "Partnership Discount",
+          "RoomNts": 5,
+          "ADR": 156
+        },
+        {
+          "name": "Online Advantage",
+          "RoomNts": 12,
+          "ADR": 205
+        },
+        {
+          "name": "Employee Travel",
+          "RoomNts": 4,
+          "ADR": 104
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 12,
+          "ADR": 163
+        },
+        {
+          "name": "Monthly Contract",
+          "RoomNts": 5,
+          "ADR": 201
+        },
+        {
+          "name": "Long Term Contract",
+          "RoomNts": 4,
+          "ADR": 204
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 6,
+          "ADR": 190
+        },
+        {
+          "name": "Corporate Group",
+          "RoomNts": 4,
+          "ADR": 199
+        },
+        {
+          "name": "Corporate Monthly Group",
+          "RoomNts": 1,
+          "ADR": 206
+        },
+        {
+          "name": "Leisure Group",
+          "RoomNts": 4,
+          "ADR": 205
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 1,
+          "ADR": 201
+        }
+      ]
+    },
+    {
+      "month": "January-22",
+      "businessMixData": [
+        {
+          "name": "Bar",
+          "RoomNts": 30,
+          "ADR": 208
+        },
+        {
+          "name": "Public Discount",
+          "RoomNts": 25,
+          "ADR": 167
+        },
+        {
+          "name": "Corporate Discount",
+          "RoomNts": 11,
+          "ADR": 139
+        },
+        {
+          "name": "Partnership Discount",
+          "RoomNts": 5,
+          "ADR": 187
+        },
+        {
+          "name": "Online Advantage",
+          "RoomNts": 14,
+          "ADR": 188
+        },
+        {
+          "name": "Employee Travel",
+          "RoomNts": 4,
+          "ADR": 102
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 12,
+          "ADR": 145
+        },
+        {
+          "name": "Monthly Contract",
+          "RoomNts": 5,
+          "ADR": 194
+        },
+        {
+          "name": "Long Term Contract",
+          "RoomNts": 6,
+          "ADR": 188
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 5,
+          "ADR": 205
+        },
+        {
+          "name": "Corporate Group",
+          "RoomNts": 3,
+          "ADR": 189
+        },
+        {
+          "name": "Corporate Monthly Group",
+          "RoomNts": 2,
+          "ADR": 197
+        },
+        {
+          "name": "Leisure Group",
+          "RoomNts": 4,
+          "ADR": 197
+        },
+        {
+          "name": "Airline Crew Group",
+          "RoomNts": 1,
+          "ADR": 195
         }
       ]
     }

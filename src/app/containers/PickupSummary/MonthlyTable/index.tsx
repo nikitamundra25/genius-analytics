@@ -4,6 +4,7 @@ import { ApiHelper } from "../../../../helper";
 import { IBookingChannelModel } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import moment from "moment";
 
 const MonthlyTable = (props: any) => {
   const [state, setState] = useState<IBookingChannelModel>({
@@ -25,9 +26,12 @@ const MonthlyTable = (props: any) => {
       });
       return;
     }
+    let filterData:any =  data.data.filter((list:any) => {
+      return list.month === moment(props.date).format("MMMM-YY");
+    })[0];
     setState({
       isLoading: false,
-      data: data.data,
+      data: filterData && filterData.summaryTableData && filterData.summaryTableData.length ? filterData.summaryTableData : [],
       isError: false,
     });
   };

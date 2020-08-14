@@ -36,6 +36,11 @@ const MonthlyBOB = (props: any) => {
     // eslint-disable-next-line
   }, [data, months]);
 
+
+
+
+
+
   return (
     <>
       <Card>
@@ -109,6 +114,7 @@ const MonthlyBOB = (props: any) => {
                                         {key.title}{" "}
                                       </td>
                                       {key.data.map((data: any, i: number) => {
+                                       
                                         return i > months.length - 1 ? null : (
                                           <td
                                             className={`content-col  
@@ -128,9 +134,10 @@ const MonthlyBOB = (props: any) => {
                                                 : key.title === "OCC" &&
                                                   parseInt(data.num) < 100
                                                 ? "bg-max"
-                                                : parseInt(data.date) === 0 ||
-                                                  parseInt(data.date) === 5 ||
-                                                  parseInt(data.date) === 6
+                                                : 
+                                                parseInt(data.date) === 5 ||
+                                                  parseInt(data.date) === 6 ||
+                                                  parseInt(data.date) === 0
                                                 ? "weekend-bg"
                                                 : "bg-2"
                                             } `}
