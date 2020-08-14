@@ -190,7 +190,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
               <thead>
                 <tr className="business-top-row">
                   <th></th>
-                  <th></th>
+                  
                   {months.map((month: string, index: number) => (
                     <th key={month} className="head-col min-wauto pb-1">
                       {month}
@@ -223,14 +223,26 @@ const CumulativeTable = ({ selectedDate }: any) => {
                 //   return final;
                 // });
                return ( list.subData.map((subdata : any, ind:number)=>{      
-               return <tr key={ind} >
+               return (
+               <>
+               <tr key={ind} >
                  {ind === 0 ? (
+                      <td
+                        colSpan={14}
+                        className="row-title bg-1 "
+                      >
+                        {list.title}
+                      </td>
+                    ) : null}
+                 {/* {ind === 0 ? (
                 <td className="row-title" rowSpan={list.subData.length}>
                   {list.title}
                 </td>
-                   ) : null}
-                  <>
-                  <td className="row-title sub-bg"> {subdata.name} </td>
+                   ) : null} */}
+                </tr>
+                <tr>
+                  
+                  <td className="row-title "> {subdata.name} </td>
                  { subdata.value.map((value: any, i: number) => (
                       list.type === "label" ?
                     <td key={`${i}`}  className={`content-col  
@@ -248,13 +260,15 @@ const CumulativeTable = ({ selectedDate }: any) => {
                     <ProgressBar
                       now={value}
                       className="custom-bar"
-                      label={`${value}%`}
+                      //label={`${value}%`}
                       max ={80}
                     />
+                    <span className="progressbar-value">{value}%</span>
                   </td>
                   ))}
-                  </>
+                 
               </tr>
+              </>)
               }))
               })
             : null
