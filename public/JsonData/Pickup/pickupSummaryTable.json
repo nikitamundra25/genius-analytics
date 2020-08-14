@@ -1,59 +1,1090 @@
+
 {
-    "data": [
+  "data": [
+    {
+      "month": "August-20",
+      "summaryTableData": [
         {
           "title": "Room Nts",
-          "pickupValue": 174,
-          "bob": 3454,
-          "budget": 43543,
-          "ly": 54345,
-          "stly": 43543,
-          "vsBud": 15,
-          "vsLy": -25,
-          "vsStly": 55
+          "pickupValue": 91,
+          "bob": 6875,
+          "budget": 9259,
+          "ly": 10043,
+          "stly": 6467,
+          "vsBud": -2384,
+          "vsLy": -3168,
+          "vsStly": 408
         },
         {
           "title": "OCC",
           "pickupValue": "",
-          "bob": 3454,
-          "budget": 43543,
-          "ly": 54345,
-          "stly": 43543,
-          "vsBud": 15,
-          "vsLy": -25,
-          "vsStly": 55
-        },
-        {
-          "title": "Revenue",
-          "pickupValue": 39359,
-          "bob": 3454,
-          "budget": 43543,
-          "ly": 54345,
-          "stly": 43543,
-          "vsBud": 15,
-          "vsLy": -25,
-          "vsStly": 55
+          "bob": 	"56%",
+          "budget":" 75%",
+          "ly": "81%",
+          "stly":" 52%",
+          "vsBud": "-19%",
+          "vsLy": "-26%",
+          "vsStly": "3"
         },
         {
           "title": "ARR",
-          "pickupValue": 1.4,
-          "bob": 3454,
-          "budget": 43543,
-          "ly": 54345,
-          "stly": 43543,
-          "vsBud": 15,
-          "vsLy": -25,
-          "vsStly": 55
+          "pickupValue": 8.00,
+          "bob": 197.0,
+          "budget": 200.0,
+          "ly": 191.0,
+          "stly": 191.0,
+          "vsBud": -3.0,
+          "vsLy": 6.0,
+          "vsStly": 6.0
         },
         {
           "title": "Revenue",
+          "pickupValue": 14470,
+          "bob": 19332,
+          "budget": 13008,
+          "ly": 20184,
+          "stly": 14804,
+          "vsBud": 6324,
+          "vsLy": -852,
+          "vsStly": 4528
+        },
+        {
+          "title": "RevPAR",
           "pickupValue": "",
-          "bob": 3454,
-          "budget": 43543,
-          "ly": 54345,
-          "stly": 43543,
-          "vsBud": 15,
-          "vsLy": -25,
-          "vsStly": 55
+          "bob": 109.5,
+          "budget": 149.7,
+          "ly": 155.1,
+          "stly": 99.9,
+          "vsBud": -40.2,
+          "vsLy": -45.6,
+          "vsStly": 9.6
         }
       ]
+    },
+    {
+      "month": "September-20",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 80,
+          "bob": 11199,
+          "budget": 10677,
+          "ly": 9575,
+          "stly": 8346,
+          "vsBud": -3802,
+          "vsLy": -2700,
+          "vsStly": -1471
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "91%",
+          "budget":" 86%",
+          "ly":" 77%",
+          "stly":" 67%",
+          "vsBud": "-31%",
+          "vsLy": "-22%",
+          "vsStly": "12%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 6.00,
+          "bob": 191.0,
+          "budget": 192.0,
+          "ly": 196.0,
+          "stly": 198.0,
+          "vsBud": 5.0,
+          "vsLy": 1.0,
+          "vsStly": -1.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 22015,
+          "bob": 15578,
+          "budget": 13871,
+          "ly": 19559,
+          "stly": 13825,
+          "vsBud": 5461,
+          "vsLy": -227,
+          "vsStly": 5507
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	172.9,
+          "budget": 165.7,
+          "ly": 151.7,
+          "stly": 133.6,
+          "vsBud": -56.2,
+          "vsLy": -42.2,
+          "vsStly": -24.1
+        }
+      ]
+    },
+    {
+      "month": "October-20",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 29,
+          "bob": 5962,
+          "budget": 9303,
+          "ly": 9409,
+          "stly": 8063,
+          "vsBud": -2428,
+          "vsLy": -2534,
+          "vsStly": -1188
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "48%",
+          "budget":" 75%",
+          "ly":" 76%",
+          "stly":" 65%",
+          "vsBud": "-20%",
+          "vsLy": "-20%",
+          "vsStly": "-10%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 4.00,
+          "bob": 197.0,
+          "budget": 202.0,
+          "ly": 196.0,
+          "stly": 202.0,
+          "vsBud": -5.0,
+          "vsLy": 1.0,
+          "vsStly": -5.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 18565,
+          "bob": 15144,
+          "budget": 18701,
+          "ly": 15595,
+          "stly": 14086,
+          "vsBud": 631,
+          "vsLy": 3737,
+          "vsStly": 5246
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	95.0,
+          "budget": 151.9	
+          ,
+          "ly": 149.1	,
+          "stly": 131.7	,
+          "vsBud": -42.4	,
+          "vsLy": -39.6,
+          "vsStly": 	-22.2
+        }
+      ]
+    },
+    {
+      "month": "November-20",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 57	,
+          "bob": 6964,
+          "budget": 11245,
+          "ly": 8721,
+          "stly": 10052,
+          "vsBud": -4370,
+          "vsLy": -1846,
+          "vsStly": -3177
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "56%",
+          "budget":" 91%",
+          "ly":" 71%",
+          "stly":" 81%",
+          "vsBud": "-35%",
+          "vsLy": "-15%",
+          "vsStly": "-26%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 6.00,
+          "bob": 192.0,
+          "budget": 199.0,
+          "ly": 190.0,
+          "stly": 192.0,
+          "vsBud": -2.0,
+          "vsLy": 7.0,
+          "vsStly": 5.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 12872,
+          "bob": 21392,
+          "budget": 13824,
+          "ly": 22882,
+          "stly": 12523,
+          "vsBud": 5508,
+          "vsLy": -3550,
+          "vsStly": 6809
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	108.1	,
+          "budget": 180.9,
+          "ly": 134.0,
+          "stly": 156.0,
+          "vsBud": -71.4,
+          "vsLy": -24.5,
+          "vsStly": 	-46.5
+        }
+      ]
+    },
+    {
+      "month": "December-20",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 61,
+          "bob": 9519,
+          "budget": 10167,
+          "ly": 10059,
+          "stly": 10866,
+          "vsBud": -3292,
+          "vsLy": -3184,
+          "vsStly": -3991
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "77%",
+          "budget":" 82%",
+          "ly":" 81%",
+          "stly":" 88%",
+          "vsBud": "-27%",
+          "vsLy": "-26%",
+          "vsStly": "-32%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 7.00,
+          "bob": 199.0,
+          "budget": 205.0,
+          "ly": 194.0,
+          "stly": 203.0,
+          "vsBud": -8.0,
+          "vsLy": 3.0,
+          "vsStly": -6.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 19079,
+          "bob": 10499,
+          "budget": 12125,
+          "ly": 20694,
+          "stly": 20620,
+          "vsBud": 7207,
+          "vsLy": -1362,
+          "vsStly": 1288
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	153.1,
+          "budget": 168.5,
+          "ly": 157.8,
+          "stly": 178.3,
+          "vsBud": -59.0,
+          "vsLy": -48.3,
+          "vsStly": -68.8
+        }
+      ]
+    },
+    {
+      "month": "January-21",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 80,
+          "bob": 10063,
+          "budget": 9726,
+          "ly": 9691,
+          "stly": 7871,
+          "vsBud": -2851,
+          "vsLy": -2816,
+          "vsStly": -996
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "81%",
+          "budget":" 79%",
+          "ly":" 78%",
+          "stly":" 64%",
+          "vsBud": "-23%",
+          "vsLy": "-23%",
+          "vsStly": "-8%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 8.00,
+          "bob": 203.0,
+          "budget": 190.0,
+          "ly": 202.0,
+          "stly": 204.0,
+          "vsBud": 7.0,
+          "vsLy": -5.0,
+          "vsStly": -7.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 15175,
+          "bob": 15241,
+          "budget": 10898,
+          "ly": 12943,
+          "stly": 10337,
+          "vsBud": 8434,
+          "vsLy": 6389,
+          "vsStly": 8995
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	165.2,
+          "budget": 149.4,
+          "ly": 158.3,
+          "stly": 129.8,
+          "vsBud": -39.9,
+          "vsLy": -48.8,
+          "vsStly": -20.3
+        }
+      ]
+    },
+
+    {
+      "month": "February-21",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 85,
+          "bob": 11299,
+          "budget": 10866,
+          "ly": 10050,
+          "stly": 6790,
+          "vsBud": -3991,
+          "vsLy": -3175,
+          "vsStly": 85
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "91%",
+          "budget":" 88%",
+          "ly":" 81%",
+          "stly":" 55%",
+          "vsBud": "-32%",
+          "vsLy": "-26%",
+          "vsStly": "1%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 6.00,
+          "bob": 204.0,
+          "budget": 199.0,
+          "ly": 197.0,
+          "stly": 194.0,
+          "vsBud": -2.0,
+          "vsLy": 0.0,
+          "vsStly": 3.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 21314,
+          "bob": 14086,
+          "budget": 22372,
+          "ly": 18274,
+          "stly": 12764,
+          "vsBud": -3040,
+          "vsLy": 1058,
+          "vsStly": 6568
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	186.4	,
+          "budget": 174.8,
+          "ly": 160.1,
+          "stly": 106.5,
+          "vsBud": -65.3,
+          "vsLy": -50.6,
+          "vsStly": 3.0
+        }
+      ]
+    },
+    {
+      "month": "March-21",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 30	  	  	  	  	 		
+          ,
+          "bob": 10130,
+          "budget": 9933,
+          "ly": 9152,
+          "stly": 8751,
+          "vsBud": -3058,
+          "vsLy": -2277,
+          "vsStly":-1876
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "82%",
+          "budget":" 80%",
+          "ly":" 74%",
+          "stly":" 71%",
+          "vsBud": "-25%",
+          "vsLy": "-18%",
+          "vsStly": "-15%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 7.00,
+          "bob": 190.0,
+          "budget": 204.0,
+          "ly": 190.0,
+          "stly": 201.0,
+          "vsBud": -7.0,
+          "vsLy": 7.0,
+          "vsStly": -4.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 21785,
+          "bob": 22083,
+          "budget": 19946,
+          "ly": 11519,
+          "stly": 16604,
+          "vsBud": -614,
+          "vsLy": 7813,
+          "vsStly": 2728
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	155.6,
+          "budget": 163.8,
+          "ly": 140.6,
+          "stly": 142.2,
+          "vsBud": -54.3,
+          "vsLy": -31.1,
+          "vsStly": -32.7
+        }
+      ]
+    },
+    {
+      "month": "April-21",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 79,
+          "bob": 10770,
+          "budget": 9764,
+          "ly": 9203,
+          "stly": 9213,
+          "vsBud": -2889,
+          "vsLy": -2328,
+          "vsStly": -2338
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "87%",
+          "budget":" 79%",
+          "ly":" 74%",
+          "stly":" 74%",
+          "vsBud": "-23%",
+          "vsLy": "-19%",
+          "vsStly": "-19%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 4.00,
+          "bob": 205.0,
+          "budget": 197.0,
+          "ly": 192.0,
+          "stly": 192.0,
+          "vsBud": 0.0,
+          "vsLy": 5.0,
+          "vsStly": 5.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 17536	  	  	  	  	  	  	  
+          ,
+          "bob": 21555,
+          "budget": 12250,
+          "ly": 15735,
+          "stly": 18961,
+          "vsBud": 7082,
+          "vsLy": 3597,
+          "vsStly": 371
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	178.5,
+          "budget": 155.5,
+          "ly": 142.9,
+          "stly": 143.0,
+          "vsBud": -46.0,
+          "vsLy": -33.4,
+          "vsStly": -33.5
+        }
+      ]
+    },
+    {
+      "month": "May-21",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 60,
+          "bob": 7016,
+          "budget": 10770,
+          "ly": 10859,
+          "stly": 9148,
+          "vsBud": -3895,
+          "vsLy": -3984,
+          "vsStly": -2273
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "57%",
+          "budget":" 87%",
+          "ly":" 88%",
+          "stly":" 74%",
+          "vsBud": "-31%",
+          "vsLy": "-32%",
+          "vsStly": "-18%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 4.00,
+          "bob": 202.0,
+          "budget": 191.0,
+          "ly": 197.0,
+          "stly": 190.0,
+          "vsBud": 6.0,
+          "vsLy": 0.0,
+          "vsStly": 7.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 22031,
+          "bob": 18656,
+          "budget": 15805,
+          "ly": 13744,
+          "stly": 14968,
+          "vsBud": 3527,
+          "vsLy": 5588,
+          "vsStly": 4364
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	114.6	,
+          "budget": 166.3,
+          "ly": 173.0,
+          "stly": 140.5,
+          "vsBud": -56.8,
+          "vsLy": -63.5,
+          "vsStly": -31.0
+        }
+      ]
+    },
+    {
+      "month": "June-21",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 43	 ,
+          "bob": 10060,
+          "budget": 10541,
+          "ly": 10402,
+          "stly": 9136,
+          "vsBud": -3666,
+          "vsLy": -3527,
+          "vsStly": -2261
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "81%",
+          "budget":" 85%",
+          "ly":" 84%",
+          "stly":" 74%",
+          "vsBud": "-30%",
+          "vsLy": "-29%",
+          "vsStly": "-18%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 5.00,
+          "bob": 197.0,
+          "budget": 192.0,
+          "ly": 205.0,
+          "stly": 202.0,
+          "vsBud": 5.0,
+          "vsLy": -8.0,
+          "vsStly": -5.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 13963	  	  	  	  	  	  	  
+          ,
+          "bob": 19858,
+          "budget": 16729,
+          "ly": 11117,
+          "stly": 18718,
+          "vsBud": 2603,
+          "vsLy": 8215,
+          "vsStly": 614
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	160.2,
+          "budget": 163.6,
+          "ly": 172.4,
+          "stly": 149.2,
+          "vsBud": -54.1,
+          "vsLy": -62.9,
+          "vsStly": -39.7
+        }
+      ]
+    },
+    {
+      "month": "July-21",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 81,
+          "bob": 7974,
+          "budget": 10710,
+          "ly": 9318,
+          "stly": 9995,
+          "vsBud": -3835,
+          "vsLy": -2443,
+          "vsStly": -3120
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "64%",
+          "budget":" 87%",
+          "ly":" 75%",
+          "stly":" 81%",
+          "vsBud": "-31%",
+          "vsLy": "-20%",
+          "vsStly": "-25%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 8.00,
+          "bob": 202.0,
+          "budget": 200.0,
+          "ly": 193.0,
+          "stly": 199.0,
+          "vsBud": -3.0,
+          "vsLy": 4.0,
+          "vsStly": -2.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 10713,
+          "bob": 12077,
+          "budget": 16245,
+          "ly": 19346,
+          "stly": 17102,
+          "vsBud": 3087,
+          "vsLy": -14,
+          "vsStly": 2230
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	130.2	,
+          "budget": 173.2,
+          "ly": 145.4,
+          "stly": 160.8,
+          "vsBud": -63.7,
+          "vsLy": -35.9,
+          "vsStly": -51.3
+        }
+      ]
+    },
+    {
+      "month": "August-21",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 68,
+          "bob": 6867,
+          "budget": 10276,
+          "ly": 10574,
+          "stly": 5807,
+          "vsBud": -3401,
+          "vsLy": -3699,
+          "vsStly": 1068
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "56%",
+          "budget":" 83%",
+          "ly":" 85%",
+          "stly":" 47%",
+          "vsBud": "-27%",
+          "vsLy": "-30%",
+          "vsStly": "9%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 6.00,
+          "bob": 197.0,
+          "budget": 200.0,
+          "ly": 201.0,
+          "stly": 202.0,
+          "vsBud":-3.0,
+          "vsLy": -4.0,
+          "vsStly": -5.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 11318 ,
+          "bob": 18039,
+          "budget": 17444,
+          "ly": 15864,
+          "stly": 22629,
+          "vsBud": 1888,
+          "vsLy": 3468,
+          "vsStly": -3297
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	109.4,
+          "budget": 166.2,
+          "ly": 	171.8,
+          "stly": 94.8,
+          "vsBud": -56.7,
+          "vsLy": -62.3,
+          "vsStly": 	14.7
+        }
+      ]
+    },
+    {
+      "month": "September-21",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 91,
+          "bob": 8191,
+          "budget": 9568,
+          "ly": 9930,
+          "stly": 7483,
+          "vsBud": -2693,
+          "vsLy": -3055,
+          "vsStly": -608
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "66%",
+          "budget":" 77%",
+          "ly":" 80%",
+          "stly":" 60%",
+          "vsBud": "-22%",
+          "vsLy": "-25%",
+          "vsStly": "-5%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 4.00,
+          "bob": 189.0,
+          "budget": 205.0,
+          "ly": 188.0,
+          "stly": 189.0,
+          "vsBud": -8.0,
+          "vsLy": 9.0,
+          "vsStly": 8.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 22219,	
+          "bob": 20498,
+          "budget": 11522,
+          "ly": 21753,
+          "stly": 18777,
+          "vsBud": 7810,
+          "vsLy": -2421,
+          "vsStly": 555
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	125.2	,
+          "budget": 158.6,
+          "ly": 	150.9,
+          "stly": 	114.3,
+          "vsBud": -49.1,
+          "vsLy": -41.4,
+          "vsStly": -4.8
+        }
+      ]
+    },
+    {
+      "month": "October-21",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 51,
+          "bob": 6880,
+          "budget": 9652,
+          "ly": 9956,
+          "stly": 6635,
+          "vsBud": -2777,
+          "vsLy": -3081,
+          "vsStly": -240
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "56%",
+          "budget":" 78%",
+          "ly":" 80%",
+          "stly":" 54%",
+          "vsBud": "-22%",
+          "vsLy": "-25%",
+          "vsStly": "2%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 4.00,
+          "bob": 197.0,
+          "budget": 193.0,
+          "ly": 197.0,
+          "stly": 188.0,
+          "vsBud": 4.0,
+          "vsLy": 0.0,
+          "vsStly": 9.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 12136 ,
+          "bob": 18005,
+          "budget": 17712,
+          "ly": 12845,
+          "stly": 19981,
+          "vsBud": 1620,
+          "vsLy": 6487,
+          "vsStly": -649
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	109.6	,
+          "budget": 150.6,
+          "ly": 158.6,
+          "stly": 100.8,
+          "vsBud": -41.1,
+          "vsLy": -49.1,
+          "vsStly": 	8.7
+        }
+      ]
+    },
+    {
+      "month": "November-21",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 95,
+          "bob": 8493,
+          "budget": 10560,
+          "ly": 9759,
+          "stly": 11143,
+          "vsBud": -3685,
+          "vsLy": -2884,
+          "vsStly": -4268
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "69%",
+          "budget":" 85%",
+          "ly":" 79%",
+          "stly":" 90%",
+          "vsBud": "-30%",
+          "vsLy": "-23%",
+          "vsStly": "-35%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 7.00,
+          "bob": 203.0,
+          "budget": 188.0,
+          "ly": 188.0,
+          "stly": 200.0,
+          "vsBud": 9.0,
+          "vsLy": 9.0,
+          "vsStly": -3.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 10657,
+          "bob": 17231,
+          "budget": 12119,
+          "ly": 16209,
+          "stly": 17497,
+          "vsBud": 7213,
+          "vsLy": 3123,
+          "vsStly": 1835
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	139.4,
+          "budget": 160.5,
+          "ly": 148.3,
+          "stly": 180.2,
+          "vsBud": -51.0,
+          "vsLy": -38.8,
+          "vsStly": -70.7
+        }
+      ]
+    },
+    {
+      "month": "December-21",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 97,
+          "bob": 8563,
+          "budget": 10426,
+          "ly": 9745,
+          "stly": 8644,
+          "vsBud": -3551,
+          "vsLy": -2870,
+          "vsStly": -1769
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "69%",
+          "budget":" 84%",
+          "ly":" 79%",
+          "stly":" 70%",
+          "vsBud": "-29%",
+          "vsLy": "-23%",
+          "vsStly": "-14%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 8.00,
+          "bob": 201.0,
+          "budget": 191.0,
+          "ly": 189.0,
+          "stly": 195.0,
+          "vsBud": 6.0,
+          "vsLy": 8.0,
+          "vsStly": 2.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 11807 ,
+          "bob": 22107,
+          "budget": 18581,
+          "ly": 12783,
+          "stly": 12011,
+          "vsBud": 751,
+          "vsLy": 6549,
+          "vsStly": 7321
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 139.2,
+          "budget": 161.0,
+          "ly": 148.9,
+          "stly": 136.3,
+          "vsBud": -51.5,
+          "vsLy": -39.4,
+          "vsStly": -26.8
+        }
+      ]
+    },
+    {
+      "month": "January-22",
+      "summaryTableData": [
+        {
+          "title": "Room Nts",
+          "pickupValue": 32	,
+          "bob": 11209,
+          "budget": 10745,
+          "ly": 9718,
+          "stly": 9201,
+          "vsBud": -3870,
+          "vsLy": -2843,
+          "vsStly": -2326
+        },
+        {
+          "title": "OCC",
+          "pickupValue": "",
+          "bob": "91%",
+          "budget":" 87%",
+          "ly":" 79%",
+          "stly":" 74%",
+          "vsBud": "-31%",
+          "vsLy": "-23%",
+          "vsStly": "-19%"
+        },
+        {
+          "title": "ARR",
+          "pickupValue": 5.00,
+          "bob": 198.0,
+          "budget": 192.0,
+          "ly": 202.0,
+          "stly": 205.0,
+          "vsBud": 5.0,
+          "vsLy": -5.0,
+          "vsStly": -8.0
+        },
+        {
+          "title": "Revenue",
+          "pickupValue": 14662 ,
+          "bob": 16378,
+          "budget": 18426,
+          "ly": 21431,
+          "stly": 13033,
+          "vsBud": 906,
+          "vsLy": -2099,
+          "vsStly": 6299
+        },
+        {
+          "title": "RevPAR",
+          "pickupValue": "",
+          "bob": 	179.4,
+          "budget": 166.8,
+          "ly": 158.7,
+          "stly": 152.5,
+          "vsBud": -57.3,
+          "vsLy": -49.2,
+          "vsStly":-43.0
+        }
+      ]
+    }
+  ]
 }

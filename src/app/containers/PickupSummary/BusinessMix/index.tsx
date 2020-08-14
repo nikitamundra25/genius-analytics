@@ -3,13 +3,14 @@ import { ApiHelper } from "../../../../helper";
 import { IBookingChannelModel } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import moment from "moment";
 
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
 const PickupBusinessMix = (props: any) => {
-  const { index } = props;
+  const { index ,date} = props;
 
   const [state, setState] = useState<IBookingChannelModel>({
     isLoading: true,
@@ -19,7 +20,7 @@ const PickupBusinessMix = (props: any) => {
   const getData = async () => {
     const { isError, data } = await new ApiHelper().FetchFromLocalJSONFile(
       "Pickup",
-      "/pickupSummaryDowData.json",
+      "/pickupSummaryBusinessMix.json",
       "GET"
     );
     if (isError) {
@@ -30,9 +31,12 @@ const PickupBusinessMix = (props: any) => {
       });
       return;
     }
+    let filterData:any =  data.data.filter((list:any) => {
+      return list.month === moment(date).format("MMMM-YY");
+    })[0];
     setState({
       isLoading: false,
-      data: data.data,
+      data:  filterData && filterData.businessMixData && filterData.businessMixData.length ? filterData.businessMixData : [],
       isError: false,
     });
   };

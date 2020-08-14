@@ -3,12 +3,13 @@ import { ApiHelper } from "../../../../helper";
 import { IBookingChannelModel } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import moment from "moment";
 
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
-const PickupSegment = ({ index, month }: any) => {
+const PickupSegment = ({ index, date }: any) => {
   //const setHeight1 = setHeight + 140;
   const [state, setState] = useState<IBookingChannelModel>({
     isLoading: true,
@@ -29,16 +30,20 @@ const PickupSegment = ({ index, month }: any) => {
       });
       return;
     }
+    let filterData:any =  data.data.filter((list:any) => {
+      return list.month === moment(date).format("MMMM-YY");
+    })[0];
+    
     setState({
       isLoading: false,
-      data: data.data,
+      data: filterData && filterData.segmentData && filterData.segmentData.length ? filterData.segmentData : [],
       isError: false,
     });
   };
   useEffect(() => {
     // dispatch(requestPickupSummarySegmentData({ month }));
-    // eslint-disable-next-line
     getData();
+    // eslint-disable-next-line
   }, []);
   const { isLoading, data, isError } = state;
   const Charts = [

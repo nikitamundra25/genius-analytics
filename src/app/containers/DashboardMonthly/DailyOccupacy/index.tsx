@@ -114,11 +114,11 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
         fill: "#2f5891",
         border: { width: 1, color: "#4176b9" },
         dataLabel: {
-          visible: false,
-          position: "Bottom",
+          visible: true,
+          position: "Top",
           font: {
             fontWeight: "600",
-            color: "#ffffff",
+            color: "#000000",
           },
         },
       },
@@ -133,13 +133,13 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       width: 2,
       dashArray: "3",
       marker: {
-        visible: false,
-        width: 10,
-        height: 10,
+        visible: true,
+        width: 6,
+        height: 6,
         fill: "#b82f2c",
         border: { width: 1, color: "#b82f2c" },
         dataLabel: {
-          visible: true,
+          visible: false,
           position: "Top",
           font: {
             fontWeight: "600",
@@ -158,13 +158,13 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       width: 2,
       dashArray: "3",
       marker: {
-        visible: false,
-        width: 10,
-        height: 10,
+        visible: true,
+        width: 6,
+        height: 6,
         fill: "#94b54e",
         border: { width: 1, color: "#94b54e" },
         dataLabel: {
-          visible: true,
+          visible: false,
           position: "Bottom",
           font: {
             fontWeight: "600",
@@ -177,13 +177,13 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
 
   const SAMPLE_CSS = `
   #gradient-daily stop {
-  stop-color: #c0d2e8;
+  stop-color: #94a9c3;
 }
 #gradient-daily stop[offset="0"] {
-  stop-opacity: 0.75;
+  stop-opacity: 0.99;
 }
 #gradient-daily stop[offset="1"] {
-  stop-opacity: 0.2;
+  stop-opacity: 0.7;
 }`;
 
   return (

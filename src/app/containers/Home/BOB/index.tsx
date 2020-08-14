@@ -65,14 +65,16 @@ const BOB = () => {
                           <td className="title-col">{list.title} </td>
                           <td
                             className={`content-col ${
+                              
                               list.BOBValue && parseInt(list.BOBValue) < 0
                                   ? "text-danger"
                                   : ""
                             }`}
                           >
                             {list.BOBValue
-                              ?  list.BOBValue
-                              : "-"}{" "}
+                              ?  parseInt(list.BOBValue).toLocaleString()
+                              : "-"}{ list.title === "OCC" && list.BOBValue ? "%" : ""}  
+                              
                           </td>
                           <td
                             className={`content-col ${
@@ -82,8 +84,8 @@ const BOB = () => {
                             }`}
                           >
                             {list.budget
-                              ?  list.budget
-                              : "-"}
+                              ?  parseInt(list.budget).toLocaleString()
+                              : "-"}{ list.title === "OCC" && list.budget ? "%" : ""}
                           </td>
                           <td
                             className={`content-col ${
@@ -93,8 +95,8 @@ const BOB = () => {
                             }`}
                           >
                             {list.ly
-                              ?  list.ly
-                              : "-"}
+                              ?  parseInt(list.ly).toLocaleString()
+                              : "-"}{ list.title === "OCC" && list.ly ? "%" : ""}
                           </td>
                           <td
                             className={`content-col ${
@@ -104,38 +106,29 @@ const BOB = () => {
                             }`}
                           >
                             {list.stlyValue
-                              ? list.stlyValue
-                              : "-"}
+                              ? parseInt(list.stlyValue).toLocaleString()
+                              : "-"}{ list.title === "OCC"  && list.stlyValue? "%" : ""}
+                              
                           </td>
                           <td
                             className={`content-col ${
-                              (  list.title === "Revenue" ||
-                              list.title === "ADR" ||
-                              list.title === "RevPar") && list.VSbud &&
-                              parseInt(list.VSbud.replace("£", "")) < 0
-                                ? "text-danger"
-                                : list.VSbud && parseInt(list.VSbud) < 0
+                              list.VSbud && parseInt(list.VSbud) < 0
                                   ? "text-danger"
                                   : ""
                             }`}
                           >
-                            {list.VSbud ? list.VSbud : "-"}
+                            {list.VSbud ? parseInt(list.VSbud).toLocaleString() : "-"}{ list.title === "OCC" && list.VSbud ? "%" : ""}
                           </td>
                           <td
                             className={`content-col bg-2 ${
-                            (  list.title === "Revenue" ||
-                              list.title === "ADR" ||
-                              list.title === "RevPar") && list.VSly &&
-                              parseInt(list.VSly.replace("£", "")) < 0
-                                ? "text-danger"
-                                : list.VSly && parseInt(list.VSly) < 0
+                                list.VSly && parseInt(list.VSly) < 0
                                   ? "text-danger"
                                   : ""
                             }`}
                           >
                             {list.VSly
-                              ? list.VSly
-                              : "-"}
+                              ? parseInt(list.VSly).toLocaleString()
+                              : "-"}{ list.title === "OCC"   && list.VSly  ? "%" : ""}
                           </td>
                           <td
                             className={`content-col bg-2 ${
@@ -145,8 +138,8 @@ const BOB = () => {
                             }`}
                           >
                             {list.VSstly
-                              ? list.VSstly
-                              : "-"}
+                              ? parseInt(list.VSstly).toLocaleString()
+                              : "-"}{ list.title === "OCC" && list.VSstly ? "%" : ""}
                           </td>
                         </tr>
                       );

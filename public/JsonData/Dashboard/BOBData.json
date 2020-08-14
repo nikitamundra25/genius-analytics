@@ -11,43 +11,43 @@
     },
     {
       "title": "OCC",
-      "BOBValue": "65.7%",
-      "budget": "71.5%",
-      "ly": "64.2%",
-      "stlyValue": "56.1%",
-      "VSbud": "-6%",
-      "VSly": "1.5%",
-      "VSstly": "9.5%"
+      "BOBValue": 65.7,
+      "budget": 71.5,
+      "ly": 64.2,
+      "stlyValue": 56.1,
+      "VSbud": -6,
+      "VSly": 1.5,
+      "VSstly": 9.5
     },
     {
       "title": "Revenue",
-      "BOBValue": "£1,480,599",
-      "budget": "£1,718,849",
-      "ly": "£1,518,702",
-      "stlyValue": "£1,249,740",
+      "BOBValue": 1480599,
+      "budget": 1718849,
+      "ly": 1518702,
+      "stlyValue": 1249740,
       "VSbud": "",
-      "VSly": "-£38,103",
-      "VSstly": "£230,859"
+      "VSly": -38103,
+      "VSstly": 230859
     },
     {
       "title": "ADR",
-      "BOBValue": "£182.3",
-      "budget": "£194.3",
-      "ly": "£191.2",
-      "stlyValue": "£180.0",
-      "VSbud": "-12",
-      "VSly": "-£8.9",
-      "VSstly": "£2.3"
+      "BOBValue": 182.3,
+      "budget": 194.3,
+      "ly": 191.2,
+      "stlyValue": 180.0,
+      "VSbud": -12,
+      "VSly": -8.9,
+      "VSstly": 2.3
     },
     {
-      "title": "RevPar",
-      "BOBValue": "£119.7",
-      "budget": "£139.0",
-      "ly": "£122.8",
-      "stlyValue": "£101.04",
-      "VSbud": "-19",
-      "VSly": "-£3.1",
-      "VSstly": "£18.7"
+      "title": "RevPAR",
+      "BOBValue": 119.7,
+      "budget": 139.0,
+      "ly": 122.8,
+      "stlyValue": 101.04,
+      "VSbud": -19,
+      "VSly": -3.1,
+      "VSstly": 18.7
     }
   ]
 

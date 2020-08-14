@@ -36,6 +36,7 @@ const MonthlyBOB = (props: any) => {
     // eslint-disable-next-line
   }, [data, months]);
 
+
   return (
     <>
       <Card>
@@ -123,14 +124,14 @@ const MonthlyBOB = (props: any) => {
                                                 ? "bg-min"
                                                 : key.title === "OCC" &&
                                                   parseInt(data.num) >= 50 &&
-                                                  parseInt(data.num) < 100
+                                                  parseInt(data.num) < 86
                                                 ? "bg-mid"
                                                 : key.title === "OCC" &&
                                                   parseInt(data.num) < 100
                                                 ? "bg-max"
-                                                : parseInt(data.date) === 0 ||
-                                                  parseInt(data.date) === 5 ||
-                                                  parseInt(data.date) === 6
+                                                : parseInt(data.date) === 5 ||
+                                                  parseInt(data.date) === 6 ||
+                                                  parseInt(data.date) === 0
                                                 ? "weekend-bg"
                                                 : "bg-2"
                                             } `}

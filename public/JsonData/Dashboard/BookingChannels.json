@@ -1,10 +1,11 @@
 {
     "data": [
-    { "x": "Brand Website", "y": 228, "text": "228" },
-    { "x": "OTA's", "y": 203, "text": "203" },
-    { "x": "GDS", "y": 158, "text": "158" },
-    { "x": "Direct", "y": 161, "text": "161" },
-    { "x": "Corporate Website", "y": 198, "text": "198" }
+    { "x": "Corporate Website", "y": 5, "text": "5%" },
+    { "x": "Brand Website", "y": 13, "text": "13%" },
+    { "x": "OTA's", "y": 40, "text": "40%" },
+    { "x": "GDS", "y": 11, "text": "11%" },
+    { "x": "Direct", "y": 31, "text": "31%" }
+    
 
   ]
 }

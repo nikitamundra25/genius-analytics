@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {forwardRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import moment from "moment";
 import { useHistory, useLocation } from 'react-router';
@@ -6,6 +6,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { AppRoutes } from "../../../config";
 
 const TopBar = (props: any) => {
+  const ref = React.createRef()
   const [startDate, setStartDate] = useState(new Date());
   let history = useHistory();
   let location = useLocation();
@@ -29,11 +30,11 @@ const TopBar = (props: any) => {
     setStartDate(setNewDate);
   };
 
-  const CustomInput = ({ value, onClick }:any) => (
+  const CustomInput = forwardRef(({ onClick, value }:any, ref)=> (
     <span className="custom-datepicker  cursor-pointer" onClick={onClick}>
       {value}
     </span>
-  );
+  ));
    
 
   return (
@@ -54,7 +55,7 @@ const TopBar = (props: any) => {
                 setStartDate(date);
               }}
               showYearPicker
-              customInput={<CustomInput />}
+              customInput={<CustomInput ref={ref}/>}
               dateFormat="yyyy"
               className="custom-datepicker cursor-pointer"
             />

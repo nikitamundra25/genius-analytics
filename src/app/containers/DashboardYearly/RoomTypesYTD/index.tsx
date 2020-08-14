@@ -82,7 +82,7 @@ const RoomTypesYTD = ({ graphdata = [] }: any) => {
 };
 const labeltemplateline = (args:any) => {
   return (<div  style={{fontSize: '11px', padding: '3px 3px 3px 3px'}}>
-    <span>&pound;{args.point.y}</span>
+    <span>{args.point.y}</span>
   </div>);
 };
 
