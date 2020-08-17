@@ -92,8 +92,8 @@ const CumulativeTable = ({ selectedDate }: any) => {
                               placement={"top"}
                               overlay={
                                 <Tooltip id={`tooltip-increase`}>
-                                  {table.budData && table.budData.length
-                                    ? table.budData[index]
+                                  {table.vsBud && table.vsBud.length
+                                    ? table.vsBud[index]
                                     : 0}
                                 </Tooltip>
                               }
@@ -102,7 +102,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                 <img
                                   src={
                                     parseInt(table.monthData[index]) <=
-                                    parseInt(table.budData[index])
+                                    parseInt(table.vsBud[index])
                                       ? caretup
                                       : caretdown
                                   }
@@ -116,8 +116,8 @@ const CumulativeTable = ({ selectedDate }: any) => {
                               placement={"top"}
                               overlay={
                                 <Tooltip id={`tooltip-decrease`}>
-                                  {table.lyData && table.lyData.length
-                                    ? table.lyData[index]
+                                  {table.vsLy && table.vsLy.length
+                                    ? table.vsLy[index]
                                     : 0}
                                 </Tooltip>
                               }
@@ -126,7 +126,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                 <img
                                   src={
                                     parseInt(table.monthData[index]) <=
-                                    parseInt(table.lyData[index])
+                                    parseInt(table.vsLy[index])
                                       ? caretup
                                       : caretdown
                                   }
