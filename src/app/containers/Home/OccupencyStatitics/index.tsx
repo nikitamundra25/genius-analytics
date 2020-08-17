@@ -44,7 +44,8 @@ const labeltemplate2 = (args: any) => {
         fontSize: "10px",
         padding: "4px 5px 4px 5px",
         background: '#26405d',
-        borderRadius: "3px"
+        borderRadius: "3px",
+        color: parseInt(args.point.y) < 0 ? 'red' : ''
       }}>
       <span>{args.point.y}%</span>
     </div>
@@ -101,7 +102,6 @@ const labeltemplate2 = (args: any) => {
     };
     // eslint-disable-next-line
   }, []);
-
 
 
     const Charts1 = [
