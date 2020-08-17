@@ -85,7 +85,7 @@ useEffect(() => {
         type: "Column",
         fill: "url(#pickup-chart)",
         //fill: "#f07623",
-        name: "RGI",
+        name: "Room Nights",
         width: 1,
         cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 7, topRight: 7 },
         marker: {
@@ -114,7 +114,7 @@ useEffect(() => {
         type: "Column",
         fill: "url(#pickup-chart)",
         //fill: "#f07623",
-        name: "MPI",
+        name: "ADR",
         width: 1,
         cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 7, topRight: 7 },
         marker: {
@@ -143,7 +143,7 @@ useEffect(() => {
         type: "Column",
         fill: "url(#pickup-chart)",
         //fill: "#f07623",
-        name: "ARI",
+        name: "Revenue",
         width: 1,
         cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 7, topRight: 7 },
         marker: {
@@ -211,7 +211,7 @@ useEffect(() => {
                     <MixedCharts
                         id={`pickup-${index}`}
                         charts={[key.charts]}
-                        legend = {false}
+                       // legend = {false}
                         chartSettings={{
                           width: "100%",
                           height: setHeight,

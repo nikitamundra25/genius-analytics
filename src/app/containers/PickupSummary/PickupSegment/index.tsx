@@ -136,7 +136,7 @@ const PickupSegment = ({ index, date }: any) => {
           }>
           <MixedCharts
             id={`PickupChart-${index}`}
-            legend={false}
+            //legend={false}
             chartSettings={{
               primaryXAxis: {
                 valueType: "Category",

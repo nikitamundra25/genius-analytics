@@ -127,6 +127,7 @@ export default ({ graphdata = [] }: any) => {
                       title: key.title,
                       tooltip: { enable: true },
                       height: setHeight,
+                      
                     }}
                     key={index}
                     {...key}

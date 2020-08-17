@@ -240,7 +240,7 @@ export default ({ graphdata = [] }: any) => {
                         <MixedCharts
                           id={`mix-${index}`}
                           charts={[key.charts]}
-                          legend={false}
+                          //legend={false}
                           chartSettings={{
                             primaryXAxis: {
                               valueType: "Category",
@@ -258,7 +258,7 @@ export default ({ graphdata = [] }: any) => {
                               },
                               visible: false,
                             },
-                            tooltip: { enable: false },
+                            tooltip: { enable: true },
                             title: key.title,
                             height: setHeight,
                           }}
