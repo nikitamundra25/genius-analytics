@@ -219,7 +219,7 @@ const labeltemplateline = (args:any) => {
         visible: false,
         width: 10,
         height: 10,
-        fill: "#2f5891",
+        fill: "#e46d09",
         border: { width: 1, color: "#e46d09" },
         dataLabel: {
           visible: true,

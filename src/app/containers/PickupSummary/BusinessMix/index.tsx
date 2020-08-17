@@ -52,6 +52,7 @@ const PickupBusinessMix = (props: any) => {
           fontSize: "11px",
           padding: "3px 3px 3px 3px",
           borderRadius: "3px",
+          background: '#2b72b5',
         }}>
         <span>{args.point.y}%</span>
       </div>
@@ -78,7 +79,7 @@ const PickupBusinessMix = (props: any) => {
         dataLabel: {
           visible: true,
           position: "Bottom",
-          fill: "#2b72b5",
+         // fill: "#2b72b5",
           template: labeltemplate,
           font: {
             fontWeight: "600",
