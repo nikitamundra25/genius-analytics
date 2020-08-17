@@ -127,7 +127,7 @@ export default ({ graphdata = [] }: any) => {
                       title: key.title,
                       tooltip: { enable: true },
                       height: setHeight,
-                      
+                      //legendSettings:{visible: true}
                     }}
                     key={index}
                     {...key}

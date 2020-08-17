@@ -197,9 +197,9 @@ const CumulativeTable = ({ selectedDate }: any) => {
                       <br />{" "}
                       {month === "Total"
                         ? moment(selectedDate).format("YYYY")
-                        : index === 9
+                        : moment().format("MMMM") === month
                         ? "BOB/Actual"
-                        : index >= 10 && index <= 11
+                        : index+1 > parseInt(moment().format("M")) 
                         ? "BOB"
                         : "Actual"}
                     </th>
