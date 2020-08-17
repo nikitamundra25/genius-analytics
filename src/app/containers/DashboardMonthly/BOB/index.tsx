@@ -34,8 +34,21 @@ const MonthlyBOB = (props: any) => {
       setbobList(data);
     }
     // eslint-disable-next-line
-  }, [data, months]);
+  }, [data]);
 
+  useEffect(() => {
+    if (data && data.length) {
+      data.map((list: any, index: number) => {
+        return list.subData.map((subdata: any, i: number) =>
+          months.map((key: any, ind: number) => {
+            return (data[index].subData[i].data[ind].date = moment(key).day());
+          })
+        );
+      });
+      setbobList(data);
+    }
+    // eslint-disable-next-line
+  }, [props.selectedDate]);
 
   return (
     <>
