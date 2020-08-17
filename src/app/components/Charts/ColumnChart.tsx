@@ -18,12 +18,14 @@ export default ({ id, color, title, data, chartSettings = {} }: any) => {
       args.font.color = 'red';
   }
   };
+  const legendSettings = { visible: true, position: 'Top' }
   return (
     <ChartComponent
       id={`Ychart${id}`}
       style={{ textAlign: "center" }}
       chartArea={{ border: { width: 0 } }}
       width={"100%"}
+      legendSettings={ legendSettings }
       // width={Browser.isDevice ? '100%' : '80%'}
       height={"270px"}
       textRender={textRender}
