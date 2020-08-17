@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form, FormGroup, FormControl, Button } from "react-bootstrap";
 import { useCookies } from "react-cookie";
 import { toast } from "react-toastify";
+import logo from "../../assets/img/logo150.png";
 
 const PasswordProtection = () => {
   const [passcode, setPasscode] = useState("");
@@ -24,11 +25,17 @@ const PasswordProtection = () => {
       <div className='app-body overflow-hidden'>
         <div className='login-container'>
           <div className='login-box'>
-            <br />
-            <h3 className='text-center'>
+            <div className='login-logo'>
+                <img
+                  src={logo}
+                  alt=''
+                />
+            </div>
+
+            <h3 className='text-center login-title'>
               Enter Passcode to access the website
             </h3>
-            <br />
+            
             <Form onSubmit={submit}>
               <FormGroup>
                 <FormControl
