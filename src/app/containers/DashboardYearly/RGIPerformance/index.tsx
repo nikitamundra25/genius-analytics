@@ -75,16 +75,19 @@ export default ({ graphdata = [] }: any) => {
   const RGIBarChart = [
     {
       id: "rgi-1",
+      title: "OCC",
       color: "#244d7b",
       data:  data && data.length && data[0].data? data[0].data : [],
     },
     {
       id: "rgi-2",
+      title: "ARR",
       color: "#3873b7",
       data: data && data.length && data[1].data? data[1].data : [],
     },
     {
       id: "rgi-3",
+      title: "RevPAR",
       color: "#99c0eb",
       data: data && data.length && data[2].data? data[2].data : [],
     },
@@ -124,10 +127,10 @@ export default ({ graphdata = [] }: any) => {
                         },
                         visible:false,
                       },
-                      title: key.title,
+                      //title: key.title,
                       tooltip: { enable: true },
                       height: setHeight,
-                      //  legendSettings:{visible: true}
+                      
                     }}
                     key={index}
                     {...key}
