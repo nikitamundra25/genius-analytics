@@ -83,8 +83,9 @@ const CumulativeTable = ({ selectedDate }: any) => {
                           <div className="d-flex align-items-center flex-wrap">
                             <div className="text-col">
                               {" "}
-                              {table.monthData && table.monthData.length
-                                ? table.monthData[index]
+                              { table.monthData && table.monthData.length 
+                              ?  table.type === "occ" || table.type === "room-dev" ?  table.monthData[index]
+                                :  parseInt(table.monthData[index]).toLocaleString()
                                 : 0}
                             </div>
                             <OverlayTrigger
@@ -93,7 +94,8 @@ const CumulativeTable = ({ selectedDate }: any) => {
                               overlay={
                                 <Tooltip id={`tooltip-increase`}>
                                   {table.vsBud && table.vsBud.length
-                                    ? table.vsBud[index]
+                                    ? table.type === "occ" || table.type === "room-dev" 
+                                    ? table.vsBud[index] : parseInt(table.vsBud[index]).toLocaleString()
                                     : 0}
                                 </Tooltip>
                               }
@@ -117,7 +119,8 @@ const CumulativeTable = ({ selectedDate }: any) => {
                               overlay={
                                 <Tooltip id={`tooltip-decrease`}>
                                   {table.vsLy && table.vsLy.length
-                                    ? table.vsLy[index]
+                                  ? table.type === "occ" || table.type === "room-dev" 
+                                    ? table.vsLy[index] : parseInt(table.vsLy[index]).toLocaleString()
                                     : 0}
                                 </Tooltip>
                               }
@@ -135,46 +138,6 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                 />
                               </div>
                             </OverlayTrigger>
-
-                            {/* <OverlayTrigger
-                              key={"top3"}
-                              placement={"top"}
-                              overlay={
-                                <Tooltip id={`tooltip-decrease`}>
-                                {table.vsBud && table.vsBud.length
-                                ? table.vsBud[index]
-                                : 0}
-                                </Tooltip>
-                              }
-                            >
-                              <div className="icon-col">
-                                <img
-                                  src={parseInt(table.monthData[index]) <= parseInt(table.vsBud[index]) ? caretup : caretdown } 
-                                  alt="decrease"
-                                  width="15"
-                                />
-                              </div>
-                            </OverlayTrigger>
-
-                            <OverlayTrigger
-                              key={"top4"}
-                              placement={"top"}
-                              overlay={
-                                <Tooltip id={`tooltip-decrease`}>
-                                {table.vsLy && table.vsLy.length
-                                ? table.vsLy[index]
-                                : 0}
-                                </Tooltip>
-                              }
-                            >
-                              <div className="icon-col">
-                                <img
-                                  src={parseInt(table.monthData[index]) <= parseInt(table.vsLy[index]) ? caretup : caretdown } 
-                                  alt="decrease"
-                                  width="15"
-                                />
-                              </div>
-                            </OverlayTrigger> */}
                           </div>
                         </td>
                       ))}
@@ -251,7 +214,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                         ? "bg-negative"
                         : ""
                     }`}>
-                      {value ? value : "-"}
+                      {value ? parseInt(value).toLocaleString() : "-"}
                     </td>
                     : <td
                     key={`${i}`}
