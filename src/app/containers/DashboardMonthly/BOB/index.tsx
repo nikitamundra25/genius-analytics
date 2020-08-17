@@ -151,16 +151,16 @@ const MonthlyBOB = (props: any) => {
                                             key={i}
                                           >
                                             {key.title === "OCC"
-                                              ? `${data.num}%`
-                                              : data.num}{" "}
+                                              ? `${parseInt(data.num).toLocaleString()}%`
+                                              : parseInt(data.num).toLocaleString() }{" "}
                                           </td>
                                         );
                                       })}
                                       <td className={`${key.total ? "total-col": "bg-white" }`  } >
                                         
                                         {key.title === "OCC"
-                                              ? `${key.total}%`
-                                              : key.total}{" "}
+                                              ? `${parseInt(key.total).toLocaleString()}%`
+                                              : parseInt(key.total).toLocaleString() }{" "}
                                        
                                       </td>
                                     </tr>

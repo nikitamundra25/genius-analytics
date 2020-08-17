@@ -393,7 +393,7 @@
         "title": "Pick-up",
         "subData": [
           {
-            "name": "Rooms Nights",
+            "name": "Rooms",
             "value": ["", "", 55, -11, 12, 0, 29, 49, 43, 30, 20, 53, 280]
           },
           {
