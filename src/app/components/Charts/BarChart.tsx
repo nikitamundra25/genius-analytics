@@ -8,10 +8,12 @@ import {
   BarSeries,
   Category,
   Tooltip,
+  Legend,
 } from "@syncfusion/ej2-react-charts";
 // import { Browser } from '@syncfusion/ej2-base';
 
 export const BarChartComponent = (barChart: any) => {
+  
  const textRender = (args:any) => { 
   if (parseInt(args.text) < 0) {
     args.font.color = 'red';
@@ -22,8 +24,9 @@ export const BarChartComponent = (barChart: any) => {
       id={`chart-${barChart.id}`}
       style={{ textAlign: "center" }}
       chartArea={{ border: { width: 0 } }}
-      height="100%" width="100%"
-
+      height="100%" 
+      width="100%"
+    
       textRender = {textRender}
       // height={barChart.height || "270px"}
       // width={Browser.isDevice ? '100%' : '80%'}
@@ -49,7 +52,7 @@ export const BarChartComponent = (barChart: any) => {
         title: "Business Mix %",
         tooltip: { enable: true },
       })}>
-      <Inject services={[BarSeries, DataLabel, Category, Tooltip]} />
+      <Inject services={[BarSeries, DataLabel, Category, Tooltip, Legend,]} />
       <SeriesCollectionDirective>
         <SeriesDirective
           dataSource={barChart.data}

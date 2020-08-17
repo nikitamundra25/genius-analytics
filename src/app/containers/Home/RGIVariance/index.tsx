@@ -174,7 +174,7 @@ export default () => {
                 color: "transparent",
               },
             },
-            tooltip: { enable: false }, 
+            tooltip: { enable: true }, 
             height: setHeight,
           }}
         />

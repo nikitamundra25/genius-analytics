@@ -34,8 +34,21 @@ const MonthlyBOB = (props: any) => {
       setbobList(data);
     }
     // eslint-disable-next-line
-  }, [data, months]);
+  }, [data]);
 
+  useEffect(() => {
+    if (data && data.length) {
+      data.map((list: any, index: number) => {
+        return list.subData.map((subdata: any, i: number) =>
+          months.map((key: any, ind: number) => {
+            return (data[index].subData[i].data[ind].date = moment(key).day());
+          })
+        );
+      });
+      setbobList(data);
+    }
+    // eslint-disable-next-line
+  }, [props.selectedDate]);
 
   return (
     <>
@@ -138,16 +151,16 @@ const MonthlyBOB = (props: any) => {
                                             key={i}
                                           >
                                             {key.title === "OCC"
-                                              ? `${data.num}%`
-                                              : data.num}{" "}
+                                              ? `${parseInt(data.num).toLocaleString()}%`
+                                              : parseInt(data.num).toLocaleString() }{" "}
                                           </td>
                                         );
                                       })}
                                       <td className={`${key.total ? "total-col": "bg-white" }`  } >
-                                        
-                                        {key.title === "OCC"
-                                              ? `${key.total}%`
-                                              : key.total}{" "}
+                                        {key.total ? key.title === "OCC"
+                                              ? `${parseInt(key.total).toLocaleString()}%`
+                                              : parseInt(key.total).toLocaleString() : null }
+                                       
                                        
                                       </td>
                                     </tr>
