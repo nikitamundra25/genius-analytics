@@ -93,7 +93,7 @@ const BOBMonthlyTable = ({date}:any) => {
                 </tr>
               </thead>
               <tbody>
-                {graphdata && graphdata.length
+              {graphdata && graphdata.length
                   ? graphdata.map((list: any, index: number) => {
                     let weekendDay = moment(months[index]).day();
                       return ( index > months.length - 1 ? null :
@@ -105,7 +105,6 @@ const BOBMonthlyTable = ({date}:any) => {
                               weekendDay === 0 ? "weekend-bg" : ""}
                           >
                             <td
-                           
                               className="title-col  text-center"
                             >
                               {moment(months[index]).format("ddd DD MMM")}
@@ -114,293 +113,291 @@ const BOBMonthlyTable = ({date}:any) => {
                             
                             <td
                               className={`content-col ${
-                                list.barValue && parseInt(list.barValue) < 0
+                                list.barValueRooms && parseInt(list.barValueRooms) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
                               {" "}
-                              {list.barValue ? list.barValue : "-"}{" "}
+                              {list.barValueRooms ? list.barValueRooms : "-"}{" "}
                             </td>
                             <td
                               className={`content-col ${
-                                list.leisureBreak &&
-                                parseInt(list.leisureBreak) < 0
+                                list.barValueADR &&
+                                parseInt(list.barValueADR) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.leisureBreak ? list.leisureBreak : "-"}{" "}
+                              {list.barValueADR ? list.barValueADR : "-"}{" "}
                             </td>
                             <td
                               className={`content-col ${
-                                list.corporate && parseInt(list.corporate) < 0
+                                list.publicDiscountRooms && parseInt(list.publicDiscountRooms) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.corporate ? list.corporate : "-"}
+                              {list.publicDiscountRooms ? list.publicDiscountRooms : "-"}
                             </td>
                             <td
                               className={`content-col ${
-                                list.consortia && parseInt(list.consortia) < 0
+                                list.publicDiscountADR && parseInt(list.publicDiscountADR) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.consortia ? list.consortia : "-"}
+                              {list.publicDiscountADR ? list.publicDiscountADR : "-"}
                             </td>
                             <td
                               className={`content-col ${
-                                list.promotions && parseInt(list.promotions) < 0
+                                list.corporateDiscountRooms && parseInt(list.corporateDiscountRooms) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.promotions ? list.promotions : "-"}
+                              {list.corporateDiscountRooms ? list.corporateDiscountRooms : "-"}
                             </td>
                             <td
                               className={`content-col ${
-                                list.groups && parseInt(list.groups) < 0
+                                list.corporateDiscountADR && parseInt(list.corporateDiscountADR) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.groups ? list.groups : "-"}
+                              {list.corporateDiscountADR ? list.corporateDiscountADR : "-"}
                             </td>
                             <td
                               className={`content-col ${
-                                list.ota && parseInt(list.ota) < 0
+                                list.partnershipDiscountRooms && parseInt(list.partnershipDiscountRooms) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.ota ? list.ota : "-"}
+                              {list.partnershipDiscountRooms ? list.partnershipDiscountRooms : "-"}
                             </td>
                             <td
                               className={`content-col ${
-                                list.fit && parseInt(list.fit) < 0
+                                list.partnershipDiscountADR && parseInt(list.partnershipDiscountADR) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.fit ? list.fit : "-"}
+                              {list.partnershipDiscountADR ? list.partnershipDiscountADR : "-"}
                             </td>
                             <td
                               className={`content-col ${
-                                list.barValue && parseInt(list.barValue) < 0
-                                  ? "text-danger"
-                                  : ""
-                              }`}
-                            >
-                              {" "}
-                              {list.barValue ? list.barValue : "-"}{" "}
-                            </td>
-                            <td
-                              className={`content-col ${
-                                list.leisureBreak &&
-                                parseInt(list.leisureBreak) < 0
-                                  ? "text-danger"
-                                  : ""
-                              }`}
-                            >
-                              {list.leisureBreak ? list.leisureBreak : "-"}{" "}
-                            </td>
-                            <td
-                              className={`content-col ${
-                                list.corporate && parseInt(list.corporate) < 0
-                                  ? "text-danger"
-                                  : ""
-                              }`}
-                            >
-                              {list.corporate ? list.corporate : "-"}
-                            </td>
-                            <td
-                              className={`content-col ${
-                                list.consortia && parseInt(list.consortia) < 0
-                                  ? "text-danger"
-                                  : ""
-                              }`}
-                            >
-                              {list.consortia ? list.consortia : "-"}
-                            </td>
-                            <td
-                              className={`content-col ${
-                                list.promotions && parseInt(list.promotions) < 0
-                                  ? "text-danger"
-                                  : ""
-                              }`}
-                            >
-                              {list.promotions ? list.promotions : "-"}
-                            </td>
-                            <td
-                              className={`content-col ${
-                                list.groups && parseInt(list.groups) < 0
-                                  ? "text-danger"
-                                  : ""
-                              }`}
-                            >
-                              {list.groups ? list.groups : "-"}
-                            </td>
-                            <td
-                              className={`content-col ${
-                                list.ota && parseInt(list.ota) < 0
-                                  ? "text-danger"
-                                  : ""
-                              }`}
-                            >
-                              {list.ota ? list.ota : "-"}
-                            </td>
-                            <td
-                              className={`content-col ${
-                                list.fit && parseInt(list.fit) < 0
-                                  ? "text-danger"
-                                  : ""
-                              }`}
-                            >
-                              {list.fit ? list.fit : "-"}
-                            </td>
-                            <td
-                              className={`content-col ${
-                                list.barValue && parseInt(list.barValue) < 0
+                                list.onlineAdvRooms && parseInt(list.onlineAdvRooms) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
                               {" "}
-                              {list.barValue ? list.barValue : "-"}{" "}
+                              {list.onlineAdvRooms ? list.onlineAdvRooms : "-"}{" "}
                             </td>
                             <td
                               className={`content-col ${
-                                list.leisureBreak &&
-                                parseInt(list.leisureBreak) < 0
+                                list.onlineAdvADR &&
+                                parseInt(list.onlineAdvADR) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.leisureBreak ? list.leisureBreak : "-"}{" "}
+                              {list.onlineAdvADR ? list.onlineAdvADR : "-"}{" "}
                             </td>
                             <td
                               className={`content-col ${
-                                list.corporate && parseInt(list.corporate) < 0
+                                list.employeeTravelRooms && parseInt(list.employeeTravelRooms) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.corporate ? list.corporate : "-"}
+                              {list.employeeTravelRooms ? list.employeeTravelRooms : "-"}
                             </td>
                             <td
                               className={`content-col ${
-                                list.consortia && parseInt(list.consortia) < 0
+                                list.employeeTravelADR && parseInt(list.employeeTravelADR) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.consortia ? list.consortia : "-"}
+                              {list.employeeTravelADR ? list.employeeTravelADR : "-"}
                             </td>
                             <td
                               className={`content-col ${
-                                list.promotions && parseInt(list.promotions) < 0
+                                list.corporateContractRooms && parseInt(list.corporateContractRooms) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.promotions ? list.promotions : "-"}
+                              {list.corporateContractRooms ? list.corporateContractRooms : "-"}
                             </td>
                             <td
                               className={`content-col ${
-                                list.groups && parseInt(list.groups) < 0
+                                list.corporateContractADR && parseInt(list.corporateContractADR) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.groups ? list.groups : "-"}
+                              {list.corporateContractADR ? list.corporateContractADR : "-"}
                             </td>
                             <td
                               className={`content-col ${
-                                list.ota && parseInt(list.ota) < 0
+                                list.monthlyContractRooms && parseInt(list.monthlyContractRooms) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.ota ? list.ota : "-"}
+                              {list.monthlyContractRooms ? list.monthlyContractRooms : "-"}
                             </td>
                             <td
                               className={`content-col ${
-                                list.fit && parseInt(list.fit) < 0
+                                list.monthlyContractADR && parseInt(list.monthlyContractADR) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.fit ? list.fit : "-"}
+                              {list.monthlyContractADR ? list.monthlyContractADR : "-"}
                             </td>
                             <td
                               className={`content-col ${
-                                list.barValue && parseInt(list.barValue) < 0
+                                list.longTermContractRooms && parseInt(list.longTermContractRooms) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
                               {" "}
-                              {list.barValue ? list.barValue : "-"}{" "}
+                              {list.longTermContractRooms ? list.longTermContractRooms : "-"}{" "}
                             </td>
                             <td
                               className={`content-col ${
-                                list.leisureBreak &&
-                                parseInt(list.leisureBreak) < 0
+                                list.longTermContractADR &&
+                                parseInt(list.longTermContractADR) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.leisureBreak ? list.leisureBreak : "-"}{" "}
+                              {list.longTermContractADR ? list.longTermContractADR : "-"}{" "}
                             </td>
                             <td
                               className={`content-col ${
-                                list.corporate && parseInt(list.corporate) < 0
+                                list.wholesaleRooms && parseInt(list.wholesaleRooms) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.corporate ? list.corporate : "-"}
+                              {list.wholesaleRooms ? list.wholesaleRooms : "-"}
                             </td>
                             <td
                               className={`content-col ${
-                                list.consortia && parseInt(list.consortia) < 0
+                                list.wholesaleADR && parseInt(list.wholesaleADR) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.consortia ? list.consortia : "-"}
+                              {list.wholesaleADR ? list.wholesaleADR : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.corporateGroupRooms && parseInt(list.corporateGroupRooms) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.corporateGroupRooms ? list.corporateGroupRooms : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.corporateGroupADR && parseInt(list.corporateGroupADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.corporateGroupADR ? list.corporateGroupADR : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.corporateMonGroupRooms && parseInt(list.corporateMonGroupRooms) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.corporateMonGroupRooms ? list.corporateMonGroupRooms : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.corporateMonGroupADR && parseInt(list.corporateMonGroupADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.corporateMonGroupADR ? list.corporateMonGroupADR : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.leisureRooms && parseInt(list.leisureRooms) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {" "}
+                              {list.leisureRooms ? list.leisureRooms : "-"}{" "}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.leisureADR &&
+                                parseInt(list.leisureADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.leisureADR ? list.leisureADR : "-"}{" "}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.airlineCrewRooms && parseInt(list.airlineCrewRooms) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.airlineCrewRooms ? list.airlineCrewRooms : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.airlineCrewADR && parseInt(list.airlineCrewADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.airlineCrewADR ? list.airlineCrewADR : "-"}
                             </td>
                             <td
                               className={`content-col total-content  ${
-                                list.total && parseInt(list.total) < 0
+                                list.totalRooms && parseInt(list.totalRooms) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.total ? list.total : "-"}
+                              {list.totalRooms ? list.totalRooms : "-"}
                             </td>
                             <td
                               className={`content-col ${
-                                list.promotions && parseInt(list.promotions) < 0
+                                list.totalADR && parseInt(list.totalADR) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.promotions ? list.promotions : "-"}
+                              {list.totalADR ? list.totalADR : "-"}
                             </td>
                             <td
                               className={`content-col ${
-                                list.groups && parseInt(list.groups) < 0
+                                list.totalRevenue && parseInt(list.totalRevenue) < 0
                                   ? "text-danger"
                                   : ""
                               }`}
                             >
-                              {list.groups ? list.groups : "-"}
+                              {list.totalRevenue ? list.totalRevenue : "-"}
                             </td>
-                            
-                            
                           </tr>
 
                        </>
