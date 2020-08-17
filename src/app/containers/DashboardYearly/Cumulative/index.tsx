@@ -160,6 +160,8 @@ const CumulativeTable = ({ selectedDate }: any) => {
                       <br />{" "}
                       {month === "Total"
                         ? moment(selectedDate).format("YYYY")
+                        : moment(selectedDate).format("YYYY") > moment().format("YYYY")
+                        ? "BOB" : moment(selectedDate).format("YYYY") < moment().format("YYYY") ? "Actual"
                         : moment().format("MMMM") === month
                         ? "BOB/Actual"
                         : index+1 > parseInt(moment().format("M")) 
