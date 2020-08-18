@@ -77,6 +77,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }: any) => {
     </div>);
 };
 const labeltemplateline = (args:any) => {
+    console.log("args.point",args.point)
   return (<div  style={{fontSize: '10px',  background: '#e46d09', padding: "3px 3px", borderRadius: "3px"}}>
     <span>{args.point.y}</span>
   </div>);
@@ -223,9 +224,8 @@ const labeltemplateline = (args:any) => {
         border: { width: 1, color: "#e46d09" },
         dataLabel: {
           visible: true,
-          position: "Bottom",
+          position: "Top",
           template: labeltemplateline,
-         
           font: {
             fontWeight: "600",
             color: "#000000",
@@ -261,7 +261,7 @@ const labeltemplateline = (args:any) => {
               >
                 <MixedCharts
                   id={"occChart1"}
-                  //legend={false}
+                  legend={false}
                   chartSettings={{
                     primaryXAxis: {
                       valueType: "Category",
@@ -297,7 +297,7 @@ const labeltemplateline = (args:any) => {
               >
                 <MixedCharts
                   id={"occChart2"}
-                  //legend={false}
+                  legend={false}
                   chartSettings={{
                     primaryXAxis: {
                       valueType: "Category",

@@ -8,7 +8,7 @@ import {
   Tooltip,
   ColumnSeries,
   DataLabel,
-  Legend,
+ 
 } from "@syncfusion/ej2-react-charts";
 // import { Browser } from '@syncfusion/ej2-base';
 
@@ -30,7 +30,7 @@ export default ({ id, color, title, data, chartSettings = {} }: any) => {
       // fill="transparent"
       // background='transparent'
       {...chartSettings}>
-      <Inject services={[ColumnSeries, Tooltip, Category, DataLabel, Legend ,]} />
+      <Inject services={[ColumnSeries, Tooltip, Category, DataLabel]} />
       <SeriesCollectionDirective>
         <SeriesDirective
           dataSource={data}

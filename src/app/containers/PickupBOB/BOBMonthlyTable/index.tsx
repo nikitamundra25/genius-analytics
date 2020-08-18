@@ -40,53 +40,64 @@ const BOBMonthlyTable = ({date}:any) => {
                 
                 <tr>
                   <th className="border-0"></th>
-                  <th className="head-col border-left" colSpan={2}>Bar</th>
-                  <th className="head-col border-left" colSpan={2}>Public Discount</th>
-                  <th className="head-col border-left" colSpan={2}>Corporate Discount</th>
-                  <th className="head-col border-left" colSpan={2}>Partnership Discount</th>
-                  <th className="head-col border-left" colSpan={2}>Online Advantage</th>
-                  <th className="head-col border-left" colSpan={2}>Employee Travel</th>
-                  <th className="head-col border-left" colSpan={2}>Corporate Contracted</th>
-                  <th className="head-col border-left" colSpan={2}>Monthly Contract</th>
-                  <th className="head-col border-left" colSpan={2}>Long Term Contract</th>
-                  <th className="head-col border-left" colSpan={2}>Wholesale</th>
-                  <th className="head-col border-left" colSpan={2}>Corporate Group</th>
-                  <th className="head-col border-left" colSpan={2}>Corporate Monthly Group</th>
-                  <th className="head-col border-left" colSpan={2}>Leisure Group</th>
-                  <th className="head-col border-left" colSpan={2}>Airline Crew Group</th>
-                  <th className="head-col total-content " colSpan={3}>Total Pick-up</th>
+                  <th className="head-col border-left" colSpan={3}>Bar</th>
+                  <th className="head-col border-left" colSpan={3}>Public Discount</th>
+                  <th className="head-col border-left" colSpan={3}>Corporate Discount</th>
+                  <th className="head-col border-left" colSpan={3}>Partnership Discount</th>
+                  <th className="head-col border-left" colSpan={3}>Online Advantage</th>
+                  <th className="head-col border-left" colSpan={3}>Corporate Groups</th>
+                  <th className="head-col border-left" colSpan={3}>Leisure Groups</th>
+                  <th className="head-col border-left" colSpan={3}>Residential Groups</th>
+                  <th className="head-col border-left" colSpan={3}>OTAs</th>
+                  <th className="head-col border-left" colSpan={3}>Wholesale</th>
+                  <th className="head-col border-left" colSpan={3}>Long Term Contract</th>
+                  <th className="head-col border-left" colSpan={3}>Monthly Contract</th>
+                  <th className="head-col border-left" colSpan={3}>Airline Crew Group</th>
+                  <th className="head-col total-content " colSpan={3}>Staff</th>
                   
                 </tr>
                 <tr>
                   <th className="border-left-0"></th>
                   <th className="head-col border-left">Rooms</th>
                   <th className="head-col  ">ADR</th>
+                  <th className="head-col ">Revenue</th>
                   <th className="head-col border-left">Rooms</th>
                   <th className="head-col ">ADR</th>
+                  <th className="head-col ">Revenue</th>
                   <th className="head-col border-left">Rooms</th>
                   <th className="head-col ">ADR</th>
+                  <th className="head-col ">Revenue</th>
                   <th className="head-col border-left">Rooms</th>
                   <th className="head-col ">ADR</th>
+                  <th className="head-col ">Revenue</th>
                   <th className="head-col border-left">Rooms</th>
                   <th className="head-col ">ADR</th>
+                  <th className="head-col ">Revenue</th>
                   <th className="head-col border-left">Rooms</th>
                   <th className="head-col ">ADR</th>
+                  <th className="head-col ">Revenue</th>
                   <th className="head-col border-left">Rooms</th>
                   <th className="head-col ">ADR</th>
+                  <th className="head-col ">Revenue</th>
                   <th className="head-col border-left">Rooms</th>
                   <th className="head-col ">ADR</th>
+                  <th className="head-col ">Revenue</th>
                   <th className="head-col border-left">Rooms</th>
                   <th className="head-col ">ADR</th>
+                  <th className="head-col ">Revenue</th>
                   <th className="head-col border-left">Rooms</th>
                   <th className="head-col ">ADR</th>
+                  <th className="head-col ">Revenue</th>
                   <th className="head-col border-left">Rooms</th>
                   <th className="head-col ">ADR</th>
-                  <th className="head-col">Rooms</th>
-                  <th className="head-col ">ADR</th>
+                  <th className="head-col ">Revenue</th>
                   <th className="head-col border-left">Rooms</th>
                   <th className="head-col ">ADR</th>
+                  <th className="head-col ">Revenue</th>
                   <th className="head-col border-left">Rooms</th>
                   <th className="head-col ">ADR</th>
+                  <th className="head-col ">Revenue</th>
+                 
                   <th className="head-col  total-content" >Rooms</th>
                   <th className="head-col  ">ADR</th>
                   <th className="head-col ">Revenue</th>
@@ -372,6 +383,105 @@ const BOBMonthlyTable = ({date}:any) => {
                               {list.airlineCrewADR ? list.airlineCrewADR : "-"}
                             </td>
                             <td
+                              className={`content-col ${
+                                list.airlineCrewADR && parseInt(list.airlineCrewADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.airlineCrewADR ? list.airlineCrewADR : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.airlineCrewADR && parseInt(list.airlineCrewADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.airlineCrewADR ? list.airlineCrewADR : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.airlineCrewADR && parseInt(list.airlineCrewADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.airlineCrewADR ? list.airlineCrewADR : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.airlineCrewADR && parseInt(list.airlineCrewADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.airlineCrewADR ? list.airlineCrewADR : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.airlineCrewADR && parseInt(list.airlineCrewADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.airlineCrewADR ? list.airlineCrewADR : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.airlineCrewADR && parseInt(list.airlineCrewADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.airlineCrewADR ? list.airlineCrewADR : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.airlineCrewADR && parseInt(list.airlineCrewADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.airlineCrewADR ? list.airlineCrewADR : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.airlineCrewADR && parseInt(list.airlineCrewADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.airlineCrewADR ? list.airlineCrewADR : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.airlineCrewADR && parseInt(list.airlineCrewADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.airlineCrewADR ? list.airlineCrewADR : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.airlineCrewADR && parseInt(list.airlineCrewADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.airlineCrewADR ? list.airlineCrewADR : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.airlineCrewADR && parseInt(list.airlineCrewADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.airlineCrewADR ? list.airlineCrewADR : "-"}
+                            </td>
+                            <td
                               className={`content-col total-content  ${
                                 list.totalRooms && parseInt(list.totalRooms) < 0
                                   ? "text-danger"
@@ -438,6 +548,17 @@ const BOBMonthlyTable = ({date}:any) => {
                   <td className="total-col ">0</td>
                   <td className="total-col ">17</td>
                   <td className="total-col ">7</td>
+                  <td className="total-col">3</td>
+                  <td className="total-col">3</td>
+                  <td className="total-col">3</td>
+                  <td className="total-col">3</td>
+                  <td className="total-col">3</td>
+                  <td className="total-col">3</td>
+                  <td className="total-col">3</td>
+                  <td className="total-col">3</td>
+                  <td className="total-col">3</td>
+                  <td className="total-col">3</td>
+                  <td className="total-col">3</td>
                   <td className="total-col total-content">86</td>
                   <td className="total-col ">17</td>
                   <td className="total-col ">7</td>
