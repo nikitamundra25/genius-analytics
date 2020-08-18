@@ -8,7 +8,7 @@ import {
   BarSeries,
   Category,
   Tooltip,
-  Legend,
+
 } from "@syncfusion/ej2-react-charts";
 // import { Browser } from '@syncfusion/ej2-base';
 
@@ -52,7 +52,7 @@ export const BarChartComponent = (barChart: any) => {
         title: "Business Mix %",
         tooltip: { enable: true },
       })}>
-      <Inject services={[BarSeries, DataLabel, Category, Tooltip, Legend,]} />
+      <Inject services={[BarSeries, DataLabel, Category, Tooltip]} />
       <SeriesCollectionDirective>
         <SeriesDirective
           dataSource={barChart.data}

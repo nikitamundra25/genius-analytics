@@ -240,7 +240,7 @@ export default ({ graphdata = [] }: any) => {
                         <MixedCharts
                           id={`mix-${index}`}
                           charts={[key.charts]}
-                          //legend={false}
+                          legend={false}
                           chartSettings={{
                             primaryXAxis: {
                               valueType: "Category",

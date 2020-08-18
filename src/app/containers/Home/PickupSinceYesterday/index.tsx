@@ -211,7 +211,7 @@ useEffect(() => {
                     <MixedCharts
                         id={`pickup-${index}`}
                         charts={[key.charts]}
-                       // legend = {false}
+                       legend = {false}
                         chartSettings={{
                           width: "100%",
                           height: setHeight,
