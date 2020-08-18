@@ -139,7 +139,7 @@ const PickupDOWOCCSegment = (props: any) => {
                 visible: false,
               },
               tooltip: { enable: true },
-              height:"180px"
+              height:"250px"
              // height: `${setHeight}px`,
             }}
             charts={Charts}
