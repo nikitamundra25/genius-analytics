@@ -223,7 +223,7 @@ const labeltemplateline = (args:any) => {
         border: { width: 1, color: "#e46d09" },
         dataLabel: {
           visible: true,
-          position: "Bottom",
+          position: "Top",
           template: labeltemplateline,
          
           font: {
@@ -261,7 +261,7 @@ const labeltemplateline = (args:any) => {
               >
                 <MixedCharts
                   id={"occChart1"}
-                  //legend={false}
+                  legend={false}
                   chartSettings={{
                     primaryXAxis: {
                       valueType: "Category",
@@ -297,7 +297,7 @@ const labeltemplateline = (args:any) => {
               >
                 <MixedCharts
                   id={"occChart2"}
-                  //legend={false}
+                  legend={false}
                   chartSettings={{
                     primaryXAxis: {
                       valueType: "Category",
