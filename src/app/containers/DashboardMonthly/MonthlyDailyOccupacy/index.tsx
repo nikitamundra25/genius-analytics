@@ -77,6 +77,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [] }: any) => {
     </div>);
 };
 const labeltemplateline = (args:any) => {
+    console.log("args.point",args.point)
   return (<div  style={{fontSize: '10px',  background: '#e46d09', padding: "3px 3px", borderRadius: "3px"}}>
     <span>{args.point.y}</span>
   </div>);
@@ -225,7 +226,6 @@ const labeltemplateline = (args:any) => {
           visible: true,
           position: "Bottom",
           template: labeltemplateline,
-         
           font: {
             fontWeight: "600",
             color: "#000000",
