@@ -79,6 +79,7 @@ const PickupSegment = ({ index, date }: any) => {
       fill: "#4684bd",
       name: "Room Nts",
       width: 1,
+      yAxisName: "yAxis1",
       cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
@@ -142,6 +143,7 @@ const PickupSegment = ({ index, date }: any) => {
                 valueType: "Category",
                 interval: 1,
                 majorGridLines: { width: 0 },
+                maximumLabelWidth: '100',
               },
               primaryYAxis: {
                 labelFormat: "{value}",
@@ -155,7 +157,7 @@ const PickupSegment = ({ index, date }: any) => {
                 visible: false,
               },
               tooltip: { enable: true },
-              height:"325px"
+              height:"395px"
               //height: `${setHeight1}px`,
             }}
             charts={Charts}

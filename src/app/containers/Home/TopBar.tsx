@@ -107,6 +107,7 @@ const TopBar = (props: any) => {
   return (
     <>
       <div className="main-navbar">
+      { selectedNav === "Dashboard Yearly" ? "" : (
         <div className="navbar-nav-item">
           <div className="year-nav">
             <span
@@ -136,6 +137,7 @@ const TopBar = (props: any) => {
             </span>
           </div>
         </div>
+        )}
         <div className="navbar-nav-item">
           {/* <span className="cursor-pointer" onClick={()=>handleShow("year")}>
             {moment(startDate).format("YYYY")}{" "}

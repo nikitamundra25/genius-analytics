@@ -33,7 +33,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       setTimeout(() => {
         const check = modalbtn.getBoundingClientRect();
         const getHeight =check.height;
-        const setgraphHeight = getHeight - 75 ;
+        const setgraphHeight = getHeight - 83 ;
         //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
         setsetHeight(`${setgraphHeight}px`)
       }, 100);
@@ -64,7 +64,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
         setTimeout(() => {
           const check = modalbtn.getBoundingClientRect();
           const getHeight =check.height;
-          const setgraphHeight = getHeight - 75 ;
+          const setgraphHeight = getHeight - 83 ;
           //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
           setsetHeight(`${setgraphHeight}px`)
         }, 100);
@@ -107,6 +107,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
      // fill: "#c0d2e8",
       name: selectedValue,
       width: 3,
+      yAxisName:'yAxis1',
       marker: {
         visible: false,
         width: 10,
@@ -228,6 +229,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
                   color: "transparent",
                 },
                 visible:false,
+               // interval: 12,
               },
               tooltip: { enable: true },
               Legend: { enable: false },

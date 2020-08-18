@@ -49,12 +49,25 @@ const PickupBusinessMix = (props: any) => {
     return (
       <div
         style={{
-          fontSize: "11px",
-          padding: "3px 3px 3px 3px",
-          borderRadius: "3px",
+          fontSize: "10px",
+          padding: "2px 2px 2px 2px",
+          borderRadius: "2px",
           background: '#2b72b5',
         }}>
         <span>{args.point.y}%</span>
+      </div>
+    );
+  };
+  const labeltemplate1 = (args: any) => {
+    return (
+      <div
+        style={{
+          fontSize: "10px",
+          padding: "2px 2px 2px 2px",
+          borderRadius: "2px",
+          background: '#2b72b5',
+        }}>
+        <span>{args.point.y}</span>
       </div>
     );
   };
@@ -73,14 +86,13 @@ const PickupBusinessMix = (props: any) => {
       //fill: "#4684bd",
       fill: "url(#pickupmix-chart)",
       name: "Room Nts",
-      yAxisName: "yAxis1",
       width: 1,
       marker: {
         dataLabel: {
           visible: true,
           position: "Bottom",
          // fill: "#2b72b5",
-          template: labeltemplate,
+         template: labeltemplate,
           font: {
             fontWeight: "600",
             color: "#fff",
@@ -97,16 +109,19 @@ const PickupBusinessMix = (props: any) => {
       fill: "#ee792b",
       name: "ADR",
       width: 3,
+      yAxisName: "yAxis1",
       marker: {
         visible: true,
         width: 8,
         height: 8,
         fill: "#ee792b",
+       
         border: { width: 0, color: "#ee792b" },
         dataLabel: {
           visible: true,
           position: "Top",
-          fill: "#ee792b",
+         // fill: "#ee792b",
+          template: labeltemplate1,
           font: {
             fontWeight: "600",
             color: "#ffffff",
@@ -161,10 +176,12 @@ const PickupBusinessMix = (props: any) => {
                     color: "transparent",
                   },
                   visible: false,
+                  //interval: 1,
+                  maximum:30,
                 },
                 tooltip: { enable: true },
                 //height: `${setHeight}px`,
-                height:"180px"
+                height:"250px"
               }}
               charts={Charts}
             />
