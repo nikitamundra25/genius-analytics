@@ -142,6 +142,7 @@ const PickupSegment = ({ index, date }: any) => {
               primaryXAxis: {
                 valueType: "Category",
                 interval: 1,
+                enableTrim: false,
                 majorGridLines: { width: 0 },
                 maximumLabelWidth: '100',
                 

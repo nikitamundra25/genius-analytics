@@ -9,27 +9,27 @@
         "ADR": 205
       },
       {
-        "name": "Public Discount",
+        "name": "Public<br>Discount",
         "RoomNts": 11,
         "ADR": 155
       },
       {
-        "name": "Corporate Discount",
+        "name": "Corporate<br>Discount",
         "RoomNts": 17,
         "ADR": 125
       },
       {
-        "name": "Partnership Discount",
+        "name": "Partnership<br>Discount",
         "RoomNts": 5,
         "ADR": 171
       },
       {
-        "name": "Online Advantage",
+        "name": "Online<br>Advantage",
         "RoomNts": 8,
         "ADR": 209
       },
       {
-        "name": "Employee Travel",
+        "name": "Employee<br>Travel",
         "RoomNts": -1,
         "ADR": 103
       },
@@ -39,12 +39,12 @@
         "ADR": 187
       },
       {
-        "name": "Monthly Contract",
+        "name": "Monthly<br>Contract",
         "RoomNts": 2,
         "ADR": 198
       },
       {
-        "name": "Long Term Contract",
+        "name": "Long<br>Term<br>Contract",
         "RoomNts": 2,
         "ADR": 192
       },
@@ -54,22 +54,22 @@
         "ADR": 203
       },
       {
-        "name": "Corporate Group",
+        "name": "Corporate<br>Group",
         "RoomNts": 5,
         "ADR": 201
       },
       {
-        "name": "Corporate Monthly Group",
+        "name": "Corporate<br>Monthly<br>Group",
         "RoomNts": -1,
         "ADR": 207
       },
       {
-        "name": "Leisure Group",
+        "name": "Leisure<br>Group",
         "RoomNts": 1,
         "ADR": 207
       },
       {
-        "name": "Airline Crew Group",
+        "name": "Airline<br>Crew<br>Group",
         "RoomNts": 0,
         "ADR": 208
       }
