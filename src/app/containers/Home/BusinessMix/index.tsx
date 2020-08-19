@@ -114,13 +114,17 @@ export default (props: any) => {
           majorTickLines: { width: 0 },
           lineStyle: { width: 0 },
           labelStyle: {
-            color: "red",
+            color: "transparent",
           },
-          visible: true,
-          rangePadding: 'Round',
+          visible: false,
+          //rangePadding: 'Round',
         },
         title: "Business Mix ADR",
-        tooltip: { enable: true , TooltipPosition: 'Top', fontSize:'10px'
+        tooltip: { 
+          enable: true , 
+          //TooltipPosition: 'Top', 
+          //fontSize:'10px', 
+          //size: '3px'
         },
         height: setHeight,
       },
