@@ -15,7 +15,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
         id={`summary-card${rowId}`}
         className='bg-white h-auto mb-3 pickup-section-card'>
         <Card.Body className='pb-0'>
-          <Row className='row-inner'>
+          <Row className='no-gutters'>
             <Col xs={12} md={5}>
               <div className='sub-title text-left'>{chartType.name}</div>
               <div>
@@ -27,7 +27,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
             </Col>
             <Col xs={12} md={7}>
               <TableForm index={rowId} tabledata={chartType.tabledata} date={chartType.date}/>
-              <Row className='row-inner'>
+              <Row className='no-gutters'>
                 <Col xs={12} md={6}>
                   <div>
                     <PickupDOWOCCSegment

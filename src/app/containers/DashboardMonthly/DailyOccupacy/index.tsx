@@ -107,7 +107,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
      // fill: "#c0d2e8",
       name: selectedValue,
       width: 3,
-      yAxisName:'yAxis1',
+     
       marker: {
         visible: false,
         width: 10,
@@ -133,6 +133,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       name: "Budget",
       width: 2,
       dashArray: "3",
+      yAxisName:'yAxis1',
       marker: {
         visible: true,
         width: 6,
@@ -158,6 +159,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       name: "LY",
       width: 2,
       dashArray: "3",
+      yAxisName:'yAxis1',
       marker: {
         visible: true,
         width: 6,
@@ -229,7 +231,8 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
                   color: "transparent",
                 },
                 visible:false,
-               // interval: 12,
+                //interval: 30,
+                rangePadding: 'None',
               },
               tooltip: { enable: true },
               Legend: { enable: false },

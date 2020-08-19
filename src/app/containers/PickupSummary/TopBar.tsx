@@ -35,8 +35,6 @@ const TopBar = (props: any) => {
       {value}
     </span>
   ));
-   
-
   return (
     <>
       <div className="main-navbar">
