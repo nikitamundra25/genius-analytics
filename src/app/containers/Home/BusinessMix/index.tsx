@@ -117,9 +117,15 @@ export default (props: any) => {
             color: "transparent",
           },
           visible: false,
+          //rangePadding: 'Round',
         },
         title: "Business Mix ADR",
-        tooltip: { enable: true },
+        tooltip: { 
+          enable: true , 
+          //TooltipPosition: 'Top', 
+          //fontSize:'10px', 
+          //size: '3px'
+        },
         height: setHeight,
       },
       title: "Business Mix ADR",

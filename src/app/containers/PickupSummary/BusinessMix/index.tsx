@@ -65,7 +65,7 @@ const PickupBusinessMix = (props: any) => {
           fontSize: "10px",
           padding: "2px 2px 2px 2px",
           borderRadius: "2px",
-          background: '#2b72b5',
+          background: '#ee792b',
         }}>
         <span>{args.point.y}</span>
       </div>
@@ -177,7 +177,8 @@ const PickupBusinessMix = (props: any) => {
                   },
                   visible: false,
                   //interval: 1,
-                  maximum:30,
+                  rangePadding: 'None',
+                  //maximum:30,
                 },
                 tooltip: { enable: true },
                 //height: `${setHeight}px`,
