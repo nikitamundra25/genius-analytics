@@ -141,10 +141,18 @@ const PickupSegment = ({ index, date }: any) => {
             chartSettings={{
               primaryXAxis: {
                 valueType: "Category",
-                interval: 1,
+                //interval: 1,
                 enableTrim: false,
                 majorGridLines: { width: 0 },
-                maximumLabelWidth: '100',
+                // maximumLabelWidth: '100',
+                //labelPlacement: 'OnTicks' ,
+               // labelIntersectAction: 'None',
+               // edgeLabelPlacement: 'Shift',
+                labelStyle: {
+                  fontStyle: 'bold',
+                  size: '8px',
+                  color:'black'
+                },
               },
               primaryYAxis: {
                 labelFormat: "{value}",
