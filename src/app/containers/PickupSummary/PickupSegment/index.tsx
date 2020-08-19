@@ -148,11 +148,11 @@ const PickupSegment = ({ index, date }: any) => {
                 //labelPlacement: 'OnTicks' ,
                // labelIntersectAction: 'None',
                // edgeLabelPlacement: 'Shift',
-                labelStyle: {
-                  fontStyle: 'bold',
-                  size: '8px',
-                  color:'black'
-                },
+                // labelStyle: {
+                //   fontStyle: 'bold',
+                //   size: '8px',
+                //   color:'black'
+                // },
               },
               primaryYAxis: {
                 labelFormat: "{value}",

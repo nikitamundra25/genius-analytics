@@ -165,6 +165,11 @@ const PickupBusinessMix = (props: any) => {
                   valueType: "Category",
                   interval: 1,
                   majorGridLines: { width: 0 },
+                  // labelStyle: {
+                  //   fontStyle: 'bold',
+                  //   size: '9px',
+                  //   color:'black'
+                  // },
                 },
                 primaryYAxis: {
                   labelFormat: "{value}",
