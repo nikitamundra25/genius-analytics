@@ -145,7 +145,6 @@ const PickupSegment = ({ index, date }: any) => {
                 enableTrim: false,
                 majorGridLines: { width: 0 },
                 maximumLabelWidth: '100',
-                
               },
               primaryYAxis: {
                 labelFormat: "{value}",
