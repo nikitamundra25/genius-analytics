@@ -42,113 +42,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
           />
         ) : (
         <>
-          <div className="dashboard-yearly-table mb-3">
-            <Table className="yearly-table mb-0" responsive>
-              <thead>
-                <tr className="business-top-row">
-                  <th></th>
-                  {months.map((month: string, indx: number) => (
-                    <th key={month} className="head-col">
-                      {month}
-                      <br />{" "}
-                      {month === "Total"
-                        ? moment(selectedDate).format("YYYY")
-                        : moment(selectedDate).format("YYYY") > moment().format("YYYY")
-                        ? "BOB" : moment(selectedDate).format("YYYY") < moment().format("YYYY") ? "Actual"
-                        : moment().format("MMMM") === month
-                        ? "BOB/Actual"
-                        : indx+1 > parseInt(moment().format("M")) 
-                        ? "BOB"
-                        : "Actual"}
-                      <div className="header-sub-title">
-                        <span>BUD</span>
-                        <span>LY</span>
-                        {/* <span>VS.BUD</span>
-                        <span>VS.LY</span> */}
-                      </div>
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                { 
-                data && data.tableData.length ? 
-                data.tableData.map((table: any, index: number) => (
-                  <React.Fragment key={`${table.type}-${index}`}>
-                    <tr>
-                      <td className="row-title">{table.name}</td>
-                      {months.map((month: any, index: number) => (
-                        <td
-                          key={`month-${index}`}
-                          className="content-col"
-                        >
-                          <div className="d-flex align-items-center flex-wrap">
-                            <div className="text-col">
-                              {" "}
-                              { table.monthData && table.monthData.length 
-                              ?  table.type === "occ" || table.type === "room-dev" ?  table.monthData[index]
-                                :  parseInt(table.monthData[index]).toLocaleString()
-                                : 0}
-                            </div>
-                            <OverlayTrigger
-                              key={"top1"}
-                              placement={"top"}
-                              overlay={
-                                <Tooltip id={`tooltip-increase`}>
-                                  {table.vsBud && table.vsBud.length
-                                    ? table.type === "occ" || table.type === "room-dev" 
-                                    ? table.vsBud[index] : parseInt(table.vsBud[index]).toLocaleString()
-                                    : 0}
-                                </Tooltip>
-                              }
-                            >
-                              <div className="icon-col">
-                                <img
-                                  src={
-                                    parseInt(table.monthData[index]) <=
-                                    parseInt(table.vsBud[index])
-                                      ? caretup
-                                      : caretdown
-                                  }
-                                  alt="increase"
-                                  width="12"
-                                />
-                              </div>
-                            </OverlayTrigger>
-                            <OverlayTrigger
-                              key={"top2"}
-                              placement={"top"}
-                              overlay={
-                                <Tooltip id={`tooltip-decrease`}>
-                                  {table.vsLy && table.vsLy.length
-                                  ? table.type === "occ" || table.type === "room-dev" 
-                                    ? table.vsLy[index] : parseInt(table.vsLy[index]).toLocaleString()
-                                    : 0}
-                                </Tooltip>
-                              }
-                            >
-                              <div className="icon-col">
-                                <img
-                                  src={
-                                    parseInt(table.monthData[index]) <=
-                                    parseInt(table.vsLy[index])
-                                      ? caretup
-                                      : caretdown
-                                  }
-                                  alt="decrease"
-                                  width="12"
-                                />
-                              </div>
-                            </OverlayTrigger>
-                          </div>
-                        </td>
-                      ))}
-                    </tr>
-                  </React.Fragment>
-                )): null }
-              </tbody>
-            </Table>
-          </div>
+        
 
           <div className="dashboard-yearly-table ">
             <Table className="yearly-table mb-0" responsive>
@@ -192,6 +86,80 @@ const CumulativeTable = ({ selectedDate }: any) => {
                return ( list.subData.map((subdata : any, ind:number)=>{      
                return (
                <>
+             {list.type === "arrowData" ? 
+               <tr>
+               <td className="row-title">{subdata.name}</td>
+               {months.map((month: any, index: number) => (
+                 <td
+                   key={`month-${index}`}
+                   className="content-col"
+                 >
+                   <div className="d-flex align-items-center flex-wrap">
+                     <div className="text-col">
+                       {" "}
+                       { subdata.value && subdata.value.length 
+                       ?  subdata.type === "occ" || subdata.type === "room-dev" ?  subdata.value[index]
+                         :  parseInt(subdata.value[index]).toLocaleString()
+                         : 0}
+                     </div>
+                     <OverlayTrigger
+                       key={"top1"}
+                       placement={"top"}
+                       overlay={
+                         <Tooltip id={`tooltip-increase`}>
+                           {subdata.vsBud && subdata.vsBud.length
+                             ? subdata.type === "occ" || subdata.type === "room-dev" 
+                             ? subdata.vsBud[index] : parseInt(subdata.vsBud[index]).toLocaleString()
+                             : 0}
+                         </Tooltip>
+                       }
+                     >
+                       <div className="icon-col">
+                         <img
+                           src={
+                             parseInt(subdata.value[index]) <=
+                             parseInt(subdata.vsBud[index])
+                               ? caretup
+                               : caretdown
+                           }
+                           alt="increase"
+                           width="12"
+                         />
+                       </div>
+                     </OverlayTrigger>
+                     <OverlayTrigger
+                       key={"top2"}
+                       placement={"top"}
+                       overlay={
+                         <Tooltip id={`tooltip-decrease`}>
+                           {subdata.vsLy && subdata.vsLy.length
+                           ? subdata.type === "occ" || subdata.type === "room-dev" 
+                             ? subdata.vsLy[index] : parseInt(subdata.vsLy[index]).toLocaleString()
+                             : 0}
+                         </Tooltip>
+                       }
+                     >
+                       <div className="icon-col">
+                         <img
+                           src={
+                             parseInt(subdata.value[index]) <=
+                             parseInt(subdata.vsLy[index])
+                               ? caretup
+                               : caretdown
+                           }
+                           alt="decrease"
+                           width="12"
+                         />
+                       </div>
+                     </OverlayTrigger>
+                   </div>
+                 </td>
+               ))}
+             </tr>
+            
+            : 
+
+           <>
                <tr key={ind} >
                  {ind === 0 ? (
                       <td
@@ -201,11 +169,6 @@ const CumulativeTable = ({ selectedDate }: any) => {
                         {list.title}
                       </td>
                     ) : null}
-                 {/* {ind === 0 ? (
-                <td className="row-title" rowSpan={list.subData.length}>
-                  {list.title}
-                </td>
-                   ) : null} */}
                 </tr>
                 <tr>
                   
@@ -235,6 +198,8 @@ const CumulativeTable = ({ selectedDate }: any) => {
                   ))}
                  
               </tr>
+              </>
+               }
               </>)
               }))
               })

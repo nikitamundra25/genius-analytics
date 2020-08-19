@@ -72,12 +72,12 @@ const MonthlyBOB = (props: any) => {
                 <Table responsive className="mb-0">
                   <thead>
                     <tr className="business-top-row">
-                      <th ></th>
-                      {months.map((month: any,indx:number) => {
+                      <th></th>
+                      {months.map((month: any, indx: number) => {
                         let weekendDay = moment(month).day();
                         return (
                           <th
-                            key ={indx}
+                            key={indx}
                             className={`date-col ${
                               weekendDay === 5 ||
                               weekendDay === 6 ||
@@ -151,17 +151,29 @@ const MonthlyBOB = (props: any) => {
                                             key={i}
                                           >
                                             {key.title === "OCC"
-                                              ? `${parseInt(data.num).toLocaleString()}%`
-                                              : parseInt(data.num).toLocaleString() }{" "}
+                                              ? `${parseInt(
+                                                  data.num
+                                                ).toLocaleString()}%`
+                                              : parseInt(
+                                                  data.num
+                                                ).toLocaleString()}{" "}
                                           </td>
                                         );
                                       })}
-                                      <td className={`${key.total ? "total-col": "bg-white" }`  } >
-                                        {key.total ? key.title === "OCC"
-                                              ? `${parseInt(key.total).toLocaleString()}%`
-                                              : parseInt(key.total).toLocaleString() : null }
-                                       
-                                       
+                                      <td
+                                        className={`${
+                                          key.total ? "total-col" : "bg-white"
+                                        }`}
+                                      >
+                                        {key.total
+                                          ? key.title === "OCC"
+                                            ? `${parseInt(
+                                                key.total
+                                              ).toLocaleString()}%`
+                                            : parseInt(
+                                                key.total
+                                              ).toLocaleString()
+                                          : null}
                                       </td>
                                     </tr>
                                   </>
