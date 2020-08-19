@@ -2,22 +2,22 @@
     "data":[
         {
           "data": [
-            { "x": "My OCC", "y": 65.7 },
-            { "x": "OCC Compact", "y": 68.3 },
+            { "x": "My<br>OCC", "y": 65.7 },
+            { "x": "OCC<br>Compact", "y": 68.3 },
             { "x": "MPI", "y": 96.1 }
           ]
       },
       {
         "data": [
-          { "x": "My ARR", "y": 175.1 },
-              { "x": "ARR Compact", "y": 140.6 },
+          { "x": "My<br>ARR", "y": 175.1 },
+              { "x": "ARR<br>Compact", "y": 140.6 },
               { "x": "ARI", "y": 124.6 }
         ]
       },
       {
         "data": [
-          { "x": "My RevPAR", "y": 115.0 },
-          { "x": "RevPAR Compact", "y": 96.0 },
+          { "x": "My<br>RevPAR", "y": 115.0 },
+          { "x": "RevPAR<br>Compact", "y": 96.0 },
           { "x": "RGI", "y": 119.7 }
         ]
       }

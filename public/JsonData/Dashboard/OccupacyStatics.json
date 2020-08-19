@@ -63,19 +63,19 @@
         {
           "data": [
             {
-              "name": "Midweek OCC",
+              "name": "Midweek<br>OCC",
               "TY": 87,
               "LY": 90,
               "Var": -3
             },
             {
-              "name": "Weekend OCC",
+              "name": "Weekend<br>OCC",
               "TY": 74,
               "LY": 73,
               "Var": 1
             },
             {
-              "name": "Total OCC",
+              "name": "Total<br>OCC",
               "TY": 81,
               "LY": 82,
               "Var": -1
