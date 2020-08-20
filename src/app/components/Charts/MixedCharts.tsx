@@ -26,6 +26,7 @@ const MixedCharts = ({ charts = [], id="mixed-map", chartSettings = {},legend= t
             args.font.color = 'red';
         }
       };
+
   return (<div style={{ height: "100%", width: "100%" }}>
     <ChartComponent
       id={id}
