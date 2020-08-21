@@ -3,6 +3,7 @@ export const getMonths = () => {
   return moment.months();
 };
 
+
 export const getMonthsData = (date: any) => {
   let daysInMonth = [];
   let monthDate = moment(date).startOf("month");
