@@ -103,7 +103,12 @@ const TopBar = (props: any) => {
     </span>
   ));
   const { startDate } = state;
-
+  let d = new Date("01-01-2010");
+  let year = d.getFullYear();
+  let month = d.getMonth();
+  let day = d.getDate();
+  let endDate = new Date(year + 10, month, day);
+  console.log(endDate,"endDate");
   return (
     <>
       <div className="main-navbar">
@@ -150,6 +155,7 @@ const TopBar = (props: any) => {
             onChange={(date: any) => ondateChange(date, "year")}
             showYearPicker
             dateFormat="yyyy"
+            
             className="custom-datepicker cursor-pointer"
             customInput={<CustomInput />}
             // minDate={new Date("2010/01/01")}
