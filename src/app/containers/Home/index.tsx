@@ -151,6 +151,7 @@ const HomeComponent: FunctionComponent = () => {
     }
   };
 
+
   const { widgets, isLoading, isError } = DashboardReducer;
 
   return (
@@ -168,6 +169,7 @@ const HomeComponent: FunctionComponent = () => {
             id="defaultLayout"
             cellSpacing={cellSpacing}
             allowResizing={false}
+            allowDragging={true}
             columns={4}
             mediaQuery={"max-width: 991px"}
             cellAspectRatio={100 / 100}

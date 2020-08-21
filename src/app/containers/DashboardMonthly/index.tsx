@@ -130,6 +130,7 @@ const DashboardMonthly: FunctionComponent = () => {
             cellSpacing={cellSpacing}
             mediaQuery={"max-width: 991px"}
             allowResizing={false}
+            allowDragging={true}
             columns={6}
             cellAspectRatio={50 / 64}
             created={created}
