@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Card, Table } from "react-bootstrap";
+import { Card, Table, OverlayTrigger, Tooltip, } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { requestMonthlyBOBData } from "../../../../actions";
@@ -8,6 +8,10 @@ import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { getMonthsData } from "../../../../helper";
 import moment from "moment";
 import "../index.scss";
+import bob from "../../../../assets/img/bob.svg";
+import pickup from "../../../../assets/img/pickup.svg";
+import market from "../../../../assets/img/marketing.svg";
+import bed from "../../../../assets/img/bed.svg";
 
 const MonthlyBOB = (props: any) => {
   const months = getMonthsData(props.selectedDate);
@@ -72,7 +76,14 @@ const MonthlyBOB = (props: any) => {
                 <Table responsive className="mb-0">
                   <thead>
                     <tr className="business-top-row">
-                      <th></th>
+                      <th className="month-title">
+                        <span className="mr-2">
+                          <i className="icon-calendar"/>
+                        </span>
+                        <span>
+                          {moment(props.selectedDate).format("MMMM")}
+                          </span>
+                        </th>
                       {months.map((month: any, indx: number) => {
                         let weekendDay = moment(month).day();
                         return (
@@ -87,13 +98,13 @@ const MonthlyBOB = (props: any) => {
                             }`}
                           >
                             <div className="date-div">
-                              <span>{moment(month).format("ddd")} </span>
-                              <span>{moment(month).format("DD MMM")}</span>
+                              <span className="date-text">{moment(month).format("DD")}</span>
+                              <span className="weekname-text">{moment(month).format("ddd")} </span>
                             </div>
                           </th>
                         );
                       })}
-                      <th>Total</th>
+                      <th className="total-head">Total</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -104,6 +115,20 @@ const MonthlyBOB = (props: any) => {
                               {list.subData.map((key: any, ind: number) => {
                                 return (
                                   <>
+                                  <tr>
+                                      {ind === 0 ? (
+                                        <td
+                                          colSpan={
+                                            months.length
+                                              ? months.length + 2
+                                              : 33
+                                          }
+                                          className="title-col sperator-white-section"
+                                        >
+                                          {/* {list.title} */}
+                                        </td>
+                                      ) : null}
+                                    </tr>
                                     <tr>
                                       {ind === 0 ? (
                                         <td
@@ -114,13 +139,37 @@ const MonthlyBOB = (props: any) => {
                                           }
                                           className="title-col bg-1 "
                                         >
-                                          {list.title}
+                                          <div className="separtor-line"></div>
                                         </td>
                                       ) : null}
                                     </tr>
                                     <tr key={ind}>
                                       <td className="title-col white-nowrap">
-                                        {key.title}{" "}
+                                        <div className="d-flex align-items-cente subtitle-section">
+                                          <OverlayTrigger
+                                              key={"top2"}
+                                              placement={"top"}
+                                              overlay={
+                                                <Tooltip id={`tooltip-${ind}`}>
+                                                  {list.title}
+                                                </Tooltip>
+                                              }
+                                            >
+                                              { list.title === "Business on the Books" ? (
+                                                <img src={bob}  width="20px" alt={list.title}/>
+                                              ) : list.title === "Pick up since Yesterday" ? (
+                                                <img src={pickup}  width="20px" alt={list.title}/>
+                                              ) : list.title === "Availability & Rates" ? (
+                                                <img src={market}  width="20px" alt={list.title}/>
+                                              ) : list.title === "Room Type Availability" ? (
+                                                <img src={bed}  width="20px" alt={list.title}/>
+                                              ) : null }
+                                              
+                                              </OverlayTrigger>
+                                              <span>{key.title}</span>
+
+                                        </div>
+                                       
                                       </td>
                                       {key.data.map((data: any, i: number) => {
                                         return i > months.length - 1 ? null : (
