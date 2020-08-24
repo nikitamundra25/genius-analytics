@@ -111,7 +111,7 @@ const TopBar = (props: any) => {
   console.log(endDate,"endDate");
   return (
     <>
-      <div className="main-navbar">
+      <div className="main-navbar justify-content-end">
         {selectedNav === "Dashboard Yearly" ? (
           ""
         ) : (

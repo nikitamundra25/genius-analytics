@@ -177,7 +177,7 @@ const MonthlyBOB = (props: any) => {
                                             className={`content-col  
                                             ${
                                               parseInt(data.num) < 0
-                                                ? "bg-negative"
+                                                ? "text-danger"
                                                 : ""
                                             } ${
                                               key.title === "OCC" &&

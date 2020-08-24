@@ -196,7 +196,8 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
           {SAMPLE_CSS}
       </style>
       <WidgetHeader
-        title={"Daily Occupacy Vs. BUD Vs. LY"}
+        // title={"Daily Occupacy Vs. BUD Vs. LY"}
+        title={`${selectedValue === "OCC" ? 'Daily Occupacy' : selectedValue === "ADR" ? 'ADR' :'RevPAR'} Vs. BUD Vs. LY` }
         activeToggle={"graph"}
         showToggle={false}
         showdropdowndaily={true}
