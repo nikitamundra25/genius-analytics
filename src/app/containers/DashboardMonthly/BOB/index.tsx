@@ -14,7 +14,7 @@ import market from "../../../../assets/img/marketing.svg";
 import bed from "../../../../assets/img/bed.svg";
 
 const MonthlyBOB = (props: any) => {
-  const months = getMonthsData(props.selectedDate);
+  const months = getMonthsData(props.selectedDate, "dashboard");
   const dispatch = useDispatch();
   const [bobList, setbobList] = React.useState<any>([]);
 

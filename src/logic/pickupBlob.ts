@@ -4,6 +4,12 @@ import {
   PickupBlobDataFailed,
   PickupBlobDataSuccess,
   togglePickupBlobLoader,
+  togglePickupBlobFutureLoader,
+  PickupBlobFutureDataFailed,
+  PickupBlobFutureDataSuccess,
+  togglePickupBlobPastLoader,
+  PickupBlobPastDataFailed,
+  PickupBlobPastDataSuccess,
 } from "../actions";
 import { ApiHelper } from "../helper";
 
@@ -35,4 +41,61 @@ const getPickupBlobLogic = createLogic({
   },
 });
 
-export const PickupBlobLogics: Logic[] = [getPickupBlobLogic as Logic];
+
+const getPickupBlobFutureLogic = createLogic({
+  type: PickupBlobActionTypes.REQUETS_PICKUP_BLOB_FUTURE_DATA,
+  process: async ({ action }:any, dispatch: any, done) => {
+    dispatch(
+      togglePickupBlobFutureLoader({
+        isLoading: true,
+      })
+    );
+    
+    const { isError, data } = await new ApiHelper().FetchFromLocalJSONFile(
+      "Pickup",
+      "/pickupBlobFuture.json",
+      "GET"
+    );
+    if (isError) {
+      dispatch(PickupBlobFutureDataFailed());
+      done();
+      return;
+    }
+    dispatch(
+      PickupBlobFutureDataSuccess({
+        data: data.data,
+      })
+    );
+    done();
+  },
+});
+//  pickupBlobPast
+
+const getPickupBlobPastLogic = createLogic({
+  type: PickupBlobActionTypes.REQUETS_PICKUP_BLOB_PAST_DATA,
+  process: async ({ action }:any, dispatch: any, done) => {
+    dispatch(
+      togglePickupBlobPastLoader({
+        isLoading: true,
+      })
+    );
+    
+    const { isError, data } = await new ApiHelper().FetchFromLocalJSONFile(
+      "Pickup",
+      "/pickupBlobPast.json",
+      "GET"
+    );
+    if (isError) {
+      dispatch(PickupBlobPastDataFailed());
+      done();
+      return;
+    }
+    dispatch(
+      PickupBlobPastDataSuccess({
+        data: data.data,
+      })
+    );
+    done();
+  },
+});
+export const PickupBlobLogics: Logic[] = [getPickupBlobLogic as Logic, getPickupBlobFutureLogic as Logic , getPickupBlobPastLogic as Logic];

@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useEffect } from "react";
 import DashboardWidget from "./Widget";
 import TopBar from "../PickupSummary/TopBar";
-import { generateArrayOfMonths } from "../../../helper";
+import { generateArrayofBOBData } from "../../../helper";
 import '../PickupDetail/index.scss';
 
 const PickupDetail: FunctionComponent = () => {
@@ -12,13 +12,13 @@ const PickupDetail: FunctionComponent = () => {
 
   useEffect(() => {
     // dispatch(PickupDetailRequest());
-    let temp = generateArrayOfMonths(new Date())
+    let temp = generateArrayofBOBData(new Date())
     setpickupList(temp)
     // eslint-disable-next-line
   }, []);
 
   const handleDate = (date:Date)=>{
-    let temp = generateArrayOfMonths(date)
+    let temp = generateArrayofBOBData(date)
     setpickupList(temp)
     }
 
