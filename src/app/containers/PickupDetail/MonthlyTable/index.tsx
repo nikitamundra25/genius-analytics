@@ -11,7 +11,7 @@ import moment from "moment";
 
 const MonthlyTable = ({ date }: any) => {
   const dispatch = useDispatch();
-  const months: any = getMonthsData(new Date(date));
+  const months: any = getMonthsData(new Date(date), "pickupData");
   const [state, setState] = React.useState<any>([]);
   const [sumOfColumns, setsumOfColumns] = React.useState<ISumOfColumnsState| any>({});
 
@@ -30,17 +30,31 @@ const MonthlyTable = ({ date }: any) => {
       let filterData: any = graphdata.filter((list: any) => {
         return list.month === moment(date).format("MMMM-YY");
       })[0];
-      let temp: any =
-        filterData && filterData.pickupDetailData && filterData.pickupDetailData.length
-          ? filterData.pickupDetailData
-          : [];
+      let stemp :any= []
+      if(filterData.pickupDetailData && filterData.pickupDetailData.length){
+        // eslint-disable-next-line
+        filterData.pickupDetailData.map((key:any,i:number)=>{
+          let arr:any = months.filter((item: any) => {
+            return item.format("DD MMM YY") === key.Month;
+          })[0];
+          if(arr){
+            return stemp.push(key)
+           }
+        })
+      }
+      
+
+      // let temp: any =
+      //   filterData && filterData.pickupDetailData && filterData.pickupDetailData.length
+      //     ? filterData.pickupDetailData
+      //     : [];
 
       // To add data according to column
-      let result: ISumOfColumnsState = temp.reduce((acc: any, n: any) => {
+      let result: ISumOfColumnsState = stemp.reduce((acc: any, n: any) => {
         for (let prop in n) {
           if (prop !== "Month") {
             if (acc.hasOwnProperty(prop)) {
-              acc[prop] += n[prop] ? parseFloat(n[prop]) : 0;
+              acc[prop] +=  n[prop] ? parseFloat(n[prop]) : 0;
             } else {
               acc[prop] = n[prop] ? parseFloat(n[prop]) : 0;
             }
@@ -50,7 +64,7 @@ const MonthlyTable = ({ date }: any) => {
       }, {});
 
       setsumOfColumns(result);
-      setState(temp);
+      setState(stemp);
     }
     // eslint-disable-next-line
   }, [graphdata]);

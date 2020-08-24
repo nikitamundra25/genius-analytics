@@ -3,14 +3,14 @@ import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState, IBOBState } from "../../../../interfaces";
-import { requestPickupBlobData } from "../../../../actions";
+import { requestPickupBlobData, requestPickupBlobFutureData,requestPickupBlobPastData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { getMonthsData } from "../../../../helper";
 import moment from "moment";
 
 const BOBMonthlyTable = ({ date }: any) => {
   const dispatch = useDispatch();
-  const months: any = getMonthsData(new Date(date));
+  const months: any = getMonthsData(new Date(date),"pickupData");
   const [state, setState] = React.useState<any>([]);
   const [sumOfColumns, setsumOfColumns] = React.useState<IBOBState | any>({});
 
@@ -19,20 +19,37 @@ const BOBMonthlyTable = ({ date }: any) => {
   );
 
   useEffect(() => {
-    dispatch(requestPickupBlobData());
+    // dispatch(requestPickupBlobData());
     // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
+
+    const yearDate :any = moment(date).format("YYYY");
+    let d = new Date();
+    const currentYear:any = d.getFullYear();
+  
+    if (yearDate > currentYear) {
+      dispatch(requestPickupBlobFutureData());
+    } else if (yearDate < currentYear) {
+      dispatch(requestPickupBlobPastData())
+    } else {
+      dispatch(requestPickupBlobData());
+    }
+
+    // eslint-disable-next-line
+  }, [date]);
+
+  useEffect(() => {
     if (graphdata && graphdata.length) {
       let filterData: any = graphdata.filter((list: any) => {
-        return list.month === moment(date).format("MMMM-YY");
+        return list.month === moment(date).format("MMMM");
       })[0];
       let temp: any =
         filterData && filterData.blobData && filterData.blobData.length
           ? filterData.blobData
           : [];
-
+  
       // To add data according to column
       let result: IBOBState = temp.reduce((acc: any, n: any) => {
         for (let prop in n) {
@@ -46,7 +63,6 @@ const BOBMonthlyTable = ({ date }: any) => {
         }
         return acc;
       }, {});
-
       setsumOfColumns(result);
       setState(temp);
     }
@@ -218,7 +234,7 @@ const BOBMonthlyTable = ({ date }: any) => {
               </thead>
               <tbody>
                 {state && state.length
-                  ? state.map((list: any, index: number) => {
+                  ? state.map((list: any, index: number) => {     
                       let weekendDay = moment(months[index]).day();
                       return index > months.length - 1 ? null : (
                         <>
