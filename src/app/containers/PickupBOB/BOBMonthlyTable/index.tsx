@@ -184,6 +184,9 @@ const BOBMonthlyTable = ({ date }: any) => {
                   <th className="head-col total-content " colSpan={3}>
                     Staff
                   </th>
+                  <th className="head-col total-content " colSpan={3}>
+                    
+                  </th>
                 </tr>
                 <tr>
                   <th className="border-left-0"></th>
@@ -228,6 +231,9 @@ const BOBMonthlyTable = ({ date }: any) => {
                   <th className="head-col ">Revenue</th>
 
                   <th className="head-col  total-content">Rooms</th>
+                  <th className="head-col  ">ADR</th>
+                  <th className="head-col ">Revenue</th>
+                   <th className="head-col  total-content">Rooms</th>
                   <th className="head-col  ">ADR</th>
                   <th className="head-col ">Revenue</th>
                 </tr>
@@ -724,6 +730,36 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.staffRevenue ? list.staffRevenue : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.resultRooms &&
+                                parseInt(list.resultRooms) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.resultRooms ? list.resultRooms : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.resultADR &&
+                                parseInt(list.resultADR) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.resultADR ? list.resultADR : "-"}
+                            </td>
+                            <td
+                              className={`content-col ${
+                                list.resultRevenue &&
+                                parseInt(list.resultRevenue) < 0
+                                  ? "text-danger"
+                                  : ""
+                              }`}
+                            >
+                              {list.resultRevenue ? list.resultRevenue : "-"}
                             </td>
                           </tr>
                         </>
