@@ -127,7 +127,6 @@ const labeltemplate2 = (args: any) => {
               font: {
                 fontWeight: "600",
                 color: "#ffffff",
-                
               },
             },
           },
@@ -171,7 +170,7 @@ const labeltemplate2 = (args: any) => {
             visible: true,
             width: 8,
             height: 8,
-            fill: "#2f5891",
+            fill: "#2bb5ec",
             border: { width: 1, color: "#ddd" },
             dataLabel: {
               visible: true,
@@ -201,7 +200,7 @@ const labeltemplate2 = (args: any) => {
             visible: true,
             width: 8,
             height: 8,
-            fill: "#2f5891",
+            fill: "#293046",
             border: { width: 1, color: "#ddd" },
             dataLabel: {
               visible: true,
@@ -229,6 +228,21 @@ const labeltemplate2 = (args: any) => {
           name: "TY",
           width: 1,
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
+          marker: {
+            visible: false,
+            width: 8,
+            height: 8,
+            border: { width: 2, color: "#2bb5ec" },
+            dataLabel: {
+              visible: true,
+              position: "Middle",
+              template: labeltemplate,
+              font: {
+                fontWeight: "600",
+                color: "#ffffff",
+              },
+            },
+          },
         },
         {
           dataSource: data && data.length && data[1] ? data[1].data : [],
@@ -240,6 +254,21 @@ const labeltemplate2 = (args: any) => {
           name: "LY",
           width: 1,
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
+          marker: {
+            visible: false,
+            width: 8,
+            height: 8,
+            border: { width: 2, color: "#2bb5ec" },
+            dataLabel: {
+              visible: true,
+              position: "Middle",
+              template: labeltemplate,
+              font: {
+                fontWeight: "600",
+                color: "#ffffff",
+              },
+            },
+          },
         },
         {
           dataSource: data && data.length && data[1] ? data[1].data : [],
@@ -337,6 +366,7 @@ const labeltemplate2 = (args: any) => {
                     valueType: "Category",
                     interval: 1,
                     majorGridLines: { width: 0 },
+                    
                   },
                   primaryYAxis: {
                     labelFormat: "{value}",
@@ -367,6 +397,7 @@ const labeltemplate2 = (args: any) => {
                   valueType: "Category",
                   interval: 1,
                   majorGridLines: { width: 0 },
+                  
                 },
                 primaryYAxis: {
                   labelFormat: "{value}%",
