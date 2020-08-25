@@ -92,6 +92,9 @@ export interface IBOBState{
     airlineCrewRevenue: number,
     staffRooms: number,
     staffADR: number,
-    staffRevenue: number
+    staffRevenue: number,
+    TotalRooms: number,
+    TotalADR: number,
+    TotalRevenue: number
   
 }
