@@ -13,9 +13,18 @@
     font-size:11px;
     text-align:center;
     vertical-align: middle;
+   
     @media only screen and (min-width: 1558px) {
       padding: 5px 3px;
       font-size:12px;
+    }
+    @media only screen and (min-width: 1630px) {
+      padding: 6px 3px;
+      font-size:12px;
+    }
+    @media only screen and (min-width: 1880px) {
+      padding: 9px 3px;
+      font-size:14px;
     }
     @media only screen and (max-width: 1557px) {
       padding: 5px 3px;

@@ -37,7 +37,14 @@ const TopBar = (props: any) => {
   ));
   return (
     <>
-      <div className="main-navbar">
+      <div className={`main-navbar ${ location.pathname === AppRoutes.PICKUPBOB ? 'justify-content-end' : ''}`} >
+         {location.pathname === AppRoutes.PICKUPBOB ? '' :  (
+         <div className="main-title">
+            Pick-up since 21st of August
+          </div>
+          )}
+       
+        <div className="navbar-list">
         <div className="navbar-nav-item">
           <div className="year-nav">
             <span
@@ -89,6 +96,8 @@ const TopBar = (props: any) => {
             location.pathname === AppRoutes.PICKUPBOB ? 'active' : ''
           }`}>BOB</div>
         </div>
+        </div>
+        
       </div>
     </>
   );

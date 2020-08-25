@@ -51,7 +51,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                   <th></th>
                   
                   {months.map((month: string, index: number) => (
-                    <th key={month} className="head-col min-wauto pb-1">
+                    <th key={month} className="head-col ">
                       {month}
                       <br />{" "}
                       {month === "Total"
@@ -63,6 +63,11 @@ const CumulativeTable = ({ selectedDate }: any) => {
                         : index+1 > parseInt(moment().format("M")) 
                         ? "BOB"
                         : "Actual"}
+                        <div className="header-sub-title">
+                        <span>BUD</span>
+                        <span>LY</span>
+                       
+                      </div>
                     </th>
                   ))}
                 </tr>
@@ -178,7 +183,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                     <td key={`${i}`}  className={`content-col  
                     ${
                       parseInt(value) < 0
-                        ? "bg-negative"
+                        ? "text-danger"
                         : ""
                     }`}>
                       {value ? parseInt(value).toLocaleString() : "-"}
