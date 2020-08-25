@@ -10,8 +10,8 @@ export const getMonthsData = (date: any, name:string) => {
   let monthDate = moment(date).startOf("month");
   let daysCount: number = monthDate.daysInMonth()
   if(moment(date).format("MMMM") === moment().format("MMMM") &&  name === "pickupData" ){
-    monthDate = moment(date);
-    var endDate = moment().endOf("month");
+    monthDate = moment(date).subtract(1, "days");;
+    let endDate = moment().endOf("month");
     daysCount =  endDate.diff(monthDate, 'days');
   }
   
