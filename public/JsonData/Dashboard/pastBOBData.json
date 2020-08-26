@@ -1,0 +1,53 @@
+[
+    {
+      "title": "Room Nights",
+      "BOBValue": 8888,
+      "budget": 11252,
+      "ly": 11200,
+      "stlyValue": 8084,
+      "VSbud": -2364,
+      "VSly": -2312,
+      "VSstly": 804
+    },
+    {
+      "title": "OCC",
+      "BOBValue": 71.9,
+      "budget": 91.0,
+      "ly": 90.5,
+      "stlyValue": 65.4,
+      "VSbud": -19,
+      "VSly": -18.7,
+      "VSstly": 6.5
+    },
+    {
+      "title": "Revenue",
+      "BOBValue": 1563399,
+      "budget": 2250287,
+      "ly": 2257696,
+      "stlyValue": 1409203,
+      "VSbud": -686888,
+      "VSly": -694297,
+      "VSstly": 154196
+    },
+    {
+      "title": "ADR",
+      "BOBValue": 175.9,
+      "budget": 200.0,
+      "ly": 201.6,
+      "stlyValue": 174.3,
+      "VSbud": -24.1,
+      "VSly": -25.7,
+      "VSstly": 1.6
+    },
+    {
+      "title": "RevPAR",
+      "BOBValue": 126.4,
+      "budget": 181.9,
+      "ly": 182.5,
+      "stlyValue": 113.9,
+      "VSbud": -55.5,
+      "VSly": -56.1,
+      "VSstly": 12.5
+    }
+  ]
+
