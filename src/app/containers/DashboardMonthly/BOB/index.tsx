@@ -10,7 +10,7 @@ import moment from "moment";
 import "../index.scss";
 import bob from "../../../../assets/img/bob.svg";
 import pickup from "../../../../assets/img/pickup.svg";
-import market from "../../../../assets/img/marketing.svg";
+import market from "../../../../assets/img/availability.svg";
 import bed from "../../../../assets/img/bed.svg";
 
 const MonthlyBOB = (props: any) => {
@@ -145,16 +145,17 @@ const MonthlyBOB = (props: any) => {
                                     </tr>
                                     <tr key={ind}>
                                       <td className="title-col white-nowrap">
-                                        <div className="d-flex align-items-cente subtitle-section">
-                                          <OverlayTrigger
-                                              key={"top2"}
-                                              placement={"top"}
-                                              overlay={
-                                                <Tooltip id={`tooltip-${ind}`}>
-                                                  {list.title}
-                                                </Tooltip>
-                                              }
-                                            >
+                                        <OverlayTrigger
+                                            key={"top2"}
+                                            placement={"top"}
+                                            overlay={
+                                              <Tooltip id={`tooltip-${ind}`}>
+                                                {list.title}
+                                              </Tooltip>
+                                            }
+                                          >
+                                            <div className="d-flex align-items-cente subtitle-section">
+                                          
                                               { list.title === "Business on the Books" ? (
                                                 <img src={bob}  width="20px" alt={list.title}/>
                                               ) : list.title === "Pick up since Yesterday" ? (
@@ -165,11 +166,10 @@ const MonthlyBOB = (props: any) => {
                                                 <img src={bed}  width="20px" alt={list.title}/>
                                               ) : null }
                                               
-                                              </OverlayTrigger>
                                               <span>{key.title}</span>
-
-                                        </div>
-                                       
+                                            
+                                          </div>
+                                        </OverlayTrigger>
                                       </td>
                                       {key.data.map((data: any, i: number) => {
                                         return i > months.length - 1 ? null : (

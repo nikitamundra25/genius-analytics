@@ -40,7 +40,7 @@ const TopBar = (props: any) => {
       <div className={`main-navbar ${ location.pathname === AppRoutes.PICKUPBOB ? 'justify-content-end' : ''}`} >
          {location.pathname === AppRoutes.PICKUPBOB ? '' :  (
          <div className="main-title">
-            Pick-up since 21st of August
+            Pick-up since {moment(new Date()).format('Do')} of {moment(new Date()).format('MMMM')}
           </div>
           )}
        

@@ -122,49 +122,49 @@ const MonthlyTable = ({ date }: any) => {
               <thead>
                 <tr>
                   <th className="border-0"></th>
-                  <th className="head-col border-left" colSpan={2}>
+                  <th className="head-col border-left main-head-col" colSpan={2}>
                     Bar
                   </th>
-                  <th className="head-col border-left" colSpan={2}>
-                    Public Discount
+                  <th className="head-col border-left main-head-col" colSpan={2}>
+                    Public<br/>Discount
                   </th>
-                  <th className="head-col border-left" colSpan={2}>
-                    Corporate Discount
+                  <th className="head-col border-left main-head-col" colSpan={2}>
+                    Corporate<br/>Discount
                   </th>
-                  <th className="head-col border-left" colSpan={2}>
-                    Partnership Discount
+                  <th className="head-col border-left main-head-col" colSpan={2}>
+                    Partnership<br/>Discount
                   </th>
-                  <th className="head-col border-left" colSpan={2}>
-                    Online Advantage
+                  <th className="head-col border-left main-head-col" colSpan={2}>
+                    Online<br/>Advantage
                   </th>
-                  <th className="head-col border-left" colSpan={2}>
-                    Corporate Groups
+                  <th className="head-col border-left main-head-col" colSpan={2}>
+                    Corporate<br/>Groups
                   </th>
-                  <th className="head-col border-left" colSpan={2}>
-                  Leisure Group
+                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  Leisure<br/>Group
                   </th>
-                  <th className="head-col border-left" colSpan={2}>
-                    Residential Groups
+                  <th className="head-col border-left main-head-col" colSpan={2}>
+                    Residential<br/>Groups
                   </th>
-                  <th className="head-col border-left" colSpan={2}>
+                  <th className="head-col border-left main-head-col" colSpan={2}>
                     OTA's
                   </th>
-                  <th className="head-col border-left" colSpan={2}>
+                  <th className="head-col border-left main-head-col" colSpan={2}>
                     Wholesale
                   </th>
-                  <th className="head-col border-left" colSpan={2}>
-                    Long Term Contract
+                  <th className="head-col border-left main-head-col" colSpan={2}>
+                    Long Term<br/>Contract
                   </th>
-                  <th className="head-col border-left" colSpan={2}>
-                     Monthly Contract
+                  <th className="head-col border-left main-head-col" colSpan={2}>
+                     Monthly<br/>Contract
                   </th>
-                  <th className="head-col border-left" colSpan={2}>
-                    Airline Crew Group
+                  <th className="head-col border-left main-head-col" colSpan={2}>
+                    Airline Crew<br/>Group
                   </th>
-                  <th className="head-col border-left" colSpan={2}>
+                  <th className="head-col border-left main-head-col" colSpan={2}>
                     Staff
                   </th>
-                  <th className="head-col total-content " colSpan={3}>
+                  <th className="head-col total-content  main-head-col" colSpan={3}>
                     Total
                   </th>
                 </tr>

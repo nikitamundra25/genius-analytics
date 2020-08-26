@@ -121,6 +121,9 @@ const BOBMonthlyTable = ({ date }: any) => {
     staffRooms = 0,
     staffADR = 0,
     staffRevenue = 0,
+    TotalRooms = 0,
+    TotalADR = 0,
+    TotalRevenue = 0,
   } = sumOfColumns;
 
   return (
@@ -142,50 +145,50 @@ const BOBMonthlyTable = ({ date }: any) => {
               <thead>
                 <tr>
                   <th className="border-0"></th>
-                  <th className="head-col border-left" colSpan={3}>
+                  <th className="head-col border-left main-head-col" colSpan={3}>
                     Bar
                   </th>
-                  <th className="head-col border-left" colSpan={3}>
-                    Public Discount
+                  <th className="head-col border-left main-head-col" colSpan={3}>
+                    Public<br/>Discount
                   </th>
-                  <th className="head-col border-left" colSpan={3}>
-                    Corporate Discount
+                  <th className="head-col border-left main-head-col" colSpan={3}>
+                    Corporate<br/>Discount
                   </th>
-                  <th className="head-col border-left" colSpan={3}>
-                    Partnership Discount
+                  <th className="head-col border-left main-head-col" colSpan={3}>
+                    Partnership<br/>Discount
                   </th>
-                  <th className="head-col border-left" colSpan={3}>
-                    Online Advantage
+                  <th className="head-col border-left main-head-col" colSpan={3}>
+                    Online<br/>Advantage
                   </th>
-                  <th className="head-col border-left" colSpan={3}>
-                    Corporate Groups
+                  <th className="head-col border-left main-head-col" colSpan={3}>
+                    Corporate<br/>Groups
                   </th>
-                  <th className="head-col border-left" colSpan={3}>
-                    Leisure Groups
+                  <th className="head-col border-left main-head-col" colSpan={3}>
+                    Leisure<br/>Groups
                   </th>
-                  <th className="head-col border-left" colSpan={3}>
-                    Residential Groups
+                  <th className="head-col border-left main-head-col" colSpan={3}>
+                    Residential<br/>Groups
                   </th>
-                  <th className="head-col border-left" colSpan={3}>
+                  <th className="head-col border-left main-head-col" colSpan={3}>
                     OTAs
                   </th>
-                  <th className="head-col border-left" colSpan={3}>
+                  <th className="head-col border-left main-head-col" colSpan={3}>
                     Wholesale
                   </th>
-                  <th className="head-col border-left" colSpan={3}>
-                    Long Term Contract
+                  <th className="head-col border-left main-head-col" colSpan={3}>
+                    Long Term<br/>Contract
                   </th>
-                  <th className="head-col border-left" colSpan={3}>
-                    Monthly Contract
+                  <th className="head-col border-left main-head-col" colSpan={3}>
+                    Monthly<br/>Contract
                   </th>
-                  <th className="head-col border-left" colSpan={3}>
-                    Airline Crew Group
+                  <th className="head-col border-left main-head-col" colSpan={3}>
+                    Airline Crew<br/>Group
                   </th>
-                  <th className="head-col total-content " colSpan={3}>
+                  <th className="head-col  main-head-col" colSpan={3}>
                     Staff
                   </th>
-                  <th className="head-col total-content " colSpan={3}>
-                    
+                  <th className="head-col total-content main-head-col" colSpan={3}>
+                  Total
                   </th>
                 </tr>
                 <tr>
@@ -230,7 +233,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                   <th className="head-col ">ADR</th>
                   <th className="head-col ">Revenue</th>
 
-                  <th className="head-col  total-content">Rooms</th>
+                  <th className="head-col ">Rooms</th>
                   <th className="head-col  ">ADR</th>
                   <th className="head-col ">Revenue</th>
                    <th className="head-col  total-content">Rooms</th>
@@ -704,7 +707,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                 : "-"}
                             </td>
                             <td
-                              className={`content-col total-content  ${
+                              className={`content-col  ${
                                 list.staffRooms && parseInt(list.staffRooms) < 0
                                   ? "text-danger"
                                   : ""
@@ -732,7 +735,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               {list.staffRevenue ? list.staffRevenue : "-"}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col  total-content ${
                                 list.resultRooms &&
                                 parseInt(list.resultRooms) < 0
                                   ? "text-danger"
@@ -923,7 +926,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                   <td className="total-col">
                     {airlineCrewRevenue > 0 ? airlineCrewRevenue.toFixed(1) : 0}
                   </td>
-                  <td className="total-col total-content">
+                  <td className="total-col ">
                     {staffRooms > 0 ? staffRooms.toFixed(1) : 0}
                   </td>
                   <td className="total-col ">
@@ -931,6 +934,15 @@ const BOBMonthlyTable = ({ date }: any) => {
                   </td>
                   <td className="total-col ">
                     {staffRevenue > 0 ? staffRevenue.toFixed(1) : 0}
+                  </td>
+                  <td className="total-col total-content">
+                    {TotalRooms > 0 ? TotalRooms.toFixed(1) : 0}
+                  </td>
+                  <td className="total-col ">
+                    {TotalADR > 0 ? TotalADR.toFixed(1) : 0}
+                  </td>
+                  <td className="total-col ">
+                    {TotalRevenue > 0 ? TotalRevenue.toFixed(1) : 0}
                   </td>
                 </tr>
               </tfoot>
