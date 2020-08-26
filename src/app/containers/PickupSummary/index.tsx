@@ -12,6 +12,7 @@ import { generateArrayOfMonths } from "../../../helper";
 const PickupSummary: FunctionComponent = () => {
   // const dispatch = useDispatch();
   const [pickupList, setpickupList] = React.useState([]);
+  const [date, setdate] = React.useState<Date>(new Date());
 
   // const PickupReducer = useSelector((state: IRootState) => state.PickupReducer);
 
@@ -24,6 +25,7 @@ const PickupSummary: FunctionComponent = () => {
 
   const handleDate = (date:Date)=>{
     let temp = generateArrayOfMonths(date)
+    setdate(date)
     setpickupList(temp)
     }
 
@@ -42,7 +44,7 @@ const PickupSummary: FunctionComponent = () => {
           /> 
         ) : */}
         {pickupList && pickupList.length ? (
-          <DashboardWidget graphList={pickupList} />
+          <DashboardWidget graphList={pickupList} date={date} />
         ) : null}
       </div>
     </>

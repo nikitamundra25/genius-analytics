@@ -1,0 +1,39 @@
+{
+    "data": {
+      "graph":[
+          {
+            "data": [
+              { "x": "BAR", "y": 0 },
+              { "x": "COR", "y": 0 },
+              { "x": "PROMO", "y": 0 },
+              { "x": "FIT", "y": 0},
+              { "x": "GROUPS", "y": 0 }
+            ]
+          },
+          {
+            "data": [
+              { "x": "BAR", "y": 0 },
+              { "x": "COR", "y": 0 },
+              { "x": "PROMO", "y": 0 },
+              { "x": "FIT", "y": 0 },
+              { "x": "GROUPS", "y": 0 }
+            ]
+          },
+          {
+            "data": [
+              { "x": "BAR", "y": 0 },
+              { "x": "COR", "y": 0 },
+              { "x": "PROMO", "y": 0 },
+              { "x": "FIT", "y": 0 },
+              { "x": "GROUPS", "y": 0 }
+            ]
+          } 
+        ],
+        "range":{
+          "roomNights": 0,
+          "ADR":0,
+          "revenue":""
+        }
+      }
+    }
+  

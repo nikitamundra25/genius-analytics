@@ -768,7 +768,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                         </>
                       );
                     })
-                  : null}
+                  : <WidgetLoader />}
               </tbody>
               <tfoot>
                 <tr>
