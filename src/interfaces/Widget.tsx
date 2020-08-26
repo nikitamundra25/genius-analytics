@@ -6,6 +6,7 @@ export interface IGraphListsModel {
 }
 export interface IDashboardWidgetProps {
   graphList: IGraphListsModel[];
+  date?: Date|any
 }
 export interface IWidgetHeaderProps {
   title: string;

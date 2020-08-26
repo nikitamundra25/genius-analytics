@@ -1,0 +1,86 @@
+{
+    "data":  [
+        {
+          "data": [
+            {
+              "name": "Mon",
+              "OCCTY": 85.0,
+              "OCCLY": 83.0,
+              "ADRLY": 200.0,
+              "ADRTY": 191.0
+            },
+            {
+              "name": "Tue",
+              "OCCTY": 55.0,
+              "OCCLY": 92.0,
+              "ADRLY": 180.0,
+              "ADRTY": 179.0
+            },
+            {
+              "name": "Wed",
+              "OCCTY": 65.0,
+              "OCCLY": 93.0,
+              "ADRLY": 198.0,
+              "ADRTY": 173.0
+            },
+            {
+              "name": "Thu",
+              "OCCTY": 76.0,
+              "OCCLY": 79.0,
+              "ADRLY": 185.0,
+              "ADRTY": 180.0
+            },
+            {  
+              "name": "Fri",
+              "OCCTY": 83.0,
+              "OCCLY": 68.0,
+              "ADRLY": 192.0,
+              "ADRTY": 185.0
+            },
+            {
+              "name": "Sat",
+              "OCCTY": 51.0,
+              "OCCLY": 67.0,
+              "ADRLY": 173.0,
+              "ADRTY": 179.0
+            },
+            {
+              "name": "Sun",
+              "OCCTY": 89.0,
+              "OCCLY": 60.0,
+              "ADRLY": 179.0,
+              "ADRTY": 184.0
+            },
+            {
+              "name": "Total",
+              "OCCTY": 72.0,
+              "OCCLY": 77.4,
+              "ADRLY": 186.7,
+              "ADRTY": 181.6
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "name": "Midweek",
+              "TY": 70.3,
+              "LY": 86.8,
+              "Var": -17
+            },
+            {
+              "name": "Weekend",
+              "TY": 74.3,
+              "LY": 65.0,
+              "Var": 9
+            },
+            {
+              "name": "Total",
+              "TY": 72.3,
+              "LY": 75.9,
+              "Var": -4
+            }
+          ]
+        }
+      ]
+}
