@@ -70,6 +70,19 @@ const MixedCharts = ({ charts = [], id="mixed-map", chartSettings = {},legend= t
           
         >
         </AxisDirective>
+        <AxisDirective 
+          rowIndex={1} 
+          name='yAxis2' 
+          opposedPosition={true}
+          //title='percent' 
+          labelFormat='{value}'  
+          majorGridLines={{ width: 0 }}
+          majorTickLines={{ width: 0}}
+          lineStyle={{ width: 0 } }
+          visible={false}
+          
+        >
+        </AxisDirective>
       </AxesDirective>
       <SeriesCollectionDirective>
         {charts.map(({ marker, ...chart }: any, index: number) => {    

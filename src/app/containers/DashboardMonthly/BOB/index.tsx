@@ -6,6 +6,7 @@ import { requestMonthlyBOBData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { getMonthsData } from "../../../../helper";
+import { defaultDateFormat } from "../../../../config/Constant";
 import moment from "moment";
 import "../index.scss";
 import bob from "../../../../assets/img/bob.svg";
@@ -31,7 +32,7 @@ const MonthlyBOB = (props: any) => {
       data.map((list: any, index: number) => {
         return list.subData.map((subdata: any, i: number) =>
           months.map((key: any, ind: number) => {
-            return (data[index].subData[i].data[ind].date = moment(key).day());
+            return (data[index].subData[i].data[ind].date = moment(key));
           })
         );
       });
@@ -45,7 +46,7 @@ const MonthlyBOB = (props: any) => {
       data.map((list: any, index: number) => {
         return list.subData.map((subdata: any, i: number) =>
           months.map((key: any, ind: number) => {
-            return (data[index].subData[i].data[ind].date = moment(key).day());
+            return (data[index].subData[i].data[ind].date = moment(key));
           })
         );
       });
@@ -89,7 +90,9 @@ const MonthlyBOB = (props: any) => {
                         return (
                           <th
                             key={indx}
-                            className={`date-col ${
+                            className={`date-col
+                            ${moment().format(defaultDateFormat) === moment(month).format(defaultDateFormat) ? "today-bg" : ""  }
+                            ${
                               weekendDay === 5 ||
                               weekendDay === 6 ||
                               weekendDay === 0
@@ -191,12 +194,14 @@ const MonthlyBOB = (props: any) => {
                                                 : key.title === "OCC" &&
                                                   parseInt(data.num) < 100
                                                 ? "bg-max"
-                                                : parseInt(data.date) === 5 ||
-                                                  parseInt(data.date) === 6 ||
-                                                  parseInt(data.date) === 0
+                                                :
+                                                moment(data.date).day() === 5 ||
+                                                moment(data.date).day() === 6 ||
+                                                moment(data.date).day() === 0
+                                                
                                                 ? "weekend-bg"
                                                 : "bg-2"
-                                            } `}
+                                            }  ${moment().format(defaultDateFormat) === moment(data.date).format(defaultDateFormat) ? "today-bg" : ""  }`}
                                             key={i}
                                           >
                                             {key.title === "OCC"
