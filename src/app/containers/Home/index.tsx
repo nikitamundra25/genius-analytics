@@ -26,8 +26,10 @@ import RGIVariance from "./RGIVariance";
 import BusinessMixComponent from "./BusinessMix";
 const history = createBrowserHistory();
 
+// let date = new Date()
 // export class Default extends SampleBase {
 const HomeComponent: FunctionComponent = () => {
+  const [date, setdate] = React.useState<Date>(new Date());
   const cellSpacing = [15, 20];
   const dispatch = useDispatch();
   const store: Store = configureStore(history);
@@ -44,8 +46,10 @@ const HomeComponent: FunctionComponent = () => {
   }, []);
 
   // To reset drag & drop when select date
-  const RestorePanel = () => {
+  const RestorePanel = (date:any) => {
+    // date = date
     dashboardObj.panels = restoreModel;
+    // setdate(date)
   };
 
   // To store dashboard data initially
@@ -69,7 +73,7 @@ const HomeComponent: FunctionComponent = () => {
         return (
           <Provider store={store}>
             <div className="template">
-              <BOB />
+              <BOB date={date} />
             </div>
           </Provider>
         );
@@ -77,7 +81,7 @@ const HomeComponent: FunctionComponent = () => {
         return (
           <Provider store={store}>
             <div className="template">
-              <KeyBusinessMetrics />
+              <KeyBusinessMetrics date={date} />
             </div>
           </Provider>
         );
@@ -85,7 +89,7 @@ const HomeComponent: FunctionComponent = () => {
         return (
           <Provider store={store}>
             <div className="template">
-              <PickupSinceYesterday />
+              <PickupSinceYesterday date={date}/>
             </div>
           </Provider>
         );
@@ -93,7 +97,7 @@ const HomeComponent: FunctionComponent = () => {
         return (
           <Provider store={store}>
             <div className="template">
-              <OccupencyStatitics />
+              <OccupencyStatitics date={date}/>
             </div>
           </Provider>
         );
@@ -101,7 +105,7 @@ const HomeComponent: FunctionComponent = () => {
         return (
           <Provider store={store}>
             <div className="template">
-              <BusinessMixComponent />
+              <BusinessMixComponent date={date}/>
             </div>
           </Provider>
         );
@@ -109,7 +113,7 @@ const HomeComponent: FunctionComponent = () => {
         return (
           <Provider store={store}>
             <div className="template">
-              <RoomTypeStatics />
+              <RoomTypeStatics date={date}/>
             </div>
           </Provider>
         );
@@ -117,7 +121,7 @@ const HomeComponent: FunctionComponent = () => {
         return (
           <Provider store={store}>
             <div className="template">
-              <BookingChannels />
+              <BookingChannels date={date}/>
             </div>
           </Provider>
         );
@@ -125,7 +129,7 @@ const HomeComponent: FunctionComponent = () => {
         return (
           <Provider store={store}>
             <div className="template">
-              <GeoBusiness />
+              <GeoBusiness date={date}/>
             </div>
           </Provider>
         );
@@ -133,7 +137,7 @@ const HomeComponent: FunctionComponent = () => {
         return (
           <Provider store={store}>
             <div className="template">
-              <MTDPerformance key={"rgi"} />
+              <MTDPerformance key={"rgi"} date={date}/>
             </div>
           </Provider>
         );
@@ -141,7 +145,7 @@ const HomeComponent: FunctionComponent = () => {
         return (
           <Provider store={store}>
             <div className="template">
-              <RGIVariance />
+              <RGIVariance date={date}/>
             </div>
           </Provider>
         );

@@ -11,7 +11,7 @@ const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
-const OccupencyStatitics = ({ graphdata = [] }:any) => {
+const OccupencyStatitics = ({ graphdata = [] ,date}:any) => {
   const dispatch = useDispatch();
   const [setHeight, setsetHeight] = React.useState<string>("250px");
   const { isLoading, data, isError } = useSelector(

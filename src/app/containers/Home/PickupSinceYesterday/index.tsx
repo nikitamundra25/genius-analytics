@@ -5,25 +5,41 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
-import { requestRoomNightsData } from "../../../../actions";
+import { requestRoomNightsData,requestRoomNightsPastData,requestRoomNightsFutureData } from "../../../../actions";
 import caretup from "../../../../assets/img/caret-up.svg";
 import caretdown from "../../../../assets/img/caret-down.svg"
+import moment from "moment";
 
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
 
-const PickupSinceYesterday = () => {
+const PickupSinceYesterday = (date:Date|any) => {
   const dispatch = useDispatch();
   const [setHeight, setsetHeight] = React.useState<string>("250px");
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.RoomNightsReducer
   );
+  // useEffect(() => {
+  //   dispatch(requestRoomNightsData());
+  //   // eslint-disable-next-line
+  // }, []);
   useEffect(() => {
-    dispatch(requestRoomNightsData());
+    const yearDate :any = moment(date).format("YYYY");
+    let d = new Date();
+    const currentYear:any = d.getFullYear();
+  
+    if (yearDate > currentYear) {
+      dispatch(requestRoomNightsFutureData());
+    } else if (yearDate < currentYear) {
+      dispatch(requestRoomNightsPastData())
+    } else {
+      dispatch(requestRoomNightsData());
+    }
+
     // eslint-disable-next-line
-  }, []);
+  }, [date]);
 
   
  useEffect(() => {

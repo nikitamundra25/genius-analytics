@@ -3,9 +3,10 @@ import { Card, Row, Col } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
-import { requestBusinessMixData } from "../../../../actions";
+import { requestBusinessMixData, requestBusinessMixFutureData, requestBusinessMixPastData } from "../../../../actions";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
+import moment from "moment";
 const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
@@ -17,10 +18,27 @@ export default (props: any) => {
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.BusinessMixReducer
   );
+  // useEffect(() => {
+  //   dispatch(requestBusinessMixData());
+  //   // eslint-disable-next-line
+  // }, []);
+
   useEffect(() => {
-    dispatch(requestBusinessMixData());
+
+    const yearDate :any = moment(props.date).format("YYYY");
+    let d = new Date();
+    const currentYear:any = d.getFullYear();
+  
+    if (yearDate > currentYear) {
+      dispatch(requestBusinessMixFutureData());
+    } else if (yearDate < currentYear) {
+      dispatch(requestBusinessMixPastData())
+    } else {
+      dispatch(requestBusinessMixData());
+    }
+
     // eslint-disable-next-line
-  }, []);
+  }, [props.date]);
 
   useEffect(() => {
     const modalbtn: HTMLElement | null = document.getElementById(`mix-card`);

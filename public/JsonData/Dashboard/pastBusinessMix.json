@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "data": [
+        { "x": "BAR", "y": 28 },
+        { "x": "Discount", "y": 21 },
+        { "x": "Corporate", "y": 17 },
+        { "x": "Cor Group", "y": 8 },
+        { "x": "Leisure Group", "y": 15 },
+        { "x": "FIT", "y": 8 }
+      ]
+    },
+    {
+      "data": [
+        { "x": "BAR", "y": 175.0 },
+        { "x": "Discount", "y": 175.0 },
+        { "x": "Corporate", "y": 175.0 },
+        { "x": "Cor Group", "y": 175.0 },
+        { "x": "Leisure Group", "y": 175.0 },
+        { "x": "FIT", "y": 175.0 }
+      ]
+    }
+  ]
+}

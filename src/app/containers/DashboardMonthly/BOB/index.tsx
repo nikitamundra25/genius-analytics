@@ -12,6 +12,7 @@ import bob from "../../../../assets/img/bob.svg";
 import pickup from "../../../../assets/img/pickup.svg";
 import market from "../../../../assets/img/availability.svg";
 import bed from "../../../../assets/img/bed.svg";
+import { defaultDateFormat } from "../../../../config";
 
 const MonthlyBOB = (props: any) => {
   const months = getMonthsData(props.selectedDate, "dashboard");
@@ -85,17 +86,22 @@ const MonthlyBOB = (props: any) => {
                           </span>
                         </th>
                       {months.map((month: any, indx: number) => {
+                        console.log("monthmonth",month);
+                        
                         let weekendDay = moment(month).day();
                         return (
                           <th
                             key={indx}
-                            className={`date-col ${
+                            className={`date-col
+                            ${moment().format(defaultDateFormat) === moment(month).format(defaultDateFormat) ? "today-bg" : ""  }
+                            ${
                               weekendDay === 5 ||
                               weekendDay === 6 ||
                               weekendDay === 0
                                 ? "weekend-bg"
                                 : ""
                             }`}
+                            
                           >
                             <div className="date-div">
                               <span className="date-text">{moment(month).format("DD")}</span>

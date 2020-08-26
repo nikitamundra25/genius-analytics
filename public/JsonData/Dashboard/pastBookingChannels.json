@@ -1,0 +1,9 @@
+{
+  "data": [
+    { "x": "Corporate Website", "y": 5, "text": "5%" },
+    { "x": "Brand Website", "y": 9, "text": "13%" },
+    { "x": "OTA's", "y": 42, "text": "40%" },
+    { "x": "GDS", "y": 18, "text": "11%" },
+    { "x": "Direct", "y": 26, "text": "31%" }
+  ]
+}

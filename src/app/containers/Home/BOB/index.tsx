@@ -3,19 +3,37 @@ import { Card, Table } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
-import { requestBOBData } from "../../../../actions";
+import { requestBOBData ,requestBOBPastData,requestBOBFutureData} from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import moment from "moment";
 
-const BOB = () => {
+const BOB = (date:Date|any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.BOBReducer
   );
+  // useEffect(() => {
+  //   dispatch(requestBOBData());
+  //   // eslint-disable-next-line
+  // }, []);
+
   useEffect(() => {
-    dispatch(requestBOBData());
+
+    const yearDate :any = moment(date).format("YYYY");
+    let d = new Date();
+    const currentYear:any = d.getFullYear();
+  
+    if (yearDate > currentYear) {
+      dispatch(requestBOBFutureData());
+    } else if (yearDate < currentYear) {
+      dispatch(requestBOBPastData())
+    } else {
+      dispatch(requestBOBData());
+    }
+
     // eslint-disable-next-line
-  }, []);
+  }, [date]);
 
   return (
     <>

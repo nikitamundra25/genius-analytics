@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "data": [
+        { "x": "My RevPAR", "y1": 0 },
+        { "x": "RevPAR Compact", "y1": 0 },
+        { "x": "RGI", "y1": 0 }
+      ]
+    },
+    {
+      "data": [
+        { "x": "My OCC", "y1": 0 },
+        { "x": "OCC Compact", "y1": 0 },
+        { "x": "MPI", "y1": 0 }
+      ]
+    },
+    {
+      "data": [
+        { "x": "My ARR", "y1": 0},
+        { "x": "ARR Compact", "y1": 0 },
+        { "x": "ARI", "y1": 0 }
+      ]
+    }
+  ]
+}

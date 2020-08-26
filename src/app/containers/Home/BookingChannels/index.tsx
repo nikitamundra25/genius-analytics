@@ -3,23 +3,41 @@ import { Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import WidgetHeader from "../../../components/WidgetHeader";
-import { requestBookingChannelData } from "../../../../actions";
+import { requestBookingChannelData, requestBookingChannelFutureData, requestBookingChannelPastData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import moment from "moment";
 const PieChartComponent = React.lazy(() =>
   import("../../../components/Charts/PieChart")
 );
 
 
-export default ({ graphdata = [] }:any) => {
+export default ({ graphdata = [], date }:any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.BookingChannelReducer
   );
+  // useEffect(() => {
+  //   dispatch(requestBookingChannelData());
+  //   // eslint-disable-next-line
+  // }, []);
+
   useEffect(() => {
-    dispatch(requestBookingChannelData());
+
+    const yearDate :any = moment(date).format("YYYY");
+    let d = new Date();
+    const currentYear:any = d.getFullYear();
+  
+    if (yearDate > currentYear) {
+      dispatch(requestBookingChannelFutureData());
+    } else if (yearDate < currentYear) {
+      dispatch(requestBookingChannelPastData())
+    } else {
+      dispatch(requestBookingChannelData());
+    }
+
     // eslint-disable-next-line
-  }, []);
+  }, [date]);
 
   const [setHeight, setsetHeight] = React.useState<string>("250px");
 

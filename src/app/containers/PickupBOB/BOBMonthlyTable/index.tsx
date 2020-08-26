@@ -10,7 +10,7 @@ import moment from "moment";
 
 const BOBMonthlyTable = ({ date }: any) => {
   const dispatch = useDispatch();
-  const months: any = getMonthsData(new Date(date),"pickupData");
+  const months: any = getMonthsData(new Date(date),"pickupDataBob");
   const [state, setState] = React.useState<any>([]);
   const [sumOfColumns, setsumOfColumns] = React.useState<IBOBState | any>({});
 

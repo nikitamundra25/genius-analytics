@@ -8,7 +8,7 @@ import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestRGIYOYVarianceData } from "../../../../actions";
 
-export default () => {
+export default (date:any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.RGIYOYVarianceReducer

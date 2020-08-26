@@ -1,4 +1,4 @@
-import React ,{useEffect, FunctionComponent} from "react";
+import React ,{useEffect} from "react";
 import { Card } from "react-bootstrap";
 // import data from "./datasource.json";
 import WidgetHeader from "../../../components/WidgetHeader";
@@ -6,22 +6,39 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
-import { requestGeographicOriginData } from "../../../../actions";
+import { requestGeographicOriginData, requestGeographicOriginFutureData, requestGeographicOriginPastData } from "../../../../actions";
+import moment from "moment";
 const WorldMap = React.lazy(() =>
   import("../../../components/Charts/WorldMap")
 );
 
 
-const GeoBusiness : FunctionComponent =  ({ graphdata = {} }:any) => {
+const GeoBusiness  =  ({ graphdata = {},date }:any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.GeographicOriginReducer
   );
-  useEffect(() => {
-    dispatch(requestGeographicOriginData());
-    // eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   dispatch(requestGeographicOriginData());
+  //   // eslint-disable-next-line
+  // }, []);
 
+  useEffect(() => {
+
+    const yearDate :any = moment(date).format("YYYY");
+    let d = new Date();
+    const currentYear:any = d.getFullYear();
+  
+    if (yearDate > currentYear) {
+      dispatch(requestGeographicOriginFutureData());
+    } else if (yearDate < currentYear) {
+      dispatch(requestGeographicOriginPastData())
+    } else {
+      dispatch(requestGeographicOriginData());
+    }
+
+    // eslint-disable-next-line
+  }, [date]);
  
 
   return (

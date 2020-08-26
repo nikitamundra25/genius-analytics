@@ -80,8 +80,8 @@ const MonthlyTable = ({ date }: any) => {
     partnershipDiscountADR = 0,
     onlineAdvADR = 0,
     onlineAdvRooms = 0,
-    corporateContractADR = 0,
-    corporateContractRooms = 0,
+    staffRooms = 0,
+    staffADR = 0,
     monthlyContractADR = 0,
     monthlyContractRooms = 0,
     longTermContractADR = 0,
@@ -597,8 +597,6 @@ const MonthlyTable = ({ date }: any) => {
                   <td className="total-col">{onlineAdvADR}</td>
                   <td className="total-col">{corporateGroupRooms}</td>
                   <td className="total-col">{corporateGroupADR}</td>
-                  <td className="total-col">{corporateContractRooms}</td>
-                  <td className="total-col ">{corporateContractADR}</td>
                   <td className="total-col">{leisureRooms}</td>
                   <td className="total-col ">{leisureADR}</td>
                   <td className="total-col ">{ResidentialGroupsRooms}</td>
@@ -613,6 +611,8 @@ const MonthlyTable = ({ date }: any) => {
                   <td className="total-col ">{monthlyContractADR} </td>
                   <td className="total-col ">{airlineCrewRooms}</td>
                   <td className="total-col ">{airlineCrewADR}</td>
+                  <td className="total-col ">{staffRooms}</td>
+                  <td className="total-col ">{staffADR}</td>
                   <td className="total-col total-content">{TotalRooms}</td>
                   <td className="total-col ">{TotalADR.toFixed(1)}</td>
                   <td className="total-col ">{TotalRevenue.toLocaleString()}</td>

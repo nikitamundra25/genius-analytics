@@ -5,13 +5,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState, ToggleType } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
-import { requestKeyBusinessMetricsData } from "../../../../actions";
+import { requestKeyBusinessMetricsData, requestKeyBusinessMetricsFutureData, requestKeyBusinessMetricsPastData } from "../../../../actions";
+import moment from "moment";
 // import { getCurrentHeight } from "../../../../helper";
 const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
 
-const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
+const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
   const [setHeight, setsetHeight] = React.useState<string>("250px");
   const [activeToggle, setactiveToggle] = React.useState<ToggleType>("graph");
 
@@ -19,10 +20,27 @@ const KeyBusinessMetrics = ({ graphdata = [] }: any) => {
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.KeyBusinessMetricsReducer
   );
+  // useEffect(() => {
+  //   dispatch(requestKeyBusinessMetricsData());
+  //   // eslint-disable-next-line
+  // }, []);
+
   useEffect(() => {
-    dispatch(requestKeyBusinessMetricsData());
+
+    const yearDate :any = moment(date).format("YYYY");
+    let d = new Date();
+    const currentYear:any = d.getFullYear();
+  
+    if (yearDate > currentYear) {
+      dispatch(requestKeyBusinessMetricsFutureData());
+    } else if (yearDate < currentYear) {
+      dispatch(requestKeyBusinessMetricsPastData())
+    } else {
+      dispatch(requestKeyBusinessMetricsData());
+    }
+
     // eslint-disable-next-line
-  }, []);
+  }, [date]);
 
   useEffect(() => {
     // const modalbtn: HTMLElement | null = document.getElementById(`language_dropmodal-${index}`);
