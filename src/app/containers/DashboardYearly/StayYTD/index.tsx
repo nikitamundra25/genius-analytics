@@ -98,7 +98,7 @@ const pointRender = (args:any) => {
       type: "Column",
       name: "LOS",
       width: 1,
-      yAxisName:'yAxis1',
+      yAxisName:'yAxis2',
      
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {

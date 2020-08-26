@@ -68,17 +68,14 @@ export default ({ graphdata = [] }: any) => {
     // eslint-disable-next-line
   }, []);
 
-  
+  const labeltemplate = (args:any) => {
+    return (<div  style={{fontSize: '11px'}}>
+      <span>{args.point.y}</span>
+    </div>);
+};
 
-
-
-  const RTGBarChart = [
+  const RGICharts = [
     {
-      // id: "r1",
-      title: "RGI",
-      // color: "#2e75b7",
-      // data: graphdata[0].data,
-      charts: {
         dataSource: data && data.length && data[0] ? data[0].data : [],
         xName: "x",
         yName: "y1",
@@ -86,7 +83,37 @@ export default ({ graphdata = [] }: any) => {
         //fill: "#2e75b7",
         fill: "url(#rgi-chart)",
         name: "RGI",
-        width: 1,
+        width: 2,
+        cornerRadius: {
+          bottomLeft: 0,
+          bottomRight: 4,
+          topLeft: 0,
+          topRight: 4,
+        },
+        marker: {
+          dataLabel: {
+            visible: true,
+            position: "Middle",
+            
+            // rx: 10,
+            // ry: 10,
+            font: {
+              fontWeight: "600",
+              color: "#fff",
+            },
+          },
+        },
+    },
+    {
+      dataSource: data && data.length && data[0] ? data[0].data : [],
+        xName: "x",
+        yName: "y2",
+        type: "Bar",
+        //fill: "#2e75b7",
+        fill: "url(#rgi-chart)",
+        name: "RGI",
+        yAxisName:'yAxis2',
+        width: 2,
         cornerRadius: {
           bottomLeft: 0,
           bottomRight: 4,
@@ -99,28 +126,55 @@ export default ({ graphdata = [] }: any) => {
             position: "Middle",
             // rx: 10,
             // ry: 10,
+            template: labeltemplate,
             font: {
               fontWeight: "600",
               color: "#fff",
             },
           },
         },
+    },
+  ];
+
+  const MPICharts = [
+    {
+      dataSource: data && data.length && data[1] ? data[1].data : [],
+      xName: "x",
+      yName: "y1",
+      type: "Bar",
+      //fill: "#5398d9",
+      fill: "url(#mpi-chart)",
+      name: "MPI",
+      width: 2,
+      cornerRadius: {
+        bottomLeft: 0,
+        bottomRight: 4,
+        topLeft: 0,
+        topRight: 4,
+      },
+      marker: {
+        dataLabel: {
+          visible: true,
+          position: "Middle",
+          // rx: 10,
+          // ry: 10,
+          font: {
+            fontWeight: "600",
+            color: "#fff",
+          },
+        },
       },
     },
     {
-      // id: "r2",
-      title: "MPI",
-      // color: "#5398d9",
-      // data: graphdata[1].data,
-      charts: {
-        dataSource: data && data.length && data[1] ? data[1].data : [],
+      dataSource: data && data.length && data[1] ? data[1].data : [],
         xName: "x",
-        yName: "y1",
+        yName: "y2",
         type: "Bar",
         //fill: "#5398d9",
         fill: "url(#mpi-chart)",
         name: "MPI",
-        width: 1,
+        yAxisName:'yAxis2',
+        width: 2,
         cornerRadius: {
           bottomLeft: 0,
           bottomRight: 4,
@@ -133,49 +187,182 @@ export default ({ graphdata = [] }: any) => {
             position: "Middle",
             // rx: 10,
             // ry: 10,
+            template: labeltemplate,
             font: {
               fontWeight: "600",
               color: "#fff",
             },
           },
         },
-      },
-    },
-    {
-      // id: "r3",
-      title: "ARI",
-      // color: "#1f4e79",
-      // data: graphdata[2].data,
-      charts: {
-        dataSource: data && data.length && data[2] ? data[2].data : [],
-        xName: "x",
-        yName: "y1",
-        type: "Bar",
-        cornerRadius: {
-          bottomLeft: 0,
-          bottomRight: 4,
-          topLeft: 0,
-          topRight: 4,
-        },
-        //fill: "#1f4e79",
-        fill: "url(#ari-chart)",
-        name: "ARI",
-        width: 1,
-        marker: {
-          dataLabel: {
-            visible: true,
-            position: "Middle",
-            // rx: 10,
-            // ry: 10,
-            font: {
-              fontWeight: "600",
-              color: "#fff",
-            },
-          },
-        },
-      },
     },
   ];
+
+  const ARICharts = [
+    {
+      dataSource: data && data.length && data[2] ? data[2].data : [],
+          xName: "x",
+          yName: "y1",
+          type: "Bar",
+          cornerRadius: {
+            bottomLeft: 0,
+            bottomRight: 4,
+            topLeft: 0,
+            topRight: 4,
+          },
+          //fill: "#1f4e79",
+          fill: "url(#ari-chart)",
+          name: "ARI",
+          width: 2,
+          marker: {
+            dataLabel: {
+              visible: true,
+              position: "Middle",
+              // rx: 10,
+              // ry: 10,
+              font: {
+                fontWeight: "600",
+                color: "#fff",
+              },
+            },
+          },
+    },
+    {
+      dataSource: data && data.length && data[2] ? data[2].data : [],
+          xName: "x",
+          yName: "y2",
+          type: "Bar",
+          cornerRadius: {
+            bottomLeft: 0,
+            bottomRight: 4,
+            topLeft: 0,
+            topRight: 4,
+          },
+          //fill: "#1f4e79",
+          fill: "url(#ari-chart)",
+          yAxisName:'yAxis2',
+          name: "ARI",
+          width: 2,
+          marker: {
+            dataLabel: {
+              visible: true,
+              position: "Middle",
+              // rx: 10,
+              // ry: 10,
+              template: labeltemplate,
+              font: {
+                fontWeight: "600",
+                color: "#fff",
+              },
+            },
+          },
+    },
+  ];
+
+
+  // const RTGBarChart = [
+  //   {
+     
+  //     title: "RGI",
+      
+  //     charts: {
+  //       dataSource: data && data.length && data[0] ? data[0].data : [],
+  //       xName: "x",
+  //       yName: "y1",
+  //       type: "Bar",
+  //       //fill: "#2e75b7",
+  //       fill: "url(#rgi-chart)",
+  //       name: "RGI",
+  //       width: 1,
+  //       cornerRadius: {
+  //         bottomLeft: 0,
+  //         bottomRight: 4,
+  //         topLeft: 0,
+  //         topRight: 4,
+  //       },
+  //       marker: {
+  //         dataLabel: {
+  //           visible: true,
+  //           position: "Middle",
+  //           // rx: 10,
+  //           // ry: 10,
+  //           font: {
+  //             fontWeight: "600",
+  //             color: "#fff",
+  //           },
+  //         },
+  //       },
+  //     },
+  //   },
+  //   {
+  //     // id: "r2",
+  //     title: "MPI",
+  //     // color: "#5398d9",
+  //     // data: graphdata[1].data,
+  //     charts: {
+  //       dataSource: data && data.length && data[1] ? data[1].data : [],
+  //       xName: "x",
+  //       yName: "y1",
+  //       type: "Bar",
+  //       //fill: "#5398d9",
+  //       fill: "url(#mpi-chart)",
+  //       name: "MPI",
+  //       width: 1,
+  //       cornerRadius: {
+  //         bottomLeft: 0,
+  //         bottomRight: 4,
+  //         topLeft: 0,
+  //         topRight: 4,
+  //       },
+  //       marker: {
+  //         dataLabel: {
+  //           visible: true,
+  //           position: "Middle",
+  //           // rx: 10,
+  //           // ry: 10,
+  //           font: {
+  //             fontWeight: "600",
+  //             color: "#fff",
+  //           },
+  //         },
+  //       },
+  //     },
+  //   },
+  //   {
+  //     // id: "r3",
+  //     title: "ARI",
+  //     // color: "#1f4e79",
+  //     // data: graphdata[2].data,
+  //     charts: {
+  //         dataSource: data && data.length && data[2] ? data[2].data : [],
+  //         xName: "x",
+  //         yName: "y1",
+  //         type: "Bar",
+  //         cornerRadius: {
+  //           bottomLeft: 0,
+  //           bottomRight: 4,
+  //           topLeft: 0,
+  //           topRight: 4,
+  //         },
+  //         //fill: "#1f4e79",
+  //         fill: "url(#ari-chart)",
+  //         name: "ARI",
+  //         width: 1,
+  //         marker: {
+  //           dataLabel: {
+  //             visible: true,
+  //             position: "Middle",
+  //             // rx: 10,
+  //             // ry: 10,
+  //             font: {
+  //               fontWeight: "600",
+  //               color: "#fff",
+  //             },
+  //           },
+  //         },
+  //       },
+        
+  //   },
+  // ];
 
   const SAMPLE_CSS = `
   #rgi-chart stop {
@@ -226,10 +413,10 @@ export default ({ graphdata = [] }: any) => {
           />
         ) : (
           <Row className="row-inner">
-            {RTGBarChart && RTGBarChart.length
+            {/* {RTGBarChart && RTGBarChart.length
               ? RTGBarChart.map((key: any, index: number) => {
-                  return (
-                    <Col sm={4} md={4} key={index}>
+                  return ( */}
+                    <Col sm={4} md={4} >
                       <React.Suspense
                         fallback={
                           <div className="card-loader">
@@ -238,8 +425,8 @@ export default ({ graphdata = [] }: any) => {
                         }
                       >
                         <MixedCharts
-                          id={`mix-${index}`}
-                          charts={[key.charts]}
+                          id={`RGICharts`}
+                          charts={RGICharts}
                           legend={false}
                           chartSettings={{
                             primaryXAxis: {
@@ -259,38 +446,90 @@ export default ({ graphdata = [] }: any) => {
                               visible: false,
                             },
                             tooltip: { enable: true },
-                            title: key.title,
+                            title: "RGI",
                             height: setHeight,
                           }}
                         />
                       </React.Suspense>
-                      {/* <BarChartComponent
-                  chartSettings={{
-                    primaryXAxis: {
-                      valueType: "Category",
-                      interval: 1,
-                      majorGridLines: { width: 0 },
-                    },
-                    primaryYAxis: {
-                      labelFormat: "{value}%",
-                      edgeLabelPlacement: "Shift",
-                      majorGridLines: { width: 0 },
-                      majorTickLines: { width: 0 },
-                      lineStyle: { width: 0 },
-                      labelStyle: {
-                        color: "transparent",
-                      },
-                    },
-                    title: key.title,
-                    tooltip: { enable: true },
-                  }}
-                  key={index}
-                  {...key}
-                /> */}
+                      
                     </Col>
-                  );
+                    <Col sm={4} md={4} >
+                      <React.Suspense
+                        fallback={
+                          <div className="card-loader">
+                            <WidgetLoader />
+                          </div>
+                        }
+                      >
+                        <MixedCharts
+                          id={`MPICharts`}
+                          charts={MPICharts}
+                          legend={false}
+                          chartSettings={{
+                            primaryXAxis: {
+                              valueType: "Category",
+                              interval: 1,
+                              majorGridLines: { width: 0 },
+                            },
+                            primaryYAxis: {
+                              labelFormat: "{value}",
+                              edgeLabelPlacement: "Shift",
+                              majorGridLines: { width: 0 },
+                              majorTickLines: { width: 0 },
+                              lineStyle: { width: 0 },
+                              labelStyle: {
+                                color: "transparent",
+                              },
+                              visible: false,
+                            },
+                            tooltip: { enable: true },
+                            title: "MPI",
+                            height: setHeight,
+                          }}
+                        />
+                      </React.Suspense>
+                      
+                    </Col>
+                    <Col sm={4} md={4} >
+                      <React.Suspense
+                        fallback={
+                          <div className="card-loader">
+                            <WidgetLoader />
+                          </div>
+                        }
+                      >
+                        <MixedCharts
+                          id={`ARICharts`}
+                          charts={ARICharts}
+                          legend={false}
+                          chartSettings={{
+                            primaryXAxis: {
+                              valueType: "Category",
+                              interval: 1,
+                              majorGridLines: { width: 0 },
+                            },
+                            primaryYAxis: {
+                              labelFormat: "{value}",
+                              edgeLabelPlacement: "Shift",
+                              majorGridLines: { width: 0 },
+                              majorTickLines: { width: 0 },
+                              lineStyle: { width: 0 },
+                              labelStyle: {
+                                color: "transparent",
+                              },
+                              visible: false,
+                            },
+                            tooltip: { enable: true },
+                            title: "ARI",
+                            height: setHeight,
+                          }}
+                        />
+                      </React.Suspense>
+                      
+                    </Col>
+                  {/* );
                 })
-              : null}
+              : null} */}
           </Row>
         )}
       </Card.Body>
