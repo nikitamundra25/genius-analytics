@@ -16,7 +16,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
       <>
       <Card
         id={`summary-card${rowId}`}
-        className='bg-white h-auto mb-3 pickup-section-card d-none'>
+        className='bg-white h-auto mb-3 pickup-section-card'>
         <Card.Body className=''>
           <div className='sub-title mb-3'>Pickup Summary</div>
           <Row className=''>
@@ -39,7 +39,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       <div className="text-col">72</div>
                       <div className="icon-col">
                          <img
-                           src={caretdown}
+                           src={caretup}
                            alt="increase"
                            width="12"
                          />
@@ -51,7 +51,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       <div className="text-col">11</div>
                       <div className="icon-col">
                          <img
-                           src={caretdown}
+                           src={caretup}
                            alt="increase"
                            width="12"
                          />
@@ -63,7 +63,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       <div className="text-col">9062</div>
                       <div className="icon-col">
                          <img
-                           src={caretdown}
+                           src={caretup}
                            alt="increase"
                            width="12"
                          />
@@ -79,7 +79,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       <div className="text-col">95</div>
                       <div className="icon-col">
                          <img
-                           src={caretdown}
+                           src={caretup}
                            alt="increase"
                            width="12"
                          />
@@ -103,7 +103,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       <div className="text-col">7416</div>
                       <div className="icon-col">
                          <img
-                           src={caretdown}
+                           src={caretup}
                            alt="increase"
                            width="12"
                          />
@@ -161,7 +161,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       <div className="text-col">51</div>
                       <div className="icon-col">
                          <img
-                           src={caretdown}
+                           src={caretup}
                            alt="increase"
                            width="12"
                          />
@@ -173,7 +173,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       <div className="text-col">9</div>
                       <div className="icon-col">
                          <img
-                           src={caretdown}
+                           src={caretup}
                            alt="increase"
                            width="12"
                          />
@@ -185,7 +185,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       <div className="text-col">7529</div>
                       <div className="icon-col">
                          <img
-                           src={caretdown}
+                           src={caretup}
                            alt="increase"
                            width="12"
                          />
@@ -201,7 +201,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       <div className="text-col">43</div>
                       <div className="icon-col">
                          <img
-                           src={caretdown}
+                           src={caretup}
                            alt="increase"
                            width="12"
                          />
@@ -213,7 +213,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       <div className="text-col">10</div>
                       <div className="icon-col">
                          <img
-                           src={caretdown}
+                           src={caretup}
                            alt="increase"
                            width="12"
                          />
@@ -225,7 +225,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       <div className="text-col">792</div>
                       <div className="icon-col">
                          <img
-                           src={caretdown}
+                           src={caretup}
                            alt="increase"
                            width="12"
                          />
@@ -293,7 +293,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
                       <div className="text-col">11</div>
                       <div className="icon-col">
                          <img
-                           src={caretdown}
+                           src={caretup}
                            alt="increase"
                            width="12"
                          />
