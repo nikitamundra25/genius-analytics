@@ -7,6 +7,8 @@ import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestRGIYOYVarianceData, requestRGIYOYVariancePastData, requestRGIYOYVarianceFutureData } from "../../../../actions";
+import { checkDateFormat } from "../../../../config";
+
 import moment from "moment";
 
 export default (date:any) => {
@@ -21,15 +23,14 @@ export default (date:any) => {
 
   useEffect(() => {
 
-    const yearDate :any = moment(date).format("YYYY");
-    let d = new Date();
-    const currentYear:any = d.getFullYear();
-  
-    if (yearDate > currentYear) {
+    let selectedDate = moment(date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
       dispatch(requestRGIYOYVarianceFutureData());
-    } else if (yearDate < currentYear) {
-      dispatch(requestRGIYOYVariancePastData())
-    } else {
+    } else if (selectedDate < currentDate) {
+      dispatch(requestRGIYOYVariancePastData());
+    } else if (selectedDate === currentDate) {
       dispatch(requestRGIYOYVarianceData());
     }
 

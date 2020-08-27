@@ -8,6 +8,8 @@ import { ErrorComponent } from "../../../components/Error";
 import { requestRoomNightsData,requestRoomNightsPastData,requestRoomNightsFutureData } from "../../../../actions";
 import caretup from "../../../../assets/img/caret-up.svg";
 import caretdown from "../../../../assets/img/caret-down.svg"
+import { checkDateFormat } from "../../../../config";
+
 import moment from "moment";
 
 const MixedCharts = React.lazy(() =>
@@ -26,15 +28,14 @@ const PickupSinceYesterday = (date:Date|any) => {
   //   // eslint-disable-next-line
   // }, []);
   useEffect(() => {
-    const yearDate :any = moment(date).format("YYYY");
-    let d = new Date();
-    const currentYear:any = d.getFullYear();
-  
-    if (yearDate > currentYear) {
+    let selectedDate = moment(date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
       dispatch(requestRoomNightsFutureData());
-    } else if (yearDate < currentYear) {
-      dispatch(requestRoomNightsPastData())
-    } else {
+    } else if (selectedDate < currentDate) {
+      dispatch(requestRoomNightsPastData());
+    } else if (selectedDate === currentDate) {
       dispatch(requestRoomNightsData());
     }
 

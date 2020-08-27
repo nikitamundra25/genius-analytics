@@ -7,6 +7,8 @@ import { requestBookingChannelData, requestBookingChannelFutureData, requestBook
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import moment from "moment";
+import { checkDateFormat } from "../../../../config";
+
 const PieChartComponent = React.lazy(() =>
   import("../../../components/Charts/PieChart")
 );
@@ -24,18 +26,17 @@ export default ({ graphdata = [], date }:any) => {
 
   useEffect(() => {
 
-    const yearDate :any = moment(date).format("YYYY");
-    let d = new Date();
-    const currentYear:any = d.getFullYear();
-  
-    if (yearDate > currentYear) {
+    let selectedDate = moment(date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
       dispatch(requestBookingChannelFutureData());
-    } else if (yearDate < currentYear) {
-      dispatch(requestBookingChannelPastData())
-    } else {
+    } else if (selectedDate < currentDate) {
+      dispatch(requestBookingChannelPastData());
+    } else if (selectedDate === currentDate) {
       dispatch(requestBookingChannelData());
     }
-
+  
     // eslint-disable-next-line
   }, [date]);
 

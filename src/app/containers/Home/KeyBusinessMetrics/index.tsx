@@ -7,6 +7,8 @@ import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestKeyBusinessMetricsData, requestKeyBusinessMetricsFutureData, requestKeyBusinessMetricsPastData } from "../../../../actions";
 import moment from "moment";
+import { checkDateFormat } from "../../../../config";
+
 // import { getCurrentHeight } from "../../../../helper";
 const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
@@ -27,15 +29,14 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
 
   useEffect(() => {
 
-    const yearDate :any = moment(date).format("YYYY");
-    let d = new Date();
-    const currentYear:any = d.getFullYear();
-  
-    if (yearDate > currentYear) {
+    let selectedDate = moment(date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
       dispatch(requestKeyBusinessMetricsFutureData());
-    } else if (yearDate < currentYear) {
-      dispatch(requestKeyBusinessMetricsPastData())
-    } else {
+    } else if (selectedDate < currentDate) {
+      dispatch(requestKeyBusinessMetricsPastData());
+    } else if (selectedDate === currentDate) {
       dispatch(requestKeyBusinessMetricsData());
     }
 

@@ -8,13 +8,14 @@ import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import moment from "moment";
 import { yearFormat } from "../../../../config";
+import { checkDateFormat } from "../../../../config";
 
 const BOB = () => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.BOBReducer
   );
-  const {  selectedDate } = useSelector(
+  const {  selectedDate : date} = useSelector(
     (state: IRootState) => state.DateSelectionReducer
   );
   // useEffect(() => {      
@@ -22,23 +23,21 @@ const BOB = () => {
   //   // eslint-disable-next-line
   // }, []);
 
-  console.log("selectedDate",selectedDate);
   useEffect(() => {
 
-    const yearDate :any = moment(selectedDate).format(yearFormat);
-    let d = new Date();
-    const currentYear:any = d.getFullYear();
-  
-    if (yearDate > currentYear) {
+    let selectedDate = moment(date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
       dispatch(requestBOBFutureData());
-    } else if (yearDate < currentYear) {
-      dispatch(requestBOBPastData())
-    } else {
+    } else if (selectedDate < currentDate) {
+      dispatch(requestBOBPastData());
+    } else if (selectedDate === currentDate) {
       dispatch(requestBOBData());
     }
 
     // eslint-disable-next-line
-  }, [selectedDate]);
+  }, [date]);
 
   return (
     <>

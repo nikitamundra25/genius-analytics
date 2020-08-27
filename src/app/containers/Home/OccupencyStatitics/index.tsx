@@ -8,6 +8,8 @@ import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestOccupacyStaticsData, requestOccupacyStaticsFutureData, requestOccupacyStaticsPastData } from "../../../../actions";
 import moment from "moment";
+import { checkDateFormat } from "../../../../config";
+
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
@@ -60,17 +62,17 @@ const labeltemplate2 = (args: any) => {
 
   useEffect(() => {
 
-    const yearDate :any = moment(date).format("YYYY");
-    let d = new Date();
-    const currentYear:any = d.getFullYear();
-  
-    if (yearDate > currentYear) {
+    let selectedDate = moment(date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
       dispatch(requestOccupacyStaticsFutureData());
-    } else if (yearDate < currentYear) {
-      dispatch(requestOccupacyStaticsPastData())
-    } else {
+    } else if (selectedDate < currentDate) {
+      dispatch(requestOccupacyStaticsPastData());
+    } else if (selectedDate === currentDate) {
       dispatch(requestOccupacyStaticsData());
     }
+
 
     // eslint-disable-next-line
   }, [date]);

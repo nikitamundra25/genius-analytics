@@ -7,6 +7,8 @@ import { requestBusinessMixData, requestBusinessMixFutureData, requestBusinessMi
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import moment from "moment";
+import { checkDateFormat } from "../../../../config";
+
 const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
@@ -25,18 +27,16 @@ export default (props: any) => {
 
   useEffect(() => {
 
-    const yearDate :any = moment(props.date).format("YYYY");
-    let d = new Date();
-    const currentYear:any = d.getFullYear();
-  
-    if (yearDate > currentYear) {
+    let selectedDate = moment(props.date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
       dispatch(requestBusinessMixFutureData());
-    } else if (yearDate < currentYear) {
-      dispatch(requestBusinessMixPastData())
-    } else {
+    } else if (selectedDate < currentDate) {
+      dispatch(requestBusinessMixPastData());
+    } else if (selectedDate === currentDate) {
       dispatch(requestBusinessMixData());
     }
-
     // eslint-disable-next-line
   }, [props.date]);
 

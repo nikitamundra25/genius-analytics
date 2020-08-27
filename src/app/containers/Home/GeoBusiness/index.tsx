@@ -8,6 +8,8 @@ import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestGeographicOriginData, requestGeographicOriginFutureData, requestGeographicOriginPastData } from "../../../../actions";
 import moment from "moment";
+import { checkDateFormat } from "../../../../config";
+
 const WorldMap = React.lazy(() =>
   import("../../../components/Charts/WorldMap")
 );
@@ -25,15 +27,14 @@ const GeoBusiness  =  ({ graphdata = {},date }:any) => {
 
   useEffect(() => {
 
-    const yearDate :any = moment(date).format("YYYY");
-    let d = new Date();
-    const currentYear:any = d.getFullYear();
-  
-    if (yearDate > currentYear) {
+    let selectedDate = moment(date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
       dispatch(requestGeographicOriginFutureData());
-    } else if (yearDate < currentYear) {
-      dispatch(requestGeographicOriginPastData())
-    } else {
+    } else if (selectedDate < currentDate) {
+      dispatch(requestGeographicOriginPastData());
+    } else if (selectedDate === currentDate) {
       dispatch(requestGeographicOriginData());
     }
 

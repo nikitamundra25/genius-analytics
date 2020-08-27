@@ -7,6 +7,8 @@ import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestMTRDRGIPerformanceData, requestMTRDRGIPerformanceFutureData, requestMTRDRGIPerformancePastData } from "../../../../actions";
 import moment from "moment";
+import { checkDateFormat } from "../../../../config";
+
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
@@ -23,17 +25,17 @@ export default ({ graphdata = [] , date= new Date()}: any) => {
 
   useEffect(() => {
 
-    const yearDate :any = moment(date).format("YYYY");
-    let d = new Date();
-    const currentYear:any = d.getFullYear();
-  
-    if (yearDate > currentYear) {
+    let selectedDate = moment(date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
       dispatch(requestMTRDRGIPerformanceFutureData());
-    } else if (yearDate < currentYear) {
-      dispatch(requestMTRDRGIPerformancePastData())
-    } else {
+    } else if (selectedDate < currentDate) {
+      dispatch(requestMTRDRGIPerformancePastData());
+    } else if (selectedDate === currentDate) {
       dispatch(requestMTRDRGIPerformanceData());
     }
+
 
     // eslint-disable-next-line
   }, [date]);
