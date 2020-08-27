@@ -5,20 +5,38 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
-import { requestMTRDRGIPerformanceData } from "../../../../actions";
+import { requestMTRDRGIPerformanceData, requestMTRDRGIPerformanceFutureData, requestMTRDRGIPerformancePastData } from "../../../../actions";
+import moment from "moment";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
-export default ({ graphdata = [] }: any) => {
+export default ({ graphdata = [] , date= new Date()}: any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.MTRDRGIPerformanceReducer
   );
+  // useEffect(() => {
+  //   dispatch(requestMTRDRGIPerformanceData());
+  //   // eslint-disable-next-line
+  // }, []);
+
   useEffect(() => {
-    dispatch(requestMTRDRGIPerformanceData());
+
+    const yearDate :any = moment(date).format("YYYY");
+    let d = new Date();
+    const currentYear:any = d.getFullYear();
+  
+    if (yearDate > currentYear) {
+      dispatch(requestMTRDRGIPerformanceFutureData());
+    } else if (yearDate < currentYear) {
+      dispatch(requestMTRDRGIPerformancePastData())
+    } else {
+      dispatch(requestMTRDRGIPerformanceData());
+    }
+
     // eslint-disable-next-line
-  }, []);
+  }, [date]);
 
   const [setHeight, setsetHeight] = React.useState<string>("250px");
 

@@ -6,17 +6,35 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
-import { requestRGIYOYVarianceData } from "../../../../actions";
+import { requestRGIYOYVarianceData, requestRGIYOYVariancePastData, requestRGIYOYVarianceFutureData } from "../../../../actions";
+import moment from "moment";
 
 export default (date:any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.RGIYOYVarianceReducer
   );
+  // useEffect(() => {
+  //   dispatch(requestRGIYOYVarianceData());
+  //   // eslint-disable-next-line
+  // }, []);
+
   useEffect(() => {
-    dispatch(requestRGIYOYVarianceData());
+
+    const yearDate :any = moment(date).format("YYYY");
+    let d = new Date();
+    const currentYear:any = d.getFullYear();
+  
+    if (yearDate > currentYear) {
+      dispatch(requestRGIYOYVarianceFutureData());
+    } else if (yearDate < currentYear) {
+      dispatch(requestRGIYOYVariancePastData())
+    } else {
+      dispatch(requestRGIYOYVarianceData());
+    }
+
     // eslint-disable-next-line
-  }, []);
+  }, [date]);
 
   const [setHeight, setsetHeight] = React.useState<string>("250px");
 

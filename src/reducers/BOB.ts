@@ -66,6 +66,7 @@ export const BOBReducer = handleActions<IBOBModel, IBOBModel>(
       state = BOBInitialState,
       action
     ): IBOBModel => ({
+      ...state,
       isLoading: false,
       data: [],
       isError: true,
@@ -74,6 +75,7 @@ export const BOBReducer = handleActions<IBOBModel, IBOBModel>(
       state = BOBInitialState,
       action
     ): IBOBModel => ({
+      ...state,
       isLoading: false,
       data: action.payload.data,
       isError: false,

@@ -6,7 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
-import { requestOccupacyStaticsData } from "../../../../actions";
+import { requestOccupacyStaticsData, requestOccupacyStaticsFutureData, requestOccupacyStaticsPastData } from "../../../../actions";
+import moment from "moment";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
@@ -52,10 +53,27 @@ const labeltemplate2 = (args: any) => {
   );
 };
 
+  // useEffect(() => {
+  //   dispatch(requestOccupacyStaticsData());
+  //   // eslint-disable-next-line
+  // }, []);
+
   useEffect(() => {
-    dispatch(requestOccupacyStaticsData());
+
+    const yearDate :any = moment(date).format("YYYY");
+    let d = new Date();
+    const currentYear:any = d.getFullYear();
+  
+    if (yearDate > currentYear) {
+      dispatch(requestOccupacyStaticsFutureData());
+    } else if (yearDate < currentYear) {
+      dispatch(requestOccupacyStaticsPastData())
+    } else {
+      dispatch(requestOccupacyStaticsData());
+    }
+
     // eslint-disable-next-line
-  }, []);
+  }, [date]);
 
   useEffect(() => {
     const modalbtn: HTMLElement | null = document.getElementById(`occ-card`);

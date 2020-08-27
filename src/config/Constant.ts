@@ -9,3 +9,5 @@ export const AcceptedImageFormat = [
 
 export const DateTimeFormat = "LLL"
 export const defaultDateFormat = "DD-MM-YYYY"
+export const yearFormat = "YYYY"
+

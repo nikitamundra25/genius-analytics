@@ -13,7 +13,6 @@ import bob from "../../../../assets/img/bob.svg";
 import pickup from "../../../../assets/img/pickup.svg";
 import market from "../../../../assets/img/availability.svg";
 import bed from "../../../../assets/img/bed.svg";
-import { defaultDateFormat } from "../../../../config";
 
 const MonthlyBOB = (props: any) => {
   const months = getMonthsData(props.selectedDate, "dashboard");

@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
-import { requestRoomTypeStaticsData } from "../../../../actions";
+import { requestRoomTypeStaticsData, requestRoomTypeStaticsFutureData, requestRoomTypeStaticsPastData } from "../../../../actions";
+import moment from "moment";
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
@@ -17,10 +18,27 @@ export default (date:any) => {
   const { isLoading, data = [], isError } = useSelector(
     (state: IRootState) => state.RoomTypeStaticsReducer
   );
+  // useEffect(() => {
+  //   dispatch(requestRoomTypeStaticsData());
+  //   // eslint-disable-next-line
+  // }, []);
+
   useEffect(() => {
-    dispatch(requestRoomTypeStaticsData());
+
+    const yearDate :any = moment(date).format("YYYY");
+    let d = new Date();
+    const currentYear:any = d.getFullYear();
+  
+    if (yearDate > currentYear) {
+      dispatch(requestRoomTypeStaticsFutureData());
+    } else if (yearDate < currentYear) {
+      dispatch(requestRoomTypeStaticsPastData())
+    } else {
+      dispatch(requestRoomTypeStaticsData());
+    }
+
     // eslint-disable-next-line
-  }, []);
+  }, [date]);
 
   useEffect(() => {
     const modalbtn: HTMLElement | null = document.getElementById(`room-card`);

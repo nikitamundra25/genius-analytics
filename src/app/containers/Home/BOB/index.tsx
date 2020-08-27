@@ -7,20 +7,25 @@ import { requestBOBData ,requestBOBPastData,requestBOBFutureData} from "../../..
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import moment from "moment";
+import { yearFormat } from "../../../../config";
 
-const BOB = (date:Date|any) => {
+const BOB = () => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.BOBReducer
   );
-  // useEffect(() => {
+  const {  selectedDate } = useSelector(
+    (state: IRootState) => state.DateSelectionReducer
+  );
+  // useEffect(() => {      
   //   dispatch(requestBOBData());
   //   // eslint-disable-next-line
   // }, []);
 
+  console.log("selectedDate",selectedDate);
   useEffect(() => {
 
-    const yearDate :any = moment(date).format("YYYY");
+    const yearDate :any = moment(selectedDate).format(yearFormat);
     let d = new Date();
     const currentYear:any = d.getFullYear();
   
@@ -33,7 +38,7 @@ const BOB = (date:Date|any) => {
     }
 
     // eslint-disable-next-line
-  }, [date]);
+  }, [selectedDate]);
 
   return (
     <>

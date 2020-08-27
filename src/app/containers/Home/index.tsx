@@ -49,7 +49,6 @@ const HomeComponent: FunctionComponent = () => {
   const RestorePanel = (date:any) => {
     // date = date
     dashboardObj.panels = restoreModel;
-    // setdate(date)
   };
 
   // To store dashboard data initially
@@ -73,7 +72,7 @@ const HomeComponent: FunctionComponent = () => {
         return (
           <Provider store={store}>
             <div className="template">
-              <BOB date={date} />
+              <BOB  />
             </div>
           </Provider>
         );
