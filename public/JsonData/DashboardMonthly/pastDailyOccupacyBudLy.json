@@ -1,0 +1,612 @@
+{
+  "data": [
+    {
+      "name": "1",
+      "OCC": {
+        "data": 81,
+        "Budget": 70,
+        "LY": 84
+      },
+      "ADR": {
+        "data": 393,
+        "Budget": 455,
+        "LY": 244
+
+      },
+      "RevPAR": {
+        "data": 285,
+        "Budget": 192,
+        "LY": 355
+
+      }
+    },
+    {
+      "name": "2",
+      "OCC": {
+        "data": 71,
+        "Budget": 92,
+        "LY": 74
+
+      },
+      "ADR": {
+        "data": 416,
+        "Budget": 299,
+        "LY": 375
+      },
+      "RevPAR": {
+        "data": 411,
+        "Budget": 255,
+        "LY": 423
+      }
+    },
+    {
+      "name": "3",
+      "OCC": {
+        "data": 66,
+        "Budget": 92,
+        "LY": 91
+      },
+      "ADR": {
+        "data": 278,
+        "Budget": 271,
+        "LY": 280
+      },
+      "RevPAR": {
+        "data": 448,
+        "Budget": 439,
+        "LY": 387
+      }
+    },
+    {
+      "name": "4",
+      "OCC": {
+        "data": 85,
+        "Budget": 92,
+        "LY": 90
+      },
+      "ADR": {
+        "data": 388,
+        "Budget": 198,
+        "LY": 313
+      },
+      "RevPAR": {
+        "data": 318,
+        "Budget": 370,
+        "LY": 431
+      }
+    },
+    {
+      "name": "5",
+      "OCC": {
+        "data": 69,
+        "Budget": 71,
+        "LY": 72
+      },
+      "ADR": {
+        "data": 198,
+        "Budget": 460,
+        "LY": 339
+      },
+      "RevPAR": {
+        "data": 356,
+        "Budget": 252,
+        "LY": 383
+      }
+    },
+    {
+      "name": "6",
+      "OCC": {
+        "data": 82,
+        "Budget": 70,
+        "LY": 89
+      },
+      "ADR": {
+        "data": 202,
+        "Budget": 251,
+        "LY": 328
+      },
+      "RevPAR": {
+        "data": 302,
+        "Budget": 372,
+        "LY": 303
+
+      }
+    },
+    {
+      "name": "7",
+      "OCC": {
+        "data": 77,
+        "Budget": 86,
+        "LY": 91
+
+      },
+      "ADR": {
+        "data": 408,
+        "Budget": 459,
+        "LY": 192
+      },
+      "RevPAR": {
+        "data": 305,
+        "Budget": 338,
+        "LY": 225
+
+      }
+    },
+    {
+      "name": "8",
+      "OCC": {
+        "data": 91,
+        "Budget": 71,
+        "LY": 84
+      },
+      "ADR": {
+        "data": 309,
+        "Budget": 462,
+        "LY": 323
+      },
+      "RevPAR": {
+        "data": 448,
+        "Budget": 203,
+        "LY": 298
+      }
+    },
+    {
+      "name": "9",
+      "OCC": {
+        "data": 83,
+        "Budget": 70,
+        "LY": 74
+      },
+      "ADR": {
+        "data": 414,
+        "Budget": 442,
+        "LY": 250
+      },
+      "RevPAR": {
+        "data": 338,
+        "Budget": 201,
+        "LY": 415
+      }
+    },
+    {
+      "name": "10",
+      "OCC": {
+        "data": 79,
+        "Budget": 71,
+        "LY": 77
+      },
+      "ADR": {
+        "data": 422,
+        "Budget": 270,
+        "LY": 478
+      },
+      "RevPAR": {
+        "data": 212,
+        "Budget": 242,
+        "LY": 364
+      }
+    },
+    {
+      "name": "11",
+      "OCC": {
+        "data": 78,
+        "Budget": 72,
+        "LY": 78
+
+      },
+      "ADR": {
+        "data": 344,
+        "Budget": 310,
+        "LY": 336
+      },
+      "RevPAR": {
+        "data": 438,
+        "Budget": 430,
+        "LY": 340
+
+      }
+    },
+    {
+      "name": "12",
+      "OCC": {
+        "data": 84,
+        "Budget": 76,
+        "LY": 85
+      },
+      "ADR": {
+        "data": 236,
+        "Budget":471,
+        "LY": 209
+
+      },
+      "RevPAR": {
+        "data": 337,
+        "Budget": 184,
+        "LY": 343
+
+      }
+    },
+    {
+      "name": "13",
+      "OCC": {
+        "data": 79,
+        "Budget": 71,
+        "LY": 75
+
+      },
+      "ADR": {
+        "data": 314,
+        "Budget": 319,
+        "LY": 469
+
+      },
+      "RevPAR": {
+        "data": 220,
+        "Budget": 390,
+        "LY": 433
+
+      }
+    },
+    {
+      "name": "14",
+      "OCC": {
+        "data": 84,
+        "Budget": 78,
+        "LY": 80
+      },
+      "ADR": {
+        "data": 295,
+        "Budget": 358,
+        "LY": 413
+      },
+      "RevPAR": {
+        "data": 230,
+        "Budget": 436,
+        "LY": 216
+      }
+    },
+    {
+      "name": "15",
+      "OCC": {
+        "data": 90,
+        "Budget": 82,
+        "LY": 82
+      },
+      "ADR": {
+        "data": 437,
+        "Budget": 272,
+        "LY": 190
+      },
+      "RevPAR": {
+        "data": 424,
+        "Budget": 451,
+        "LY": 250
+      }
+    },
+    {
+      "name": "16",
+      "OCC": {
+        "data": 66,
+        "Budget": 71,
+        "LY": 72
+      },
+      "ADR": {
+        "data": 430,
+        "Budget": 291,
+        "LY": 248
+      },
+      "RevPAR": {
+        "data": 286,
+        "Budget": 380,
+        "LY": 276
+      }
+    },
+    {
+      "name": "17",
+      "OCC": {
+        "data": 79,
+        "Budget": 86,
+        "LY": 84
+
+      },
+      "ADR": {
+        "data": 311,
+        "Budget": 217,
+        "LY": 368
+      },
+      "RevPAR": {
+        "data": 354,
+        "Budget": 377,
+        "LY": 252
+      }
+    },
+    {
+      "name": "18",
+      "OCC": {
+        "data": 84,
+        "Budget": 87,
+        "LY": 81
+      },
+      "ADR": {
+        "data": 333,
+        "Budget": 377,
+        "LY": 405
+      },
+      "RevPAR": {
+        "data": 369,
+        "Budget": 188,
+        "LY": 170
+      }
+    },
+    {
+      "name": "19",
+      "OCC": {
+        "data": 76,
+        "Budget": 87,
+        "LY": 73
+      },
+      "ADR": {
+        "data": 188,
+        "Budget": 280,
+        "LY": 225
+
+      },
+      "RevPAR": {
+        "data": 335,
+        "Budget": 209,
+        "LY": 422
+      }
+    },
+    {
+      "name": "20",
+      "OCC": {
+        "data": 83,
+        "Budget": 82,
+        "LY": 74
+
+      },
+      "ADR": {
+        "data": 258,
+        "Budget": 440,
+        "LY": 409
+      },
+      "RevPAR": {
+        "data": 273,
+        "Budget": 411,
+        "LY": 334
+      }
+    },
+    {
+      "name": "21",
+      "OCC": {
+        "data": 82,
+        "Budget": 74,
+        "LY": 84
+      },
+      "ADR": {
+        "data": 480,
+        "Budget": 193,
+        "LY": 438
+      },
+      "RevPAR": {
+        "data": 262,
+        "Budget": 337,
+        "LY": 435
+      }
+    },
+    {
+      "name": "22",
+      "OCC": {
+        "data": 68,
+        "Budget": 91,
+        "LY": 87
+      },
+      "ADR": {
+        "data": 429,
+        "Budget": 471,
+        "LY": 405
+      },
+      "RevPAR": {
+        "data": 243,
+        "Budget": 169,
+        "LY": 445
+
+      }
+    },
+    {
+      "name": "23",
+      "OCC": {
+        "data": 80,
+        "Budget": 73,
+        "LY": 88
+
+      },
+      "ADR": {
+        "data": 369,
+        "Budget": 269,
+        "LY": 355
+      },
+      "RevPAR": {
+        "data": 197,
+        "Budget": 340,
+        "LY": 275
+      }
+    },
+    {
+      "name": "24",
+      "OCC": {
+        "data": 67,
+        "Budget": 79,
+        "LY": 74
+      },
+      "ADR": {
+        "data": 467,
+        "Budget": 342,
+        "LY": 396
+      },
+      "RevPAR": {
+        "data": 369,
+        "Budget": 338,
+        "LY": 237
+      }
+    },
+    {
+      "name": "25",
+      "OCC": {
+        "data": 89,
+        "Budget": 72,
+        "LY": 92
+      },
+      "ADR": {
+        "data": 357,
+        "Budget": 212,
+        "LY": 261
+
+      },
+      "RevPAR": {
+        "data": 364,
+        "Budget": 368,
+        "LY": 283
+
+      }
+    },
+    {
+      "name": "26",
+      "OCC": {
+        "data": 70,
+        "Budget": 84,
+        "LY": 82
+
+      },
+      "ADR": {
+        "data": 273,
+        "Budget": 484,
+        "LY": 242
+
+      },
+      "RevPAR": {
+        "data": 268,
+        "Budget": 366,
+        "LY": 191
+
+      }
+    },
+    {
+      "name": "27",
+      "OCC": {
+        "data": 69,
+        "Budget": 87,
+        "LY": 74
+
+      },
+      "ADR": {
+        "data": 361,
+        "Budget": 233,
+        "LY": 337
+      },
+      "RevPAR": {
+        "data": 180,
+        "Budget": 174,
+        "LY": 319
+
+      }
+    },
+    {
+      "name": "28",
+      "OCC": {
+        "data": 82,
+        "Budget": 73,
+        "LY": 73
+      },
+      "ADR": {
+        "data": 451,
+        "Budget": 431,
+        "LY": 283
+
+      },
+      "RevPAR": {
+        "data": 339,
+        "Budget": 330,
+        "LY": 198
+      }
+    },
+    {
+      "name": "29",
+      "OCC": {
+        "data": 89,
+        "Budget": 79,
+        "LY": 81
+
+      },
+      "ADR": {
+        "data": 233,
+        "Budget": 232,
+        "LY": 220
+
+      },
+      "RevPAR": {
+        "data": 399,
+        "Budget": 437,
+        "LY": 388
+      }
+    },
+    {
+      "name": "30",
+      "OCC": {
+        "data": 80,
+        "Budget": 84,
+        "LY": 91
+
+      },
+      "ADR": {
+        "data": 223,
+        "Budget": 435,
+        "LY": 432
+      },
+      "RevPAR": {
+        "data": 434,
+        "Budget": 328,
+        "LY": 261
+      }
+    },
+    {
+      "name": "31",
+      "OCC": {
+        "data": 90,
+        "Budget": 73,
+        "LY": 72
+
+      },
+      "ADR": {
+        "data": 459,
+        "Budget": 339,
+        "LY": 270
+      },
+      "RevPAR": {
+        "data": 373,
+        "Budget": 216,
+        "LY": 319
+
+      }
+    },
+    {
+      "name": "Total",
+      "OCC": {
+        "data": 88,
+        "Budget": 86,
+        "LY": 79
+      },
+      "ADR": {
+        "data": 337.3,
+        "Budget": 328.0,
+        "LY": 341.6
+      },
+      "RevPAR": {
+        "data":  308.8,
+        "Budget": 323.7,
+        "LY": 304.8
+      }
+    }
+  
+  ]
+}
