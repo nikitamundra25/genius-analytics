@@ -17,7 +17,7 @@ const MixedCharts = React.lazy(() =>
 );
 
 
-const PickupSinceYesterday = (date:Date|any) => {
+const PickupSinceYesterday = ({date }:any) => {
   const dispatch = useDispatch();
   const [setHeight, setsetHeight] = React.useState<string>("250px");
   const { isLoading, data, isError } = useSelector(
@@ -28,9 +28,14 @@ const PickupSinceYesterday = (date:Date|any) => {
   //   // eslint-disable-next-line
   // }, []);
   useEffect(() => {
+   console.log("datedate yesterday",date);
+
     let selectedDate = moment(date).format(checkDateFormat);
     // const selectedDate: any = new Date(date);
     let currentDate = moment(new Date()).format(checkDateFormat);
+    console.log("selectedDate",selectedDate);
+    console.log("currentDate",currentDate);
+    
     if (selectedDate > currentDate) {
       dispatch(requestRoomNightsFutureData());
     } else if (selectedDate < currentDate) {
