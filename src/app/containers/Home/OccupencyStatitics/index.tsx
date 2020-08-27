@@ -61,7 +61,8 @@ const labeltemplate2 = (args: any) => {
   // }, []);
 
   useEffect(() => {
-
+   console.log("datedate occupacy",date);
+   
     let selectedDate = moment(date).format(checkDateFormat);
     // const selectedDate: any = new Date(date);
     let currentDate = moment(new Date()).format(checkDateFormat);

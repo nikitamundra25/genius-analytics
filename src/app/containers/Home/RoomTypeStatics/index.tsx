@@ -16,7 +16,7 @@ const MixedCharts = React.lazy(
   () => import("../../../components/Charts/MixedCharts")
 );
 
-export default (date: any) => {
+export default ({date }:any) => {
   const dispatch = useDispatch();
   const [setHeight, setsetHeight] = React.useState<string>("250px");
   const { isLoading, data = [], isError } = useSelector(

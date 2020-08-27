@@ -7,7 +7,6 @@ import { requestBOBData ,requestBOBPastData,requestBOBFutureData} from "../../..
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import moment from "moment";
-import { yearFormat } from "../../../../config";
 import { checkDateFormat } from "../../../../config";
 
 const BOB = () => {
