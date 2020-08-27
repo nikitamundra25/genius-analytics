@@ -25,6 +25,7 @@ export default (props: any) => {
   //   // eslint-disable-next-line
   // }, []);
 
+
   useEffect(() => {
 
     let selectedDate = moment(props.date).format(checkDateFormat);

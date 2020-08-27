@@ -16,6 +16,7 @@ export default (date:any) => {
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.RGIYOYVarianceReducer
   );
+ 
   // useEffect(() => {
   //   dispatch(requestRGIYOYVarianceData());
   //   // eslint-disable-next-line

@@ -20,6 +20,7 @@ const GeoBusiness  =  ({ graphdata = {},date }:any) => {
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.GeographicOriginReducer
   );
+
   // useEffect(() => {
   //   dispatch(requestGeographicOriginData());
   //   // eslint-disable-next-line

@@ -14,11 +14,12 @@ const PieChartComponent = React.lazy(() =>
 );
 
 
-export default ({ graphdata = [], date }:any) => {
+export default ({ graphdata = [] ,date}:any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.BookingChannelReducer
   );
+
   // useEffect(() => {
   //   dispatch(requestBookingChannelData());
   //   // eslint-disable-next-line

@@ -30,12 +30,14 @@ export default (date: any) => {
   useEffect(() => {
     let selectedDate = moment(date).format(checkDateFormat);
     // const selectedDate: any = new Date(date);
+    console.log("hereeeeeeeeeeeee",date.date);
     let currentDate = moment(new Date()).format(checkDateFormat);
     if (selectedDate > currentDate) {
       dispatch(requestRoomTypeStaticsFutureData());
     } else if (selectedDate < currentDate) {
       dispatch(requestRoomTypeStaticsPastData());
     } else if (selectedDate === currentDate) {
+      
       dispatch(requestRoomTypeStaticsData());
     }
 

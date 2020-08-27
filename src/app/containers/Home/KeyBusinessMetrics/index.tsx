@@ -22,6 +22,8 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.KeyBusinessMetricsReducer
   );
+
+
   // useEffect(() => {
   //   dispatch(requestKeyBusinessMetricsData());
   //   // eslint-disable-next-line
