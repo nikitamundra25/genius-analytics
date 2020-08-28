@@ -132,7 +132,7 @@ const BOB = () => {
                               
                           </td>
                           <td
-                            className={`content-col ${
+                            className={`content-col bg-2 ${
                               list.VSbud && parseInt(list.VSbud) < 0
                                   ? "text-danger"
                                   : ""

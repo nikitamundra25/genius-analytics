@@ -104,6 +104,7 @@ export default ({ graphdata = [] , date}: any) => {
         fill: "url(#rgi-chart)",
         name: "RGI",
         width: 2,
+        columnWidth:1.3,
         cornerRadius: {
           bottomLeft: 0,
           bottomRight: 4,
@@ -130,6 +131,7 @@ export default ({ graphdata = [] , date}: any) => {
         yName: "y2",
         type: "Bar",
         //fill: "#2e75b7",
+        columnWidth:1.3,
         fill: "url(#rgi-chart)",
         name: "RGI",
         yAxisName:'yAxis2',
