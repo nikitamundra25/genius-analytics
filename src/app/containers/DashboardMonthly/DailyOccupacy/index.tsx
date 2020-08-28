@@ -233,7 +233,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
                 },
                 visible:false,
                 //interval: 30,
-                rangePadding: 'None',
+                //rangePadding: 'None',
               },
               tooltip: { enable: true },
               Legend: { enable: false },

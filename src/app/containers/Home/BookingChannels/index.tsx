@@ -3,23 +3,43 @@ import { Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import WidgetHeader from "../../../components/WidgetHeader";
-import { requestBookingChannelData } from "../../../../actions";
+import { requestBookingChannelData, requestBookingChannelFutureData, requestBookingChannelPastData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import moment from "moment";
+import { checkDateFormat } from "../../../../config";
+
 const PieChartComponent = React.lazy(() =>
   import("../../../components/Charts/PieChart")
 );
 
 
-export default ({ graphdata = [] }:any) => {
+export default ({ graphdata = [] ,date}:any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.BookingChannelReducer
   );
+
+  // useEffect(() => {
+  //   dispatch(requestBookingChannelData());
+  //   // eslint-disable-next-line
+  // }, []);
+
   useEffect(() => {
-    dispatch(requestBookingChannelData());
+
+    let selectedDate = moment(date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
+      dispatch(requestBookingChannelFutureData());
+    } else if (selectedDate < currentDate) {
+      dispatch(requestBookingChannelPastData());
+    } else if (selectedDate === currentDate) {
+      dispatch(requestBookingChannelData());
+    }
+  
     // eslint-disable-next-line
-  }, []);
+  }, [date]);
 
   const [setHeight, setsetHeight] = React.useState<string>("250px");
 

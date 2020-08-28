@@ -1,13 +1,16 @@
 import React, { forwardRef, useEffect } from "react";
 import { Dropdown } from "react-bootstrap";
 import moment from "moment";
+import { useDispatch } from "react-redux";
 import { useHistory, useLocation } from "react-router";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { AppRoutes } from "../../../config";
+import { requestDateSelectionData } from "../../../actions";
 
 const TopBar = (props: any) => {
   const ref = React.createRef();
+  const dispatch = useDispatch();
   const currentYear = moment().get("year");
   let history = useHistory();
   let { pathname } = useLocation();
@@ -67,6 +70,7 @@ const TopBar = (props: any) => {
       1
     );
     props.handleReset(setNewDate);
+    dispatch(requestDateSelectionData(setNewDate));
     setState({
       ...state,
       activeMonth: month,
@@ -95,6 +99,7 @@ const TopBar = (props: any) => {
       activeMonth: month,
       startDate: setNewDate,
     });
+    dispatch(requestDateSelectionData(setNewDate));
     props.handleReset(setNewDate);
   };
   const CustomInput = forwardRef(({ onClick, value }: any, ref) => (

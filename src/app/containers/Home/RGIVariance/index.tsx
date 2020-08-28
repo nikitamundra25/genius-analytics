@@ -6,17 +6,37 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
-import { requestRGIYOYVarianceData } from "../../../../actions";
+import { requestRGIYOYVarianceData, requestRGIYOYVariancePastData, requestRGIYOYVarianceFutureData } from "../../../../actions";
+import { checkDateFormat } from "../../../../config";
 
-export default () => {
+import moment from "moment";
+
+export default ({date }:any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.RGIYOYVarianceReducer
   );
+ 
+  // useEffect(() => {
+  //   dispatch(requestRGIYOYVarianceData());
+  //   // eslint-disable-next-line
+  // }, []);
+
   useEffect(() => {
-    dispatch(requestRGIYOYVarianceData());
+
+    let selectedDate = moment(date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
+      dispatch(requestRGIYOYVarianceFutureData());
+    } else if (selectedDate < currentDate) {
+      dispatch(requestRGIYOYVariancePastData());
+    } else if (selectedDate === currentDate) {
+      dispatch(requestRGIYOYVarianceData());
+    }
+
     // eslint-disable-next-line
-  }, []);
+  }, [date]);
 
   const [setHeight, setsetHeight] = React.useState<string>("250px");
 

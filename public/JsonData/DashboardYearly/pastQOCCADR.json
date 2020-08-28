@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "name": "Q1",
+      "OCC": 55,
+      "ADR": 329,
+      "RoomNights": 239
+    },
+    {
+      "name": "Q2",
+      "OCC": 66,
+      "ADR": 388,
+      "RoomNights": 209
+    },
+    {
+      "name": "Q3",
+      "OCC": 74,
+      "ADR": 235,
+      "RoomNights": 226
+    },
+    {
+      "name": "Q4",
+      "OCC": 66,
+      "ADR": 290,
+      "RoomNights": 282
+    },
+    {
+      "name": "Total",
+      "OCC": 65,
+      "ADR": 310.5,
+      "RoomNights": 956
+    }
+  ]
+}

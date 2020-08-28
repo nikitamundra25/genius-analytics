@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "data": [
+        { "x": "My RevPAR", "y1": 0, "y2": null  },
+        { "x": "RevPAR Compset", "y1": 0, "y2": null  },
+        { "x": "RGI", "y1": null , "y2": 0  }
+      ]
+    },
+    {
+      "data": [
+        { "x": "My OCC", "y1": 0, "y2": null  },
+        { "x": "OCC Compset", "y1": 0, "y2": null  },
+        { "x": "MPI", "y1": null, "y2": 0  }
+      ]
+    },
+    {
+      "data": [
+        { "x": "My ARR", "y1": 0, "y2": null },
+        { "x": "ARR Compset", "y1": 0 , "y2": null },
+        { "x": "ARI", "y1": null, "y2": 0  }
+      ]
+    }
+  ]
+}

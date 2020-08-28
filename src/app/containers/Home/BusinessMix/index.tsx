@@ -3,9 +3,12 @@ import { Card, Row, Col } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
-import { requestBusinessMixData } from "../../../../actions";
+import { requestBusinessMixData, requestBusinessMixFutureData, requestBusinessMixPastData } from "../../../../actions";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
+import moment from "moment";
+import { checkDateFormat } from "../../../../config";
+
 const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
@@ -17,10 +20,26 @@ export default (props: any) => {
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.BusinessMixReducer
   );
+  // useEffect(() => {
+  //   dispatch(requestBusinessMixData());
+  //   // eslint-disable-next-line
+  // }, []);
+
+
   useEffect(() => {
-    dispatch(requestBusinessMixData());
+
+    let selectedDate = moment(props.date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
+      dispatch(requestBusinessMixFutureData());
+    } else if (selectedDate < currentDate) {
+      dispatch(requestBusinessMixPastData());
+    } else if (selectedDate === currentDate) {
+      dispatch(requestBusinessMixData());
+    }
     // eslint-disable-next-line
-  }, []);
+  }, [props.date]);
 
   useEffect(() => {
     const modalbtn: HTMLElement | null = document.getElementById(`mix-card`);

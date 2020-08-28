@@ -5,20 +5,40 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
-import { requestMTRDRGIPerformanceData } from "../../../../actions";
+import { requestMTRDRGIPerformanceData, requestMTRDRGIPerformanceFutureData, requestMTRDRGIPerformancePastData } from "../../../../actions";
+import moment from "moment";
+import { checkDateFormat } from "../../../../config";
+
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
-export default ({ graphdata = [] }: any) => {
+export default ({ graphdata = [] , date}: any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.MTRDRGIPerformanceReducer
   );
+  // useEffect(() => {
+  //   dispatch(requestMTRDRGIPerformanceData());
+  //   // eslint-disable-next-line
+  // }, []);
+
   useEffect(() => {
-    dispatch(requestMTRDRGIPerformanceData());
+
+    let selectedDate = moment(date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
+      dispatch(requestMTRDRGIPerformanceFutureData());
+    } else if (selectedDate < currentDate) {
+      dispatch(requestMTRDRGIPerformancePastData());
+    } else if (selectedDate === currentDate) {
+      dispatch(requestMTRDRGIPerformanceData());
+    }
+
+
     // eslint-disable-next-line
-  }, []);
+  }, [date]);
 
   const [setHeight, setsetHeight] = React.useState<string>("250px");
 
@@ -84,6 +104,7 @@ export default ({ graphdata = [] }: any) => {
         fill: "url(#rgi-chart)",
         name: "RGI",
         width: 2,
+        columnWidth:1.3,
         cornerRadius: {
           bottomLeft: 0,
           bottomRight: 4,
@@ -110,6 +131,7 @@ export default ({ graphdata = [] }: any) => {
         yName: "y2",
         type: "Bar",
         //fill: "#2e75b7",
+        columnWidth:1.3,
         fill: "url(#rgi-chart)",
         name: "RGI",
         yAxisName:'yAxis2',

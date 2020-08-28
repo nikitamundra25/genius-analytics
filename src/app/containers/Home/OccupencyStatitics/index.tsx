@@ -6,12 +6,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
-import { requestOccupacyStaticsData } from "../../../../actions";
+import { requestOccupacyStaticsData, requestOccupacyStaticsFutureData, requestOccupacyStaticsPastData } from "../../../../actions";
+import moment from "moment";
+import { checkDateFormat } from "../../../../config";
+
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
-const OccupencyStatitics = ({ graphdata = [] }:any) => {
+const OccupencyStatitics = ({ graphdata = [] ,date}:any) => {
   const dispatch = useDispatch();
   const [setHeight, setsetHeight] = React.useState<string>("250px");
   const { isLoading, data, isError } = useSelector(
@@ -52,10 +55,28 @@ const labeltemplate2 = (args: any) => {
   );
 };
 
+  // useEffect(() => {
+  //   dispatch(requestOccupacyStaticsData());
+  //   // eslint-disable-next-line
+  // }, []);
+
   useEffect(() => {
-    dispatch(requestOccupacyStaticsData());
+   console.log("datedate occupacy",date);
+   
+    let selectedDate = moment(date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
+      dispatch(requestOccupacyStaticsFutureData());
+    } else if (selectedDate < currentDate) {
+      dispatch(requestOccupacyStaticsPastData());
+    } else if (selectedDate === currentDate) {
+      dispatch(requestOccupacyStaticsData());
+    }
+
+
     // eslint-disable-next-line
-  }, []);
+  }, [date]);
 
   useEffect(() => {
     const modalbtn: HTMLElement | null = document.getElementById(`occ-card`);

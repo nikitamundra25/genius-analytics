@@ -28,6 +28,56 @@ export const OccupacyStaticsReducer = handleActions<IBookingChannelModel, IBooki
       data: action.payload.data,
       isError: false,
     }),
+
+    //  Past
+    [OccupacyStaticsActionTypes.TOGGLE_OCCUPACY_STATICS_PAST_LOADER]: (
+      state = OccupacyStaticsInitialState,
+      action
+    ): IBookingChannelModel => ({
+      ...state,
+      isLoading: action.payload.isLoading,
+    }),
+    [OccupacyStaticsActionTypes.OCCUPACY_STATICS_PAST_DATA_FAILED]: (
+      state = OccupacyStaticsInitialState,
+      action
+    ): IBookingChannelModel => ({
+      isLoading: false,
+      data: [],
+      isError: true,
+    }),
+    [OccupacyStaticsActionTypes.OCCUPACY_STATICS_PAST_DATA_SUCCESS]: (
+      state = OccupacyStaticsInitialState,
+      action
+    ): IBookingChannelModel => ({
+      isLoading: false,
+      data: action.payload.data,
+      isError: false,
+    }),
+
+    //  Future
+    [OccupacyStaticsActionTypes.TOGGLE_OCCUPACY_STATICS_FUTURE_LOADER]: (
+      state = OccupacyStaticsInitialState,
+      action
+    ): IBookingChannelModel => ({
+      ...state,
+      isLoading: action.payload.isLoading,
+    }),
+    [OccupacyStaticsActionTypes.OCCUPACY_STATICS_FUTURE_DATA_FAILED]: (
+      state = OccupacyStaticsInitialState,
+      action
+    ): IBookingChannelModel => ({
+      isLoading: false,
+      data: [],
+      isError: true,
+    }),
+    [OccupacyStaticsActionTypes.OCCUPACY_STATICS_FUTURE_DATA_SUCCESS]: (
+      state = OccupacyStaticsInitialState,
+      action
+    ): IBookingChannelModel => ({
+      isLoading: false,
+      data: action.payload.data,
+      isError: false,
+    }),
   },
   OccupacyStaticsInitialState
 );

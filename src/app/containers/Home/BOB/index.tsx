@@ -3,19 +3,40 @@ import { Card, Table } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
-import { requestBOBData } from "../../../../actions";
+import { requestBOBData ,requestBOBPastData,requestBOBFutureData} from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import moment from "moment";
+import { checkDateFormat } from "../../../../config";
 
 const BOB = () => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.BOBReducer
   );
+  const {  selectedDate : date} = useSelector(
+    (state: IRootState) => state.DateSelectionReducer
+  );
+  // useEffect(() => {      
+  //   dispatch(requestBOBData());
+  //   // eslint-disable-next-line
+  // }, []);
+
   useEffect(() => {
-    dispatch(requestBOBData());
+
+    let selectedDate = moment(date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
+      dispatch(requestBOBFutureData());
+    } else if (selectedDate < currentDate) {
+      dispatch(requestBOBPastData());
+    } else if (selectedDate === currentDate) {
+      dispatch(requestBOBData());
+    }
+
     // eslint-disable-next-line
-  }, []);
+  }, [date]);
 
   return (
     <>
@@ -111,7 +132,7 @@ const BOB = () => {
                               
                           </td>
                           <td
-                            className={`content-col ${
+                            className={`content-col bg-2 ${
                               list.VSbud && parseInt(list.VSbud) < 0
                                   ? "text-danger"
                                   : ""

@@ -1,0 +1,82 @@
+{
+  "data": [
+    {
+      "name": "Jan",
+      "OCC": 55,
+      "ADR": 382,
+      "Room Nights": 371
+    },
+    {
+      "name": "Feb",
+      "OCC": 66,
+      "ADR": 295,
+      "Room Nights": 307
+    },
+    {
+      "name": "Mar",
+      "OCC": 71,
+      "ADR": 279,
+      "Room Nights": 263
+    },
+    {
+      "name": "Apr",
+      "OCC": 77,
+      "ADR": 362,
+      "Room Nights": 308
+    },
+    {
+      "name": "May",
+      "OCC": 56,
+      "ADR": 367,
+      "Room Nights": 262
+    },
+    {
+      "name": "Jun",
+      "OCC": 64,
+      "ADR": 334,
+      "Room Nights": 192
+    },
+    {
+      "name": "Jul",
+      "OCC": 89,
+      "ADR": 311,
+      "Room Nights": 318
+    },
+    {
+      "name": "Aug",
+      "OCC": 49,
+      "ADR": 225,
+      "Room Nights": 368
+    },
+    {
+      "name": "Sep",
+      "OCC": 61,
+      "ADR": 199,
+      "Room Nights": 61
+    },
+    {
+      "name": "Oct",
+      "OCC": 55,
+      "ADR": 282,
+      "Room Nights": 182
+    },
+    {
+      "name": "Nov",
+      "OCC": 87,
+      "ADR": 408,
+      "Room Nights": 197
+    },
+    {
+      "name": "Dec",
+      "OCC": 87,
+      "ADR": 311,
+      "Room Nights": 263
+    },
+    {
+      "name": "Total",
+      "OCC": 68,
+      "ADR": 312.9,
+      "Room Nights":3219 
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "name": "BAR",
+      "Rm Nts TY": 159,
+      "Rm Nts LY": 176,
+      "ADR TY": 174,
+      "ADR LY": 175
+    },
+    {
+      "name": "Leisure",
+      "Rm Nts TY": 102,
+      "Rm Nts LY": 237,
+      "ADR TY": 208,
+      "ADR LY": 390
+    },
+    {
+      "name": "Corporate",
+      "Rm Nts TY": 142,
+      "Rm Nts LY": 200,
+      "ADR TY": 325,
+      "ADR LY": 175
+    },
+    {
+      "name": "Consortia",
+      "Rm Nts TY": 105,
+      "Rm Nts LY": 236,
+      "ADR TY": 254,
+      "ADR LY": 347
+    },
+    {
+      "name": "Promotion",
+      "Rm Nts TY": 111,
+      "Rm Nts LY": 86,
+      "ADR TY": 202,
+      "ADR LY": 206
+    },
+    {
+      "name": "Groups",
+      "Rm Nts TY": 219,
+      "Rm Nts LY": 184,
+      "ADR TY": 450,
+      "ADR LY": 234
+    },
+    {
+      "name": "OTAs",
+      "Rm Nts TY": 81,
+      "Rm Nts LY": 281,
+      "ADR TY": 197,
+      "ADR LY": 169
+    },
+    {
+      "name": "FIT",
+      "Rm Nts TY": 150,
+      "Rm Nts LY": 120,
+      "ADR TY": 297,
+      "ADR LY": 404
+    }
+  ]
+}

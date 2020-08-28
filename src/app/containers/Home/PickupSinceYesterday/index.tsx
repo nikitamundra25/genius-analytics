@@ -5,25 +5,47 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
-import { requestRoomNightsData } from "../../../../actions";
+import { requestRoomNightsData,requestRoomNightsPastData,requestRoomNightsFutureData } from "../../../../actions";
 import caretup from "../../../../assets/img/caret-up.svg";
 import caretdown from "../../../../assets/img/caret-down.svg"
+import { checkDateFormat } from "../../../../config";
+
+import moment from "moment";
 
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
 
-const PickupSinceYesterday = () => {
+const PickupSinceYesterday = ({date }:any) => {
   const dispatch = useDispatch();
   const [setHeight, setsetHeight] = React.useState<string>("250px");
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.RoomNightsReducer
   );
+  // useEffect(() => {
+  //   dispatch(requestRoomNightsData());
+  //   // eslint-disable-next-line
+  // }, []);
   useEffect(() => {
-    dispatch(requestRoomNightsData());
+   console.log("datedate yesterday",date);
+
+    let selectedDate = moment(date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    console.log("selectedDate",selectedDate);
+    console.log("currentDate",currentDate);
+    
+    if (selectedDate > currentDate) {
+      dispatch(requestRoomNightsFutureData());
+    } else if (selectedDate < currentDate) {
+      dispatch(requestRoomNightsPastData());
+    } else if (selectedDate === currentDate) {
+      dispatch(requestRoomNightsData());
+    }
+
     // eslint-disable-next-line
-  }, []);
+  }, [date]);
 
   
  useEffect(() => {

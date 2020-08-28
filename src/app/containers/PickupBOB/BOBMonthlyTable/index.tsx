@@ -273,7 +273,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               {" "}
                               {list.barValueRooms
                                 ? list.barValueRooms
-                                : "-"}{" "}
+                                : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -283,7 +283,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.barValueADR ? list.barValueADR : "-"}{" "}
+                              {list.barValueADR ? list.barValueADR : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -295,7 +295,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.barValueRevenue
                                 ? list.barValueRevenue
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -307,7 +307,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.publicDiscountRooms
                                 ? list.publicDiscountRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -319,7 +319,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.publicDiscountADR
                                 ? list.publicDiscountADR
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -331,7 +331,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.publicDiscountRevenue
                                 ? list.publicDiscountRevenue
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -343,7 +343,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.corporateDiscountRooms
                                 ? list.corporateDiscountRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -355,7 +355,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.corporateDiscountADR
                                 ? list.corporateDiscountADR
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -368,7 +368,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               {" "}
                               {list.corporateDiscountRevenue
                                 ? list.corporateDiscountRevenue
-                                : "-"}{" "}
+                                : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -380,7 +380,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.partnershipDiscountRooms
                                 ? list.partnershipDiscountRooms
-                                : "-"}{" "}
+                                : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -392,7 +392,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.partnershipDiscountADR
                                 ? list.partnershipDiscountADR
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -404,7 +404,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.partnershipDiscountRevenue
                                 ? list.partnershipDiscountRevenue
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -414,7 +414,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.onlineAdvRooms ? list.onlineAdvRooms : "-"}
+                              {list.onlineAdvRooms ? list.onlineAdvRooms : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -424,7 +424,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.onlineAdvADR ? list.onlineAdvADR : "-"}
+                              {list.onlineAdvADR ? list.onlineAdvADR : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -436,7 +436,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.onlineAdvRevenue
                                 ? list.onlineAdvRevenue
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -448,7 +448,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.corporateGroupRooms
                                 ? list.corporateGroupRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -461,7 +461,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               {" "}
                               {list.corporateGroupADR
                                 ? list.corporateGroupADR
-                                : "-"}{" "}
+                                : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -473,7 +473,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.corporateGroupRevenue
                                 ? list.corporateGroupRevenue
-                                : "-"}{" "}
+                                : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -483,7 +483,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.leisureRooms ? list.leisureRooms : "-"}
+                              {list.leisureRooms ? list.leisureRooms : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -492,7 +492,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.leisureADR ? list.leisureADR : "-"}
+                              {list.leisureADR ? list.leisureADR : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -502,7 +502,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.leisureRevenue ? list.leisureRevenue : "-"}
+                              {list.leisureRevenue ? list.leisureRevenue : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -514,7 +514,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.residentialGroupRooms
                                 ? list.residentialGroupRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -526,7 +526,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.residentialGroupADR
                                 ? list.residentialGroupADR
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -538,7 +538,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.residentialGroupRevenue
                                 ? list.residentialGroupRevenue
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -548,7 +548,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {" "}
-                              {list.otaRooms ? list.otaRooms : "-"}{" "}
+                              {list.otaRooms ? list.otaRooms : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -557,7 +557,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.otaADR ? list.otaADR : "-"}{" "}
+                              {list.otaADR ? list.otaADR : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -566,7 +566,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.otaRevenue ? list.otaRevenue : "-"}
+                              {list.otaRevenue ? list.otaRevenue : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -576,7 +576,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.wholesaleRooms ? list.wholesaleRooms : "-"}
+                              {list.wholesaleRooms ? list.wholesaleRooms : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -586,7 +586,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.wholesaleADR ? list.wholesaleADR : "-"}
+                              {list.wholesaleADR ? list.wholesaleADR : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -598,7 +598,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.wholesaleRevenue
                                 ? list.wholesaleRevenue
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -610,7 +610,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.longTermContractRooms
                                 ? list.longTermContractRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -622,7 +622,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.longTermContractADR
                                 ? list.longTermContractADR
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -634,7 +634,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.longTermContractRevenue
                                 ? list.longTermContractRevenue
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -646,7 +646,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.monthlyContractRooms
                                 ? list.monthlyContractRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -658,7 +658,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.monthlyContractADR
                                 ? list.monthlyContractADR
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -670,7 +670,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.monthlyContractRevenue
                                 ? list.monthlyContractRevenue
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -682,7 +682,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.airlineCrewRooms
                                 ? list.airlineCrewRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -692,7 +692,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.airlineCrewADR ? list.airlineCrewADR : "-"}
+                              {list.airlineCrewADR ? list.airlineCrewADR : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -704,7 +704,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {list.airlineCrewRevenue
                                 ? list.airlineCrewRevenue
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col  ${
@@ -713,7 +713,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.staffRooms ? list.staffRooms : "-"}
+                              {list.staffRooms ? list.staffRooms : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -722,7 +722,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.staffADR ? list.staffADR : "-"}
+                              {list.staffADR ? list.staffADR : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -732,7 +732,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.staffRevenue ? list.staffRevenue : "-"}
+                              {list.staffRevenue ? list.staffRevenue : null}
                             </td>
                             <td
                               className={`content-col  total-content ${
@@ -742,7 +742,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.resultRooms ? list.resultRooms : "-"}
+                              {list.resultRooms ? list.resultRooms : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -752,7 +752,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.resultADR ? list.resultADR : "-"}
+                              {list.resultADR ? list.resultADR : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -762,7 +762,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.resultRevenue ? list.resultRevenue : "-"}
+                              {list.resultRevenue ? list.resultRevenue : null}
                             </td>
                           </tr>
                         </>

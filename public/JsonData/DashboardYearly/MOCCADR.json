@@ -1,82 +1,82 @@
 {
-    "data": [
-        {
-          "name": "Jan",
-          "OCC": 55,
-          "ADR": 207,
-          "Room Nights":385
-        },
-        {
-          "name": "Feb",
-          "OCC": 73,
-          "ADR": 248,
-          "Room Nights":232
-        },
-        {
-          "name": "Mar",
-          "OCC": 93,
-          "ADR": 200,
-          "Room Nights":250
-        },
-        {
-          "name": "Apr",
-          "OCC": 48,
-          "ADR": 377,
-          "Room Nights":267
-        },
-        {
-          "name": "May",
-          "OCC": 70,
-          "ADR": 247,
-          "Room Nights":264
-        },
-        {
-          "name": "Jun",
-          "OCC": 50,
-          "ADR": 251,
-          "Room Nights":372
-        },
-        {
-          "name": "Jul",
-          "OCC": 78,
-          "ADR": 419,
-          "Room Nights":383
-        },
-        {
-          "name": "Aug",
-          "OCC": 76,
-          "ADR": 380,
-          "Room Nights":235
-        },
-        {
-          "name": "Sep",
-          "OCC": 63,
-          "ADR": 261,
-          "Room Nights":326
-        },
-        {
-          "name": "Oct",
-          "OCC": 70,
-          "ADR": 237,
-          "Room Nights":313
-        },
-        {
-          "name": "Nov",
-          "OCC": 70,
-          "ADR": 397,
-          "Room Nights":193
-        },
-        {
-          "name": "Dec",
-          "OCC": 51,
-          "ADR": 346,
-          "Room Nights":333
-        },
-        {
-          "name": "Total",
-          "OCC": 66,
-          "ADR": 297.5,
-          "Room Nights":296.08
-        }
-      ]
+  "data": [
+    {
+      "name": "Jan",
+      "OCC": 363,
+      "ADR": 207,
+      "Room Nights": 319
+    },
+    {
+      "name": "Feb",
+      "OCC": 89,
+      "ADR": 219,
+      "Room Nights": 258
+    },
+    {
+      "name": "Mar",
+      "OCC": 88,
+      "ADR": 312,
+      "Room Nights": 367
+    },
+    {
+      "name": "Apr",
+      "OCC": 59,
+      "ADR": 233,
+      "Room Nights": 150
+    },
+    {
+      "name": "May",
+      "OCC": 54,
+      "ADR": 319,
+      "Room Nights": 236
+    },
+    {
+      "name": "Jun",
+      "OCC": 63,
+      "ADR": 289,
+      "Room Nights": 221
+    },
+    {
+      "name": "Jul",
+      "OCC": 72,
+      "ADR": 286,
+      "Room Nights": 352
+    },
+    {
+      "name": "Aug",
+      "OCC": 81,
+      "ADR": 398,
+      "Room Nights": 206
+    },
+    {
+      "name": "Sep",
+      "OCC": 81,
+      "ADR": 352,
+      "Room Nights": 178
+    },
+    {
+      "name": "Oct",
+      "OCC": 95,
+      "ADR": 231,
+      "Room Nights": 171
+    },
+    {
+      "name": "Nov",
+      "OCC": 79,
+      "ADR": 307,
+      "Room Nights": 366
+    },
+    {
+      "name": "Dec",
+      "OCC": 81,
+      "ADR": 392,
+      "Room Nights": 373
+    },
+    {
+      "name": "Total",
+      "OCC": 75,
+      "ADR": 308.4,
+      "Room Nights": 3197
+    }
+  ]
 }

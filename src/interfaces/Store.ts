@@ -2,6 +2,7 @@ import { IDashboardMainModel } from "./Dashboard";
 import { IPickupModel } from "./Pickup";
 import { IBOBModel } from "./BOB";
 import { IBookingChannelModel } from "./BookingChannel";
+import { IDateSelectionModel } from "./DateSelection";
 
 export interface ImainState {
   showLoader: boolean;
@@ -45,4 +46,6 @@ export interface IRootState {
   pickupBlobReducer: IBookingChannelModel;
   pickupSummaryTableReducer: IBookingChannelModel;
   CumulativeTableReducer: IBookingChannelModel;
+
+  DateSelectionReducer: IDateSelectionModel
 }

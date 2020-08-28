@@ -1,0 +1,1455 @@
+{
+  "data": {
+    "legend": [
+      {
+        "code": "Côte",
+        "name": "Côte d'Ivoire",
+        "roomNights": 3627,
+        "ADR": 169,
+        "revenue": 612963,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SG",
+        "name": "Singapore",
+        "roomNights": 2244,
+        "ADR": 188,
+        "revenue": 421872,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BH",
+        "name": "Bhutan",
+        "roomNights": 3627,
+        "ADR": 169,
+        "revenue": 612963,
+        "color": "#cfca76"
+      },
+      {
+        "code": "Ec",
+        "name": "Ecuador",
+        "roomNights": 3627,
+        "ADR": 169,
+        "revenue": 612963,
+        "color": "#abab0d"
+      },
+      {
+        "code": "AF",
+        "name": "Afghanistan",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "AL",
+        "name": "Albania",
+        "roomNights": 91,
+        "ADR": 156,
+        "revenue": 14196,
+        "color": "#cfca76"
+      },
+      {
+        "code": "DZ",
+        "name": "Algeria",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#abab0d"
+      },
+      {
+        "code": "AO",
+        "name": "Angola",
+        "roomNights": 316,
+        "ADR": 181,
+        "revenue": 57196,
+        "color": "#eae7c6"
+      },
+      {
+        "code": "AR",
+        "name": "Argentina",
+        "roomNights": 1066,
+        "ADR": 156,
+        "revenue": 166296,
+        "color": "#abab0d"
+      },
+      {
+        "code": "AM",
+        "name": "Armenia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "AU",
+        "name": "Australia",
+        "roomNights": 2043,
+        "ADR": 185,
+        "revenue": 377955,
+        "color": "#abab0d"
+      },
+      {
+        "code": "AT",
+        "name": "Austria",
+        "roomNights": 1039,
+        "ADR": 159,
+        "revenue": 165201,
+        "color": "#cfca76"
+      },
+      {
+        "code": "AZ",
+        "name": "Azerbaijan",
+        "roomNights": 313,
+        "ADR": 166,
+        "revenue": 51958,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BS",
+        "name": "Bahamas",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BH",
+        "name": "Bahrain",
+        "roomNights": 1055,
+        "ADR": 156,
+        "revenue": 164580,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BD",
+        "name": "Bangladesh",
+
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BY",
+        "name": "Belarus",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BE",
+        "name": "Belgium",
+        "roomNights": 2121,
+        "ADR": 165,
+        "revenue": 349965,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BZ",
+        "name": "Belize",
+        "roomNights": 479,
+        "ADR": 181,
+        "revenue": 86699,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BJ",
+        "name": "Benin",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BO",
+        "name": "Bolivia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BA",
+        "name": "Bosnia and Herz.",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BW",
+        "name": "Botswana",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BR",
+        "name": "Brazil",
+        "roomNights": 2147,
+        "ADR": 160,
+        "revenue": 343520,
+        "color": "#abab0d"
+      },
+      {
+        "code": "BN",
+        "name": "Brunei",
+        "roomNights": 7,
+        "ADR": 162,
+        "revenue": 1134,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BG",
+        "name": "Bulgaria",
+        "roomNights": 259,
+        "ADR": 171,
+        "revenue": 44389,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BF",
+        "name": "Burkina Faso",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BD",
+        "name": "Brunei Darussalam",
+        "roomNights": 291,
+        "ADR": 165,
+        "revenue": 48015,
+        "color": "#cfca76"
+      },
+      {
+        "code": "BI",
+        "name": "Burundi",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "KH",
+        "name": "Cambodia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "CM",
+        "name": "Cameroon",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "CA",
+        "name": "Canada",
+        "roomNights": 2163,
+        "ADR": 184,
+        "revenue": 397992,
+        "color": "#abab0d"
+      },
+      {
+        "code": "CF",
+        "name": "Central African Rep.",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#eae7c6"
+      },
+      {
+        "code": "TD",
+        "name": "Chad",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "CL",
+        "name": "Chile",
+        "roomNights": 174,
+        "ADR": 171,
+        "revenue": 29754,
+        "color": "#abab0d"
+      },
+      {
+        "code": "CN",
+        "name": "China",
+        "roomNights": 1691,
+        "ADR": 173,
+        "revenue": 292543,
+        "color": "#abab0d"
+      },
+      {
+        "code": "CO",
+        "name": "Colombia",
+        "roomNights": 106,
+        "ADR": 183,
+        "revenue": 19398,
+        "color": "#abab0d"
+      },
+      {
+        "code": "CD",
+        "name": "Dem. Rep. Congo",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#eae7c6"
+      },
+      {
+        "code": "CG",
+        "name": "Congo",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "CR",
+        "name": "Costa Rica",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "HR",
+        "name": "Croatia",
+        "roomNights": 109,
+        "ADR": 179,
+        "revenue": 19511,
+        "color": "#cfca76"
+      },
+      {
+        "code": "CU",
+        "name": "Cuba",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "CY",
+        "name": "Cyprus",
+        "roomNights": 320,
+        "ADR": 177,
+        "revenue": 54640,
+        "color": "#cfca76"
+      },
+      {
+        "code": "CZ",
+        "name": "Czech Republic",
+        "roomNights": 980,
+        "ADR": 182,
+        "revenue": 178360,
+        "color": "#cfca76"
+      },
+      {
+        "code": "DK",
+        "name": "Denmark",
+        "roomNights": 1836,
+        "ADR": 183,
+        "revenue": 335988,
+        "color": "#cfca76"
+      },
+      {
+        "code": "DJ",
+        "name": "Djibouti",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "DO",
+        "name": "Dominican Rep.",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "EG",
+        "name": "Egypt",
+        "roomNights": 495,
+        "ADR": 185,
+        "revenue": 91575,
+        "color": "#abab0d"
+      },
+      {
+        "code": "SV",
+        "name": "El Salvador",
+        "roomNights": 346,
+        "ADR": 188,
+        "revenue": 65048,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GQ",
+        "name": "Guinea",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ER",
+        "name": "Eritrea",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "EE",
+        "name": "Estonia",
+        "roomNights": 358,
+        "ADR": 170,
+        "revenue": 60860,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ET",
+        "name": "Ethiopia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#d5d688"
+      },
+      {
+        "code": "FJ",
+        "name": "Fiji",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "FI",
+        "name": "Finland",
+        "roomNights": 1296,
+        "ADR": 157,
+        "revenue": 203472,
+        "color": "#abab0d"
+      },
+      {
+        "code": "FR",
+        "name": "France",
+        "roomNights": 1665,
+        "ADR": 188,
+        "revenue": 313020,
+        "color": "#abab0d"
+      },
+      {
+        "code": "GA",
+        "name": "Gabon",
+        "roomNights": 1078,
+        "ADR": 174,
+        "revenue": 187572,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GM",
+        "name": "Gambia",
+        "roomNights": 115,
+        "ADR": 187,
+        "revenue": 21505,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GE",
+        "name": "Georgia",
+        "roomNights": 256,
+        "ADR": 181,
+        "revenue": 46336,
+        "color": "#cfca76"
+      },
+      {
+        "code": "DE",
+        "name": "Germany",
+        "roomNights": 2124,
+        "ADR": 156,
+        "revenue": 331344,
+        "color": "#abab0d"
+      },
+      {
+        "code": "GH",
+        "name": "Ghana",
+        "roomNights": 405,
+        "ADR": 179,
+        "revenue": 72495,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GR",
+        "name": "Greece",
+        "roomNights": 1295,
+        "ADR": 186,
+        "revenue": 240870,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GN",
+        "name": "Grenada",
+        "roomNights": 435,
+        "ADR": 170,
+        "revenue": 73950,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GL",
+        "name": "Greenland",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#eceac1"
+      },
+      {
+        "code": "GT",
+        "name": "Guatemala",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GN",
+        "name": "Guinea",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GW",
+        "name": "Guinea-Bissau",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GY",
+        "name": "Guyana",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#abab0d"
+      },
+      {
+        "code": "HT",
+        "name": "Haiti",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "HN",
+        "name": "Honduras",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "HK",
+        "name": "Hong Kong",
+        "roomNights": 203,
+        "ADR": 178,
+        "revenue": 36134,
+        "color": "#cfca76"
+      },
+      {
+        "code": "HU",
+        "name": "Hungary",
+        "roomNights": 1282,
+        "ADR": 172,
+        "revenue": 220504,
+        "color": "#cfca76"
+      },
+      {
+        "code": "IS",
+        "name": "Iceland",
+        "roomNights": 219,
+        "ADR": 161,
+        "revenue": 35259,
+        "color": "#abab0d"
+      },
+      {
+        "code": "IN",
+        "name": "India",
+        "roomNights": 2045,
+        "ADR": 165,
+        "revenue": 337425,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ID",
+        "name": "Indonesia",
+        "roomNights": 1032,
+        "ADR": 168,
+        "revenue": 173376,
+        "color": "#cfca76"
+      },
+      {
+        "code": "IR",
+        "name": "Iran",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#abab0d"
+      },
+      {
+        "code": "IQ",
+        "name": "Iraq",
+        "roomNights": 1344,
+        "ADR": 176,
+        "revenue": 236544,
+        "color": "#cfca76"
+      },
+      {
+        "code": "IE",
+        "name": "Ireland",
+        "roomNights": 1669,
+        "ADR": 180,
+        "revenue": 300420,
+        "color": "#abab0d"
+      },
+      {
+        "code": "IL",
+        "name": "Israel",
+        "roomNights": 1468,
+        "ADR": 182,
+        "revenue": 267176,
+        "color": "#cfca76"
+      },
+      {
+        "code": "IT",
+        "name": "Italy",
+        "roomNights": 2192,
+        "ADR": 172,
+        "revenue": 377024,
+        "color": "#abab0d"
+      },
+      {
+        "code": "JM",
+        "name": "Jamaica",
+        "roomNights": 260,
+        "ADR": 180,
+        "revenue": 46800,
+        "color": "#cfca76"
+      },
+      {
+        "code": "JP",
+        "name": "Japan",
+        "roomNights": 2115,
+        "ADR": 156,
+        "revenue": 329940,
+        "color": "#cfca76"
+      },
+      {
+        "code": "JO",
+        "name": "Jordan",
+        "roomNights": 1919,
+        "ADR": 176,
+        "revenue": 337744,
+        "color": "#cfca76"
+      },
+      {
+        "code": "KZ",
+        "name": "Kazakhstan",
+        "roomNights": 1187,
+        "ADR": 169,
+        "revenue": 200603,
+        "color": "#cfca76"
+      },
+      {
+        "code": "KE",
+        "name": "Kenya",
+        "roomNights": 1228,
+        "ADR": 156,
+        "revenue": 191568,
+        "color": "#eae7c6"
+      },
+      {
+        "code": "KP",
+        "name": "Korea, Democratic Republic Of",
+        "roomNights": 215,
+        "ADR": 184,
+        "revenue": 39560,
+        "color": "#cfca76"
+      },
+      {
+        "code": "KR",
+        "name": "Korea, Republic Of (South)",
+        "roomNights": 1272,
+        "ADR": 166,
+        "revenue": 211152,
+        "color": "#cfca76"
+      },
+      {
+        "code": "XK",
+        "name": "Kosovo",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "KW",
+        "name": "Kuwait",
+        "roomNights": 1121,
+        "ADR": 156,
+        "revenue": 174876,
+        "color": "#cfca76"
+      },
+      {
+        "code": "KG",
+        "name": "Kyrgyzstan",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LA",
+        "name": "Lao PDR",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LV",
+        "name": "Latvia",
+        "roomNights": 470,
+        "ADR": 157,
+        "revenue": 73790,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LS",
+        "name": "Liechtenstein",
+        "roomNights": 175,
+        "ADR": 168,
+        "revenue": 29400,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LB",
+        "name": "Lebanon",
+        "roomNights": 1414,
+        "ADR": 157,
+        "revenue": 221998,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LS",
+        "name": "Lesotho",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LR",
+        "name": "Liberia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LY",
+        "name": "Libya",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#bfbe32"
+      },
+      {
+        "code": "LT",
+        "name": "Lithuania",
+        "roomNights": 386,
+        "ADR": 159,
+        "revenue": 61374,
+        "color": "#cfca76"
+      },
+      {
+        "code": "LU",
+        "name": "Luxembourg",
+        "roomNights": 377,
+        "ADR": 188,
+        "revenue": 70876,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MK",
+        "name": "Macedonia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MG",
+        "name": "Madagascar",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MW",
+        "name": "Malawi",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ML",
+        "name": "Malta",
+        "roomNights": 114,
+        "ADR": 184,
+        "revenue": 20976,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MY",
+        "name": "Malaysia",
+        "roomNights": 2111,
+        "ADR": 184,
+        "revenue": 388424,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ML",
+        "name": "Mali",
+        "roomNights": 258,
+        "ADR": 161,
+        "revenue": 41538,
+        "color": "#eae7c6"
+      },
+      {
+        "code": "MR",
+        "name": "Mauritania",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MX",
+        "name": "Mexico",
+        "roomNights": 916,
+        "ADR": 158,
+        "revenue": 144728,
+        "color": "#abab0d"
+      },
+      {
+        "code": "MD",
+        "name": "Moldova",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MC",
+        "name": "Monaco",
+        "roomNights": 277,
+        "ADR": 176,
+        "revenue": 48752,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MN",
+        "name": "Mongolia",
+        "roomNights": 348,
+        "ADR": 177,
+        "revenue": 61596,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ME",
+        "name": "Montenegro",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MA",
+        "name": "Morocco",
+        "roomNights": 249,
+        "ADR": 185,
+        "revenue": 46065,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MZ",
+        "name": "Mozambique",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "MM",
+        "name": "Myanmar",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "NA",
+        "name": "Namibia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "NP",
+        "name": "Nepal",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "NL",
+        "name": "Netherlands",
+        "roomNights": 1826,
+        "ADR": 182,
+        "revenue": 332332,
+        "color": "#cfca76"
+      },
+      {
+        "code": "NC",
+        "name": "New Caledonia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "NZ",
+        "name": "New Zealand",
+        "roomNights": 1953,
+        "ADR": 159,
+        "revenue": 310527,
+        "color": "#abab0d"
+      },
+      {
+        "code": "NI",
+        "name": "Nicaragua",
+        "roomNights": 262,
+        "ADR": 160,
+        "revenue": 41920,
+        "color": "#cfca76"
+      },
+      {
+        "code": "NE",
+        "name": "Niger",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#eceac1"
+      },
+      {
+        "code": "NG",
+        "name": "Nigeria",
+        "roomNights": 1050,
+        "ADR": 180,
+        "revenue": 189000,
+        "color": "#eceac1"
+      },
+      {
+        "code": "NO",
+        "name": "Norway",
+        "roomNights": 1788,
+        "ADR": 176,
+        "revenue": 314688,
+        "color": "#abab0d"
+      },
+      {
+        "code": "OM",
+        "name": "Oman",
+        "roomNights": 1110,
+        "ADR": 182,
+        "revenue": 202020,
+        "color": "#adb432"
+      },
+      {
+        "code": "PK",
+        "name": "Pakistan",
+        "roomNights": 336,
+        "ADR": 160,
+        "revenue": 53760,
+        "color": "#cfca76"
+      },
+      {
+        "code": "PA",
+        "name": "Panama",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "PG",
+        "name": "Papua New Guinea",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "PY",
+        "name": "Paraguay",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "PE",
+        "name": "Peru",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#abab0d"
+      },
+      {
+        "code": "PH",
+        "name": "Philippines",
+        "roomNights": 1184,
+        "ADR": 188,
+        "revenue": 222592,
+        "color": "#cfca76"
+      },
+      {
+        "code": "PL",
+        "name": "Poland",
+        "roomNights": 1162,
+        "ADR": 166,
+        "revenue": 192892,
+        "color": "#abab0d"
+      },
+      {
+        "code": "PT",
+        "name": "Portugal",
+        "roomNights": 993,
+        "ADR": 174,
+        "revenue": 172782,
+        "color": "#abab0d"
+      },
+      {
+        "code": "PR",
+        "name": "Puerto Rico",
+        "roomNights": 133,
+        "ADR": 173,
+        "revenue": 23009,
+        "color": "#cfca76"
+      },
+      {
+        "code": "WA",
+        "name": "Qatar",
+        "roomNights": 2110,
+        "ADR": 177,
+        "revenue": 373470,
+        "color": "#cfca76"
+      },
+      {
+        "code": "RO",
+        "name": "Romania",
+        "roomNights": 1264,
+        "ADR": 176,
+        "revenue": 222464,
+        "color": "#cfca76"
+      },
+      {
+        "code": "RU",
+        "name": "Russia",
+        "roomNights": 211,
+        "ADR": 171,
+        "revenue": 36801,
+        "color": "#cccc68"
+      },
+      {
+        "code": "RF",
+        "name": "Russian Federation",
+        "roomNights": 2135,
+        "ADR": 159,
+        "revenue": 339465,
+        "color": "#cccc68"
+      },
+      {
+        "code": "RW",
+        "name": "Rwanda",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SA",
+        "name": "Saudi Arabia",
+        "roomNights": 1479,
+        "ADR": 164,
+        "revenue": 242556,
+        "color": "#abab0d"
+      },
+      {
+        "code": "SN",
+        "name": "Senegal",
+        "roomNights": 132,
+        "ADR": 169,
+        "revenue": 22308,
+        "color": "#cfca76"
+      },
+      {
+        "code": "RS",
+        "name": "Serbia",
+        "roomNights": 497,
+        "ADR": 160,
+        "revenue": 79520,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SL",
+        "name": "Sierra Leone",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SK",
+        "name": "Slovakia",
+        "roomNights": 202,
+        "ADR": 181,
+        "revenue": 36562,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SI",
+        "name": "Slovenia",
+        "roomNights": 273,
+        "ADR": 175,
+        "revenue": 47775,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SB",
+        "name": "Solomon Is.",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SO",
+        "name": "Somalia",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ZA",
+        "name": "South Africa",
+        "roomNights": 1238,
+        "ADR": 168,
+        "revenue": 207984,
+        "color": "#e6e8b9"
+      },
+      {
+        "code": "SS",
+        "name": "S. Sudan",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#eae7c6"
+      },
+      {
+        "code": "ES",
+        "name": "Spain",
+        "roomNights": 1665,
+        "ADR": 155,
+        "revenue": 258075,
+        "color": "#abab0d"
+      },
+      {
+        "code": "LK",
+        "name": "Sri Lanka",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SD",
+        "name": "Sudan",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SR",
+        "name": "Suriname",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SZ",
+        "name": "Swaziland",
+        "roomNights": 421,
+        "ADR": 161,
+        "revenue": 67781,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SE",
+        "name": "Sweden",
+        "roomNights": 1815,
+        "ADR": 183,
+        "revenue": 332145,
+        "color": "#abab0d"
+      },
+      {
+        "code": "CH",
+        "name": "Switzerland",
+        "roomNights": 2181,
+        "ADR": 161,
+        "revenue": 351141,
+        "color": "#cfca76"
+      },
+      {
+        "code": "SY",
+        "name": "Syria",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TJ",
+        "name": "Tajikistan",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TZ",
+        "name": "Tanzania",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TC",
+        "name": "Taiwan, Province Of China",
+        "roomNights": 218,
+        "ADR": 188,
+        "revenue": 40984,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TH",
+        "name": "Thailand",
+        "roomNights": 1516,
+        "ADR": 170,
+        "revenue": 257720,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TP",
+        "name": "Timor-Leste",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TG",
+        "name": "Togo",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TO",
+        "name": "To Be Advised",
+        "roomNights": 2077,
+        "ADR": 180,
+        "revenue": 373860,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TT",
+        "name": "Trinidad and Tobago",
+        "roomNights": 293,
+        "ADR": 172,
+        "revenue": 50396,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TN",
+        "name": "Tunisia",
+        "roomNights": 228,
+        "ADR": 178,
+        "revenue": 40584,
+        "color": "#cfca76"
+      },
+      {
+        "code": "TR",
+        "name": "Turkey",
+        "roomNights": 948,
+        "ADR": 181,
+        "revenue": 171588,
+        "color": "#abab0d"
+      },
+      {
+        "code": "TM",
+        "name": "Turkmenistan",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "UG",
+        "name": "Uganda",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "UA",
+        "name": "Ukraine",
+        "roomNights": 1124,
+        "ADR": 176,
+        "revenue": 197824,
+        "color": "#cfca76"
+      },
+      {
+        "code": "AE",
+        "name": "United Arab Emirates",
+        "roomNights": 1836,
+        "ADR": 162,
+        "revenue": 297432,
+        "color": "#cfca76"
+      },
+      {
+        "code": "GB",
+        "name": "United Kingdom",
+        "roomNights": 1504,
+        "ADR": 176,
+        "revenue": 264704,
+        "color": "#abab0d"
+      },
+      {
+        "code": "US",
+        "name": "United States",
+        "roomNights": 1832,
+        "ADR": 160,
+        "revenue": 293120,
+        "color": "#abab0d"
+      },
+      {
+        "code": "UY",
+        "name": "Uruguay",
+        "roomNights": 212,
+        "ADR": 156,
+        "revenue": 33072,
+        "color": "#cfca76"
+      },
+      {
+        "code": "UZ",
+        "name": "Uzbekistan",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "VU",
+        "name": "Vanuatu",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "VE",
+        "name": "Venezuela",
+        "roomNights": 161,
+        "ADR": 156,
+        "revenue": 25116,
+        "color": "#abab0d"
+      },
+      {
+        "code": "VN",
+        "name": "Vietnam",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "EH",
+        "name": "W. Sahara",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "YE",
+        "name": "Yemen",
+        "roomNights": 0,
+        "ADR": 0,
+        "revenue": 0,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ZM",
+        "name": "Zambia",
+        "roomNights": 209,
+        "ADR": 158,
+        "revenue": 33022,
+        "color": "#cfca76"
+      },
+      {
+        "code": "ZW",
+        "name": "Zimbabwe",
+        "roomNights": 441,
+        "ADR": 183,
+        "revenue": 80703,
+        "color": "#cfca76"
+      }
+    ]
+  }
+}

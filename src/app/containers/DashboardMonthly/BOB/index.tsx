@@ -86,6 +86,8 @@ const MonthlyBOB = (props: any) => {
                           </span>
                         </th>
                       {months.map((month: any, indx: number) => {
+                        console.log("monthmonth",month);
+                        
                         let weekendDay = moment(month).day();
                         return (
                           <th
@@ -99,6 +101,7 @@ const MonthlyBOB = (props: any) => {
                                 ? "weekend-bg"
                                 : ""
                             }`}
+                            
                           >
                             <div className="date-div">
                               <span className="date-text">{moment(month).format("DD")}</span>
@@ -157,7 +160,7 @@ const MonthlyBOB = (props: any) => {
                                               </Tooltip>
                                             }
                                           >
-                                            <div className="d-flex align-items-cente subtitle-section">
+                                            <div className="d-flex align-items-center subtitle-section">
                                           
                                               { list.title === "Business on the Books" ? (
                                                 <img src={bob}  width="20px" alt={list.title}/>

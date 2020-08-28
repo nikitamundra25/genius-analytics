@@ -80,8 +80,8 @@ const MonthlyTable = ({ date }: any) => {
     partnershipDiscountADR = 0,
     onlineAdvADR = 0,
     onlineAdvRooms = 0,
-    corporateContractADR = 0,
-    corporateContractRooms = 0,
+    staffRooms = 0,
+    staffADR = 0,
     monthlyContractADR = 0,
     monthlyContractRooms = 0,
     longTermContractADR = 0,
@@ -234,7 +234,7 @@ const MonthlyTable = ({ date }: any) => {
                               {" "}
                               {list.barValueRooms
                                 ? list.barValueRooms
-                                : "-"}{" "}
+                                : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -244,7 +244,7 @@ const MonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.barValueADR ? list.barValueADR : "-"}{" "}
+                              {list.barValueADR ? list.barValueADR : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -256,7 +256,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.publicDiscountRooms
                                 ? list.publicDiscountRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -268,7 +268,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.publicDiscountADR
                                 ? list.publicDiscountADR
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -280,7 +280,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.corporateDiscountRooms
                                 ? list.corporateDiscountRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -292,7 +292,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.corporateDiscountADR
                                 ? list.corporateDiscountADR
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -304,7 +304,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.partnershipDiscountRooms
                                 ? list.partnershipDiscountRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -316,7 +316,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.partnershipDiscountADR
                                 ? list.partnershipDiscountADR
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -329,7 +329,7 @@ const MonthlyTable = ({ date }: any) => {
                               {" "}
                               {list.onlineAdvRooms
                                 ? list.onlineAdvRooms
-                                : "-"}{" "}
+                                : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -339,7 +339,7 @@ const MonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.onlineAdvADR ? list.onlineAdvADR : "-"}{" "}
+                              {list.onlineAdvADR ? list.onlineAdvADR : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -351,7 +351,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.corporateGroupRooms
                                 ? list.corporateGroupRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -363,7 +363,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.corporateGroupADR
                                 ? list.corporateGroupADR
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -375,7 +375,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.leisureRooms
                                 ? list.leisureRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -387,7 +387,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.leisureADR
                                 ? list.leisureADR
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -399,7 +399,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.ResidentialGroupsRooms
                                 ? list.ResidentialGroupsRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -411,7 +411,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.ResidentialGroupsADR
                                 ? list.ResidentialGroupsADR
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -424,7 +424,7 @@ const MonthlyTable = ({ date }: any) => {
                               {" "}
                               {list.otaRooms
                                 ? list.otaRooms
-                                : "-"}{" "}
+                                : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -436,7 +436,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.otaADR
                                 ? list.otaADR
-                                : "-"}{" "}
+                                : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -446,7 +446,7 @@ const MonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.wholesaleRooms ? list.wholesaleRooms : "-"}
+                              {list.wholesaleRooms ? list.wholesaleRooms : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -456,7 +456,7 @@ const MonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.wholesaleADR ? list.wholesaleADR : "-"}
+                              {list.wholesaleADR ? list.wholesaleADR : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -468,7 +468,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.longTermContractRooms
                                 ? list.longTermContractRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -480,7 +480,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.longTermContractADR
                                 ? list.longTermContractADR
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -492,7 +492,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.monthlyContractRooms
                                 ? list.monthlyContractRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -504,7 +504,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.monthlyContractADR
                                 ? list.monthlyContractADR
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -515,7 +515,7 @@ const MonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {" "}
-                              {list.airlineCrewRooms ? list.airlineCrewRooms : "-"}{" "}
+                              {list.airlineCrewRooms ? list.airlineCrewRooms : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -524,7 +524,7 @@ const MonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.airlineCrewADR ? list.airlineCrewADR : "-"}{" "}
+                              {list.airlineCrewADR ? list.airlineCrewADR : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -536,7 +536,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {list.staffRooms
                                 ? list.staffRooms
-                                : "-"}
+                                : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -546,7 +546,7 @@ const MonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.staffADR ? list.staffADR : "-"}
+                              {list.staffADR ? list.staffADR : null}
                             </td>
                             <td
                               className={`content-col total-content  ${
@@ -555,7 +555,7 @@ const MonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.TotalRooms ? list.TotalRooms : "-"}
+                              {list.TotalRooms ? list.TotalRooms : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -564,7 +564,7 @@ const MonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.TotalADR ? list.TotalADR : "-"}
+                              {list.TotalADR ? list.TotalADR : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -574,7 +574,7 @@ const MonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.TotalRevenue ? list.TotalRevenue : "-"}
+                              {list.TotalRevenue ? list.TotalRevenue : null}
                             </td>
                           </tr>
                         </>
@@ -597,8 +597,6 @@ const MonthlyTable = ({ date }: any) => {
                   <td className="total-col">{onlineAdvADR}</td>
                   <td className="total-col">{corporateGroupRooms}</td>
                   <td className="total-col">{corporateGroupADR}</td>
-                  <td className="total-col">{corporateContractRooms}</td>
-                  <td className="total-col ">{corporateContractADR}</td>
                   <td className="total-col">{leisureRooms}</td>
                   <td className="total-col ">{leisureADR}</td>
                   <td className="total-col ">{ResidentialGroupsRooms}</td>
@@ -613,6 +611,8 @@ const MonthlyTable = ({ date }: any) => {
                   <td className="total-col ">{monthlyContractADR} </td>
                   <td className="total-col ">{airlineCrewRooms}</td>
                   <td className="total-col ">{airlineCrewADR}</td>
+                  <td className="total-col ">{staffRooms}</td>
+                  <td className="total-col ">{staffADR}</td>
                   <td className="total-col total-content">{TotalRooms}</td>
                   <td className="total-col ">{TotalADR.toFixed(1)}</td>
                   <td className="total-col ">{TotalRevenue.toLocaleString()}</td>

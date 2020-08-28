@@ -1,62 +1,79 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { Card } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
-import { requestRoomTypeStaticsData } from "../../../../actions";
-const MixedCharts = React.lazy(() =>
-  import("../../../components/Charts/MixedCharts")
+import {
+  requestRoomTypeStaticsData,
+  requestRoomTypeStaticsFutureData,
+  requestRoomTypeStaticsPastData,
+} from "../../../../actions";
+import moment from "moment";
+import { checkDateFormat } from "../../../../config";
+const MixedCharts = React.lazy(
+  () => import("../../../components/Charts/MixedCharts")
 );
 
-
-export default () => {
+export default ({date }:any) => {
   const dispatch = useDispatch();
   const [setHeight, setsetHeight] = React.useState<string>("250px");
   const { isLoading, data = [], isError } = useSelector(
     (state: IRootState) => state.RoomTypeStaticsReducer
   );
+  // useEffect(() => {
+  //   dispatch(requestRoomTypeStaticsData());
+  //   // eslint-disable-next-line
+  // }, []);
+
   useEffect(() => {
-    dispatch(requestRoomTypeStaticsData());
+    let selectedDate = moment(date).format(checkDateFormat);
+    // const selectedDate: any = new Date(date);
+    console.log("hereeeeeeeeeeeee",date.date);
+    let currentDate = moment(new Date()).format(checkDateFormat);
+    if (selectedDate > currentDate) {
+      dispatch(requestRoomTypeStaticsFutureData());
+    } else if (selectedDate < currentDate) {
+      dispatch(requestRoomTypeStaticsPastData());
+    } else if (selectedDate === currentDate) {
+      
+      dispatch(requestRoomTypeStaticsData());
+    }
+
     // eslint-disable-next-line
-  }, []);
+  }, [date]);
 
   useEffect(() => {
     const modalbtn: HTMLElement | null = document.getElementById(`room-card`);
     if (modalbtn) {
       setTimeout(() => {
         const check = modalbtn.getBoundingClientRect();
-        const getHeight =check.height;
-        const setgraphHeight = getHeight - 75 ;
+        const getHeight = check.height;
+        const setgraphHeight = getHeight - 75;
         //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-        if(setgraphHeight >= 0){
-          setsetHeight(`${setgraphHeight}px`)
+        if (setgraphHeight >= 0) {
+          setsetHeight(`${setgraphHeight}px`);
         }
       }, 100);
-      
     }
     // eslint-disable-next-line
   }, [data]);
 
   useEffect(() => {
-
     const resizeListener = () => {
-
       // // change width from the state object
-      const modalbtn: HTMLElement | null = document.getElementById(
-        `room-card`
-      );
-     // console.log("modalbtn", modalbtn);
+      const modalbtn: HTMLElement | null = document.getElementById(`room-card`);
+      // console.log("modalbtn", modalbtn);
 
       if (modalbtn) {
         setTimeout(() => {
           const check = modalbtn.getBoundingClientRect();
-          const getHeight =check.height;
-          const setgraphHeight = getHeight - 75 ;
+          const getHeight = check.height;
+          const setgraphHeight = getHeight - 75;
           //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-          if(setgraphHeight >= 0){
-            setsetHeight(`${setgraphHeight}px`)
+          if (setgraphHeight >= 0) {
+            setsetHeight(`${setgraphHeight}px`);
           }
         }, 100);
       }
@@ -72,17 +89,20 @@ export default () => {
     // eslint-disable-next-line
   }, []);
 
-  const labeltemplate = (args:any) => {
-    return (<div  style={{fontSize: '11px'}}>
-      <span>{args.point.y}%</span>
-    </div>);
-};
-const labeltemplateline = (args:any) => {
-  return (<div  style={{fontSize: '11px'}}>
-    <span>{args.point.y}</span>
-  </div>);
-};
-
+  const labeltemplate = (args: any) => {
+    return (
+      <div style={{ fontSize: "11px" }}>
+        <span>{args.point.y}%</span>
+      </div>
+    );
+  };
+  const labeltemplateline = (args: any) => {
+    return (
+      <div style={{ fontSize: "11px" }}>
+        <span>{args.point.y}</span>
+      </div>
+    );
+  };
 
   const Charts = [
     {
@@ -93,9 +113,9 @@ const labeltemplateline = (args:any) => {
       //fill: "#a1c6d6",
       fill: "url(#roccty-chart)",
       name: "OCC TY",
-      yAxisName:'yAxis1',
+      yAxisName: "yAxis1",
       width: 1,
-      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
+      cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         visible: false,
         border: { width: 0, color: "#288096" },
@@ -118,9 +138,9 @@ const labeltemplateline = (args:any) => {
       //fill: "#65adc5",
       fill: "url(#roccly-chart)",
       name: "OCC LY",
-      yAxisName:'yAxis1',
+      yAxisName: "yAxis1",
       width: 1,
-      cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
+      cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         visible: false,
         border: { width: 0, color: "#288096" },
@@ -174,7 +194,7 @@ const labeltemplateline = (args:any) => {
         width: 8,
         height: 8,
         fill: "#288096",
-       
+
         border: { width: 0, color: "#288096" },
         dataLabel: {
           visible: true,
@@ -212,68 +232,75 @@ const labeltemplateline = (args:any) => {
 
     `;
 
-
   return (
     <>
-    <style>
-          {SAMPLE_CSS}
-      </style>
+      <style>{SAMPLE_CSS}</style>
       <Card id="room-card">
-        <WidgetHeader title={"Room Type Statics"} activeToggle={"graph"} showToggle={false} />
+        <WidgetHeader
+          title={"Room Type Statics"}
+          activeToggle={"graph"}
+          showToggle={false}
+        />
         <Card.Body>
-      {isLoading ? (
+          {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
             <ErrorComponent
               message={"An error occured while fetching details "}
             />
           ) : (
-            <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
-            <MixedCharts
-              id='room-type'
-              charts={Charts}
-              chartSettings={{
-                primaryXAxis: {
-                  valueType: "Category",
-                  interval: 1,
-                  majorGridLines: { width: 0 },
-                },
-                primaryYAxis: {
-                  labelFormat: "{value}",
-                  edgeLabelPlacement: "Shift",
-                  majorGridLines: { width: 0 },
-                  majorTickLines: { width: 0 },
-                  lineStyle: { width: 0 },
-                  labelStyle: {
-                    color: "transparent",
+            <React.Suspense
+              fallback={
+                <div className="card-loader">
+                  <WidgetLoader />
+                </div>
+              }
+            >
+              <MixedCharts
+                id="room-type"
+                charts={Charts}
+                chartSettings={{
+                  primaryXAxis: {
+                    valueType: "Category",
+                    interval: 1,
+                    majorGridLines: { width: 0 },
                   },
-                  visible:false,
-                },
-                tooltip: { enable: true },
-                height: setHeight,
-              }}
-            />
-          </React.Suspense>
-          )}  
+                  primaryYAxis: {
+                    labelFormat: "{value}",
+                    edgeLabelPlacement: "Shift",
+                    majorGridLines: { width: 0 },
+                    majorTickLines: { width: 0 },
+                    lineStyle: { width: 0 },
+                    labelStyle: {
+                      color: "transparent",
+                    },
+                    visible: false,
+                  },
+                  tooltip: { enable: true },
+                  height: setHeight,
+                }}
+              />
+            </React.Suspense>
+          )}
         </Card.Body>
       </Card>
-      <svg style={{ height: '0' }}>
+      <svg style={{ height: "0" }}>
         <defs>
-            <linearGradient id="roccty-chart" x1="0" x2="0" y1="0" y2="1">
-                <stop offset="0" />
-                <stop offset="1" />
-            </linearGradient>
+          <linearGradient id="roccty-chart" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" />
+            <stop offset="1" />
+          </linearGradient>
         </defs>
-    </svg>
+      </svg>
 
-    <svg style={{ height: '0' }}>
+      <svg style={{ height: "0" }}>
         <defs>
-            <linearGradient id="roccly-chart" x1="0" x2="0" y1="0" y2="1">
-                <stop offset="0" />
-                <stop offset="1" />
-            </linearGradient>
+          <linearGradient id="roccly-chart" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" />
+            <stop offset="1" />
+          </linearGradient>
         </defs>
-    </svg>
+      </svg>
     </>
   );
 };

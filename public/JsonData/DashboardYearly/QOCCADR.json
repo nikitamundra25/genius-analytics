@@ -1,34 +1,34 @@
 {
-    "data": [
-        {
-          "name": "Q1",
-          "OCC": 55,
-          "ADR": 286,
-          "RoomNights": 308
-        },
-        {
-          "name": "Q2",
-          "OCC": 53,
-          "ADR": 290,
-          "RoomNights": 159
-        },
-        {
-          "name": "Q3",
-          "OCC": 54,
-          "ADR": 298,
-          "RoomNights": 195
-        },
-        {
-          "name": "Q4",
-          "OCC": 68,
-          "ADR": 294,
-          "RoomNights": 184
-        },
-        {
-          "name": "Total",
-          "OCC": 58,
-          "ADR": 292.0,
-          "RoomNights": 211.5
-        }
-      ]
+  "data": [
+    {
+      "name": "Q1",
+      "OCC": 55,
+      "ADR": 200,
+      "RoomNights": 268
+    },
+    {
+      "name": "Q2",
+      "OCC": 97,
+      "ADR": 365,
+      "RoomNights": 232
+    },
+    {
+      "name": "Q3",
+      "OCC": 45,
+      "ADR": 277,
+      "RoomNights": 155
+    },
+    {
+      "name": "Q4",
+      "OCC": 77,
+      "ADR": 204,
+      "RoomNights": 349
+    },
+    {
+      "name": "Total",
+      "OCC": 69,
+      "ADR": 261.5,
+      "RoomNights": 1004
+    }
+  ]
 }

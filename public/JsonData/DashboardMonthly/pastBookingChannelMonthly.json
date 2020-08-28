@@ -1,0 +1,35 @@
+{
+    "data": [
+        {
+          "name": "Direct",
+          "RoomNtsTY": 156,
+          "RoomNtsLY": 283,
+          "ADRTY": 192,
+          "ADRLY":339
+
+        },
+        {
+          "name": "GDS",
+          "RoomNtsTY": 204,
+          "RoomNtsLY": 70,
+          "ADRTY": 281,
+          "ADRLY":364
+
+        },
+        {
+          "name": "OTAs",
+          "RoomNtsTY": 146,
+          "RoomNtsLY": 117,
+          "ADRTY": 281,
+          "ADRLY":238
+
+        },
+        {
+          "name": "Brand.com",
+          "RoomNtsTY": 149,
+          "RoomNtsLY": 249,
+          "ADRTY": 374,
+          "ADRLY":301
+        }
+      ]
+}
