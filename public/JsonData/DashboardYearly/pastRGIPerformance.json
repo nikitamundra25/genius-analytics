@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "data": [
+        { "x": "My<br>OCC", "y": 89.3 },
+        { "x": "OCC<br>Compact", "y": 85.2 },
+        { "x": "MPI", "y": 1.05 }
+      ]
+    },
+    {
+      "data": [
+        { "x": "My<br>ARR", "y": 199.9 },
+        { "x": "ARR<br>Compact", "y": 203.2 },
+        { "x": "ARI", "y": 0.98 }
+      ]
+    },
+    {
+      "data": [
+        { "x": "My<br>RevPAR", "y": 178.5 },
+        { "x": "RevPAR<br>Compact", "y": 173.2 },
+        { "x": "RGI", "y": 1.03 }
+      ]
+    }
+  ]
+}

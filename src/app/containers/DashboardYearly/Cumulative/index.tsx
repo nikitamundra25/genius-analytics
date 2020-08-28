@@ -42,8 +42,6 @@ const CumulativeTable = ({ selectedDate }: any) => {
           />
         ) : (
         <>
-        
-
           <div className="dashboard-yearly-table ">
             <Table className="yearly-table mb-0" responsive>
               <thead>

@@ -1,82 +1,82 @@
 {
-    "data": [
-      {
-        "name": "Jan",
-        "OCC": 55,
-        "RevPAR": 185.9,
-        "NrevPAR": 145.0
-      },
-      {
-        "name": "Feb",
-        "OCC": 30,
-        "RevPAR": 208.3,
-        "NrevPAR": 166.7
-      },
-      {
-        "name": "Mar",
-        "OCC": 30,
-        "RevPAR": 113.5,
-        "NrevPAR": 96.5
-      },
-      {
-        "name": "Apr",
-        "OCC": 27,
-        "RevPAR": 183.9,
-        "NrevPAR": 156.3
-      },
-      {
-        "name": "May",
-        "OCC": 37,
-        "RevPAR": 257.8,
-        "NrevPAR": 229.5
-      },
-      {
-        "name": "Jun",
-        "OCC": 36,
-        "RevPAR": 309.4,
-        "NrevPAR": 281.6
-      },
-      {
-        "name": "Jul",
-        "OCC": 34,
-        "RevPAR": 103.0,
-        "NrevPAR": 87.6
-      },
-      {
-        "name": "Aug",
-        "OCC": 25,
-        "RevPAR": 262.7,
-        "NrevPAR": 197.0
-      },
-      {
-        "name": "Sep",
-        "OCC": 27,
-        "RevPAR": 366.7,
-        "NrevPAR": 311.7
-      },
-      {
-        "name": "Oct",
-        "OCC": 30,
-        "RevPAR": 128.8,
-        "NrevPAR": 109.5
-      },
-      {
-        "name": "Nov",
-        "OCC": 27,
-        "RevPAR": 251.7,
-        "NrevPAR": 206.4
-      },
-      {
-        "name": "Dec",
-        "OCC": 24,
-        "RevPAR": 105.8,
-        "NrevPAR": 75.1
-      },
-      {
-        "name": "Total",
-        "OCC": 32,
-        "RevPAR": 206.5,
-        "NrevPAR": 171.9
-      }
-      ]
+  "data": [
+    {
+      "name": "Jan",
+      "OCC": 55,
+      "RevPAR": 173.3,
+      "NrevPAR": 135.1
+    },
+    {
+      "name": "Feb",
+      "OCC": 72,
+      "RevPAR": 223.9,
+      "NrevPAR": 179.1
+    },
+    {
+      "name": "Mar",
+      "OCC": 71,
+      "RevPAR": 296.1,
+      "NrevPAR": 251.5
+    },
+    {
+      "name": "Apr",
+      "OCC": 77,
+      "RevPAR": 260.3,
+      "NrevPAR": 221.2
+    },
+    {
+      "name": "May",
+      "OCC": 86,
+      "RevPAR": 296.7,
+      "NrevPAR": 264.1
+    },
+    {
+      "name": "Jun",
+      "OCC": 89,
+      "RevPAR": 192.2,
+      "NrevPAR": 174.9
+    },
+    {
+      "name": "Jul",
+      "OCC": 75,
+      "RevPAR": 157.5,
+      "NrevPAR": 133.9
+    },
+    {
+      "name": "Aug",
+      "OCC": 42,
+      "RevPAR": 86.9,
+      "NrevPAR": 65.2
+    },
+    {
+      "name": "Sep",
+      "OCC": 72,
+      "RevPAR": 174.2,
+      "NrevPAR": 148.1
+    },
+    {
+      "name": "Oct",
+      "OCC": 79,
+      "RevPAR": 318.4,
+      "NrevPAR": 270.6
+    },
+    {
+      "name": "Nov",
+      "OCC": 77,
+      "RevPAR": 309.5,
+      "NrevPAR": 253.8
+    },
+    {
+      "name": "Dec",
+      "OCC": 41,
+      "RevPAR": 95.1,
+      "NrevPAR": 67.5
+    },
+    {
+      "name": "Total",
+      "OCC": 70,
+      "RevPAR": 215.3,
+      "NrevPAR": 180.4
+    }
+  ]
 }
