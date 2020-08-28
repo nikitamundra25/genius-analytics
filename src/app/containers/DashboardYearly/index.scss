@@ -60,6 +60,9 @@
       font-size:9px;
       min-width: 76px;
     }
+    @media only screen and (max-width: 1299px) {
+      min-width: 84px;
+    }
   }
   .row-title{
     background: $theme-dark-color;
@@ -160,6 +163,9 @@
     height: 22px;
     @media only screen and (max-width: 1320px) {
       height: 22px;
+    }
+    @media only screen and (max-width: 1299px) {
+      height: 15px;
     }
     .progress-bar{
       // color:#000;
