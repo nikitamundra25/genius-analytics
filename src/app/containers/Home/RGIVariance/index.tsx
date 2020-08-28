@@ -163,9 +163,9 @@ export default ({date }:any) => {
     <style>
           {SAMPLE_CSS}
       </style>
-    <Card id="rgi-card">
+    {/* <Card id="rgi-card">
       <WidgetHeader title={"RGI YoY Variance"} activeToggle={"graph"} showToggle={false} />
-      <Card.Body>
+      <Card.Body> */}
       {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -195,13 +195,13 @@ export default ({date }:any) => {
               },
             },
             tooltip: { enable: true }, 
-            height: setHeight,
+            // height: setHeight,
           }}
         />
           </React.Suspense>
         )}
-      </Card.Body>
-    </Card>
+      {/* </Card.Body>
+    </Card> */}
 
     <svg style={{ height: '0' }}>
         <defs>

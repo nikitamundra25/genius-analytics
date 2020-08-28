@@ -15,7 +15,7 @@ export const PieChartComponent = ({
   id,
   data,
   width = "100%",
-  height,
+  height = "100%",
   color,
   chartSettings
 }: any) => {
@@ -32,8 +32,10 @@ export const PieChartComponent = ({
         visible: true,
         position: "Bottom",
       }}
-      width={width}
-      height={height}
+      style={{ "height":"100%" ,
+      "width":"100%"  }}
+      // width={width}
+      // height={height}
       textRender ={textRender}
       // background='transparent'
       tooltip={{

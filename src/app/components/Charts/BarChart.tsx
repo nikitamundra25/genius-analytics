@@ -22,10 +22,11 @@ export const BarChartComponent = (barChart: any) => {
   return (
     <ChartComponent
       id={`chart-${barChart.id}`}
-      style={{ textAlign: "center" }}
+      style={{ textAlign: "center","height":"100%" ,
+      "width":"100%" }}
       chartArea={{ border: { width: 0 } }}
-      height="100%" 
-      width="100%"
+      // height="100%" 
+      // width="100%"
     
       textRender = {textRender}
       // height={barChart.height || "270px"}

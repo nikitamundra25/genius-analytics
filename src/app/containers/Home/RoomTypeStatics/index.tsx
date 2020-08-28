@@ -235,13 +235,13 @@ export default ({date }:any) => {
   return (
     <>
       <style>{SAMPLE_CSS}</style>
-      <Card id="room-card">
+      {/* <Card id="room-card">
         <WidgetHeader
           title={"Room Type Statics"}
           activeToggle={"graph"}
           showToggle={false}
         />
-        <Card.Body>
+        <Card.Body> */}
           {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -277,13 +277,13 @@ export default ({date }:any) => {
                     visible: false,
                   },
                   tooltip: { enable: true },
-                  height: setHeight,
+                  // height: setHeight,
                 }}
               />
             </React.Suspense>
           )}
-        </Card.Body>
-      </Card>
+        {/* </Card.Body>
+      </Card> */}
       <svg style={{ height: "0" }}>
         <defs>
           <linearGradient id="roccty-chart" x1="0" x2="0" y1="0" y2="1">

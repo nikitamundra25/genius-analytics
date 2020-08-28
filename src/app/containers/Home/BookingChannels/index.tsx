@@ -90,9 +90,10 @@ export default ({ graphdata = [] ,date}:any) => {
   }, []);
 
   return (
-    <Card id="booking-card">
-      <WidgetHeader title={"Booking Channel Mix"} activeToggle={"graph"}  showToggle={false} />
-      <Card.Body>
+    // <Card id="booking-card">
+    //   <WidgetHeader title={"Booking Channel Mix"} activeToggle={"graph"}  showToggle={false} />
+    //   <Card.Body>
+    <>
       {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -104,7 +105,7 @@ export default ({ graphdata = [] ,date}:any) => {
           <PieChartComponent
             id={"booking-mix"}
             //height={"270px"}
-            height={setHeight}
+            // height={setHeight}
             data={data}
             chartSettings={{
               SeriesDirective: {
@@ -124,8 +125,8 @@ export default ({ graphdata = [] ,date}:any) => {
           />
            </React.Suspense>
           )}
-        
-      </Card.Body>
-    </Card>
+        </>
+    //   </Card.Body>
+    // </Card>
   );
 };

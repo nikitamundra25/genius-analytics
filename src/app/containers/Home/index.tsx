@@ -7,7 +7,7 @@ import {
   PanelsDirective,
   PanelDirective,
 } from "@syncfusion/ej2-react-layouts";
-import { IRootState } from "../../../interfaces";
+import { IRootState, ToggleType } from "../../../interfaces";
 import Loader from "../../components/Loader/Loader";
 import "./index.scss";
 import { ErrorComponent } from "../../components/Error";
@@ -24,6 +24,8 @@ import GeoBusiness from "./GeoBusiness";
 import MTDPerformance from "./MTDPerformance";
 import RGIVariance from "./RGIVariance";
 import BusinessMixComponent from "./BusinessMix";
+import WidgetHeader from "../../components/WidgetHeader";
+import DashboardWidget from "./Widget";
 const history = createBrowserHistory();
 
 // let date = new Date()
@@ -67,6 +69,8 @@ const HomeComponent: FunctionComponent = () => {
   };
 
   const getChart = (chartType: any) => {
+    console.log("inside this");
+    
     switch (chartType) {
       case "Business on the Books":
         return (
@@ -188,6 +192,7 @@ const HomeComponent: FunctionComponent = () => {
                 row={0}
                 col={0}
                 minSizeY={1}
+                header={`<div>${widgets[0].name}</div>`}
                 content={() => getChart(widgets[0].name)}
               ></PanelDirective>
               <PanelDirective
@@ -195,6 +200,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={0}
                 row={0}
                 col={2}
+                header={`<div>${widgets[1].name}</div>`}
                 content={() => getChart(widgets[1].name)}
               ></PanelDirective>
               <PanelDirective
@@ -202,6 +208,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={1}
                 row={1}
                 col={0}
+                header={`<div>Pick up Since Yesterday</div>`}
                 content={() => getChart(widgets[2].name)}
               ></PanelDirective>
               <PanelDirective
@@ -209,6 +216,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={1}
                 row={1}
                 col={2}
+                header={`<div>${widgets[3].name}</div>`}
                 content={() => getChart(widgets[3].name)}
               ></PanelDirective>
               <PanelDirective
@@ -216,6 +224,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={0}
                 row={2}
                 col={0}
+                header={`<div>${widgets[4].name}</div>`}
                 content={() => getChart(widgets[4].name)}
               ></PanelDirective>
               <PanelDirective
@@ -223,6 +232,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={0}
                 row={2}
                 col={2}
+                header={`<div>${widgets[5].name}</div>`}
                 content={() => getChart(widgets[5].name)}
               ></PanelDirective>
               <PanelDirective
@@ -230,6 +240,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={1}
                 row={3}
                 col={0}
+                header={`<div>${widgets[6].name}</div>`}
                 content={() => getChart(widgets[6].name)}
               ></PanelDirective>
               <PanelDirective
@@ -237,6 +248,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={1}
                 row={3}
                 col={2}
+                header={`<div>${widgets[7].name}</div>`}
                 content={() => getChart(widgets[7].name)}
               ></PanelDirective>
               <PanelDirective
@@ -244,6 +256,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={0}
                 row={4}
                 col={0}
+                header={`<div>${widgets[8].name}</div>`}
                 content={() => getChart(widgets[8].name)}
               ></PanelDirective>
               <PanelDirective
@@ -251,6 +264,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={0}
                 row={4}
                 col={3}
+                header={`<div>${widgets[9].name}</div>`}
                 content={() => getChart(widgets[9].name)}
               ></PanelDirective>
             </PanelsDirective>

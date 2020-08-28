@@ -41,11 +41,11 @@ const BOB = () => {
   return (
     <>
       <Card>
-        <WidgetHeader
+        {/* <WidgetHeader
           title={"Business on the Books"}
           activeToggle={"grid"}
           showToggle={false}
-        />
+        /> */}
 
         {isLoading ? (
           <WidgetLoader />

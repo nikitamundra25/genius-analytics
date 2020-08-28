@@ -111,7 +111,7 @@ export default (props: any) => {
         },
         title: "Business Mix %",
         tooltip: { enable: true },
-        height: setHeight,
+        // height: setHeight,
       },
       title: "Business Mix %",
       //color: "#5b9cd6",
@@ -145,7 +145,7 @@ export default (props: any) => {
           //fontSize:'10px', 
           //size: '3px'
         },
-        height: setHeight,
+        // height: setHeight,
       },
       title: "Business Mix ADR",
       color: "url(#mixadr-chart)",
@@ -184,9 +184,9 @@ export default (props: any) => {
     <style>
           {SAMPLE_CSS}
       </style>
-      <Card id="mix-card">
-        <WidgetHeader title={"Business Mix"} activeToggle={"graph"} showToggle={false}  />
-        <Card.Body>
+      {/* <Card id="mix-card"> */}
+        {/* <WidgetHeader title={"Business Mix"} activeToggle={"graph"} showToggle={false}  /> */}
+        {/* <Card.Body> */}
           {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -194,11 +194,11 @@ export default (props: any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
-            <Row className="row-inner">
+            <Row className="row-inner h-100">
               {BarChartData && BarChartData.length
                 ? BarChartData.map((key: any, index: number) => {
                     return (
-                      <Col xs={12} md={6} key={index}>
+                      <Col xs={12} md={6} key={index}className="h-100">
                          <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
                         <BarChartComponent
                           id={key.id}
@@ -214,8 +214,8 @@ export default (props: any) => {
                 : null}
             </Row>
           )}
-        </Card.Body>
-      </Card>
+        {/* </Card.Body> */}
+      {/* </Card> */}
       <svg style={{ height: '0' }}>
         <defs>
             <linearGradient id="mix-chart" x1="0" x2="0" y1="0" y2="1">

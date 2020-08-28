@@ -27,7 +27,7 @@ const MixedCharts = ({ charts = [], id="mixed-map", chartSettings = {},legend= t
         }
       };
 
-  return (<div style={{ height: "100%", width: "100%" }}>
+  return (
     <ChartComponent
       id={id}
       legendSettings={legendSettings}
@@ -35,7 +35,9 @@ const MixedCharts = ({ charts = [], id="mixed-map", chartSettings = {},legend= t
       chartArea={{ border: { width: 0 } }}
       // width={"100%"}
       // height={"270px"}
-      height="100%" width="100%"
+      // height="100%" width="100%"
+      style={{ "height":"100%" ,
+      "width":"100%"  }}
       textRender = {textRender}
 
       // fill="transparent"
@@ -109,7 +111,7 @@ const MixedCharts = ({ charts = [], id="mixed-map", chartSettings = {},legend= t
         })}
       </SeriesCollectionDirective>
     </ChartComponent>
-    </div>
+   
   );
 };
 

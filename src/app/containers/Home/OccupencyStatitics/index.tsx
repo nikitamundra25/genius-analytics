@@ -61,8 +61,6 @@ const labeltemplate2 = (args: any) => {
   // }, []);
 
   useEffect(() => {
-   console.log("datedate occupacy",date);
-   
     let selectedDate = moment(date).format(checkDateFormat);
     // const selectedDate: any = new Date(date);
     let currentDate = moment(new Date()).format(checkDateFormat);
@@ -367,9 +365,9 @@ const labeltemplate2 = (args: any) => {
     <style>
           {SAMPLE_CSS}
       </style>
-      <Card id="occ-card">
+      {/* <Card id="occ-card">
         <WidgetHeader title={"Occupancy Statistics"} activeToggle={"graph"} showToggle={false} />
-        <Card.Body>
+        <Card.Body> */}
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -377,8 +375,8 @@ const labeltemplate2 = (args: any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
-        <Row className='row-inner'>
-          <Col sm={8}>
+        <Row className='row-inner h-100'>
+          <Col sm={8} className="h-100" >
           <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
               <MixedCharts
                 id={"line-and-column"}
@@ -401,14 +399,14 @@ const labeltemplate2 = (args: any) => {
                     visible:false,
                   },
                   tooltip: { enable: true },
-                  height: setHeight,
+                  // height: setHeight,
                 }}
                 charts={Charts1}
                 
               />
           </React.Suspense>
           </Col>
-          <Col sm={4}>
+          <Col sm={4} className="h-100">
           <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
             <MixedCharts
               id={"line-and-bar"}
@@ -432,15 +430,15 @@ const labeltemplate2 = (args: any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
-                height: setHeight,
+                // height: setHeight,
               }}
             />       
                </React.Suspense>   
           </Col>
         </Row>
          )} 
-       </Card.Body>
-      </Card>
+       {/* </Card.Body>
+      </Card> */}
 
       <svg style={{ height: '0' }}>
         <defs>

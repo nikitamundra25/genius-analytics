@@ -115,7 +115,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "OCC",
         tooltip: { enable: true,  position: "Top" },
-        height: setHeight,
+        // height: setHeight,
       },
       data: data&&  data.graph && data.graph.length ? data.graph[0].OCC : [],
      
@@ -144,7 +144,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "ADR",
         tooltip: { enable: true,  position: "Top" },
-        height: setHeight,
+        // height: setHeight,
       },
       data: data &&  data.graph && data.graph.length ? data.graph[1].ADR : [],
       
@@ -173,7 +173,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "RevPAR",
         tooltip: { enable: true,  position: "Top" },
-        height: setHeight,
+        // height: setHeight,
         
       },
       data: data &&  data.graph && data.graph.length ? data.graph[2].Revpar : [],
@@ -203,7 +203,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "Revenue",
         tooltip: { enable: true,  position: "Top" },
-        height: setHeight,
+        // height: setHeight,
       },
       data: data &&  data.graph && data.graph.length ? data.graph[3].Revenue : [],
       
@@ -257,19 +257,22 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
     setactiveToggle(str);
   };
 
+  console.log("hereeeeeeeeeeeeeeeeeeeeeeeeeee");
+  
   return (
     <>
       <style>{SAMPLE_CSS}</style>
-      <Card id={`key-card`}>
-        <WidgetHeader
+      {/* <Card id={`key-card`}> */}
+        {/* <WidgetHeader
           title={"Key Business Metrics"}
           activeToggle={activeToggle}
           onToggle={(str: ToggleType) => handleWidgetView(str)}
-        />
+        /> */}
 
         {activeToggle === "graph" ? (
-            <Card.Body>
-            {isLoading ? (
+            // <Card.Body>
+            <>
+        {isLoading ? (
               <WidgetLoader />
             ) : isError ? (
               <ErrorComponent
@@ -277,12 +280,12 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
               />
             ) : (
               <>
-                <Row className="row-inner">
+                <Row className="row-inner h-100">
                   {barChartBusinessMetrics && barChartBusinessMetrics.length ? (
                    
                       barChartBusinessMetrics.map((key: any, index: number) => {
                         return (
-                          <Col key={index} sm={3} md={3} id={`col-width${index}`}>
+                          <Col key={index} sm={3} md={3} id={`col-width${index}`} className= "h-100">
                             <React.Suspense
                               fallback={
                                 <div className="card-loader">
@@ -300,12 +303,12 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
                           </Col>
                         );
                       })
-                  
                   ) : null}
                 </Row>
               </>
             )}
-          </Card.Body>
+            </>
+          // </Card.Body>
         ) : (
           <div className="business-table-section">
             <Table responsive className="business-table mt-3 mb-0">
@@ -337,7 +340,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         ) 
         }
         
-      </Card>
+      {/* </Card> */}
       <svg style={{ height: "0" }}>
         <defs>
           <linearGradient id="occ-chart" x1="0" x2="0" y1="0" y2="1">

@@ -28,14 +28,9 @@ const PickupSinceYesterday = ({date }:any) => {
   //   // eslint-disable-next-line
   // }, []);
   useEffect(() => {
-   console.log("datedate yesterday",date);
-
     let selectedDate = moment(date).format(checkDateFormat);
     // const selectedDate: any = new Date(date);
     let currentDate = moment(new Date()).format(checkDateFormat);
-    console.log("selectedDate",selectedDate);
-    console.log("currentDate",currentDate);
-    
     if (selectedDate > currentDate) {
       dispatch(requestRoomNightsFutureData());
     } else if (selectedDate < currentDate) {
@@ -201,10 +196,10 @@ useEffect(() => {
     <style>
           {SAMPLE_CSS}
       </style>
-    <Card id="pickup-card">
+    {/* <Card id="pickup-card">
       <WidgetHeader title={"Pick up Since Yesterday"} activeToggle={"graph"} showToggle={false} />
 
-      <Card.Body>
+      <Card.Body> */}
       {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -212,22 +207,21 @@ useEffect(() => {
               message={"An error occured while fetching details "}
             />
           ) : (
-        <Row className='row-inner'>
+        <Row className='row-inner h-100'>
           {BarChartReferenceLine && BarChartReferenceLine.length ? 
           BarChartReferenceLine.map((key: any, index: number) => {
             return (
-              <Col xs={12} md={4} key={index}>
-                <div className="pickup-card">
-                  <div  className="text-left range-text">
+              <Col xs={12} md={4} key={index} className="h-100" >
+                {/* <div className="pickup-card"> */}
+                  {/* <div  className="text-left range-text">
                     <div className="sub-inner-title">{key.title}</div>
                     {key.range ? (
                       <div className={`${key.textClass} h3  pt-2 mb-0`}>
                          <img src={key.arrowClass} alt="success" width="20" className="mr-2"/>
-                        {/* <i className={`${key.arrowClass}`}></i>  */}
                         {key.range}
                       </div>
                     ) : null}
-                  </div>
+                  </div> */}
  
                   <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
                     <MixedCharts
@@ -235,8 +229,8 @@ useEffect(() => {
                         charts={[key.charts]}
                        legend = {false}
                         chartSettings={{
-                          width: "100%",
-                          height: setHeight,
+                          // width: "100%",
+                          // height: setHeight,
                           chartArea:{ border: { width: 0 } },
                           primaryXAxis: {
                             valueType: "Category",
@@ -245,7 +239,6 @@ useEffect(() => {
                            
                           },
                           primaryYAxis: {
-                            
                             labelFormat: "{value}",
                             edgeLabelPlacement: "Shift",
                             majorGridLines: { width: 0 },
@@ -292,14 +285,14 @@ useEffect(() => {
                       }}
                     /> */}
                   </React.Suspense>
-                </div>
+                {/* </div> */}
               </Col>
             );
           }):null}
         </Row>
           )}
-     </Card.Body>
-    </Card>
+     {/* </Card.Body>
+    </Card> */}
     <svg style={{ height: '0' }}>
     <defs>
         <linearGradient id="pickup-chart" x1="0" x2="0" y1="0" y2="1">
