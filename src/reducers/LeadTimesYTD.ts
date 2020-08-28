@@ -28,6 +28,56 @@ export const LeadTimesYTDReducer = handleActions<IBookingChannelModel, IBookingC
       data: action.payload.data,
       isError: false,
     }),
+
+    // past
+    [KeyLeadTimesYTDActionTypes.TOGGLE_KEY_LEAD_TIMES_PAST_LOADER]: (
+      state = LeadTimesYTDInitialState,
+      action
+    ): IBookingChannelModel => ({
+      ...state,
+      isLoading: action.payload.isLoading,
+    }),
+    [KeyLeadTimesYTDActionTypes.KEY_LEAD_TIMES_PAST_DATA_FAILED]: (
+      state = LeadTimesYTDInitialState,
+      action
+    ): IBookingChannelModel => ({
+      isLoading: false,
+      data: [],
+      isError: true,
+    }),
+    [KeyLeadTimesYTDActionTypes.KEY_LEAD_TIMES_PAST_DATA_SUCCESS]: (
+      state = LeadTimesYTDInitialState,
+      action
+    ): IBookingChannelModel => ({
+      isLoading: false,
+      data: action.payload.data,
+      isError: false,
+    }),
+
+    // future
+    [KeyLeadTimesYTDActionTypes.TOGGLE_KEY_LEAD_TIMES_FUTURE_LOADER]: (
+      state = LeadTimesYTDInitialState,
+      action
+    ): IBookingChannelModel => ({
+      ...state,
+      isLoading: action.payload.isLoading,
+    }),
+    [KeyLeadTimesYTDActionTypes.KEY_LEAD_TIMES_FUTURE_DATA_FAILED]: (
+      state = LeadTimesYTDInitialState,
+      action
+    ): IBookingChannelModel => ({
+      isLoading: false,
+      data: [],
+      isError: true,
+    }),
+    [KeyLeadTimesYTDActionTypes.KEY_LEAD_TIMES_FUTURE_DATA_SUCCESS]: (
+      state = LeadTimesYTDInitialState,
+      action
+    ): IBookingChannelModel => ({
+      isLoading: false,
+      data: action.payload.data,
+      isError: false,
+    }),
   },
   LeadTimesYTDInitialState
 );
