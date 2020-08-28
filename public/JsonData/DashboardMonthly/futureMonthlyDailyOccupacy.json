@@ -1,0 +1,210 @@
+{
+  "data": [
+    {
+      "data": [
+        {
+          "name": "1",
+          "OCC": 86,
+          "EMPTY": 14,
+          "ADR": 370
+        },
+        {
+          "name": "2",
+          "OCC": 88,
+          "EMPTY": 12,
+          "ADR": 363
+        },
+        {
+          "name": "3",
+          "OCC": 74,
+          "EMPTY": 26,
+          "ADR": 271
+        },
+        {
+          "name": "4",
+          "OCC": 75,
+          "EMPTY": 25,
+          "ADR": 408
+        },
+        {
+          "name": "5",
+          "OCC": 88,
+          "EMPTY": 12,
+          "ADR": 326
+        },
+        {
+          "name": "6",
+          "OCC": 66,
+          "EMPTY": 34,
+          "ADR": 273
+        },
+        {
+          "name": "7",
+          "OCC": 68,
+          "EMPTY": 32,
+          "ADR": 235
+        },
+        {
+          "name": "8",
+          "OCC": 72,
+          "EMPTY": 28,
+          "ADR": 235
+        },
+        {
+          "name": "9",
+          "OCC": 72,
+          "EMPTY": 28,
+          "ADR": 393
+        },
+        {
+          "name": "10",
+          "OCC": 68,
+          "EMPTY": 32,
+          "ADR": 295
+        },
+        {
+          "name": "11",
+          "OCC": 79,
+          "EMPTY": 21,
+          "ADR": 224
+        },
+        {
+          "name": "12",
+          "OCC": 73,
+          "EMPTY": 27,
+          "ADR": 271
+        },
+        {
+          "name": "13",
+          "OCC": 87,
+          "EMPTY": 13,
+          "ADR": 301
+        },
+        {
+          "name": "14",
+          "OCC": 75,
+          "EMPTY": 25,
+          "ADR": 241
+        },
+        {
+          "name": "15",
+          "OCC": 71,
+          "EMPTY": 29,
+          "ADR": 322
+        },
+        {
+          "name": "16",
+          "OCC": 69,
+          "EMPTY": 31,
+          "ADR": 309
+        },
+        {
+          "name": "17",
+          "OCC": 86,
+          "EMPTY": 14,
+          "ADR": 255
+        },
+        {
+          "name": "18",
+          "OCC": 76,
+          "EMPTY": 24,
+          "ADR": 222
+        },
+        {
+          "name": "19",
+          "OCC": 73,
+          "EMPTY": 27,
+          "ADR": 313
+        },
+        {
+          "name": "20",
+          "OCC": 31,
+          "EMPTY": 19,
+          "ADR": 323
+        },
+        {
+          "name": "21",
+          "OCC": 82,
+          "EMPTY": 18,
+          "ADR": 332
+        },
+        {
+          "name": "22",
+          "OCC": 91,
+          "EMPTY": 9,
+          "ADR": 343
+        },
+        {
+          "name": "23",
+          "OCC": 84,
+          "EMPTY": 16,
+          "ADR": 307
+        },
+        {
+          "name": "24",
+          "OCC": 81,
+          "EMPTY": 19,
+          "ADR": 362
+        },
+        {
+          "name": "25",
+          "OCC": 74,
+          "EMPTY": 26,
+          "ADR": 199
+        },
+        {
+          "name": "26",
+          "OCC": 70,
+          "EMPTY": 30,
+          "ADR": 333
+        },
+        {
+          "name": "27",
+          "OCC": 70,
+          "EMPTY": 30,
+          "ADR": 288
+        },
+        {
+          "name": "28",
+          "OCC": 78,
+          "EMPTY": 22,
+          "ADR": 333
+        },
+        {
+          "name": "29",
+          "OCC": 81,
+          "EMPTY": 19,
+          "ADR": 332
+        },
+        {
+          "name": "30",
+          "OCC": 92,
+          "EMPTY": 8,
+          "ADR": 249
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "name": "WE",
+          "OCC": 76,
+          "EMPTY": 24,
+          "ADR": 301.2
+        },
+        {
+          "name": "WD",
+          "OCC": 79,
+          "EMPTY": 21,
+          "ADR": 300
+        },
+        {
+          "name": "Total",
+          "OCC": 78,
+          "EMPTY": "",
+          "ADR": 300.6
+        }
+      ]
+    }
+  ]
+}
