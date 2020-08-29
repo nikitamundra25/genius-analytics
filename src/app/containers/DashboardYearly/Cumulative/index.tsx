@@ -138,24 +138,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                   </td>
                 ) : null}
             </tr>
-            <tr key={ind} >
-             {ind === 0 ? (
-                  <td
-                    colSpan={14}
-                    className=" sperator-white-section"
-                  >
-                  </td>
-                ) : null}
-            </tr>
-           <tr key={ind} >
-             {ind === 0 ? (
-                  <td
-                    colSpan={14}
-                    className=" sperator-gray-section "
-                  >
-                  </td>
-                ) : null}
-            </tr>
+            
              {list.type === "arrowData" ? 
              
                <tr>
@@ -258,25 +241,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
              </tr>
             : 
            <>
-              {/* <tr key={ind} >
-                 {ind === 0 ? (
-                      <td
-                        colSpan={14}
-                        className=" sperator-white-section"
-                      >
-                      </td>
-                    ) : null}
-                </tr>
-               <tr key={ind} >
-                 {ind === 0 ? (
-                      <td
-                        colSpan={14}
-                        className=" sperator-gray-section "
-                      >
-                        
-                      </td>
-                    ) : null}
-                </tr> */}
+             
                 <tr>
                   <td className="row-title "> 
                     <OverlayTrigger
