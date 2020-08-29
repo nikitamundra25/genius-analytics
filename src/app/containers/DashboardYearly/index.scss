@@ -13,22 +13,32 @@
   th, td {
     padding: 6px 1px;
     border: 2px solid #d0cfcf;
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     vertical-align: middle;
     max-width: 300px;
+    @media only screen and (max-width: 1560px) {
+      padding: 5px 1px;
+    }
     @media only screen and (max-width: 1480px) {
       padding: 4px 1px;
-      font-size: 10px;
     }
-    @media only screen and (max-width: 1440px) {
+    @media only screen and (max-width: 1393px) {
       padding: 3px 1px;
-      
+      font-size: 11px;
     }
-    @media only screen and (max-width: 1370px) {
+    @media only screen and (max-width: 1220px) {
       padding: 2px 1px;
-     
+      font-size: 11px;
     }
+    // @media only screen and (max-width: 1440px) {
+    //   padding: 3px 1px;
+      
+    // }
+    // @media only screen and (max-width: 1370px) {
+    //   padding: 2px 1px;
+     
+    // }
    }
   thead{
     th{
@@ -48,7 +58,7 @@
     font-size: 12px;
     text-align: center;
     position: relative;
-    min-width: 95px;
+    min-width: 85px;
     border-top: 0px;
     border-bottom:0px;
     &.bg-1{
@@ -63,20 +73,23 @@
    &.min-wauto{
     // min-width: auto;
    }
-    @media only screen and (max-width: 1480px) {
-      font-size:10px;
-      min-width: 85px;
-    }
+   @media only screen and (max-width: 1393px) {
+    min-width: 78px;
+  }
+    // @media only screen and (max-width: 1480px) {
+    //   font-size:10px;
+    //   min-width: 85px;
+    // }
     // @media only screen and (max-width: 1440px) {
     //   font-size:12px;
     // }
-    @media only screen and (max-width: 1440px) {
-      font-size:9px;
-      min-width: 76px;
-    }
-    @media only screen and (max-width: 1299px) {
-      min-width: 84px;
-    }
+    // @media only screen and (max-width: 1440px) {
+    //   font-size:9px;
+    //   min-width: 76px;
+    // }
+    // @media only screen and (max-width: 1299px) {
+    //   min-width: 84px;
+    // }
   }
   .row-title{
     background: #1f4e78;
@@ -90,17 +103,22 @@
     &.sub-bg{
       background:#203763;
     }
-    
-    @media only screen and (max-width: 1480px) {
-      font-size:10px;
-      min-width: 68px;
+    @media only screen and (max-width: 1393px) { 
+      min-width: 93px;
+      max-width: 93px;
+      font-size: 10px;
     }
+    
+    // @media only screen and (max-width: 1480px) {
+    //   font-size:10px;
+    //   min-width: 68px;
+    // }
     // @media only screen and (max-width: 1440px) {
     //   font-size:12px;
     // }
-    @media only screen and (max-width: 1280px) {
-      font-size:10px;
-    }
+    // @media only screen and (max-width: 1280px) {
+    //   font-size:10px;
+    // }
   }
 
   .sperator-gray-section{
@@ -156,14 +174,14 @@
       display: inline-block;
       text-align: center;
       font-size: 11px;
-      @media only screen and (max-width: 1480px) {
-        font-size:10px;
-        width: 21px;
-      }
-      @media only screen and (max-width: 1440px) {
-        font-size:9px;
-        width: 19px;
-      }
+      // @media only screen and (max-width: 1480px) {
+      //   font-size:10px;
+      //   width: 21px;
+      // }
+      // @media only screen and (max-width: 1440px) {
+      //   font-size:9px;
+      //   width: 19px;
+      // }
       
     }
   }
@@ -187,13 +205,6 @@
 .template{
   height: 100%;
   width: 100%;
-}
-.graph-empty-box{
-  width: 250px;
-  height: 150px;
-  @media only screen and (max-width: 1280px) {
-    height: 100px;
-  }
 }
 .custom-bar{
   background-color: #ffffff;
