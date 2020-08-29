@@ -118,7 +118,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                 //   return final;
                 // });
                return ( list.subData.map((subdata : any, ind:number)=>{      
-               return (
+               return ( 
                <>
                <tr key={ind} >
              {ind === 0 ? (
@@ -126,7 +126,6 @@ const CumulativeTable = ({ selectedDate }: any) => {
                     colSpan={14}
                     className=" sperator-white-section"
                   >
-                    
                   </td>
                 ) : null}
             </tr>
@@ -134,32 +133,12 @@ const CumulativeTable = ({ selectedDate }: any) => {
              {ind === 0 ? (
                   <td
                     colSpan={14}
-                    className=" sperator-gray-section "
+                    className="sperator-gray-section "
                   >
-                    
                   </td>
                 ) : null}
             </tr>
-            <tr key={ind} >
-             {ind === 0 ? (
-                  <td
-                    colSpan={14}
-                    className=" sperator-white-section"
-                  >
-                    
-                  </td>
-                ) : null}
-            </tr>
-           <tr key={ind} >
-             {ind === 0 ? (
-                  <td
-                    colSpan={14}
-                    className=" sperator-gray-section "
-                  >
-                    
-                  </td>
-                ) : null}
-            </tr>
+            
              {list.type === "arrowData" ? 
              
                <tr>
@@ -260,32 +239,10 @@ const CumulativeTable = ({ selectedDate }: any) => {
                  </td>
                ))}
              </tr>
-            
             : 
-
            <>
-              <tr key={ind} >
-                 {ind === 0 ? (
-                      <td
-                        colSpan={14}
-                        className=" sperator-white-section"
-                      >
-                        
-                      </td>
-                    ) : null}
-                </tr>
-               <tr key={ind} >
-                 {ind === 0 ? (
-                      <td
-                        colSpan={14}
-                        className=" sperator-gray-section "
-                      >
-                        
-                      </td>
-                    ) : null}
-                </tr>
+             
                 <tr>
-                  
                   <td className="row-title "> 
                     <OverlayTrigger
                       key={"top2"}
@@ -319,7 +276,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                         ? "text-danger"
                         : ""
                     }`}>
-                      {value ? parseInt(value).toLocaleString() : "-"}
+                      {value ? parseFloat(value).toLocaleString() : null}
                     </td>
                     : <td
                     key={`${i}`}

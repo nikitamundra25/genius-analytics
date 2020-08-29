@@ -3,21 +3,21 @@
     {
       "data": [
         { "x": "My<br>OCC", "y": 0.0 },
-        { "x": "OCC<br>Compact", "y": 0.0 },
+        { "x": "OCC<br>Compset", "y": 0.0 },
         { "x": "MPI", "y": 0.0 }
       ]
     },
     {
       "data": [
         { "x": "My<br>ARR", "y": 0.0 },
-        { "x": "ARR<br>Compact", "y": 0.0 },
+        { "x": "ARR<br>Compset", "y": 0.0 },
         { "x": "ARI", "y": 0.0 }
       ]
     },
     {
       "data": [
         { "x": "My<br>RevPAR", "y": 0.0 },
-        { "x": "RevPAR<br>Compact", "y": 0.0 },
+        { "x": "RevPAR<br>Compset", "y": 0.0 },
         { "x": "RGI", "y": 0.0 }
       ]
     }
