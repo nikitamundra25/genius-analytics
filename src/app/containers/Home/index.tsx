@@ -26,10 +26,10 @@ import RGIVariance from "./RGIVariance";
 import BusinessMixComponent from "./BusinessMix";
 const history = createBrowserHistory();
 
-// let date = new Date()
+let date = new Date()
 // export class Default extends SampleBase {
 const HomeComponent: FunctionComponent = () => {
-  const [date, setdate] = React.useState<Date>(new Date());
+  // const [date, setdate] = React.useState<Date>(new Date());
   const cellSpacing = [15, 20];
   const dispatch = useDispatch();
   const store: Store = configureStore(history);
