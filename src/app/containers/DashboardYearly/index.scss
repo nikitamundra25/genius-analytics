@@ -17,6 +17,10 @@
     text-align: center;
     vertical-align: middle;
     max-width: 300px;
+    @media only screen and (min-width: 1880px) {
+      padding: 9px 4px;
+      font-size:14px;
+    }
     @media only screen and (max-width: 1560px) {
       padding: 5px 1px;
     }
@@ -73,6 +77,9 @@
    &.min-wauto{
     // min-width: auto;
    }
+   @media only screen and (min-width: 1880px) {
+    font-size:14px;
+  }
    @media only screen and (max-width: 1393px) {
     min-width: 78px;
   }
@@ -102,6 +109,9 @@
     text-align: left;
     &.sub-bg{
       background:#203763;
+    }
+    @media only screen and (min-width: 1880px) {
+      font-size:14px;
     }
     @media only screen and (max-width: 1393px) { 
       min-width: 93px;
@@ -174,6 +184,10 @@
       display: inline-block;
       text-align: center;
       font-size: 11px;
+      @media only screen and (min-width: 1880px) {
+        width: 30px;
+        font-size:14px;
+      }
       // @media only screen and (max-width: 1480px) {
       //   font-size:10px;
       //   width: 21px;
@@ -210,6 +224,10 @@
   background-color: #ffffff;
     border-radius: 0px;
     height: 22px;
+    @media only screen and (min-width: 1880px) {
+      width: 25px;
+      
+    }
     @media only screen and (max-width: 1320px) {
       height: 22px;
     }
