@@ -18,7 +18,7 @@ import {
   AxesDirective, AxisDirective,
 } from "@syncfusion/ej2-react-charts";
 
-const MixedCharts = ({ charts = [], id="mixed-map", chartSettings = {},legend= true }: any) => {
+const MixedCharts = ({ charts = [], id="mixed-map", chartSettings = {},legend= true,height="100%" }: any) => {
   // class MixedCharts extends Component<any, any> {
       const legendSettings = { visible: legend };
       const textRender = (args:any) => {
@@ -36,7 +36,7 @@ const MixedCharts = ({ charts = [], id="mixed-map", chartSettings = {},legend= t
       // width={"100%"}
       // height={"270px"}
       // height="100%" width="100%"
-      style={{ "height":"100%" ,
+      style={{ "height":height ,
       "width":"100%"  }}
       textRender = {textRender}
 

@@ -115,7 +115,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "OCC",
         tooltip: { enable: true,  position: "Top" },
-        // height: setHeight,
+         height: "75%",
       },
       data: data&&  data.graph && data.graph.length ? data.graph[0].OCC : [],
      
@@ -144,7 +144,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "ADR",
         tooltip: { enable: true,  position: "Top" },
-        // height: setHeight,
+        height: "75%",
       },
       data: data &&  data.graph && data.graph.length ? data.graph[1].ADR : [],
       
@@ -173,7 +173,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "RevPAR",
         tooltip: { enable: true,  position: "Top" },
-        // height: setHeight,
+        height: "75%",
         
       },
       data: data &&  data.graph && data.graph.length ? data.graph[2].Revpar : [],
@@ -203,7 +203,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "Revenue",
         tooltip: { enable: true,  position: "Top" },
-        // height: setHeight,
+        height: "75%",
       },
       data: data &&  data.graph && data.graph.length ? data.graph[3].Revenue : [],
       
@@ -257,18 +257,18 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
     setactiveToggle(str);
   };
 
-  console.log("hereeeeeeeeeeeeeeeeeeeeeeeeeee");
   
   return (
     <>
       <style>{SAMPLE_CSS}</style>
       {/* <Card id={`key-card`}> */}
-        {/* <WidgetHeader
+      <div style={{ "height": "25%", "margin":0 }}>
+        <WidgetHeader
           title={"Key Business Metrics"}
           activeToggle={activeToggle}
           onToggle={(str: ToggleType) => handleWidgetView(str)}
-        /> */}
-
+        />
+          </div>
         {activeToggle === "graph" ? (
             // <Card.Body>
             <>
