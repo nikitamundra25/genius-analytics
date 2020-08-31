@@ -31,9 +31,17 @@
       padding: 3px 1px;
       font-size: 11px;
     }
+    @media only screen and (max-width: 1299px) {
+      padding: 3px 1px;
+      font-size: 11px;
+    }
     @media only screen and (max-width: 1220px) {
       padding: 2px 1px;
       font-size: 11px;
+    }
+    @media only screen and (max-width: 1160px) {
+      padding: 1px 1px;
+      font-size: 10px;
     }
     // @media only screen and (max-width: 1440px) {
     //   padding: 3px 1px;
@@ -82,6 +90,9 @@
   }
    @media only screen and (max-width: 1393px) {
     min-width: 78px;
+  }
+  @media only screen and (max-width: 1299px) {
+    min-width: 75px;
   }
     // @media only screen and (max-width: 1480px) {
     //   font-size:10px;
@@ -146,6 +157,9 @@
     border-right: 2px solid #fff;
     border-top: 0px;
     border-bottom: 0px;
+    @media only screen and (max-width: 1160px) {
+      padding: 3px 0px;
+    }
   }
   .text-col {
     flex: 1;
@@ -225,8 +239,7 @@
     border-radius: 0px;
     height: 22px;
     @media only screen and (min-width: 1880px) {
-      width: 25px;
-      
+      height: 25px;
     }
     @media only screen and (max-width: 1320px) {
       height: 22px;
