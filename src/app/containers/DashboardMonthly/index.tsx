@@ -151,7 +151,7 @@ const DashboardMonthly: FunctionComponent = () => {
                 sizeY={0}
                 row={2}
                 col={0}
-                header={`<div>${dashboardMonthlyList[1].name}</div>`}
+                header={`<div class="panel-title">${dashboardMonthlyList[1].name}</div>`}
                 content={() => getChart(dashboardMonthlyList[1].name)}
               ></PanelDirective>
               <PanelDirective
@@ -166,7 +166,7 @@ const DashboardMonthly: FunctionComponent = () => {
                 sizeY={0}
                 row={3}
                 col={4}
-                header={`<div>${dashboardMonthlyList[3].name}</div>`}
+                header={`<div class="panel-title">${dashboardMonthlyList[3].name}</div>`}
                 content={() => getChart(dashboardMonthlyList[3].name)}
               ></PanelDirective>
               <PanelDirective
@@ -174,7 +174,7 @@ const DashboardMonthly: FunctionComponent = () => {
                 sizeY={0}
                 row={4}
                 col={0}
-                header={`<div>${dashboardMonthlyList[4].name}</div>`}
+                header={`<div class="panel-title">${dashboardMonthlyList[4].name}</div>`}
                 content={() => getChart(dashboardMonthlyList[4].name)}
               ></PanelDirective>
               <PanelDirective
@@ -182,7 +182,7 @@ const DashboardMonthly: FunctionComponent = () => {
                 sizeY={0}
                 row={4}
                 col={3}
-                header={`<div>${dashboardMonthlyList[5].name}</div>`}
+                header={`<div class="panel-title">${dashboardMonthlyList[5].name}</div>`}
                 content={() => getChart(dashboardMonthlyList[5].name)}
               ></PanelDirective>
             </PanelsDirective>
