@@ -69,14 +69,14 @@ export default ({ graphdata = [] }: any) => {
    }, []);
 
   return (
-    <Card id="lead-card">
-      <WidgetHeader
-        title={"Lead Times YTD"}
-        activeToggle={"graph"}
-        showToggle={false}
-      />
-      <Card.Body>
-        {isLoading ? (
+    // <Card id="lead-card">
+    //   <WidgetHeader
+    //     title={"Lead Times YTD"}
+    //     activeToggle={"graph"}
+    //     showToggle={false}
+    //   />
+    //   <Card.Body>
+        isLoading ? (
           <WidgetLoader />
         ) : isError ? (
           <ErrorComponent
@@ -93,7 +93,7 @@ export default ({ graphdata = [] }: any) => {
             <PieChartComponent
               id={"leadtimes"}
              // height={"270px"}
-             height= {setHeight}
+            //  height= {setHeight}
               data={data}
               chartSettings={{
                 SeriesDirective: {
@@ -124,8 +124,8 @@ export default ({ graphdata = [] }: any) => {
               }}
             />
           </React.Suspense>
-        )}
-      </Card.Body>
-    </Card>
+        )
+    //   </Card.Body>
+    // </Card>
   );
 };

@@ -94,9 +94,10 @@ export default ({ graphdata = [] }: any) => {
   ];
 
   return (
-    <Card id="dy-rgi-card">
-      <WidgetHeader title={"RGI Performance - YTD"}  activeToggle={"graph"}  showToggle={false}/>
-      <Card.Body>
+    <>
+     {/* <Card id="dy-rgi-card">
+       <WidgetHeader title={"RGI Performance - YTD"}  activeToggle={"graph"}  showToggle={false}/>
+       <Card.Body> */}
       {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -104,10 +105,10 @@ export default ({ graphdata = [] }: any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
-        <Row className="row-inner">
+        <Row className="row-inner h-100">
           {RGIBarChart.map((key: any, index: number) => {
             return (
-              <Col key={index} sm={4} md={4}>
+              <Col key={index} sm={4} md={4} className="h-100">
                 <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
                   <ColumnChart
                     chartSettings={{
@@ -134,7 +135,7 @@ export default ({ graphdata = [] }: any) => {
                       },
                       //title: key.title,
                       tooltip: { enable: true },
-                      height: setHeight,
+                      // height: setHeight,
                       
                     }}
                     key={index}
@@ -146,7 +147,8 @@ export default ({ graphdata = [] }: any) => {
           })}
         </Row>
           )}
-     </Card.Body>
-    </Card>
+      {/* </Card.Body>
+    </Card>  */}
+    </>
   );
 };

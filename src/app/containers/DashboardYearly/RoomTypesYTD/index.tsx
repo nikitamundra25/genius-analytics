@@ -189,9 +189,9 @@ const labeltemplateline = (args:any) => {
   ];
   return (
     <>
-      <Card id="dy-room-card">
+      {/* <Card id="dy-room-card">
         <WidgetHeader title={"Room Types - YTD"} activeToggle={"graph"}  showToggle={false}/>
-        <Card.Body>
+        <Card.Body> */}
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -226,14 +226,14 @@ const labeltemplateline = (args:any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
-                height: setHeight,
+                // height: setHeight,
               }}
               charts={Charts}
             />
             </React.Suspense>
           )}
-        </Card.Body>
-      </Card>
+        {/* </Card.Body>
+      </Card> */}
     </>
   );
 };

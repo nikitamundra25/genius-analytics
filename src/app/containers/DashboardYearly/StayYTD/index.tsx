@@ -143,9 +143,9 @@ const pointRender = (args:any) => {
 
   return (
     <>
-      <Card id="stay-card">
+      {/* <Card id="stay-card">
         <WidgetHeader title={"Length of Stay & ADR - YTD"} activeToggle={"graph"}   showToggle={false}/>
-        <Card.Body>
+        <Card.Body> */}
            {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -180,15 +180,15 @@ const pointRender = (args:any) => {
                    visible:false,
                 },
                 tooltip: { enable: true },
-                height: setHeight,
+                // height: setHeight,
                 pointRender:pointRender,
               }}
               charts={Charts}
             />
             </React.Suspense>
           )}
-        </Card.Body>
-      </Card>
+        {/* </Card.Body>
+      </Card> */}
     </>
   );
 };

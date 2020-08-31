@@ -236,22 +236,22 @@ const labeltemplateline = (args:any) => {
     },
   ];
   return (
-    <Card id="monthly-occ-card">
-      <WidgetHeader
-        title={"Monthly Daily Occupacy & ADR"}
-        activeToggle={"graph"}
-        showToggle={false}
-      />
-      <Card.Body>
-        {isLoading ? (
+    // <Card id="monthly-occ-card">
+    //   <WidgetHeader
+    //     title={"Monthly Daily Occupacy & ADR"}
+    //     activeToggle={"graph"}
+    //     showToggle={false}
+    //   />
+    //   <Card.Body>
+        isLoading ? (
           <WidgetLoader />
         ) : isError ? (
           <ErrorComponent
             message={"An error occured while fetching details "}
           />
         ) : (
-          <Row className="row-inner">
-            <Col xs={12} md={9}>
+          <Row className="row-inner h-100">
+            <Col xs={12} md={9} className="h-100" >
               <React.Suspense
                 fallback={
                   <div className="card-loader">
@@ -281,13 +281,13 @@ const labeltemplateline = (args:any) => {
                     },
                     tooltip: { enable: true },
                     Legend: { enable: false },
-                    height: setHeight,
+                    // height: setHeight,
                   }}
                   charts={Charts1}
                 />
               </React.Suspense>
             </Col>
-            <Col xs={12} md={3}>
+            <Col xs={12} md={3} className="h-100" >
               <React.Suspense
                 fallback={
                   <div className="card-loader">
@@ -316,16 +316,16 @@ const labeltemplateline = (args:any) => {
                       visible: false,
                     },
                     tooltip: { enable: true },
-                    height: setHeight,
+                    // height: setHeight,
                   }}
                   charts={Charts2}
                 />
               </React.Suspense>
             </Col>
           </Row>
-        )}
-      </Card.Body>
-    </Card>
+        )
+    //   </Card.Body>
+    // </Card>
   );
 };
 

@@ -155,9 +155,9 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
 
   return (
     <>
-      <Card id="dy-monthly-card">
+      {/* <Card id="dy-monthly-card">
         <WidgetHeader title={"Monthly OCC & ADR"} activeToggle={"graph"}  showToggle={false}/>
-        <Card.Body>
+        <Card.Body> */}
          {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -192,7 +192,7 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
-                height: setHeight,
+                // height: setHeight,
                 // width:"100%",
                 // height:"100%"
               }}
@@ -200,8 +200,8 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
             />
             </React.Suspense>
           )}
-        </Card.Body>
-      </Card>
+        {/* </Card.Body>
+      </Card> */}
     </>
   );
 };

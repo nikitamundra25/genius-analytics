@@ -191,10 +191,11 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
 
   return (
     <>
-    <Card id="daily-occ-card">
+    {/* <Card id="daily-occ-card"> */}
       <style>
           {SAMPLE_CSS}
       </style>
+      
       <WidgetHeader
         // title={"Daily Occupacy Vs. BUD Vs. LY"}
         title={`${selectedValue === "OCC" ? 'Daily Occupacy' : selectedValue === "ADR" ? 'ADR' :'RevPAR'} Vs. BUD Vs. LY` }
@@ -204,8 +205,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
         selectedMonthlyData = {selectedValue}
         handleChange={handleChange}
       />
-
-      <Card.Body>
+      {/* <Card.Body> */}
          {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -237,14 +237,14 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
               },
               tooltip: { enable: true },
               Legend: { enable: false },
-              height: setHeight,
+              // height: setHeight,
             }}
             charts={Charts}
           />
           </React.Suspense>
           )}
-      </Card.Body>
-      </Card>
+      {/* </Card.Body>
+      </Card> */}
       <svg style={{ height: '0' }}>
                     <defs>
                         <linearGradient id="gradient-daily" x1="0" x2="0" y1="0" y2="1">
