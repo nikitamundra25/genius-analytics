@@ -115,7 +115,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "OCC",
         tooltip: { enable: true,  position: "Top" },
-         height: "75%",
+         height: "100%",
       },
       data: data&&  data.graph && data.graph.length ? data.graph[0].OCC : [],
      
@@ -144,7 +144,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "ADR",
         tooltip: { enable: true,  position: "Top" },
-        height: "75%",
+        height: "100%",
       },
       data: data &&  data.graph && data.graph.length ? data.graph[1].ADR : [],
       
@@ -173,7 +173,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "RevPAR",
         tooltip: { enable: true,  position: "Top" },
-        height: "75%",
+        height: "100%",
         
       },
       data: data &&  data.graph && data.graph.length ? data.graph[2].Revpar : [],
@@ -203,7 +203,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "Revenue",
         tooltip: { enable: true,  position: "Top" },
-        height: "75%",
+        height: "100%",
       },
       data: data &&  data.graph && data.graph.length ? data.graph[3].Revenue : [],
       
@@ -262,7 +262,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
     <>
       <style>{SAMPLE_CSS}</style>
       {/* <Card id={`key-card`}> */}
-      <div style={{ "height": "25%", "margin":0 }}>
+      <div style={{  "position": "absolute", "left": "0px", "top": "0px", "width": "100%"}} >
         <WidgetHeader
           title={"Key Business Metrics"}
           activeToggle={activeToggle}
@@ -280,7 +280,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
               />
             ) : (
               <>
-                <Row className="row-inner h-100">
+                <Row className="row-inner h-100" style={{ "paddingTop": "62px" }}>
                   {barChartBusinessMetrics && barChartBusinessMetrics.length ? (
                    
                       barChartBusinessMetrics.map((key: any, index: number) => {
@@ -310,7 +310,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
             </>
           // </Card.Body>
         ) : (
-          <div className="business-table-section">
+          <div className="business-table-section"  style={{ "paddingTop": "62px" }}>
             <Table responsive className="business-table mt-3 mb-0">
               <thead>
                 <tr>

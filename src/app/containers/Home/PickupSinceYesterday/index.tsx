@@ -213,7 +213,7 @@ useEffect(() => {
             return (
               <Col xs={12} md={4} key={index} className="h-100" >
                 {/* <div className="pickup-card"> */}
-                  <div  className="text-left range-text" style={{ "height": "20%", "margin":0 }}>
+                  <div  className="text-left range-text" style={{  "position": "absolute", "left": "25px", "top": "0px", "width": "100%"}} >
                     <div className="sub-inner-title">{key.title}</div>
                     {key.range ? (
                       <div className={`${key.textClass} h3  pt-2 mb-0`}>
@@ -222,7 +222,7 @@ useEffect(() => {
                       </div>
                     ) : null}
                   </div>
- 
+                  <div className="h-100 d-flex" style={{ "paddingTop": "62px" }} >
                   <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
                     <MixedCharts
                         id={`pickup-${index}`}
@@ -252,7 +252,7 @@ useEffect(() => {
                          
                           tooltip: { enable: true },
                           //title: key.title,
-                          height: "80%"
+                          height: "100%"
                         }}
                       />
                     {/* <ColumnChart
@@ -286,6 +286,7 @@ useEffect(() => {
                       }}
                     /> */}
                   </React.Suspense>
+                  </div>
                 {/* </div> */}
               </Col>
             );

@@ -40,7 +40,7 @@ const BOB = () => {
 
   return (
     <>
-      <Card>
+      {/* <Card> */}
         {/* <WidgetHeader
           title={"Business on the Books"}
           activeToggle={"grid"}
@@ -170,7 +170,7 @@ const BOB = () => {
             </Table>
           </div>
         )}
-      </Card>
+      {/* </Card> */}
     </>
   );
 };
