@@ -192,6 +192,7 @@ const DashboardYearly: FunctionComponent = () => {
                 sizeY={0}
                 row={3}
                 col={0}
+                header={`<div>Monthly OCC & ADR</div>`}
                 content={() => getChart(dashboardYearlyList[1].name)}
               ></PanelDirective>
               <PanelDirective
@@ -199,6 +200,7 @@ const DashboardYearly: FunctionComponent = () => {
                 sizeY={0}
                 row={3}
                 col={4}
+                header={`<div>Quarterly OCC & ADR</div>`}
                 content={() => getChart(dashboardYearlyList[2].name)}
               ></PanelDirective>
               <PanelDirective
@@ -206,6 +208,7 @@ const DashboardYearly: FunctionComponent = () => {
                 sizeY={0}
                 row={3}
                 col={5}
+                header={`<div>Room Types - YTD</div>`}
                 content={() => getChart(dashboardYearlyList[3].name)}
               ></PanelDirective>
               <PanelDirective
@@ -213,6 +216,7 @@ const DashboardYearly: FunctionComponent = () => {
                 sizeY={0}
                 row={4}
                 col={0}
+                header={`<div>RevPAR Vs. NrevPAR - YTD</div>`}
                 content={() => getChart(dashboardYearlyList[4].name)}
               ></PanelDirective>
               <PanelDirective
@@ -220,6 +224,7 @@ const DashboardYearly: FunctionComponent = () => {
                 sizeY={0}
                 row={4}
                 col={3}
+                header={`<div>Length of Stay & ADR - YTD</div>`}
                 content={() => getChart(dashboardYearlyList[5].name)}
               ></PanelDirective>
               <PanelDirective
@@ -227,6 +232,7 @@ const DashboardYearly: FunctionComponent = () => {
                 sizeY={0}
                 row={5}
                 col={0}
+                header={`<div>${dashboardYearlyList[6].name}</div>`}
                 content={() => getChart(dashboardYearlyList[6].name)}
               ></PanelDirective>
               <PanelDirective
@@ -241,6 +247,7 @@ const DashboardYearly: FunctionComponent = () => {
                 sizeY={0}
                 row={5}
                 col={4}
+                header={`<div>${dashboardYearlyList[8].name}</div>`}
                 content={() => getChart(dashboardYearlyList[8].name)}
               ></PanelDirective>
             </PanelsDirective>

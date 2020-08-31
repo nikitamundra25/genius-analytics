@@ -84,16 +84,17 @@ export default ({ graphdata = [] }: any) => {
   };
 
   return (
-    <Card id="leadtime-card">
-      <WidgetHeader
-        title={"Lead Times YTD by Segment"}
-        activeToggle={"graph"}
-        showToggle={false}
-        showdropdownlead={true}
-        selectedMonthlyData={selectedValue}
-        handleChange={handleChange}
-      />
-      <Card.Body>
+    // <Card id="leadtime-card">
+    //   <Card.Body>
+    <>
+    <WidgetHeader
+      title={"Lead Times YTD by Segment"}
+      activeToggle={"graph"}
+      showToggle={false}
+      showdropdownlead={true}
+      selectedMonthlyData={selectedValue}
+      handleChange={handleChange}
+    />
         {isLoading ? (
           <WidgetLoader />
         ) : isError ? (
@@ -111,7 +112,7 @@ export default ({ graphdata = [] }: any) => {
             <PieChartComponent
               id={"leadtimesSegment"}
               //height={"270px"}
-              height={setHeight}
+              // height={setHeight}
               data={segmentList}
               chartSettings={{
                 SeriesDirective: {
@@ -136,7 +137,8 @@ export default ({ graphdata = [] }: any) => {
             />
           </React.Suspense>
         )}
-      </Card.Body>
-    </Card>
+        </>
+    //   </Card.Body>
+    // </Card>
   );
 };
