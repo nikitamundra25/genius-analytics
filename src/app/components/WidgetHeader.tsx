@@ -19,8 +19,8 @@ const onhanldeToggle = (str:any)=>{
 
   return (
     <>
-      <Card.Header className="d-flex align-items-center justify-content-between">
-        <Card.Title>{title}</Card.Title>
+      <div className="d-flex align-items-center justify-content-between custom-panel-header">
+        <div className="panel-title" >{title}</div>
         {showToggle ? (
           <div className="action-wrap">
             <div
@@ -78,7 +78,7 @@ const onhanldeToggle = (str:any)=>{
             </Form>
           </div>
         ) : null}
-      </Card.Header>
+      </div>
     </>
   );
 };

@@ -195,7 +195,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       <style>
           {SAMPLE_CSS}
       </style>
-      
+      <div style={{  "position": "absolute", "left": "0px", "top": "0px", "width": "100%"}} > 
       <WidgetHeader
         // title={"Daily Occupacy Vs. BUD Vs. LY"}
         title={`${selectedValue === "OCC" ? 'Daily Occupacy' : selectedValue === "ADR" ? 'ADR' :'RevPAR'} Vs. BUD Vs. LY` }
@@ -205,6 +205,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
         selectedMonthlyData = {selectedValue}
         handleChange={handleChange}
       />
+      </div>
       {/* <Card.Body> */}
          {isLoading ? (
             <WidgetLoader />
@@ -213,6 +214,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
+            <div className="d-flex h-100" style={{ "paddingTop": "62px" }} > 
             <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
           <MixedCharts
             id={"dailyocc"}
@@ -242,6 +244,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
             charts={Charts}
           />
           </React.Suspense>
+         </div>
           )}
       {/* </Card.Body>
       </Card> */}

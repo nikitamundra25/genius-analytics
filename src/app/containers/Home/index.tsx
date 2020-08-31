@@ -192,7 +192,7 @@ const HomeComponent: FunctionComponent = () => {
                 row={0}
                 col={0}
                 minSizeY={1}
-                header={`<div>${widgets[0].name}</div>`}
+                header={`<div class="panel-title">${widgets[0].name}</div>`}
                 content={() => getChart(widgets[0].name)}
               ></PanelDirective>
               <PanelDirective
@@ -207,7 +207,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={1}
                 row={1}
                 col={0}
-                header={`<div>Pick up Since Yesterday</div>`}
+                header={`<div class="panel-title">Pick up Since Yesterday</div>`}
                 content={() => getChart(widgets[2].name)}
               ></PanelDirective>
               <PanelDirective
@@ -215,7 +215,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={1}
                 row={1}
                 col={2}
-                header={`<div>${widgets[3].name}</div>`}
+                header={`<div class="panel-title">${widgets[3].name}</div>`}
                 content={() => getChart(widgets[3].name)}
               ></PanelDirective>
               <PanelDirective
@@ -223,7 +223,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={0}
                 row={2}
                 col={0}
-                header={`<div>${widgets[4].name}</div>`}
+                header={`<div class="panel-title">${widgets[4].name}</div>`}
                 content={() => getChart(widgets[4].name)}
               ></PanelDirective>
               <PanelDirective
@@ -231,7 +231,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={0}
                 row={2}
                 col={2}
-                header={`<div>${widgets[5].name}</div>`}
+                header={`<div class="panel-title">${widgets[5].name}</div>`}
                 content={() => getChart(widgets[5].name)}
               ></PanelDirective>
               <PanelDirective
@@ -239,7 +239,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={1}
                 row={3}
                 col={0}
-                header={`<div>${widgets[6].name}</div>`}
+                header={`<div class="panel-title">${widgets[6].name}</div>`}
                 content={() => getChart(widgets[6].name)}
               ></PanelDirective>
               <PanelDirective
@@ -247,7 +247,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={1}
                 row={3}
                 col={2}
-                header={`<div>${widgets[7].name}</div>`}
+                header={`<div class="panel-title">${widgets[7].name}</div>`}
                 content={() => getChart(widgets[7].name)}
               ></PanelDirective>
               <PanelDirective
@@ -255,7 +255,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={0}
                 row={4}
                 col={0}
-                header={`<div>${widgets[8].name}</div>`}
+                header={`<div class="panel-title">${widgets[8].name}</div>`}
                 content={() => getChart(widgets[8].name)}
               ></PanelDirective>
               <PanelDirective
@@ -263,7 +263,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={0}
                 row={4}
                 col={3}
-                header={`<div>${widgets[9].name}</div>`}
+                header={`<div class="panel-title">${widgets[9].name}</div>`}
                 content={() => getChart(widgets[9].name)}
               ></PanelDirective>
             </PanelsDirective>
