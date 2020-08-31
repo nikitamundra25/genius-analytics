@@ -366,7 +366,25 @@ body {
       }
     }
   }
-
+  .e-dashboardlayout.e-control .e-panel .e-panel-header{
+    padding: 10px 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .custom-panel-header{
+    padding: 10px 15px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  .panel-title{
+    font-weight: 500;
+    color: #2c2c2c;
+    font-size: 18px;
+    text-align: left;
+    line-height:normal;
+  }
   .main-title {
     font-weight: 500;
     color: $black;
