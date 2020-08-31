@@ -57,8 +57,8 @@ const MonthlyBOB = (props: any) => {
 
   return (
     <>
-      <Card>
-        <Card.Body className="month-table-card">
+      {/* <Card>
+        <Card.Body className="month-table-card"> */}
           {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -245,8 +245,8 @@ const MonthlyBOB = (props: any) => {
               </div>
             </React.Suspense>
           )}
-        </Card.Body>
-      </Card>
+        {/* </Card.Body>
+      </Card> */}
     </>
   );
 };

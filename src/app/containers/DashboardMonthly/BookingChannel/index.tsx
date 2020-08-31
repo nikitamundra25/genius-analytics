@@ -179,14 +179,14 @@ const BookingChannel = ({ graphdata = [] }:any) => {
     },
   ];
   return (
-    <Card id="booking-month-card">
-    <WidgetHeader
-      title={"Booking Channel"}
-      activeToggle={"graph"}
-      showToggle={false}
-    />
-      <Card.Body>
-      {isLoading ? (
+    // <Card id="booking-month-card">
+    // <WidgetHeader
+    //   title={"Booking Channel"}
+    //   activeToggle={"graph"}
+    //   showToggle={false}
+    // />
+    //   <Card.Body>
+      isLoading ? (
             <WidgetLoader />
           ) : isError ? (
             <ErrorComponent
@@ -215,14 +215,14 @@ const BookingChannel = ({ graphdata = [] }:any) => {
                 visible:false,
               },
               tooltip: { enable: true },
-              height: setHeight,
+              // height: setHeight,
             }}
             charts={Charts}
           />
           </React.Suspense>
-          )}
-      </Card.Body>
-    </Card>
+          )
+    //   </Card.Body>
+    // </Card>
     
   );
 };

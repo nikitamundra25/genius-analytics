@@ -179,13 +179,13 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
   ];
   return (
     <>
-      <Card id="market-card">
+      {/* <Card id="market-card">
       <WidgetHeader
         title={"Market Segmentation"}
         activeToggle={"graph"}
         showToggle={false}
       />
-        <Card.Body>
+        <Card.Body> */}
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -214,15 +214,15 @@ const MarketSegmentation = ({ graphdata = [] }:any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
-                height: setHeight,
+                // height: setHeight,
               }}
               charts={Charts}
             />
             </React.Suspense>
           )}
       
-        </Card.Body>
-      </Card>
+        {/* </Card.Body>
+      </Card> */}
     </>
   );
 };
