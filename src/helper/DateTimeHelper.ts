@@ -1,7 +1,10 @@
 import moment from "moment";
+import { monthYearFormat } from "../config";
 export const getMonths = () => {
   return moment.months();
 };
+
+
 
 
 export const getMonthsData = (date: any, name:string) => {
@@ -9,7 +12,7 @@ export const getMonthsData = (date: any, name:string) => {
   let newDay :any
   let monthDate = moment(date).startOf("month");
   let daysCount: number = monthDate.daysInMonth()
-  if(moment(date).format("MMMM") === moment().subtract(1, "days").format("MMMM") &&  name === "pickupData" ){
+  if(moment(date).format(monthYearFormat) === moment().subtract(1, "days").format(monthYearFormat) &&  name === "pickupData" ){
     monthDate = moment(date);
     let endDate = moment().endOf("month");
     daysCount =  endDate.diff(monthDate, 'days');
@@ -26,7 +29,7 @@ export const getMonthsData = (date: any, name:string) => {
 export const generateArrayOfMonths = (date:any) => {
   const months: any = [];
   const dateStart =  date ? moment(date) : moment() ;
-  const dateEnd = moment(dateStart).add(17, "months");
+  const dateEnd = moment(dateStart).add(23, "months");
   while (dateEnd.diff(dateStart, "months") >= 0) {  
     months.push({
       name: dateStart.format("MMMM YYYY"),
