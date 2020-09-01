@@ -13,7 +13,7 @@ const PickupDetail: FunctionComponent = () => {
   useEffect(() => {
     // dispatch(PickupDetailRequest());
     let date: Date|any = moment(new Date()).subtract(1, "days")
-    let temp = generateArrayOfMonths(date)
+    let temp = generateArrayOfMonths(date,23)
     setpickupList(temp)
     // eslint-disable-next-line
   }, []);
@@ -21,7 +21,7 @@ const PickupDetail: FunctionComponent = () => {
   // const { pickupDetailList ,isLoading,isError} = PickupReducer;
 
  const handleDate = (date:Date)=>{
-  let temp = generateArrayOfMonths(date)
+  let temp = generateArrayOfMonths(date,23)
   setpickupList(temp)
   }
 
