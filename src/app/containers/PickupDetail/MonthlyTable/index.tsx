@@ -8,9 +8,11 @@ import { requestPickupDetailTableData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { getMonthsData } from "../../../../helper";
 import moment from "moment";
+import { monthYearFormat, pickupDetailJsonDateFormat } from "../../../../config";
 
 const MonthlyTable = ({ date }: any) => {
   const dispatch = useDispatch();
+  
   const months: any = getMonthsData(new Date(date), "pickupData");
   const [state, setState] = React.useState<any>([]);
   const [sumOfColumns, setsumOfColumns] = React.useState<ISumOfColumnsState| any>({});
@@ -28,14 +30,15 @@ const MonthlyTable = ({ date }: any) => {
   useEffect(() => {
     if (graphdata && graphdata.length) {
       let filterData: any = graphdata.filter((list: any) => {
-        return list.month === moment(date).format("MMMM-YY");
+        return list.month === moment(date).format(monthYearFormat);
       })[0];
+      
       let stemp :any= []
-      if(filterData.pickupDetailData && filterData.pickupDetailData.length){
+      if(filterData && filterData.pickupDetailData && filterData.pickupDetailData.length){
         // eslint-disable-next-line
         filterData.pickupDetailData.map((key:any,i:number)=>{
           let arr:any = months.filter((item: any) => {
-            return item.format("DD MMM YY") === key.Month;
+            return item.format(pickupDetailJsonDateFormat) === key.Month;
           })[0];
           if(arr){
             return stemp.push(key)
@@ -43,7 +46,6 @@ const MonthlyTable = ({ date }: any) => {
         })
       }
       
-
       // let temp: any =
       //   filterData && filterData.pickupDetailData && filterData.pickupDetailData.length
       //     ? filterData.pickupDetailData

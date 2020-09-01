@@ -152,6 +152,7 @@ const PickupBusinessMix = (props: any) => {
         <ErrorComponent message={"An error occured while fetching details "} />
       ) : (
         <>
+        {DowData && DowData.length ? 
           <React.Suspense
             fallback={
               <div className='card-loader'>
@@ -194,6 +195,7 @@ const PickupBusinessMix = (props: any) => {
 
             <div className='sub-title'>Business Mix</div>
           </React.Suspense>
+          :null}
         </>
       )}
 
