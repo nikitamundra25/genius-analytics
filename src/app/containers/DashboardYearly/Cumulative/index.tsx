@@ -199,7 +199,9 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                                     subdata.type === "room-dev"
                                                     ? subdata.value[index]
                                                     : nFormatter(
-                                                        parseInt(subdata.value[index])
+                                                        parseInt(
+                                                          subdata.value[index]
+                                                        )
                                                       )
                                                   : 0}
                                               </div>
@@ -311,17 +313,17 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                             </div>
                                           </OverlayTrigger>
                                         </td>
-                                        {subdata.value.map(
+                                        {months.map(
                                           (value: any, i: number) =>
                                             list.type === "label" ? (
                                               <td
                                                 key={`${i}`}
                                                 className={`content-col  
-                    ${parseInt(value) < 0 ? "text-danger" : ""}`}
+                    ${parseInt(subdata.value[i]) < 0 ? "text-danger" : ""}`}
                                               >
-                                                {value
+                                                {subdata.value[i]
                                                   ? parseFloat(
-                                                      value
+                                                      subdata.value[i]
                                                     ).toLocaleString()
                                                   : null}
                                               </td>
@@ -331,13 +333,13 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                                 className="content-col bg-white"
                                               >
                                                 <ProgressBar
-                                                  now={value}
+                                                  now={subdata.value[i]}
                                                   className="custom-bar"
                                                   //label={`${value}%`}
                                                   max={80}
                                                 />
                                                 <span className="progressbar-value">
-                                                  {value}%
+                                                  {subdata.value[i]}%
                                                 </span>
                                               </td>
                                             )
