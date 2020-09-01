@@ -198,10 +198,24 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                                   ? subdata.type === "occ" ||
                                                     subdata.type === "room-dev"
                                                     ? subdata.value[index]
+                                                    : subdata.name === "ADR"
+                                                    ? parseInt(
+                                                        subdata.value[index]
+                                                      ).toLocaleString(
+                                                        undefined,
+                                                        {
+                                                          minimumFractionDigits: 1,
+                                                        }
+                                                      )
                                                     : nFormatter(
                                                         parseInt(
                                                           subdata.value[index]
                                                         )
+                                                      ).toLocaleString(
+                                                        undefined,
+                                                        {
+                                                          minimumFractionDigits: 1,
+                                                        }
                                                       )
                                                   : 0}
                                               </div>
@@ -229,7 +243,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                                 <div className="icon-col">
                                                   <img
                                                     src={
-                                                      parseInt(
+                                                      parseFloat(
                                                         subdata.vsBud[index]
                                                       ) < 0
                                                         ? caretdown
@@ -254,7 +268,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                                         subdata.type ===
                                                           "room-dev"
                                                         ? subdata.vsLy[index]
-                                                        : parseInt(
+                                                        : parseFloat(
                                                             subdata.vsLy[index]
                                                           ).toLocaleString()
                                                       : 0}
@@ -313,36 +327,41 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                             </div>
                                           </OverlayTrigger>
                                         </td>
-                                        {months.map(
-                                          (value: any, i: number) =>
-                                            list.type === "label" ? (
-                                              <td
-                                                key={`${i}`}
-                                                className={`content-col  
-                    ${parseInt(subdata.value[i]) < 0 ? "text-danger" : ""}`}
-                                              >
-                                                {subdata.value[i]
-                                                  ? parseFloat(
-                                                      subdata.value[i]
-                                                    ).toLocaleString()
-                                                  : null}
-                                              </td>
-                                            ) : (
-                                              <td
-                                                key={`${i}`}
-                                                className="content-col bg-white"
-                                              >
-                                                <ProgressBar
-                                                  now={subdata.value[i]}
-                                                  className="custom-bar"
-                                                  //label={`${value}%`}
-                                                  max={80}
-                                                />
-                                                <span className="progressbar-value">
-                                                  {subdata.value[i]}%
-                                                </span>
-                                              </td>
-                                            )
+                                        {months.map((value: any, i: number) =>
+                                          list.type === "label" ? (
+                                            <td
+                                              key={`${i}`}
+                                              className={`content-col  
+                                    ${
+                                      parseInt(subdata.value[i]) < 0
+                                        ? "text-danger"
+                                        : ""
+                                    }`}
+                                            >
+                                              {subdata.value[i]
+                                                ? nFormatter(
+                                                    parseInt(subdata.value[i])
+                                                  ).toLocaleString(undefined, {
+                                                    minimumFractionDigits: 1,
+                                                  })
+                                                : null}
+                                            </td>
+                                          ) : (
+                                            <td
+                                              key={`${i}`}
+                                              className="content-col bg-white"
+                                            >
+                                              <ProgressBar
+                                                now={subdata.value[i]}
+                                                className="custom-bar"
+                                                //label={`${value}%`}
+                                                max={80}
+                                              />
+                                              <span className="progressbar-value">
+                                                {subdata.value[i]}%
+                                              </span>
+                                            </td>
+                                          )
                                         )}
                                       </tr>
                                     </>
