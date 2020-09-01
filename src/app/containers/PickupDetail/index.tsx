@@ -3,6 +3,7 @@ import PickupDetailWidget from "./Widget";
 import TopBar from "../PickupSummary/TopBar";
 import "./index.scss";
 import { generateArrayOfMonths } from "../../../helper";
+import moment from "moment";
 
 const PickupDetail: FunctionComponent = () => {
   // const dispatch = useDispatch();
@@ -11,7 +12,8 @@ const PickupDetail: FunctionComponent = () => {
 
   useEffect(() => {
     // dispatch(PickupDetailRequest());
-    let temp = generateArrayOfMonths(new Date())
+    let date: Date|any = moment(new Date()).subtract(1, "days")
+    let temp = generateArrayOfMonths(date)
     setpickupList(temp)
     // eslint-disable-next-line
   }, []);

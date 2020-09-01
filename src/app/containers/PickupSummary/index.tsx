@@ -8,6 +8,7 @@ import TopBar from "./TopBar";
 import "./index.scss";
 // import { ErrorComponent } from "../../components/Error";
 import { generateArrayOfMonths } from "../../../helper";
+import moment from "moment";
 
 const PickupSummary: FunctionComponent = () => {
   // const dispatch = useDispatch();
@@ -18,7 +19,8 @@ const PickupSummary: FunctionComponent = () => {
 
   useEffect(() => {
     // dispatch(PickupSummaryRequest());
-    let temp = generateArrayOfMonths(new Date());
+    let date: Date|any = moment(new Date()).subtract(1, "days")
+    let temp = generateArrayOfMonths(date);
     setpickupList(temp);
     // eslint-disable-next-line
   }, []);

@@ -11,4 +11,6 @@ export const DateTimeFormat = "LLL"
 export const defaultDateFormat = "DD-MM-YYYY"
 export const yearFormat = "YYYY"
 export const checkDateFormat = "YYYY-MM-DD"
+export const pickupDetailJsonDateFormat = "DD MMM YY"
+export const monthYearFormat = "MMMM-YY"
 
