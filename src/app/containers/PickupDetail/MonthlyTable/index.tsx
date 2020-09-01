@@ -30,8 +30,10 @@ const MonthlyTable = ({ date }: any) => {
       let filterData: any = graphdata.filter((list: any) => {
         return list.month === moment(date).format("MMMM-YY");
       })[0];
+      console.log("filterData",filterData);
+      
       let stemp :any= []
-      if(filterData.pickupDetailData && filterData.pickupDetailData.length){
+      if(filterData && filterData.pickupDetailData && filterData.pickupDetailData.length){
         // eslint-disable-next-line
         filterData.pickupDetailData.map((key:any,i:number)=>{
           let arr:any = months.filter((item: any) => {
