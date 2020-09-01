@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import { Card, Table, OverlayTrigger, Tooltip, } from "react-bootstrap";
+import { Card, Table, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { requestMonthlyBOBData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
-import { getMonthsData } from "../../../../helper";
+import { getMonthsData, nFormatter } from "../../../../helper";
 import { defaultDateFormat } from "../../../../config/Constant";
 import moment from "moment";
 import "../index.scss";
@@ -79,21 +79,22 @@ const MonthlyBOB = (props: any) => {
                     <tr className="business-top-row">
                       <th className="month-title">
                         <span className="mr-2">
-                          <i className="icon-calendar"/>
+                          <i className="icon-calendar" />
                         </span>
-                        <span>
-                          {moment(props.selectedDate).format("MMMM")}
-                          </span>
-                        </th>
+                        <span>{moment(props.selectedDate).format("MMMM")}</span>
+                      </th>
                       {months.map((month: any, indx: number) => {
-                        console.log("monthmonth",month);
-                        
                         let weekendDay = moment(month).day();
                         return (
                           <th
                             key={indx}
                             className={`date-col
-                            ${moment().format(defaultDateFormat) === moment(month).format(defaultDateFormat) ? "today-bg" : ""  }
+                            ${
+                              moment().format(defaultDateFormat) ===
+                              moment(month).format(defaultDateFormat)
+                                ? "today-bg"
+                                : ""
+                            }
                             ${
                               weekendDay === 5 ||
                               weekendDay === 6 ||
@@ -101,11 +102,14 @@ const MonthlyBOB = (props: any) => {
                                 ? "weekend-bg"
                                 : ""
                             }`}
-                            
                           >
                             <div className="date-div">
-                              <span className="date-text">{moment(month).format("DD")}</span>
-                              <span className="weekname-text">{moment(month).format("ddd")} </span>
+                              <span className="date-text">
+                                {moment(month).format("DD")}
+                              </span>
+                              <span className="weekname-text">
+                                {moment(month).format("ddd")}{" "}
+                              </span>
                             </div>
                           </th>
                         );
@@ -121,7 +125,7 @@ const MonthlyBOB = (props: any) => {
                               {list.subData.map((key: any, ind: number) => {
                                 return (
                                   <>
-                                  <tr>
+                                    <tr>
                                       {ind === 0 ? (
                                         <td
                                           colSpan={
@@ -152,28 +156,46 @@ const MonthlyBOB = (props: any) => {
                                     <tr key={ind}>
                                       <td className="title-col white-nowrap">
                                         <OverlayTrigger
-                                            key={"top2"}
-                                            placement={"top"}
-                                            overlay={
-                                              <Tooltip id={`tooltip-${ind}`}>
-                                                {list.title}
-                                              </Tooltip>
-                                            }
-                                          >
-                                            <div className="d-flex align-items-center subtitle-section">
-                                          
-                                              { list.title === "Business on the Books" ? (
-                                                <img src={bob}  width="20px" alt={list.title}/>
-                                              ) : list.title === "Pick up since Yesterday" ? (
-                                                <img src={pickup}  width="20px" alt={list.title}/>
-                                              ) : list.title === "Availability & Rates" ? (
-                                                <img src={market}  width="20px" alt={list.title}/>
-                                              ) : list.title === "Room Type Availability" ? (
-                                                <img src={bed}  width="20px" alt={list.title}/>
-                                              ) : null }
-                                              
-                                              <span>{key.title}</span>
-                                            
+                                          key={"top2"}
+                                          placement={"top"}
+                                          overlay={
+                                            <Tooltip id={`tooltip-${ind}`}>
+                                              {list.title}
+                                            </Tooltip>
+                                          }
+                                        >
+                                          <div className="d-flex align-items-center subtitle-section">
+                                            {list.title ===
+                                            "Business on the Books" ? (
+                                              <img
+                                                src={bob}
+                                                width="20px"
+                                                alt={list.title}
+                                              />
+                                            ) : list.title ===
+                                              "Pick up since Yesterday" ? (
+                                              <img
+                                                src={pickup}
+                                                width="20px"
+                                                alt={list.title}
+                                              />
+                                            ) : list.title ===
+                                              "Availability & Rates" ? (
+                                              <img
+                                                src={market}
+                                                width="20px"
+                                                alt={list.title}
+                                              />
+                                            ) : list.title ===
+                                              "Room Type Availability" ? (
+                                              <img
+                                                src={bed}
+                                                width="20px"
+                                                alt={list.title}
+                                              />
+                                            ) : null}
+
+                                            <span>{key.title}</span>
                                           </div>
                                         </OverlayTrigger>
                                       </td>
@@ -197,23 +219,35 @@ const MonthlyBOB = (props: any) => {
                                                 : key.title === "OCC" &&
                                                   parseInt(data.num) < 100
                                                 ? "bg-max"
-                                                :
-                                                moment(data.date).day() === 5 ||
-                                                moment(data.date).day() === 6 ||
-                                                moment(data.date).day() === 0
-                                                
+                                                : moment(data.date).day() ===
+                                                    5 ||
+                                                  moment(data.date).day() ===
+                                                    6 ||
+                                                  moment(data.date).day() === 0
                                                 ? "weekend-bg"
                                                 : "bg-2"
-                                            }  ${moment().format(defaultDateFormat) === moment(data.date).format(defaultDateFormat) ? "today-bg" : ""  }`}
+                                            }  ${
+                                              moment().format(
+                                                defaultDateFormat
+                                              ) ===
+                                              moment(data.date).format(
+                                                defaultDateFormat
+                                              )
+                                                ? "today-bg"
+                                                : ""
+                                            }`}
                                             key={i}
                                           >
                                             {key.title === "OCC"
                                               ? `${parseInt(
                                                   data.num
                                                 ).toLocaleString()}%`
-                                              : parseInt(
-                                                  data.num
-                                                ).toLocaleString()}{" "}
+                                                : key.title === "ADR" ?
+                                                data.num
+                                              :  nFormatter(
+                                                parseInt(data.num)
+                                              ).toLocaleString()
+                                      }
                                           </td>
                                         );
                                       })}
@@ -227,9 +261,11 @@ const MonthlyBOB = (props: any) => {
                                             ? `${parseInt(
                                                 key.total
                                               ).toLocaleString()}%`
-                                            : parseInt(
-                                                key.total
-                                              ).toLocaleString()
+                                            :  key.title === "ADR" ?
+                                            key.total
+                                          : nFormatter(
+                                            parseInt(key.total)
+                                          ).toLocaleString()
                                           : null}
                                       </td>
                                     </tr>

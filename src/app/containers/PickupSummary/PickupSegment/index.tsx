@@ -129,12 +129,14 @@ const PickupSegment = ({ index, date }: any) => {
       ) : isError ? (
         <ErrorComponent message={"An error occured while fetching details "} />
       ) : (
+        data && data.length ?  
         <React.Suspense
           fallback={
             <div className='card-loader'>
               <WidgetLoader />
             </div>
           }>
+            
           <MixedCharts
             id={`PickupChart-${index}`}
             legend={false}
@@ -172,7 +174,9 @@ const PickupSegment = ({ index, date }: any) => {
             charts={Charts}
           />
           <div className='sub-title'>Pick up by segment</div>
+          
         </React.Suspense>
+          : null
       )}
     </>
   );

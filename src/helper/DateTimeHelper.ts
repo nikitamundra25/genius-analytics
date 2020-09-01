@@ -9,8 +9,8 @@ export const getMonthsData = (date: any, name:string) => {
   let newDay :any
   let monthDate = moment(date).startOf("month");
   let daysCount: number = monthDate.daysInMonth()
-  if(moment(date).format("MMMM") === moment().format("MMMM") &&  name === "pickupData" ){
-    monthDate = moment(date).subtract(1, "days");;
+  if(moment(date).format("MMMM") === moment().subtract(1, "days").format("MMMM") &&  name === "pickupData" ){
+    monthDate = moment(date);
     let endDate = moment().endOf("month");
     daysCount =  endDate.diff(monthDate, 'days');
   }
@@ -23,7 +23,7 @@ export const getMonthsData = (date: any, name:string) => {
 };
 
 // Find array of months from current year upto 17 months
-export const generateArrayOfMonths = (date:Date) => {
+export const generateArrayOfMonths = (date:any) => {
   const months: any = [];
   const dateStart =  date ? moment(date) : moment() ;
   const dateEnd = moment(dateStart).add(17, "months");
