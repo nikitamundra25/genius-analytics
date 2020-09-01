@@ -26,14 +26,14 @@
           "OCCTY": 55,
           "OCCLY": 58,
           "ADRTY": 301.3,
-          "ADRLY": 299.99
+          "ADRLY": 300.0
         },
         {
           "name": "4BRM",
           "OCCTY": 76,
           "OCCLY": 52,
           "ADRTY": 356.5,
-          "ADRLY": 333.33
+          "ADRLY": 333.3
         }
       ]
 }
