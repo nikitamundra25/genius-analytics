@@ -67,6 +67,7 @@ export const PieChartComponent = ({
               fontWeight: "600",
             },
           }}
+          OuterRadius="10%"
           {...chartSettings.SeriesDirective}
           ></AccumulationSeriesDirective>
       </AccumulationSeriesCollectionDirective>

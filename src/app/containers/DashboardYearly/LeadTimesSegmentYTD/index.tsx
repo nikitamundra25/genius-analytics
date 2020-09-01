@@ -87,6 +87,7 @@ export default ({ graphdata = [] }: any) => {
     // <Card id="leadtime-card">
     //   <Card.Body>
     <>
+     <div style={{  "position": "absolute", "left": "0px", "top": "0px", "width": "100%"}} > 
     <WidgetHeader
       title={"Lead Times YTD by Segment"}
       activeToggle={"graph"}
@@ -95,6 +96,7 @@ export default ({ graphdata = [] }: any) => {
       selectedMonthlyData={selectedValue}
       handleChange={handleChange}
     />
+    </div>
         {isLoading ? (
           <WidgetLoader />
         ) : isError ? (
@@ -102,6 +104,7 @@ export default ({ graphdata = [] }: any) => {
             message={"An error occured while fetching details "}
           />
         ) : (
+          <div className="d-flex h-100" style={{ "paddingTop": "62px" }} > 
           <React.Suspense
             fallback={
               <div className="card-loader">
@@ -136,6 +139,7 @@ export default ({ graphdata = [] }: any) => {
               }}
             />
           </React.Suspense>
+          </div>
         )}
         </>
     //   </Card.Body>
