@@ -175,7 +175,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                {months.map((month: any, index: number) => (
                  <td
                    key={`month-${index}`}
-                   className="content-col"
+                   className={`content-col ${month === "April" || month === "May"  || month === "June" || month === "October"  || month === "November" || month === "December"  ? "quarter-bg" : "" }`}
                  >
                    <div className="d-flex align-items-center flex-wrap">
                      <div className="text-col">
@@ -280,7 +280,8 @@ const CumulativeTable = ({ selectedDate }: any) => {
                     </td>
                     : <td
                     key={`${i}`}
-                    className="content-col bg-white"
+                    className="content-col "
+                    
                   >
                     <ProgressBar
                       now={value}
