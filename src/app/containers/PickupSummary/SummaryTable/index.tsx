@@ -9,7 +9,7 @@ import moment from "moment";
 
 const SummaryTable = (props: any) => {
   
-  const months =generateArrayOfMonths(props.date)
+  const months =generateArrayOfMonths(props.date,17)
 
   return (
     <>

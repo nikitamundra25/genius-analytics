@@ -26,10 +26,10 @@ export const getMonthsData = (date: any, name:string) => {
 };
 
 // Find array of months from current year upto 17 months
-export const generateArrayOfMonths = (date:any) => {
+export const generateArrayOfMonths = (date:any, monthToAdd:any) => {
   const months: any = [];
   const dateStart =  date ? moment(date) : moment() ;
-  const dateEnd = moment(dateStart).add(23, "months");
+  const dateEnd = moment(dateStart).add(monthToAdd, "months");
   while (dateEnd.diff(dateStart, "months") >= 0) {  
     months.push({
       name: dateStart.format("MMMM YYYY"),
