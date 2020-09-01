@@ -66,7 +66,7 @@ const DashboardMonthly: FunctionComponent = () => {
         return (
           <Provider store={store}>
           <div className="template">
-              <MonthlyDailyOccupacy />
+              <MonthlyDailyOccupacy selectedDate={selectedDate}/>
             </div>
           </Provider>
         );
@@ -74,7 +74,7 @@ const DashboardMonthly: FunctionComponent = () => {
         return (
           <Provider store={store}>
           <div className="template">
-              <DailyOccupacy />
+              <DailyOccupacy selectedDate={selectedDate}/>
             </div>
           </Provider>
         );
