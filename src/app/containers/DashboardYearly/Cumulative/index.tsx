@@ -318,8 +318,8 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                             list.type === "label" ? (
                                               <td
                                                 key={`${i}`}
-                                                className={`content-col  
-                    ${parseInt(subdata.value[i]) < 0 ? "text-danger" : ""}`}
+                                                className={`content-col ${value === "April" || value === "May"  || value === "June" || value === "October"  || value === "November" || value === "December"  ? "quarter-bg" : parseInt(subdata.value[i]) < 0 ? "text-danger" : "" } `}
+                                                
                                               >
                                                 {subdata.value[i]
                                                   ? parseFloat(
@@ -330,7 +330,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                             ) : (
                                               <td
                                                 key={`${i}`}
-                                                className="content-col bg-white"
+                                                className={`content-col ${value === "April" || value === "May"  || value === "June" || value === "October"  || value === "November" || value === "December"  ? "quarter-bg" : "" }`}
                                               >
                                                 <ProgressBar
                                                   now={subdata.value[i]}
