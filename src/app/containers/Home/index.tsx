@@ -47,7 +47,7 @@ const HomeComponent: FunctionComponent = () => {
 
   // To reset drag & drop when select date
   const RestorePanel = (date:any) => {
-    // date = date
+    date = date
     dashboardObj.panels = restoreModel;
   };
 
