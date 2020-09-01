@@ -160,12 +160,13 @@ const TopBar = (props: any) => {
             onChange={(date: any) => ondateChange(date, "year")}
             showYearPicker
             dateFormat="yyyy"
-            
             className="custom-datepicker cursor-pointer"
             customInput={<CustomInput />}
             // minDate={new Date("2010/01/01")}
             // maxDate={new Date()}
           />
+     
+ 
           {/* <DropDownListComponent
             id="year"
             dataSource={options}

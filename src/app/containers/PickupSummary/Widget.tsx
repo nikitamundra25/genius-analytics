@@ -37,7 +37,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
               </thead>
               <tbody>
                 <tr>
-                  <td className="row-title"> {moment(months[0].date).format("MMM YYYY")} </td>
+                  <td className="row-title"> {moment(months[0].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">72</div>
@@ -77,7 +77,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
                 </tr>
 
                 <tr>
-                  <td className="row-title">{moment(months[1].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[1].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">95</div>
@@ -118,7 +118,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
 
 
                 <tr>
-                  <td className="row-title">{moment(months[2].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[2].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">-42</div>
@@ -159,7 +159,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
 
 
                 <tr>
-                  <td className="row-title">{moment(months[3].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[3].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">51</div>
@@ -199,7 +199,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
                 </tr>
 
                 <tr>
-                  <td className="row-title">{moment(months[4].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[4].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">43</div>
@@ -239,7 +239,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
                 </tr>
 
                 <tr>
-                  <td className="row-title">{moment(months[5].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[5].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">-4</div>
@@ -279,7 +279,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
                 </tr>
 
                 <tr>
-                  <td className="row-title">{moment(months[6].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[6].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">90</div>
@@ -319,7 +319,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
                 </tr>
 
                 <tr>
-                  <td className="row-title">{moment(months[7].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[7].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">2</div>
@@ -359,7 +359,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
                 </tr>
 
                 <tr>
-                  <td className="row-title">{moment(months[8].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[8].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">80</div>
@@ -415,7 +415,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
               </thead>
               <tbody>
                 <tr>
-                  <td className="row-title">{moment(months[9].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[9].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">52</div>
@@ -455,7 +455,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
                 </tr>
 
                 <tr>
-                  <td className="row-title">{moment(months[10].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[10].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">64</div>
@@ -496,7 +496,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
 
 
                 <tr>
-                  <td className="row-title">{moment(months[11].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[11].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">-42</div>
@@ -537,7 +537,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
 
 
                 <tr>
-                  <td className="row-title">{moment(months[12].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[12].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">15</div>
@@ -577,7 +577,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
                 </tr>
 
                 <tr>
-                  <td className="row-title">{moment(months[13].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[13].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">4</div>
@@ -618,7 +618,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
                 </tr>
 
                 <tr>
-                  <td className="row-title">{moment(months[14].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[14].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">-4</div>
@@ -658,7 +658,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
                 </tr>
 
                 <tr>
-                  <td className="row-title">{moment(months[15].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[15].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">77</div>
@@ -698,7 +698,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
                 </tr>
 
                 <tr>
-                  <td className="row-title">{moment(months[16].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[16].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">46</div>
@@ -738,7 +738,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
                 </tr>
 
                 <tr>
-                  <td className="row-title">{moment(months[17].date).format("MMM YYYY")} </td>
+                  <td className="row-title">{moment(months[17].date).format("MMMM YYYY")} </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">55</div>

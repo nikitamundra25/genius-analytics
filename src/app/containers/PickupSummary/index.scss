@@ -84,13 +84,20 @@
   .row-title{
     text-align: left;
     font-weight: 600;
-    width: 100px;
+    width: 140px;
     background: #203763;
     color: #fff;
+    @media only screen and (max-width: 991px) {
+      width: 118px;
+    }
   }
   .content-col{
     border: 1px solid #000;
     font-weight: 500;
+    @media only screen and (min-width: 1600px) {
+      width:200px;
+    }
+    
   }
 }
 

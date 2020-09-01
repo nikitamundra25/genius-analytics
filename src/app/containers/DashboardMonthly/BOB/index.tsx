@@ -160,7 +160,7 @@ const MonthlyBOB = (props: any) => {
                                               </Tooltip>
                                             }
                                           >
-                                            <div className="d-flex align-items-cente subtitle-section">
+                                            <div className="d-flex align-items-center subtitle-section">
                                           
                                               { list.title === "Business on the Books" ? (
                                                 <img src={bob}  width="20px" alt={list.title}/>

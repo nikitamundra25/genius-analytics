@@ -15,6 +15,17 @@ import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { getMonths } from "../../../../helper";
 import caretup from "../../../../assets/img/caret-up.svg";
 import caretdown from "../../../../assets/img/caret-down.svg";
+
+import pickup from "../../../../assets/img/pickup.svg";
+import mix from "../../../../assets/img/mix.svg";
+
+import roomnights from "../../../../assets/img/roomnights.svg";
+import occ from "../../../../assets/img/occ.svg";
+import adr from "../../../../assets/img/adr.svg";
+import revenue from "../../../../assets/img/revenue.svg";
+import revpar from "../../../../assets/img/revpar.svg";
+
+
 const months = getMonths();
 months.push("Total");
 
@@ -46,12 +57,22 @@ const CumulativeTable = ({ selectedDate }: any) => {
             <Table className="yearly-table mb-0" responsive>
               <thead>
                 <tr className="business-top-row">
-                  <th></th>
+                  <th className="empty-head"></th>
                   
                   {months.map((month: string, index: number) => (
                     <th key={month} className="head-col ">
                       {month}
-                      <br />{" "}
+                    </th>
+                  ))}
+                </tr>
+
+
+                <tr className="business-top-row">
+                  <th className="empty-head"></th>
+                  
+                  {months.map((month: string, index: number) => (
+                    <th key={month} className="head-col bg-1">
+                      
                       {month === "Total"
                         ? moment(selectedDate).format("YYYY")
                         : moment(selectedDate).format("YYYY") > moment().format("YYYY")
@@ -61,6 +82,16 @@ const CumulativeTable = ({ selectedDate }: any) => {
                         : index+1 > parseInt(moment().format("M")) 
                         ? "BOB"
                         : "Actual"}
+                    </th>
+                  ))}
+                </tr>
+
+                <tr className="business-top-row">
+                  <th className="empty-head" ></th>
+                  
+                  {months.map((month: string, index: number) => (
+                    <th key={month} className="head-col bg-2 ">
+                      
                         <div className="header-sub-title">
                         <span>BUD</span>
                         <span>LY</span>
@@ -87,11 +118,60 @@ const CumulativeTable = ({ selectedDate }: any) => {
                 //   return final;
                 // });
                return ( list.subData.map((subdata : any, ind:number)=>{      
-               return (
+               return ( 
                <>
+               <tr key={ind} >
+             {ind === 0 ? (
+                  <td
+                    colSpan={14}
+                    className=" sperator-white-section"
+                  >
+                  </td>
+                ) : null}
+            </tr>
+           <tr key={ind} >
+             {ind === 0 ? (
+                  <td
+                    colSpan={14}
+                    className="sperator-gray-section "
+                  >
+                  </td>
+                ) : null}
+            </tr>
+            
              {list.type === "arrowData" ? 
+             
                <tr>
-               <td className="row-title">{subdata.name}</td>
+               <td className="row-title">
+                 
+                 <OverlayTrigger
+                      key={"top2"}
+                      placement={"top"}
+                      overlay={
+                        <Tooltip id={`tooltiparrow-${ind}`}>
+                          {subdata.name}
+                        </Tooltip>
+                      }
+                    >
+                      <div className="d-flex align-items-center subtitle-section">
+                    
+                        { subdata.name === "Room Nights" ? (
+                          <img src={roomnights}  width="20px" alt={subdata.name}/>
+                        ) : subdata.name === "OCC %" ? (
+                          <img src={occ}  width="20px" alt={subdata.name}/>
+                        ) : subdata.name === "ADR" ? (
+                          <img src={adr}  width="20px" alt={subdata.name}/>
+                        ) : subdata.name === "Revenue" ? (
+                          <img src={revenue}  width="20px" alt={subdata.name}/>
+                        ) : subdata.name === "RevPAR" ? (
+                          <img src={revpar}  width="20px" alt={subdata.name}/>
+                        ) : null }
+                        
+                        <span>{subdata.name}</span>
+                      
+                    </div>
+                  </OverlayTrigger>
+                </td>
                {months.map((month: any, index: number) => (
                  <td
                    key={`month-${index}`}
@@ -159,23 +239,35 @@ const CumulativeTable = ({ selectedDate }: any) => {
                  </td>
                ))}
              </tr>
-            
             : 
-
            <>
-               <tr key={ind} >
-                 {ind === 0 ? (
-                      <td
-                        colSpan={14}
-                        className="row-title bg-1 "
-                      >
-                        {list.title}
-                      </td>
-                    ) : null}
-                </tr>
+             
                 <tr>
+                  <td className="row-title "> 
+                    <OverlayTrigger
+                      key={"top2"}
+                      placement={"top"}
+                      overlay={
+                        <Tooltip id={`tooltip-${ind}`}>
+                          {list.title}
+                        </Tooltip>
+                      }
+                    >
+                      <div className="d-flex align-items-center subtitle-section">
+                    
+                        { list.title === "Pick-up" ? (
+                          <img src={pickup}  width="20px" alt={list.title}/>
+                        ) : list.title === "Business Mix" ? (
+                          <img src={mix}  width="20px" alt={list.title}/>
+                        ) : null }
+                        
+                        <span>{subdata.name}</span>
+                      
+                    </div>
+                  </OverlayTrigger>
                   
-                  <td className="row-title "> {subdata.name} </td>
+                  
+                  </td>
                  { subdata.value.map((value: any, i: number) => (
                       list.type === "label" ?
                     <td key={`${i}`}  className={`content-col  
@@ -184,7 +276,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                         ? "text-danger"
                         : ""
                     }`}>
-                      {value ? parseInt(value).toLocaleString() : "-"}
+                      {value ? parseFloat(value).toLocaleString() : null}
                     </td>
                     : <td
                     key={`${i}`}

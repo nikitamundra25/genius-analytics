@@ -207,7 +207,7 @@
       },
       "ADR": {
         "data": 457,
-        "Budget":431,
+        "Budget": 431,
         "LY": 210
       },
       "RevPAR": {
@@ -543,19 +543,19 @@
     {
       "name": "31",
       "OCC": {
-        "data": 86,
-        "Budget": 73,
-        "LY": 74
+        "data": 0,
+        "Budget": 0,
+        "LY": 0
       },
       "ADR": {
-        "data": 456,
-        "Budget": 346,
-        "LY": 264
+        "data": 0,
+        "Budget": 0,
+        "LY": 0
       },
       "RevPAR": {
-        "data": 371,
-        "Budget": 222,
-        "LY": 385
+        "data": 0,
+        "Budget": 0,
+        "LY": 0
       }
     },
     {
@@ -571,11 +571,10 @@
         "LY": 341.6
       },
       "RevPAR": {
-        "data":  308.8,
+        "data": 308.8,
         "Budget": 323.7,
         "LY": 304.8
       }
     }
-  
   ]
 }
