@@ -145,7 +145,7 @@ const BOBMonthlyTable = ({ date }: any) => {
               <thead>
                 <tr>
                   <th className="border-0"></th>
-                  <th className="head-col border-left main-head-col" colSpan={3}>
+                  <th className="head-col border-left main-head-col left-width" colSpan={3}>
                     Bar
                   </th>
                   <th className="head-col border-left main-head-col" colSpan={3}>
@@ -193,7 +193,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                 </tr>
                 <tr>
                   <th className="border-left-0"></th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col border-left left-width">Rooms</th>
                   <th className="head-col  ">ADR</th>
                   <th className="head-col ">Revenue</th>
                   <th className="head-col border-left">Rooms</th>
@@ -773,7 +773,7 @@ const BOBMonthlyTable = ({ date }: any) => {
               <tfoot>
                 <tr>
                   <td className="border-left-0"></td>
-                  <td className="total-col">
+                  <td className="total-col left-width">
                     {barValueRooms > 0 ? barValueRooms.toFixed(1) : 0}
                   </td>
                   <td className="total-col">
