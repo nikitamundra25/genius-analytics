@@ -124,7 +124,7 @@ const MonthlyTable = ({ date }: any) => {
               <thead>
                 <tr>
                   <th className="border-0"></th>
-                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  <th className="head-col border-left main-head-col left-width" colSpan={2}>
                     Bar
                   </th>
                   <th className="head-col border-left main-head-col" colSpan={2}>
@@ -172,7 +172,7 @@ const MonthlyTable = ({ date }: any) => {
                 </tr>
                 <tr>
                   <th className="border-left-0"></th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col border-left left-width">Rooms</th>
                   <th className="head-col  ">ADR</th>
                   <th className="head-col border-left">Rooms</th>
                   <th className="head-col ">ADR</th>
@@ -587,7 +587,7 @@ const MonthlyTable = ({ date }: any) => {
               <tfoot>
                 <tr>
                   <td className="border-left-0"></td>
-                  <td className="total-col">{barValueRooms}</td>
+                  <td className="total-col left-width">{barValueRooms}</td>
                   <td className="total-col">{barValueADR}</td>
                   <td className="total-col">{publicDiscountRooms}</td>
                   <td className="total-col">{publicDiscountADR}</td>

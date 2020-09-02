@@ -537,7 +537,7 @@ body {
       border: 0px;
       background: $white;
       box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-      z-index: 1001;
+      z-index: 1002;
       .dropdown-item {
         display: block;
         width: 100%;
@@ -657,6 +657,16 @@ body {
 }
 .e-dashboardlayout.e-control .e-panel:hover {
   border: 0px;
+}
+#defaultLayout .e-panel-content { 
+  overflow: visible; 
+  // width:100%; 
+} 
+#chart-1, #chart-2, #chart-3, #chart-4, #RGICharts, #MPICharts, #ARICharts, #chart-business-card-percent, #chart-business-card-adr { 
+overflow: visible ! important; 
+} 
+#layout_1, #layout_4, #layout_8 { 
+z-index: 1001 ! important; 
 }
 .form-control {
   border-color: $gray-text;
