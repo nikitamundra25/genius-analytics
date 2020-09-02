@@ -10,12 +10,13 @@ export const getMonths = () => {
 export const getMonthsData = (date: any, name:string) => {
   let daysInMonth = [];
   let newDay :any
-  let monthDate = moment(date).startOf("month");
+  let monthDate:any = moment(date).startOf("month");
   let daysCount: number = monthDate.daysInMonth()
   if(moment(date).format(monthYearFormat) === moment().subtract(1, "days").format(monthYearFormat) &&  name === "pickupData" ){
     monthDate = moment(date);
-    let endDate = moment().endOf("month");
+    let endDate:any = moment().endOf("month");
     daysCount =  endDate.diff(monthDate, 'days');
+    
   }
   
   for (let i = 0; i < daysCount; i++) {
@@ -55,3 +56,9 @@ export const generateArrayofBOBData = (date:Date) => {
            // Return the array of month
   return months;
 };
+
+
+export const monthDiff = (dateFrom:any, dateTo:any) => {
+  return dateTo.getMonth() - dateFrom.getMonth() + 
+    (12 * (dateTo.getFullYear() - dateFrom.getFullYear()))
+ }

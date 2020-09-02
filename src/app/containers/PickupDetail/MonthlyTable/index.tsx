@@ -46,10 +46,10 @@ const MonthlyTable = ({ date }: any) => {
         })
       }
       
-      // let temp: any =
-      //   filterData && filterData.pickupDetailData && filterData.pickupDetailData.length
-      //     ? filterData.pickupDetailData
-      //     : [];
+      let temp: any =
+        filterData && filterData.pickupDetailData && filterData.pickupDetailData.length
+          ? filterData.pickupDetailData
+          : [];
 
       // To add data according to column
       let result: ISumOfColumnsState = stemp.reduce((acc: any, n: any) => {
@@ -209,7 +209,7 @@ const MonthlyTable = ({ date }: any) => {
                 {state && state.length
                   ? state.map((list: any, index: number) => {
                       let weekendDay = moment(months[index]).day();
-                      return index > months.length - 1 ? null : (
+                      return  (
                         <>
                           <tr
                             key={`monthly-${index}`}
