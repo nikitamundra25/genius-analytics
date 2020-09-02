@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { Card, Table } from "react-bootstrap";
-import WidgetHeader from "../../../components/WidgetHeader";
+import {  Table } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { requestBOBData ,requestBOBPastData,requestBOBFutureData} from "../../../../actions";
@@ -41,11 +40,7 @@ const BOB = () => {
   return (
     <>
       {/* <Card> */}
-        {/* <WidgetHeader
-          title={"Business on the Books"}
-          activeToggle={"grid"}
-          showToggle={false}
-        /> */}
+        
 
         {isLoading ? (
           <WidgetLoader />

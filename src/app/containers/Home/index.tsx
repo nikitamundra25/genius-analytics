@@ -7,7 +7,7 @@ import {
   PanelsDirective,
   PanelDirective,
 } from "@syncfusion/ej2-react-layouts";
-import { IRootState, ToggleType } from "../../../interfaces";
+import { IRootState } from "../../../interfaces";
 import Loader from "../../components/Loader/Loader";
 import "./index.scss";
 import { ErrorComponent } from "../../components/Error";
@@ -24,8 +24,6 @@ import GeoBusiness from "./GeoBusiness";
 import MTDPerformance from "./MTDPerformance";
 import RGIVariance from "./RGIVariance";
 import BusinessMixComponent from "./BusinessMix";
-import WidgetHeader from "../../components/WidgetHeader";
-import DashboardWidget from "./Widget";
 const history = createBrowserHistory();
 
 let date = new Date()
