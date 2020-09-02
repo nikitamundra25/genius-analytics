@@ -18,12 +18,10 @@ export const BarChartComponent = (barChart: any) => {
   if (parseInt(args.text) < 0) {
     args.font.color = 'red';
 }
-// let value:Number = parseInt(args.text); 
-//     if(value >999){
-//       args.text =  nFormatter(
-//         value
-//       )
-//     }
+let value:Number = parseInt(args.text); 
+    if(value >999){
+      args.text =  value.toLocaleString()
+    }
 };
 
   return (

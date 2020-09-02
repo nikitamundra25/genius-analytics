@@ -209,25 +209,48 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                                 overlay={
                                                   <Tooltip
                                                     id={`tooltip-increase`}
+                                                    className="custom-tooltip"
                                                   >
-                                                    {subdata.vsBud &&
-                                                    subdata.vsBud.length
-                                                      ? subdata.type ===
-                                                          "occ" ||
-                                                        subdata.type ===
-                                                          "room-dev"
-                                                        ? subdata.vsBud[index]
-                                                        : parseFloat(
-                                                            subdata.vsBud[index]
-                                                          ).toLocaleString()
-                                                      : 0}
+                                                    <div className="custom-inner-tooltip">
+                                                      <div className="label-text">BUD</div>
+                                                      <div className="label-div">
+                                                        <span className="label-img">
+                                                          <img
+                                                            src={
+                                                              parseInt(
+                                                                subdata.vsBud[index]
+                                                              ) < 0
+                                                                ? caretdown
+                                                                : caretup
+                                                            }
+                                                            alt="increase"
+                                                            width="12"
+                                                          />
+                                                        </span>
+                                                        <span className="label-value">
+                                                        {subdata.vsBud &&
+                                                        subdata.vsBud.length
+                                                          ? subdata.type ===
+                                                              "occ" ||
+                                                            subdata.type ===
+                                                              "room-dev"
+                                                            ? subdata.vsBud[index]
+                                                            : parseInt(
+                                                                subdata.vsBud[index]
+                                                              ).toLocaleString()
+                                                          : 0}
+                                                        </span>
+                                                      </div>
+                                                    
+                                                      </div>
                                                   </Tooltip>
+                                                 
                                                 }
                                               >
                                                 <div className="icon-col">
                                                   <img
                                                     src={
-                                                      parseFloat(
+                                                      parseInt(
                                                         subdata.vsBud[index]
                                                       ) < 0
                                                         ? caretdown
@@ -244,18 +267,41 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                                 overlay={
                                                   <Tooltip
                                                     id={`tooltip-decrease`}
+                                                    className="custom-tooltip"
                                                   >
-                                                    {subdata.vsLy &&
-                                                    subdata.vsLy.length
-                                                      ? subdata.type ===
-                                                          "occ" ||
-                                                        subdata.type ===
-                                                          "room-dev"
-                                                        ? subdata.vsLy[index]
-                                                        : parseFloat(
-                                                            subdata.vsLy[index]
-                                                          ).toLocaleString()
-                                                      : 0}
+                                                     <div className="custom-inner-tooltip">
+                                                      <div className="label-text">LY</div>
+                                                      <div className="label-div">
+                                                        <span className="label-img">
+                                                          <img
+                                                            src={
+                                                              parseInt(
+                                                                subdata.vsLy[index]
+                                                              ) < 0
+                                                                ? caretdown
+                                                                : caretup
+                                                            }
+                                                            alt="decrease"
+                                                            width="12"
+                                                          />
+                                                        </span>
+                                                        <span className="label-value">
+                                                        {subdata.vsLy &&
+                                                          subdata.vsLy.length
+                                                            ? subdata.type ===
+                                                                "occ" ||
+                                                              subdata.type ===
+                                                                "room-dev"
+                                                              ? subdata.vsLy[index]
+                                                              : parseInt(
+                                                                  subdata.vsLy[index]
+                                                                ).toLocaleString()
+                                                            : 0}
+                                                        </span>
+                                                      </div>
+                                                    
+                                                      </div>
+                                                    
                                                   </Tooltip>
                                                 }
                                               >

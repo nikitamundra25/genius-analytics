@@ -1,0 +1,111 @@
+[
+    {
+   "date": "",
+   "rooms":72 ,
+   "adr": 11,
+   "revenue": 9062
+    },
+    {
+      "date": "",
+      "rooms":95 ,
+      "adr": -5,
+      "revenue": 7416
+    },
+    {
+      "date": "",
+      "rooms":-42 ,
+      "adr": -4,
+      "revenue": -4505
+    },
+    {
+      "date": "",
+      "rooms":51 ,
+      "adr": 9,
+      "revenue": 7529
+    }
+    ,
+    {
+      "date": "",
+      "rooms":43,
+      "adr": 10,
+      "revenue": 492
+    },
+    {
+      "date": "",
+      "rooms":-4 ,
+      "adr": -5,
+      "revenue": -1179
+    },
+    {
+      "date": "",
+      "rooms": 90 ,
+      "adr": 11,
+      "revenue": 3843
+    },
+    {
+      "date": "",
+      "rooms": 2 ,
+      "adr": -2,
+      "revenue": -5023
+    },
+    {
+      "date": "",
+      "rooms": 80 ,
+      "adr": 9,
+      "revenue": 8158
+    },
+    {
+      "date": "",
+      "rooms": 52 ,
+      "adr": 2,
+      "revenue": 3040
+    },
+    {
+      "date": "",
+      "rooms": 64 ,
+      "adr": -4,
+      "revenue": -4457
+    },
+    {
+      "date": "",
+      "rooms": -42 ,
+      "adr": -2,
+      "revenue": 5165
+    },
+    {
+      "date": "",
+      "rooms": 15 ,
+      "adr": 3,
+      "revenue": 4465
+    },
+    {
+      "date": "",
+      "rooms": 4 ,
+      "adr": 1,
+      "revenue": 345
+    },
+    {
+      "date": "",
+      "rooms": -4 ,
+      "adr": -6,
+      "revenue": 1366
+    },
+    {
+      "date": "",
+      "rooms": 77 ,
+      "adr": 3,
+      "revenue": 4444
+    },
+    {
+      "date": "",
+      "rooms": 46 ,
+      "adr": 1,
+      "revenue": 2312
+    },
+    {
+      "date": "",
+      "rooms": 55 ,
+      "adr": 1,
+      "revenue": 4599
+    }
+  ]
