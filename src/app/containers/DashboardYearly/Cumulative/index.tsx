@@ -250,7 +250,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                                 <div className="icon-col">
                                                   <img
                                                     src={
-                                                      parseFloat(
+                                                      parseInt(
                                                         subdata.vsBud[index]
                                                       ) < 0
                                                         ? caretdown

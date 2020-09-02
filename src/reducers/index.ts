@@ -36,6 +36,7 @@ import {pickupBlobReducer} from "./pickupBlob";
 import {pickupSummaryTableReducer} from "./pickupSummaryTable";
 import { CumulativeTableReducer } from "./CumulativeTable";
 import { DateSelectionReducer } from "./DateSelection";
+import { pickupMainSummaryReducer } from "./pickupMainSummary";
 
 export const mainReducer = handleActions(
   {
@@ -94,5 +95,6 @@ export const RootReducer: Reducer<IRootState, AnyAction> = combineReducers<
   pickupSummaryTableReducer: pickupSummaryTableReducer as any,
   CumulativeTableReducer: CumulativeTableReducer as any,
 
-  DateSelectionReducer: DateSelectionReducer as any
+  DateSelectionReducer: DateSelectionReducer as any,
+  pickupMainSummaryReducer:pickupMainSummaryReducer as any
 });

@@ -25,6 +25,10 @@ const MixedCharts = ({ charts = [], id="mixed-map", chartSettings = {},legend= t
         if (parseInt(args.text) < 0) {
             args.font.color = 'red';
         }
+        let value:any = parseInt(args.text); 
+    if(Math.abs(value) > 999){
+      args.text =  value.toLocaleString()
+    }
       };
 
   return (<div style={{ height: "100%", width: "100%" }}>

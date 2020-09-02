@@ -40,6 +40,7 @@ export * from "./pickupSummaryTable";
 
 export * from "./CumulativeTable";
 export * from "./DateSelection";
+export * from "./pickupMainSummary";
 
 //
 export const redirectTo = createAction("REDIRET_TO");
