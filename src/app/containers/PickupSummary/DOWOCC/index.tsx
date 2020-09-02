@@ -112,6 +112,7 @@ const PickupDOWOCCSegment = (props: any) => {
       ) : OCCError ? (
         <ErrorComponent message={"An error occured while fetching details "} />
       ) : (
+        OccData && OccData.length ?
         <React.Suspense
           fallback={
             <div className='card-loader'>
@@ -139,13 +140,14 @@ const PickupDOWOCCSegment = (props: any) => {
                 visible: false,
               },
               tooltip: { enable: true },
-              height:"250px"
+              height:"300px"
              // height: `${setHeight}px`,
             }}
             charts={Charts}
           />
           <div className='sub-title'>DOW OCC</div>
         </React.Suspense>
+        : null
       )}
     </>
   );

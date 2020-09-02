@@ -124,7 +124,7 @@ const MonthlyTable = ({ date }: any) => {
               <thead>
                 <tr>
                   <th className="border-0"></th>
-                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  <th className="head-col border-left main-head-col left-width" colSpan={2}>
                     Bar
                   </th>
                   <th className="head-col border-left main-head-col" colSpan={2}>
@@ -172,7 +172,7 @@ const MonthlyTable = ({ date }: any) => {
                 </tr>
                 <tr>
                   <th className="border-left-0"></th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col border-left left-width">Rooms</th>
                   <th className="head-col  ">ADR</th>
                   <th className="head-col border-left">Rooms</th>
                   <th className="head-col ">ADR</th>
@@ -235,7 +235,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {" "}
                               {list.barValueRooms
-                                ? list.barValueRooms
+                                ? parseFloat(list.barValueRooms).toLocaleString()
                                 : null}{" "}
                             </td>
                             <td
@@ -246,7 +246,7 @@ const MonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.barValueADR ? list.barValueADR : null}{" "}
+                              {list.barValueADR ? parseFloat(list.barValueADR).toLocaleString() : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -257,7 +257,7 @@ const MonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.publicDiscountRooms
-                                ? list.publicDiscountRooms
+                                ? parseFloat(list.publicDiscountRooms).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -269,7 +269,7 @@ const MonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.publicDiscountADR
-                                ? list.publicDiscountADR
+                                ? parseFloat(list.publicDiscountADR).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -281,7 +281,7 @@ const MonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.corporateDiscountRooms
-                                ? list.corporateDiscountRooms
+                                ? parseFloat(list.corporateDiscountRooms).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -576,7 +576,7 @@ const MonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.TotalRevenue ? list.TotalRevenue : null}
+                              {list.TotalRevenue ? parseFloat(list.TotalRevenue).toLocaleString() : null}
                             </td>
                           </tr>
                         </>
@@ -587,7 +587,7 @@ const MonthlyTable = ({ date }: any) => {
               <tfoot>
                 <tr>
                   <td className="border-left-0"></td>
-                  <td className="total-col">{barValueRooms}</td>
+                  <td className="total-col left-width">{barValueRooms}</td>
                   <td className="total-col">{barValueADR}</td>
                   <td className="total-col">{publicDiscountRooms}</td>
                   <td className="total-col">{publicDiscountADR}</td>

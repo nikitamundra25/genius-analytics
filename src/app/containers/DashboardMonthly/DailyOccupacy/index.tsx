@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { Card } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,18 +6,20 @@ import { IRootState } from "../../../../interfaces";
 import { requestDailyOccupacyBudLyData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
+import { getMonthsData } from "../../../../helper";
 // import Loader from "../../../components/Loader/Loader";
 
-const MixedCharts = React.lazy(() =>
-  import("../../../components/Charts/MixedCharts")
+const MixedCharts = React.lazy(
+  () => import("../../../components/Charts/MixedCharts")
 );
 
-const DailyOccupacy = ({ graphdata = [] }:any) => {
-
+const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.DailyOccupacyBudLyReducer
   );
+  const months = getMonthsData(selectedDate, "dashboard");
+
   useEffect(() => {
     dispatch(requestDailyOccupacyBudLyData());
     // eslint-disable-next-line
@@ -27,28 +29,46 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
   const [selectedValue, setselectedValue] = React.useState<string>("OCC");
   const [occupacyList, setoccupacyList] = React.useState<any>([]);
 
- useEffect(() => {
-    const modalbtn: HTMLElement | null = document.getElementById(`daily-occ-card`);
+  useEffect(() => {
+    const modalbtn: HTMLElement | null = document.getElementById(
+      `daily-occ-card`
+    );
     if (modalbtn) {
       setTimeout(() => {
         const check = modalbtn.getBoundingClientRect();
-        const getHeight =check.height;
-        const setgraphHeight = getHeight - 83 ;
+        const getHeight = check.height;
+        const setgraphHeight = getHeight - 83;
         //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-        setsetHeight(`${setgraphHeight}px`)
+        setsetHeight(`${setgraphHeight}px`);
       }, 100);
     }
+    
+    let stemp: any = [];
+    if(months && months.length){  
+    data.map((key: any, index: number) => {
+      return index > months.length - 1 ? null : stemp.push({
+        name: key.name,
+        OCC: key[selectedValue].data,
+        Budget: key[selectedValue].Budget,
+        LY: key[selectedValue].LY,
+      });
+    });
+  }
 
-    let stemp:any = []
-       data.map((key:any,index:number)=>{
-        return stemp.push({
-             name: key.name,
-             OCC: key[selectedValue].data,
-             Budget: key[selectedValue].Budget,
-             LY: key[selectedValue].LY
-           })
-       })
-  setoccupacyList(stemp)
+  let totalDataExist: any =  stemp.filter((occuData: any) => occuData.name === "Total")[0];
+  if(!totalDataExist){
+    let TotalData:any= data.filter((occuData: any) => occuData.name === "Total")[0]
+    if(TotalData && TotalData.name){
+      stemp.push({
+        name: TotalData.name,
+        OCC: TotalData[selectedValue].data,
+        Budget: TotalData[selectedValue].Budget,
+        LY: TotalData[selectedValue].LY,
+      })
+    }
+  }
+  
+    setoccupacyList(stemp);
     // eslint-disable-next-line
   }, [data]);
 
@@ -58,15 +78,15 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       const modalbtn: HTMLElement | null = document.getElementById(
         `daily-occ-card`
       );
-     // console.log("modalbtn", modalbtn);
+      // console.log("modalbtn", modalbtn);
 
       if (modalbtn) {
         setTimeout(() => {
           const check = modalbtn.getBoundingClientRect();
-          const getHeight =check.height;
-          const setgraphHeight = getHeight - 83 ;
+          const getHeight = check.height;
+          const setgraphHeight = getHeight - 83;
           //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-          setsetHeight(`${setgraphHeight}px`)
+          setsetHeight(`${setgraphHeight}px`);
         }, 100);
       }
     };
@@ -81,21 +101,33 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
     // eslint-disable-next-line
   }, []);
 
-  const handleChange = (event:any)=>{
-  setselectedValue(event.target.value)
-   let stemp:any = []
-       data.map((key:any,index:number)=>{
-          return stemp.push({
-             name: key.name,
-             [event.target.value]: key[event.target.value].data,
-             Budget: key[event.target.value].Budget,
-             LY: key[event.target.value].LY
-           })
-       })
-  setoccupacyList(stemp)
-  }
+  const handleChange = (event: any) => {
+    setselectedValue(event.target.value);
+    let stemp: any = [];
+    data.map((key: any, index: number) => {
+      return index > months.length - 1 ? null : stemp.push({
+        name: key.name,
+        [event.target.value]: key[event.target.value].data,
+        Budget: key[event.target.value].Budget,
+        LY: key[event.target.value].LY,
+      });
+    });
 
-
+    let totalDataExist: any =  stemp.filter((occuData: any) => occuData.name === "Total")[0];
+    if(!totalDataExist){
+      let TotalData:any= data.filter((occuData: any) => occuData.name === "Total")[0]
+      if(TotalData && TotalData.name){
+        stemp.push({
+          name: TotalData.name,
+          [event.target.value]: TotalData[event.target.value].data,
+          Budget: TotalData[event.target.value].Budget,
+          LY: TotalData[event.target.value].LY,
+        })
+      }
+    }
+    
+    setoccupacyList(stemp);
+  };
 
   const Charts = [
     {
@@ -104,10 +136,10 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       yName: selectedValue,
       type: "SplineArea",
       fill: "url(#gradient-daily)",
-     // fill: "#c0d2e8",
+      // fill: "#c0d2e8",
       name: selectedValue,
       width: 3,
-     
+
       marker: {
         visible: false,
         width: 10,
@@ -133,7 +165,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       name: "Budget",
       width: 2,
       dashArray: "3",
-      yAxisName:'yAxis1',
+      yAxisName: "yAxis1",
       marker: {
         visible: true,
         width: 6,
@@ -159,7 +191,7 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
       name: "LY",
       width: 2,
       dashArray: "3",
-      yAxisName:'yAxis1',
+      yAxisName: "yAxis1",
       marker: {
         visible: true,
         width: 6,
@@ -191,72 +223,80 @@ const DailyOccupacy = ({ graphdata = [] }:any) => {
 
   return (
     <>
-    {/* <Card id="daily-occ-card"> */}
-      <style>
-          {SAMPLE_CSS}
-      </style>
-      <div style={{  "position": "absolute", "left": "0px", "top": "0px", "width": "100%"}} > 
-      <WidgetHeader
-        // title={"Daily Occupacy Vs. BUD Vs. LY"}
-        title={`${selectedValue === "OCC" ? 'Daily Occupacy' : selectedValue === "ADR" ? 'ADR' :'RevPAR'} Vs. BUD Vs. LY` }
-        activeToggle={"graph"}
-        showToggle={false}
-        showdropdowndaily={true}
-        selectedMonthlyData = {selectedValue}
-        handleChange={handleChange}
-      />
-      </div>
-      {/* <Card.Body> */}
-         {isLoading ? (
+      <Card id="daily-occ-card">
+        <style>{SAMPLE_CSS}</style>
+        <WidgetHeader
+          // title={"Daily Occupacy Vs. BUD Vs. LY"}
+          title={`${
+            selectedValue === "OCC"
+              ? "Daily Occupacy"
+              : selectedValue === "ADR"
+              ? "ADR"
+              : "RevPAR"
+          } Vs. BUD Vs. LY`}
+          activeToggle={"graph"}
+          showToggle={false}
+          showdropdowndaily={true}
+          selectedMonthlyData={selectedValue}
+          handleChange={handleChange}
+        />
+
+        <Card.Body>
+          {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
             <ErrorComponent
               message={"An error occured while fetching details "}
             />
           ) : (
-            <div className="d-flex h-100" style={{ "paddingTop": "62px" }} > 
-            <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
-          <MixedCharts
-            id={"dailyocc"}
-            chartSettings={{
-              primaryXAxis: {
-                valueType: "Category",
-                interval: 1,
-                majorGridLines: { width: 0 },
-              },
-              primaryYAxis: {
-                labelFormat: `${selectedValue === "OCC" ? '{value}%' : '{value}' } `,
-                edgeLabelPlacement: "Shift",
-                majorGridLines: { width: 0 },
-                majorTickLines: { width: 0 },
-                lineStyle: { width: 0 },
-                labelStyle: {
-                  color: "transparent",
-                },
-                visible:false,
-                //interval: 30,
-                //rangePadding: 'None',
-              },
-              tooltip: { enable: true },
-              Legend: { enable: false },
-              // height: setHeight,
-            }}
-            charts={Charts}
-          />
-          </React.Suspense>
-         </div>
+            <React.Suspense
+              fallback={
+                <div className="card-loader">
+                  <WidgetLoader />
+                </div>
+              }
+            >
+              <MixedCharts
+                id={"dailyocc"}
+                chartSettings={{
+                  primaryXAxis: {
+                    valueType: "Category",
+                    interval: 1,
+                    majorGridLines: { width: 0 },
+                  },
+                  primaryYAxis: {
+                    labelFormat: `${
+                      selectedValue === "OCC" ? "{value}%" : "{value}"
+                    } `,
+                    edgeLabelPlacement: "Shift",
+                    majorGridLines: { width: 0 },
+                    majorTickLines: { width: 0 },
+                    lineStyle: { width: 0 },
+                    labelStyle: {
+                      color: "transparent",
+                    },
+                    visible: false,
+                    //interval: 30,
+                    //rangePadding: 'None',
+                  },
+                  tooltip: { enable: true },
+                  Legend: { enable: false },
+                  height: setHeight,
+                }}
+                charts={Charts}
+              />
+            </React.Suspense>
           )}
-      {/* </Card.Body>
-      </Card> */}
-      <svg style={{ height: '0' }}>
-                    <defs>
-                        <linearGradient id="gradient-daily" x1="0" x2="0" y1="0" y2="1">
-                            <stop offset="0"/>
-                            <stop offset="1"/>
-                        </linearGradient>
-                    </defs>
-                </svg>
-   
+        </Card.Body>
+      </Card>
+      <svg style={{ height: "0" }}>
+        <defs>
+          <linearGradient id="gradient-daily" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" />
+            <stop offset="1" />
+          </linearGradient>
+        </defs>
+      </svg>
     </>
   );
 };

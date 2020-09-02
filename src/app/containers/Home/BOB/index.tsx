@@ -93,7 +93,9 @@ const BOB = () => {
                             }`}
                           >
                             {list.BOBValue
-                              ?  parseFloat(list.BOBValue).toLocaleString()
+                              ? list.title === "ADR" ? parseFloat(list.BOBValue).toLocaleString(undefined, {
+                                minimumFractionDigits: 1,
+                              })  : parseFloat(list.BOBValue).toLocaleString()
                               : "-"}{ list.title === "OCC" && list.BOBValue ? "%" : ""}  
                               
                           </td>
@@ -127,7 +129,9 @@ const BOB = () => {
                             }`}
                           >
                             {list.stlyValue
-                              ? parseFloat(list.stlyValue).toLocaleString()
+                              ?list.title === "ADR" ? parseFloat(list.stlyValue).toLocaleString(undefined, {
+                                minimumFractionDigits: 1,
+                              })  : parseFloat(list.stlyValue).toLocaleString()
                               : "-"}{ list.title === "OCC"  && list.stlyValue? "%" : ""}
                               
                           </td>
@@ -159,7 +163,7 @@ const BOB = () => {
                             }`}
                           >
                             {list.VSstly
-                              ? parseInt(list.VSstly).toLocaleString()
+                              ? parseFloat(list.VSstly).toLocaleString()
                               : "-"}{ list.title === "OCC" && list.VSstly ? "%" : ""}
                           </td>
                         </tr>

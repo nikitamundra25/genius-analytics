@@ -18,16 +18,20 @@ export const BarChartComponent = (barChart: any) => {
   if (parseInt(args.text) < 0) {
     args.font.color = 'red';
 }
+let value:Number = parseInt(args.text); 
+    if(value >999){
+      args.text =  value.toLocaleString()
+    }
 };
+
   return (
     <ChartComponent
       id={`chart-${barChart.id}`}
       style={{ textAlign: "center","height":barChart.height ? barChart.height : "100%" ,
       "width":"100%" }}
       chartArea={{ border: { width: 0 } }}
-      // height="100%" 
-      // width="100%"
-    
+      height="100%" 
+      width="100%"
       textRender = {textRender}
       // height={barChart.height || "270px"}
       // width={Browser.isDevice ? '100%' : '80%'}

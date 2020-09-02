@@ -45,6 +45,9 @@
         min-width:83px;
       }
     }
+    &.left-width{
+      border-left-width: 2px !important;
+    }
   }
   .title-col{
     // background: #fff;
@@ -66,6 +69,10 @@
     color:#fff;
     background: #16365d;
     text-align:center;
+    &.left-width{
+      border-left: 2px solid #2e2e2e;
+      
+    }
   }
   .content-col{
     color:#000;

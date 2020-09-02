@@ -5,3 +5,4 @@ export * from "./Logger";
 export * from "./SweetAlert";
 export * from "./DateTimeHelper";
 export * from "./ResizeWindowHeight";
+export * from "./NumFormatter";

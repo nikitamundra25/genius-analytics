@@ -28,9 +28,11 @@ const PickupSinceYesterday = ({date }:any) => {
   //   // eslint-disable-next-line
   // }, []);
   useEffect(() => {
+
     let selectedDate = moment(date).format(checkDateFormat);
     // const selectedDate: any = new Date(date);
     let currentDate = moment(new Date()).format(checkDateFormat);
+    
     if (selectedDate > currentDate) {
       dispatch(requestRoomNightsFutureData());
     } else if (selectedDate < currentDate) {
