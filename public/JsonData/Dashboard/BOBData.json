@@ -25,7 +25,7 @@
       "budget": 1718849,
       "ly": 1518702,
       "stlyValue": 1249740,
-      "VSbud": "",
+      "VSbud": -238250,
       "VSly": -38103,
       "VSstly": 230859
     },
@@ -35,7 +35,7 @@
       "budget": 194.3,
       "ly": 191.2,
       "stlyValue": 180.0,
-      "VSbud": -12,
+      "VSbud": -12.1,
       "VSly": -8.9,
       "VSstly": 2.3
     },
@@ -44,8 +44,8 @@
       "BOBValue": 119.7,
       "budget": 139.0,
       "ly": 122.8,
-      "stlyValue": 101.04,
-      "VSbud": -19,
+      "stlyValue": 101.0,
+      "VSbud": -19.3,
       "VSly": -3.1,
       "VSstly": 18.7
     }

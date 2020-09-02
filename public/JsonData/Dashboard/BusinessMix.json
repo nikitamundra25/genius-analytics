@@ -12,12 +12,12 @@
         },
         {
           "data": [
-            { "x": "BAR", "y": 201.44 },
-            { "x": "Discount", "y": 185.72 },
-            { "x": "Corporate", "y": 190.36 },
+            { "x": "BAR", "y": 201.4 },
+            { "x": "Discount", "y": 185.7 },
+            { "x": "Corporate", "y": 190.4 },
             { "x": "Cor Group", "y": 180.1 },
-            { "x": "Leisure Group", "y": 144.44 },
-            { "x": "FIT", "y": 153 }
+            { "x": "Leisure Group", "y": 144.4},
+            { "x": "FIT", "y": 153.0 }
           ]
         }
       ]

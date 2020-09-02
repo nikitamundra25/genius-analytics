@@ -9,7 +9,7 @@ import moment from "moment";
 
 const SummaryTable = (props: any) => {
   
-  const months =generateArrayOfMonths(props.date)
+  const months =generateArrayOfMonths(props.date,17)
 
   return (
     <>
@@ -62,7 +62,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">9062</div>
+                      <div className="text-col">9,062</div>
                       <div className="icon-col">
                          <img
                            src={caretup}
@@ -102,7 +102,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">7416</div>
+                      <div className="text-col">7,416</div>
                       <div className="icon-col">
                          <img
                            src={caretup}
@@ -143,7 +143,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">-4505</div>
+                      <div className="text-col">-4,505</div>
                       <div className="icon-col">
                          <img
                            src={caretdown}
@@ -184,7 +184,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">7529</div>
+                      <div className="text-col">7,529</div>
                       <div className="icon-col">
                          <img
                            src={caretup}
@@ -264,7 +264,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">-1179</div>
+                      <div className="text-col">-1,179</div>
                       <div className="icon-col">
                          <img
                            src={caretdown}
@@ -304,7 +304,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">3843</div>
+                      <div className="text-col">3,843</div>
                       <div className="icon-col">
                          <img
                            src={caretup}
@@ -344,7 +344,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">-5023</div>
+                      <div className="text-col">-5,023</div>
                       <div className="icon-col">
                          <img
                            src={caretdown}
@@ -384,7 +384,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">8158</div>
+                      <div className="text-col">8,158</div>
                       <div className="icon-col">
                          <img
                            src={caretup}
@@ -440,7 +440,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">3040</div>
+                      <div className="text-col">3,040</div>
                       <div className="icon-col">
                          <img
                            src={caretup}
@@ -480,7 +480,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">-4457</div>
+                      <div className="text-col">-4,457</div>
                       <div className="icon-col">
                          <img
                            src={caretdown}
@@ -521,7 +521,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">5165</div>
+                      <div className="text-col">5,165</div>
                       <div className="icon-col">
                          <img
                            src={caretdown}
@@ -562,7 +562,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">4465</div>
+                      <div className="text-col">4,465</div>
                       <div className="icon-col">
                          <img
                            src={caretup}
@@ -643,7 +643,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">1366</div>
+                      <div className="text-col">1,366</div>
                       <div className="icon-col">
                          <img
                            src={caretdown}
@@ -683,7 +683,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">4444</div>
+                      <div className="text-col">4,444</div>
                       <div className="icon-col">
                          <img
                            src={caretup}
@@ -723,7 +723,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">2312</div>
+                      <div className="text-col">2,312</div>
                       <div className="icon-col">
                          <img
                            src={caretup}
@@ -763,7 +763,7 @@ const SummaryTable = (props: any) => {
                   </td>
                   <td className="content-col">
                     <div className="d-flex align-items-center justify-content-between">
-                      <div className="text-col">4599</div>
+                      <div className="text-col">4,599</div>
                       <div className="icon-col">
                          <img
                            src={caretup}

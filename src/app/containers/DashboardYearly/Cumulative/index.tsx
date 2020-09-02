@@ -12,7 +12,7 @@ import { IRootState } from "../../../../interfaces";
 import { requestCumulativeTableData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
-import { getMonths, nFormatter } from "../../../../helper";
+import { getMonths } from "../../../../helper";
 import caretup from "../../../../assets/img/caret-up.svg";
 import caretdown from "../../../../assets/img/caret-down.svg";
 
@@ -198,11 +198,9 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                                   ? subdata.type === "occ" ||
                                                     subdata.type === "room-dev"
                                                     ? subdata.value[index]
-                                                    : nFormatter(
-                                                        parseInt(
+                                                    :  parseFloat(
                                                           subdata.value[index]
-                                                        )
-                                                      )
+                                                        ).toLocaleString()
                                                   : 0}
                                               </div>
                                               <OverlayTrigger
@@ -252,7 +250,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                                 <div className="icon-col">
                                                   <img
                                                     src={
-                                                      parseInt(
+                                                      parseFloat(
                                                         subdata.vsBud[index]
                                                       ) < 0
                                                         ? caretdown
@@ -359,36 +357,32 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                             </div>
                                           </OverlayTrigger>
                                         </td>
-                                        {months.map(
-                                          (value: any, i: number) =>
-                                            list.type === "label" ? (
-                                              <td
-                                                key={`${i}`}
-                                                className={`content-col ${value === "April" || value === "May"  || value === "June" || value === "October"  || value === "November" || value === "December"  ? "quarter-bg" : parseInt(subdata.value[i]) < 0 ? "text-danger" : "" } `}
-                                                
-                                              >
-                                                {subdata.value[i]
-                                                  ? parseFloat(
-                                                      subdata.value[i]
-                                                    ).toLocaleString()
-                                                  : null}
-                                              </td>
-                                            ) : (
-                                              <td
-                                                key={`${i}`}
-                                                className={`content-col ${value === "April" || value === "May"  || value === "June" || value === "October"  || value === "November" || value === "December"  ? "quarter-bg" : "" }`}
-                                              >
-                                                <ProgressBar
-                                                  now={subdata.value[i]}
-                                                  className="custom-bar"
-                                                  //label={`${value}%`}
-                                                  max={80}
-                                                />
-                                                <span className="progressbar-value">
-                                                  {subdata.value[i]}%
-                                                </span>
-                                              </td>
-                                            )
+                                        {months.map((value: any, i: number) =>
+                                          list.type === "label" ? (
+                                            <td
+                                              key={`${i}`}
+                                              className={`content-col ${value === "April" || value === "May"  || value === "June" || value === "October"  || value === "November" || value === "December"  ? "quarter-bg" : parseInt(subdata.value[i]) < 0 ? "text-danger" : "" } `}
+                                            >
+                                              {subdata.value[i]
+                                                ?  parseFloat(subdata.value[i]).toLocaleString()
+                                                : null}
+                                            </td>
+                                          ) : (
+                                            <td
+                                              key={`${i}`}
+                                              className={`content-col ${value === "April" || value === "May"  || value === "June" || value === "October"  || value === "November" || value === "December"  ? "quarter-bg" : "" }`}
+                                            >
+                                              <ProgressBar
+                                                now={subdata.value[i]}
+                                                className="custom-bar"
+                                                //label={`${value}%`}
+                                                max={80}
+                                              />
+                                              <span className="progressbar-value">
+                                                {subdata.value[i]}%
+                                              </span>
+                                            </td>
+                                          )
                                         )}
                                       </tr>
                                     </>

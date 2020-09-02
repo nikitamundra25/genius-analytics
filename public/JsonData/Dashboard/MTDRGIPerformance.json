@@ -2,7 +2,7 @@
     "data": [
         {
           "data": [
-            { "x": "My RevPAR", "y1": 119.7, "y2": null },
+            { "x": "My RevPAR", "y1": 115.0, "y2": null },
             { "x": "RevPAR Compset", "y1": 96.0, "y2": null  },
             { "x": "RGI", "y1": null , "y2": 119.7 }
           ]
@@ -11,14 +11,14 @@
           "data": [
             { "x": "My OCC", "y1": 65.7 , "y2": null },
             { "x": "OCC Compset", "y1": 68.3 , "y2": null },
-            { "x": "MPI", "y1": null, "y2": 1.04}
+            { "x": "MPI", "y1": null, "y2": 96.1}
           ]
         },
         {
           "data": [
-            { "x": "My ARR", "y1": 0.80, "y2": null  },
+            { "x": "My ARR", "y1": 175.1, "y2": null  },
             { "x": "ARR Compset", "y1": 140.6 , "y2": null },
-            { "x": "ARI", "y1": null, "y2": 175.1  }
+            { "x": "ARI", "y1": null, "y2": 124.6  }
           ]
         }
       ]

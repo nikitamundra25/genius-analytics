@@ -325,9 +325,9 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
                 return <tr key={index} >
                 <td className="title-col">{list.title} </td>
                 <td className="content-col">{list.OCC ? `${list.OCC}%` : "-" }</td>
-                <td className="content-col">{list.ADR ? parseInt(list.ADR).toLocaleString() : "-"} </td>
-                <td className="content-col">{list.revpar ? parseInt(list.revpar).toLocaleString() : "-"} </td>
-                <td className="content-col">{list.revenue ? parseInt(list.revenue).toLocaleString() : "-"} </td>
+                <td className="content-col">{list.ADR ? parseFloat(list.ADR).toLocaleString() : "-"} </td>
+                <td className="content-col">{list.revpar ? parseFloat(list.revpar).toLocaleString() : "-"} </td>
+                <td className="content-col">{list.revenue ? parseFloat(list.revenue).toLocaleString() : "-"} </td>
               </tr>
               })
                 : null}

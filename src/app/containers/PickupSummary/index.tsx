@@ -20,13 +20,13 @@ const PickupSummary: FunctionComponent = () => {
   useEffect(() => {
     // dispatch(PickupSummaryRequest());
     let date: Date|any = moment(new Date()).subtract(1, "days")
-    let temp = generateArrayOfMonths(date);
+    let temp = generateArrayOfMonths(date,17);
     setpickupList(temp);
     // eslint-disable-next-line
   }, []);
 
   const handleDate = (date:Date)=>{
-    let temp = generateArrayOfMonths(date)
+    let temp = generateArrayOfMonths(date,17)
     setdate(date)
     setpickupList(temp)
     }

@@ -119,12 +119,13 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
       if(TotalData && TotalData.name){
         stemp.push({
           name: TotalData.name,
-          OCC: TotalData[selectedValue].data,
-          Budget: TotalData[selectedValue].Budget,
-          LY: TotalData[selectedValue].LY,
+          [event.target.value]: TotalData[event.target.value].data,
+          Budget: TotalData[event.target.value].Budget,
+          LY: TotalData[event.target.value].LY,
         })
       }
     }
+    
     setoccupacyList(stemp);
   };
 

@@ -93,7 +93,9 @@ const BOB = () => {
                             }`}
                           >
                             {list.BOBValue
-                              ?  parseInt(list.BOBValue).toLocaleString(undefined, {minimumFractionDigits: 1})
+                              ? list.title === "ADR" ? parseFloat(list.BOBValue).toLocaleString(undefined, {
+                                minimumFractionDigits: 1,
+                              })  : parseFloat(list.BOBValue).toLocaleString()
                               : "-"}{ list.title === "OCC" && list.BOBValue ? "%" : ""}  
                               
                           </td>
@@ -105,7 +107,7 @@ const BOB = () => {
                             }`}
                           >
                             {list.budget
-                              ?  parseInt(list.budget).toLocaleString(undefined, {minimumFractionDigits: 1})
+                              ?  parseFloat(list.budget).toLocaleString()
                               : "-"}{ list.title === "OCC" && list.budget ? "%" : ""}
                           </td>
                           <td
@@ -116,7 +118,7 @@ const BOB = () => {
                             }`}
                           >
                             {list.ly
-                              ?  parseInt(list.ly).toLocaleString(undefined, {minimumFractionDigits: 1})
+                              ?  parseFloat(list.ly).toLocaleString()
                               : "-"}{ list.title === "OCC" && list.ly ? "%" : ""}
                           </td>
                           <td
@@ -127,7 +129,9 @@ const BOB = () => {
                             }`}
                           >
                             {list.stlyValue
-                              ? parseInt(list.stlyValue).toLocaleString(undefined, {minimumFractionDigits: 1})
+                              ?list.title === "ADR" ? parseFloat(list.stlyValue).toLocaleString(undefined, {
+                                minimumFractionDigits: 1,
+                              })  : parseFloat(list.stlyValue).toLocaleString()
                               : "-"}{ list.title === "OCC"  && list.stlyValue? "%" : ""}
                               
                           </td>
@@ -138,7 +142,7 @@ const BOB = () => {
                                   : ""
                             }`}
                           >
-                            {list.VSbud ? parseInt(list.VSbud).toLocaleString(undefined, {minimumFractionDigits: 1}) : "-"}{ list.title === "OCC" && list.VSbud ? "%" : ""}
+                            {list.VSbud ? parseFloat(list.VSbud).toLocaleString() : "-"}{ list.title === "OCC" && list.VSbud ? "%" : ""}
                           </td>
                           <td
                             className={`content-col bg-2 ${
@@ -148,7 +152,7 @@ const BOB = () => {
                             }`}
                           >
                             {list.VSly
-                              ? parseInt(list.VSly).toLocaleString(undefined, {minimumFractionDigits: 1})
+                              ? parseFloat(list.VSly).toLocaleString()
                               : "-"}{ list.title === "OCC"   && list.VSly  ? "%" : ""}
                           </td>
                           <td
@@ -159,7 +163,7 @@ const BOB = () => {
                             }`}
                           >
                             {list.VSstly
-                              ? parseInt(list.VSstly).toLocaleString(undefined, {minimumFractionDigits: 1})
+                              ? parseFloat(list.VSstly).toLocaleString()
                               : "-"}{ list.title === "OCC" && list.VSstly ? "%" : ""}
                           </td>
                         </tr>

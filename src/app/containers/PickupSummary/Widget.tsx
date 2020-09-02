@@ -9,7 +9,7 @@ import SummaryTable from "./SummaryTable";
 import { generateArrayOfMonths } from "../../../helper";
 
 const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
-  const months =generateArrayOfMonths(date)
+  const months =generateArrayOfMonths(date,17)
   const getChart = (chartType: any, index: number) => {
     const rowId = index;
     

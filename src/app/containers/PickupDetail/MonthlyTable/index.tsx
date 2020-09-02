@@ -235,7 +235,7 @@ const MonthlyTable = ({ date }: any) => {
                             >
                               {" "}
                               {list.barValueRooms
-                                ? list.barValueRooms
+                                ? parseFloat(list.barValueRooms).toLocaleString()
                                 : null}{" "}
                             </td>
                             <td
@@ -246,7 +246,7 @@ const MonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.barValueADR ? list.barValueADR : null}{" "}
+                              {list.barValueADR ? parseFloat(list.barValueADR).toLocaleString() : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -257,7 +257,7 @@ const MonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.publicDiscountRooms
-                                ? list.publicDiscountRooms
+                                ? parseFloat(list.publicDiscountRooms).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -269,7 +269,7 @@ const MonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.publicDiscountADR
-                                ? list.publicDiscountADR
+                                ? parseFloat(list.publicDiscountADR).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -281,7 +281,7 @@ const MonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.corporateDiscountRooms
-                                ? list.corporateDiscountRooms
+                                ? parseFloat(list.corporateDiscountRooms).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -576,7 +576,7 @@ const MonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.TotalRevenue ? list.TotalRevenue : null}
+                              {list.TotalRevenue ? parseFloat(list.TotalRevenue).toLocaleString() : null}
                             </td>
                           </tr>
                         </>
