@@ -32,7 +32,6 @@ const SummaryTable = (props: any) => {
       });
       return;
     }
-    console.log("datadatadata", data);
 
     let temp: any = [];
     if (data && data.length) {
