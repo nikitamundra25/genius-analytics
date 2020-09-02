@@ -64,7 +64,7 @@
   th, td {
     padding: 5px 10px;
     border: 1px solid black;
-    font-size: 13px;
+    font-size: 12px;
     text-align: center;
     vertical-align: middle;
     position: relative;
@@ -72,11 +72,13 @@
   thead{
     th{
       border-bottom: 1px solid #000;
+      font-weight:600;
     }
   }
   .empty-col{
     border: 1px solid transparent;
     border-right: 1px solid black;
+    border-bottom: 1px solid #203763;
   }
   .head-col{
     text-align: center;
@@ -107,12 +109,11 @@
 .businessmix-table{
   border-collapse: collapse;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  border: 1px solid black;
+  border: 2px solid black;
   th, td {
-    padding: 1px 4px;
+    padding: 2px 4px;
     border: 0;
-    font-size: 12px;
-    border: 1px solid black;
+    font-size: 11px;
     text-align: center;
     vertical-align: middle;
     position: relative;
@@ -120,16 +121,26 @@
   thead{
     th{
       border: 0px ;
+      font-weight:600;
     }
   }
   .head-col{
     text-align: center;
-    background: #0082b3;
     color: #fff;
+    padding: 3px 4px;
+    &.bg1{
+      background: #0070c0;
+    }
+    &.bg2{
+      background: #538dd5;
+    }
+    &.bg3{
+      background: #8db4e2;
+    }
   }
   .row-title{
     text-align: left;
-    font-weight: 600;
+    font-weight: 700;
     width: 145px;
   }
   .content-col{
@@ -139,7 +150,7 @@
 .custom-bar{
   background-color: transparent;
   border-radius: 0px;
-  height: 22px;
+  height: 16px;
   .progress-bar{
     background: #4684bd;
     border: 0px;
@@ -164,6 +175,10 @@
   align-items: center;
   justify-content: center;
   font-size: 11px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.11);
 }
 
 
