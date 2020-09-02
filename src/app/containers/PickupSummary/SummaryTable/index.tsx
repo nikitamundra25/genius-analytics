@@ -1,5 +1,6 @@
 import React from "react";
-import { Table , Row, Col} from "react-bootstrap";
+import { Table , Row, Col, OverlayTrigger,
+  Tooltip} from "react-bootstrap";
 import { generateArrayOfMonths } from "../../../../helper";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import caretup from "../../../../assets/img/caret-up.svg";
@@ -40,11 +41,40 @@ const SummaryTable = (props: any) => {
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">72</div>
                       <div className="icon-col">
-                         <img
+                      <OverlayTrigger
+                          key={"top1"}
+                          placement={"top"}
+                          overlay={
+                            <Tooltip
+                              id={`tooltip-increase`}
+                              className="custom-tooltip"
+                            >
+                              <div className="custom-inner-tooltip">
+                                <div className="label-text">Rooms</div>
+                                <div className="label-div">
+                                  <span className="label-img">
+                                  <img
+                                    src={caretup}
+                                    alt="increase"
+                                    width="12"
+                                  />
+                                  </span>
+                                  <span className="label-value">
+                                  72
+                                  </span>
+                                </div>
+                                </div>
+                            </Tooltip>
+                            
+                          }
+                        >
+                          <img
                            src={caretup}
                            alt="increase"
                            width="12"
                          />
+                        </OverlayTrigger>
+                         
                        </div>
                     </div>
                   </td>
@@ -52,11 +82,40 @@ const SummaryTable = (props: any) => {
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">11</div>
                       <div className="icon-col">
-                         <img
+                      <OverlayTrigger
+                          key={"top1"}
+                          placement={"top"}
+                          overlay={
+                            <Tooltip
+                              id={`tooltip-increase`}
+                              className="custom-tooltip"
+                            >
+                              <div className="custom-inner-tooltip">
+                                <div className="label-text">ADR</div>
+                                <div className="label-div">
+                                  <span className="label-img">
+                                  <img
+                                    src={caretup}
+                                    alt="increase"
+                                    width="12"
+                                  />
+                                  </span>
+                                  <span className="label-value">
+                                  11
+                                  </span>
+                                </div>
+                                </div>
+                            </Tooltip>
+                            
+                          }
+                        >
+                          <img
                            src={caretup}
                            alt="increase"
                            width="12"
                          />
+                        </OverlayTrigger>
+                        
                        </div>
                     </div>
                   </td>
@@ -64,11 +123,40 @@ const SummaryTable = (props: any) => {
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">9,062</div>
                       <div className="icon-col">
-                         <img
+                      <OverlayTrigger
+                          key={"top1"}
+                          placement={"top"}
+                          overlay={
+                            <Tooltip
+                              id={`tooltip-increase`}
+                              className="custom-tooltip"
+                            >
+                              <div className="custom-inner-tooltip">
+                                <div className="label-text">Revenue</div>
+                                <div className="label-div">
+                                  <span className="label-img">
+                                  <img
+                                    src={caretup}
+                                    alt="increase"
+                                    width="12"
+                                  />
+                                  </span>
+                                  <span className="label-value">
+                                  9,062
+                                  </span>
+                                </div>
+                                </div>
+                            </Tooltip>
+                            
+                          }
+                        >
+                          <img
                            src={caretup}
                            alt="increase"
                            width="12"
                          />
+                        </OverlayTrigger>
+                        
                        </div>
                     </div>
                   </td>
@@ -80,11 +168,42 @@ const SummaryTable = (props: any) => {
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">95</div>
                       <div className="icon-col">
-                         <img
+                      <OverlayTrigger
+                          key={"top1"}
+                          placement={"top"}
+                          overlay={
+                            <Tooltip
+                              id={`tooltip-increase`}
+                              className="custom-tooltip"
+                            >
+                              <div className="custom-inner-tooltip">
+                                <div className="label-text">Rooms</div>
+                                <div className="label-div">
+                                  <span className="label-img">
+                                  <img
+                                    src={caretup}
+                                    alt="increase"
+                                    width="12"
+                                  />
+                                  </span>
+                                  <span className="label-value">
+                                  95
+                                  </span>
+                                </div>
+                                </div>
+                            </Tooltip>
+                            
+                          }
+                        >
+                          <img
                            src={caretup}
                            alt="increase"
                            width="12"
                          />
+                        </OverlayTrigger>
+                        
+                      
+                         
                        </div>
                     </div>
                   </td>
@@ -92,11 +211,39 @@ const SummaryTable = (props: any) => {
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">-5</div>
                       <div className="icon-col">
-                         <img
+                      <OverlayTrigger
+                          key={"top1"}
+                          placement={"top"}
+                          overlay={
+                            <Tooltip
+                              id={`tooltip-increase`}
+                              className="custom-tooltip"
+                            >
+                              <div className="custom-inner-tooltip">
+                                <div className="label-text">ADR</div>
+                                <div className="label-div">
+                                  <span className="label-img">
+                                  <img
+                                    src={caretdown}
+                                    alt="increase"
+                                    width="12"
+                                  />
+                                  </span>
+                                  <span className="label-value">
+                                 -5
+                                  </span>
+                                </div>
+                                </div>
+                            </Tooltip>
+                            
+                          }
+                        >
+                          <img
                            src={caretdown}
                            alt="increase"
                            width="12"
                          />
+                        </OverlayTrigger>
                        </div>
                     </div>
                   </td>
@@ -104,11 +251,41 @@ const SummaryTable = (props: any) => {
                     <div className="d-flex align-items-center justify-content-between">
                       <div className="text-col">7,416</div>
                       <div className="icon-col">
-                         <img
+                      <OverlayTrigger
+                          key={"top1"}
+                          placement={"top"}
+                          overlay={
+                            <Tooltip
+                              id={`tooltip-increase`}
+                              className="custom-tooltip"
+                            >
+                              <div className="custom-inner-tooltip">
+                                <div className="label-text">Revenue</div>
+                                <div className="label-div">
+                                  <span className="label-img">
+                                  <img
+                                    src={caretup}
+                                    alt="increase"
+                                    width="12"
+                                  />
+                                  </span>
+                                  <span className="label-value">
+                                  7,416
+                                  </span>
+                                </div>
+                                </div>
+                            </Tooltip>
+                            
+                          }
+                        >
+                          <img
                            src={caretup}
                            alt="increase"
                            width="12"
                          />
+                        </OverlayTrigger>
+                      
+                         
                        </div>
                     </div>
                   </td>

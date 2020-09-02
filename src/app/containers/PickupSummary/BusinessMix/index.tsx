@@ -163,9 +163,9 @@ const PickupBusinessMix = (props: any) => {
                <Table responsive striped  className='businessmix-table mb-2 '>
               <thead>
                 <tr>
-                  <th className="head-col">Segment</th>
-                  <th className="head-col">Rooms</th>
-                  <th className="head-col">ADR</th>
+                  <th className="head-col bg1">Segment</th>
+                  <th className="head-col bg2">Rooms</th>
+                  <th className="head-col bg3">ADR</th>
                 </tr>
               </thead>
               <tbody>
