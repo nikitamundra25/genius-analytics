@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ApiHelper } from "../../../../helper";
+import { Table, ProgressBar } from "react-bootstrap";
 import { IBookingChannelModel } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
@@ -159,18 +160,257 @@ const PickupBusinessMix = (props: any) => {
                 <WidgetLoader />
               </div>
             }>
-            <MixedCharts
+               <Table responsive striped  className='businessmix-table mb-2 '>
+              <thead>
+                <tr>
+                  <th className="head-col">Segment</th>
+                  <th className="head-col">Rooms</th>
+                  <th className="head-col">ADR</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="row-title">Bar</td>
+                  <td className="content-col">
+                    <ProgressBar
+                      now={25}
+                      className="custom-bar"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      25%
+                    </span>
+                  </td>
+                  <td className="content-col">
+                  <ProgressBar
+                      now={199}
+                      className="custom-bar bg-2"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      199.1
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="row-title" >Public Discount</td>
+                  <td className="content-col">
+                    <ProgressBar
+                      now={25}
+                      className="custom-bar"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      25%
+                    </span>
+                  </td>
+                  <td className="content-col">
+                  <ProgressBar
+                      now={199}
+                      className="custom-bar bg-2"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      199.1
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="row-title">Corporate Discount</td>
+                  <td className="content-col">
+                    <ProgressBar
+                      now={25}
+                      className="custom-bar"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      25%
+                    </span>
+                  </td>
+                  <td className="content-col">
+                  <ProgressBar
+                      now={199}
+                      className="custom-bar bg-2"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      199.1
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="row-title">Partnership Discount</td>
+                  <td className="content-col">
+                    <ProgressBar
+                      now={25}
+                      className="custom-bar"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      25%
+                    </span>
+                  </td>
+                  <td className="content-col">
+                  <ProgressBar
+                      now={199}
+                      className="custom-bar bg-2"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      199.1
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="row-title">Online Advantage</td>
+                  <td className="content-col">
+                    <ProgressBar
+                      now={25}
+                      className="custom-bar"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      25%
+                    </span>
+                  </td>
+                  <td className="content-col">
+                  <ProgressBar
+                      now={199}
+                      className="custom-bar bg-2"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      199.1
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="row-title">Employee Travel</td>
+                  <td className="content-col">
+                    <ProgressBar
+                      now={25}
+                      className="custom-bar"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      25%
+                    </span>
+                  </td>
+                  <td className="content-col">
+                  <ProgressBar
+                      now={199}
+                      className="custom-bar bg-2"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      199.1
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="row-title">Corporate</td>
+                  <td className="content-col">
+                    <ProgressBar
+                      now={25}
+                      className="custom-bar"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      25%
+                    </span>
+                  </td>
+                  <td className="content-col">
+                  <ProgressBar
+                      now={199}
+                      className="custom-bar bg-2"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      199.1
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="row-title">Monthly Contract</td>
+                  <td className="content-col">
+                    <ProgressBar
+                      now={25}
+                      className="custom-bar"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      25%
+                    </span>
+                  </td>
+                  <td className="content-col">
+                  <ProgressBar
+                      now={199}
+                      className="custom-bar bg-2"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      199.1
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="row-title">Long Term Contract</td>
+                  <td className="content-col">
+                    <ProgressBar
+                      now={25}
+                      className="custom-bar"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      25%
+                    </span>
+                  </td>
+                  <td className="content-col">
+                  <ProgressBar
+                      now={199}
+                      className="custom-bar bg-2"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      199.1
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="row-title">Whole Sale</td>
+                  <td className="content-col">
+                    <ProgressBar
+                      now={25}
+                      className="custom-bar"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      25%
+                    </span>
+                  </td>
+                  <td className="content-col">
+                  <ProgressBar
+                      now={199}
+                      className="custom-bar bg-2"
+                      //max={80}
+                    />
+                    <span className="progressbar-value">
+                      199.1
+                    </span>
+                  </td>
+                </tr>
+              
+
+              </tbody>
+              </Table>
+            {/* <MixedCharts
               id={`PickupBusinessChart-${index}`}
               chartSettings={{
                 primaryXAxis: {
                   valueType: "Category",
                   interval: 1,
                   majorGridLines: { width: 0 },
-                  // labelStyle: {
-                  //   fontStyle: 'bold',
-                  //   size: '9px',
-                  //   color:'black'
-                  // },
+                  
                 },
                 primaryYAxis: {
                   labelFormat: "{value}",
@@ -182,16 +422,16 @@ const PickupBusinessMix = (props: any) => {
                     color: "transparent",
                   },
                   visible: false,
-                  //interval: 1,
+                  
                   rangePadding: 'None',
-                  //maximum:30,
+                 
                 },
                 tooltip: { enable: true },
-                //height: `${setHeight}px`,
+                
                 height:"250px"
               }}
               charts={Charts}
-            />
+            /> */}
 
             <div className='sub-title'>Business Mix</div>
           </React.Suspense>
