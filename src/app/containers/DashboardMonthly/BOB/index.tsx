@@ -5,7 +5,7 @@ import { IRootState } from "../../../../interfaces";
 import { requestMonthlyBOBData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
-import { getMonthsData, nFormatter } from "../../../../helper";
+import { getMonthsData } from "../../../../helper";
 import { defaultDateFormat } from "../../../../config/Constant";
 import moment from "moment";
 import "../index.scss";
@@ -239,14 +239,12 @@ const MonthlyBOB = (props: any) => {
                                             key={i}
                                           >
                                             {key.title === "OCC"
-                                              ? `${parseInt(
+                                              ? `${parseFloat(
                                                   data.num
                                                 ).toLocaleString()}%`
                                                 : key.title === "ADR" ?
                                                 data.num
-                                              :  nFormatter(
-                                                parseInt(data.num)
-                                              ).toLocaleString()
+                                              : parseFloat(data.num).toLocaleString()
                                       }
                                           </td>
                                         );
@@ -258,14 +256,12 @@ const MonthlyBOB = (props: any) => {
                                       >
                                         {key.total
                                           ? key.title === "OCC"
-                                            ? `${parseInt(
+                                            ? `${parseFloat(
                                                 key.total
                                               ).toLocaleString()}%`
                                             :  key.title === "ADR" ?
                                             key.total
-                                          : nFormatter(
-                                            parseInt(key.total)
-                                          ).toLocaleString()
+                                          :parseFloat(key.total).toLocaleString()
                                           : null}
                                       </td>
                                     </tr>

@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker";
 import moment from "moment";
 import { useHistory, useLocation } from "react-router";
 import "react-datepicker/dist/react-datepicker.css";
-import { AppRoutes, checkDateFormat } from "../../../config";
+import { AppRoutes } from "../../../config";
 
 const TopBar = (props: any) => {
   const ref = React.createRef();
@@ -36,15 +36,15 @@ const TopBar = (props: any) => {
     </span>
   ));
 
-  let todayDate:Date = new Date()
-  let isPrevdateSelection: Boolean = false;
-  let selectedDate:Date|any = moment(startDate).format(checkDateFormat);
-  let currentDate:Date|any = moment(new Date()).format(checkDateFormat);
-  if (selectedDate <= currentDate) {
-    isPrevdateSelection = false;
-  } else {
-    isPrevdateSelection = true;
-  }
+  // let todayDate:Date = new Date()
+  // let isPrevdateSelection: Boolean = false;
+  // let selectedDate:Date|any = moment(startDate).format(checkDateFormat);
+  // let currentDate:Date|any = moment(new Date()).format(checkDateFormat);
+  // if (selectedDate <= currentDate) {
+  //   isPrevdateSelection = false;
+  // } else {
+  //   isPrevdateSelection = true;
+  // }
 
   return (
     <>
@@ -66,14 +66,12 @@ const TopBar = (props: any) => {
           { location.pathname === AppRoutes.PICKUPDETAIL ? null :
           <div className="navbar-nav-item">
             <div className="year-nav">
-              {isPrevdateSelection ? (
                 <span
                   className="cursor-pointer mr-2"
                   onClick={() => handleMonthNav("previous")}
                 >
                   <i className="icon-arrow-left "></i>
                 </span>
-              ) : null}
               <DatePicker
                 selected={startDate}
                 onChange={(date: any) => {
@@ -81,7 +79,7 @@ const TopBar = (props: any) => {
                   setStartDate(date);
                 }}
                 showYearPicker
-                minDate={new Date(todayDate.getFullYear(),0,1 )}
+                // minDate={new Date(todayDate.getFullYear(),0,1 )}
                 customInput={<CustomInput ref={ref} />}
                 dateFormat="yyyy"
                 className="custom-datepicker cursor-pointer"
