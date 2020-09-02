@@ -9,27 +9,27 @@
         "ADR": 205
       },
       {
-        "name": "Public Discount",
+        "name": "Public<br>Discount",
         "RoomNts": 8,
         "ADR": 168
       },
       {
-        "name": "Corporate Discount",
+        "name": "Corporate<br>Discount",
         "RoomNts": 5,
         "ADR": 142
       },
       {
-        "name": "Partnership Discount",
+        "name": "Partnership<br>Discount",
         "RoomNts": -2,
         "ADR": 179
       },
       {
-        "name": "Online Advantage",
+        "name": "Online<br>Advantage",
         "RoomNts": 2,
         "ADR": 191
       },
       {
-        "name": "Employee Travel",
+        "name": "Employee<br>Travel",
         "RoomNts": -3,
         "ADR": 107
       },
@@ -39,12 +39,12 @@
         "ADR": 188
       },
       {
-        "name": "Monthly Contract",
+        "name": "Monthly<br>Contract",
         "RoomNts": 1,
         "ADR": 196
       },
       {
-        "name": "Long Term Contract",
+        "name": "Long<br>Term<br>Contract",
         "RoomNts": 2,
         "ADR": 196
       },
@@ -64,27 +64,27 @@
           "ADR": 208
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 21,
           "ADR": 176
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": -3,
           "ADR": 132
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": 3,
           "ADR": 152
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": 3,
           "ADR": 197
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": 3,
           "ADR": 104
         },
@@ -94,12 +94,12 @@
           "ADR": 148
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": 1,
           "ADR": 209
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": 1,
           "ADR": 209
         },
@@ -120,27 +120,27 @@
           "ADR": 205
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 8,
           "ADR": 172
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": 18,
           "ADR": 127
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": 6,
           "ADR": 179
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": 4,
           "ADR": 206
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": 1,
           "ADR": 102
         },
@@ -150,12 +150,12 @@
           "ADR": 179
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": -1,
           "ADR": 200
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": 0,
           "ADR": 189
         },
@@ -176,27 +176,27 @@
           "ADR": 198
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 15,
           "ADR": 169
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": 10,
           "ADR": 159
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": 3,
           "ADR": 186
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": 8,
           "ADR": 193
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": 3,
           "ADR": 101
         },
@@ -206,12 +206,12 @@
           "ADR": 164
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": -2,
           "ADR": 188
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": -1,
           "ADR": 191
         },
@@ -232,27 +232,27 @@
           "ADR": 195
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 0,
           "ADR": 179
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": -4,
           "ADR": 156
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": 0,
           "ADR": 138
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": 3,
           "ADR": 208
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": -1,
           "ADR": 105
         },
@@ -262,12 +262,12 @@
           "ADR": 157
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": 0,
           "ADR": 198
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": 1,
           "ADR": 205
         },
@@ -287,27 +287,27 @@
           "ADR": 208
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 0,
           "ADR": 152
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": 7,
           "ADR": 143
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": -6,
           "ADR": 137
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": 7,
           "ADR": 208
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": 0,
           "ADR": 107
         },
@@ -317,12 +317,12 @@
           "ADR": 151
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": 0,
           "ADR": 194
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": 2,
           "ADR": 198
         },
@@ -343,27 +343,27 @@
           "ADR": 203
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 10,
           "ADR": 149
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": 18,
           "ADR": 141
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": 6,
           "ADR": 142
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": 3,
           "ADR": 198
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": 3,
           "ADR": 102
         },
@@ -373,12 +373,12 @@
           "ADR": 159
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": 2,
           "ADR": 191
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": -2,
           "ADR": 197
         },
@@ -398,27 +398,27 @@
           "ADR": 206
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 0,
           "ADR": 158
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": 4,
           "ADR": 153
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": 5,
           "ADR": 163
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": 5,
           "ADR": 191
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": 2,
           "ADR": 106
         },
@@ -428,12 +428,12 @@
           "ADR": 144
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": -1,
           "ADR": 191
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": -1,
           "ADR": 201
         },
@@ -453,27 +453,27 @@
           "ADR": 206
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 6,
           "ADR": 162
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": 18,
           "ADR": 150
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": -3,
           "ADR": 160
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": -1,
           "ADR": 200
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": 3,
           "ADR": 101
         },
@@ -483,12 +483,12 @@
           "ADR": 149
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": 1,
           "ADR": 205
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": 0,
           "ADR": 189
         },
@@ -509,27 +509,27 @@
           "ADR": 196
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 17,
           "ADR": 175
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": -5,
           "ADR": 133
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": -1,
           "ADR": 186
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": 3,
           "ADR": 202
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": -1,
           "ADR": 105
         },
@@ -539,12 +539,12 @@
           "ADR": 156
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": -2,
           "ADR": 205
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": 0,
           "ADR": 195
         },
@@ -564,27 +564,27 @@
           "ADR": 201
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 19,
           "ADR": 176
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": 13,
           "ADR": 137
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": -1,
           "ADR": 133
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": 4,
           "ADR": 205
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": 3,
           "ADR": 108
         },
@@ -594,12 +594,12 @@
           "ADR": 170
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": -2,
           "ADR": 189
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": -1,
           "ADR": 198
         },
@@ -619,27 +619,27 @@
           "ADR": 190
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 11,
           "ADR": 171
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": 15,
           "ADR": 131
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": -7,
           "ADR": 157
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": -4,
           "ADR": 203
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": -3,
           "ADR": 106
         },
@@ -649,12 +649,12 @@
           "ADR": 151
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": 2,
           "ADR": 199
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": -1,
           "ADR": 190
         },
@@ -674,27 +674,27 @@
           "ADR": 198
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 20,
           "ADR": 175
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": 11,
           "ADR": 156
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": 1,
           "ADR": 184
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": 1,
           "ADR": 191
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": 1,
           "ADR": 107
         },
@@ -704,12 +704,12 @@
           "ADR": 146
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": 0,
           "ADR": 208
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": 0,
           "ADR": 202
         },
@@ -729,27 +729,27 @@
           "ADR": 206
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 20,
           "ADR": 154
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": -4,
           "ADR": 134
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": 3,
           "ADR": 159
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": 5,
           "ADR": 202
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": -3,
           "ADR": 102
         },
@@ -759,12 +759,12 @@
           "ADR": 198
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": 2,
           "ADR": 199
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": 1,
           "ADR": 191
         },
@@ -784,27 +784,27 @@
           "ADR": 189
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 11,
           "ADR": 150
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": 11,
           "ADR": 151
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": 5,
           "ADR": 146
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": 5,
           "ADR": 195
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": -1,
           "ADR": 108
         },
@@ -814,12 +814,12 @@
           "ADR": 177
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": -1,
           "ADR": 198
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": 0,
           "ADR": 199
         },
@@ -840,27 +840,27 @@
           "ADR": 198
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": -3,
           "ADR": 182
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": 8,
           "ADR": 149
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": 1,
           "ADR": 146
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": -3,
           "ADR": 190
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": -3,
           "ADR": 106
         },
@@ -870,12 +870,12 @@
           "ADR": 149
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": -1,
           "ADR": 205
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": 2,
           "ADR": 198
         },
@@ -895,27 +895,27 @@
           "ADR": 199
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 10,
           "ADR": 150
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": 16,
           "ADR": 149
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": 1,
           "ADR": 141
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": -1,
           "ADR": 190
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": 2,
           "ADR": 106
         },
@@ -925,12 +925,12 @@
           "ADR": 161
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": 1,
           "ADR": 193
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": 2,
           "ADR": 194
         },
@@ -950,27 +950,27 @@
           "ADR": 188
         },
         {
-          "name": "Public Discount",
+          "name": "Public<br>Discount",
           "RoomNts": 22,
           "ADR": 172
         },
         {
-          "name": "Corporate Discount",
+          "name": "Corporate<br>Discount",
           "RoomNts": 16,
           "ADR": 152
         },
         {
-          "name": "Partnership Discount",
+          "name": "Partnership<br>Discount",
           "RoomNts": -3,
           "ADR": 151
         },
         {
-          "name": "Online Advantage",
+          "name": "Online<br>Advantage",
           "RoomNts": 8,
           "ADR": 192
         },
         {
-          "name": "Employee Travel",
+          "name": "Employee<br>Travel",
           "RoomNts": 0,
           "ADR": 106
         },
@@ -980,12 +980,12 @@
           "ADR": 150
         },
         {
-          "name": "Monthly Contract",
+          "name": "Monthly<br>Contract",
           "RoomNts": 2,
           "ADR": 203
         },
         {
-          "name": "Long Term Contract",
+          "name": "Long<br>Term<br>Contract",
           "RoomNts": 2,
           "ADR": 189
         },
@@ -993,6 +993,617 @@
           "name": "Wholesale",
           "RoomNts": -3,
           "ADR": 189
+        }
+      ]
+    },
+
+
+
+    {
+      "month" : "February-22",
+      "segmentData": [
+        {
+          "name": "Bar",
+          "RoomNts": 19,
+          "ADR": 193
+        },
+        {
+          "name": "Public<br>Discount",
+          "RoomNts": 6,
+          "ADR": 166
+        },
+        {
+          "name": "Corporate<br>Discount",
+          "RoomNts": 9,
+          "ADR": 128
+        },
+        {
+          "name": "Partnership<br>Discount",
+          "RoomNts": -2,
+          "ADR": 136
+        },
+        {
+          "name": "Online<br>Advantage",
+          "RoomNts": 3,
+          "ADR": 189
+        },
+        {
+          "name": "Employee<br>Travel",
+          "RoomNts": 2,
+          "ADR": 104
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 3,
+          "ADR": 153
+        },
+        {
+          "name": "Monthly<br>Contract",
+          "RoomNts": -1,
+          "ADR": 196
+        },
+        {
+          "name": "Long<br>Term<br>Contract",
+          "RoomNts": 2,
+          "ADR": 198
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 1,
+          "ADR": 189
+        }
+      ]
+    },
+    {
+      "month" : "March-22",
+      "segmentData": [
+        {
+          "name": "Bar",
+          "RoomNts": 5,
+          "ADR": 189
+        },
+        {
+          "name": "Public<br>Discount",
+          "RoomNts": 6,
+          "ADR": 180
+        },
+        {
+          "name": "Corporate<br>Discount",
+          "RoomNts": -3,
+          "ADR": 143
+        },
+        {
+          "name": "Partnership<br>Discount",
+          "RoomNts": 5,
+          "ADR": 150
+        },
+        {
+          "name": "Online<br>Advantage",
+          "RoomNts": -2,
+          "ADR": 209
+        },
+        {
+          "name": "Employee<br>Travel",
+          "RoomNts": -2,
+          "ADR": 108
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 11,
+          "ADR": 186
+        },
+        {
+          "name": "Monthly<br>Contract",
+          "RoomNts": -1,
+          "ADR": 195
+        },
+        {
+          "name": "Long<br>Term<br>Contract",
+          "RoomNts": 1,
+          "ADR": 199
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 1,
+          "ADR": 190
+        }
+      ]
+    },
+    {
+      "month" : "April-22",
+      "segmentData": [
+        {
+          "name": "Bar",
+          "RoomNts": 2,
+          "ADR": 196
+        },
+        {
+          "name": "Public<br>Discount",
+          "RoomNts": 14,
+          "ADR": 157
+        },
+        {
+          "name": "Corporate<br>Discount",
+          "RoomNts": 10,
+          "ADR": 143
+        },
+        {
+          "name": "Partnership<br>Discount",
+          "RoomNts": -5,
+          "ADR": 181
+        },
+        {
+          "name": "Online<br>Advantage",
+          "RoomNts": -5,
+          "ADR": 197
+        },
+        {
+          "name": "Employee<br>Travel",
+          "RoomNts": -1,
+          "ADR": 105
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 6,
+          "ADR": 157
+        },
+        {
+          "name": "Monthly<br>Contract",
+          "RoomNts": 2,
+          "ADR": 209
+        },
+        {
+          "name": "Long<br>Term<br>Contract",
+          "RoomNts": -1,
+          "ADR": 205
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": -1,
+          "ADR": 199
+        }
+      ]
+    },
+
+    {
+      "month" : "May-22",
+      "segmentData": [
+        {
+          "name": "Bar",
+          "RoomNts": 18,
+          "ADR": 194
+        },
+        {
+          "name": "Public<br>Discount",
+          "RoomNts": 10,
+          "ADR": 174
+        },
+        {
+          "name": "Corporate<br>Discount",
+          "RoomNts": 19,
+          "ADR": 133
+        },
+        {
+          "name": "Partnership<br>Discount",
+          "RoomNts": 0,
+          "ADR": 134
+        },
+        {
+          "name": "Online<br>Advantage",
+          "RoomNts": -4,
+          "ADR": 206
+        },
+        {
+          "name": "Employee<br>Travel",
+          "RoomNts": 0,
+          "ADR": 103
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 8,
+          "ADR": 184
+        },
+        {
+          "name": "Monthly<br>Contract",
+          "RoomNts": 2,
+          "ADR": 190
+        },
+        {
+          "name": "Long<br>Term<br>Contract",
+          "RoomNts": 2,
+          "ADR": 192
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": -5,
+          "ADR": 202
+        }
+      ]
+    }
+    ,
+    {
+      "month" : "June-22",
+      "segmentData": [
+        {
+          "name": "Bar",
+          "RoomNts": 1,
+          "ADR": 203
+        },
+        {
+          "name": "Public<br>Discount",
+          "RoomNts": 14,
+          "ADR": 148
+        },
+        {
+          "name": "Corporate<br>Discount",
+          "RoomNts": 16,
+          "ADR": 141
+        },
+        {
+          "name": "Partnership<br>Discount",
+          "RoomNts": -6,
+          "ADR": 150
+        },
+        {
+          "name": "Online<br>Advantage",
+          "RoomNts": -5,
+          "ADR": 203
+        },
+        {
+          "name": "Employee<br>Travel",
+          "RoomNts": -3,
+          "ADR": 107
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 0,
+          "ADR": 156
+        },
+        {
+          "name": "Monthly<br>Contract",
+          "RoomNts": -1,
+          "ADR": 204
+        },
+        {
+          "name": "Long<br>Term<br>Contract",
+          "RoomNts": -1,
+          "ADR": 194
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 6,
+          "ADR": 199
+        }
+      ]
+    },
+    {
+      "month" : "July-22",
+      "segmentData": [
+        {
+          "name": "Bar",
+          "RoomNts": 18,
+          "ADR": 209
+        },
+        {
+          "name": "Public<br>Discount",
+          "RoomNts": 8,
+          "ADR": 171
+        },
+        {
+          "name": "Corporate<br>Discount",
+          "RoomNts": 19,
+          "ADR": 138
+        },
+        {
+          "name": "Partnership<br>Discount",
+          "RoomNts": 6,
+          "ADR": 156
+        },
+        {
+          "name": "Online<br>Advantage",
+          "RoomNts": -1,
+          "ADR": 193
+        },
+        {
+          "name": "Employee<br>Travel",
+          "RoomNts": -3,
+          "ADR": 104
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 0,
+          "ADR": 148
+        },
+        {
+          "name": "Monthly<br>Contract",
+          "RoomNts": 0,
+          "ADR": 201
+        },
+        {
+          "name": "Long<br>Term<br>Contract",
+          "RoomNts": 1,
+          "ADR": 208
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": -2,
+          "ADR": 200
+        }
+      ]
+    },
+    {
+      "month" : "August-22",
+      "segmentData": [
+        {
+          "name": "Bar",
+          "RoomNts": 19,
+          "ADR": 208
+        },
+        {
+          "name": "Public<br>Discount",
+          "RoomNts": 11,
+          "ADR": 175
+        },
+        {
+          "name": "Corporate<br>Discount",
+          "RoomNts": 11,
+          "ADR": 157
+        },
+        {
+          "name": "Partnership<br>Discount",
+          "RoomNts": 7,
+          "ADR": 161
+        },
+        {
+          "name": "Online<br>Advantage",
+          "RoomNts": 6,
+          "ADR": 206
+        },
+        {
+          "name": "Employee<br>Travel",
+          "RoomNts": -3,
+          "ADR": 107
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 11,
+          "ADR": 165
+        },
+        {
+          "name": "Monthly<br>Contract",
+          "RoomNts": -2,
+          "ADR": 207
+        },
+        {
+          "name": "Long<br>Term<br>Contract",
+          "RoomNts": 1,
+          "ADR": 207
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": -3,
+          "ADR": 194
+        }
+      ]
+    },
+    {
+      "month" : "September-22",
+      "segmentData": [
+        {
+          "name": "Bar",
+          "RoomNts": 8,
+          "ADR": 206
+        },
+        {
+          "name": "Public<br>Discount",
+          "RoomNts": -1,
+          "ADR": 164
+        },
+        {
+          "name": "Corporate<br>Discount",
+          "RoomNts": 19,
+          "ADR": 141
+        },
+        {
+          "name": "Partnership<br>Discount",
+          "RoomNts": 4,
+          "ADR": 161
+        },
+        {
+          "name": "Online<br>Advantage",
+          "RoomNts": -4,
+          "ADR": 192
+        },
+        {
+          "name": "Employee<br>Travel",
+          "RoomNts": 0,
+          "ADR": 107
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 0,
+          "ADR": 162
+        },
+        {
+          "name": "Monthly<br>Contract",
+          "RoomNts": 1,
+          "ADR": 199
+        },
+        {
+          "name": "Long<br>Term<br>Contract",
+          "RoomNts": 0,
+          "ADR": 204
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": -3,
+          "ADR": 204
+        }
+      ]
+    },
+
+    {
+      "month" : "October-22",
+      "segmentData": [
+        {
+          "name": "Bar",
+          "RoomNts": 14,
+          "ADR": 198
+        },
+        {
+          "name": "Public<br>Discount",
+          "RoomNts": 2,
+          "ADR": 170
+        },
+        {
+          "name": "Corporate<br>Discount",
+          "RoomNts": 0,
+          "ADR": 159
+        },
+        {
+          "name": "Partnership<br>Discount",
+          "RoomNts": -4,
+          "ADR": 159
+        },
+        {
+          "name": "Online<br>Advantage",
+          "RoomNts": -3,
+          "ADR": 192
+        },
+        {
+          "name": "Employee<br>Travel",
+          "RoomNts": 0,
+          "ADR": 104
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 11,
+          "ADR": 178
+        },
+        {
+          "name": "Monthly<br>Contract",
+          "RoomNts": 0,
+          "ADR": 189
+        },
+        {
+          "name": "Long<br>Term<br>Contract",
+          "RoomNts": 0,
+          "ADR": 189
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 5,
+          "ADR": 195
+        }
+      ]
+    },
+    {
+      "month" : "November-22",
+      "segmentData": [
+        {
+          "name": "Bar",
+          "RoomNts": 9,
+          "ADR": 200
+        },
+        {
+          "name": "Public<br>Discount",
+          "RoomNts": -2,
+          "ADR": 158
+        },
+        {
+          "name": "Corporate<br>Discount",
+          "RoomNts": 2,
+          "ADR": 141
+        },
+        {
+          "name": "Partnership<br>Discount",
+          "RoomNts": -4,
+          "ADR": 134
+        },
+        {
+          "name": "Online<br>Advantage",
+          "RoomNts": 4,
+          "ADR": 199
+        },
+        {
+          "name": "Employee<br>Travel",
+          "RoomNts": 1,
+          "ADR": 102
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 1,
+          "ADR": 183
+        },
+        {
+          "name": "Monthly<br>Contract",
+          "RoomNts": 0,
+          "ADR": 197
+        },
+        {
+          "name": "Long<br>Term<br>Contract",
+          "RoomNts": 2,
+          "ADR": 203
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": 4,
+          "ADR": 199
+        }
+      ]
+    },
+    {
+      "month" : "December-22",
+      "segmentData": [
+        {
+          "name": "Bar",
+          "RoomNts": 14,
+          "ADR": 208
+        },
+        {
+          "name": "Public<br>Discount",
+          "RoomNts": 20,
+          "ADR": 157
+        },
+        {
+          "name": "Corporate<br>Discount",
+          "RoomNts": 13,
+          "ADR": 156
+        },
+        {
+          "name": "Partnership<br>Discount",
+          "RoomNts": 3,
+          "ADR": 186
+        },
+        {
+          "name": "Online<br>Advantage",
+          "RoomNts": 5,
+          "ADR": 191
+        },
+        {
+          "name": "Employee<br>Travel",
+          "RoomNts": 0,
+          "ADR": 104
+        },
+        {
+          "name": "Corporate",
+          "RoomNts": 2,
+          "ADR": 147
+        },
+        {
+          "name": "Monthly<br>Contract",
+          "RoomNts": -1,
+          "ADR": 205
+        },
+        {
+          "name": "Long<br>Term<br>Contract",
+          "RoomNts": -1,
+          "ADR": 193
+        },
+        {
+          "name": "Wholesale",
+          "RoomNts": -2,
+          "ADR": 196
         }
       ]
     }

@@ -209,7 +209,7 @@ const MonthlyTable = ({ date }: any) => {
                 {state && state.length
                   ? state.map((list: any, index: number) => {
                       let weekendDay = moment(months[index]).day();
-                      return index > months.length - 1 ? null : (
+                      return  (
                         <>
                           <tr
                             key={`monthly-${index}`}
