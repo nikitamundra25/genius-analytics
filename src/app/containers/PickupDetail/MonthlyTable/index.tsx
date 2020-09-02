@@ -46,10 +46,10 @@ const MonthlyTable = ({ date }: any) => {
         })
       }
       
-      let temp: any =
-        filterData && filterData.pickupDetailData && filterData.pickupDetailData.length
-          ? filterData.pickupDetailData
-          : [];
+      // let temp: any =
+      //   filterData && filterData.pickupDetailData && filterData.pickupDetailData.length
+      //     ? filterData.pickupDetailData
+      //     : [];
 
       // To add data according to column
       let result: ISumOfColumnsState = stemp.reduce((acc: any, n: any) => {
