@@ -658,6 +658,16 @@ body {
 .e-dashboardlayout.e-control .e-panel:hover {
   border: 0px;
 }
+#defaultLayout .e-panel-content { 
+  overflow: visible; 
+  // width:100%; 
+} 
+#chart-1, #chart-2, #chart-3, #chart-4, #RGICharts, #MPICharts, #ARICharts, #chart-business-card-percent, #chart-business-card-adr { 
+overflow: visible ! important; 
+} 
+#layout_1, #layout_4, #layout_8 { 
+z-index: 1001 ! important; 
+}
 .form-control {
   border-color: $gray-text;
   &:focus{
