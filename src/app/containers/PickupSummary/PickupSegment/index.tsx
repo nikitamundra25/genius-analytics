@@ -112,6 +112,7 @@ const PickupSegment = ({ index, date }: any) => {
           visible: true,
           position: "Top",
           fill: "#ee792b",
+          
           border: { width: 1, color: "#4684bd" },
           font: {
             fontWeight: "600",
@@ -147,7 +148,7 @@ const PickupSegment = ({ index, date }: any) => {
                 enableTrim: false,
                 majorGridLines: { width: 0 },
                 // maximumLabelWidth: '100',
-                //labelPlacement: 'OnTicks' ,
+                // labelPlacement: 'OnTicks' ,
                // labelIntersectAction: 'None',
                // edgeLabelPlacement: 'Shift',
                 // labelStyle: {
@@ -168,7 +169,7 @@ const PickupSegment = ({ index, date }: any) => {
                 visible: false,
               },
               tooltip: { enable: true },
-              height:"395px"
+              height:"450px"
               //height: `${setHeight1}px`,
             }}
             charts={Charts}

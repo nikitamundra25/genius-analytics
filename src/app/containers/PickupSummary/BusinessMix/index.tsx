@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { ApiHelper } from "../../../../helper";
+import { Table, ProgressBar } from "react-bootstrap";
 import { IBookingChannelModel } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import moment from "moment";
 
-const MixedCharts = React.lazy(() =>
-  import("../../../components/Charts/MixedCharts")
-);
+// const MixedCharts = React.lazy(() =>
+//   import("../../../components/Charts/MixedCharts")
+// );
 
 const PickupBusinessMix = (props: any) => {
-  const { index ,date} = props;
+  const { date} = props;
 
   const [state, setState] = useState<IBookingChannelModel>({
     isLoading: true,
@@ -45,91 +46,91 @@ const PickupBusinessMix = (props: any) => {
     // eslint-disable-next-line
   }, []);
 
-  const labeltemplate = (args: any) => {
-    return (
-      <div
-        style={{
-          fontSize: "10px",
-          padding: "2px 2px 2px 2px",
-          borderRadius: "2px",
-          background: '#2b72b5',
-        }}>
-        <span>{args.point.y}%</span>
-      </div>
-    );
-  };
-  const labeltemplate1 = (args: any) => {
-    return (
-      <div
-        style={{
-          fontSize: "10px",
-          padding: "2px 2px 2px 2px",
-          borderRadius: "2px",
-          background: '#ee792b',
-        }}>
-        <span>{args.point.y}</span>
-      </div>
-    );
-  };
+  // const labeltemplate = (args: any) => {
+  //   return (
+  //     <div
+  //       style={{
+  //         fontSize: "10px",
+  //         padding: "2px 2px 2px 2px",
+  //         borderRadius: "2px",
+  //         background: '#2b72b5',
+  //       }}>
+  //       <span>{args.point.y}%</span>
+  //     </div>
+  //   );
+  // };
+  // const labeltemplate1 = (args: any) => {
+  //   return (
+  //     <div
+  //       style={{
+  //         fontSize: "10px",
+  //         padding: "2px 2px 2px 2px",
+  //         borderRadius: "2px",
+  //         background: '#ee792b',
+  //       }}>
+  //       <span>{args.point.y}</span>
+  //     </div>
+  //   );
+  // };
   const {
     isLoading: DowDataLoading,
     data: DowData,
     isError: DowDataError,
   } = state;
 
-  const Charts = [
-    {
-      dataSource: DowData,
-      xName: "name",
-      yName: "RoomNts",
-      type: "Area",
-      //fill: "#4684bd",
-      fill: "url(#pickupmix-chart)",
-      name: "Room Nts",
-      width: 1,
-      marker: {
-        dataLabel: {
-          visible: true,
-          position: "Bottom",
-         // fill: "#2b72b5",
-         template: labeltemplate,
-          font: {
-            fontWeight: "600",
-            color: "#fff",
-          },
-        },
-      },
-    },
+  // const Charts = [
+  //   {
+  //     dataSource: DowData,
+  //     xName: "name",
+  //     yName: "RoomNts",
+  //     type: "Area",
+  //     //fill: "#4684bd",
+  //     fill: "url(#pickupmix-chart)",
+  //     name: "Room Nts",
+  //     width: 1,
+  //     marker: {
+  //       dataLabel: {
+  //         visible: true,
+  //         position: "Bottom",
+  //        // fill: "#2b72b5",
+  //        template: labeltemplate,
+  //         font: {
+  //           fontWeight: "600",
+  //           color: "#fff",
+  //         },
+  //       },
+  //     },
+  //   },
 
-    {
-      dataSource: DowData,
-      xName: "name",
-      yName: "ADR",
-      type: "Spline",
-      fill: "#ee792b",
-      name: "ADR",
-      width: 3,
-      yAxisName: "yAxis1",
-      marker: {
-        visible: true,
-        width: 8,
-        height: 8,
-        fill: "#ee792b",
+  //   {
+  //     dataSource: DowData,
+  //     xName: "name",
+  //     yName: "ADR",
+  //     type: "Spline",
+  //     fill: "#ee792b",
+  //     name: "ADR",
+  //     width: 3,
+  //     yAxisName: "yAxis1",
+  //     marker: {
+  //       visible: true,
+  //       width: 8,
+  //       height: 8,
+  //       fill: "#ee792b",
        
-        border: { width: 0, color: "#ee792b" },
-        dataLabel: {
-          visible: true,
-          position: "Top",
-         // fill: "#ee792b",
-          template: labeltemplate1,
-          font: {
-            fontWeight: "600",
-            color: "#ffffff",
-          },
-        },
-      },
-    },
-  ];
+  //       border: { width: 0, color: "#ee792b" },
+  //       dataLabel: {
+  //         visible: true,
+  //         position: "Top",
+  //        // fill: "#ee792b",
+  //         template: labeltemplate1,
+  //         font: {
+  //           fontWeight: "600",
+  //           color: "#ffffff",
+  //         },
+  //       },
+  //     },
+  //   },
+  // ];
 
   const SAMPLE_CSS = `
       #pickupmix-chart stop {
@@ -159,18 +160,53 @@ const PickupBusinessMix = (props: any) => {
                 <WidgetLoader />
               </div>
             }>
-            <MixedCharts
+               <Table responsive striped  className='businessmix-table mb-2 '>
+              <thead>
+                <tr>
+                  <th className="head-col bg1">Segment</th>
+                  <th className="head-col bg2">Rooms</th>
+                  <th className="head-col bg3">ADR</th>
+                </tr>
+              </thead>
+              <tbody>
+                {DowData.map((list:any,i:number)=>{
+                  
+               const maxPeak=  Math.max.apply(Math, DowData.map(function(key:any) { return key.ADR; }))
+                          
+                  return <tr>
+                  <td className="row-title">{list.name} </td>
+                  <td className="content-col">
+                    <ProgressBar
+                      now={list.RoomNts}
+                      className="custom-bar"
+                      max={100}
+                    />
+                    <span className="progressbar-value">
+                      {`${list.RoomNts}%`}
+                    </span>
+                  </td>
+                  <td className="content-col">
+                  <ProgressBar
+                      now={list.ADR}
+                      className="custom-bar bg-2"
+                      max={maxPeak}
+                    />
+                    <span className="progressbar-value">
+                      {list.ADR}
+                    </span>
+                  </td>
+                </tr>
+                }) }
+              </tbody>
+              </Table>
+            {/* <MixedCharts
               id={`PickupBusinessChart-${index}`}
               chartSettings={{
                 primaryXAxis: {
                   valueType: "Category",
                   interval: 1,
                   majorGridLines: { width: 0 },
-                  // labelStyle: {
-                  //   fontStyle: 'bold',
-                  //   size: '9px',
-                  //   color:'black'
-                  // },
+                  
                 },
                 primaryYAxis: {
                   labelFormat: "{value}",
@@ -182,16 +218,16 @@ const PickupBusinessMix = (props: any) => {
                     color: "transparent",
                   },
                   visible: false,
-                  //interval: 1,
+                  
                   rangePadding: 'None',
-                  //maximum:30,
+                 
                 },
                 tooltip: { enable: true },
-                //height: `${setHeight}px`,
+                
                 height:"250px"
               }}
               charts={Charts}
-            />
+            /> */}
 
             <div className='sub-title'>Business Mix</div>
           </React.Suspense>

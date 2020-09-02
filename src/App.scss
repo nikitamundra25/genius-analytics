@@ -612,7 +612,43 @@ body {
   .text-red {
     color: #fe0000 !important;
   }
+  .custom-tooltip .tooltip-inner{
+    background-color: rgba(0, 8, 22, 0.75);
+    border-radius: 0px;
+    min-width: 90px;
+    padding: 10px 12px;
+    box-shadow: 0px 0px 7px 4px rgba(30, 30, 30, 0.22);
+  }
+  .custom-inner-tooltip{
+    .label-text{
+      font-size:13px;
+      font-weight:500;
+      border-bottom:1px solid #fff;
+      color:#fff;
+      padding-bottom:5px;
+    }
+    .label-value{
+      font-size:13px;
+      font-weight:500;
+      color:#fff;
+    }
+    .label-img{
+      margin-right:10px;
+    }
+    .label-div{
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 4px;
+    }
+  }
+  .custom-tooltip.bs-tooltip-top .arrow::before {
+    border-top-color: rgba(0, 8, 22, 0.75);
+    border-width: 12px 6px 0px;
+  }
 }
+
 
 @media (min-width: 992px) {
   html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .main,

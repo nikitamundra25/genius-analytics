@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { Table, Row, Col } from "react-bootstrap";
+import { Table, Row, Col,  OverlayTrigger,
+  Tooltip } from "react-bootstrap";
 import { generateArrayOfMonths, ApiHelper } from "../../../../helper";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import caretup from "../../../../assets/img/caret-up.svg";
@@ -32,7 +33,6 @@ const SummaryTable = (props: any) => {
       });
       return;
     }
-    console.log("datadatadata", data);
 
     let temp: any = [];
     if (data && data.length) {
@@ -76,7 +76,7 @@ const SummaryTable = (props: any) => {
         >
           <Row className="">
             <Col xs={12} md={6}>
-              <Table responsive striped className="summary-table mb-0">
+              <Table responsive striped className="summary-table mb-0 ml-auto">
                 <thead>
                   <tr>
                     <th className="empty-col"></th>
@@ -100,6 +100,36 @@ const SummaryTable = (props: any) => {
                               <div className="d-flex align-items-center justify-content-between">
                                 <div className="text-col">{list.rooms} </div>
                                 <div className="icon-col">
+                                  <OverlayTrigger
+                                    key={"top2"}
+                                    placement={"top"}
+                                    overlay={
+                                      <Tooltip
+                                        id={`tooltip-decrease`}
+                                        className="custom-tooltip"
+                                      >
+                                          <div className="custom-inner-tooltip">
+                                          <div className="label-text">Rooms</div>
+                                          <div className="label-div">
+                                            <span className="label-img">
+                                            <img
+                                              src={
+                                                parseInt(list.rooms) < 0
+                                                  ? caretdown
+                                                  : caretup
+                                              }
+                                              alt="increase"
+                                              width="12"
+                                            />
+                                            </span>
+                                            <span className="label-value">
+                                            {list.rooms}
+                                            </span>
+                                          </div>
+                                          </div>
+                                      </Tooltip>
+                                    }
+                                  >
                                   <img
                                     src={
                                       parseInt(list.rooms) < 0
@@ -109,6 +139,7 @@ const SummaryTable = (props: any) => {
                                     alt="increase"
                                     width="12"
                                   />
+                                  </OverlayTrigger>
                                 </div>
                               </div>
                             </td>
@@ -116,6 +147,36 @@ const SummaryTable = (props: any) => {
                               <div className="d-flex align-items-center justify-content-between">
                                 <div className="text-col">{list.adr}</div>
                                 <div className="icon-col">
+                                <OverlayTrigger
+                                    key={"top2"}
+                                    placement={"top"}
+                                    overlay={
+                                      <Tooltip
+                                        id={`tooltip-decrease`}
+                                        className="custom-tooltip"
+                                      >
+                                          <div className="custom-inner-tooltip">
+                                          <div className="label-text">ADR</div>
+                                          <div className="label-div">
+                                            <span className="label-img">
+                                            <img
+                                              src={
+                                                parseInt(list.adr) < 0
+                                                  ? caretdown
+                                                  : caretup
+                                              }
+                                              alt="increase"
+                                              width="12"
+                                            />
+                                            </span>
+                                            <span className="label-value">
+                                            {list.adr}
+                                            </span>
+                                          </div>
+                                          </div>
+                                      </Tooltip>
+                                    }
+                                  >
                                   <img
                                     src={
                                       parseInt(list.adr) < 0
@@ -125,6 +186,7 @@ const SummaryTable = (props: any) => {
                                     alt="increase"
                                     width="12"
                                   />
+                                  </OverlayTrigger>
                                 </div>
                               </div>
                             </td>
@@ -134,6 +196,36 @@ const SummaryTable = (props: any) => {
                                   {parseFloat(list.revenue).toLocaleString()}
                                 </div>
                                 <div className="icon-col">
+                                <OverlayTrigger
+                                    key={"top2"}
+                                    placement={"top"}
+                                    overlay={
+                                      <Tooltip
+                                        id={`tooltip-decrease`}
+                                        className="custom-tooltip"
+                                      >
+                                          <div className="custom-inner-tooltip">
+                                          <div className="label-text">Revenue</div>
+                                          <div className="label-div">
+                                            <span className="label-img">
+                                            <img
+                                              src={
+                                                parseInt(list.revenue) < 0
+                                                  ? caretdown
+                                                  : caretup
+                                              }
+                                              alt="increase"
+                                              width="12"
+                                            />
+                                            </span>
+                                            <span className="label-value">
+                                            {parseFloat(list.revenue).toLocaleString()}
+                                            </span>
+                                          </div>
+                                          </div>
+                                      </Tooltip>
+                                    }
+                                  >
                                   <img
                                     src={
                                       parseInt(list.revenue) < 0
@@ -143,6 +235,7 @@ const SummaryTable = (props: any) => {
                                     alt="increase"
                                     width="12"
                                   />
+                                  </OverlayTrigger>
                                 </div>
                               </div>
                             </td>
@@ -178,6 +271,36 @@ const SummaryTable = (props: any) => {
                               <div className="d-flex align-items-center justify-content-between">
                                 <div className="text-col">{list.rooms} </div>
                                 <div className="icon-col">
+                                <OverlayTrigger
+                                    key={"top2"}
+                                    placement={"top"}
+                                    overlay={
+                                      <Tooltip
+                                        id={`tooltip-decrease`}
+                                        className="custom-tooltip"
+                                      >
+                                          <div className="custom-inner-tooltip">
+                                          <div className="label-text">Rooms</div>
+                                          <div className="label-div">
+                                            <span className="label-img">
+                                            <img
+                                              src={
+                                                parseInt(list.rooms) < 0
+                                                  ? caretdown
+                                                  : caretup
+                                              }
+                                              alt="increase"
+                                              width="12"
+                                            />
+                                            </span>
+                                            <span className="label-value">
+                                            {list.rooms}
+                                            </span>
+                                          </div>
+                                          </div>
+                                      </Tooltip>
+                                    }
+                                  >
                                   <img
                                     src={
                                       parseInt(list.rooms) < 0
@@ -187,6 +310,7 @@ const SummaryTable = (props: any) => {
                                     alt="increase"
                                     width="12"
                                   />
+                                  </OverlayTrigger>
                                 </div>
                               </div>
                             </td>
@@ -194,6 +318,36 @@ const SummaryTable = (props: any) => {
                               <div className="d-flex align-items-center justify-content-between">
                                 <div className="text-col">{list.adr}</div>
                                 <div className="icon-col">
+                                <OverlayTrigger
+                                    key={"top2"}
+                                    placement={"top"}
+                                    overlay={
+                                      <Tooltip
+                                        id={`tooltip-decrease`}
+                                        className="custom-tooltip"
+                                      >
+                                          <div className="custom-inner-tooltip">
+                                          <div className="label-text">ADR</div>
+                                          <div className="label-div">
+                                            <span className="label-img">
+                                            <img
+                                              src={
+                                                parseInt(list.adr) < 0
+                                                  ? caretdown
+                                                  : caretup
+                                              }
+                                              alt="increase"
+                                              width="12"
+                                            />
+                                            </span>
+                                            <span className="label-value">
+                                            {list.adr}
+                                            </span>
+                                          </div>
+                                          </div>
+                                      </Tooltip>
+                                    }
+                                  >
                                   <img
                                     src={
                                       parseInt(list.adr) < 0
@@ -203,6 +357,7 @@ const SummaryTable = (props: any) => {
                                     alt="increase"
                                     width="12"
                                   />
+                                  </OverlayTrigger>
                                 </div>
                               </div>
                             </td>
@@ -212,6 +367,36 @@ const SummaryTable = (props: any) => {
                                   {parseFloat(list.revenue).toLocaleString()}
                                 </div>
                                 <div className="icon-col">
+                                <OverlayTrigger
+                                    key={"top2"}
+                                    placement={"top"}
+                                    overlay={
+                                      <Tooltip
+                                        id={`tooltip-decrease`}
+                                        className="custom-tooltip"
+                                      >
+                                          <div className="custom-inner-tooltip">
+                                          <div className="label-text">Revenue</div>
+                                          <div className="label-div">
+                                            <span className="label-img">
+                                            <img
+                                              src={
+                                                parseInt(list.revenue) < 0
+                                                  ? caretdown
+                                                  : caretup
+                                              }
+                                              alt="increase"
+                                              width="12"
+                                            />
+                                            </span>
+                                            <span className="label-value">
+                                            {parseFloat(list.revenue).toLocaleString()}
+                                            </span>
+                                          </div>
+                                          </div>
+                                      </Tooltip>
+                                    }
+                                  >
                                   <img
                                     src={
                                       parseInt(list.revenue) < 0
@@ -221,6 +406,7 @@ const SummaryTable = (props: any) => {
                                     alt="increase"
                                     width="12"
                                   />
+                                  </OverlayTrigger>
                                 </div>
                               </div>
                             </td>

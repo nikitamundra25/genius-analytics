@@ -55,7 +55,7 @@ const MonthlyTable = (props: any) => {
             </div>
           }>
           <div className='pickup-table-section'>
-            <Table responsive className='pickup-table mb-0'>
+            <Table responsive className='pickup-table '>
               <thead>
                 <tr className='business-top-row'>
                   <th></th>
