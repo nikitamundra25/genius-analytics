@@ -12,7 +12,7 @@ import { IRootState } from "../../../../interfaces";
 import { requestCumulativeTableData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
-import { getMonths, nFormatter } from "../../../../helper";
+import { getMonths } from "../../../../helper";
 import caretup from "../../../../assets/img/caret-up.svg";
 import caretdown from "../../../../assets/img/caret-down.svg";
 
@@ -198,25 +198,9 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                                   ? subdata.type === "occ" ||
                                                     subdata.type === "room-dev"
                                                     ? subdata.value[index]
-                                                    : subdata.name === "ADR"
-                                                    ? parseInt(
-                                                        subdata.value[index]
-                                                      ).toLocaleString(
-                                                        undefined,
-                                                        {
-                                                          minimumFractionDigits: 1,
-                                                        }
-                                                      )
-                                                    : nFormatter(
-                                                        parseInt(
+                                                    :  parseFloat(
                                                           subdata.value[index]
-                                                        )
-                                                      ).toLocaleString(
-                                                        undefined,
-                                                        {
-                                                          minimumFractionDigits: 1,
-                                                        }
-                                                      )
+                                                        ).toLocaleString()
                                                   : 0}
                                               </div>
                                               <OverlayTrigger
@@ -233,7 +217,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                                         subdata.type ===
                                                           "room-dev"
                                                         ? subdata.vsBud[index]
-                                                        : parseInt(
+                                                        : parseFloat(
                                                             subdata.vsBud[index]
                                                           ).toLocaleString()
                                                       : 0}
@@ -334,11 +318,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
                                               className={`content-col ${value === "April" || value === "May"  || value === "June" || value === "October"  || value === "November" || value === "December"  ? "quarter-bg" : parseInt(subdata.value[i]) < 0 ? "text-danger" : "" } `}
                                             >
                                               {subdata.value[i]
-                                                ? nFormatter(
-                                                    parseInt(subdata.value[i])
-                                                  ).toLocaleString(undefined, {
-                                                    minimumFractionDigits: 1,
-                                                  })
+                                                ?  parseFloat(subdata.value[i]).toLocaleString()
                                                 : null}
                                             </td>
                                           ) : (

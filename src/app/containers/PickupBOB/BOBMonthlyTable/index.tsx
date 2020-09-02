@@ -272,7 +272,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {" "}
                               {list.barValueRooms
-                                ? list.barValueRooms
+                                ? parseFloat(list.barValueRooms).toLocaleString()
                                 : null}{" "}
                             </td>
                             <td
@@ -283,7 +283,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.barValueADR ? list.barValueADR : null}{" "}
+                              {list.barValueADR ? parseFloat(list.barValueADR).toLocaleString() : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -294,7 +294,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.barValueRevenue
-                                ? list.barValueRevenue
+                                ? parseFloat(list.barValueRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -306,7 +306,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.publicDiscountRooms
-                                ? list.publicDiscountRooms
+                                ? parseFloat(list.publicDiscountRooms).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -318,7 +318,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.publicDiscountADR
-                                ? list.publicDiscountADR
+                                ? parseFloat(list.publicDiscountADR).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -330,7 +330,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.publicDiscountRevenue
-                                ? list.publicDiscountRevenue
+                                ? parseFloat(list.publicDiscountRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -342,7 +342,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.corporateDiscountRooms
-                                ? list.corporateDiscountRooms
+                                ? parseFloat(list.corporateDiscountRooms).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -354,7 +354,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.corporateDiscountADR
-                                ? list.corporateDiscountADR
+                                ? parseFloat(list.corporateDiscountADR).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -367,7 +367,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {" "}
                               {list.corporateDiscountRevenue
-                                ? list.corporateDiscountRevenue
+                                ? parseFloat(list.corporateDiscountRevenue).toLocaleString()
                                 : null}{" "}
                             </td>
                             <td
@@ -379,7 +379,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.partnershipDiscountRooms
-                                ? list.partnershipDiscountRooms
+                                ?parseFloat(list.partnershipDiscountRooms).toLocaleString()
                                 : null}{" "}
                             </td>
                             <td
@@ -391,7 +391,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.partnershipDiscountADR
-                                ? list.partnershipDiscountADR
+                                ? parseFloat(list.partnershipDiscountADR).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -403,7 +403,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.partnershipDiscountRevenue
-                                ? list.partnershipDiscountRevenue
+                                ? parseFloat(list.partnershipDiscountRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -414,7 +414,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.onlineAdvRooms ? list.onlineAdvRooms : null}
+                              {list.onlineAdvRooms ?parseFloat(list.onlineAdvRooms).toLocaleString() : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -424,7 +424,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.onlineAdvADR ? list.onlineAdvADR : null}
+                              {list.onlineAdvADR ? parseFloat(list.onlineAdvADR).toLocaleString() : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -435,7 +435,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.onlineAdvRevenue
-                                ? list.onlineAdvRevenue
+                                ? parseFloat(list.onlineAdvRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -447,7 +447,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.corporateGroupRooms
-                                ? list.corporateGroupRooms
+                                ? parseFloat(list.corporateGroupRooms).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -460,7 +460,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {" "}
                               {list.corporateGroupADR
-                                ? list.corporateGroupADR
+                                ?parseFloat(list.corporateGroupADR).toLocaleString()
                                 : null}{" "}
                             </td>
                             <td
@@ -472,7 +472,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.corporateGroupRevenue
-                                ? list.corporateGroupRevenue
+                                ? parseFloat(list.corporateGroupRevenue).toLocaleString()
                                 : null}{" "}
                             </td>
                             <td
@@ -483,7 +483,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.leisureRooms ? list.leisureRooms : null}
+                              {list.leisureRooms ? parseFloat(list.leisureRooms).toLocaleString() : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -492,7 +492,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.leisureADR ? list.leisureADR : null}
+                              {list.leisureADR ? parseFloat(list.leisureADR).toLocaleString() : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -502,7 +502,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.leisureRevenue ? list.leisureRevenue : null}
+                              {list.leisureRevenue ? parseFloat(list.leisureRevenue).toLocaleString() : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -513,7 +513,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.residentialGroupRooms
-                                ? list.residentialGroupRooms
+                                ? parseFloat(list.residentialGroupRooms).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -525,7 +525,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.residentialGroupADR
-                                ? list.residentialGroupADR
+                                ?  parseFloat(list.residentialGroupADR).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -537,7 +537,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.residentialGroupRevenue
-                                ? list.residentialGroupRevenue
+                                ? parseFloat(list.residentialGroupRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -548,7 +548,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {" "}
-                              {list.otaRooms ? list.otaRooms : null}{" "}
+                              {list.otaRooms ? parseFloat(list.otaRooms).toLocaleString() : null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -557,7 +557,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.otaADR ? list.otaADR : null}{" "}
+                              {list.otaADR ?  parseFloat(list.otaADR).toLocaleString(): null}{" "}
                             </td>
                             <td
                               className={`content-col ${
@@ -566,7 +566,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.otaRevenue ? list.otaRevenue : null}
+                              {list.otaRevenue ? parseFloat(list.otaRevenue).toLocaleString() : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -576,7 +576,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.wholesaleRooms ? list.wholesaleRooms : null}
+                              {list.wholesaleRooms ? parseFloat(list.wholesaleRooms).toLocaleString()  : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -586,7 +586,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.wholesaleADR ? list.wholesaleADR : null}
+                              {list.wholesaleADR ?parseFloat(list.wholesaleADR).toLocaleString()  : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -597,7 +597,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.wholesaleRevenue
-                                ? list.wholesaleRevenue
+                                ? parseFloat(list.wholesaleRevenue).toLocaleString() 
                                 : null}
                             </td>
                             <td
@@ -609,7 +609,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.longTermContractRooms
-                                ? list.longTermContractRooms
+                                ? parseFloat(list.longTermContractRooms).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -621,7 +621,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.longTermContractADR
-                                ? list.longTermContractADR
+                                ? parseFloat(list.longTermContractADR).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -633,7 +633,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.longTermContractRevenue
-                                ? list.longTermContractRevenue
+                                ? parseFloat(list.longTermContractRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -645,7 +645,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.monthlyContractRooms
-                                ? list.monthlyContractRooms
+                                ? parseFloat(list.monthlyContractRooms).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -657,7 +657,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.monthlyContractADR
-                                ? list.monthlyContractADR
+                                ?parseFloat(list.monthlyContractADR).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -669,7 +669,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.monthlyContractRevenue
-                                ? list.monthlyContractRevenue
+                                ? parseFloat(list.monthlyContractRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -681,7 +681,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.airlineCrewRooms
-                                ? list.airlineCrewRooms
+                                ?parseFloat(list.airlineCrewRooms).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -692,7 +692,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.airlineCrewADR ? list.airlineCrewADR : null}
+                              {list.airlineCrewADR ? parseFloat(list.airlineCrewADR).toLocaleString() : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -703,7 +703,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.airlineCrewRevenue
-                                ? list.airlineCrewRevenue
+                                ? parseFloat(list.airlineCrewRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
@@ -713,7 +713,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.staffRooms ? list.staffRooms : null}
+                              {list.staffRooms ? parseFloat(list.staffRooms).toLocaleString(): null}
                             </td>
                             <td
                               className={`content-col ${
@@ -722,7 +722,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.staffADR ? list.staffADR : null}
+                              {list.staffADR ? parseFloat(list.staffADR).toLocaleString() : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -732,7 +732,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.staffRevenue ? list.staffRevenue : null}
+                              {list.staffRevenue ? parseFloat(list.staffRevenue).toLocaleString() : null}
                             </td>
                             <td
                               className={`content-col  total-content ${
@@ -742,7 +742,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.resultRooms ? list.resultRooms : null}
+                              {list.resultRooms ? parseFloat(list.resultRooms).toLocaleString() : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -752,7 +752,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.resultADR ? list.resultADR : null}
+                              {list.resultADR ? parseFloat(list.resultADR).toLocaleString() : null}
                             </td>
                             <td
                               className={`content-col ${
@@ -762,7 +762,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.resultRevenue ? list.resultRevenue : null}
+                              {list.resultRevenue ? parseFloat(list.resultRevenue).toLocaleString() : null}
                             </td>
                           </tr>
                         </>
@@ -774,175 +774,175 @@ const BOBMonthlyTable = ({ date }: any) => {
                 <tr>
                   <td className="border-left-0"></td>
                   <td className="total-col">
-                    {barValueRooms > 0 ? barValueRooms.toFixed(1) : 0}
+                    {barValueRooms > 0 ? parseFloat(barValueRooms).toLocaleString() : 0}
                   </td>
                   <td className="total-col">
-                    {barValueADR > 0 ? barValueADR.toFixed(1) : 0}
+                    {barValueADR > 0 ?parseFloat(barValueADR).toLocaleString() : 0}
                   </td>
                   <td className="total-col">
-                    {barValueRevenue > 0 ? barValueRevenue.toFixed(1) : 0}
+                    {barValueRevenue > 0 ? parseFloat(barValueRevenue).toLocaleString() : 0}
                   </td>
                   <td className="total-col">
                     {publicDiscountRooms > 0
-                      ? publicDiscountRooms.toFixed(1)
+                      ?  parseFloat(publicDiscountRooms).toLocaleString() 
                       : 0}
                   </td>
                   <td className="total-col">
-                    {publicDiscountADR > 0 ? publicDiscountADR.toFixed(1) : 0}
+                    {publicDiscountADR > 0 ? parseFloat(publicDiscountADR).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
                     {publicDiscountRevenue > 0
-                      ? publicDiscountRevenue.toFixed(1)
+                      ? parseFloat(publicDiscountRevenue).toLocaleString()
                       : 0}
                   </td>
                   <td className="total-col ">
                     {corporateDiscountRooms > 0
-                      ? corporateDiscountRooms.toFixed(1)
+                      ? parseFloat(corporateDiscountRooms).toLocaleString()
                       : 0}
                   </td>
                   <td className="total-col ">
                     {corporateDiscountADR > 0
-                      ? corporateDiscountADR.toFixed(1)
+                      ? parseFloat(corporateDiscountADR).toLocaleString()
                       : 0}
                   </td>
                   <td className="total-col">
                     {corporateDiscountRevenue > 0
-                      ? corporateDiscountRevenue.toFixed(1)
+                      ? parseFloat(corporateDiscountRevenue).toLocaleString()
                       : 0}
                   </td>
                   <td className="total-col">
                     {partnershipDiscountRooms > 0
-                      ? partnershipDiscountRooms.toFixed(1)
+                      ?parseFloat(partnershipDiscountRooms).toLocaleString()
                       : 0}
                   </td>
                   <td className="total-col">
                     {partnershipDiscountADR > 0
-                      ? partnershipDiscountADR.toFixed(1)
+                      ? parseFloat(partnershipDiscountADR).toLocaleString()
                       : 0}
                   </td>
                   <td className="total-col">
                     {partnershipDiscountRevenue > 0
-                      ? partnershipDiscountRevenue.toFixed(1)
+                      ? parseFloat(partnershipDiscountRevenue).toLocaleString()
                       : 0}
                   </td>
                   <td className="total-col">
-                    {onlineAdvRooms > 0 ? onlineAdvRooms.toFixed(1) : 0}
+                    {onlineAdvRooms > 0 ? parseFloat(onlineAdvRooms).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
-                    {onlineAdvADR > 0 ? onlineAdvADR.toFixed(1) : 0}
+                    {onlineAdvADR > 0 ?parseFloat(onlineAdvADR).toLocaleString(): 0}
                   </td>
                   <td className="total-col ">
-                    {onlineAdvRevenue > 0 ? onlineAdvRevenue.toFixed(1) : 0}
+                    {onlineAdvRevenue > 0 ? parseFloat(onlineAdvRevenue).toLocaleString( ): 0}
                   </td>
                   <td className="total-col ">
                     {corporateGroupRooms > 0
-                      ? corporateGroupRooms.toFixed(1)
+                      ? parseFloat(corporateGroupRooms).toLocaleString()
                       : 0}
                   </td>
                   <td className="total-col">
-                    {corporateGroupADR > 0 ? corporateGroupADR.toFixed(1) : 0}
+                    {corporateGroupADR > 0 ? parseFloat(corporateGroupADR).toLocaleString( ): 0}
                   </td>
                   <td className="total-col">
                     {corporateGroupRevenue > 0
-                      ? corporateGroupRevenue.toFixed(1)
+                      ? parseFloat(corporateGroupRevenue).toLocaleString()
                       : 0}
                   </td>
                   <td className="total-col">
-                    {leisureRooms > 0 ? leisureRooms.toFixed(1) : 0}
+                    {leisureRooms > 0 ? parseFloat(leisureRooms).toLocaleString() : 0}
                   </td>
                   <td className="total-col">
-                    {leisureADR > 0 ? leisureADR.toFixed(1) : 0}
+                    {leisureADR > 0 ?parseFloat(leisureADR).toLocaleString() : 0}
                   </td>
                   <td className="total-col">
-                    {leisureRevenue > 0 ? leisureRevenue.toFixed(1) : 0}
+                    {leisureRevenue > 0 ? parseFloat(leisureRevenue).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
                     {residentialGroupRooms > 0
-                      ? residentialGroupRooms.toFixed(1)
+                      ? parseFloat(residentialGroupRooms).toLocaleString()
                       : 0}
                   </td>
                   <td className="total-col ">
                     {residentialGroupADR > 0
-                      ? residentialGroupADR.toFixed(1)
+                      ?parseFloat(residentialGroupADR).toLocaleString()
                       : 0}
                   </td>
                   <td className="total-col ">
                     {residentialGroupRevenue > 0
-                      ? residentialGroupRevenue.toFixed(1)
+                      ? parseFloat(residentialGroupRevenue).toLocaleString()
                       : 0}
                   </td>
                   <td className="total-col">
-                    {otaRooms > 0 ? otaRooms.toFixed(1) : 0}
+                    {otaRooms > 0 ? parseFloat(otaRooms).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
-                    {otaADR > 0 ? otaADR.toFixed(1) : 0}
+                    {otaADR > 0 ? parseFloat(otaADR).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
-                    {otaRevenue > 0 ? otaRevenue.toFixed(1) : 0}
+                    {otaRevenue > 0 ? parseFloat(otaRevenue).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
-                    {wholesaleRooms > 0 ? wholesaleRooms.toFixed(1) : 0}
+                    {wholesaleRooms > 0 ?parseFloat(wholesaleRooms).toLocaleString() : 0}
                   </td>
                   <td className="total-col">
-                    {wholesaleADR > 0 ? wholesaleADR.toFixed(1) : 0}
+                    {wholesaleADR > 0 ? parseFloat(wholesaleADR).toLocaleString()  : 0}
                   </td>
                   <td className="total-col">
-                    {wholesaleRevenue > 0 ? wholesaleRevenue.toFixed(1) : 0}
+                    {wholesaleRevenue > 0 ? parseFloat(wholesaleRevenue).toLocaleString()  : 0}
                   </td>
                   <td className="total-col">
                     {longTermContractRooms > 0
-                      ? longTermContractRooms.toFixed(1)
+                      ? parseFloat(longTermContractRooms).toLocaleString() 
                       : 0}
                   </td>
                   <td className="total-col">
                     {longTermContractADR > 0
-                      ? longTermContractADR.toFixed(1)
+                      ? parseFloat(longTermContractADR).toLocaleString() 
                       : 0}
                   </td>
                   <td className="total-col">
                     {longTermContractRevenue > 0
-                      ? longTermContractRevenue.toFixed(1)
+                      ?parseFloat(longTermContractRevenue).toLocaleString() 
                       : 0}
                   </td>
                   <td className="total-col">
                     {monthlyContractRooms > 0
-                      ? monthlyContractRooms.toFixed(1)
+                      ? parseFloat(monthlyContractRooms).toLocaleString() 
                       : 0}
                   </td>
                   <td className="total-col">
-                    {monthlyContractADR > 0 ? monthlyContractADR.toFixed(1) : 0}
+                    {monthlyContractADR > 0 ? parseFloat(monthlyContractADR).toLocaleString()  : 0}
                   </td>
                   <td className="total-col">
                     {monthlyContractRevenue > 0
-                      ? monthlyContractRevenue.toFixed(1)
+                      ? parseFloat(monthlyContractRevenue).toLocaleString() 
                       : 0}
                   </td>
                   <td className="total-col">
-                    {airlineCrewRooms > 0 ? airlineCrewRooms.toFixed(1) : 0}
+                    {airlineCrewRooms > 0 ?parseFloat(airlineCrewRooms).toLocaleString() : 0}
                   </td>
                   <td className="total-col">
-                    {airlineCrewADR > 0 ? airlineCrewADR.toFixed(1) : 0}
+                    {airlineCrewADR > 0 ?parseFloat(airlineCrewADR).toLocaleString(): 0}
                   </td>
                   <td className="total-col">
-                    {airlineCrewRevenue > 0 ? airlineCrewRevenue.toFixed(1) : 0}
+                    {airlineCrewRevenue > 0 ? parseFloat(airlineCrewRevenue).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
-                    {staffRooms > 0 ? staffRooms.toFixed(1) : 0}
+                    {staffRooms > 0 ? parseFloat(staffRooms).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
-                    {staffADR > 0 ? staffADR.toFixed(1) : 0}
+                    {staffADR > 0 ? parseFloat(staffADR).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
-                    {staffRevenue > 0 ? staffRevenue.toFixed(1) : 0}
+                    {staffRevenue > 0 ?parseFloat(staffRevenue).toLocaleString() : 0}
                   </td>
                   <td className="total-col total-content">
-                    {TotalRooms > 0 ? TotalRooms.toFixed(1) : 0}
+                    {TotalRooms > 0 ? parseFloat(TotalRooms).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
-                    {TotalADR > 0 ? TotalADR.toFixed(1) : 0}
+                    {TotalADR > 0 ? parseFloat(TotalADR).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
-                    {TotalRevenue > 0 ? TotalRevenue.toFixed(1) : 0}
+                    {TotalRevenue > 0 ? parseFloat(TotalRevenue).toLocaleString() : 0}
                   </td>
                 </tr>
               </tfoot>

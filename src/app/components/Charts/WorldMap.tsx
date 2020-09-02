@@ -10,6 +10,9 @@ import {
 } from "@syncfusion/ej2-react-maps";
 
 const WorldMap = ({ data }: any) => {
+
+
+
   return (
     <div style={{ height: "100%", width: "100%" }}>
       <MapsComponent
@@ -46,7 +49,7 @@ const WorldMap = ({ data }: any) => {
                 '<hr style="margin-top: 2px;margin-bottom:5px;border:0.5px solid #DDDDDD">' + // eslint-disable-next-line
                 '<div><span style="font-size:13px;color:#cccccc">Room Nights : </span><span style="font-size:13px;color:#ffffff;font-weight: 500;">${roomNights}</span></div>' + // eslint-disable-next-line
                 '<div><span style="font-size:13px;color:#cccccc">ADR : </span><span style="font-size:13px;color:#ffffff;font-weight: 500;">${ADR}</span></div>' + // eslint-disable-next-line
-                '<div><span style="font-size:13px;color:#cccccc">Revenue : </span><span style="font-size:13px;color:#ffffff;font-weight: 500;">${revenue}</span></div></div>',
+                '<div><span style="font-size:13px;color:#cccccc">Revenue : </span><span style="font-size:13px;color:#ffffff;font-weight: 500;">${revenue.toLocaleString()}</span></div></div>',
               visible: true,
               valuePath: "roomNights",
             }}
