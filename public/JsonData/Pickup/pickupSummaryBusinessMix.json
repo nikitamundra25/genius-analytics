@@ -52,27 +52,8 @@
           "name": "Wholesale",
           "RoomNts": 6,
           "ADR": 198
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 4,
-          "ADR": 191
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 2,
-          "ADR": 195
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 5,
-          "ADR": 201
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 3,
-          "ADR": 194
         }
+       
       ]
     },
     {
@@ -127,27 +108,8 @@
           "name": "Wholesale",
           "RoomNts": 4,
           "ADR": 188
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 3,
-          "ADR": 192
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 2,
-          "ADR": 188
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 4,
-          "ADR": 203
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 2,
-          "ADR": 199
         }
+       
       ]
     },
 
@@ -202,26 +164,6 @@
         {
           "name": "Wholesale",
           "RoomNts": 5,
-          "ADR": 188
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 3,
-          "ADR": 194
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 1,
-          "ADR": 204
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 5,
-          "ADR": 190
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 1,
           "ADR": 188
         }
       ]
@@ -279,26 +221,6 @@
           "name": "Wholesale",
           "RoomNts": 6,
           "ADR": 189
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 4,
-          "ADR": 197
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 3,
-          "ADR": 196
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 6,
-          "ADR": 188
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 2,
-          "ADR": 191
         }
       ]
     },
@@ -355,26 +277,6 @@
           "name": "Wholesale",
           "RoomNts": 6,
           "ADR": 205
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 4,
-          "ADR": 201
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 3,
-          "ADR": 199
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 5,
-          "ADR": 191
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 2,
-          "ADR": 207
         }
       ]
     },
@@ -430,26 +332,6 @@
           "name": "Wholesale",
           "RoomNts": 6,
           "ADR": 193
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 3,
-          "ADR": 203
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 1,
-          "ADR": 190
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 6,
-          "ADR": 204
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 1,
-          "ADR": 199
         }
       ]
     },
@@ -506,26 +388,6 @@
           "name": "Wholesale",
           "RoomNts": 4,
           "ADR": 190
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 5,
-          "ADR": 192
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 1,
-          "ADR": 202
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 5,
-          "ADR": 205
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 2,
-          "ADR": 206
         }
       ]
     },
@@ -581,26 +443,6 @@
           "name": "Wholesale",
           "RoomNts": 6,
           "ADR": 189
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 4,
-          "ADR": 207
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 2,
-          "ADR": 201
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 5,
-          "ADR": 205
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 1,
-          "ADR": 207
         }
       ]
     },
@@ -656,26 +498,6 @@
           "name": "Wholesale",
           "RoomNts": 4,
           "ADR": 189
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 5,
-          "ADR": 193
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 2,
-          "ADR": 193
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 5,
-          "ADR": 189
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 3,
-          "ADR": 200
         }
       ]
     },
@@ -732,26 +554,6 @@
           "name": "Wholesale",
           "RoomNts": 4,
           "ADR": 190
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 5,
-          "ADR": 209
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 3,
-          "ADR": 207
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 6,
-          "ADR": 195
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 1,
-          "ADR": 190
         }
       ]
     },
@@ -807,26 +609,6 @@
           "name": "Wholesale",
           "RoomNts": 5,
           "ADR": 194
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 3,
-          "ADR": 188
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 1,
-          "ADR": 188
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 5,
-          "ADR": 190
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 2,
-          "ADR": 207
         }
       ]
     },
@@ -882,26 +664,6 @@
           "name": "Wholesale",
           "RoomNts": 6,
           "ADR": 189
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 5,
-          "ADR": 190
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 3,
-          "ADR": 192
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 5,
-          "ADR": 204
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 2,
-          "ADR": 199
         }
       ]
     },
@@ -957,26 +719,6 @@
           "name": "Wholesale",
           "RoomNts": 4,
           "ADR": 197
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 3,
-          "ADR": 188
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 1,
-          "ADR": 197
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 5,
-          "ADR": 199
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 1,
-          "ADR": 192
         }
       ]
     },
@@ -1032,26 +774,6 @@
           "name": "Wholesale",
           "RoomNts": 4,
           "ADR": 188
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 5,
-          "ADR": 202
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 3,
-          "ADR": 203
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 5,
-          "ADR": 200
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 2,
-          "ADR": 204
         }
       ]
     },
@@ -1107,26 +829,6 @@
           "name": "Wholesale",
           "RoomNts": 6,
           "ADR": 193
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 5,
-          "ADR": 209
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 3,
-          "ADR": 209
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 4,
-          "ADR": 198
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 1,
-          "ADR": 201
         }
       ]
     },
@@ -1178,31 +880,6 @@
           "name": "Long Term Contract",
           "RoomNts": 2,
           "ADR": 205
-        },
-        {
-          "name": "Wholesale",
-          "RoomNts": 5,
-          "ADR": 189
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 5,
-          "ADR": 207
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 1,
-          "ADR": 209
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 4,
-          "ADR": 199
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 1,
-          "ADR": 198
         }
       ]
     },
@@ -1258,26 +935,6 @@
           "name": "Wholesale",
           "RoomNts": 6,
           "ADR": 190
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 4,
-          "ADR": 199
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 1,
-          "ADR": 206
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 4,
-          "ADR": 205
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 1,
-          "ADR": 201
         }
       ]
     },
@@ -1333,26 +990,6 @@
           "name": "Wholesale",
           "RoomNts": 5,
           "ADR": 205
-        },
-        {
-          "name": "Corporate Group",
-          "RoomNts": 3,
-          "ADR": 189
-        },
-        {
-          "name": "Corporate Monthly Group",
-          "RoomNts": 2,
-          "ADR": 197
-        },
-        {
-          "name": "Leisure Group",
-          "RoomNts": 4,
-          "ADR": 197
-        },
-        {
-          "name": "Airline Crew Group",
-          "RoomNts": 1,
-          "ADR": 195
         }
       ]
     }

@@ -18,7 +18,7 @@
     vertical-align: middle;
     max-width: 300px;
     @media only screen and (min-width: 1880px) {
-      // padding: 6px 4px;
+      padding: 5px 4px;
       font-size:12px;
     }
     @media only screen and (max-width: 1560px) {
@@ -33,7 +33,7 @@
       font-size: 11px;
     }
     @media only screen and (max-width: 1370px) {
-      padding: 2px 1px;
+      padding: 1px 1px;
       font-size: 11px;
     }
     @media only screen and (max-width: 1265px) {
@@ -249,7 +249,10 @@
     @media only screen and (min-width: 1880px) {
       height: 25px;
     }
-    @media only screen and (max-width: 1415px) {
+    @media only screen and (max-width: 1450px) {
+      height: 18px;
+    }
+    @media only screen and (max-width: 1370px) {
       height: 20px;
     }
     @media only screen and (max-width: 1320px) {
