@@ -105,7 +105,7 @@ const SummaryTable = (props: any) => {
                                     placement={"top"}
                                     overlay={
                                       <Tooltip
-                                        id={`tooltip-decrease`}
+                                        id={`Rooms-${i}`}
                                         className="custom-tooltip"
                                       >
                                           <div className="custom-inner-tooltip">
@@ -152,7 +152,7 @@ const SummaryTable = (props: any) => {
                                     placement={"top"}
                                     overlay={
                                       <Tooltip
-                                        id={`tooltip-decrease`}
+                                        id={`ADR-${i}`}
                                         className="custom-tooltip"
                                       >
                                           <div className="custom-inner-tooltip">
@@ -201,7 +201,7 @@ const SummaryTable = (props: any) => {
                                     placement={"top"}
                                     overlay={
                                       <Tooltip
-                                        id={`tooltip-decrease`}
+                                        id={`Revenue-${i}`}
                                         className="custom-tooltip"
                                       >
                                           <div className="custom-inner-tooltip">
@@ -276,7 +276,7 @@ const SummaryTable = (props: any) => {
                                     placement={"top"}
                                     overlay={
                                       <Tooltip
-                                        id={`tooltip-decrease`}
+                                        id={`Rooms1-${i}`}
                                         className="custom-tooltip"
                                       >
                                           <div className="custom-inner-tooltip">
@@ -323,7 +323,7 @@ const SummaryTable = (props: any) => {
                                     placement={"top"}
                                     overlay={
                                       <Tooltip
-                                        id={`tooltip-decrease`}
+                                        id={`ADR1-${i}`}
                                         className="custom-tooltip"
                                       >
                                           <div className="custom-inner-tooltip">
@@ -372,7 +372,7 @@ const SummaryTable = (props: any) => {
                                     placement={"top"}
                                     overlay={
                                       <Tooltip
-                                        id={`tooltip-decrease`}
+                                        id={`Revenue1-${i}`}
                                         className="custom-tooltip"
                                       >
                                           <div className="custom-inner-tooltip">
