@@ -34,6 +34,7 @@ import { MonthlyBOBLogics } from "./MonthlyBOB";
 import { PickupBlobLogics } from "./pickupBlob";
 import { PickupSummaryTableLogics } from "./pickupSummaryTable";
 import { CumulativeTableLogics } from "./CumulativeTable";
+import { PickupMainSummaryLogics } from "./pickupMainSummary";
 
 export const redirectToLogic = createLogic({
   type: "REDIRET_TO",
@@ -83,5 +84,6 @@ export const AllLogics: Logic[] | any = [
   ...PickupBlobLogics,
   ...PickupSummaryTableLogics,
   ...CumulativeTableLogics,
+  ...PickupMainSummaryLogics,
   redirectToLogic,
 ];
