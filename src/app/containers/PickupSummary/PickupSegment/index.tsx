@@ -169,7 +169,7 @@ const PickupSegment = ({ index, date }: any) => {
                 visible: false,
               },
               tooltip: { enable: true },
-              height:"385px"
+              height:"375px"
               //height: `${setHeight1}px`,
             }}
             charts={Charts}

@@ -139,7 +139,7 @@ const MonthlyBOB = (props: any) => {
                                         </td>
                                       ) : null}
                                     </tr>
-                                    <tr>
+                                    {/* <tr>
                                       {ind === 0 ? (
                                         <td
                                           colSpan={
@@ -152,7 +152,7 @@ const MonthlyBOB = (props: any) => {
                                           <div className="separtor-line"></div>
                                         </td>
                                       ) : null}
-                                    </tr>
+                                    </tr> */}
                                     <tr key={ind}>
                                       <td className="title-col white-nowrap">
                                         <OverlayTrigger
