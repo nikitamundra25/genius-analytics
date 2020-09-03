@@ -139,8 +139,8 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
       // fill: "#c0d2e8",
       name: selectedValue,
       width: 3,
-      opacity: 0.4,
-      fill: "rgb(0, 189, 174)",
+      opacity: 0.6,
+      fill: "#7cccca",
       marker: {
         visible: false,
         width: 10,
