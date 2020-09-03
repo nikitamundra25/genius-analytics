@@ -12,7 +12,8 @@ const PickupDetail: FunctionComponent = () => {
 
   useEffect(() => {
     // dispatch(PickupDetailRequest());
-    let date: Date|any = moment(new Date()).subtract(1, "days")
+    let isMonday = moment().format("dddd") ===  "Monday"  ? moment(new Date()).subtract(3, "days") : moment(new Date()).subtract(1, "days") 
+    let date: Date|any = isMonday
     let temp = generateArrayOfMonths(date,23)
     setpickupList(temp)
     // eslint-disable-next-line
