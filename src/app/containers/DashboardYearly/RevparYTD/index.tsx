@@ -82,16 +82,19 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       xName: "name",
       yName: "OCC",
       type: "SplineArea",
-      fill: "url(#gradient-chart)",
+     // fill: "url(#gradient-chart)",
       name: "OCC %",
+      opacity:0.5,
+      width:2,
+      fill:"rgb(239, 183, 202)",
       yAxisName:'yAxis1',
-      width: 2,
       dashArray: '5,5',
       border:{
-         color: '#78a3c7', 
+        color: 'rgb(184 129 148)',
+         //color: '#78a3c7', 
          width: 2 ,
       },
-      opacity: '0.6',
+      //opacity: '0.6',
       marker: {
         dataLabel: {
           visible: true,
