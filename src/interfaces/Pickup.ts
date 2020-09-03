@@ -93,8 +93,8 @@ export interface IBOBState{
     staffRooms: number,
     staffADR: number,
     staffRevenue: number,
-    TotalRooms: number,
-    TotalADR: number,
-    TotalRevenue: number
+    resultRooms : number,
+    resultADR : number,
+    resultRevenue : number
   
 }

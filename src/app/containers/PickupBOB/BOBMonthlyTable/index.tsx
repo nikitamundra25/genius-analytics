@@ -121,9 +121,9 @@ const BOBMonthlyTable = ({ date }: any) => {
     staffRooms = 0,
     staffADR = 0,
     staffRevenue = 0,
-    TotalRooms = 0,
-    TotalADR = 0,
-    TotalRevenue = 0,
+    resultRooms = 0,
+    resultADR = 0,
+    resultRevenue = 0,
   } = sumOfColumns;
 
   return (
@@ -936,13 +936,13 @@ const BOBMonthlyTable = ({ date }: any) => {
                     {staffRevenue > 0 ?parseFloat(staffRevenue).toLocaleString() : 0}
                   </td>
                   <td className="total-col total-content">
-                    {TotalRooms > 0 ? parseFloat(TotalRooms).toLocaleString() : 0}
+                    {resultRooms > 0 ? parseFloat(resultRooms).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
-                    {TotalADR > 0 ? parseFloat(TotalADR).toLocaleString() : 0}
+                    {resultADR > 0 ? parseFloat(resultADR).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
-                    {TotalRevenue > 0 ? parseFloat(TotalRevenue).toLocaleString() : 0}
+                    {resultRevenue > 0 ? parseFloat(resultRevenue).toLocaleString() : 0}
                   </td>
                 </tr>
               </tfoot>
