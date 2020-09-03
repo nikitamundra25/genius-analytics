@@ -135,11 +135,12 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
       xName: "name",
       yName: selectedValue,
       type: "SplineArea",
-      fill: "url(#gradient-daily)",
+     // fill: "url(#gradient-daily)",
       // fill: "#c0d2e8",
       name: selectedValue,
       width: 3,
-
+      opacity: 0.6,
+      fill: "#7cccca",
       marker: {
         visible: false,
         width: 10,

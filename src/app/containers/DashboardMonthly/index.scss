@@ -130,7 +130,7 @@
     &.bg-1{
       background:#fff;
       color:#000;
-      border:0px solid #000;
+      border:1px solid #000;
       font-weight: 700;
       padding: 0px;
     }
@@ -145,6 +145,7 @@
   }
   .separtor-line {
       border: 1px solid #000;
+      display:none;
   }
   .total-col{
     color:#fff;

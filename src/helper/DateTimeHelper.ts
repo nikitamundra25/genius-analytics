@@ -1,21 +1,21 @@
 import moment from "moment";
-import { monthYearFormat } from "../config";
 export const getMonths = () => {
   return moment.months();
 };
 
 
-
-
+//  get the list of dates exist in a month 
 export const getMonthsData = (date: any, name:string) => {
   let daysInMonth = [];
   let newDay :any
-  let monthDate = moment(date).startOf("month");
+  let monthDate:any = moment(date).startOf("month");
   let daysCount: number = monthDate.daysInMonth()
-  if(moment(date).format(monthYearFormat) === moment().subtract(1, "days").format(monthYearFormat) &&  name === "pickupData" ){
+  // if(moment(date).format(monthYearFormat) === moment().subtract(1, "days").format(monthYearFormat) &&  name === "pickupData" ){
+    if(name === "pickupData" ){
     monthDate = moment(date);
-    let endDate = moment().endOf("month");
-    daysCount =  endDate.diff(monthDate, 'days');
+   daysCount = monthDate.daysInMonth()
+    // let endDate:any = moment().endOf("month");
+    // daysCount =  endDate.diff(monthDate, 'days');
   }
   
   for (let i = 0; i < daysCount; i++) {
@@ -34,7 +34,7 @@ export const generateArrayOfMonths = (date:any, monthToAdd:any) => {
     months.push({
       name: dateStart.format("MMMM YYYY"),
       id: dateStart.format("M"),
-      date: dateStart.format("YYYY-MM-DD")
+      date: months.length > 0 ?  moment(dateStart).startOf("month")  : dateStart.format("YYYY-MM-DD")
     });
     dateStart.add(1, "month");
   }
@@ -55,3 +55,4 @@ export const generateArrayofBOBData = (date:Date) => {
            // Return the array of month
   return months;
 };
+

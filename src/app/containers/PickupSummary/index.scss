@@ -109,7 +109,7 @@
 .businessmix-table{
   border-collapse: collapse;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  border: 2px solid black;
+  border:2px solid #203763;
   th, td {
     padding: 2px 4px;
     border: 0;
@@ -141,10 +141,10 @@
   .row-title{
     text-align: left;
     font-weight: 700;
-    width: 145px;
   }
   .content-col{
     font-weight: 500;
+    width: 130px;
   }
 }
 .custom-bar{
