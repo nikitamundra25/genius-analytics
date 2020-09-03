@@ -112,9 +112,7 @@ const RGIVariance =  ({date }:any) => {
     <style>
           {SAMPLE_CSS}
       </style>
-    {/* <Card id="rgi-card">
-      <WidgetHeader title={"RGI YoY Variance"} activeToggle={"graph"} showToggle={false} />
-      <Card.Body> */}
+    
       {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -126,7 +124,6 @@ const RGIVariance =  ({date }:any) => {
         <MixedCharts
           id='adfdsf'
           charts={Charts}
-          // legend = {false}
           chartSettings={{
             primaryXAxis: {
               valueType: "Category",
@@ -144,13 +141,12 @@ const RGIVariance =  ({date }:any) => {
               },
             },
             tooltip: { enable: true }, 
-            // height: setHeight,
+       
           }}
         />
           </React.Suspense>
         )}
-      {/* </Card.Body>
-    </Card> */}
+  
 
     <svg style={{ height: '0' }}>
         <defs>

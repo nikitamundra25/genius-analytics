@@ -152,10 +152,7 @@ const PickupSinceYesterday = ({date }:any) => {
     <style>
           {SAMPLE_CSS}
       </style>
-    {/* <Card id="pickup-card">
-      <WidgetHeader title={"Pick up Since Yesterday"} activeToggle={"graph"} showToggle={false} />
-
-      <Card.Body> */}
+   
       {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -168,7 +165,7 @@ const PickupSinceYesterday = ({date }:any) => {
           BarChartReferenceLine.map((key: any, index: number) => {
             return (
               <Col xs={12} md={4} key={index} className="h-100" >
-                {/* <div className="pickup-card"> */}
+               
                   <div  className="text-left range-text" style={{  "position": "absolute", "left": "25px", "top": "0px", "width": "100%"}} >
                     <div className="sub-inner-title">{key.title}</div>
                     {key.range ? (
@@ -185,8 +182,7 @@ const PickupSinceYesterday = ({date }:any) => {
                         charts={[key.charts]}
                        legend = {false}
                         chartSettings={{
-                          // width: "100%",
-                          // height: "80%",
+                        
                           chartArea:{ border: { width: 0 } },
                           primaryXAxis: {
                             valueType: "Category",
@@ -207,50 +203,20 @@ const PickupSinceYesterday = ({date }:any) => {
                           },
                          
                           tooltip: { enable: true },
-                          //title: key.title,
+                      
                           height: "100%"
                         }}
                       />
-                    {/* <ColumnChart
-                      {...key}
-                      chartSettings={{
-                        primaryXAxis: {
-                          valueType: "Category",
-                          interval: 1,
-                          majorGridLines: { width: 0 },
-                        },
-                        primaryYAxis: {
-                          majorGridLines: { width: 0 },
-                          majorTickLines: { width: 0 },
-                          lineStyle: { width: 0 },
-                          labelStyle: { color: "transparent" },
-                        },
-                        tooltip: { enable: true },
-                        marker: {
-                          dataLabel: {
-                            visible: true,
-                            position:"Middle",
-                            // rx: 10,
-                            // ry: 10,
-                            font: {
-                              fontWeight: "600",
-                              color: "#000",
-                            },
-                          },
-                        },
-                        //title: key.title,
-                      }}
-                    /> */}
+                   
                   </React.Suspense>
                   </div>
-                {/* </div> */}
+               
               </Col>
             );
           }):null}
         </Row>
           )}
-     {/* </Card.Body>
-    </Card> */}
+    
     <svg style={{ height: '0' }}>
     <defs>
         <linearGradient id="pickup-chart" x1="0" x2="0" y1="0" y2="1">
