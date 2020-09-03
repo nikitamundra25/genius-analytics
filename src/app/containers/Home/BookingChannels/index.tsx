@@ -12,7 +12,7 @@ const PieChartComponent = React.lazy(() =>
 );
 
 
-export default ({ graphdata = [] ,date}:any) => {
+const BookingChannels = ({ graphdata = [] ,date}:any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.BookingChannelReducer
@@ -80,3 +80,4 @@ export default ({ graphdata = [] ,date}:any) => {
     // </Card>
   );
 };
+export default BookingChannels;

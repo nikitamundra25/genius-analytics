@@ -12,7 +12,7 @@ const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
 
-export default (props: any) => {
+const BusinessMixComponent = (props: any) => {
   // const {graphdata}= props;
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
@@ -184,3 +184,5 @@ export default (props: any) => {
     </>
   );
 };
+
+export default BusinessMixComponent;
