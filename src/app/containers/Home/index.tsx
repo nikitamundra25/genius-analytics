@@ -126,14 +126,14 @@ const HomeComponent: FunctionComponent = () => {
             </div>
           </Provider>
         );
-      // case "Geographic Origin of business":
-      //   return (
-      //     <Provider store={store}>
-      //       <div className="template">
-      //         <GeoBusiness date={date}/>
-      //       </div>
-      //     </Provider>
-      //   );
+      case "Geographic Origin of business":
+        return (
+          <Provider store={store}>
+            <div className="template">
+              <GeoBusiness date={date}/>
+            </div>
+          </Provider>
+        );
       case "MTD RGI Performance":
         return (
           <Provider store={store}>
@@ -189,7 +189,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={1}
                 row={0}
                 col={0}
-                minSizeY={1}
+                // minSizeY={1}
                 header={`<div class="panel-title">${widgets[0].name}</div>`}
                 content={() => getChart(widgets[0].name)}
               ></PanelDirective>
