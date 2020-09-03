@@ -24,7 +24,6 @@ const BOB = () => {
   useEffect(() => {
 
     let selectedDate = moment(date).format(checkDateFormat);
-    // const selectedDate: any = new Date(date);
     let currentDate = moment(new Date()).format(checkDateFormat);
     if (selectedDate > currentDate) {
       dispatch(requestBOBFutureData());
@@ -39,7 +38,6 @@ const BOB = () => {
 
   return (
     <>
-      {/* <Card> */}
         
 
         {isLoading ? (
@@ -169,7 +167,6 @@ const BOB = () => {
             </Table>
           </div>
         )}
-      {/* </Card> */}
     </>
   );
 };

@@ -9,7 +9,6 @@ import { requestKeyBusinessMetricsData, requestKeyBusinessMetricsFutureData, req
 import moment from "moment";
 import { checkDateFormat } from "../../../../config";
 
-// import { getCurrentHeight } from "../../../../helper";
 const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
@@ -107,7 +106,6 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
       id: "3",
       title: "RevPAR",
       color: "url(#revnue-chart)",
-      // color: "#1f4e79",
       chartSettings: { 
         primaryXAxis: {
           valueType: "Category",
@@ -215,7 +213,6 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
   return (
     <>
       <style>{SAMPLE_CSS}</style>
-      {/* <Card id={`key-card`}> */}
       <div style={{  "position": "absolute", "left": "0px", "top": "0px", "width": "100%"}} >
         <WidgetHeader
           title={"Key Business Metrics"}
@@ -224,7 +221,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         />
           </div>
         {activeToggle === "graph" ? (
-            // <Card.Body>
+        
             <>
         {isLoading ? (
               <WidgetLoader />
@@ -262,7 +259,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
               </>
             )}
             </>
-          // </Card.Body>
+         
         ) : (
           <div className="business-table-section"  style={{ "paddingTop": "62px" }}>
             <Table responsive className="business-table mt-3 mb-0">
@@ -294,7 +291,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         ) 
         }
         
-      {/* </Card> */}
+     
       <svg style={{ height: "0" }}>
         <defs>
           <linearGradient id="occ-chart" x1="0" x2="0" y1="0" y2="1">

@@ -27,7 +27,6 @@ const BusinessMixComponent = (props: any) => {
   useEffect(() => {
 
     let selectedDate = moment(props.date).format(checkDateFormat);
-    // const selectedDate: any = new Date(date);
     let currentDate = moment(new Date()).format(checkDateFormat);
     if (selectedDate > currentDate) {
       dispatch(requestBusinessMixFutureData());

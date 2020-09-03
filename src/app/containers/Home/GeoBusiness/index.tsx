@@ -43,13 +43,7 @@ const GeoBusiness  =  ({ graphdata = {},date }:any) => {
 
   return (
     <>
-      {/* <Card id="map-card">
-        <WidgetHeader
-          title={"Geographic Origin of business"}
-          activeToggle={"graph"}
-          showToggle={false} 
-        />
-        <Card.Body> */}
+
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -61,8 +55,7 @@ const GeoBusiness  =  ({ graphdata = {},date }:any) => {
             <WorldMap data={data} />
             </React.Suspense>
             )}
-        {/* </Card.Body>
-      </Card> */}
+
     </>
   );
 };
