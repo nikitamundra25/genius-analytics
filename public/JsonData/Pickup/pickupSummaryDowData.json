@@ -891,6 +891,530 @@
           "ADR": 170.4	
         }
       ]
+    },
+
+    {
+      "month": "March-22",
+      "dowData": [
+        {
+          "name": "Mon",
+          "OCC": 81,
+          "ADR": 170	
+
+	
+
+        },
+        {
+          "name": "Tue",
+          "OCC": 		89		,
+          "ADR": 	187	
+        },
+        {
+          "name": "Wed",
+          "OCC": 	86		,
+          "ADR": 		204	
+        },
+        {
+          "name": "Thu",
+          "OCC": 78				,
+          "ADR": 	187	
+        },
+        {
+          "name": "Fri",
+          "OCC": 70			,
+          "ADR": 192	
+        },
+        {
+          "name": "Sat",
+          "OCC": 86			,
+          "ADR": 	107	
+        },
+        {
+          "name": "Sun",
+          "OCC": 86		,
+          "ADR": 	168				
+        },
+        {
+          "name": "Total",
+          "OCC": 82,
+          "ADR": 173.6				
+        }
+      ]
+    },
+    {
+      "month": "April-22",
+      "dowData": [
+        {
+          "name": "Mon",
+          "OCC": 76	
+          ,
+          "ADR": 161	
+
+	
+
+        },
+        {
+          "name": "Tue",
+          "OCC": 	92		,
+          "ADR": 	193
+        },
+        {
+          "name": "Wed",
+          "OCC": 	85	,
+          "ADR": 			193	
+        },
+        {
+          "name": "Thu",
+          "OCC": 	75		,
+          "ADR": 	144	
+        },
+        {
+          "name": "Fri",
+          "OCC": 	78		,
+          "ADR": 190
+        },
+        {
+          "name": "Sat",
+          "OCC": 90				,
+          "ADR": 		101	
+        },
+        {
+          "name": "Sun",
+          "OCC": 80			,
+          "ADR": 	161					
+        },
+        {
+          "name": "Total",
+          "OCC": 82,
+          "ADR": 163.3			
+        }
+      ]
+    },
+    {
+      "month": "May-22",
+      "dowData": [
+        {
+          "name": "Mon",
+          "OCC": 77	  ,
+          "ADR": 160
+
+        },
+        {
+          "name": "Tue",
+          "OCC": 	91		,
+          "ADR": 		182
+        },
+        {
+          "name": "Wed",
+          "OCC": 	83		,
+          "ADR": 			196	
+        },
+        {
+          "name": "Thu",
+          "OCC": 76				,
+          "ADR": 	186		
+        },
+        {
+          "name": "Fri",
+          "OCC": 78			,
+          "ADR": 204	
+        },
+        {
+          "name": "Sat",
+          "OCC": 87			,
+          "ADR": 	102
+        },
+        {
+          "name": "Sun",
+          "OCC": 84		,
+          "ADR": 		164				
+        },
+        {
+          "name": "Total",
+          "OCC": 82,
+          "ADR":170.6		
+        }
+      ]
+    },
+    {
+      "month": "June-22",
+      "dowData": [
+        {
+          "name": "Mon",
+          "OCC": 80	  ,
+          "ADR": 163	
+
+        },
+        {
+          "name": "Tue",
+          "OCC": 	92		,
+          "ADR": 	200	
+        },
+        {
+          "name": "Wed",
+          "OCC": 	83	,
+          "ADR": 		203	
+        },
+        {
+          "name": "Thu",
+          "OCC": 	77			,
+          "ADR": 	187	
+        },
+        {
+          "name": "Fri",
+          "OCC": 	73		,
+          "ADR": 200	
+        },
+        {
+          "name": "Sat",
+          "OCC": 	88	,
+          "ADR": 	104	
+        },
+        {
+          "name": "Sun",
+          "OCC": 	88		,
+          "ADR": 	145						
+        },
+        {
+          "name": "Total",
+          "OCC": 	83,
+          "ADR": 171.7		
+        }
+      ]
+    },
+    {
+      "month": "July-22",
+      "dowData": [
+        {
+          "name": "Mon",
+          "OCC": 76	 ,
+          "ADR": 160
+
+        },
+        {
+          "name": "Tue",
+          "OCC": 	88			,
+          "ADR": 		195
+        },
+        {
+          "name": "Wed",
+          "OCC": 83		,
+          "ADR": 			204	
+        },
+        {
+          "name": "Thu",
+          "OCC": 77				,
+          "ADR": 	178		
+        },
+        {
+          "name": "Fri",
+          "OCC": 70		,
+          "ADR": 194
+        },
+        {
+          "name": "Sat",
+          "OCC": 83				,
+          "ADR": 		106	
+        },
+        {
+          "name": "Sun",
+          "OCC": 86		,
+          "ADR": 	158						
+        },
+        {
+          "name": "Total",
+          "OCC": 80,
+          "ADR": 170.7	
+        }
+      ]
+    },
+    {
+      "month": "August-22",
+      "dowData": [
+        {
+          "name": "Mon",
+          "OCC": 78	,
+          "ADR": 168	
+
+        },
+        {
+          "name": "Tue",
+          "OCC": 	88			,
+          "ADR": 	192	
+        },
+        {
+          "name": "Wed",
+          "OCC": 88		,
+          "ADR": 		196	
+        },
+        {
+          "name": "Thu",
+          "OCC": 79				,
+          "ADR": 	165	
+        },
+        {
+          "name": "Fri",
+          "OCC": 71			,
+          "ADR": 	191
+        },
+        {
+          "name": "Sat",
+          "OCC": 90		,
+          "ADR": 		106
+        },
+        {
+          "name": "Sun",
+          "OCC": 82			,
+          "ADR": 		170				
+        },
+        {
+          "name": "Total",
+          "OCC": 82,
+          "ADR": 169.7		
+        }
+      ]
+    },
+    {
+      "month": "September-22",
+      "dowData": [
+        {
+          "name": "Mon",
+          "OCC": 79
+          ,
+          "ADR": 165
+        },
+        {  
+          "name": "Tue",
+          "OCC": 	88		,
+          "ADR": 	190
+        },
+        {
+          "name": "Wed",
+          "OCC": 84	,
+          "ADR": 		202
+        },
+        {
+          "name": "Thu",
+          "OCC": 76			,
+          "ADR": 	153	
+        },
+        {
+          "name": "Fri",
+          "OCC": 72		,
+          "ADR": 201
+        },
+        {
+          "name": "Sat",
+          "OCC": 83		,
+          "ADR": 	103	
+        },
+        {
+          "name": "Sun",
+          "OCC": 88	,
+          "ADR": 	179				
+        },
+        {
+          "name": "Total",
+          "OCC": 81,
+          "ADR": 170.4	
+        }
+      ]
+    },
+    {
+      "month": "February-22",
+      "dowData": [
+        {
+          "name": "Mon",
+          "OCC": 79
+	
+          ,
+          "ADR": 165
+	
+
+        },
+        {
+          "name": "Tue",
+          "OCC": 	88		,
+          "ADR": 	190
+        },
+        {
+          "name": "Wed",
+          "OCC": 84	,
+          "ADR": 		202
+        },
+        {
+          "name": "Thu",
+          "OCC": 76			,
+          "ADR": 	153	
+        },
+        {
+          "name": "Fri",
+          "OCC": 72		,
+          "ADR": 201
+        },
+        {
+          "name": "Sat",
+          "OCC": 83		,
+          "ADR": 	103	
+        },
+        {
+          "name": "Sun",
+          "OCC": 88	,
+          "ADR": 	179				
+        },
+        {
+          "name": "Total",
+          "OCC": 81,
+          "ADR": 170.4	
+        }
+      ]
+    },
+    {
+      "month": "February-22",
+      "dowData": [
+        {
+          "name": "Mon",
+          "OCC": 79
+	
+          ,
+          "ADR": 165
+	
+
+        },
+        {
+          "name": "Tue",
+          "OCC": 	88		,
+          "ADR": 	190
+        },
+        {
+          "name": "Wed",
+          "OCC": 84	,
+          "ADR": 		202
+        },
+        {
+          "name": "Thu",
+          "OCC": 76			,
+          "ADR": 	153	
+        },
+        {
+          "name": "Fri",
+          "OCC": 72		,
+          "ADR": 201
+        },
+        {
+          "name": "Sat",
+          "OCC": 83		,
+          "ADR": 	103	
+        },
+        {
+          "name": "Sun",
+          "OCC": 88	,
+          "ADR": 	179				
+        },
+        {
+          "name": "Total",
+          "OCC": 81,
+          "ADR": 170.4	
+        }
+      ]
+    },
+    {
+      "month": "February-22",
+      "dowData": [
+        {
+          "name": "Mon",
+          "OCC": 79
+	
+          ,
+          "ADR": 165
+	
+
+        },
+        {
+          "name": "Tue",
+          "OCC": 	88		,
+          "ADR": 	190
+        },
+        {
+          "name": "Wed",
+          "OCC": 84	,
+          "ADR": 		202
+        },
+        {
+          "name": "Thu",
+          "OCC": 76			,
+          "ADR": 	153	
+        },
+        {
+          "name": "Fri",
+          "OCC": 72		,
+          "ADR": 201
+        },
+        {
+          "name": "Sat",
+          "OCC": 83		,
+          "ADR": 	103	
+        },
+        {
+          "name": "Sun",
+          "OCC": 88	,
+          "ADR": 	179				
+        },
+        {
+          "name": "Total",
+          "OCC": 81,
+          "ADR": 170.4	
+        }
+      ]
+    },
+    {
+      "month": "February-22",
+      "dowData": [
+        {
+          "name": "Mon",
+          "OCC": 79
+	
+          ,
+          "ADR": 165
+	
+
+        },
+        {
+          "name": "Tue",
+          "OCC": 	88		,
+          "ADR": 	190
+        },
+        {
+          "name": "Wed",
+          "OCC": 84	,
+          "ADR": 		202
+        },
+        {
+          "name": "Thu",
+          "OCC": 76			,
+          "ADR": 	153	
+        },
+        {
+          "name": "Fri",
+          "OCC": 72		,
+          "ADR": 201
+        },
+        {
+          "name": "Sat",
+          "OCC": 83		,
+          "ADR": 	103	
+        },
+        {
+          "name": "Sun",
+          "OCC": 88	,
+          "ADR": 	179				
+        },
+        {
+          "name": "Total",
+          "OCC": 81,
+          "ADR": 170.4	
+        }
+      ]
     }
   ]
 }
