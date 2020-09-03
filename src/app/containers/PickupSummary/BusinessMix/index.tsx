@@ -178,20 +178,20 @@ const PickupBusinessMix = (props: any) => {
                   <td className="content-col">
                     <ProgressBar
                       now={list.RoomNts}
-                      className="custom-bar"
+                      className="custom-bar-mix"
                       max={100}
                     />
-                    <span className="progressbar-value">
+                    <span className="progressbar-value-mix">
                       {`${list.RoomNts}%`}
                     </span>
                   </td>
                   <td className="content-col">
                   <ProgressBar
                       now={list.ADR}
-                      className="custom-bar bg-2"
+                      className="custom-bar-mix bg-2"
                       max={maxPeak}
                     />
-                    <span className="progressbar-value">
+                    <span className="progressbar-value-mix">
                       {list.ADR}
                     </span>
                   </td>
