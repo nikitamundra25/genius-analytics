@@ -582,7 +582,20 @@ const MonthlyTable = ({ date }: any) => {
                         </>
                       );
                     })
-                  : null}
+                  : 
+                  <tr>
+                   <td>
+                    <div className="">
+                  <div className="no-data-icon">
+                    <i className="icon-ban" />
+                  </div>
+                  <h4 className="mb-1">
+                  No data found for this month 
+                  </h4>
+                </div>
+                </td>
+                  </tr>
+                 }
               </tbody>
               <tfoot>
                 <tr>
@@ -616,7 +629,7 @@ const MonthlyTable = ({ date }: any) => {
                   <td className="total-col ">{staffRooms}</td>
                   <td className="total-col ">{staffADR}</td>
                   <td className="total-col total-content">{TotalRooms}</td>
-                  <td className="total-col ">{TotalADR.toFixed(1)}</td>
+                  <td className="total-col ">{TotalADR > 0 ? TotalADR.toFixed(1): 0}</td>
                   <td className="total-col ">{TotalRevenue.toLocaleString()}</td>
                 </tr>
               </tfoot>
