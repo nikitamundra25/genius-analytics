@@ -1,10 +1,10 @@
 
 @import "../../../scss/variables";
 .dashboard-yearly-table{
-  height:calc(100% - 0px);
+  height: calc(100% - 0px);
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 15px;
+  padding: 15px 15px 0px;
 }
 .yearly-table{
   border-collapse: collapse;
@@ -27,6 +27,9 @@
     @media only screen and (max-width: 1493px) {
       // padding: 3px 1px;
     }
+    @media only screen and (max-width: 1420px) {
+      padding: 1px 1px;
+    }
     
     @media only screen and (max-width: 1393px) {
       // padding: 3px 1px;
@@ -36,9 +39,9 @@
       padding: 1px 1px;
       font-size: 11px;
     }
-    @media only screen and (max-width: 1265px) {
+    @media only screen and (max-width: 1250px) {
       padding: 1px 1px;
-      font-size: 11px;
+      font-size: 10px;
     }
     @media only screen and (max-width: 1220px) {
       padding: 1px 1px;
@@ -98,6 +101,9 @@
   }
   @media only screen and (max-width: 1299px) {
     min-width: 75px;
+  }
+  @media only screen and (max-width: 1250px) {
+    font-size: 11px;
   }
     // @media only screen and (max-width: 1480px) {
     //   font-size:10px;
@@ -232,7 +238,7 @@
         margin-left: 5px;
       }
       @media only screen and (max-width: 1305px) {
-        width:17px;
+        width:16px;
       }
     }
   }
@@ -252,14 +258,14 @@
     @media only screen and (max-width: 1450px) {
       height: 18px;
     }
-    @media only screen and (max-width: 1370px) {
-      height: 20px;
+    @media only screen and (max-width: 1420px) {
+      height: 18px;
     }
     @media only screen and (max-width: 1320px) {
-      height: 20px;
+      height: 17px;
     }
-    @media only screen and (max-width: 1220px) {
-      height: 18px;
+    @media only screen and (max-width: 1250px) {
+      height: 16px;
     }
     .progress-bar{
       // color:#000;

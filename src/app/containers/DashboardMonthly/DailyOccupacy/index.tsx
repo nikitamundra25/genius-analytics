@@ -190,6 +190,7 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
   return (
     <>
         <style>{SAMPLE_CSS}</style>
+        <div style={{  "position": "absolute", "left": "0px", "top": "0px", "width": "100%"}} > 
         <WidgetHeader
           // title={"Daily Occupacy Vs. BUD Vs. LY"}
           title={`${
@@ -205,8 +206,9 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
           selectedMonthlyData={selectedValue}
           handleChange={handleChange}
         />
+        </div>
 
-        {/* <Card.Body> */}
+       
           {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -214,6 +216,7 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
+            <div className="d-flex h-100" style={{ "paddingTop": "62px" }} > 
             <React.Suspense
               fallback={
                 <div className="card-loader">
@@ -250,6 +253,7 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
                 charts={Charts}
               />
             </React.Suspense>
+            </div>
           )}
       <svg style={{ height: "0" }}>
         <defs>

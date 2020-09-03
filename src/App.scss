@@ -333,7 +333,8 @@ body {
 
   .back-top {
     position: fixed;
-    background: #ffffff;
+    background: $theme-color;
+    color:$white;
     width: 40px;
     height: 40px;
     right: 20px;
@@ -344,13 +345,13 @@ body {
     justify-content: center;
     font-size: 26px;
     font-weight: 600;
-    color: #007db9;
+   
     border-radius: 4px;
     line-height: normal;
     box-shadow: 0 0 7px 0px rgba(47, 48, 48, 0.34);
     &:hover{
-      background: $theme-color;
-      color:#fff;
+      background: $white;
+      color:$theme-color;
     }
   }
 
