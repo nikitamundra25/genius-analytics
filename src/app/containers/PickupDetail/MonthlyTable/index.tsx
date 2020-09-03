@@ -584,16 +584,20 @@ const MonthlyTable = ({ date }: any) => {
                     })
                   : 
                   <tr>
-                   <td>
-                    <div className="">
-                  <div className="no-data-icon">
-                    <i className="icon-ban" />
-                  </div>
-                  <h4 className="mb-1">
-                  No data found for this month 
-                  </h4>
-                </div>
-                </td>
+                     
+                     <td className="title-col  text-center">
+                             
+                    </td>
+                    <td colSpan={31} className={`content-col`}>
+                      <div className="no-data-section">
+                        <div className="no-data-icon">
+                          <i className="icon-ban" />
+                        </div>
+                        <p className="mb-0">
+                          No data found for this month 
+                        </p>
+                      </div>
+                    </td>
                   </tr>
                  }
               </tbody>
