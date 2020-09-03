@@ -31,7 +31,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
       <Card
         id={`summary-card${rowId}`}
         className='bg-white h-auto mb-3 pickup-section-card'>
-        <Card.Body className='pb-0'>
+        <Card.Body >
           <Row className='no-gutters'>
             <Col xs={12} md={5}>
               <div className='sub-title text-left'>{chartType.name}</div>
