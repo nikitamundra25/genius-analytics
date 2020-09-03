@@ -132,21 +132,21 @@ const PickupBusinessMix = (props: any) => {
   //   },
   // ];
 
-  const SAMPLE_CSS = `
-      #pickupmix-chart stop {
-      stop-color: #4684bd;
-    }
-    #pickupmix-chart stop[offset="0"] {
-      stop-opacity: 1;
-    }
-    #pickupmix-chart stop[offset="1"] {
-      stop-opacity: 0.3;
-    }
-    `;
+  // const SAMPLE_CSS = `
+  //     #pickupmix-chart stop {
+  //     stop-color: #4684bd;
+  //   }
+  //   #pickupmix-chart stop[offset="0"] {
+  //     stop-opacity: 1;
+  //   }
+  //   #pickupmix-chart stop[offset="1"] {
+  //     stop-opacity: 0.3;
+  //   }
+  //   `;
 
   return (
     <>
-      <style>{SAMPLE_CSS}</style>
+      {/* <style>{SAMPLE_CSS}</style> */}
       {DowDataLoading ? (
         <WidgetLoader />
       ) : DowDataError ? (
@@ -235,14 +235,14 @@ const PickupBusinessMix = (props: any) => {
         </>
       )}
 
-      <svg style={{ height: "0" }} >
+      {/* <svg style={{ height: "0" }} >
         <defs>
           <linearGradient  id='pickupmix-chart' x1='0' x2='0' y1='0' y2='1'>
             <stop offset='0' />
             <stop offset='1' />
           </linearGradient>
         </defs>
-      </svg>
+      </svg> */}
     </>
   );
 };
