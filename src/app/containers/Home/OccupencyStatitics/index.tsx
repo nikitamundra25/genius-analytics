@@ -69,7 +69,7 @@ const labeltemplate2 = (args: any) => {
     } else if (selectedDate === currentDate) {
       dispatch(requestOccupacyStaticsData());
     }
-    
+
     // eslint-disable-next-line
   }, [date]);
 
@@ -317,9 +317,6 @@ const labeltemplate2 = (args: any) => {
     <style>
           {SAMPLE_CSS}
       </style>
-      {/* <Card id="occ-card">
-        <WidgetHeader title={"Occupancy Statistics"} activeToggle={"graph"} showToggle={false} />
-        <Card.Body> */}
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -351,7 +348,6 @@ const labeltemplate2 = (args: any) => {
                     visible:false,
                   },
                   tooltip: { enable: true },
-                  // height: setHeight,
                 }}
                 charts={Charts1}
                 
@@ -389,8 +385,7 @@ const labeltemplate2 = (args: any) => {
           </Col>
         </Row>
          )} 
-       {/* </Card.Body>
-      </Card> */}
+   
 
       <svg style={{ height: '0' }}>
         <defs>

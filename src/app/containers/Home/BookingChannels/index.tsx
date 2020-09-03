@@ -40,9 +40,7 @@ const BookingChannels = ({ graphdata = [] ,date}:any) => {
   }, [date]);
 
   return (
-    // <Card id="booking-card">
-    //   <WidgetHeader title={"Booking Channel Mix"} activeToggle={"graph"}  showToggle={false} />
-    //   <Card.Body>
+
     <>
       {isLoading ? (
             <WidgetLoader />
@@ -54,8 +52,6 @@ const BookingChannels = ({ graphdata = [] ,date}:any) => {
             <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
           <PieChartComponent
             id={"booking-mix"}
-            //height={"270px"}
-            // height={setHeight}
             data={data}
             chartSettings={{
               SeriesDirective: {
@@ -76,8 +72,6 @@ const BookingChannels = ({ graphdata = [] ,date}:any) => {
            </React.Suspense>
           )}
         </>
-    //   </Card.Body>
-    // </Card>
   );
 };
 export default BookingChannels;
