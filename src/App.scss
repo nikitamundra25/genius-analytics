@@ -322,6 +322,7 @@ body {
   .app-footer {
     padding: 0px 16px;
     color: $secondary;
+    background: #e8eaeb;
     border: 0px;
     font-size: 14px;
     margin-top: 30px;
@@ -330,6 +331,45 @@ body {
     height:auto !important;
   }
 
+  .back-top {
+    position: fixed;
+    background: $theme-color;
+    color:$white;
+    width: 40px;
+    height: 40px;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 600;
+   
+    border-radius: 4px;
+    line-height: normal;
+    box-shadow: 0 0 7px 0px rgba(47, 48, 48, 0.34);
+    &:hover{
+      background: $white;
+      color:$theme-color;
+    }
+  }
+ .no-data-section {
+  padding: 16px 0px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  .no-data-icon {
+    font-size: 26px;
+    color: #868686;
+  }
+  p {
+    font-size: 15px;
+    color: #010101;
+  }
+ }
   // card css
   .card {
     background: $transparent;
@@ -366,7 +406,25 @@ body {
       }
     }
   }
-
+  .e-dashboardlayout.e-control .e-panel .e-panel-header{
+    padding: 10px 15px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .custom-panel-header{
+    padding: 10px 15px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  .panel-title{
+    font-weight: 500;
+    color: #2c2c2c;
+    font-size: 18px;
+    text-align: left;
+    line-height:normal;
+  }
   .main-title {
     font-weight: 500;
     color: $black;
@@ -505,7 +563,7 @@ body {
     }
   }
   .react-datepicker-popper {
-    z-index: 1001;
+    z-index: 1002;
   }
   .common-dropdown {
     font-size: 15px;

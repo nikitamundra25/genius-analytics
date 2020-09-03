@@ -27,7 +27,8 @@ let value:Number = parseInt(args.text);
   return (
     <ChartComponent
       id={`chart-${barChart.id}`}
-      style={{ textAlign: "center" }}
+      style={{ textAlign: "center","height":barChart.height ? barChart.height : "100%" ,
+      "width":"100%" }}
       chartArea={{ border: { width: 0 } }}
       height="100%" 
       width="100%"

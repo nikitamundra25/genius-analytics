@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef, useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import moment from "moment";
 import { useHistory, useLocation } from "react-router";
@@ -45,6 +45,38 @@ const TopBar = (props: any) => {
   // } else {
   //   isPrevdateSelection = true;
   // }
+ 
+  useEffect(() => {
+    window.addEventListener('scroll', scrollFunction);
+   // eslint-disable-next-line
+ }, []);
+
+ 
+
+  const scrollFunction = () => {
+    const scrollbutton: HTMLElement | null = document.getElementById('toTop');
+    if (scrollbutton) {
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+      ) {
+        scrollbutton.style.display = 'flex';
+      } else {
+        scrollbutton.style.display = 'none';
+      }
+    }
+  };
+
+  const scrollToTop = () => {
+  // detect support for the behavior property in ScrollOptions
+  const supportsNativeSmoothScroll: boolean =
+    "scrollBehavior" in document.documentElement.style;
+  if (supportsNativeSmoothScroll) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    window.scrollTo(0, 0);
+  }
+  };
 
   return (
     <>
@@ -132,6 +164,14 @@ const TopBar = (props: any) => {
           </div>
         </div>
       </div>
+      <span
+          className='back-top cursor-pointer'
+          onClick={scrollToTop}
+          //onClick={() => setCount(count + 1)}
+          id='toTop'
+        >
+          <i className='fa fa-angle-up' />
+        </span>
     </>
   );
 };

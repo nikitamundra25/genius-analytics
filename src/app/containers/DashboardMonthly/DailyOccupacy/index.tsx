@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Card } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
@@ -25,24 +24,11 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
     // eslint-disable-next-line
   }, []);
 
-  const [setHeight, setsetHeight] = React.useState<string>("250px");
   const [selectedValue, setselectedValue] = React.useState<string>("OCC");
   const [occupacyList, setoccupacyList] = React.useState<any>([]);
 
   useEffect(() => {
-    const modalbtn: HTMLElement | null = document.getElementById(
-      `daily-occ-card`
-    );
-    if (modalbtn) {
-      setTimeout(() => {
-        const check = modalbtn.getBoundingClientRect();
-        const getHeight = check.height;
-        const setgraphHeight = getHeight - 83;
-        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-        setsetHeight(`${setgraphHeight}px`);
-      }, 100);
-    }
-    
+ 
     let stemp: any = [];
     if(months && months.length){  
     data.map((key: any, index: number) => {
@@ -72,34 +58,6 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
     // eslint-disable-next-line
   }, [data]);
 
-  useEffect(() => {
-    const resizeListener = () => {
-      // // change width from the state object
-      const modalbtn: HTMLElement | null = document.getElementById(
-        `daily-occ-card`
-      );
-      // console.log("modalbtn", modalbtn);
-
-      if (modalbtn) {
-        setTimeout(() => {
-          const check = modalbtn.getBoundingClientRect();
-          const getHeight = check.height;
-          const setgraphHeight = getHeight - 83;
-          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-          setsetHeight(`${setgraphHeight}px`);
-        }, 100);
-      }
-    };
-    // set resize listener
-    window.addEventListener("resize", resizeListener);
-
-    // clean up function
-    return () => {
-      // remove resize listener
-      window.removeEventListener("resize", resizeListener);
-    };
-    // eslint-disable-next-line
-  }, []);
 
   const handleChange = (event: any) => {
     setselectedValue(event.target.value);
@@ -140,13 +98,15 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
       name: selectedValue,
       width: 3,
       opacity: 0.6,
-      fill: "#7cccca",
+      //fill: "#7cccca",
+      fill:"rgb(149 171 199)",
+     
       marker: {
         visible: false,
         width: 10,
         height: 10,
-        fill: "#2f5891",
-        border: { width: 1, color: "#4176b9" },
+        fill: "rgb(149 171 199)",
+        border: { width: 1, color: "rgb(149 171 199)" },
         dataLabel: {
           visible: true,
           position: "Top",
@@ -161,20 +121,22 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
       dataSource: occupacyList,
       xName: "name",
       yName: "Budget",
-      type: "Spline",
-      fill: "#b82f2c",
+      type: "SplineArea",
+      // fill: "#b82f2c",
+      opacity: 0.6,
+      fill:"rgb(247 218 228)",
       name: "Budget",
       width: 2,
       dashArray: "3",
       yAxisName: "yAxis1",
       marker: {
-        visible: true,
+        visible: false,
         width: 6,
         height: 6,
-        fill: "#b82f2c",
-        border: { width: 1, color: "#b82f2c" },
+        fill: "rgb(247 218 228)",
+        border: { width: 1, color: "rgb(247 218 228)" },
         dataLabel: {
-          visible: false,
+          visible: true,
           position: "Top",
           font: {
             fontWeight: "600",
@@ -187,20 +149,23 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
       dataSource: occupacyList,
       xName: "name",
       yName: "LY",
-      type: "Spline",
-      fill: "#94b54e",
+      type: "SplineArea",
+      opacity: 0.6,
+      fill:"rgb(130 223 215)",
+     
+      //fill: "#94b54e",
       name: "LY",
       width: 2,
       dashArray: "3",
       yAxisName: "yAxis1",
       marker: {
-        visible: true,
+        visible: false,
         width: 6,
         height: 6,
-        fill: "#94b54e",
-        border: { width: 1, color: "#94b54e" },
+        fill: "rgb(130 223 215)",
+        border: { width: 1, color: "rgb(130 223 215)" },
         dataLabel: {
-          visible: false,
+          visible: true,
           position: "Bottom",
           font: {
             fontWeight: "600",
@@ -224,8 +189,8 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
 
   return (
     <>
-      <Card id="daily-occ-card">
         <style>{SAMPLE_CSS}</style>
+        <div style={{  "position": "absolute", "left": "0px", "top": "0px", "width": "100%"}} > 
         <WidgetHeader
           // title={"Daily Occupacy Vs. BUD Vs. LY"}
           title={`${
@@ -241,8 +206,9 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
           selectedMonthlyData={selectedValue}
           handleChange={handleChange}
         />
+        </div>
 
-        <Card.Body>
+       
           {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -250,6 +216,7 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
+            <div className="d-flex h-100" style={{ "paddingTop": "62px" }} > 
             <React.Suspense
               fallback={
                 <div className="card-loader">
@@ -282,14 +249,12 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
                   },
                   tooltip: { enable: true },
                   Legend: { enable: false },
-                  height: setHeight,
                 }}
                 charts={Charts}
               />
             </React.Suspense>
+            </div>
           )}
-        </Card.Body>
-      </Card>
       <svg style={{ height: "0" }}>
         <defs>
           <linearGradient id="gradient-daily" x1="0" x2="0" y1="0" y2="1">

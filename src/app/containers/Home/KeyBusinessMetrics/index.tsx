@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Col, Card, Row, Table } from "react-bootstrap";
+import { Col, Row, Table } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState, ToggleType } from "../../../../interfaces";
@@ -15,7 +15,6 @@ const BarChartComponent = React.lazy(() =>
 );
 
 const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
-  const [setHeight, setsetHeight] = React.useState<string>("250px");
   const [activeToggle, setactiveToggle] = React.useState<ToggleType>("graph");
 
   const dispatch = useDispatch();
@@ -45,51 +44,6 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
     // eslint-disable-next-line
   }, [date]);
 
-  useEffect(() => {
-    // const modalbtn: HTMLElement | null = document.getElementById(`language_dropmodal-${index}`);
-    const modalbtn: HTMLElement | null = document.getElementById(`key-card`);
-    if (modalbtn) {
-      setTimeout(() => {
-        const check = modalbtn.getBoundingClientRect();
-        const getHeight =check.height;
-        const setgraphHeight = getHeight - 75 ;
-        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-        setsetHeight(`${setgraphHeight}px`)
-      }, 100);
-    }
-    // eslint-disable-next-line
-  }, [data]);
-
-  useEffect(() => {
-    const resizeListener = () => {
-      // // change width from the state object
-      const modalbtn: HTMLElement | null = document.getElementById(
-        `key-card`
-      );
-     // console.log("modalbtn", modalbtn);
-
-      if (modalbtn) {
-        setTimeout(() => {
-          const check = modalbtn.getBoundingClientRect();
-          const getHeight =check.height;
-          const setgraphHeight = getHeight - 75 ;
-          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-          setsetHeight(`${setgraphHeight}px`)
-        }, 100);
-      }
-    };
-    // set resize listener
-    window.addEventListener("resize", resizeListener);
-
-    // clean up function
-    return () => {
-      // remove resize listener
-      window.removeEventListener("resize", resizeListener);
-    };
-    // eslint-disable-next-line
-  }, []);
-
-
 
   const barChartBusinessMetrics = [
     {
@@ -115,7 +69,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "OCC",
         tooltip: { enable: true,  position: "Top" },
-        height: setHeight,
+         height: "100%",
       },
       data: data&&  data.graph && data.graph.length ? data.graph[0].OCC : [],
      
@@ -144,7 +98,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "ADR",
         tooltip: { enable: true,  position: "Top" },
-        height: setHeight,
+        height: "100%",
       },
       data: data &&  data.graph && data.graph.length ? data.graph[1].ADR : [],
       
@@ -173,7 +127,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "RevPAR",
         tooltip: { enable: true,  position: "Top" },
-        height: setHeight,
+        height: "100%",
         
       },
       data: data &&  data.graph && data.graph.length ? data.graph[2].Revpar : [],
@@ -203,7 +157,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         },
         title: "Revenue",
         tooltip: { enable: true,  position: "Top" },
-        height: setHeight,
+        height: "100%",
       },
       data: data &&  data.graph && data.graph.length ? data.graph[3].Revenue : [],
       
@@ -257,19 +211,22 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
     setactiveToggle(str);
   };
 
+  
   return (
     <>
       <style>{SAMPLE_CSS}</style>
-      <Card id={`key-card`}>
+      {/* <Card id={`key-card`}> */}
+      <div style={{  "position": "absolute", "left": "0px", "top": "0px", "width": "100%"}} >
         <WidgetHeader
           title={"Key Business Metrics"}
           activeToggle={activeToggle}
           onToggle={(str: ToggleType) => handleWidgetView(str)}
         />
-
+          </div>
         {activeToggle === "graph" ? (
-            <Card.Body>
-            {isLoading ? (
+            // <Card.Body>
+            <>
+        {isLoading ? (
               <WidgetLoader />
             ) : isError ? (
               <ErrorComponent
@@ -277,12 +234,12 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
               />
             ) : (
               <>
-                <Row className="row-inner">
+                <Row className="row-inner h-100" style={{ "paddingTop": "62px" }}>
                   {barChartBusinessMetrics && barChartBusinessMetrics.length ? (
                    
                       barChartBusinessMetrics.map((key: any, index: number) => {
                         return (
-                          <Col key={index} sm={3} md={3} id={`col-width${index}`}>
+                          <Col key={index} sm={3} md={3} id={`col-width${index}`} className= "h-100">
                             <React.Suspense
                               fallback={
                                 <div className="card-loader">
@@ -300,14 +257,14 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
                           </Col>
                         );
                       })
-                  
                   ) : null}
                 </Row>
               </>
             )}
-          </Card.Body>
+            </>
+          // </Card.Body>
         ) : (
-          <div className="business-table-section">
+          <div className="business-table-section"  style={{ "paddingTop": "62px" }}>
             <Table responsive className="business-table mt-3 mb-0">
               <thead>
                 <tr>
@@ -337,7 +294,7 @@ const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
         ) 
         }
         
-      </Card>
+      {/* </Card> */}
       <svg style={{ height: "0" }}>
         <defs>
           <linearGradient id="occ-chart" x1="0" x2="0" y1="0" y2="1">

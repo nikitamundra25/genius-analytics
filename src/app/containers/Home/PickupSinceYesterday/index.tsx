@@ -1,6 +1,5 @@
 import React, {useEffect}  from "react";
-import { Card, Row, Col } from "react-bootstrap";
-import WidgetHeader from "../../../components/WidgetHeader";
+import {  Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
@@ -19,7 +18,6 @@ const MixedCharts = React.lazy(() =>
 
 const PickupSinceYesterday = ({date }:any) => {
   const dispatch = useDispatch();
-  const [setHeight, setsetHeight] = React.useState<string>("250px");
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.RoomNightsReducer
   );
@@ -45,50 +43,6 @@ const PickupSinceYesterday = ({date }:any) => {
   }, [date]);
 
   
- useEffect(() => {
-  const cardheight: HTMLElement | null = document.getElementById(`pickup-card`);
-  if (cardheight) {
-    setTimeout(() => {
-      const check = cardheight.getBoundingClientRect();
-      const getHeight =check.height;
-      const setgraphHeight = getHeight - 135 ;
-     // console.log("pickup chart height ",check, getHeight, setgraphHeight);
-      setsetHeight(`${setgraphHeight}px`)
-    }, 100);
-    
-  }
-  // eslint-disable-next-line
-}, [data]);
-
-useEffect(() => {
-
-  const resizeListener = () => {
-
-    // // change width from the state object
-    const cardheight: HTMLElement | null = document.getElementById(`pickup-card`);
-   // console.log("cardheight", cardheight);
-
-    if (cardheight) {
-      setTimeout(() => {
-        const check = cardheight.getBoundingClientRect();
-        const getHeight =check.height;
-        const setgraphHeight = getHeight - 135 ;
-       // console.log("pickup chart height on resize",check, getHeight, setgraphHeight);
-        setsetHeight(`${setgraphHeight}px`)
-      }, 100);
-    }
-  };
-  // set resize listener
-  window.addEventListener("resize", resizeListener);
-
-  // clean up function
-  return () => {
-    // remove resize listener
-    window.removeEventListener("resize", resizeListener);
-  };
-  // eslint-disable-next-line
-}, []);
-
 
   const BarChartReferenceLine = [
     {
@@ -198,10 +152,10 @@ useEffect(() => {
     <style>
           {SAMPLE_CSS}
       </style>
-    <Card id="pickup-card">
+    {/* <Card id="pickup-card">
       <WidgetHeader title={"Pick up Since Yesterday"} activeToggle={"graph"} showToggle={false} />
 
-      <Card.Body>
+      <Card.Body> */}
       {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -209,31 +163,30 @@ useEffect(() => {
               message={"An error occured while fetching details "}
             />
           ) : (
-        <Row className='row-inner'>
+        <Row className='row-inner h-100'>
           {BarChartReferenceLine && BarChartReferenceLine.length ? 
           BarChartReferenceLine.map((key: any, index: number) => {
             return (
-              <Col xs={12} md={4} key={index}>
-                <div className="pickup-card">
-                  <div  className="text-left range-text">
+              <Col xs={12} md={4} key={index} className="h-100" >
+                {/* <div className="pickup-card"> */}
+                  <div  className="text-left range-text" style={{  "position": "absolute", "left": "25px", "top": "0px", "width": "100%"}} >
                     <div className="sub-inner-title">{key.title}</div>
                     {key.range ? (
                       <div className={`${key.textClass} h3  pt-2 mb-0`}>
                          <img src={key.arrowClass} alt="success" width="20" className="mr-2"/>
-                        {/* <i className={`${key.arrowClass}`}></i>  */}
                         {key.range}
                       </div>
                     ) : null}
                   </div>
- 
+                  <div className="h-100 d-flex" style={{ "paddingTop": "62px" }} >
                   <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
                     <MixedCharts
                         id={`pickup-${index}`}
                         charts={[key.charts]}
                        legend = {false}
                         chartSettings={{
-                          width: "100%",
-                          height: setHeight,
+                          // width: "100%",
+                          // height: "80%",
                           chartArea:{ border: { width: 0 } },
                           primaryXAxis: {
                             valueType: "Category",
@@ -242,7 +195,6 @@ useEffect(() => {
                            
                           },
                           primaryYAxis: {
-                            
                             labelFormat: "{value}",
                             edgeLabelPlacement: "Shift",
                             majorGridLines: { width: 0 },
@@ -256,6 +208,7 @@ useEffect(() => {
                          
                           tooltip: { enable: true },
                           //title: key.title,
+                          height: "100%"
                         }}
                       />
                     {/* <ColumnChart
@@ -289,14 +242,15 @@ useEffect(() => {
                       }}
                     /> */}
                   </React.Suspense>
-                </div>
+                  </div>
+                {/* </div> */}
               </Col>
             );
           }):null}
         </Row>
           )}
-     </Card.Body>
-    </Card>
+     {/* </Card.Body>
+    </Card> */}
     <svg style={{ height: '0' }}>
     <defs>
         <linearGradient id="pickup-chart" x1="0" x2="0" y1="0" y2="1">

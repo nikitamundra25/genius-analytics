@@ -144,10 +144,11 @@
   }
   .content-col{
     font-weight: 500;
-    width: 130px;
+    // width: 130px;
+    min-width: 120px;
   }
 }
-.custom-bar{
+.custom-bar-mix{
   background-color: transparent;
   border-radius: 0px;
   height: 16px;
@@ -165,7 +166,7 @@
   }
     
 }
-.progressbar-value{
+.progressbar-value-mix{
   position: absolute;
   left: 0px;
   top: 0px;
@@ -177,8 +178,9 @@
   font-size: 11px;
 }
 
-.table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.11);
+.businessmix-table.table-striped tbody tr:nth-of-type(odd), .summary-table.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.08);
 }
+
 
 

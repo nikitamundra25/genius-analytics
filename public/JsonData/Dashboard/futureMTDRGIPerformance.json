@@ -2,23 +2,23 @@
   "data": [
     {
       "data": [
-        { "x": "My RevPAR", "y1": 0, "y2": null  },
-        { "x": "RevPAR Compset", "y1": 0, "y2": null  },
-        { "x": "RGI", "y1": null , "y2": 0  }
+        { "x": "My RevPAR", "y1": 0 },
+        { "x": "RevPAR Compset", "y1": 0 },
+        { "x": "RGI", "y1": 0 }
       ]
     },
     {
       "data": [
-        { "x": "My OCC", "y1": 0, "y2": null  },
-        { "x": "OCC Compset", "y1": 0, "y2": null  },
-        { "x": "MPI", "y1": null, "y2": 0  }
+        { "x": "My OCC", "y1": 0 },
+        { "x": "OCC Compset", "y1": 0 },
+        { "x": "MPI", "y1": 0 }
       ]
     },
     {
       "data": [
-        { "x": "My ARR", "y1": 0, "y2": null },
-        { "x": "ARR Compset", "y1": 0 , "y2": null },
-        { "x": "ARI", "y1": null, "y2": 0  }
+        { "x": "My ARR", "y1": 0},
+        { "x": "ARR Compset", "y1": 0 },
+        { "x": "ARI", "y1": 0 }
       ]
     }
   ]

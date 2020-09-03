@@ -1,6 +1,5 @@
 import React,{useEffect} from "react";
-import { Card, Row, Col } from "react-bootstrap";
-import WidgetHeader from "../../../components/WidgetHeader";
+import {  Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { requestRGIPerformanceData } from "../../../../actions";
@@ -20,56 +19,6 @@ export default ({ graphdata = [] }: any) => {
     dispatch(requestRGIPerformanceData());
     // eslint-disable-next-line
   }, []);
-
-  const [setHeight, setsetHeight] = React.useState<string>("250px");
-
- useEffect(() => {
-    const modalbtn: HTMLElement | null = document.getElementById(`dy-rgi-card`);
-    if (modalbtn) {
-      setTimeout(() => {
-        const check = modalbtn.getBoundingClientRect();
-        const getHeight =check.height;
-        const setgraphHeight = getHeight - 75 ;
-        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-        setsetHeight(`${setgraphHeight}px`)
-      }, 100);
-      
-    }
-    // eslint-disable-next-line
-  }, [data]);
-
-  useEffect(() => {
-
-    const resizeListener = () => {
-
-      // // change width from the state object
-      const modalbtn: HTMLElement | null = document.getElementById(
-        `dy-rgi-card`
-      );
-     // console.log("modalbtn", modalbtn);
-
-      if (modalbtn) {
-        setTimeout(() => {
-          const check = modalbtn.getBoundingClientRect();
-          const getHeight =check.height;
-          const setgraphHeight = getHeight - 75 ;
-          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-          setsetHeight(`${setgraphHeight}px`)
-        }, 100);
-      }
-    };
-    // set resize listener
-    window.addEventListener("resize", resizeListener);
-
-    // clean up function
-    return () => {
-      // remove resize listener
-      window.removeEventListener("resize", resizeListener);
-    };
-    // eslint-disable-next-line
-  }, []);
-
-   
 
 
   const RGIBarChart = [
@@ -94,9 +43,7 @@ export default ({ graphdata = [] }: any) => {
   ];
 
   return (
-    <Card id="dy-rgi-card">
-      <WidgetHeader title={"RGI Performance - YTD"}  activeToggle={"graph"}  showToggle={false}/>
-      <Card.Body>
+    <>
       {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -104,10 +51,10 @@ export default ({ graphdata = [] }: any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
-        <Row className="row-inner">
+        <Row className="row-inner h-100">
           {RGIBarChart.map((key: any, index: number) => {
             return (
-              <Col key={index} sm={4} md={4}>
+              <Col key={index} sm={4} md={4} className="h-100">
                 <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
                   <ColumnChart
                     chartSettings={{
@@ -134,7 +81,6 @@ export default ({ graphdata = [] }: any) => {
                       },
                       //title: key.title,
                       tooltip: { enable: true },
-                      height: setHeight,
                       
                     }}
                     key={index}
@@ -146,7 +92,6 @@ export default ({ graphdata = [] }: any) => {
           })}
         </Row>
           )}
-     </Card.Body>
-    </Card>
+    </>
   );
 };

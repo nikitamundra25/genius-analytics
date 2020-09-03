@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Card, Table, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Table, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { requestMonthlyBOBData } from "../../../../actions";
@@ -57,8 +57,8 @@ const MonthlyBOB = (props: any) => {
 
   return (
     <>
-      <Card>
-        <Card.Body className="month-table-card">
+      {/* <Card>
+        <Card.Body className="month-table-card"> */}
           {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -277,8 +277,8 @@ const MonthlyBOB = (props: any) => {
               </div>
             </React.Suspense>
           )}
-        </Card.Body>
-      </Card>
+        {/* </Card.Body>
+      </Card> */}
     </>
   );
 };

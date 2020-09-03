@@ -1,6 +1,4 @@
 import React,{useEffect} from "react";
-import { Card } from "react-bootstrap";
-import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { requestRevPARYTDData } from "../../../../actions";
@@ -20,55 +18,6 @@ const RevparYTD = ({ graphdata = [] }: any) => {
     // eslint-disable-next-line
   }, []);
 
-  const [setHeight, setsetHeight] = React.useState<string>("250px");
-
- useEffect(() => {
-    const modalbtn: HTMLElement | null = document.getElementById(`revpar-card`);
-    if (modalbtn) {
-      setTimeout(() => {
-        const check = modalbtn.getBoundingClientRect();
-        const getHeight =check.height;
-        const setgraphHeight = getHeight - 75 ;
-        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-        setsetHeight(`${setgraphHeight}px`)
-      }, 100);
-      
-    }
-    // eslint-disable-next-line
-  }, [data]);
-
-  useEffect(() => {
-
-    const resizeListener = () => {
-
-      // // change width from the state object
-      const modalbtn: HTMLElement | null = document.getElementById(
-        `revpar-card`
-      );
-     // console.log("modalbtn", modalbtn);
-
-      if (modalbtn) {
-        setTimeout(() => {
-          const check = modalbtn.getBoundingClientRect();
-          const getHeight =check.height;
-          const setgraphHeight = getHeight - 75 ;
-          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-          setsetHeight(`${setgraphHeight}px`)
-        }, 100);
-      }
-    };
-    // set resize listener
-    window.addEventListener("resize", resizeListener);
-
-    // clean up function
-    return () => {
-      // remove resize listener
-      window.removeEventListener("resize", resizeListener);
-    };
-    // eslint-disable-next-line
-  }, []);
-
-  
 
 
   const labeltemplate = (args:any) => {
@@ -84,16 +33,17 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       type: "SplineArea",
      // fill: "url(#gradient-chart)",
       name: "OCC %",
-      opacity:0.5,
+      opacity:0.7,
       width:2,
       fill:"rgb(239, 183, 202)",
+      
       yAxisName:'yAxis1',
-      dashArray: '5,5',
-      border:{
-        color: 'rgb(184 129 148)',
-         //color: '#78a3c7', 
-         width: 2 ,
-      },
+      //dashArray: '5,5',
+      // border:{
+      //   color: 'rgb(0, 189, 174)',
+      //    //color: '#78a3c7', 
+      //    width: 2 ,
+      // },
       //opacity: '0.6',
       marker: {
         dataLabel: {
@@ -112,20 +62,21 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       dataSource: data,
       xName: "name",
       yName: "RevPAR",
-      type: "Spline",
-      fill: "#76923c",
+      type: "SplineArea",
+      //fill: "#76923c",
       name: "RevPAR",
       width: 2,
-      
+      opacity:0.5,
+      fill:"rgb(0, 43, 101)",
       marker: {
         visible: false,
         width: 8,
         height: 8,
-        fill:"#76923c",
-        border: { width: 0, color: "#76923c" },
+        fill:"rgb(0, 43, 101)",
+        border: { width: 0, color: "rgb(0, 43, 101)" },
         dataLabel: {
           visible: true,
-          position: "Top",
+          position: "Bottom",
           font: {
             fontWeight: "600",
             color: "#000000",
@@ -137,19 +88,21 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       dataSource: data,
       xName: "name",
       yName: "NrevPAR",
-      type: "Spline",
-      fill: "#bf0b0b",
+      type: "SplineArea",
+     // fill: "#bf0b0b",
       name: "NrevPAR",
       width: 2,
+      opacity:0.4,
+      fill:"rgb(0, 189, 174)",
       marker: {
         visible: false,
         width: 8,
         height: 8,
-        fill: "#bf0b0b",
-        border: { width: 0, color: "#bf0b0b" },
+        fill: "rgb(0, 189, 174)",
+        border: { width: 0, color: "rgb(0, 189, 174)" },
         dataLabel: {
           visible: true,
-          position: "Bottom",
+          position: "Top",
           font: {
             fontWeight: "600",
             color: "#000000",
@@ -176,9 +129,7 @@ const RevparYTD = ({ graphdata = [] }: any) => {
      <style>
           {SAMPLE_CSS}
       </style>
-      <Card id="revpar-card">
-        <WidgetHeader title={"RevPAR Vs. NrevPAR - YTD"} activeToggle={"graph"}  showToggle={false} />
-        <Card.Body>
+    
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -213,14 +164,12 @@ const RevparYTD = ({ graphdata = [] }: any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
-                height: setHeight,
               }}
               charts={Charts}
             />
             </React.Suspense>
           )}
-        </Card.Body>
-      </Card>
+     
       <svg style={{ height: '0' }}>
                     <defs>
                         <linearGradient id="gradient-chart" x1="0" x2="0" y1="0" y2="1">

@@ -1,8 +1,6 @@
 import React, {useEffect} from "react";
-import { Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
-import WidgetHeader from "../../../components/WidgetHeader";
 import { requestBookingChannelData, requestBookingChannelFutureData, requestBookingChannelPastData } from "../../../../actions";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
@@ -41,58 +39,11 @@ export default ({ graphdata = [] ,date}:any) => {
     // eslint-disable-next-line
   }, [date]);
 
-  const [setHeight, setsetHeight] = React.useState<string>("250px");
-
- useEffect(() => {
-    const modalbtn: HTMLElement | null = document.getElementById(`booking-card`);
-    if (modalbtn) {
-      setTimeout(() => {
-        const check = modalbtn.getBoundingClientRect();
-        const getHeight =check.height;
-        const setgraphHeight = getHeight - 75 ;
-        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-        setsetHeight(`${setgraphHeight}px`)
-      }, 100);
-      
-    }
-    // eslint-disable-next-line
-  }, [data]);
-
-  useEffect(() => {
-
-    const resizeListener = () => {
-
-      // // change width from the state object
-      const modalbtn: HTMLElement | null = document.getElementById(
-        `booking-card`
-      );
-     // console.log("modalbtn", modalbtn);
-
-      if (modalbtn) {
-        setTimeout(() => {
-          const check = modalbtn.getBoundingClientRect();
-          const getHeight =check.height;
-          const setgraphHeight = getHeight - 75 ;
-          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-          setsetHeight(`${setgraphHeight}px`)
-        }, 100);
-      }
-    };
-    // set resize listener
-    window.addEventListener("resize", resizeListener);
-
-    // clean up function
-    return () => {
-      // remove resize listener
-      window.removeEventListener("resize", resizeListener);
-    };
-    // eslint-disable-next-line
-  }, []);
-
   return (
-    <Card id="booking-card">
-      <WidgetHeader title={"Booking Channel Mix"} activeToggle={"graph"}  showToggle={false} />
-      <Card.Body>
+    // <Card id="booking-card">
+    //   <WidgetHeader title={"Booking Channel Mix"} activeToggle={"graph"}  showToggle={false} />
+    //   <Card.Body>
+    <>
       {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -104,7 +55,7 @@ export default ({ graphdata = [] ,date}:any) => {
           <PieChartComponent
             id={"booking-mix"}
             //height={"270px"}
-            height={setHeight}
+            // height={setHeight}
             data={data}
             chartSettings={{
               SeriesDirective: {
@@ -124,8 +75,8 @@ export default ({ graphdata = [] ,date}:any) => {
           />
            </React.Suspense>
           )}
-        
-      </Card.Body>
-    </Card>
+        </>
+    //   </Card.Body>
+    // </Card>
   );
 };

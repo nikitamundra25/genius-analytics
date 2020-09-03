@@ -1,7 +1,6 @@
 import React,{useEffect} from "react";
-import { Row, Card, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Loader from "../../../components/Loader/Loader";
-import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
@@ -16,7 +15,6 @@ const MixedCharts = React.lazy(() =>
 
 const OccupencyStatitics = ({ graphdata = [] ,date}:any) => {
   const dispatch = useDispatch();
-  const [setHeight, setsetHeight] = React.useState<string>("250px");
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.OccupacyStaticsReducer
   );
@@ -61,8 +59,6 @@ const labeltemplate2 = (args: any) => {
   // }, []);
 
   useEffect(() => {
-   console.log("datedate occupacy",date);
-   
     let selectedDate = moment(date).format(checkDateFormat);
     // const selectedDate: any = new Date(date);
     let currentDate = moment(new Date()).format(checkDateFormat);
@@ -73,56 +69,10 @@ const labeltemplate2 = (args: any) => {
     } else if (selectedDate === currentDate) {
       dispatch(requestOccupacyStaticsData());
     }
-
-
+    
     // eslint-disable-next-line
   }, [date]);
 
-  useEffect(() => {
-    const modalbtn: HTMLElement | null = document.getElementById(`occ-card`);
-    if (modalbtn) {
-      setTimeout(() => {
-        const check = modalbtn.getBoundingClientRect();
-        const getHeight =check.height;
-        const setgraphHeight = getHeight - 75 ;
-        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-        setsetHeight(`${setgraphHeight}px`)
-      }, 100);
-      
-    }
-    // eslint-disable-next-line
-  }, [data]);
-
-  useEffect(() => {
-
-    const resizeListener = () => {
-
-      // // change width from the state object
-      const modalbtn: HTMLElement | null = document.getElementById(
-        `occ-card`
-      );
-     // console.log("modalbtn", modalbtn);
-
-      if (modalbtn) {
-        setTimeout(() => {
-          const check = modalbtn.getBoundingClientRect();
-          const getHeight =check.height;
-          const setgraphHeight = getHeight - 75 ;
-          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-          setsetHeight(`${setgraphHeight}px`)
-        }, 100);
-      }
-    };
-    // set resize listener
-    window.addEventListener("resize", resizeListener);
-
-    // clean up function
-    return () => {
-      // remove resize listener
-      window.removeEventListener("resize", resizeListener);
-    };
-    // eslint-disable-next-line
-  }, []);
 
 
     const Charts1 = [
@@ -367,9 +317,9 @@ const labeltemplate2 = (args: any) => {
     <style>
           {SAMPLE_CSS}
       </style>
-      <Card id="occ-card">
+      {/* <Card id="occ-card">
         <WidgetHeader title={"Occupancy Statistics"} activeToggle={"graph"} showToggle={false} />
-        <Card.Body>
+        <Card.Body> */}
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -377,8 +327,8 @@ const labeltemplate2 = (args: any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
-        <Row className='row-inner'>
-          <Col sm={8}>
+        <Row className='row-inner h-100'>
+          <Col sm={8} className="h-100" >
           <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
               <MixedCharts
                 id={"line-and-column"}
@@ -401,14 +351,14 @@ const labeltemplate2 = (args: any) => {
                     visible:false,
                   },
                   tooltip: { enable: true },
-                  height: setHeight,
+                  // height: setHeight,
                 }}
                 charts={Charts1}
                 
               />
           </React.Suspense>
           </Col>
-          <Col sm={4}>
+          <Col sm={4} className="h-100">
           <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
             <MixedCharts
               id={"line-and-bar"}
@@ -432,15 +382,15 @@ const labeltemplate2 = (args: any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
-                height: setHeight,
+                // height: setHeight,
               }}
             />       
                </React.Suspense>   
           </Col>
         </Row>
          )} 
-       </Card.Body>
-      </Card>
+       {/* </Card.Body>
+      </Card> */}
 
       <svg style={{ height: '0' }}>
         <defs>

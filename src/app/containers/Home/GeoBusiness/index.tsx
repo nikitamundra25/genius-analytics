@@ -1,7 +1,5 @@
 import React ,{useEffect} from "react";
-import { Card } from "react-bootstrap";
 // import data from "./datasource.json";
-import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
@@ -45,13 +43,13 @@ const GeoBusiness  =  ({ graphdata = {},date }:any) => {
 
   return (
     <>
-      <Card id="map-card">
+      {/* <Card id="map-card">
         <WidgetHeader
           title={"Geographic Origin of business"}
           activeToggle={"graph"}
           showToggle={false} 
         />
-        <Card.Body>
+        <Card.Body> */}
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -63,8 +61,8 @@ const GeoBusiness  =  ({ graphdata = {},date }:any) => {
             <WorldMap data={data} />
             </React.Suspense>
             )}
-        </Card.Body>
-      </Card>
+        {/* </Card.Body>
+      </Card> */}
     </>
   );
 };

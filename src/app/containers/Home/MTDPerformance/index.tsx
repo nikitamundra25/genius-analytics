@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { Card, Row, Col } from "react-bootstrap";
-import WidgetHeader from "../../../components/WidgetHeader";
+import { Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
@@ -40,53 +39,6 @@ export default ({ graphdata = [] , date}: any) => {
     // eslint-disable-next-line
   }, [date]);
 
-  const [setHeight, setsetHeight] = React.useState<string>("250px");
-
- useEffect(() => {
-    const modalbtn: HTMLElement | null = document.getElementById(`mtd-card`);
-    if (modalbtn) {
-      setTimeout(() => {
-        const check = modalbtn.getBoundingClientRect();
-        const getHeight =check.height;
-        const setgraphHeight = getHeight - 75 ;
-        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-        setsetHeight(`${setgraphHeight}px`)
-      }, 100);
-      
-    }
-    // eslint-disable-next-line
-  }, [data]);
-
-  useEffect(() => {
-
-    const resizeListener = () => {
-
-      // // change width from the state object
-      const modalbtn: HTMLElement | null = document.getElementById(
-        `mtd-card`
-      );
-     // console.log("modalbtn", modalbtn);
-
-      if (modalbtn) {
-        setTimeout(() => {
-          const check = modalbtn.getBoundingClientRect();
-          const getHeight =check.height;
-          const setgraphHeight = getHeight - 75 ;
-          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-          setsetHeight(`${setgraphHeight}px`)
-        }, 100);
-      }
-    };
-    // set resize listener
-    window.addEventListener("resize", resizeListener);
-
-    // clean up function
-    return () => {
-      // remove resize listener
-      window.removeEventListener("resize", resizeListener);
-    };
-    // eslint-disable-next-line
-  }, []);
 
   const labeltemplate = (args:any) => {
     return (<div  style={{fontSize: '11px'}}>
@@ -422,9 +374,9 @@ export default ({ graphdata = [] , date}: any) => {
     <style>
           {SAMPLE_CSS}
       </style>
-    <Card id="mtd-card">
+    {/* <Card id="mtd-card">
       <WidgetHeader title={"MTD RGI Performance"} showToggle={false} />
-      <Card.Body>
+      <Card.Body> */}
         {isLoading ? (
           <WidgetLoader />
         ) : isError ? (
@@ -432,11 +384,11 @@ export default ({ graphdata = [] , date}: any) => {
             message={"An error occured while fetching details "}
           />
         ) : (
-          <Row className="row-inner">
+          <Row className="row-inner h-100">
             {/* {RTGBarChart && RTGBarChart.length
               ? RTGBarChart.map((key: any, index: number) => {
                   return ( */}
-                    <Col sm={4} md={4} >
+                    <Col sm={4} md={4} className="h-100" >
                       <React.Suspense
                         fallback={
                           <div className="card-loader">
@@ -467,13 +419,13 @@ export default ({ graphdata = [] , date}: any) => {
                             },
                             tooltip: { enable: true },
                             title: "RGI",
-                            height: setHeight,
+                            // height: setHeight,
                           }}
                         />
                       </React.Suspense>
                       
                     </Col>
-                    <Col sm={4} md={4} >
+                    <Col sm={4} md={4} className="h-100">
                       <React.Suspense
                         fallback={
                           <div className="card-loader">
@@ -504,7 +456,7 @@ export default ({ graphdata = [] , date}: any) => {
                             },
                             tooltip: { enable: true },
                             title: "MPI",
-                            height: setHeight,
+                            // height: setHeight,
                           }}
                         />
                       </React.Suspense>
@@ -541,7 +493,7 @@ export default ({ graphdata = [] , date}: any) => {
                             },
                             tooltip: { enable: true },
                             title: "ARI",
-                            height: setHeight,
+                            // height: setHeight,
                           }}
                         />
                       </React.Suspense>
@@ -552,8 +504,8 @@ export default ({ graphdata = [] , date}: any) => {
               : null} */}
           </Row>
         )}
-      </Card.Body>
-    </Card>
+      {/* </Card.Body>
+    </Card> */}
      <svg style={{ height: '0' }}>
      <defs>
          <linearGradient id="rgi-chart" x1="0" x2="0" y1="0" y2="1">
