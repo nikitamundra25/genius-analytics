@@ -126,14 +126,14 @@ const HomeComponent: FunctionComponent = () => {
             </div>
           </Provider>
         );
-      case "Geographic Origin of business":
-        return (
-          <Provider store={store}>
-            <div className="template">
-              <GeoBusiness date={date}/>
-            </div>
-          </Provider>
-        );
+      // case "Geographic Origin of business":
+      //   return (
+      //     <Provider store={store}>
+      //       <div className="template">
+      //         <GeoBusiness date={date}/>
+      //       </div>
+      //     </Provider>
+      //   );
       case "MTD RGI Performance":
         return (
           <Provider store={store}>
