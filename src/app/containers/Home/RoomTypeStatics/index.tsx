@@ -14,7 +14,7 @@ const MixedCharts = React.lazy(
   () => import("../../../components/Charts/MixedCharts")
 );
 
-export default ({date }:any) => {
+const RoomTypeStatics =  ({date }:any) => {
   const dispatch = useDispatch();
   const { isLoading, data = [], isError } = useSelector(
     (state: IRootState) => state.RoomTypeStaticsReducer
@@ -256,3 +256,5 @@ export default ({date }:any) => {
     </>
   );
 };
+
+export default RoomTypeStatics

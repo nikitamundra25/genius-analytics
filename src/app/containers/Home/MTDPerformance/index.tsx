@@ -12,7 +12,7 @@ const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
 
-export default ({ graphdata = [] , date}: any) => {
+const MTDPerformance  = ({ graphdata = [] , date}: any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.MTRDRGIPerformanceReducer
@@ -534,3 +534,5 @@ export default ({ graphdata = [] , date}: any) => {
     </>
   );
 };
+
+export default MTDPerformance
