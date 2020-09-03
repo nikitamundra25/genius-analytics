@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { Row, Card, Col } from "react-bootstrap";
-import WidgetHeader from "../../../components/WidgetHeader";
+import { Row,  Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { requestMonthlyDailyOccupacyData } from "../../../../actions";
@@ -25,21 +24,9 @@ const MonthlyDailyOccupacy = ({ graphdata = [], selectedDate }: any) => {
   }, []);
 
   const [dailyOccupacyList, setdailyOccupacyList] = React.useState<any>([]);
-  const [setHeight, setsetHeight] = React.useState<string>("250px");
-
+ 
   useEffect(() => {
-    const modalbtn: HTMLElement | null = document.getElementById(
-      `monthly-occ-card`
-    );
-    if (modalbtn) {
-      setTimeout(() => {
-        const check = modalbtn.getBoundingClientRect();
-        const getHeight = check.height;
-        const setgraphHeight = getHeight - 75;
-        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-        setsetHeight(`${setgraphHeight}px`);
-      }, 100);
-    }
+
     let newData: any = [{ data: [] }, { data: [] }];
     if (months && months.length) {
       data.map((occdata: any, index: number) => {
@@ -53,34 +40,6 @@ const MonthlyDailyOccupacy = ({ graphdata = [], selectedDate }: any) => {
     // eslint-disable-next-line
   }, [data]);
 
-  useEffect(() => {
-    const resizeListener = () => {
-      // // change width from the state object
-      const modalbtn: HTMLElement | null = document.getElementById(
-        `monthly-occ-card`
-      );
-      // console.log("modalbtn", modalbtn);
-
-      if (modalbtn) {
-        setTimeout(() => {
-          const check = modalbtn.getBoundingClientRect();
-          const getHeight = check.height;
-          const setgraphHeight = getHeight - 75;
-          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-          setsetHeight(`${setgraphHeight}px`);
-        }, 100);
-      }
-    };
-    // set resize listener
-    window.addEventListener("resize", resizeListener);
-
-    // clean up function
-    return () => {
-      // remove resize listener
-      window.removeEventListener("resize", resizeListener);
-    };
-    // eslint-disable-next-line
-  }, []);
 
   const labeltemplate = (args: any) => {
     return (
@@ -275,13 +234,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [], selectedDate }: any) => {
     },
   ];
   return (
-    // <Card id="monthly-occ-card">
-    //   <WidgetHeader
-    //     title={"Monthly Daily Occupacy & ADR"}
-    //     activeToggle={"graph"}
-    //     showToggle={false}
-    //   />
-    //   <Card.Body>
+  
         isLoading ? (
           <WidgetLoader />
         ) : isError ? (
@@ -355,7 +308,6 @@ const MonthlyDailyOccupacy = ({ graphdata = [], selectedDate }: any) => {
                       visible: false,
                     },
                     tooltip: { enable: true },
-                    // height: setHeight,
                   }}
                   charts={Charts2}
                 />
@@ -363,8 +315,7 @@ const MonthlyDailyOccupacy = ({ graphdata = [], selectedDate }: any) => {
             </Col>
           </Row>
         )
-    //   </Card.Body>
-    // </Card>
+
   );
 };
 

@@ -1,6 +1,5 @@
 import React, {useEffect}  from "react";
-import { Card, Row, Col } from "react-bootstrap";
-import WidgetHeader from "../../../components/WidgetHeader";
+import {  Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
@@ -19,7 +18,6 @@ const MixedCharts = React.lazy(() =>
 
 const PickupSinceYesterday = ({date }:any) => {
   const dispatch = useDispatch();
-  const [setHeight, setsetHeight] = React.useState<string>("250px");
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.RoomNightsReducer
   );
@@ -45,50 +43,6 @@ const PickupSinceYesterday = ({date }:any) => {
   }, [date]);
 
   
- useEffect(() => {
-  const cardheight: HTMLElement | null = document.getElementById(`pickup-card`);
-  if (cardheight) {
-    setTimeout(() => {
-      const check = cardheight.getBoundingClientRect();
-      const getHeight =check.height;
-      const setgraphHeight = getHeight - 135 ;
-     // console.log("pickup chart height ",check, getHeight, setgraphHeight);
-      setsetHeight(`${setgraphHeight}px`)
-    }, 100);
-    
-  }
-  // eslint-disable-next-line
-}, [data]);
-
-useEffect(() => {
-
-  const resizeListener = () => {
-
-    // // change width from the state object
-    const cardheight: HTMLElement | null = document.getElementById(`pickup-card`);
-   // console.log("cardheight", cardheight);
-
-    if (cardheight) {
-      setTimeout(() => {
-        const check = cardheight.getBoundingClientRect();
-        const getHeight =check.height;
-        const setgraphHeight = getHeight - 135 ;
-       // console.log("pickup chart height on resize",check, getHeight, setgraphHeight);
-        setsetHeight(`${setgraphHeight}px`)
-      }, 100);
-    }
-  };
-  // set resize listener
-  window.addEventListener("resize", resizeListener);
-
-  // clean up function
-  return () => {
-    // remove resize listener
-    window.removeEventListener("resize", resizeListener);
-  };
-  // eslint-disable-next-line
-}, []);
-
 
   const BarChartReferenceLine = [
     {

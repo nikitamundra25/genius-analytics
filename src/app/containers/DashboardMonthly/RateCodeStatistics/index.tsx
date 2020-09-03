@@ -1,6 +1,4 @@
 import React,{useEffect} from "react";
-import { Card } from "react-bootstrap";
-import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { requestRateCodeStatisticsData } from "../../../../actions";
@@ -74,13 +72,6 @@ const RateCodeStatistics = ({ graphdata = [] }:any) => {
   ];
   return (
     <>
-      {/* <Card>
-      <WidgetHeader
-        title={"Rate Code Statistics"}
-        activeToggle={"graph"}
-        showToggle={false}
-      />
-        <Card.Body> */}
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -114,8 +105,6 @@ const RateCodeStatistics = ({ graphdata = [] }:any) => {
             />
              </React.Suspense>
           )}
-        {/* </Card.Body>
-      </Card> */}
     </>
   );
 };

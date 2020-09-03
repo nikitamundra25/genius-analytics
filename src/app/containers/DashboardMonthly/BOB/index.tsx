@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Card, Table, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Table, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { requestMonthlyBOBData } from "../../../../actions";

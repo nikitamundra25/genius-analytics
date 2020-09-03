@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Card } from "react-bootstrap";
 import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
@@ -25,24 +24,11 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
     // eslint-disable-next-line
   }, []);
 
-  const [setHeight, setsetHeight] = React.useState<string>("250px");
   const [selectedValue, setselectedValue] = React.useState<string>("OCC");
   const [occupacyList, setoccupacyList] = React.useState<any>([]);
 
   useEffect(() => {
-    const modalbtn: HTMLElement | null = document.getElementById(
-      `daily-occ-card`
-    );
-    if (modalbtn) {
-      setTimeout(() => {
-        const check = modalbtn.getBoundingClientRect();
-        const getHeight = check.height;
-        const setgraphHeight = getHeight - 83;
-        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-        setsetHeight(`${setgraphHeight}px`);
-      }, 100);
-    }
-    
+ 
     let stemp: any = [];
     if(months && months.length){  
     data.map((key: any, index: number) => {
@@ -72,34 +58,6 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
     // eslint-disable-next-line
   }, [data]);
 
-  useEffect(() => {
-    const resizeListener = () => {
-      // // change width from the state object
-      const modalbtn: HTMLElement | null = document.getElementById(
-        `daily-occ-card`
-      );
-      // console.log("modalbtn", modalbtn);
-
-      if (modalbtn) {
-        setTimeout(() => {
-          const check = modalbtn.getBoundingClientRect();
-          const getHeight = check.height;
-          const setgraphHeight = getHeight - 83;
-          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-          setsetHeight(`${setgraphHeight}px`);
-        }, 100);
-      }
-    };
-    // set resize listener
-    window.addEventListener("resize", resizeListener);
-
-    // clean up function
-    return () => {
-      // remove resize listener
-      window.removeEventListener("resize", resizeListener);
-    };
-    // eslint-disable-next-line
-  }, []);
 
   const handleChange = (event: any) => {
     setselectedValue(event.target.value);
@@ -224,7 +182,6 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
 
   return (
     <>
-      <Card id="daily-occ-card">
         <style>{SAMPLE_CSS}</style>
         <WidgetHeader
           // title={"Daily Occupacy Vs. BUD Vs. LY"}
@@ -242,7 +199,7 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
           handleChange={handleChange}
         />
 
-        <Card.Body>
+        {/* <Card.Body> */}
           {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -282,14 +239,11 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
                   },
                   tooltip: { enable: true },
                   Legend: { enable: false },
-                  height: setHeight,
                 }}
                 charts={Charts}
               />
             </React.Suspense>
           )}
-        </Card.Body>
-      </Card>
       <svg style={{ height: "0" }}>
         <defs>
           <linearGradient id="gradient-daily" x1="0" x2="0" y1="0" y2="1">

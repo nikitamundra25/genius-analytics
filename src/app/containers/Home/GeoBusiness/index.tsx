@@ -1,7 +1,5 @@
 import React ,{useEffect} from "react";
-import { Card } from "react-bootstrap";
 // import data from "./datasource.json";
-import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";

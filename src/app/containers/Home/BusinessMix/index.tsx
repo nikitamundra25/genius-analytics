@@ -15,7 +15,6 @@ const BarChartComponent = React.lazy(() =>
 export default (props: any) => {
   // const {graphdata}= props;
   const dispatch = useDispatch();
-  const [setHeight, setsetHeight] = React.useState<string>("250px");
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.BusinessMixReducer
   );
@@ -39,53 +38,6 @@ export default (props: any) => {
     }
     // eslint-disable-next-line
   }, [props.date]);
-
-  useEffect(() => {
-    const modalbtn: HTMLElement | null = document.getElementById(`mix-card`);
-    if (modalbtn) {
-      setTimeout(() => {
-        const check = modalbtn.getBoundingClientRect();
-        const getHeight =check.height;
-        const setgraphHeight = getHeight - 75 ;
-        //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-        setsetHeight(`${setgraphHeight}px`)
-      }, 100);
-      
-    }
-    // eslint-disable-next-line
-  }, [data]);
-
-  useEffect(() => {
-
-    const resizeListener = () => {
-
-      // // change width from the state object
-      const modalbtn: HTMLElement | null = document.getElementById(
-        `mix-card`
-      );
-     // console.log("modalbtn", modalbtn);
-
-      if (modalbtn) {
-        setTimeout(() => {
-          const check = modalbtn.getBoundingClientRect();
-          const getHeight =check.height;
-          const setgraphHeight = getHeight - 75 ;
-          //console.log("hello chart height on resize",check, getHeight, setgraphHeight);
-          setsetHeight(`${setgraphHeight}px`)
-        }, 100);
-      }
-    };
-    // set resize listener
-    window.addEventListener("resize", resizeListener);
-
-    // clean up function
-    return () => {
-      // remove resize listener
-      window.removeEventListener("resize", resizeListener);
-    };
-    // eslint-disable-next-line
-  }, []);
-
 
 
   const BarChartData = [
@@ -183,9 +135,7 @@ export default (props: any) => {
     <style>
           {SAMPLE_CSS}
       </style>
-      {/* <Card id="mix-card"> */}
-        {/* <WidgetHeader title={"Business Mix"} activeToggle={"graph"} showToggle={false}  /> */}
-        {/* <Card.Body> */}
+      
           {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -213,8 +163,7 @@ export default (props: any) => {
                 : null}
             </Row>
           )}
-        {/* </Card.Body> */}
-      {/* </Card> */}
+      
       <svg style={{ height: '0' }}>
         <defs>
             <linearGradient id="mix-chart" x1="0" x2="0" y1="0" y2="1">

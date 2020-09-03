@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import moment from "moment";
 import {
-  Card,
   Table,
   OverlayTrigger,
   Tooltip,
@@ -40,8 +39,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
 
   return (
     <>
-      <Card>
-        <Card.Body>
+    
           {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -398,8 +396,7 @@ const CumulativeTable = ({ selectedDate }: any) => {
               </div>
             </>
           )}
-        </Card.Body>
-      </Card>
+     
     </>
   );
 };
