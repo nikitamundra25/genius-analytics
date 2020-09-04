@@ -79,6 +79,7 @@ const TopBar = (props: any) => {
     });
   };
 
+
   // To change Date
   const ondateChange = (date: Date, str: string) => {
     const { startDate } = state;
@@ -102,24 +103,75 @@ const TopBar = (props: any) => {
     dispatch(requestDateSelectionData(setNewDate));
     props.handleReset(setNewDate);
   };
+
+  //  year arrow navigation
+  const handleYearNav = (str: string) => {
+    let activeYear: number = startDate.getFullYear();
+    let activeMonth: number = startDate.getMonth();
+    let year: number = str === "previous" ? activeYear - 1 : activeYear + 1;
+
+    let setMonthForDays: any = new Date(
+      year,
+      parseInt(moment().month(activeMonth).format("M"))
+    );
+
+    let setNewDate: any = new Date(
+      setMonthForDays.getFullYear(),
+      setMonthForDays.getMonth() - 1,
+      1
+    );
+    props.handleReset(setNewDate);
+    setState({
+      ...state,
+      activeYear: year,
+      startDate: setNewDate,
+    });
+  };
+  
   const CustomInput = forwardRef(({ onClick, value }: any, ref) => (
     <span className="custom-datepicker  cursor-pointer" onClick={onClick}>
       {value}
     </span>
   ));
   const { startDate } = state;
-  let d = new Date("01-01-2010");
-  let year = d.getFullYear();
-  let month = d.getMonth();
-  let day = d.getDate();
-  let endDate = new Date(year + 10, month, day);
-  console.log(endDate,"endDate");
+  // let d = new Date("01-01-2010");
+  // let year = d.getFullYear();
+  // let month = d.getMonth();
+  // let day = d.getDate();
+  // let endDate = new Date(year + 10, month, day);
+  // console.log(endDate,"endDate");
   return (
     <>
       <div className="main-navbar justify-content-end">
         {selectedNav === "Dashboard Yearly" ? (
-          ""
+           <div className="navbar-nav-item">
+           <div className="year-nav">
+             <span
+               className="cursor-pointer mr-2"
+               onClick={() => handleYearNav("previous")}
+             >
+               <i className="icon-arrow-left "></i>
+             </span>
+             <DatePicker
+            selected={startDate}
+            onChange={(date: any) => ondateChange(date, "year")}
+            showYearPicker
+            dateFormat="yyyy"
+            className="custom-datepicker cursor-pointer"
+            customInput={<CustomInput />}
+            // minDate={new Date("2010/01/01")}
+            // maxDate={new Date()}
+          />
+             <span
+               className="cursor-pointer ml-2"
+               onClick={() => handleYearNav("next")}
+             >
+               <i className="icon-arrow-right "></i>
+             </span>
+           </div>
+         </div>
         ) : (
+          <>
           <div className="navbar-nav-item">
             <div className="year-nav">
               <span
@@ -149,7 +201,6 @@ const TopBar = (props: any) => {
               </span>
             </div>
           </div>
-        )}
         <div className="navbar-nav-item">
           {/* <span className="cursor-pointer" onClick={()=>handleShow("year")}>
             {moment(startDate).format("YYYY")}{" "}
@@ -165,17 +216,9 @@ const TopBar = (props: any) => {
             // minDate={new Date("2010/01/01")}
             // maxDate={new Date()}
           />
-     
- 
-          {/* <DropDownListComponent
-            id="year"
-            dataSource={options}
-            change={onhandleChange}
-            placeholder="Select a year"
-            value={activeYear}
-            popupHeight="220px"
-          /> */}
         </div>
+        </>
+        )}
         <div className="navbar-nav-item">
           <Dropdown className="dashboard-dropdown common-dropdown">
             <Dropdown.Toggle variant="link" id="dropdown-dasboard">

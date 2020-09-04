@@ -77,7 +77,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
     {
       dataSource: data,
       xName: "name",
-      yName: "ADRTY",
+      yName: "ADR TY",
       type: "Spline",
       fill: "#202c47",
       name: "ADR TY",
@@ -94,7 +94,6 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
           font: {
             fontWeight: "600",
             color: "#000000",
-          
           },
         },
       },
@@ -103,7 +102,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
     {
       dataSource: data,
       xName: "name",
-      yName: "ADRLY",
+      yName: "ADR LY",
       type: "Spline",
       fill: "#81cbe8",
       name: "ADR LY",

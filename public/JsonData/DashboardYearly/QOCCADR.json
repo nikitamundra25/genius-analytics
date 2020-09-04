@@ -3,32 +3,27 @@
     {
       "name": "Q1",
       "OCC": 55,
-      "ADR": 200,
-      "RoomNights": 268
+      "ADR": 200
     },
     {
       "name": "Q2",
       "OCC": 97,
-      "ADR": 365,
-      "RoomNights": 232
+      "ADR": 365
     },
     {
       "name": "Q3",
       "OCC": 45,
-      "ADR": 277,
-      "RoomNights": 155
+      "ADR": 277
     },
     {
       "name": "Q4",
       "OCC": 77,
-      "ADR": 204,
-      "RoomNights": 349
+      "ADR": 204
     },
     {
       "name": "Total",
       "OCC": 69,
-      "ADR": 261.5,
-      "RoomNights": 1004
+      "ADR": 261.5
     }
   ]
 }
