@@ -205,11 +205,6 @@ const TopBar = (props: any) => {
           {/* <span className="cursor-pointer" onClick={()=>handleShow("year")}>
             {moment(startDate).format("YYYY")}{" "}
           </span> */}
-          <span
-            className="cursor-pointer mr-2"
-          >
-            <i className="icon-arrow-left "></i>
-          </span>
           <DatePicker
             selected={startDate}
             onChange={(date: any) => ondateChange(date, "year")}
@@ -220,11 +215,6 @@ const TopBar = (props: any) => {
             // minDate={new Date("2010/01/01")}
             // maxDate={new Date()}
           />
-           <span
-            className="cursor-pointer ml-2"
-          >
-            <i className="icon-arrow-right "></i>
-          </span>
         </div>
         </>
         )}
