@@ -75,9 +75,9 @@ const MonthlyTable = (props: any) => {
                   <th className='head-col'>Budget</th>
                   <th className='head-col'>LY</th>
                   <th className='head-col'>STLY</th>
-                  <th className='head-col'>Vs.BUD</th>
-                  <th className='head-col'>Vs.LY</th>
-                  <th className='head-col'>Vs.STLY</th>
+                  <th className='head-col'>Vs. BUD</th>
+                  <th className='head-col'>Vs. LY</th>
+                  <th className='head-col'>Vs. STLY</th>
                 </tr>
               </thead>
               <tbody>

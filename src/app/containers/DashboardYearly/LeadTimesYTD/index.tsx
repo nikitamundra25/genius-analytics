@@ -58,15 +58,18 @@ export default ({ graphdata = [] }: any) => {
                   innerRadius: "40%",
                   startAngle: "0",
                   endAngle: "360",
-                  radius: "70%",
                   explode: false,
                   explodeOffset: "10%",
                   explodeIndex: "3",
+                  radius:'100%'
                 },
                 chartComponent: {
                   enableAnimation: true,
                   center: { x: "50%", y: "50%" },
                 },
+                dataLabel: {
+                  position: 'Inside'
+                }
               }}
             />
           </React.Suspense>

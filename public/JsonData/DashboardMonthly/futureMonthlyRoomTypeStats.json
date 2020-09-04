@@ -1,40 +1,39 @@
 {
-    "data": [
-        {
-          "name": "0BRM",
-          "Rm Nts TY": 105,
-          "Rm Nts LY": 198,
-          "ADRTY": 228,
-          "ADRLY": 406
-        },
-        {
-          "name": "1BRM",
-          "Rm Nts TY": 188,
-          "Rm Nts LY": 204,
-          "ADRTY": 278,
-          "ADRLY": 364
-
-        },
-        {
-          "name": "2BRM",
-          "Rm Nts TY": 117,
-          "Rm Nts LY": 84,
-          "ADRTY": 438,
-          "ADRLY": 291
-        },
-        {
-          "name": "3BRM",
-          "Rm Nts TY": 81,
-          "Rm Nts LY": 283,
-          "ADRTY": 267,
-          "ADRLY": 348
-        },
-        {
-          "name": "4BRM",
-          "Rm Nts TY": 125,
-          "Rm Nts LY": 202,
-          "ADRTY": 266,
-          "ADRLY": 259
-        }
-      ]
+  "data": [
+    {
+      "name": "0BRM",
+      "Rm Nts TY": 91,
+      "Rm Nts LY": 80,
+      "ADRTY": 228,
+      "ADRLY": 406
+    },
+    {
+      "name": "1BRM",
+      "Rm Nts TY": 70,
+      "Rm Nts LY": 81,
+      "ADRTY": 278,
+      "ADRLY": 364
+    },
+    {
+      "name": "2BRM",
+      "Rm Nts TY": 80,
+      "Rm Nts LY": 81,
+      "ADRTY": 438,
+      "ADRLY": 291
+    },
+    {
+      "name": "3BRM",
+      "Rm Nts TY": 50,
+      "Rm Nts LY": 52,
+      "ADRTY": 267,
+      "ADRLY": 348
+    },
+    {
+      "name": "4BRM",
+      "Rm Nts TY": 61,
+      "Rm Nts LY": 68,
+      "ADRTY": 266,
+      "ADRLY": 259
+    }
+  ]
 }

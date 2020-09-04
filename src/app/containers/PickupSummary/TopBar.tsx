@@ -95,7 +95,7 @@ const TopBar = (props: any) => {
         )}
 
         <div className="navbar-list">
-          { location.pathname === AppRoutes.PICKUPDETAIL ? null :
+          { location.pathname === AppRoutes.PICKUPBOB ? 
           <div className="navbar-nav-item">
             <div className="year-nav">
                 <span
@@ -124,6 +124,7 @@ const TopBar = (props: any) => {
               </span>
             </div>
           </div>
+          : null
           }
 
           <div

@@ -53,13 +53,27 @@ const DashboardYearly: FunctionComponent = () => {
     restoreModel = dashboardObj.serialize();
     restoreModel[0].content = () => getChart("Cumulative");
     restoreModel[1].content = () => getChart("MOCCADR");
+    restoreModel[1].header =  `<div class="panel-title">Monthly OCC & ADR</div>`
+
     restoreModel[2].content = () => getChart("QOCCADR");
+    restoreModel[2].header =  `<div class="panel-title">Quarterly OCC & ADR</div>`
+
     restoreModel[3].content = () => getChart("ROOMTYPES");
+    restoreModel[3].header =  `<div class="panel-title">Room Types - YTD</div>`
+
     restoreModel[4].content = () => getChart("RevPARYTD");
+    restoreModel[4].header =  `<div class="panel-title">RevPAR Vs. NrevPAR - YTD</div>`
+
     restoreModel[5].content = () => getChart("StayYTD");
+    restoreModel[5].header =  `<div class="panel-title">Length of Stay & ADR - YTD</div>`
+
     restoreModel[6].content = () => getChart("Lead Times YTD");
+    restoreModel[6].header =  `<div class="panel-title">Lead Times YTD</div>`
+
     restoreModel[7].content = () => getChart("Lead Times YTD by Segment");
     restoreModel[8].content = () => getChart("RGI Performance - YTD");
+    restoreModel[8].header =  `<div class="panel-title">RGI Performance - YTD</div>`
+
   };
 
   const getChart = (chartType: any) => {

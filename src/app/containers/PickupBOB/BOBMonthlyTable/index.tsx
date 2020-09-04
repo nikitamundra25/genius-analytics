@@ -145,46 +145,46 @@ const BOBMonthlyTable = ({ date }: any) => {
               <thead>
                 <tr>
                   <th className="border-0"></th>
-                  <th className="head-col border-left main-head-col left-width" colSpan={3}>
+                  <th className="head-col  main-head-col left-width" colSpan={3}>
                     Bar
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={3}>
+                  <th className="head-col left-width main-head-col" colSpan={3}>
                     Public<br/>Discount
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={3}>
+                  <th className="head-col left-width main-head-col" colSpan={3}>
                     Corporate<br/>Discount
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={3}>
+                  <th className="head-col left-width main-head-col" colSpan={3}>
                     Partnership<br/>Discount
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={3}>
+                  <th className="head-col left-width main-head-col" colSpan={3}>
                     Online<br/>Advantage
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={3}>
+                  <th className="head-col left-width main-head-col" colSpan={3}>
                     Corporate<br/>Groups
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={3}>
+                  <th className="head-col left-width main-head-col" colSpan={3}>
                     Leisure<br/>Groups
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={3}>
+                  <th className="head-col left-width main-head-col" colSpan={3}>
                     Residential<br/>Groups
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={3}>
+                  <th className="head-col left-width main-head-col" colSpan={3}>
                     OTAs
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={3}>
+                  <th className="head-col left-width main-head-col" colSpan={3}>
                     Wholesale
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={3}>
+                  <th className="head-col left-width main-head-col" colSpan={3}>
                     Long Term<br/>Contract
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={3}>
+                  <th className="head-col left-width main-head-col" colSpan={3}>
                     Monthly<br/>Contract
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={3}>
+                  <th className="head-col left-width main-head-col" colSpan={3}>
                     Airline Crew<br/>Group
                   </th>
-                  <th className="head-col  main-head-col" colSpan={3}>
+                  <th className="head-col  left-width main-head-col" colSpan={3}>
                     Staff
                   </th>
                   <th className="head-col total-content main-head-col" colSpan={3}>
@@ -193,43 +193,43 @@ const BOBMonthlyTable = ({ date }: any) => {
                 </tr>
                 <tr>
                   <th className="border-left-0"></th>
-                  <th className="head-col border-left left-width">Rooms</th>
+                  <th className="head-col left-width">Rooms</th>
                   <th className="head-col  ">ADR</th>
                   <th className="head-col ">Revenue</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
                   <th className="head-col ">Revenue</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
                   <th className="head-col ">Revenue</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
                   <th className="head-col ">Revenue</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
                   <th className="head-col ">Revenue</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
                   <th className="head-col ">Revenue</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
                   <th className="head-col ">Revenue</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
                   <th className="head-col ">Revenue</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
                   <th className="head-col ">Revenue</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
                   <th className="head-col ">Revenue</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
                   <th className="head-col ">Revenue</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
                   <th className="head-col ">Revenue</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
                   <th className="head-col ">Revenue</th>
 
@@ -263,7 +263,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                             </td>
 
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.barValueRooms &&
                                 parseInt(list.barValueRooms) < 0
                                   ? "text-danger"
@@ -294,11 +294,11 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.barValueRevenue
-                                ? parseFloat(list.barValueRevenue).toLocaleString()
+                                ? Math.round(list.barValueRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.publicDiscountRooms &&
                                 parseInt(list.publicDiscountRooms) < 0
                                   ? "text-danger"
@@ -330,11 +330,11 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.publicDiscountRevenue
-                                ? parseFloat(list.publicDiscountRevenue).toLocaleString()
+                                ? Math.round(list.publicDiscountRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.corporateDiscountRooms &&
                                 parseInt(list.corporateDiscountRooms) < 0
                                   ? "text-danger"
@@ -367,11 +367,11 @@ const BOBMonthlyTable = ({ date }: any) => {
                             >
                               {" "}
                               {list.corporateDiscountRevenue
-                                ? parseFloat(list.corporateDiscountRevenue).toLocaleString()
+                                ? Math.round(list.corporateDiscountRevenue).toLocaleString()
                                 : null}{" "}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.partnershipDiscountRooms &&
                                 parseInt(list.partnershipDiscountRooms) < 0
                                   ? "text-danger"
@@ -403,11 +403,11 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.partnershipDiscountRevenue
-                                ? parseFloat(list.partnershipDiscountRevenue).toLocaleString()
+                                ? Math.round(list.partnershipDiscountRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.onlineAdvRooms &&
                                 parseInt(list.onlineAdvRooms) < 0
                                   ? "text-danger"
@@ -435,11 +435,11 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.onlineAdvRevenue
-                                ? parseFloat(list.onlineAdvRevenue).toLocaleString()
+                                ? Math.round(list.onlineAdvRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.corporateGroupRooms &&
                                 parseInt(list.corporateGroupRooms) < 0
                                   ? "text-danger"
@@ -472,11 +472,11 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.corporateGroupRevenue
-                                ? parseFloat(list.corporateGroupRevenue).toLocaleString()
+                                ? Math.round(list.corporateGroupRevenue).toLocaleString()
                                 : null}{" "}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.leisureRooms &&
                                 parseInt(list.leisureRooms) < 0
                                   ? "text-danger"
@@ -502,10 +502,10 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.leisureRevenue ? parseFloat(list.leisureRevenue).toLocaleString() : null}
+                              {list.leisureRevenue ? Math.round(list.leisureRevenue).toLocaleString() : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.residentialGroupRooms &&
                                 parseInt(list.residentialGroupRooms) < 0
                                   ? "text-danger"
@@ -537,11 +537,11 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.residentialGroupRevenue
-                                ? parseFloat(list.residentialGroupRevenue).toLocaleString()
+                                ? Math.round(list.residentialGroupRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.otaRooms && parseInt(list.otaRooms) < 0
                                   ? "text-danger"
                                   : ""
@@ -566,10 +566,10 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.otaRevenue ? parseFloat(list.otaRevenue).toLocaleString() : null}
+                              {list.otaRevenue ? Math.round(list.otaRevenue).toLocaleString() : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.wholesaleRooms &&
                                 parseInt(list.wholesaleRooms) < 0
                                   ? "text-danger"
@@ -597,11 +597,11 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.wholesaleRevenue
-                                ? parseFloat(list.wholesaleRevenue).toLocaleString() 
+                                ? Math.round(list.wholesaleRevenue).toLocaleString() 
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.longTermContractRooms &&
                                 parseInt(list.longTermContractRooms) < 0
                                   ? "text-danger"
@@ -633,11 +633,11 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.longTermContractRevenue
-                                ? parseFloat(list.longTermContractRevenue).toLocaleString()
+                                ? Math.round(list.longTermContractRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.monthlyContractRooms &&
                                 parseInt(list.monthlyContractRooms) < 0
                                   ? "text-danger"
@@ -649,7 +649,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.monthlyContractADR &&
                                 parseInt(list.monthlyContractADR) < 0
                                   ? "text-danger"
@@ -669,11 +669,11 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.monthlyContractRevenue
-                                ? parseFloat(list.monthlyContractRevenue).toLocaleString()
+                                ? Math.round(list.monthlyContractRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.airlineCrewRooms &&
                                 parseInt(list.airlineCrewRooms) < 0
                                   ? "text-danger"
@@ -703,11 +703,11 @@ const BOBMonthlyTable = ({ date }: any) => {
                               }`}
                             >
                               {list.airlineCrewRevenue
-                                ? parseFloat(list.airlineCrewRevenue).toLocaleString()
+                                ? Math.round(list.airlineCrewRevenue).toLocaleString()
                                 : null}
                             </td>
                             <td
-                              className={`content-col  ${
+                              className={`content-col  left-width ${
                                 list.staffRooms && parseInt(list.staffRooms) < 0
                                   ? "text-danger"
                                   : ""
@@ -732,7 +732,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.staffRevenue ? parseFloat(list.staffRevenue).toLocaleString() : null}
+                              {list.staffRevenue ? Math.round(list.staffRevenue).toLocaleString() : null}
                             </td>
                             <td
                               className={`content-col  total-content ${
@@ -762,13 +762,28 @@ const BOBMonthlyTable = ({ date }: any) => {
                                   : ""
                               }`}
                             >
-                              {list.resultRevenue ? parseFloat(list.resultRevenue).toLocaleString() : null}
+                              {list.resultRevenue ? Math.round(list.resultRevenue).toLocaleString() : null}
                             </td>
                           </tr>
                         </>
                       );
                     })
-                  : null}
+                  :  <tr>
+                     
+                  <td className="title-col  text-center">
+                          
+                 </td>
+                 <td colSpan={31} className={`content-col`}>
+                   <div className="no-data-section">
+                     <div className="no-data-icon">
+                       <i className="icon-ban" />
+                     </div>
+                     <p className="mb-0">
+                       No data found for this month 
+                     </p>
+                   </div>
+                 </td>
+               </tr>}
               </tbody>
               <tfoot>
                 <tr>
@@ -780,9 +795,9 @@ const BOBMonthlyTable = ({ date }: any) => {
                     {barValueADR > 0 ?parseFloat(barValueADR).toLocaleString() : 0}
                   </td>
                   <td className="total-col">
-                    {barValueRevenue > 0 ? parseFloat(barValueRevenue).toLocaleString() : 0}
+                    {barValueRevenue > 0 ? Math.round(barValueRevenue).toLocaleString() : 0}
                   </td>
-                  <td className="total-col">
+                  <td className="total-col left-width">
                     {publicDiscountRooms > 0
                       ?  parseFloat(publicDiscountRooms).toLocaleString() 
                       : 0}
@@ -792,10 +807,10 @@ const BOBMonthlyTable = ({ date }: any) => {
                   </td>
                   <td className="total-col ">
                     {publicDiscountRevenue > 0
-                      ? parseFloat(publicDiscountRevenue).toLocaleString()
+                      ? Math.round(publicDiscountRevenue).toLocaleString()
                       : 0}
                   </td>
-                  <td className="total-col ">
+                  <td className="total-col left-width">
                     {corporateDiscountRooms > 0
                       ? parseFloat(corporateDiscountRooms).toLocaleString()
                       : 0}
@@ -807,10 +822,10 @@ const BOBMonthlyTable = ({ date }: any) => {
                   </td>
                   <td className="total-col">
                     {corporateDiscountRevenue > 0
-                      ? parseFloat(corporateDiscountRevenue).toLocaleString()
+                      ? Math.round(corporateDiscountRevenue).toLocaleString()
                       : 0}
                   </td>
-                  <td className="total-col">
+                  <td className="total-col left-width">
                     {partnershipDiscountRooms > 0
                       ?parseFloat(partnershipDiscountRooms).toLocaleString()
                       : 0}
@@ -822,19 +837,19 @@ const BOBMonthlyTable = ({ date }: any) => {
                   </td>
                   <td className="total-col">
                     {partnershipDiscountRevenue > 0
-                      ? parseFloat(partnershipDiscountRevenue).toLocaleString()
+                      ? Math.round(partnershipDiscountRevenue).toLocaleString()
                       : 0}
                   </td>
-                  <td className="total-col">
+                  <td className="total-col left-width">
                     {onlineAdvRooms > 0 ? parseFloat(onlineAdvRooms).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
                     {onlineAdvADR > 0 ?parseFloat(onlineAdvADR).toLocaleString(): 0}
                   </td>
                   <td className="total-col ">
-                    {onlineAdvRevenue > 0 ? parseFloat(onlineAdvRevenue).toLocaleString( ): 0}
+                    {onlineAdvRevenue > 0 ? Math.round(onlineAdvRevenue).toLocaleString( ): 0}
                   </td>
-                  <td className="total-col ">
+                  <td className="total-col left-width">
                     {corporateGroupRooms > 0
                       ? parseFloat(corporateGroupRooms).toLocaleString()
                       : 0}
@@ -844,19 +859,19 @@ const BOBMonthlyTable = ({ date }: any) => {
                   </td>
                   <td className="total-col">
                     {corporateGroupRevenue > 0
-                      ? parseFloat(corporateGroupRevenue).toLocaleString()
+                      ? Math.round(corporateGroupRevenue).toLocaleString()
                       : 0}
                   </td>
-                  <td className="total-col">
+                  <td className="total-col left-width">
                     {leisureRooms > 0 ? parseFloat(leisureRooms).toLocaleString() : 0}
                   </td>
                   <td className="total-col">
                     {leisureADR > 0 ?parseFloat(leisureADR).toLocaleString() : 0}
                   </td>
                   <td className="total-col">
-                    {leisureRevenue > 0 ? parseFloat(leisureRevenue).toLocaleString() : 0}
+                    {leisureRevenue > 0 ? Math.round(leisureRevenue).toLocaleString() : 0}
                   </td>
-                  <td className="total-col ">
+                  <td className="total-col left-width">
                     {residentialGroupRooms > 0
                       ? parseFloat(residentialGroupRooms).toLocaleString()
                       : 0}
@@ -868,28 +883,28 @@ const BOBMonthlyTable = ({ date }: any) => {
                   </td>
                   <td className="total-col ">
                     {residentialGroupRevenue > 0
-                      ? parseFloat(residentialGroupRevenue).toLocaleString()
+                      ? Math.round(residentialGroupRevenue).toLocaleString()
                       : 0}
                   </td>
-                  <td className="total-col">
+                  <td className="total-col left-width">
                     {otaRooms > 0 ? parseFloat(otaRooms).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
                     {otaADR > 0 ? parseFloat(otaADR).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
-                    {otaRevenue > 0 ? parseFloat(otaRevenue).toLocaleString() : 0}
+                    {otaRevenue > 0 ? Math.round(otaRevenue).toLocaleString() : 0}
                   </td>
-                  <td className="total-col ">
+                  <td className="total-col left-width">
                     {wholesaleRooms > 0 ?parseFloat(wholesaleRooms).toLocaleString() : 0}
                   </td>
                   <td className="total-col">
                     {wholesaleADR > 0 ? parseFloat(wholesaleADR).toLocaleString()  : 0}
                   </td>
                   <td className="total-col">
-                    {wholesaleRevenue > 0 ? parseFloat(wholesaleRevenue).toLocaleString()  : 0}
+                    {wholesaleRevenue > 0 ? Math.round(wholesaleRevenue).toLocaleString()  : 0}
                   </td>
-                  <td className="total-col">
+                  <td className="total-col left-width">
                     {longTermContractRooms > 0
                       ? parseFloat(longTermContractRooms).toLocaleString() 
                       : 0}
@@ -901,10 +916,10 @@ const BOBMonthlyTable = ({ date }: any) => {
                   </td>
                   <td className="total-col">
                     {longTermContractRevenue > 0
-                      ?parseFloat(longTermContractRevenue).toLocaleString() 
+                      ?Math.round(longTermContractRevenue).toLocaleString() 
                       : 0}
                   </td>
-                  <td className="total-col">
+                  <td className="total-col left-width">
                     {monthlyContractRooms > 0
                       ? parseFloat(monthlyContractRooms).toLocaleString() 
                       : 0}
@@ -914,26 +929,26 @@ const BOBMonthlyTable = ({ date }: any) => {
                   </td>
                   <td className="total-col">
                     {monthlyContractRevenue > 0
-                      ? parseFloat(monthlyContractRevenue).toLocaleString() 
+                      ? Math.round(monthlyContractRevenue).toLocaleString() 
                       : 0}
                   </td>
-                  <td className="total-col">
+                  <td className="total-col left-width">
                     {airlineCrewRooms > 0 ?parseFloat(airlineCrewRooms).toLocaleString() : 0}
                   </td>
                   <td className="total-col">
                     {airlineCrewADR > 0 ?parseFloat(airlineCrewADR).toLocaleString(): 0}
                   </td>
                   <td className="total-col">
-                    {airlineCrewRevenue > 0 ? parseFloat(airlineCrewRevenue).toLocaleString() : 0}
+                    {airlineCrewRevenue > 0 ? Math.round(airlineCrewRevenue).toLocaleString() : 0}
                   </td>
-                  <td className="total-col ">
+                  <td className="total-col left-width">
                     {staffRooms > 0 ? parseFloat(staffRooms).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
                     {staffADR > 0 ? parseFloat(staffADR).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
-                    {staffRevenue > 0 ?parseFloat(staffRevenue).toLocaleString() : 0}
+                    {staffRevenue > 0 ?Math.round(staffRevenue).toLocaleString() : 0}
                   </td>
                   <td className="total-col total-content">
                     {resultRooms > 0 ? parseFloat(resultRooms).toLocaleString() : 0}
@@ -942,7 +957,7 @@ const BOBMonthlyTable = ({ date }: any) => {
                     {resultADR > 0 ? parseFloat(resultADR).toLocaleString() : 0}
                   </td>
                   <td className="total-col ">
-                    {resultRevenue > 0 ? parseFloat(resultRevenue).toLocaleString() : 0}
+                    {resultRevenue > 0 ? Math.round(resultRevenue).toLocaleString() : 0}
                   </td>
                 </tr>
               </tfoot>

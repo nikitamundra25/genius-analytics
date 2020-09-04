@@ -40,11 +40,11 @@ const MTDPerformance  = ({ graphdata = [] , date}: any) => {
   }, [date]);
 
 
-  const labeltemplate = (args:any) => {
-    return (<div  style={{fontSize: '11px'}}>
-      <span>{args.point.y}</span>
-    </div>);
-};
+//   const labeltemplate = (args:any) => {
+//     return (<div  style={{fontSize: '11px'}}>
+//       <span>{args.point.y}</span>
+//     </div>);
+// };
 
   const RGICharts = [
     {
@@ -69,36 +69,6 @@ const MTDPerformance  = ({ graphdata = [] , date}: any) => {
             
             // rx: 10,
             // ry: 10,
-            font: {
-              fontWeight: "600",
-              color: "#fff",
-            },
-          },
-        },
-    },
-    {
-      dataSource: data && data.length && data[0] ? data[0].data : [],
-        xName: "x",
-        yName: "y2",
-        type: "Bar",
-        //fill: "#2e75b7",
-        fill: "url(#rgi-chart)",
-        name: "RGI",
-        yAxisName:'yAxis2',
-        width: 2,
-        cornerRadius: {
-          bottomLeft: 0,
-          bottomRight: 4,
-          topLeft: 0,
-          topRight: 4,
-        },
-        marker: {
-          dataLabel: {
-            visible: true,
-            position: "Middle",
-            // rx: 10,
-            // ry: 10,
-            template: labeltemplate,
             font: {
               fontWeight: "600",
               color: "#fff",
@@ -137,36 +107,6 @@ const MTDPerformance  = ({ graphdata = [] , date}: any) => {
         },
       },
     },
-    {
-      dataSource: data && data.length && data[1] ? data[1].data : [],
-        xName: "x",
-        yName: "y2",
-        type: "Bar",
-        //fill: "#5398d9",
-        fill: "url(#mpi-chart)",
-        name: "MPI",
-        yAxisName:'yAxis2',
-        width: 2,
-        cornerRadius: {
-          bottomLeft: 0,
-          bottomRight: 4,
-          topLeft: 0,
-          topRight: 4,
-        },
-        marker: {
-          dataLabel: {
-            visible: true,
-            position: "Middle",
-            // rx: 10,
-            // ry: 10,
-            template: labeltemplate,
-            font: {
-              fontWeight: "600",
-              color: "#fff",
-            },
-          },
-        },
-    },
   ];
 
   const ARICharts = [
@@ -198,143 +138,8 @@ const MTDPerformance  = ({ graphdata = [] , date}: any) => {
             },
           },
     },
-    {
-      dataSource: data && data.length && data[2] ? data[2].data : [],
-          xName: "x",
-          yName: "y2",
-          type: "Bar",
-          cornerRadius: {
-            bottomLeft: 0,
-            bottomRight: 4,
-            topLeft: 0,
-            topRight: 4,
-          },
-          //fill: "#1f4e79",
-          fill: "url(#ari-chart)",
-          yAxisName:'yAxis2',
-          name: "ARI",
-          width: 2,
-          marker: {
-            dataLabel: {
-              visible: true,
-              position: "Middle",
-              // rx: 10,
-              // ry: 10,
-              template: labeltemplate,
-              font: {
-                fontWeight: "600",
-                color: "#fff",
-              },
-            },
-          },
-    },
   ];
 
-
-  // const RTGBarChart = [
-  //   {
-     
-  //     title: "RGI",
-      
-  //     charts: {
-  //       dataSource: data && data.length && data[0] ? data[0].data : [],
-  //       xName: "x",
-  //       yName: "y1",
-  //       type: "Bar",
-  //       //fill: "#2e75b7",
-  //       fill: "url(#rgi-chart)",
-  //       name: "RGI",
-  //       width: 1,
-  //       cornerRadius: {
-  //         bottomLeft: 0,
-  //         bottomRight: 4,
-  //         topLeft: 0,
-  //         topRight: 4,
-  //       },
-  //       marker: {
-  //         dataLabel: {
-  //           visible: true,
-  //           position: "Middle",
-  //           // rx: 10,
-  //           // ry: 10,
-  //           font: {
-  //             fontWeight: "600",
-  //             color: "#fff",
-  //           },
-  //         },
-  //       },
-  //     },
-  //   },
-  //   {
-  //     // id: "r2",
-  //     title: "MPI",
-  //     // color: "#5398d9",
-  //     // data: graphdata[1].data,
-  //     charts: {
-  //       dataSource: data && data.length && data[1] ? data[1].data : [],
-  //       xName: "x",
-  //       yName: "y1",
-  //       type: "Bar",
-  //       //fill: "#5398d9",
-  //       fill: "url(#mpi-chart)",
-  //       name: "MPI",
-  //       width: 1,
-  //       cornerRadius: {
-  //         bottomLeft: 0,
-  //         bottomRight: 4,
-  //         topLeft: 0,
-  //         topRight: 4,
-  //       },
-  //       marker: {
-  //         dataLabel: {
-  //           visible: true,
-  //           position: "Middle",
-  //           // rx: 10,
-  //           // ry: 10,
-  //           font: {
-  //             fontWeight: "600",
-  //             color: "#fff",
-  //           },
-  //         },
-  //       },
-  //     },
-  //   },
-  //   {
-  //     // id: "r3",
-  //     title: "ARI",
-  //     // color: "#1f4e79",
-  //     // data: graphdata[2].data,
-  //     charts: {
-  //         dataSource: data && data.length && data[2] ? data[2].data : [],
-  //         xName: "x",
-  //         yName: "y1",
-  //         type: "Bar",
-  //         cornerRadius: {
-  //           bottomLeft: 0,
-  //           bottomRight: 4,
-  //           topLeft: 0,
-  //           topRight: 4,
-  //         },
-  //         //fill: "#1f4e79",
-  //         fill: "url(#ari-chart)",
-  //         name: "ARI",
-  //         width: 1,
-  //         marker: {
-  //           dataLabel: {
-  //             visible: true,
-  //             position: "Middle",
-  //             // rx: 10,
-  //             // ry: 10,
-  //             font: {
-  //               fontWeight: "600",
-  //               color: "#fff",
-  //             },
-  //           },
-  //         },
-  //       },
-        
-  //   },
-  // ];
 
   const SAMPLE_CSS = `
   #rgi-chart stop {
