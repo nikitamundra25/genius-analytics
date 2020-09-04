@@ -58,7 +58,6 @@ export default ({ graphdata = [] }: any) => {
                   innerRadius: "40%",
                   startAngle: "0",
                   endAngle: "360",
-                  // radius: "70%",
                   explode: false,
                   explodeOffset: "10%",
                   explodeIndex: "3",
