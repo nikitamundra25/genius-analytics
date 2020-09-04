@@ -2,31 +2,31 @@
   "data": [
     {
       "name": "Direct",
-      "RoomNtsTY": 102,
-      "RoomNtsLY": 171,
-      "ADRTY": 211,
-      "ADRLY": 448
+      "RoomNtsTY": 86,
+      "RoomNtsLY": 258,
+      "ADRTY": 430,
+      "ADRLY": 284
     },
     {
       "name": "GDS",
-      "RoomNtsTY": 175,
-      "RoomNtsLY": 267,
-      "ADRTY": 417,
-      "ADRLY": 174
+      "RoomNtsTY": 188,
+      "RoomNtsLY": 103,
+      "ADRTY": 207,
+      "ADRLY": 412
     },
     {
       "name": "OTAs",
-      "RoomNtsTY": 133,
-      "RoomNtsLY": 89,
-      "ADRTY": 435,
-      "ADRLY": 375
+      "RoomNtsTY": 201,
+      "RoomNtsLY": 292,
+      "ADRTY": 357,
+      "ADRLY": 184
     },
     {
       "name": "Brand.com",
-      "RoomNtsTY": 88,
-      "RoomNtsLY": 102,
-      "ADRTY": 429,
-      "ADRLY": 302
+      "RoomNtsTY": 216,
+      "RoomNtsLY": 202,
+      "ADRTY": 278,
+      "ADRLY": 285
     }
   ]
 }

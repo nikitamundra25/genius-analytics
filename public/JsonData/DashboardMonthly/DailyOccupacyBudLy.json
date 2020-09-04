@@ -8,14 +8,14 @@
         "LY": 91
       },
       "ADR": {
-        "data": 213,
-        "Budget": 221,
-        "LY": 205
+        "data": 237,
+        "Budget": 185,
+        "LY": 389
       },
       "RevPAR": {
-        "data": 229,
-        "Budget": 391,
-        "LY": 265
+        "data": 211,
+        "Budget": 231,
+        "LY": 226
       }
     },
     {
@@ -26,22 +26,22 @@
         "LY": 93
       },
       "ADR": {
-        "data": 482,
-        "Budget": 307,
-        "LY": 477
+        "data": 196,
+        "Budget": 456,
+        "LY": 355
       },
       "RevPAR": {
-        "data": 329,
-        "Budget": 373,
-        "LY": 330
+        "data": 435,
+        "Budget": 304,
+        "LY": 414
       }
     },
     {
       "name": "3",
       "OCC": {
-        "data": 100,
-        "Budget": 99,
-        "LY": 98
+        "data": 72,
+        "Budget": 96,
+        "LY": 67
       },
       "ADR": {
         "data": 388,
@@ -62,14 +62,14 @@
         "LY": 67
       },
       "ADR": {
-        "data": 388,
-        "Budget": 460,
-        "LY": 242
+        "data": 190,
+        "Budget": 200,
+        "LY": 256
       },
       "RevPAR": {
-        "data": 449,
-        "Budget": 389,
-        "LY": 327
+        "data": 301,
+        "Budget": 318,
+        "LY": 278
       }
     },
     {
@@ -77,17 +77,17 @@
       "OCC": {
         "data": 92,
         "Budget": 104,
-        "LY": 65
+        "LY": 85
       },
       "ADR": {
-        "data": 462,
-        "Budget": 408,
-        "LY": 333
+        "data": 472,
+        "Budget": 349,
+        "LY": 311
       },
       "RevPAR": {
-        "data": 184,
-        "Budget": 246,
-        "LY": 329
+        "data": 337,
+        "Budget": 371,
+        "LY": 186
       }
     },
     {
@@ -98,14 +98,14 @@
         "LY": 93
       },
       "ADR": {
-        "data": 370,
-        "Budget": 451,
-        "LY": 234
+        "data": 445,
+        "Budget": 247,
+        "LY": 246
       },
       "RevPAR": {
-        "data": 388,
-        "Budget": 269,
-        "LY": 239
+        "data": 349,
+        "Budget": 395,
+        "LY": 261
       }
     },
     {
@@ -116,14 +116,14 @@
         "LY": 94
       },
       "ADR": {
-        "data": 239,
-        "Budget": 279,
-        "LY": 429
+        "data": 228,
+        "Budget": 478,
+        "LY": 226
       },
       "RevPAR": {
-        "data": 218,
-        "Budget": 228,
-        "LY": 268
+        "data": 273,
+        "Budget": 357,
+        "LY": 343
       }
     },
     {
@@ -134,14 +134,14 @@
         "LY": 93
       },
       "ADR": {
-        "data": 386,
-        "Budget": 220,
-        "LY": 325
+        "data": 280,
+        "Budget": 392,
+        "LY": 228
       },
       "RevPAR": {
-        "data": 388,
-        "Budget": 241,
-        "LY": 341
+        "data": 289,
+        "Budget": 369,
+        "LY": 292
       }
     },
     {
@@ -152,14 +152,14 @@
         "LY": 82
       },
       "ADR": {
-        "data": 462,
-        "Budget": 281,
-        "LY": 484
+        "data": 458,
+        "Budget": 289,
+        "LY": 231
       },
       "RevPAR": {
-        "data": 408,
-        "Budget": 434,
-        "LY": 255
+        "data": 430,
+        "Budget": 298,
+        "LY": 288
       }
     },
     {
@@ -170,14 +170,14 @@
         "LY": 89
       },
       "ADR": {
-        "data": 429,
-        "Budget": 401,
-        "LY": 270
+        "data": 458,
+        "Budget": 397,
+        "LY": 444
       },
       "RevPAR": {
-        "data": 209,
-        "Budget": 352,
-        "LY": 327
+        "data": 447,
+        "Budget": 353,
+        "LY": 384
       }
     },
     {
@@ -188,14 +188,14 @@
         "LY": 52
       },
       "ADR": {
-        "data": 305,
-        "Budget": 397,
-        "LY": 383
+        "data": 459,
+        "Budget": 418,
+        "LY": 277
       },
       "RevPAR": {
-        "data": 292,
-        "Budget": 437,
-        "LY": 276
+        "data": 399,
+        "Budget": 368,
+        "LY": 252
       }
     },
     {
@@ -206,14 +206,14 @@
         "LY": 66
       },
       "ADR": {
-        "data": 457,
-        "Budget": 431,
-        "LY": 210
+        "data": 252,
+        "Budget": 240,
+        "LY": 233
       },
       "RevPAR": {
-        "data": 416,
-        "Budget": 339,
-        "LY": 357
+        "data": 312,
+        "Budget": 291,
+        "LY": 183
       }
     },
     {
@@ -224,14 +224,14 @@
         "LY": 75
       },
       "ADR": {
-        "data": 374,
-        "Budget": 263,
-        "LY": 230
+        "data": 266,
+        "Budget": 417,
+        "LY": 272
       },
       "RevPAR": {
-        "data": 335,
-        "Budget": 289,
-        "LY": 433
+        "data": 394,
+        "Budget": 230,
+        "LY": 364
       }
     },
     {
@@ -242,14 +242,14 @@
         "LY": 71
       },
       "ADR": {
-        "data": 200,
-        "Budget": 188,
-        "LY": 325
+        "data": 397 ,
+        "Budget": 464,
+        "LY": 419
       },
       "RevPAR": {
-        "data": 352,
-        "Budget": 250,
-        "LY": 395
+        "data": 328,
+        "Budget": 415,
+        "LY": 283
       }
     },
     {
@@ -260,14 +260,14 @@
         "LY": 68
       },
       "ADR": {
-        "data": 298,
-        "Budget": 218,
-        "LY": 445
+        "data": 254,
+        "Budget": 325,
+        "LY": 307
       },
       "RevPAR": {
-        "data": 233,
-        "Budget": 211,
-        "LY": 187
+        "data": 282,
+        "Budget": 434,
+        "LY": 318
       }
     },
     {
@@ -278,14 +278,14 @@
         "LY": 78
       },
       "ADR": {
-        "data": 283,
-        "Budget": 217,
-        "LY": 428
+        "data": 444,
+        "Budget": 207,
+        "LY": 340
       },
       "RevPAR": {
-        "data": 369,
-        "Budget": 175,
-        "LY": 440
+        "data": 292,
+        "Budget": 258,
+        "LY": 190
       }
     },
     {
@@ -296,14 +296,14 @@
         "LY": 86
       },
       "ADR": {
-        "data": 315,
-        "Budget": 200,
-        "LY": 448
+        "data": 349 ,
+        "Budget": 398,
+        "LY": 198
       },
       "RevPAR": {
-        "data": 350,
-        "Budget": 419,
-        "LY": 395
+        "data": 281,
+        "Budget": 166,
+        "LY": 295
       }
     },
     {
@@ -314,14 +314,14 @@
         "LY": 74
       },
       "ADR": {
-        "data": 462,
-        "Budget": 334,
-        "LY": 437
+        "data": 246,
+        "Budget": 217,
+        "LY": 238
       },
       "RevPAR": {
-        "data": 380,
-        "Budget": 262,
-        "LY": 321
+        "data": 437,
+        "Budget": 172,
+        "LY": 429
       }
     },
     {
@@ -332,14 +332,14 @@
         "LY": 74
       },
       "ADR": {
-        "data": 195,
-        "Budget": 371,
-        "LY": 399
+        "data": 275 ,
+        "Budget": 382,
+        "LY": 213
       },
       "RevPAR": {
-        "data": 395,
-        "Budget": 186,
-        "LY": 448
+        "data": 271,
+        "Budget": 387,
+        "LY": 388
       }
     },
     {
@@ -350,14 +350,14 @@
         "LY": 61
       },
       "ADR": {
-        "data": 319,
-        "Budget": 375,
-        "LY": 389
+        "data": 297,
+        "Budget": 461,
+        "LY": 257
       },
       "RevPAR": {
-        "data": 258,
-        "Budget": 349,
-        "LY": 260
+        "data": 288,
+        "Budget": 350,
+        "LY": 285
       }
     },
     {
@@ -368,14 +368,14 @@
         "LY": 54
       },
       "ADR": {
-        "data": 189,
-        "Budget": 446,
-        "LY": 240
+        "data": 414,
+        "Budget": 226,
+        "LY": 382
       },
       "RevPAR": {
-        "data": 238,
-        "Budget": 297,
-        "LY": 379
+        "data": 216,
+        "Budget": 300,
+        "LY": 366
       }
     },
     {
@@ -386,14 +386,14 @@
         "LY": 59
       },
       "ADR": {
-        "data": 390,
-        "Budget": 251,
-        "LY": 236
+        "data": 207,
+        "Budget": 325,
+        "LY": 221
       },
       "RevPAR": {
-        "data": 254,
-        "Budget": 361,
-        "LY": 181
+        "data": 372,
+        "Budget": 321,
+        "LY": 187
       }
     },
     {
@@ -404,14 +404,14 @@
         "LY": 61
       },
       "ADR": {
-        "data": 444,
-        "Budget": 457,
-        "LY": 462
+        "data": 213,
+        "Budget": 220,
+        "LY": 467
       },
       "RevPAR": {
-        "data": 331,
-        "Budget": 219,
-        "LY": 228
+        "data": 342,
+        "Budget": 241,
+        "LY": 215
       }
     },
     {
@@ -422,14 +422,14 @@
         "LY": 75
       },
       "ADR": {
-        "data": 279,
-        "Budget": 432,
-        "LY": 407
+        "data": 320,
+        "Budget": 444,
+        "LY": 408
       },
       "RevPAR": {
-        "data": 261,
-        "Budget": 341,
-        "LY": 282
+        "data": 404,
+        "Budget": 271,
+        "LY": 334
       }
     },
     {
@@ -440,14 +440,14 @@
         "LY": 84
       },
       "ADR": {
-        "data": 248,
-        "Budget": 285,
-        "LY": 428
+        "data": 448,
+        "Budget": 307,
+        "LY": 241
       },
       "RevPAR": {
-        "data": 215,
-        "Budget": 350,
-        "LY": 235
+        "data": 276,
+        "Budget": 317,
+        "LY": 398
       }
     },
     {
@@ -458,14 +458,14 @@
         "LY": 92
       },
       "ADR": {
-        "data": 404,
-        "Budget": 320,
-        "LY": 358
+        "data": 336,
+        "Budget": 451,
+        "LY": 394
       },
       "RevPAR": {
-        "data": 328,
-        "Budget": 442,
-        "LY": 209
+        "data": 237,
+        "Budget": 165,
+        "LY": 166
       }
     },
     {
@@ -476,14 +476,14 @@
         "LY": 92
       },
       "ADR": {
-        "data": 211,
-        "Budget": 220,
-        "LY": 301
+        "data": 305,
+        "Budget": 317,
+        "LY": 217
       },
       "RevPAR": {
-        "data": 363,
-        "Budget": 429,
-        "LY": 231
+        "data": 191,
+        "Budget": 234,
+        "LY": 279
       }
     },
     {
@@ -494,14 +494,14 @@
         "LY": 89
       },
       "ADR": {
-        "data": 341,
-        "Budget": 295,
-        "LY": 270
+        "data": 319,
+        "Budget": 384,
+        "LY": 277
       },
       "RevPAR": {
-        "data": 333,
-        "Budget": 292,
-        "LY": 266
+        "data": 223,
+        "Budget": 314,
+        "LY": 443
       }
     },
     {
@@ -512,14 +512,14 @@
         "LY": 82
       },
       "ADR": {
-        "data": 258,
-        "Budget": 413,
-        "LY": 363
+        "data": 399,
+        "Budget": 472,
+        "LY": 372
       },
       "RevPAR": {
-        "data": 223,
-        "Budget": 372,
-        "LY": 396
+        "data": 392,
+        "Budget": 405,
+        "LY": 429
       }
     },
     {
@@ -530,32 +530,32 @@
         "LY": 79
       },
       "ADR": {
-        "data": 275,
-        "Budget": 433,
-        "LY": 260
+        "data": 338 ,
+        "Budget": 284,
+        "LY": 270
       },
       "RevPAR": {
-        "data": 288,
-        "Budget": 428,
-        "LY": 329
+        "data": 303,
+        "Budget": 375,
+        "LY": 393
       }
     },
     {
       "name": "31",
       "OCC": {
-        "data": 0,
-        "Budget": 0,
-        "LY": 0
+        "data": 86,
+        "Budget": 73,
+        "LY": 74
       },
       "ADR": {
-        "data": 0,
-        "Budget": 0,
-        "LY": 0
+        "data": 371,
+        "Budget": 197,
+        "LY": 452
       },
       "RevPAR": {
-        "data": 0,
-        "Budget": 0,
-        "LY": 0
+        "data": 209,
+        "Budget": 378,
+        "LY": 354
       }
     },
     {
@@ -566,14 +566,14 @@
         "LY": 79
       },
       "ADR": {
-        "data": 337.3,
-        "Budget": 328.0,
-        "LY": 341.6
+        "data": 331.2,
+        "Budget": 341.9,
+        "LY": 303.4
       },
       "RevPAR": {
-        "data": 308.8,
-        "Budget": 323.7,
-        "LY": 304.8
+        "data": 315.2,
+        "Budget": 307.9,
+        "LY": 304.4
       }
     }
   ]
