@@ -99,14 +99,14 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
       width: 3,
       opacity: 0.6,
       //fill: "#7cccca",
-      fill:"rgb(149 171 199)",
+      fill:"rgb(43, 88, 143)",
      
       marker: {
         visible: false,
         width: 10,
         height: 10,
-        fill: "rgb(149 171 199)",
-        border: { width: 1, color: "rgb(149 171 199)" },
+        fill: "rgb(43, 88, 143)",
+        border: { width: 1, color: "rgb(43, 88, 143)" },
         dataLabel: {
           visible: true,
           position: "Top",
@@ -128,15 +128,15 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
       name: "Budget",
       width: 2,
       dashArray: "3",
-      yAxisName: "yAxis1",
+      yAxisName: selectedValue === "OCC" ? "yAxis1" : "yAxis2",
       marker: {
-        visible: false,
+        visible: true,
         width: 6,
         height: 6,
-        fill: "rgb(247 218 228)",
-        border: { width: 1, color: "rgb(247 218 228)" },
+        fill: "rgb(216, 157, 177)",
+        border: { width: 1, color: "rgb(216, 157, 177)" },
         dataLabel: {
-          visible: true,
+          visible: false,
           position: "Top",
           font: {
             fontWeight: "600",
@@ -157,15 +157,15 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
       name: "LY",
       width: 2,
       dashArray: "3",
-      yAxisName: "yAxis1",
+      yAxisName: selectedValue === "OCC" ? "yAxis1" : "yAxis2",
       marker: {
-        visible: false,
+        visible: true,
         width: 6,
         height: 6,
         fill: "rgb(130 223 215)",
         border: { width: 1, color: "rgb(130 223 215)" },
         dataLabel: {
-          visible: true,
+          visible: false,
           position: "Bottom",
           font: {
             fontWeight: "600",

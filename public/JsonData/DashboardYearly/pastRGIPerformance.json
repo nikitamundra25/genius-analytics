@@ -9,8 +9,8 @@
     },
     {
       "data": [
-        { "x": "My<br>ARR", "y": 199.9 },
-        { "x": "ARR<br>Compset", "y": 203.2 },
+        { "x": "My<br>ADR", "y": 199.9 },
+        { "x": "ADR<br>Compset", "y": 203.2 },
         { "x": "ARI", "y": 0.98 }
       ]
     },

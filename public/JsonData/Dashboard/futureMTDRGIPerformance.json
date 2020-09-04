@@ -16,8 +16,8 @@
     },
     {
       "data": [
-        { "x": "My ARR", "y1": 0},
-        { "x": "ARR Compset", "y1": 0 },
+        { "x": "My ADR", "y1": 0},
+        { "x": "ADR Compset", "y1": 0 },
         { "x": "ARI", "y1": 0 }
       ]
     }

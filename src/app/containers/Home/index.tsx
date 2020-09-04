@@ -213,7 +213,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={1}
                 row={1}
                 col={2}
-                header={`<div class="panel-title">${widgets[3].name}</div>`}
+                header={`<div class="panel-title">Occupancy Statistics</div>`}
                 content={() => getChart(widgets[3].name)}
               ></PanelDirective>
               <PanelDirective

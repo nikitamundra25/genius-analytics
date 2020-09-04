@@ -2,38 +2,38 @@
     "data": [
         {
           "name": "0BRM",
-          "Rm Nts TY": 206,
-          "Rm Nts LY": 102,
+          "OCC TY": 206,
+          "OCC LY": 102,
           "ADRTY": 247,
           "ADRLY": 426
 
         },
         {
           "name": "1BRM",
-          "Rm Nts TY": 140,
-          "Rm Nts LY": 293,
+          "OCC TY": 140,
+          "OCC LY": 293,
           "ADRTY": 424,
           "ADRLY": 229
 
         },
         {
           "name": "2BRM",
-          "Rm Nts TY": 97,
-          "Rm Nts LY": 254,
+          "OCC TY": 97,
+          "OCC LY": 254,
           "ADRTY": 327,
           "ADRLY": 182
         },
         {
           "name": "3BRM",
-          "Rm Nts TY": 114,
-          "Rm Nts LY": 84,
+          "OCC TY": 114,
+          "OCC LY": 84,
           "ADRTY": 259,
           "ADRLY": 410
         },
         {
           "name": "4BRM",
-          "Rm Nts TY": 204,
-          "Rm Nts LY": 142,
+          "OCC TY": 204,
+          "OCC LY": 142,
           "ADRTY": 318,
           "ADRLY": 358
         }
