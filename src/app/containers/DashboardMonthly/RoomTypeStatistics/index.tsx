@@ -32,10 +32,10 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
     {
       dataSource: data,
       xName: "name",
-      yName: "Rm Nts TY",
+      yName: "Occ TY",
       type: "Column",
       fill: "#9ec2d2",
-      name: "Rm Nts TY",
+      name: "Occ TY",
       yAxisName:'yAxis1',
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
@@ -54,10 +54,10 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
     {
       dataSource: data,
       xName: "name",
-      yName: "Rm Nts LY",
+      yName: "Occ LY",
       type: "Column",
       fill: "#61a7c0",
-      name: "Rm Nts LY",
+      name: "Occ LY",
       yAxisName:'yAxis1',
       width: 1,
       cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
@@ -77,7 +77,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
     {
       dataSource: data,
       xName: "name",
-      yName: "ADRTY",
+      yName: "ADR TY",
       type: "Spline",
       fill: "#202c47",
       name: "ADR TY",
@@ -94,7 +94,6 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
           font: {
             fontWeight: "600",
             color: "#000000",
-          
           },
         },
       },
@@ -103,7 +102,7 @@ const RoomTypeStatistics = ({ graphdata = [] }:any) => {
     {
       dataSource: data,
       xName: "name",
-      yName: "ADRLY",
+      yName: "ADR LY",
       type: "Spline",
       fill: "#81cbe8",
       name: "ADR LY",

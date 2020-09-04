@@ -55,15 +55,29 @@ const HomeComponent: FunctionComponent = () => {
   const created = () => {
     restoreModel = dashboardObj.serialize();
     restoreModel[0].content = () => getChart("Business on the Books");
+    restoreModel[0].header =  `<div class="panel-title">Business on the Books</div>`
     restoreModel[1].content = () => getChart("Key Business Metrics");
     restoreModel[2].content = () => getChart("Room Nights");
+    restoreModel[2].header=`<div class="panel-title">Pick up Since Yesterday</div>`;
     restoreModel[3].content = () => getChart("Occupacy Statics");
+    restoreModel[3].header=`<div class="panel-title">Pick up Since Yesterday</div>`;
     restoreModel[4].content = () => getChart("Business Mix");
+    restoreModel[4].header=`<div class="panel-title">Business Mix</div>`;
     restoreModel[5].content = () => getChart("Room Type Statics");
+    restoreModel[5].header=`<div class="panel-title">Business Mix</div>`;
+
     restoreModel[6].content = () => getChart("Booking Channel Mix");
+    restoreModel[6].header=`<div class="panel-title">Booking Channel Mix</div>`;
+
     restoreModel[7].content = () => getChart("Geographic Origin of business");
+    restoreModel[7].header=`<div class="panel-title">Geographic Origin of business</div>`;
+
     restoreModel[8].content = () => getChart("MTD RGI Performance");
+    restoreModel[8].header=`<div class="panel-title">MTD RGI Performance</div>`;
+
     restoreModel[9].content = () => getChart("RGI YoY Variance");
+    restoreModel[9].header=`<div class="panel-title">RGI YoY Variance</div>`;
+
   };
 
   const getChart = (chartType: any) => {

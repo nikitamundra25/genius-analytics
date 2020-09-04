@@ -2,38 +2,38 @@
     "data": [
         {
           "name": "0BRM",
-          "Rm Nts TY": 183,
-          "Rm Nts LY": 256,
-          "ADRTY": 201,
-          "ADRLY": 271
+          "Occ TY": 90,
+          "Occ LY": 80,
+          "ADR TY": 449,
+          "ADR LY": 177
         },
         {
           "name": "1BRM",
-          "Rm Nts TY": 137,
-          "Rm Nts LY": 234,
-          "ADRTY": 236,
-          "ADRLY": 384
+          "Occ TY": 85,
+          "Occ LY": 79,
+          "ADR TY": 316,
+          "ADR LY": 421
         },
         {
           "name": "2BRM",
-          "Rm Nts TY": 146,
-          "Rm Nts LY": 169,
-          "ADRTY": 341,
-          "ADRLY": 347
+          "Occ TY": 69,
+          "Occ LY": 74,
+          "ADR TY": 278,
+          "ADR LY": 249
         },
         {
           "name": "3BRM",
-          "Rm Nts TY": 157,
-          "Rm Nts LY": 109,
-          "ADRTY": 166,
-          "ADRLY": 385
+          "Occ TY": 65,
+          "Occ LY": 51,
+          "ADR TY": 289,
+          "ADR LY": 259
         },
         {
           "name": "4BRM",
-          "Rm Nts TY": 222,
-          "Rm Nts LY": 225,
-          "ADRTY": 167,
-          "ADRLY": 287
+          "Occ TY": 62,
+          "Occ LY": 55,
+          "ADR TY": 238,
+          "ADR LY": 170
         }
       ]
 }
