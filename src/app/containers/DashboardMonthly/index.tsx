@@ -45,10 +45,10 @@ const DashboardMonthly: FunctionComponent = () => {
   const created = () => {
     restoreModel = dashboardObj.serialize();
     restoreModel[0].content = () => getChart("Business on the Books");
-    restoreModel[1].content = () => getChart("Monthly Daily Occupacy & ADR");
-    restoreModel[1].header =  `<div class="panel-title">Monthly Daily Occupacy & ADR</div>`
+    restoreModel[1].content = () => getChart("Monthly Daily Occupancy & ADR");
+    restoreModel[1].header =  `<div class="panel-title">Monthly Daily Occupancy & ADR</div>`
    
-    restoreModel[2].content = () => getChart("Daily Occupacy Vs. BUD Vs. LY");
+    restoreModel[2].content = () => getChart("Daily Occupancy Vs. BUD Vs. LY");
     
     restoreModel[3].content = () => getChart("Booking Channel");
     restoreModel[3].header =  `<div class="panel-title">Booking Channel</div>`
@@ -71,7 +71,7 @@ const DashboardMonthly: FunctionComponent = () => {
             </div>
           </Provider>
         );
-      case "Monthly Daily Occupacy & ADR":
+      case "Monthly Daily Occupancy & ADR":
         return (
           <Provider store={store}>
           <div className="template">
@@ -79,7 +79,7 @@ const DashboardMonthly: FunctionComponent = () => {
             </div>
           </Provider>
         );
-      case "Daily Occupacy Vs. BUD Vs. LY":
+      case "Daily Occupancy Vs. BUD Vs. LY":
         return (
           <Provider store={store}>
           <div className="template">
