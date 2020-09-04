@@ -47,7 +47,9 @@ const DashboardMonthly: FunctionComponent = () => {
     restoreModel[0].content = () => getChart("Business on the Books");
     restoreModel[1].content = () => getChart("Monthly Daily Occupacy & ADR");
     restoreModel[1].header =  `<div class="panel-title">Monthly Daily Occupacy & ADR</div>`
+   
     restoreModel[2].content = () => getChart("Daily Occupacy Vs. BUD Vs. LY");
+    
     restoreModel[3].content = () => getChart("Booking Channel");
     restoreModel[3].header =  `<div class="panel-title">Booking Channel</div>`
 
