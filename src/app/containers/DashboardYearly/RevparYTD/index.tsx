@@ -69,13 +69,13 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       opacity:0.5,
       fill:"rgb(0, 43, 101)",
       marker: {
-        visible: false,
-        width: 8,
-        height: 8,
+        visible: true,
+        width: 6,
+        height: 6,
         fill:"rgb(0, 43, 101)",
         border: { width: 0, color: "rgb(0, 43, 101)" },
         dataLabel: {
-          visible: true,
+          visible: false,
           position: "Bottom",
           font: {
             fontWeight: "600",
@@ -95,13 +95,13 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       opacity:0.4,
       fill:"rgb(0, 189, 174)",
       marker: {
-        visible: false,
-        width: 8,
-        height: 8,
+        visible: true,
+        width: 6,
+        height: 6,
         fill: "rgb(0, 189, 174)",
         border: { width: 0, color: "rgb(0, 189, 174)" },
         dataLabel: {
-          visible: true,
+          visible: false,
           position: "Top",
           font: {
             fontWeight: "600",

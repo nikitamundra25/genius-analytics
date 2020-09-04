@@ -124,46 +124,46 @@ const MonthlyTable = ({ date }: any) => {
               <thead>
                 <tr>
                   <th className="border-0"></th>
-                  <th className="head-col border-left main-head-col left-width" colSpan={2}>
+                  <th className="head-col main-head-col left-width" colSpan={2}>
                     Bar
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  <th className="head-col main-head-col left-width" colSpan={2}>
                     Public<br/>Discount
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  <th className="head-col main-head-col left-width" colSpan={2}>
                     Corporate<br/>Discount
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  <th className="head-col main-head-col left-width" colSpan={2}>
                     Partnership<br/>Discount
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  <th className="head-col main-head-col left-width" colSpan={2}>
                     Online<br/>Advantage
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  <th className="head-col main-head-col left-width" colSpan={2}>
                     Corporate<br/>Groups
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  <th className="head-col main-head-col left-width" colSpan={2}>
                   Leisure<br/>Group
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  <th className="head-col main-head-col left-width" colSpan={2}>
                     Residential<br/>Groups
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  <th className="head-col main-head-col left-width" colSpan={2}>
                     OTA's
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  <th className="head-col main-head-col left-width" colSpan={2}>
                     Wholesale
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  <th className="head-col main-head-col left-width" colSpan={2}>
                     Long Term<br/>Contract
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  <th className="head-col main-head-col left-width" colSpan={2}>
                      Monthly<br/>Contract
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  <th className="head-col main-head-col left-width" colSpan={2}>
                     Airline Crew<br/>Group
                   </th>
-                  <th className="head-col border-left main-head-col" colSpan={2}>
+                  <th className="head-col main-head-col left-width" colSpan={2}>
                     Staff
                   </th>
                   <th className="head-col total-content  main-head-col" colSpan={3}>
@@ -172,33 +172,33 @@ const MonthlyTable = ({ date }: any) => {
                 </tr>
                 <tr>
                   <th className="border-left-0"></th>
-                  <th className="head-col border-left left-width">Rooms</th>
+                  <th className="head-col  left-width">Rooms</th>
                   <th className="head-col  ">ADR</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col  left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col  left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col  left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col  left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col  left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col  left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col  left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col  left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col  left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col  left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
-                  <th className="head-col">Rooms</th>
+                  <th className="head-col left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col  left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
-                  <th className="head-col border-left">Rooms</th>
+                  <th className="head-col  left-width">Rooms</th>
                   <th className="head-col ">ADR</th>
                   <th className="head-col  total-content">Rooms</th>
                   <th className="head-col  ">ADR</th>
@@ -226,7 +226,7 @@ const MonthlyTable = ({ date }: any) => {
                             </td>
 
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.barValueRooms &&
                                 parseInt(list.barValueRooms) < 0
                                   ? "text-danger"
@@ -249,7 +249,7 @@ const MonthlyTable = ({ date }: any) => {
                               {list.barValueADR ? parseFloat(list.barValueADR).toLocaleString() : null}{" "}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.publicDiscountRooms &&
                                 parseInt(list.publicDiscountRooms) < 0
                                   ? "text-danger"
@@ -273,7 +273,7 @@ const MonthlyTable = ({ date }: any) => {
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.corporateDiscountRooms &&
                                 parseInt(list.corporateDiscountRooms) < 0
                                   ? "text-danger"
@@ -297,7 +297,7 @@ const MonthlyTable = ({ date }: any) => {
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.partnershipDiscountRooms &&
                                 parseInt(list.partnershipDiscountRooms) < 0
                                   ? "text-danger"
@@ -321,7 +321,7 @@ const MonthlyTable = ({ date }: any) => {
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.onlineAdvRooms &&
                                 parseInt(list.onlineAdvRooms) < 0
                                   ? "text-danger"
@@ -344,7 +344,7 @@ const MonthlyTable = ({ date }: any) => {
                               {list.onlineAdvADR ? list.onlineAdvADR : null}{" "}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.corporateGroupRooms &&
                                 parseInt(list.corporateGroupRooms) < 0
                                   ? "text-danger"
@@ -368,7 +368,7 @@ const MonthlyTable = ({ date }: any) => {
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.leisureRooms &&
                                 parseInt(list.leisureRooms) < 0
                                   ? "text-danger"
@@ -392,7 +392,7 @@ const MonthlyTable = ({ date }: any) => {
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.ResidentialGroupsRooms &&
                                 parseInt(list.ResidentialGroupsRooms) < 0
                                   ? "text-danger"
@@ -416,7 +416,7 @@ const MonthlyTable = ({ date }: any) => {
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.otaRooms &&
                                 parseInt(list.otaRooms) < 0
                                   ? "text-danger"
@@ -441,7 +441,7 @@ const MonthlyTable = ({ date }: any) => {
                                 : null}{" "}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.wholesaleRooms &&
                                 parseInt(list.wholesaleRooms) < 0
                                   ? "text-danger"
@@ -461,7 +461,7 @@ const MonthlyTable = ({ date }: any) => {
                               {list.wholesaleADR ? list.wholesaleADR : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.longTermContractRooms &&
                                 parseInt(list.longTermContractRooms) < 0
                                   ? "text-danger"
@@ -485,7 +485,7 @@ const MonthlyTable = ({ date }: any) => {
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.monthlyContractRooms &&
                                 parseInt(list.monthlyContractRooms) < 0
                                   ? "text-danger"
@@ -509,7 +509,7 @@ const MonthlyTable = ({ date }: any) => {
                                 : null}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.airlineCrewRooms &&
                                 parseInt(list.airlineCrewRooms) < 0
                                   ? "text-danger"
@@ -529,7 +529,7 @@ const MonthlyTable = ({ date }: any) => {
                               {list.airlineCrewADR ? list.airlineCrewADR : null}{" "}
                             </td>
                             <td
-                              className={`content-col ${
+                              className={`content-col left-width ${
                                 list.staffRooms &&
                                 parseInt(list.staffRooms) < 0
                                   ? "text-danger"
@@ -606,31 +606,31 @@ const MonthlyTable = ({ date }: any) => {
                   <td className="border-left-0"></td>
                   <td className="total-col left-width">{barValueRooms}</td>
                   <td className="total-col">{barValueADR}</td>
-                  <td className="total-col">{publicDiscountRooms}</td>
+                  <td className="total-col left-width ">{publicDiscountRooms}</td>
                   <td className="total-col">{publicDiscountADR}</td>
-                  <td className="total-col">{corporateDiscountRooms}</td>
+                  <td className="total-col left-width ">{corporateDiscountRooms}</td>
                   <td className="total-col ">{corporateDiscountADR}</td>
-                  <td className="total-col ">{partnershipDiscountRooms}</td>
+                  <td className="total-col left-width ">{partnershipDiscountRooms}</td>
                   <td className="total-col ">{partnershipDiscountADR}</td>
-                  <td className="total-col">{onlineAdvRooms}</td>
+                  <td className="total-col left-width ">{onlineAdvRooms}</td>
                   <td className="total-col">{onlineAdvADR}</td>
-                  <td className="total-col">{corporateGroupRooms}</td>
+                  <td className="total-col left-width ">{corporateGroupRooms}</td>
                   <td className="total-col">{corporateGroupADR}</td>
-                  <td className="total-col">{leisureRooms}</td>
+                  <td className="total-col left-width ">{leisureRooms}</td>
                   <td className="total-col ">{leisureADR}</td>
-                  <td className="total-col ">{ResidentialGroupsRooms}</td>
+                  <td className="total-col left-width ">{ResidentialGroupsRooms}</td>
                   <td className="total-col ">{ResidentialGroupsADR}</td>
-                  <td className="total-col">{otaRooms}</td>
+                  <td className="total-col left-width ">{otaRooms}</td>
                   <td className="total-col">{otaADR}</td>
-                  <td className="total-col">{wholesaleRooms}</td>
+                  <td className="total-col left-width ">{wholesaleRooms}</td>
                   <td className="total-col">{wholesaleADR}</td>
-                  <td className="total-col">{longTermContractRooms}</td>
+                  <td className="total-col left-width ">{longTermContractRooms}</td>
                   <td className="total-col ">{longTermContractADR}</td>
-                  <td className="total-col ">{monthlyContractRooms}</td>
+                  <td className="total-col left-width ">{monthlyContractRooms}</td>
                   <td className="total-col ">{monthlyContractADR} </td>
-                  <td className="total-col ">{airlineCrewRooms}</td>
+                  <td className="total-col left-width ">{airlineCrewRooms}</td>
                   <td className="total-col ">{airlineCrewADR}</td>
-                  <td className="total-col ">{staffRooms}</td>
+                  <td className="total-col left-width ">{staffRooms}</td>
                   <td className="total-col ">{staffADR}</td>
                   <td className="total-col total-content">{TotalRooms}</td>
                   <td className="total-col ">{TotalADR > 0 ? TotalADR.toFixed(1): 0}</td>

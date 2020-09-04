@@ -59,7 +59,7 @@ const BookingChannels = ({ graphdata = [] ,date}:any) => {
                 explodeAll: true,
                 explodeOffset: "5%",
                 explodeIndex: 0,
-                radius: "70%",
+                radius: "98%",
                 palettes: ["#4b90d1", "#f67b2b", "#a5a5a5", "#ffc60a",  "#9bbb58",],
               },
               chartComponent: {
@@ -67,6 +67,9 @@ const BookingChannels = ({ graphdata = [] ,date}:any) => {
                 enableAnimation: false,
                 center: { x: "50%", y: "50%" },
               },
+              dataLabel: {
+                position: 'Inside'
+              }
             }}
           />
            </React.Suspense>
