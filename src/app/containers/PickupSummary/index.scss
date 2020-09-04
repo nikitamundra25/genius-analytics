@@ -4,7 +4,7 @@
   th, td {
     padding: 2px 3px;
     border: 0px;
-    font-size:12px;
+    font-size:11px;
     text-align:center;
     vertical-align: middle;
    }
@@ -182,5 +182,18 @@
   background-color: rgba(0, 0, 0, 0.08);
 }
 
+.graph-sec{
+  @media only screen and (min-width: 1550px) {
+    flex: 0 0 calc(100% - 400px);
+    max-width: calc(100% - 400px);
+  }
+}
+.table-sec{
+  @media only screen and (min-width: 1550px) {
+    flex: 0 0 400px;
+    max-width: 400px;
+  }
+  
+}
 
 
