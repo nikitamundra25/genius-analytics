@@ -9,31 +9,31 @@
     border: 2px solid #000;
   }
   th, td {
-    padding: 4px 3px;
+    padding: 4px 2px;
     border: 0px;
     font-size:11px;
     text-align:center;
     vertical-align: middle;
    
     @media only screen and (min-width: 1558px) {
-      padding: 5px 3px;
-      font-size:12px;
+      padding: 5px 2px;
+      font-size:11px;
     }
     @media only screen and (min-width: 1630px) {
-      padding: 6px 3px;
-      font-size:12px;
+      padding: 6px 2px;
+      font-size:11px;
     }
     @media only screen and (min-width: 1880px) {
-      padding: 9px 3px;
-      font-size:12px;
+      padding: 9px 2px;
+      font-size:11px;
     }
     @media only screen and (max-width: 1557px) {
-      padding: 5px 3px;
-      font-size:12px;
+      padding: 5px 2px;
+      font-size:11px;
     }
     @media only screen and (max-width: 1459px) { 
-      padding: 4px 3px;
-      font-size:12px;
+      padding: 4px 2px;
+      font-size:11px;
     }
     @media only screen and (max-width: 1387px) {
       padding: 4px 2px;

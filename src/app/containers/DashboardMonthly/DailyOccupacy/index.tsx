@@ -99,14 +99,13 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
       width: 3,
       opacity: 0.6,
       //fill: "#7cccca",
-      fill:"rgb(43, 88, 143)",
-     
+      fill:"rgb(130 223 215)",
       marker: {
         visible: false,
         width: 10,
         height: 10,
-        fill: "rgb(43, 88, 143)",
-        border: { width: 1, color: "rgb(43, 88, 143)" },
+        fill: "rgb(130 223 215)",
+        border: { width: 1, color: "rgb(130 223 215)" },
         dataLabel: {
           visible: true,
           position: "Top",
@@ -123,7 +122,7 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
       yName: "Budget",
       type: "SplineArea",
       // fill: "#b82f2c",
-      opacity: 0.6,
+      opacity: 0.8,
       fill:"rgb(247 218 228)",
       name: "Budget",
       width: 2,
@@ -150,9 +149,9 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
       xName: "name",
       yName: "LY",
       type: "SplineArea",
-      opacity: 0.6,
-      fill:"rgb(130 223 215)",
-     
+      opacity: 0.5,
+      
+      fill:"rgb(43, 88, 143)",
       //fill: "#94b54e",
       name: "LY",
       width: 2,
@@ -162,8 +161,8 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
         visible: true,
         width: 6,
         height: 6,
-        fill: "rgb(130 223 215)",
-        border: { width: 1, color: "rgb(130 223 215)" },
+        fill: "rgb(43, 88, 143)",
+        border: { width: 1, color: "rgb(43, 88, 143)" },
         dataLabel: {
           visible: false,
           position: "Bottom",
