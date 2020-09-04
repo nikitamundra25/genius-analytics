@@ -194,7 +194,7 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
           // title={"Daily Occupacy Vs. BUD Vs. LY"}
           title={`${
             selectedValue === "OCC"
-              ? "Daily Occupacy"
+              ? "Daily Occupancy"
               : selectedValue === "ADR"
               ? "ADR"
               : "RevPAR"
