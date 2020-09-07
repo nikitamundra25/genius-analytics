@@ -7,7 +7,7 @@ export interface IBookingChannelModel {
 
 export interface IPickupSummaryModel {
   isLoading: boolean;
-  TableOnestate: any,
-  TableSecondstate: any,
+  tabOneState: any,
+  tabTwoState: any,
   isError: boolean;
 }
