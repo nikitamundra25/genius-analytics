@@ -53,14 +53,14 @@ const PickupSegment = ({ index, date = new Date() }: any) => {
   
   useEffect(() => {
     const window_width = window.innerWidth;
-    console.log("window_width",  window_width);
+    //console.log("window_width",  window_width);
     if (window_width < 1200) {
       setsetHeight(`230`)
-      console.log("window_width lesss 1200",  window_width);
+     // console.log("window_width lesss 1200",  window_width);
     }
     else{
       setsetHeight(`375`)
-      console.log("window_width mx 1200",  window_width);
+     // console.log("window_width mx 1200",  window_width);
     }
  
   
