@@ -11,6 +11,7 @@ const MixedCharts = React.lazy(() =>
 
 const PickupSegment = ({ index, date }: any) => {
   //const setHeight1 = setHeight + 140;
+  const [setHeight, setsetHeight] = React.useState<string>("230px");
   const [state, setState] = useState<IBookingChannelModel>({
     isLoading: true,
     isError: true,
@@ -45,32 +46,55 @@ const PickupSegment = ({ index, date }: any) => {
     getData();
     // eslint-disable-next-line
   }, []);
+
+
+  useEffect(() => {
+      const window_width = window.innerWidth;
+      console.log("window_width",  window_width);
+      if (window_width < 1200) {
+        setsetHeight(`230`)
+        console.log("window_width lesss 1200",  window_width);
+      }
+      else{
+        setsetHeight(`375`)
+        console.log("window_width mx 1200",  window_width);
+      }
+   
+    
+    // eslint-disable-next-line
+  }, []);
+
+  useEffect(() => {
+
+    const resizeListener = () => {
+
+      // // change width from the state object
+     const window_width = window.innerWidth;
+      //console.log("window_width",  window_width);
+      if (window_width < 1200) {
+        setsetHeight(`230`)
+        //console.log("window_width lesss 1200",  window_width);
+      }
+      else{
+        setsetHeight(`375`)
+        //console.log("window_width mx 1200",  window_width);
+      }
+      
+    };
+    // set resize listener
+    window.addEventListener("resize", resizeListener);
+
+    // clean up function
+    return () => {
+      // remove resize listener
+      window.removeEventListener("resize", resizeListener);
+    };
+    // eslint-disable-next-line
+  }, []);
+
+
   const { isLoading, data, isError } = state;
   const Charts = [
-    // {
-    //   dataSource: data,
-    //   xName: "name",
-    //   yName: "OCC",
-    //   type: "Column",
-    //   fill: "#4684bd",
-    //   name: "OCC%",
-    //   yAxisName: "yAxis1",
-    //   visible: false,
-    //   width: 1,
-    //   cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
-    //   marker: {
-    //     dataLabel: {
-    //       visible: true,
-    //       rx: 10,
-    //       ry: 10,
-    //       font: {
-    //         fontWeight: "600",
-    //         color: "#000",
-    //       },
-    //     },
-    //   },
-    // },
-
     {
       dataSource: data,
       xName: "name",
@@ -144,18 +168,9 @@ const PickupSegment = ({ index, date }: any) => {
             chartSettings={{
               primaryXAxis: {
                 valueType: "Category",
-                //interval: 1,
                 enableTrim: false,
                 majorGridLines: { width: 0 },
-                // maximumLabelWidth: '100',
-                // labelPlacement: 'OnTicks' ,
-               // labelIntersectAction: 'None',
-               // edgeLabelPlacement: 'Shift',
-                // labelStyle: {
-                //   fontStyle: 'bold',
-                //   size: '8px',
-                //   color:'black'
-                // },
+                
               },
               primaryYAxis: {
                 labelFormat: "{value}",
@@ -169,8 +184,8 @@ const PickupSegment = ({ index, date }: any) => {
                 visible: false,
               },
               tooltip: { enable: true },
-              height:"375px"
-              //height: `${setHeight1}px`,
+              //height:"375px"
+              height: `${setHeight}px`,
             }}
             charts={Charts}
           />

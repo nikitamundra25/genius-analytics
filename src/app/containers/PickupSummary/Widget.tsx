@@ -33,7 +33,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
         className='bg-white h-auto mb-3 pickup-section-card'>
         <Card.Body >
           <Row className='no-gutters'>
-            <Col xs={12} md={5}>
+            <Col xs={12} xl={5} lg={6} >
               <div className='sub-title text-left'>{chartType.name}</div>
               <div>
                 <PickupSegment
@@ -42,26 +42,42 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
                 />
               </div>
             </Col>
-            <Col xs={12} md={7}>
+            <Col xs={12} xl={7} lg={6}>
               <TableForm index={rowId} tabledata={chartType.tabledata} date={chartType.date}/>
-              <Row className='no-gutters'>
-                <Col xs={12} md={6} className="graph-sec">
+              <Row className='no-gutters desktop-view' >
+                <Col xs={12} lg={12} xl={6}  className="graph-sec">
                   <div>
                     <PickupDOWOCCSegment
-                      index={rowId}
+                      index={`${rowId}-mob`}
                       date={chartType.date}
                     />
                   </div>
                 </Col>
-                <Col xs={12} md={6} className="table-sec">
+                <Col xs={12} lg={12} xl={6} className="table-sec">
                   <div>
                     <PickupBusinessMix
-                      index={rowId}
+                      index={`${rowId}-mob`}
                       date={chartType.date}
                     />
                   </div>
                 </Col>
               </Row>
+            </Col>
+            <Col xs={12} md={6} lg={6} className="mobile-view">
+                <div>
+                  <PickupBusinessMix
+                    index={rowId}
+                    date={chartType.date}
+                  />
+                </div>
+            </Col>
+            <Col xs={12} md={6} lg={6} className="mobile-view">
+              <div>
+                  <PickupDOWOCCSegment
+                    index={rowId}
+                    date={chartType.date}
+                  />
+                </div>
             </Col>
           </Row>
         </Card.Body>

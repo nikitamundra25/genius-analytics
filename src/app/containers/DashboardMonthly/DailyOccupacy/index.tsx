@@ -245,8 +245,8 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
                       color: "transparent",
                     },
                     visible: false,
-                   
-                  
+                    maximum:  selectedValue === "OCC" ? 100 : null,
+                    interval: selectedValue === "OCC" ? 25 : null,
                     //interval: 25,
                     //rangePadding: 'None',
                   },

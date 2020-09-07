@@ -141,11 +141,22 @@
   .row-title{
     text-align: left;
     font-weight: 700;
+    white-space: nowrap;
+    @media only screen and (max-width: 1280px) {
+      padding: 2px 2px;
+      font-size: 10px;
+    }
   }
   .content-col{
     font-weight: 500;
     // width: 130px;
     min-width: 120px;
+    @media only screen and (max-width: 1409px) {
+      min-width: 100px;
+    }
+    @media only screen and (max-width: 1280px) {
+      min-width: 92px;
+    }
   }
 }
 .custom-bar-mix{
@@ -195,5 +206,15 @@
   }
   
 }
+.mobile-view{
+  display:none;
+}
 
-
+@media only screen and (max-width: 1199px) {
+  .desktop-view{
+    display:none;
+  }
+  .mobile-view{
+    display:block;
+  }
+}
