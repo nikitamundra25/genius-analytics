@@ -4,13 +4,16 @@ import { IBookingChannelModel } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import moment from "moment";
+import { monthYearFormat } from "../../../../config";
 
 const MixedCharts = React.lazy(() =>
   import("../../../components/Charts/MixedCharts")
 );
+  
 
-const PickupSegment = ({ index, date }: any) => {
+const PickupSegment = ({ index, date = new Date() }: any) => {
   //const setHeight1 = setHeight + 140;
+  const [setHeight, setsetHeight] = React.useState<string>("230px");
   const [state, setState] = useState<IBookingChannelModel>({
     isLoading: true,
     isError: true,
@@ -31,7 +34,7 @@ const PickupSegment = ({ index, date }: any) => {
       return;
     }
     let filterData:any =  data.data.filter((list:any) => {
-      return list.month === moment(date).format("MMMM-YY");
+      return list.month === moment(date).format(monthYearFormat);
     })[0];
     
     setState({
@@ -40,12 +43,63 @@ const PickupSegment = ({ index, date }: any) => {
       isError: false,
     });
   };
+
   useEffect(() => {
     // dispatch(requestPickupSummarySegmentData({ month }));
     getData();
     // eslint-disable-next-line
   }, []);
+
+  
+  useEffect(() => {
+    const window_width = window.innerWidth;
+    //console.log("window_width",  window_width);
+    if (window_width < 1200) {
+      setsetHeight(`230`)
+     // console.log("window_width lesss 1200",  window_width);
+    }
+    else{
+      setsetHeight(`375`)
+     // console.log("window_width mx 1200",  window_width);
+    }
+ 
+  
+  // eslint-disable-next-line
+}, []);
+
+useEffect(() => {
+
+  const resizeListener = () => {
+
+    // // change width from the state object
+   const window_width = window.innerWidth;
+    //console.log("window_width",  window_width);
+    if (window_width < 1200) {
+      setsetHeight(`230`)
+      //console.log("window_width lesss 1200",  window_width);
+    }
+    else{
+      setsetHeight(`375`)
+      //console.log("window_width mx 1200",  window_width);
+    }
+    
+  };
+  // set resize listener
+  window.addEventListener("resize", resizeListener);
+
+  // clean up function
+  return () => {
+    // remove resize listener
+    window.removeEventListener("resize", resizeListener);
+  };
+  // eslint-disable-next-line
+}, []);
+
   const { isLoading, data, isError } = state;
+
+
+
+
   const Charts = [
     // {
     //   dataSource: data,
@@ -137,7 +191,7 @@ const PickupSegment = ({ index, date }: any) => {
               <WidgetLoader />
             </div>
           }>
-            
+             
           <MixedCharts
             id={`PickupChart-${index}`}
             legend={false}
@@ -169,16 +223,15 @@ const PickupSegment = ({ index, date }: any) => {
                 visible: false,
               },
               tooltip: { enable: true },
-              height:"375px"
-              //height: `${setHeight1}px`,
+             // height:"375px"
+             height: `${setHeight}px`,
             }}
             charts={Charts}
           />
-          <div className='sub-title'>Pick up by segment</div>
-          
-        </React.Suspense>
-          : null
-      )}
+          <div className='sub-title mb-1'>Pick up by segment</div>
+         </React.Suspense>
+         : null
+      )} 
     </>
   );
 };

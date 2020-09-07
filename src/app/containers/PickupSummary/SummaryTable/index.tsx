@@ -15,8 +15,8 @@ const SummaryTable = (props: any) => {
   const [state, setState] = React.useState<IPickupSummaryModel>({
     isLoading: true,
     isError: true,
-    TableOnestate: [],
-    TableSecondstate: [],
+    tabOneState: [],
+    tabTwoState: [],
   });
   const getData = async () => {
     const { isError, data } = await new ApiHelper().FetchFromLocalJSONFile(
@@ -27,8 +27,8 @@ const SummaryTable = (props: any) => {
     if (isError) {
       setState({
         isLoading: false,
-        TableOnestate: [],
-        TableSecondstate: [],
+        tabOneState: [],
+        tabTwoState: [],
         isError: true,
       });
       return;
@@ -48,8 +48,8 @@ const SummaryTable = (props: any) => {
 
     setState({
       isLoading: false,
-      TableOnestate: tableone,
-      TableSecondstate: temp,
+      tabOneState: tableone,
+      tabTwoState: temp,
       isError: false,
     });
   };
@@ -58,7 +58,7 @@ const SummaryTable = (props: any) => {
     getData();
     // eslint-disable-next-line
   }, []);
-  const { isLoading, TableOnestate, TableSecondstate, isError } = state;
+  const { isLoading, tabOneState, tabTwoState, isError } = state;
 
   return (
     <>
@@ -76,7 +76,7 @@ const SummaryTable = (props: any) => {
         >
           <Row className="">
             <Col xs={12} md={6}>
-              <Table responsive striped className="summary-table mb-0 ml-auto">
+              <Table responsive striped className="summary-table mb-2 ml-auto">
                 <thead>
                   <tr>
                     <th className="empty-col"></th>
@@ -86,8 +86,8 @@ const SummaryTable = (props: any) => {
                   </tr>
                 </thead>
                 <tbody>
-                  {TableOnestate && TableOnestate.length
-                    ? TableOnestate.map((list: any, i: number) => {
+                  {tabOneState && tabOneState.length
+                    ? tabOneState.map((list: any, i: number) => {
                         return (
                           <tr key={i}>
                             <td className="row-title">
@@ -247,7 +247,7 @@ const SummaryTable = (props: any) => {
               </Table>
             </Col>
             <Col xs={12} md={6}>
-              <Table responsive striped className="summary-table mb-0">
+              <Table responsive striped className="summary-table mb-2">
                 <thead>
                   <tr>
                     <th className="empty-col"></th>
@@ -257,8 +257,8 @@ const SummaryTable = (props: any) => {
                   </tr>
                 </thead>
                 <tbody>
-                  {TableSecondstate && TableSecondstate.length
-                    ? TableSecondstate.map((list: any, i: number) => {
+                  {tabTwoState && tabTwoState.length
+                    ? tabTwoState.map((list: any, i: number) => {
                         return (
                           <tr key={i}>
                             <td className="row-title">

@@ -173,7 +173,7 @@ const PickupBusinessMix = (props: any) => {
                   
                const maxPeak=  Math.max.apply(Math, DowData.map(function(key:any) { return key.ADR; }))
                           
-                  return <tr>
+                  return <tr key= {i}>
                   <td className="row-title">{list.name} </td>
                   <td className="content-col">
                     <ProgressBar
