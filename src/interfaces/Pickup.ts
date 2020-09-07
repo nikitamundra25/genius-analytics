@@ -98,3 +98,9 @@ export interface IBOBState{
     resultRevenue : number
   
 }
+
+export interface IArrayMonthProps{
+  name: string,
+  id: number,
+  date: Date|any
+}

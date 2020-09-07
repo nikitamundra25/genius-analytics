@@ -1,43 +1,38 @@
 import React, { FunctionComponent, useEffect } from "react";
 import DashboardWidget from "./Widget";
-// import { useSelector, useDispatch } from "react-redux";
 import TopBar from "./TopBar";
-// import { IRootState } from "../../../interfaces";
-// import { PickupSummaryRequest } from "../../../actions";
-// import Loader from "../../components/Loader/Loader";
 import "./index.scss";
-// import { ErrorComponent } from "../../components/Error";
 import { generateArrayOfMonths } from "../../../helper";
 import moment from "moment";
+import { IArrayMonthProps } from "../../../interfaces";
 
 const PickupSummary: FunctionComponent = () => {
   // const dispatch = useDispatch();
-  const [pickupList, setpickupList] = React.useState([]);
+  const [pickupList, setpickupList] = React.useState<IArrayMonthProps | any>([]);
   const [date, setdate] = React.useState<Date>(new Date());
 
   // const PickupReducer = useSelector((state: IRootState) => state.PickupReducer);
 
   useEffect(() => {
     // dispatch(PickupSummaryRequest());
-    let date: Date|any = moment(new Date()).subtract(1, "days")
-    let temp = generateArrayOfMonths(date,17);
-    setpickupList(temp);
+    let date: Date | any = moment(new Date()).subtract(1, "days");
+    let dataList : IArrayMonthProps  = generateArrayOfMonths(date, 17);
+    setpickupList(dataList);
     // eslint-disable-next-line
   }, []);
 
-  const handleDate = (date:Date)=>{
-    let temp = generateArrayOfMonths(date,17)
-    setdate(date)
-    setpickupList(temp)
-    }
+  const handleDate = (date: Date) => {
+    let temp = generateArrayOfMonths(date, 17);
+    setdate(date);
+    setpickupList(temp);
+  };
 
-    
   // const { pickupSummaryList, isPickupLoading, isPickupError } = PickupReducer;
 
   return (
     <>
       <TopBar handleDate={handleDate} />
-      <div className='animated fadeIn'>
+      <div className="animated fadeIn">
         {/* {isPickupLoading ? (
           <Loader />
         ) : isPickupError ? (

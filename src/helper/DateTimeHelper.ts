@@ -34,7 +34,7 @@ export const generateArrayOfMonths = (date:any, monthToAdd:any) => {
     months.push({
       name: dateStart.format("MMMM YYYY"),
       id: dateStart.format("M"),
-      date: months.length > 0 ?  moment(dateStart).startOf("month")  : dateStart.format("YYYY-MM-DD")
+      date: months.length > 0 ?  moment(dateStart).startOf("month")  : moment(dateStart)
     });
     dateStart.add(1, "month");
   }
