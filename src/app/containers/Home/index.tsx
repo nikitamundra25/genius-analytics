@@ -60,7 +60,7 @@ const HomeComponent: FunctionComponent = () => {
     restoreModel[2].content = () => getChart("Room Nights");
     restoreModel[2].header=`<div class="panel-title">Pick up Since Yesterday</div>`;
     restoreModel[3].content = () => getChart("Occupacy Statics");
-    restoreModel[3].header=`<div class="panel-title">Occupacy Statics</div>`;
+    restoreModel[3].header=`<div class="panel-title">Occupancy Statics</div>`;
     restoreModel[4].content = () => getChart("Business Mix");
     restoreModel[4].header=`<div class="panel-title">Business Mix</div>`;
     restoreModel[5].content = () => getChart("Room Type Statics");
