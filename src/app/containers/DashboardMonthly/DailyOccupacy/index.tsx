@@ -99,13 +99,15 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
       width: 3,
       opacity: 0.6,
       //fill: "#7cccca",
-      fill:"rgb(130 223 215)",
+      fill:"rgb(43, 88, 143)",
+
+     
       marker: {
         visible: false,
         width: 10,
         height: 10,
-        fill: "rgb(130 223 215)",
-        border: { width: 1, color: "rgb(130 223 215)" },
+        fill: "rgb(43, 88, 143)",
+        border: { width: 1, color: "rgb(43, 88, 143)" },
         dataLabel: {
           visible: true,
           position: "Top",
@@ -132,8 +134,8 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
         visible: true,
         width: 6,
         height: 6,
-        fill: "rgb(216, 157, 177)",
-        border: { width: 1, color: "rgb(216, 157, 177)" },
+        fill: "rgb(247 218 228)",
+        border: { width: 1, color: "rgb(247 218 228)" },
         dataLabel: {
           visible: false,
           position: "Top",
@@ -150,8 +152,8 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
       yName: "LY",
       type: "SplineArea",
       opacity: 0.5,
+      fill:"rgb(130 223 215)",
       
-      fill:"rgb(43, 88, 143)",
       //fill: "#94b54e",
       name: "LY",
       width: 2,
@@ -161,8 +163,8 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
         visible: true,
         width: 6,
         height: 6,
-        fill: "rgb(43, 88, 143)",
-        border: { width: 1, color: "rgb(43, 88, 143)" },
+        fill: "rgb(130 223 215)",
+        border: { width: 1, color: "rgb(130 223 215)" },
         dataLabel: {
           visible: false,
           position: "Bottom",
@@ -243,7 +245,9 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
                       color: "transparent",
                     },
                     visible: false,
-                    //interval: 30,
+                   
+                  
+                    //interval: 25,
                     //rangePadding: 'None',
                   },
                   tooltip: { enable: true },

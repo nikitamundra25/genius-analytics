@@ -39,6 +39,10 @@
     color:#fff;
     font-weight: 500;
     border-top: 2px solid #2e2e2e;
+    min-width: 42px;
+    &.bob-head-col{
+      min-width: 50px;
+    }
     &.main-head-col{
       min-width:71px;
       @media only screen and (min-width: 1600px) {
