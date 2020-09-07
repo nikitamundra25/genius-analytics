@@ -228,7 +228,7 @@ useEffect(() => {
             }}
             charts={Charts}
           />
-          <div className='sub-title'>Pick up by segment</div>
+          <div className='sub-title mb-1'>Pick up by segment</div>
          </React.Suspense>
          : null
       )} 
