@@ -77,7 +77,7 @@ const TopBar = (props: any) => {
     window.scrollTo(0, 0);
   }
   };
-
+  let dateCond :Date | any = moment().format("dddd") ===  "Monday"  ? moment(new Date()).subtract(3, "days") : moment(new Date()).subtract(1, "days") 
   return (
     <>
       <div
@@ -89,8 +89,8 @@ const TopBar = (props: any) => {
           ""
         ) : (
           <div className="main-title">
-            Pick-up since {moment().add(-1, "days").format("Do")} of{" "}
-            {moment().add(-1, "days").format("MMMM")}
+            Pick-up since {moment(dateCond ).format("Do")} of{" "}
+            {moment(dateCond ).format("MMMM")}
           </div>
         )}
 
