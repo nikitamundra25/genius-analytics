@@ -140,12 +140,12 @@ const PickupDOWOCCSegment = (props: any) => {
                 visible: false,
               },
               tooltip: { enable: true },
-              height:"230px"
+              height:"180px"
              // height: `${setHeight}px`,
             }}
             charts={Charts}
           />
-          <div className='sub-title'>DOW OCC</div>
+          <div className='sub-title  mb-1'>DOW OCC</div>
         </React.Suspense>
         : null
       )}
