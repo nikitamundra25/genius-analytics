@@ -19,6 +19,10 @@ const PickupBOB = React.lazy(() =>
   import("../app/containers/PickupBOB")
 );
 
+const PivotTable = React.lazy(() =>
+  import("../app/containers/PivotTable")
+);
+
 
 const ComingSoon = React.lazy(() => import("../app/containers/ComingSoon"));
 
@@ -64,6 +68,12 @@ const routes = [
     path: AppRoutes.PICKUPBOB,
     name: "Pickup BOB",
     component: PickupBOB,
+    exact: true,
+  },
+  {
+    path: AppRoutes.PIVOT_TABLE,
+    name: "Pivot Table",
+    component: PivotTable,
     exact: true,
   },
 ];

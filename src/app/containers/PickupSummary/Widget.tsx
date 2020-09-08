@@ -28,45 +28,40 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
         </Card.Body>
       </Card>
       :null}
-      <Card
-        id={`summary-card${rowId}`}
-        className='bg-white h-auto mb-3 pickup-section-card'>
-        <Card.Body >
-          <Row className='no-gutters'>
-            <Col xs={12} xl={5} lg={6} >
-              <div className='sub-title text-left'>{chartType.name}</div>
+
+      <div className="pickup-month-section mb-3 " id={`summary-card${rowId}`}>
+        <div className='sub-title text-left pickup-month-card mb-2 py-2'>{chartType.name}</div>
+        <Row >
+          <Col xs={12} xl={8} lg={7} >
+            <div className="pickup-month-card mb-1">
+              <TableForm index={rowId} tabledata={chartType.tabledata} date={chartType.date}/>
               <div>
                 <PickupSegment
                   index={rowId}
                   date={chartType.date}
                 />
+              </div> 
+            </div>
+          </Col>
+          <Col xs={12} xl={4} lg={5} >
+            <div className="pickup-month-card mb-1">
+              <div>
+                <PickupDOWOCCSegment
+                  index={`${rowId}-mob`}
+                  date={chartType.date}
+                />
               </div>
-            </Col>
-            <Col xs={12} xl={7} lg={6}>
-              <TableForm index={rowId} tabledata={chartType.tabledata} date={chartType.date}/>
-              <Row className='no-gutters' >
-                <Col xs={12} lg={6} md={6}  className="graph-sec">
-                  <div>
-                    <PickupDOWOCCSegment
-                      index={`${rowId}-mob`}
-                      date={chartType.date}
-                    />
-                  </div>
-                </Col>
-                <Col xs={12} lg={6} md={6} className="table-sec">
-                  <div>
-                    <PickupBusinessMix
-                      index={`${rowId}-mob`}
-                      date={chartType.date}
-                    />
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-            
-          </Row>
-        </Card.Body>
-      </Card>
+              <div>
+                <PickupBusinessMix
+                  index={`${rowId}-mob`}
+                  date={chartType.date}
+                />
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </div>
+      
       </>
     );
   };
