@@ -44,7 +44,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
             </Col>
             <Col xs={12} xl={7} lg={6}>
               <TableForm index={rowId} tabledata={chartType.tabledata} date={chartType.date}/>
-              <Row className='no-gutters desktop-view' >
+              <Row className='no-gutters' >
                 <Col xs={12} lg={12} xl={6}  className="graph-sec">
                   <div>
                     <PickupDOWOCCSegment
@@ -63,7 +63,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
                 </Col>
               </Row>
             </Col>
-            <Col xs={12} md={6} lg={6} className="mobile-view">
+            {/* <Col xs={12} md={6} lg={6} className="mobile-view">
                 <div>
                   <PickupBusinessMix
                     index={rowId}
@@ -78,7 +78,7 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
                     date={chartType.date}
                   />
                 </div>
-            </Col>
+            </Col> */}
           </Row>
         </Card.Body>
       </Card>
