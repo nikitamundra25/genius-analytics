@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { ApiHelper } from "../../../../helper";
+import { ApiHelper, useWindowSize } from "../../../../helper";
 import { IBookingChannelModel } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import moment from "moment";
 import { monthYearFormat } from "../../../../config";
 
-const MixedCharts = React.lazy(() =>
-  import("../../../components/Charts/MixedCharts")
+const MixedCharts = React.lazy(
+  () => import("../../../components/Charts/MixedCharts")
 );
-  
 
 const PickupSegment = ({ index, date = new Date() }: any) => {
   //const setHeight1 = setHeight + 140;
@@ -33,13 +32,16 @@ const PickupSegment = ({ index, date = new Date() }: any) => {
       });
       return;
     }
-    let filterData:any =  data.data.filter((list:any) => {
+    let filterData: any = data.data.filter((list: any) => {
       return list.month === moment(date).format(monthYearFormat);
     })[0];
-    
+
     setState({
       isLoading: false,
-      data: filterData && filterData.segmentData && filterData.segmentData.length ? filterData.segmentData : [],
+      data:
+        filterData && filterData.segmentData && filterData.segmentData.length
+          ? filterData.segmentData
+          : [],
       isError: false,
     });
   };
@@ -50,55 +52,54 @@ const PickupSegment = ({ index, date = new Date() }: any) => {
     // eslint-disable-next-line
   }, []);
 
-  
-  useEffect(() => {
-    const window_width = window.innerWidth;
-    //console.log("window_width",  window_width);
-    if (window_width < 1200) {
-      setsetHeight(`230`)
-     // console.log("window_width lesss 1200",  window_width);
-    }
-    else{
-      setsetHeight(`375`)
-     // console.log("window_width mx 1200",  window_width);
-    }
- 
-  
-  // eslint-disable-next-line
-}, []);
+  //   useEffect(() => {
+  //     const window_width = window.innerWidth;
+  //     //console.log("window_width",  window_width);
+  //     if (window_width < 1200) {
+  //       setsetHeight(`230px`)
+  //      // console.log("window_width lesss 1200",  window_width);
+  //     }
+  //     else{
+  //       setsetHeight(`375px`)
+  //      // console.log("window_width mx 1200",  window_width);
+  //     }
+  //   // eslint-disable-next-line
+  // }, []);
 
-useEffect(() => {
+  // useEffect(() => {
 
-  const resizeListener = () => {
+  //   const resizeListener = () => {
 
-    // // change width from the state object
-   const window_width = window.innerWidth;
-    //console.log("window_width",  window_width);
-    if (window_width < 1200) {
-      setsetHeight(`230`)
-      //console.log("window_width lesss 1200",  window_width);
-    }
-    else{
-      setsetHeight(`375`)
-      //console.log("window_width mx 1200",  window_width);
-    }
-    
-  };
-  // set resize listener
-  window.addEventListener("resize", resizeListener);
+  //     // // change width from the state object
+  //    const window_width = window.innerWidth;
+  //     //console.log("window_width",  window_width);
+  //     if (window_width < 1200) {
+  //       setsetHeight(`230px`)
+  //       //console.log("window_width lesss 1200",  window_width);
+  //     }
+  //     else{
+  //       setsetHeight(`375px`)
+  //       //console.log("window_width mx 1200",  window_width);
+  //     }
 
-  // clean up function
-  return () => {
-    // remove resize listener
-    window.removeEventListener("resize", resizeListener);
-  };
-  // eslint-disable-next-line
-}, []);
+  //   };
+  //   // set resize listener
+  //   window.addEventListener("resize", resizeListener);
 
+  //   // clean up function
+  //   return () => {
+  //     // remove resize listener
+  //     window.removeEventListener("resize", resizeListener);
+  //   };
+  //   // eslint-disable-next-line
+  // }, []);
+  // const size: string = useWindowSize();
+  // useEffect(() => {
+  //   if (parseInt(size) < 1200) {
+  //     setsetHeight(size);
+  //   }
+  // }, [size]);
   const { isLoading, data, isError } = state;
-
-
-
 
   const Charts = [
     // {
@@ -166,7 +167,7 @@ useEffect(() => {
           visible: true,
           position: "Top",
           fill: "#ee792b",
-          
+
           border: { width: 1, color: "#4684bd" },
           font: {
             fontWeight: "600",
@@ -183,15 +184,14 @@ useEffect(() => {
         <WidgetLoader />
       ) : isError ? (
         <ErrorComponent message={"An error occured while fetching details "} />
-      ) : (
-        data && data.length ?  
+      ) : data && data.length ? (
         <React.Suspense
           fallback={
-            <div className='card-loader'>
+            <div className="card-loader">
               <WidgetLoader />
             </div>
-          }>
-             
+          }
+        >
           <MixedCharts
             id={`PickupChart-${index}`}
             legend={false}
@@ -203,8 +203,8 @@ useEffect(() => {
                 majorGridLines: { width: 0 },
                 // maximumLabelWidth: '100',
                 // labelPlacement: 'OnTicks' ,
-               // labelIntersectAction: 'None',
-               // edgeLabelPlacement: 'Shift',
+                // labelIntersectAction: 'None',
+                // edgeLabelPlacement: 'Shift',
                 // labelStyle: {
                 //   fontStyle: 'bold',
                 //   size: '8px',
@@ -223,15 +223,14 @@ useEffect(() => {
                 visible: false,
               },
               tooltip: { enable: true },
-             // height:"375px"
-             height: `${setHeight}px`,
+              height:"375px"
+              // height: `${setHeight}px`,
             }}
             charts={Charts}
           />
-          <div className='sub-title mb-1'>Pick up by segment</div>
-         </React.Suspense>
-         : null
-      )} 
+          <div className="sub-title mb-1">Pick up by segment</div>
+        </React.Suspense>
+      ) : null}
     </>
   );
 };
