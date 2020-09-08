@@ -189,8 +189,8 @@
   font-size: 11px;
 }
 
-.businessmix-table.table-striped tbody tr:nth-of-type(odd), .summary-table.table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.08);
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.04);
 }
 
 .graph-sec{

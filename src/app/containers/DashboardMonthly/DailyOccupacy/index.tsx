@@ -103,9 +103,9 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
 
      
       marker: {
-        visible: false,
-        width: 10,
-        height: 10,
+        visible: true,
+        width: 6,
+        height: 6,
         fill: "rgb(43, 88, 143)",
         border: { width: 1, color: "rgb(43, 88, 143)" },
         dataLabel: {
@@ -245,7 +245,7 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
                       color: "transparent",
                     },
                     visible: false,
-                    maximum:  selectedValue === "OCC" ? 100 : null,
+                    maximum:  selectedValue === "OCC" ? 120 : null,
                     interval: selectedValue === "OCC" ? 25 : null,
                     //interval: 25,
                     //rangePadding: 'None',
