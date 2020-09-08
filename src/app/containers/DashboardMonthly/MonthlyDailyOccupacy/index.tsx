@@ -53,8 +53,8 @@ const MonthlyDailyOccupacy = ({ graphdata = [], selectedDate }: any) => {
       <div
         style={{
           fontSize: "10px",
-          background: "#e46d09",
-          padding: "3px 3px",
+          background: "rgb(226 131 51)",
+          padding: "2px 2px",
           borderRadius: "3px",
         }}
       >
@@ -124,16 +124,16 @@ const MonthlyDailyOccupacy = ({ graphdata = [], selectedDate }: any) => {
       xName: "name",
       yName: "ADR",
       type: "Spline",
-      fill: "#e46d09",
+      fill: "rgba(228, 109, 9, 0.75)",
       name: "ADR",
-      width: 3,
+      width: 2.5,
       dashArray: "5",
       marker: {
-        visible: false,
-        width: 8,
-        height: 8,
-        fill: "#2f5891",
-        border: { width: 1, color: "#e46d09" },
+        visible: true,
+        width: 6,
+        height: 6,
+        fill: "rgba(228, 109, 9, 0.75)",
+        border: { width: 1, color: "rgba(228, 109, 9, 0.75)" },
         dataLabel: {
           visible: true,
           position: "Top",
@@ -210,16 +210,16 @@ const MonthlyDailyOccupacy = ({ graphdata = [], selectedDate }: any) => {
       xName: "name",
       yName: "ADR",
       type: "Spline",
-      fill: "#e46d09",
+      fill: "rgba(228, 109, 9, 0.75)",
       name: "ADR",
-      width: 3,
+      width: 2,
       dashArray: "5",
       marker: {
-        visible: false,
-        width: 10,
-        height: 10,
-        fill: "#e46d09",
-        border: { width: 1, color: "#e46d09" },
+        visible: true,
+        width: 6,
+        height: 6,
+        fill: "rgba(228, 109, 9, 0.75)",
+        border: { width: 1, color: "rgba(228, 109, 9, 0.75)" },
         dataLabel: {
           visible: true,
           position: "Top",

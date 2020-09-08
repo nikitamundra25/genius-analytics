@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ApiHelper, useWindowSize } from "../../../../helper";
+import { ApiHelper } from "../../../../helper";
 import { IBookingChannelModel } from "../../../../interfaces";
 import { ErrorComponent } from "../../../components/Error";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
@@ -12,7 +12,7 @@ const MixedCharts = React.lazy(
 
 const PickupSegment = ({ index, date = new Date() }: any) => {
   //const setHeight1 = setHeight + 140;
-  const [setHeight, setsetHeight] = React.useState<string>("230px");
+  //const [setHeight, setsetHeight] = React.useState<string>("230px");
   const [state, setState] = useState<IBookingChannelModel>({
     isLoading: true,
     isError: true,
