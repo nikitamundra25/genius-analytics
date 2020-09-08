@@ -98,7 +98,11 @@ const SummaryTable = (props: any) => {
                             </td>
                             <td className="content-col">
                               <div className="d-flex align-items-center justify-content-between">
-                                <div className="text-col">{list.rooms} </div>
+                                <div className={`text-col ${
+                              list.rooms && parseInt(list.rooms) < 0
+                                ? "text-danger"
+                                : ""
+                            }`}>{list.rooms} </div>
                                 <div className="icon-col">
                                   <OverlayTrigger
                                     key={"top2"}
@@ -145,7 +149,11 @@ const SummaryTable = (props: any) => {
                             </td>
                             <td className="content-col">
                               <div className="d-flex align-items-center justify-content-between">
-                                <div className="text-col">{list.adr}</div>
+                                <div className={`text-col ${
+                              list.adr && parseInt(list.adr) < 0
+                                ? "text-danger"
+                                : ""
+                            }`}>{list.adr}</div>
                                 <div className="icon-col">
                                 <OverlayTrigger
                                     key={"top2"}
@@ -192,7 +200,11 @@ const SummaryTable = (props: any) => {
                             </td>
                             <td className="content-col">
                               <div className="d-flex align-items-center justify-content-between">
-                                <div className="text-col">
+                                <div className={`text-col ${
+                              list.revenue && parseInt(list.revenue) < 0
+                                ? "text-danger"
+                                : ""
+                            }`}>
                                   {parseFloat(list.revenue).toLocaleString()}
                                 </div>
                                 <div className="icon-col">
@@ -269,7 +281,11 @@ const SummaryTable = (props: any) => {
                             </td>
                             <td className="content-col">
                               <div className="d-flex align-items-center justify-content-between">
-                                <div className="text-col">{list.rooms} </div>
+                                <div className={`text-col ${
+                              list.rooms && parseInt(list.rooms) < 0
+                                ? "text-danger"
+                                : ""
+                            }`}>{list.rooms} </div>
                                 <div className="icon-col">
                                 <OverlayTrigger
                                     key={"top2"}
@@ -316,7 +332,11 @@ const SummaryTable = (props: any) => {
                             </td>
                             <td className="content-col">
                               <div className="d-flex align-items-center justify-content-between">
-                                <div className="text-col">{list.adr}</div>
+                                <div className={`text-col ${
+                              list.adr && parseInt(list.adr) < 0
+                                ? "text-danger"
+                                : ""
+                            }`}>{list.adr}</div>
                                 <div className="icon-col">
                                 <OverlayTrigger
                                     key={"top2"}
@@ -363,7 +383,11 @@ const SummaryTable = (props: any) => {
                             </td>
                             <td className="content-col">
                               <div className="d-flex align-items-center justify-content-between">
-                                <div className="text-col">
+                                <div className={`text-col ${
+                              list.revenue && parseInt(list.revenue) < 0
+                                ? "text-danger"
+                                : ""
+                            }`}>
                                   {parseFloat(list.revenue).toLocaleString()}
                                 </div>
                                 <div className="icon-col">
