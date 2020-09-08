@@ -28,4 +28,5 @@ export interface IAppRoutes {
   PICKUPSUMMARY:string;
   PICKUPDETAIL:string;
   PICKUPBOB:string;
+  PIVOT_TABLE: string
 }

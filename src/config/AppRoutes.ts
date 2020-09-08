@@ -22,4 +22,5 @@ export const AppRoutes: IAppRoutes = {
   ADD_FAQ: "/faq/add",
   FAQ: "/faq",
   COMING_SOON: "/coming-soon",
+  PIVOT_TABLE: "/pivot-table"
 };
