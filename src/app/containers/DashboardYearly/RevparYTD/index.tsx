@@ -46,6 +46,11 @@ const RevparYTD = ({ graphdata = [] }: any) => {
       // },
       //opacity: '0.6',
       marker: {
+        visible: true,
+        width: 6,
+        height: 6,
+        fill:"rgb(0, 189, 174)",
+        border: { width: 0, color: "rgb(0, 189, 174)" },
         dataLabel: {
           visible: true,
           position: "Top",

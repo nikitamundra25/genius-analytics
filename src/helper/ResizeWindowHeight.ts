@@ -1,24 +1,33 @@
+import React, { useEffect } from "react";
 
-export const getCurrentHeight = (id: string) => {
-  let setHeight: string = "250px";
-  const modalbtn: HTMLElement | null = document.getElementById(id);
-  console.log("modalbtn", modalbtn);
+export const useWindowSize = () => {
+  // Initialize state with undefined width/height so server and client renders match
+  const [setHeight, setsetHeight] = React.useState<string>("230px");
 
-  if (modalbtn) {
-    setTimeout(() => {
-      const check = modalbtn.getBoundingClientRect();
-      const getHeight = check.height;
-      const setgraphHeight = getHeight - 75;
-      console.log(" height on resize", check, getHeight, setgraphHeight);
-      setHeight = `${setgraphHeight}px`;
-      console.log("setHeig", setHeight);
-      return setHeight;
-    }, 100);
-  }
-
-  // console.log("setHeighttttttt", setHeight);
+  useEffect(() => {
+    // Handler to call on window resize
+    function handleResize() {
+      const window_width = window.innerWidth;
+      // Set window width/height to state
+      if (window_width < 1200) {
+        setsetHeight(`230px`)
+       // console.log("window_width lesss 1200",  window_width);
+      }
+      else{
+        setsetHeight(`375px`)
+       // console.log("window_width mx 1200",  window_width);
+      }
+    }
+    
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+    
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+    
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Empty array ensures that effect is only run on mount
 
   return setHeight;
-
-};
-
+}

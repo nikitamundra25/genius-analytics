@@ -189,8 +189,8 @@
   font-size: 11px;
 }
 
-.businessmix-table.table-striped tbody tr:nth-of-type(odd), .summary-table.table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.08);
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.04);
 }
 
 .graph-sec{
@@ -206,15 +206,4 @@
   }
   
 }
-.mobile-view{
-  display:none;
-}
 
-@media only screen and (max-width: 1199px) {
-  .desktop-view{
-    display:none;
-  }
-  .mobile-view{
-    display:block;
-  }
-}
