@@ -135,6 +135,7 @@ const PickupSegment = ({ index, date = new Date() }: any) => {
       name: "Room Nts",
       width: 1,
       yAxisName: "yAxis1",
+      animation:{enable:false},
       cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
@@ -157,6 +158,7 @@ const PickupSegment = ({ index, date = new Date() }: any) => {
       fill: "#ee792b",
       name: "ADR",
       width: 3,
+      animation:{enable:false},
       marker: {
         visible: false,
         width: 8,
@@ -196,6 +198,7 @@ const PickupSegment = ({ index, date = new Date() }: any) => {
             id={`PickupChart-${index}`}
             legend={false}
             chartSettings={{
+              
               primaryXAxis: {
                 valueType: "Category",
                 //interval: 1,
@@ -223,7 +226,8 @@ const PickupSegment = ({ index, date = new Date() }: any) => {
                 visible: false,
               },
               tooltip: { enable: true },
-              height:"270px"
+              height:"270px",
+              enableAnimation:false
               // height: `${setHeight}px`,
             }}
             charts={Charts}

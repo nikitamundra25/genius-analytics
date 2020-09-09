@@ -29,6 +29,7 @@ import logo from "./../../../assets/img/logo150.png";
 import logosmall from "./../../../assets/img/logosmall.png";
 import PasswordProtection from "../PasswordProtection";
 import { withCookies } from "react-cookie";
+
 const DefaultFooter = React.lazy(() => import("./DefaultFooter"));
 const DefaultHeader = React.lazy(() => import("./DefaultHeader"));
 
@@ -44,6 +45,7 @@ class DefaultLayout extends Component<
       userDetails: {},
     };
   }
+
   componentDidMount() {
     const { cookies } = this.props;
     if (cookies.get("token")) {
@@ -52,6 +54,7 @@ class DefaultLayout extends Component<
       });
     }
   }
+
 
   render() {
     const { isAuthenticated } = this.state;

@@ -64,6 +64,7 @@ const PickupDOWOCCSegment = (props: any) => {
       name: "OCC",
       yAxisName: "yAxis1",
       width: 1,
+      animation:{enable:false},
       cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         dataLabel: {
@@ -87,6 +88,7 @@ const PickupDOWOCCSegment = (props: any) => {
       name: "ADR",
       width: 3,
       dashArray: "8 5",
+      animation:{enable:false},
       marker: {
         visible: true,
         width: 8,

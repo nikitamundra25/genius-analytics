@@ -1,6 +1,7 @@
 import React from "react";
 import { WidgetLoader } from "../../components/Loader/WidgetLoader";
-import { PivotViewComponent,  FieldList, Inject, ConditionalFormatting } from "@syncfusion/ej2-react-pivotview";
+import { PivotViewComponent, Inject, FieldList, CalculatedField, Toolbar, PDFExport, ExcelExport, ConditionalFormatting, NumberFormatting } from '@syncfusion/ej2-react-pivotview';
+
 import dataSource from "./pivotDummyData.json";
 import { Card } from "react-bootstrap";
 
@@ -20,7 +21,7 @@ const PivotTableComponent = () => {
     filters: [],
     conditionalFormatSettings: [
       {
-          measure: 'Amount',
+          measure: 'Sold',
           value1: 0,
           conditions: 'LessThan',
           style: {
@@ -48,13 +49,10 @@ const PivotTableComponent = () => {
                 id="PivotView"
                 dataSourceSettings={dataSourceSettings}
                 width={"100%"}
-                height={"290"}
+                height={"100%"}
                 gridSettings={{ columnWidth: 140 }}
-                allowConditionalFormatting={true}
-              >
-
-                <Inject services={[ConditionalFormatting, FieldList]} />
-              </PivotViewComponent>
+                allowConditionalFormatting= {true}
+              ><Inject services={[FieldList, CalculatedField, Toolbar, PDFExport, ExcelExport, ConditionalFormatting, NumberFormatting]}/></PivotViewComponent>
             </div>
           </React.Suspense>
         </Card.Body>
