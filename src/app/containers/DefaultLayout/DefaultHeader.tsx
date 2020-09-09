@@ -1,21 +1,32 @@
-import React, { Component } from "react";
+import React from "react";
 import { AppSidebarToggler } from "@coreui/react";
 import {
   IDefaultHeaderProps,
-  IDefaultHeaderState,
+  // IDefaultHeaderState,
 } from "../../../interfaces";
 import { Nav, Dropdown } from "react-bootstrap";
-import { AppRoutes } from "../../../config";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import { LogOutRequest } from "../../../actions";
-import { Dispatch } from "redux";
+import { useCookies } from "react-cookie";
 import logosmall from "./../../../assets/img/logosmall.png";
-class DefaultHeader extends Component<
-  IDefaultHeaderProps,
-  IDefaultHeaderState
-> {
-  render() {
+
+
+// class DefaultHeader extends Component<
+//   IDefaultHeaderProps|any,
+//   IDefaultHeaderState
+// > {
+  const DefaultHeader = (props:IDefaultHeaderProps|any)=> {
+  const [ cookies,setCookie] = useCookies(["token"]);
+
+ const onLogout = () => {
+    setCookie("token", cookies.AWSELB, {
+      path: "/",
+      expires: new Date(new Date().getTime() )
+    });
+    window.location.reload();
+  }
+
+
+
+  // render() {
     return (
       <React.Fragment>
         <AppSidebarToggler className='d-lg-none' display='md' mobile />
@@ -38,12 +49,7 @@ class DefaultHeader extends Component<
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item>
-                <Link to={AppRoutes.HOME}>
-                  <i className='fa fa-user' /> Profile
-                </Link>
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => this.props.onLogout()}>
+              <Dropdown.Item onClick={() => onLogout()}>
                 <i className='fa fa-lock' /> Logout
               </Dropdown.Item>
             </Dropdown.Menu>
@@ -82,16 +88,8 @@ class DefaultHeader extends Component<
         </Nav>
       </React.Fragment>
     );
-  }
+  // }
 }
 
 
-const mapDispatchToProps = (dispatch: Dispatch) => {
-  return {
-    onLogout: () => {
-      dispatch(LogOutRequest());
-    },
-  };
-};
-
-export default connect(undefined, mapDispatchToProps)(DefaultHeader);
+export default DefaultHeader;

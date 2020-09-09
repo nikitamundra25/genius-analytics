@@ -13,6 +13,11 @@ export default {
       url: AppRoutes.PICKUPSUMMARY,
     },
     {
+      name: "Pivot",
+      icon: "icon-grid",
+      url: AppRoutes.PIVOT_TABLE,
+    },
+    {
       name: "Charts",
       icon: "icon-pie-chart",
       url: AppRoutes.COMING_SOON,

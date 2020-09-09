@@ -33,6 +33,7 @@ let value:Number = parseInt(args.text);
       height="100%" 
       width="100%"
       textRender = {textRender}
+      enableAnimation={false}
       // height={barChart.height || "270px"}
       // width={Browser.isDevice ? '100%' : '80%'}
       // width={barChart.width || "100%"}
@@ -67,6 +68,7 @@ let value:Number = parseInt(args.text);
           fill={barChart.color}
           name={barChart.title}
           width={1}
+          animation={{enable:false}}
           cornerRadius={{ bottomLeft: 0, bottomRight: 7, topLeft: 0, topRight: 7 }}
           marker={{
             dataLabel: {
