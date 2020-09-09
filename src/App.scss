@@ -325,7 +325,7 @@ body {
   .app-footer {
     padding: 0px 16px;
     color: $secondary;
-    background: #e8eaeb;
+    background: $gray-footer;
     border: 0px;
     font-size: 14px;
     margin-top: 30px;
@@ -366,11 +366,11 @@ body {
   flex-flow: column;
   .no-data-icon {
     font-size: 26px;
-    color: #868686;
+    color:$dark-gray;
   }
   p {
     font-size: 15px;
-    color: #010101;
+    color: $light-black;
   }
  }
   // card css
@@ -423,7 +423,7 @@ body {
   }
   .panel-title{
     font-weight: 500;
-    color: #2c2c2c;
+    color:$light-black-opaque;
     font-size: 18px;
     text-align: left;
     line-height:normal;
@@ -668,10 +668,10 @@ body {
     }
   }
   .text-green {
-    color: #11b94d !important;
+    color: $green !important;
   }
   .text-red {
-    color: #fe0000 !important;
+    color: $red !important;
   }
   .custom-tooltip .tooltip-inner{
     background-color: rgba(0, 8, 22, 0.75);
@@ -684,14 +684,14 @@ body {
     .label-text{
       font-size:13px;
       font-weight:500;
-      border-bottom:1px solid #fff;
-      color:#fff;
+      border-bottom:1px solid $white;
+      color:$white;
       padding-bottom:5px;
     }
     .label-value{
       font-size:13px;
       font-weight:500;
-      color:#fff;
+      color:$white;
     }
     .label-img{
       margin-right:10px;
@@ -792,8 +792,8 @@ z-index: 1001 ! important;
     max-width: 100%;
     padding: 35px 20px;
     margin:0px 15px;
-    border: 0px solid #ccc;
-    background: #fff;
+    border: 0px ;
+    background: $white;
     background-color: rgba(255,255,255,.8);
     border-radius: 6px;
     box-shadow: 0px 12px 20px 3px rgba(0, 0, 0, 0.09), 0px 9px 16px 8px rgba(0, 0, 0,  0.02), 1px 3px 20px 2px rgba(0, 0, 0, 0.00);

@@ -7,6 +7,7 @@ export interface IredirectPath {
 export interface IDefaultLayoutProps extends RouteComponentProps {
   redirectTo: (data: IredirectPath) => void;
   cookies: any;
+
 }
 
 export interface IDefaultLayoutState {
@@ -20,7 +21,7 @@ export interface IDefaultHeaderProps extends RouteComponentProps {
     isLoading: boolean;
     profileInfo: any;
   };
-  onLogout: () => void;
+  onLogoutFun: () => void;
 }
 
 export interface IDefaultHeaderState {}

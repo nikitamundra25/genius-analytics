@@ -43,7 +43,6 @@ const MixedCharts = ({ charts = [], id="mixed-map", chartSettings = {},legend= t
       style={{ "height":height ,
       "width":"100%"  }}
       textRender = {textRender}
-
       // fill="transparent"
       // background='transparent'
       {...chartSettings}>
