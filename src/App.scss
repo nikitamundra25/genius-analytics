@@ -710,7 +710,6 @@ body {
   }
 }
 
-
 @media (min-width: 992px) {
   html:not([dir="rtl"]) .sidebar-lg-show.sidebar-fixed.sidebar-minimized .main,
   html:not([dir="rtl"])
@@ -738,6 +737,7 @@ body {
   }
 }
 
+
 #defaultLayout .e-panel .e-panel-container {
   vertical-align: middle;
   font-weight: 600;
@@ -762,6 +762,9 @@ body {
 #chart-1, #chart-2, #chart-3, #chart-4, #RGICharts, #MPICharts, #ARICharts, #chart-business-card-percent, #chart-business-card-adr { 
 overflow: visible ! important; 
 } 
+div[id*="DOWChart-"] {
+  overflow: visible ! important; 
+}
 #layout_1, #layout_4, #layout_8 { 
 z-index: 1001 ! important; 
 }
