@@ -9,7 +9,7 @@ const ColumnChart = React.lazy(() =>
   import("../../../components/Charts/ColumnChart")
 );
 
-export default ({ graphdata = [] }: any) => {
+export default () => {
 
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(

@@ -11,7 +11,7 @@ const MixedCharts = React.lazy(() =>
 
 
 
-const RoomTypesYTD = ({ graphdata = [] }: any) => {
+const RoomTypesYTD = () => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.ROOMTYPESReducer

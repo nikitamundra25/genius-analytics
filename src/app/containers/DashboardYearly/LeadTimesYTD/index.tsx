@@ -8,7 +8,7 @@ const PieChartComponent = React.lazy(() =>
   import("../../../components/Charts/PieChart")
 );
 
-export default ({ graphdata = [] }: any) => {
+export default () => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.LeadTimesYTDReducer
@@ -38,13 +38,11 @@ export default ({ graphdata = [] }: any) => {
           >
             <PieChartComponent
               id={"leadtimes"}
-             // height={"270px"}
-            //  height= {setHeight}
+            
               data={data}
               chartSettings={{
                 SeriesDirective: {
-                  // innerRadius: "70%",
-                  // radius: "70%",
+                
                   palettes: [
                     "#4f81bc",
                     "#c0504e",
