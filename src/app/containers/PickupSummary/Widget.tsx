@@ -47,13 +47,13 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
             <div className="pickup-month-card mb-1">
               <div>
                 <PickupDOWOCCSegment
-                  index={`${rowId}-mob`}
+                  index={rowId}
                   date={chartType.date}
                 />
               </div>
               <div>
                 <PickupBusinessMix
-                  index={`${rowId}-mob`}
+                  index={rowId}
                   date={chartType.date}
                 />
               </div>
