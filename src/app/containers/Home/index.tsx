@@ -81,8 +81,6 @@ const HomeComponent: FunctionComponent = () => {
   };
 
   const getChart = (chartType: any) => {
-    console.log("inside this");
-    
     switch (chartType) {
       case "Business on the Books":
         return (

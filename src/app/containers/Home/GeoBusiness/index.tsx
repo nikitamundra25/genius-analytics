@@ -13,7 +13,7 @@ const WorldMap = React.lazy(() =>
 );
 
 
-const GeoBusiness  =  ({ graphdata = {},date }:any) => {
+const GeoBusiness  =  ({ date }:Date|any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.GeographicOriginReducer
