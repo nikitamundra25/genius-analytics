@@ -48,7 +48,7 @@ class DefaultLayout extends Component<
   }
 
   componentDidMount() {
-    document.addEventListener('mousedown', this.handleClickOutside);
+    //document.addEventListener('mousedown', this.handleClickOutside);
     const { cookies } = this.props;
     if (cookies.get("token")) {
       this.setState({
@@ -57,25 +57,25 @@ class DefaultLayout extends Component<
     }
   }
 
-  componentWillUnmount() {
-    document.removeEventListener('mousedown', this.handleClickOutside);
-  }
+  // componentWillUnmount() {
+  //   document.removeEventListener('mousedown', this.handleClickOutside);
+  // }
 
   /**
    * Set the wrapper ref
    */
-  setWrapperRef = (node:any) => {
-    this.wrapperRef = node;
-  }
+  // setWrapperRef = (node:any) => {
+  //   this.wrapperRef = node;
+  // }
 
    /**
    * Alert if clicked on outside of element
    */
-  handleClickOutside = (event:any) => {
-    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-      alert('You clicked outside of me!');
-    }
-  }
+  // handleClickOutside = (event:any) => {
+  //   if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+  //     alert('You clicked outside of me!');
+  //   }
+  // }
 
 
   render() {
@@ -94,7 +94,10 @@ class DefaultLayout extends Component<
                 <AppSidebar fixed minimized display='lg' >
                   <>
                   <div>
-                        <div className='brand-logo' ref={this.setWrapperRef}>
+                        <div 
+                        className='brand-logo' 
+                        //ref={this.setWrapperRef}
+                        >
                     <img src={logo} width={120} alt='' className='main-logo' />
                     <img
                       src={logosmall}
