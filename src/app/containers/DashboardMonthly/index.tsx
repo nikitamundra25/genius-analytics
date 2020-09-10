@@ -195,7 +195,6 @@ const DashboardMonthly: FunctionComponent = () => {
                 content={() => getChart(dashboardMonthlyList[5].name)}
               ></PanelDirective>
             </PanelsDirective>
-            {/* <DashboardMonthlyWidget graphList={dashboardMonthlyList} /> */}
           </DashboardLayoutComponent>
         ) : null}
       </div>

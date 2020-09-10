@@ -16,7 +16,7 @@ const MixedCharts = React.lazy(() =>
 );
 
 
-const PickupSinceYesterday = ({date }:any) => {
+const PickupSinceYesterday = ({date }:Date|any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.RoomNightsReducer

@@ -11,7 +11,7 @@ const MixedCharts = React.lazy(() =>
 
 
 
-const QuarterlyOCCADR = ({ id,graphdata = []  }: any) => {
+const QuarterlyOCCADR = ({ id  }: any) => {
 
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(

@@ -10,7 +10,7 @@ const MixedCharts = React.lazy(() =>
 
 
 
-const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
+const MonthlyOCCADR = ({ id }: any) => {
 
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
@@ -116,8 +116,6 @@ const MonthlyOCCADR = ({ id,  graphdata = [] }: any) => {
                   visible:false,
                 },
                 tooltip: { enable: true },
-                // width:"100%",
-                // height:"100%"
               }}
               charts={Charts1}
             />

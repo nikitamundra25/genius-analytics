@@ -10,7 +10,7 @@ const MixedCharts = React.lazy(() =>
 );
 
 
-const RoomTypeStatistics = ({ graphdata = [] }:any) => {
+const RoomTypeStatistics = () => {
 
   
   const dispatch = useDispatch();

@@ -37,6 +37,7 @@ class DefaultLayout extends Component<
   IDefaultLayoutProps,
   IDefaultLayoutState
 > {
+  wrapperRef: any;
   constructor(props: any) {
     super(props);
     this.state = {
@@ -47,11 +48,32 @@ class DefaultLayout extends Component<
   }
 
   componentDidMount() {
+    document.addEventListener('mousedown', this.handleClickOutside);
     const { cookies } = this.props;
     if (cookies.get("token")) {
       this.setState({
         isAuthenticated: true,
       });
+    }
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+
+  /**
+   * Set the wrapper ref
+   */
+  setWrapperRef = (node:any) => {
+    this.wrapperRef = node;
+  }
+
+   /**
+   * Alert if clicked on outside of element
+   */
+  handleClickOutside = (event:any) => {
+    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+      alert('You clicked outside of me!');
     }
   }
 
@@ -69,8 +91,10 @@ class DefaultLayout extends Component<
                 </Suspense>
               </AppHeader>
               <div className='app-body overflow-hidden'>
-                <AppSidebar fixed minimized display='lg'>
-                  <div className='brand-logo'>
+                <AppSidebar fixed minimized display='lg' >
+                  <>
+                  <div>
+                        <div className='brand-logo' ref={this.setWrapperRef}>
                     <img src={logo} width={120} alt='' className='main-logo' />
                     <img
                       src={logosmall}
@@ -86,6 +110,8 @@ class DefaultLayout extends Component<
                   </Suspense>
                   <AppSidebarFooter />
                   <AppSidebarMinimizer />
+                  </div>
+                  </>
                 </AppSidebar>
                 <main className='main'>
                   <Container fluid>

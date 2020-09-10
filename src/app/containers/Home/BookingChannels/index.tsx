@@ -12,7 +12,7 @@ const PieChartComponent = React.lazy(() =>
 );
 
 
-const BookingChannels = ({ graphdata = [] ,date}:any) => {
+const BookingChannels = ({date}:Date|any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.BookingChannelReducer

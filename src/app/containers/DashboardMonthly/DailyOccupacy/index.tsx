@@ -12,7 +12,7 @@ const MixedCharts = React.lazy(
   () => import("../../../components/Charts/MixedCharts")
 );
 
-const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
+const DailyOccupacy = ({selectedDate }: any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.DailyOccupacyBudLyReducer
@@ -193,7 +193,6 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
         <style>{SAMPLE_CSS}</style>
         <div style={{  "position": "absolute", "left": "0px", "top": "0px", "width": "100%"}} > 
         <WidgetHeader
-          // title={"Daily Occupacy Vs. BUD Vs. LY"}
           title={`${
             selectedValue === "OCC"
               ? "Daily Occupancy"
@@ -247,8 +246,7 @@ const DailyOccupacy = ({ graphdata = [],selectedDate }: any) => {
                     visible: false,
                     maximum:  selectedValue === "OCC" ? 120 : null,
                     interval: selectedValue === "OCC" ? 25 : null,
-                    //interval: 25,
-                    //rangePadding: 'None',
+                  
                   },
                   tooltip: { enable: true },
                   Legend: { enable: false },

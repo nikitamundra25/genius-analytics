@@ -9,7 +9,7 @@ const MixedCharts = React.lazy(() =>
 );
 
 
-const StayYTD = ({ id, graphdata = [] }: any) => {
+const StayYTD = () => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.StayYTDReducer
