@@ -9,7 +9,7 @@ import { checkDateFormat } from "../../../../config";
 
 import moment from "moment";
 
-const RGIVariance =  ({date }:any) => {
+const RGIVariance =  ({date }:Date|any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.RGIYOYVarianceReducer

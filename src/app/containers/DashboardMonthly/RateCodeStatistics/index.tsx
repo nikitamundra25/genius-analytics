@@ -11,7 +11,7 @@ const MixedCharts = React.lazy(() =>
 );
 
 
-const RateCodeStatistics = ({ graphdata = [] }:any) => {
+const RateCodeStatistics = () => {
 
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(

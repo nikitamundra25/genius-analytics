@@ -135,24 +135,10 @@ const MonthlyBOB = (props: any) => {
                                           }
                                           className="title-col sperator-white-section"
                                         >
-                                          {/* {list.title} */}
                                         </td>
                                       ) : null}
                                     </tr>
-                                    {/* <tr>
-                                      {ind === 0 ? (
-                                        <td
-                                          colSpan={
-                                            months.length
-                                              ? months.length + 2
-                                              : 33
-                                          }
-                                          className="title-col bg-1 "
-                                        >
-                                          <div className="separtor-line"></div>
-                                        </td>
-                                      ) : null}
-                                    </tr> */}
+                                    
                                     <tr key={ind}>
                                       <td className="title-col white-nowrap">
                                         <OverlayTrigger

@@ -37,6 +37,7 @@ import {pickupSummaryTableReducer} from "./pickupSummaryTable";
 import { CumulativeTableReducer } from "./CumulativeTable";
 import { DateSelectionReducer } from "./DateSelection";
 import { pickupMainSummaryReducer } from "./pickupMainSummary";
+import { pivotTableReducer } from "./PivotTable";
 
 export const mainReducer = handleActions(
   {
@@ -96,5 +97,6 @@ export const RootReducer: Reducer<IRootState, AnyAction> = combineReducers<
   CumulativeTableReducer: CumulativeTableReducer as any,
 
   DateSelectionReducer: DateSelectionReducer as any,
-  pickupMainSummaryReducer:pickupMainSummaryReducer as any
+  pickupMainSummaryReducer:pickupMainSummaryReducer as any,
+  pivotTableReducer: pivotTableReducer as any
 });

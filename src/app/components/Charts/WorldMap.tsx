@@ -27,13 +27,7 @@ const WorldMap = ({ data }: any) => {
           visible: false,
           position: "Top",
         }}
-        // titleSettings={{
-        //   visible: false,
-        //   text: "Population density (per square kilometer) - 2015",
-        //   textStyle: {
-        //     size: "16px",
-        //   },
-        // }}
+        
       >
         <Inject services={[Legend, MapsTooltip]} />
         <LayersDirective>

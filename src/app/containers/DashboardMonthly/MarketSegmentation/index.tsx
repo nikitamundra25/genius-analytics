@@ -11,7 +11,7 @@ const MixedCharts = React.lazy(() =>
 );
 
 
-const MarketSegmentation = ({ graphdata = [] }:any) => {
+const MarketSegmentation = () => {
 
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(

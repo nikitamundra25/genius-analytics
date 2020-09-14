@@ -11,7 +11,7 @@ const MixedCharts = React.lazy(
   () => import("../../../components/Charts/MixedCharts")
 );
 
-const MonthlyDailyOccupacy = ({ graphdata = [], selectedDate }: any) => {
+const MonthlyDailyOccupacy = ({ selectedDate }: any) => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.MonthlyDailyOccupacyReducer

@@ -9,7 +9,7 @@ const PieChartComponent = React.lazy(() =>
   import("../../../components/Charts/PieChart")
 );
 
-export default ({ graphdata = [] }: any) => {
+export default () => {
   const [selectedValue, setselectedValue] = React.useState<string>("bar");
   const [segmentList, setsegmentList] = React.useState<any>([]);
 
@@ -71,8 +71,6 @@ export default ({ graphdata = [] }: any) => {
           >
             <PieChartComponent
               id={"leadtimesSegment"}
-              //height={"270px"}
-              // height={setHeight}
               data={segmentList}
               chartSettings={{
                 SeriesDirective: {

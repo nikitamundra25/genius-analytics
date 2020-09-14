@@ -13,7 +13,7 @@ const MixedCharts = React.lazy(() =>
 
 
 
-const BookingChannel = ({ graphdata = [] }:any) => {
+const BookingChannel = () => {
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.BookingChannelMonthlyReducer

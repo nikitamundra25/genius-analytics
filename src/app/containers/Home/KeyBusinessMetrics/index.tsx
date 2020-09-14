@@ -13,7 +13,7 @@ const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
 
-const KeyBusinessMetrics = ({ graphdata = [],date }: any) => {
+const KeyBusinessMetrics = ({ date }: Date|any) => {
   const [activeToggle, setactiveToggle] = React.useState<ToggleType>("graph");
 
   const dispatch = useDispatch();

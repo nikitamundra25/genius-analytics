@@ -14,7 +14,7 @@ const MixedCharts = React.lazy(
   () => import("../../../components/Charts/MixedCharts")
 );
 
-const RoomTypeStatics =  ({date }:any) => {
+const RoomTypeStatics =  ({date }:Date|any) => {
   const dispatch = useDispatch();
   const { isLoading, data = [], isError } = useSelector(
     (state: IRootState) => state.RoomTypeStaticsReducer

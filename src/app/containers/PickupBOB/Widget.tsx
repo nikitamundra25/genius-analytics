@@ -5,14 +5,10 @@ import BOBMonthlyTable from "./BOBMonthlyTable";
 
 const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
 
-
-
   const getChart = (
     chartType: any,
     index: number
   ) => {
-    // switch (chartType.name) {
-    //   case "Month":
 
     return (
      <div>
@@ -36,9 +32,7 @@ const DashboardWidget = ({ graphList }: IDashboardWidgetProps) => {
         </div>
       
     );
-    // default:
-    //   return null;
-    // }
+
   };
 
   return (

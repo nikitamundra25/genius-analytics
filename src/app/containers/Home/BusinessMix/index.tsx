@@ -12,7 +12,7 @@ const BarChartComponent = React.lazy(() =>
   import("../../../components/Charts/BarChart")
 );
 
-const BusinessMixComponent = (props: any) => {
+const BusinessMixComponent = (props: Date|any) => {
   // const {graphdata}= props;
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
