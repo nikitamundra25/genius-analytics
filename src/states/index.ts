@@ -38,4 +38,5 @@ export * from "./pickupBlob";
 export * from "./pickupSummaryTable";
 export * from "./CumulativeTable";
 export * from "./DateSelection";
-export * from "./pickupMainSummary"
+export * from "./pickupMainSummary";
+export * from "./PivotTable";

@@ -42,6 +42,8 @@ export * from "./CumulativeTable";
 export * from "./DateSelection";
 export * from "./pickupMainSummary";
 
+export * from "./PivotTable";
+
 //
 export const redirectTo = createAction("REDIRET_TO");
 //
