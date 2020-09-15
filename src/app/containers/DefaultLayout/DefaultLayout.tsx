@@ -92,8 +92,7 @@ class DefaultLayout extends Component<
               </AppHeader>
               <div className='app-body overflow-hidden'>
                 <AppSidebar fixed minimized display='lg' >
-                  <>
-                  <div>
+                  
                         <div 
                         className='brand-logo' 
                         //ref={this.setWrapperRef}
@@ -113,8 +112,7 @@ class DefaultLayout extends Component<
                   </Suspense>
                   <AppSidebarFooter />
                   <AppSidebarMinimizer />
-                  </div>
-                  </>
+                 
                 </AppSidebar>
                 <main className='main'>
                   <Container fluid>
