@@ -29,6 +29,7 @@ export const pivotTableReducer = handleActions<
     ): IBookingChannelModel => ({
       isLoading: false,
       data: action.payload.data,
+      totalRecords: action.payload.totalRecords,
       isError: false,
     }),
   },

@@ -3,6 +3,7 @@ export interface IBookingChannelModel {
   data: any;
   isError: boolean;
   month?: string;
+  totalRecords?: number
 }
 
 export interface IPickupSummaryModel {
