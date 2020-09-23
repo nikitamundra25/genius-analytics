@@ -121,6 +121,7 @@ const PickupDOWOCCSegment = (props: any) => {
               <WidgetLoader />
             </div>
           }>
+          <div className='sub-title  mb-1'>DOW OCC</div>
           <MixedCharts
             id={`DOWChart-${index}`}
             
@@ -147,7 +148,7 @@ const PickupDOWOCCSegment = (props: any) => {
             }}
             charts={Charts}
           />
-          <div className='sub-title  mb-1'>DOW OCC</div>
+         
         </React.Suspense>
         : null
       )}
