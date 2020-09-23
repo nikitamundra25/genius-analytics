@@ -194,6 +194,7 @@ const PickupSegment = ({ index, date = new Date() }: any) => {
             </div>
           }
         >
+        <div className="sub-title">Pick up by segment</div>
           <MixedCharts
             id={`PickupChart-${index}`}
             legend={false}
@@ -232,7 +233,7 @@ const PickupSegment = ({ index, date = new Date() }: any) => {
             }}
             charts={Charts}
           />
-          <div className="sub-title">Pick up by segment</div>
+        
         </React.Suspense>
       ) : null}
     </>

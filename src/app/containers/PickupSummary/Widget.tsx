@@ -30,17 +30,19 @@ const DashboardWidget = ({ graphList,date }: IDashboardWidgetProps) => {
       :null}
 
       <div className="pickup-month-section mb-3 " id={`summary-card${rowId}`}>
-        <div className='sub-title text-left pickup-month-card mb-2 py-2'>{chartType.name}</div>
+        <div className='sub-title text-left pickup-month-card mb-2 py-2 month-header'>{chartType.name}</div>
         <Row >
           <Col xs={12} xl={8} lg={7} >
             <div className="pickup-month-card mb-1">
-              <TableForm index={rowId} tabledata={chartType.tabledata} date={chartType.date}/>
-              <div>
-                <PickupSegment
-                  index={rowId}
-                  date={chartType.date}
-                />
-              </div> 
+              <div className="pickup-max-card">
+                <TableForm index={rowId} tabledata={chartType.tabledata} date={chartType.date}/>
+                <div>
+                  <PickupSegment
+                    index={rowId}
+                    date={chartType.date}
+                  />
+                </div> 
+              </div>
             </div>
           </Col>
           <Col xs={12} xl={4} lg={5} >

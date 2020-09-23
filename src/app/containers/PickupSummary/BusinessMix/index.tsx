@@ -160,6 +160,7 @@ const PickupBusinessMix = (props: any) => {
                 <WidgetLoader />
               </div>
             }>
+              <div className='sub-title mb-2'>Business Mix</div>
                <Table responsive striped  className='businessmix-table mb-2 '>
               <thead>
                 <tr>
@@ -229,7 +230,7 @@ const PickupBusinessMix = (props: any) => {
               charts={Charts}
             /> */}
 
-            <div className='sub-title'>Business Mix</div>
+            
           </React.Suspense>
           :null}
         </>
