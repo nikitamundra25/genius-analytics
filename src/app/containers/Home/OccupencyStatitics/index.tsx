@@ -95,7 +95,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
       opacity: 0.8,
       fill: "rgb(247 218 228)",
       name: "OCC TY",
-      yAxisName: "yAxis1",
+      
       cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         visible: true,
@@ -105,7 +105,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
         border: { width: 1, color: "rgb(226 180 196)" },
         dataLabel: {
           visible: false,
-          position: "Bottom",
+          position: "Top",
           font: {
             fontWeight: "600",
             color: "#000000",
@@ -125,7 +125,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
       opacity: 0.4,
       fill: "rgb(130 223 215)",
       name: "OCC LY",
-      yAxisName: "yAxis1",
+      
       cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         visible: true,
@@ -135,7 +135,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
         border: { width: 1, color: "rgb(94 193 185)" },
         dataLabel: {
           visible: false,
-          position: "Bottom",
+          position: "Top",
           font: {
             fontWeight: "600",
             color: "#000000",
@@ -153,6 +153,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
       type: "Spline",
       fill: "#2bb5ec",
       name: "ADR TY",
+      yAxisName: "yAxis2",
       dashArray: "5",
       width: 2,
       marker: {
@@ -183,6 +184,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
       type: "Spline",
       fill: "#293046",
       name: "ADR LY",
+      yAxisName: "yAxis2",
       dashArray: "20 10",
       width: 2,
       marker: {
@@ -216,6 +218,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
       //fill: "#8293b1",
       //fill: "url(#ty-chart)",
       name: "TY",
+     
       width: 3,
       opacity: 0.8,
       fill: "rgb(247 218 228)",
@@ -228,7 +231,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
         border: { width: 1, color: "rgb(247 218 228)" },
         dataLabel: {
           visible: false,
-          position: "Middle",
+          position: "Top",
           template: labeltemplate,
           font: {
             fontWeight: "600",
@@ -252,7 +255,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
       width: 3,
       opacity: 0.4,
       fill: "rgb(130 223 215)",
-
+     
       cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         visible: true,
@@ -262,7 +265,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
         border: { width: 1, color: "rgb(130 223 215)" },
         dataLabel: {
           visible: false,
-          position: "Middle",
+          position: "Bottom",
           template: labeltemplate,
           font: {
             fontWeight: "600",
@@ -390,7 +393,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
                         majorGridLines: { width: 0 },
                       },
                       primaryYAxis: {
-                        labelFormat: "{value}",
+                        labelFormat: "{value}%",
                         edgeLabelPlacement: "Shift",
                         majorGridLines: { width: 0 },
                         majorTickLines: { width: 0 },
@@ -399,8 +402,8 @@ const OccupencyStatitics = ({ date }: Date | any) => {
                           color: "transparent",
                         },
                         visible: false,
-                        maximum: 210,
-                        interval: 25,
+                        maximum: 100,
+                        interval: 1,
                       },
                       tooltip: { enable: true },
                     }}
@@ -435,6 +438,8 @@ const OccupencyStatitics = ({ date }: Date | any) => {
                           color: "transparent",
                         },
                         visible: false,
+                        maximum: 100,
+                        interval: 1,
                       },
                       tooltip: { enable: true },
                       // height: setHeight,
@@ -448,7 +453,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
       ) : (
         <Row className="no-gutters h-100" style={{ paddingTop: "62px" }}>
           <Col sm={8} className="h-100">
-                  <div className="occupancy-table-section mx-2 d-flex align-items-center" >
+                  <div className="occupancy-table-section mx-2 " >
                   <Table responsive striped hover className="occupancy-table mt-3 mb-0">
                 <thead>
                   <tr>
@@ -538,7 +543,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
           </Col>
           <Col sm={4} className="h-100">
             
-            <div className="occupancy-table-section ml-0 mr-2 d-flex align-items-center" >
+            <div className="occupancy-table-section ml-0 mr-2 " >
                 <Table responsive striped hover className="occupancy-table mt-3 mb-0">
                 <thead>
                   <tr>

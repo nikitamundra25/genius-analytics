@@ -141,14 +141,14 @@
         "table2": [
           {
             "type":"occ",
-            "title": "OCC TY",
+            "title": "TY",
             "midweek": 87.0,
             "weekend": 74.0,
             "total": 80.5
           },
           {
             "type":"occ",
-            "title": "OCC LY",
+            "title": "LY",
             "midweek": 90.0,
             "weekend":  73.0,
             "total": 81.5

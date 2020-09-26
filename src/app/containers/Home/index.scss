@@ -126,12 +126,7 @@
   .transparent-border{
     border-color: transparent !important;
   }
-  .variance-col{
-    background: #6ea0b7;
-    color:#fff;
-    text-align:center;
-    font-weight: 600;
-  }
+  
   .head-col{
     background: #0082b3;
     text-align:center;
@@ -147,8 +142,8 @@
     
   }
   .title-col{
-    background: #6ea0b7;
-    color:#fff;
+    background: #334b77;
+    color: #fff;
     text-align:left;
     font-weight: 600;
     &.bg-1{
@@ -212,12 +207,7 @@
   .transparent-border{
     border-color: transparent !important;
   }
-  .variance-col{
-    background: #6ea0b7;
-    color:#fff;
-    text-align:center;
-    font-weight: 600;
-  }
+  
   .head-col{
     background: #0082b3;
     text-align:center;
@@ -233,8 +223,8 @@
     
   }
   .title-col{
-    background: #6ea0b7;
-    color:#fff;
+    background: #334b77;
+    color: #fff;
     text-align:left;
     font-weight: 600;
     &.bg-1{
@@ -243,13 +233,11 @@
   }
   
   .content-col{
-    background: #e1eef4;
+    // background: #e1eef4;
     color:#000;
     text-align:center;
     font-weight: 500;
-    &.bg-2{
-      background: #f7f6f2 !important;
-    }
+    
   }
 }
 
