@@ -1,8 +1,9 @@
 import React,{useEffect} from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Table  } from "react-bootstrap";
+import WidgetHeader from "../../../components/WidgetHeader";
 import Loader from "../../../components/Loader/Loader";
 import { useDispatch, useSelector } from "react-redux";
-import { IRootState } from "../../../../interfaces";
+import { IRootState, ToggleType } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import { requestOccupacyStaticsData, requestOccupacyStaticsFutureData, requestOccupacyStaticsPastData } from "../../../../actions";
@@ -14,6 +15,7 @@ const MixedCharts = React.lazy(() =>
 );
 
 const OccupencyStatitics = ({ date}:Date|any) => {
+  const [activeToggle, setactiveToggle] = React.useState<ToggleType>("graph");
   const dispatch = useDispatch();
   const { isLoading, data, isError } = useSelector(
     (state: IRootState) => state.OccupacyStaticsReducer
@@ -30,7 +32,7 @@ const labeltemplate1 = (args: any) => {
     <div
       style={{
         fontSize: "10px",
-        padding: "4px 5px 4px 5px",
+        padding: "3px 3px 3px 3px",
         background: '#26405d',
         borderRadius: "3px"
       }}>
@@ -80,53 +82,58 @@ const labeltemplate2 = (args: any) => {
           dataSource: data && data.length && data[0] ? data[0].data : [],
           xName: "name",
           yName: "OCCTY",
-          type: "Column",
-          // fill: "#244d81",
-          fill: "url(#occty-chart)",
+          type: "SplineArea",
+          width: 3,
+          opacity: 0.8,
+          fill:"rgb(247 218 228)",
           name: "OCC TY",
           yAxisName:'yAxis1',
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
           marker: {
-            visible: false,
-            width: 8,
-            height: 8,
-            border: { width: 2, color: "#2bb5ec" },
+            visible: true,
+            width: 6,
+            height: 6,
+            fill: "rgb(226 180 196)",
+            border: { width: 1, color: "rgb(226 180 196)" },
             dataLabel: {
-              visible: true,
-              position: "Middle",
-              template: labeltemplate,
+              visible: false,
+              position: "Bottom",
               font: {
                 fontWeight: "600",
-                color: "#ffffff",
+                color: "#000000",
               },
             },
           },
+          
         },
         {
           dataSource: data && data.length && data[0] ? data[0].data : [],
           xName: "name",
           yName: "OCCLY",
-          type: "Column",
-          //fill: "#4f81bc",
-          fill: "url(#occly-chart)",
+          type: "SplineArea",
+          width: 3,
+          opacity: 0.4,
+          fill:"rgb(130 223 215)",
           name: "OCC LY",
           yAxisName:'yAxis1',
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
           marker: {
-            visible: false,
-            width: 10,
-            height: 10,
-            border: { width: 2, color: "#2bb5ec" },
+            visible: true,
+            width: 6,
+            height: 6,
+            fill: "rgb(94 193 185)",
+            border: { width: 1, color: "rgb(94 193 185)" },
             dataLabel: {
-              visible: true,
-              position: "Middle",
-               template: labeltemplate,
+              visible: false,
+              position: "Bottom",
               font: {
                 fontWeight: "600",
-                color: "#fff",
+                color: "#000000",
               },
             },
           },
+
+          
         },
         {
           dataSource: data && data.length && data[0] ? data[0].data : [],
@@ -193,24 +200,27 @@ const labeltemplate2 = (args: any) => {
           dataSource: data && data.length && data[1] ? data[1].data : [],
           xName: "name",
           yName: "TY",
-          type: "Column",
+          type: "SplineArea",
           //fill: "#8293b1",
-          fill: "url(#ty-chart)",
+          //fill: "url(#ty-chart)",
           name: "TY",
-          width: 1,
+          width: 3,
+          opacity: 0.8,
+          fill:"rgb(247 218 228)",
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
           marker: {
-            visible: false,
-            width: 8,
-            height: 8,
-            border: { width: 2, color: "#2bb5ec" },
+            visible: true,
+            width: 6,
+            height: 6,
+            fill: "rgb(247 218 228)",
+            border: { width: 1, color: "rgb(247 218 228)" },
             dataLabel: {
-              visible: true,
+              visible: false,
               position: "Middle",
               template: labeltemplate,
               font: {
                 fontWeight: "600",
-                color: "#ffffff",
+                color: "#000",
               },
             },
           },
@@ -219,24 +229,29 @@ const labeltemplate2 = (args: any) => {
           dataSource: data && data.length && data[1] ? data[1].data : [],
           xName: "name",
           yName: "LY",
-          type: "Column",
+          //type: "Column",
           //fill: "#3269aa",
-          fill: "url(#ly-chart)",
+         // fill: "url(#ly-chart)",
           name: "LY",
-          width: 1,
+          type: "SplineArea",
+          width: 3,
+          opacity: 0.4,
+          fill:"rgb(130 223 215)",
+          
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
           marker: {
-            visible: false,
-            width: 8,
-            height: 8,
-            border: { width: 2, color: "#2bb5ec" },
+            visible: true,
+            width: 6,
+            height: 6,
+            fill: "rgb(130 223 215)",
+            border: { width: 1, color: "rgb(130 223 215)" },
             dataLabel: {
-              visible: true,
+              visible: false,
               position: "Middle",
               template: labeltemplate,
               font: {
                 fontWeight: "600",
-                color: "#ffffff",
+                color: "#000",
               },
             },
           },
@@ -312,11 +327,28 @@ const labeltemplate2 = (args: any) => {
       stop-opacity: 1;
     }
     `;
+
+    const handleWidgetView = (str: ToggleType) => {
+      setactiveToggle(str);
+    };
+
   return (
     <>
     <style>
           {SAMPLE_CSS}
       </style>
+      <div style={{  "position": "absolute", "left": "0px", "top": "0px", "width": "100%"}} >
+        <WidgetHeader
+          title={"Occupancy Statistics"}
+          activeToggle={activeToggle}
+          onToggle={(str: ToggleType) => handleWidgetView(str)}
+        />
+          </div>
+
+        {activeToggle === "graph" ? (
+        
+        <>
+        
         {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -324,7 +356,7 @@ const labeltemplate2 = (args: any) => {
               message={"An error occured while fetching details "}
             />
           ) : (
-        <Row className='row-inner h-100'>
+        <Row className='row-inner h-100' style={{ "paddingTop": "62px" }}>
           <Col sm={8} className="h-100" >
           <React.Suspense fallback={<div className="card-loader"><Loader /></div>}>
               <MixedCharts
@@ -346,6 +378,8 @@ const labeltemplate2 = (args: any) => {
                       color: "transparent",
                     },
                     visible:false,
+                    maximum:  210,
+                    interval: 25,
                   },
                   tooltip: { enable: true },
                 }}
@@ -385,6 +419,129 @@ const labeltemplate2 = (args: any) => {
           </Col>
         </Row>
          )} 
+
+        </>
+         
+         ) : (
+            <Row className='no-gutters h-100' style={{ "paddingTop": "62px" }}>
+              <Col sm={8} className="h-100" >
+                <div className="business-table-section mx-2" >
+                  <Table responsive className="occupancy-table mt-3 mb-0">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th className="head-col">Mon</th>
+                        <th className="head-col">Tue</th>
+                        <th className="head-col">Wed</th>
+                        <th className="head-col">Thu</th>
+                        <th className="head-col">Fri</th>
+                        <th className="head-col">Sat</th>
+                        <th className="head-col">Sun</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    
+                      <tr>
+                      <td className="title-col">OCC TY</td>
+                      <td className="content-col">66.0%</td>
+                      <td className="content-col">89.0%</td>
+                      <td className="content-col">93.0%</td>
+                      <td className="content-col">75.0%</td>
+                      <td className="content-col">79.0%</td>
+                      <td className="content-col">99.0%</td>
+                      <td className="content-col">64.0%</td>
+                    </tr>
+
+                    <tr>
+                      <td className="title-col">OCC LY</td>
+                      <td className="content-col">73.0%</td>
+                      <td className="content-col">84.0%</td>
+                      <td className="content-col">95.0%</td>
+                      <td className="content-col">81.0%</td>
+                      <td className="content-col">86.0%</td>
+                      <td className="content-col">89.0%</td>
+                      <td className="content-col">68.0%</td>
+                    </tr>
+
+                    <tr>
+                      <td className="title-col">ADR TY</td>
+                      <td className="content-col">166.0</td>
+                      <td className="content-col">188.0</td>
+                      <td className="content-col">192.3</td>
+                      <td className="content-col">183.2</td>
+                      <td className="content-col">155.0</td>
+                      <td className="content-col">171.2</td>
+                      <td className="content-col">144.0</td>
+                    </tr>
+
+                    <tr>
+                      <td className="title-col">ADR LY</td>
+                      <td className="content-col">165.1</td>
+                      <td className="content-col">190.2</td>
+                      <td className="content-col">188.0</td>
+                      <td className="content-col">180.0</td>
+                      <td className="content-col">158.3</td>
+                      <td className="content-col">170.2</td>
+                      <td className="content-col">145.2</td>
+                    </tr>
+                    
+                    </tbody>
+                  </Table>
+                </div>
+              </Col>
+              <Col sm={4} className="h-100" >
+                <div className="occupancy-table-section ml-0 mr-2"  >
+                <Table responsive className="occupancy-table o mt-3 mb-0">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th className="head-col">Midweek</th>
+                      <th className="head-col">weekend</th>
+                      <th className="head-col">Total</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                  
+                    <tr>
+                    <td className="title-col">OCC TY</td>
+                    <td className="content-col">66.0%</td>
+                    <td className="content-col">99.0%</td>
+                    <td className="content-col">64.0%</td>
+                  </tr>
+
+                  <tr>
+                    <td className="title-col">OCC LY</td>
+                    <td className="content-col">73.0%</td>
+                    <td className="content-col">89.0%</td>
+                    <td className="content-col">68.0%</td>
+                    
+                  </tr>
+
+                  <tr>
+                    <td className="title-col">ADR TY</td>
+                    <td className="content-col">166.0</td>
+                    <td className="content-col">171.2</td>
+                    <td className="content-col">144.0</td>
+                    
+                  </tr>
+
+                  <tr>
+                    <td className="title-col">ADR LY</td>
+                    <td className="content-col">165.1</td>
+                    <td className="content-col">170.2</td>
+                    <td className="content-col">145.2</td>
+                    
+                  </tr>
+                  
+                  </tbody>
+                </Table>
+                </div>
+              </Col>
+            </Row>
+           
+       ) 
+        }
    
 
       <svg style={{ height: '0' }}>

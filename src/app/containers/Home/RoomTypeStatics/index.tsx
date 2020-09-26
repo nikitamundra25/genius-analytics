@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
+import {  Table  } from "react-bootstrap";
+import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
-import { IRootState } from "../../../../interfaces";
+import { IRootState, ToggleType } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import {
@@ -15,6 +17,7 @@ const MixedCharts = React.lazy(
 );
 
 const RoomTypeStatics =  ({date }:Date|any) => {
+  const [activeToggle, setactiveToggle] = React.useState<ToggleType>("graph");
   const dispatch = useDispatch();
   const { isLoading, data = [], isError } = useSelector(
     (state: IRootState) => state.RoomTypeStaticsReducer
@@ -184,9 +187,23 @@ const RoomTypeStatics =  ({date }:Date|any) => {
 
     `;
 
+    const handleWidgetView = (str: ToggleType) => {
+      setactiveToggle(str);
+    };
+
   return (
     <>
       <style>{SAMPLE_CSS}</style>
+      <div style={{  "position": "absolute", "left": "0px", "top": "0px", "width": "100%"}} >
+        <WidgetHeader
+          title={"Room Type Statistics"}
+          activeToggle={activeToggle}
+          onToggle={(str: ToggleType) => handleWidgetView(str)}
+        />
+        </div>
+           {activeToggle === "graph" ? (
+        
+            <>
  
           {isLoading ? (
             <WidgetLoader />
@@ -202,6 +219,7 @@ const RoomTypeStatics =  ({date }:Date|any) => {
                 </div>
               }
             >
+              <div className="d-flex h-100" style={{ "paddingTop": "62px" }} > 
               <MixedCharts
                 id="room-type"
                 charts={Charts}
@@ -225,8 +243,73 @@ const RoomTypeStatics =  ({date }:Date|any) => {
                   tooltip: { enable: true },
                 }}
               />
+              </div>
             </React.Suspense>
           )}
+          </>
+         
+         ) : ( 
+
+          <div className="business-table-section " style={{ "paddingTop": "62px" }}>
+                  <Table responsive className="business-table mt-3 mb-0">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th className="head-col">0BRM</th>
+                        <th className="head-col">1BRM</th>
+                        <th className="head-col">2BRM</th>
+                        <th className="head-col">3BRM</th>
+                        <th className="head-col">4BRM</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                    
+                      <tr>
+                      <td className="title-col">OCC TY</td>
+                      <td className="content-col">90%</td>
+                      <td className="content-col">77%</td>
+                      <td className="content-col">88%</td>
+                      <td className="content-col">55%</td>
+                      <td className="content-col">66%</td>
+                      
+                    </tr>
+
+                    <tr>
+                      <td className="title-col">OCC LY</td>
+                      <td className="content-col">92%</td>
+                      <td className="content-col">70%</td>
+                      <td className="content-col">82%</td>
+                      <td className="content-col">58%</td>
+                      <td className="content-col">52%</td>
+                      
+                    </tr>
+
+                    <tr>
+                      <td className="title-col">ADR TY</td>
+                      <td className="content-col">205.0</td>
+                      <td className="content-col">233.0</td>
+                      <td className="content-col">256.1</td>
+                      <td className="content-col">301.3</td>
+                      <td className="content-col">356.5</td>
+                      
+                    </tr>
+
+                    <tr>
+                      <td className="title-col">ADR LY</td>
+                      <td className="content-col">195.0</td>
+                      <td className="content-col">235.0</td>
+                      <td className="content-col">242.0</td>
+                      <td className="content-col">300.0</td>
+                      <td className="content-col">333.3</td>
+                      
+                    </tr>
+                    
+                    </tbody>
+                  </Table>
+                </div>
+
+               )}
     
       <svg style={{ height: "0" }}>
         <defs>
