@@ -1,5 +1,6 @@
 {
-    "data": [
+    "data": {
+      "graph":[
         {
           "name": "0BRM",
           "OCCTY": 90,
@@ -35,5 +36,44 @@
           "ADRTY": 356.5,
           "ADRLY": 333.3
         }
+      ],
+      "grid": [
+        {
+          "type":"occ",
+          "title": "OCC TY",
+          "data0BRM": 90,
+          "data1BRM": 77,
+          "data2BRM": 88,
+          "data3BRM": 55,
+          "data4BRM": 76
+        },
+        {
+          "type":"occ",
+          "title": "OCC LY",
+          "data0BRM": 92,
+          "data1BRM": 70,
+          "data2BRM": 82,
+          "data3BRM": 58,
+          "data4BRM": 52
+        },
+        {
+          "type":"adr",
+          "title": "ADR TY",
+          "data0BRM": 205.0,
+          "data1BRM": 233.0,
+          "data2BRM": 256.1,
+          "data3BRM": 301.3,
+          "data4BRM": 356.5
+        },
+        {
+          "type":"adr",
+          "title": "ADR LY",
+          "data0BRM": 195.0,
+          "data1BRM": 235.0,
+          "data2BRM": 242.0,
+          "data3BRM": 300.0,
+          "data4BRM": 333.3
+        }
       ]
+}
 }
