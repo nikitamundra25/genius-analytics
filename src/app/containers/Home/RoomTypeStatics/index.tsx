@@ -250,11 +250,11 @@ const RoomTypeStatics =  ({date }:Date|any) => {
          
          ) : ( 
 
-          <div className="business-table-section " style={{ "paddingTop": "62px" }}>
-                  <Table responsive className="business-table mt-3 mb-0">
+          <div className="room-table-section " style={{ "paddingTop": "62px" }}>
+                  <Table responsive striped className="room-table mt-3 mb-0">
                     <thead>
                       <tr>
-                        <th></th>
+                        <th className="transparent-border"></th>
                         <th className="head-col">0BRM</th>
                         <th className="head-col">1BRM</th>
                         <th className="head-col">2BRM</th>

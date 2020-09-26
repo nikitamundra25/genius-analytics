@@ -84,8 +84,8 @@ const labeltemplate2 = (args: any) => {
           yName: "OCCTY",
           type: "SplineArea",
           width: 3,
-          opacity: 0.8,
-          fill:"rgb(247 218 228)",
+          opacity: 0.4,
+          fill:"rgb(43, 88, 143)",
           name: "OCC TY",
           yAxisName:'yAxis1',
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
@@ -93,8 +93,8 @@ const labeltemplate2 = (args: any) => {
             visible: true,
             width: 6,
             height: 6,
-            fill: "rgb(226 180 196)",
-            border: { width: 1, color: "rgb(226 180 196)" },
+            fill: "rgb(43, 88, 143)",
+            border: { width: 1, color: "rgb(43, 88, 143)" },
             dataLabel: {
               visible: false,
               position: "Bottom",
@@ -113,7 +113,7 @@ const labeltemplate2 = (args: any) => {
           type: "SplineArea",
           width: 3,
           opacity: 0.4,
-          fill:"rgb(130 223 215)",
+          fill:"rgb(247 218 228)",
           name: "OCC LY",
           yAxisName:'yAxis1',
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
@@ -236,15 +236,15 @@ const labeltemplate2 = (args: any) => {
           type: "SplineArea",
           width: 3,
           opacity: 0.4,
-          fill:"rgb(130 223 215)",
+          fill:"rgb(43, 88, 143)",
           
           cornerRadius:{ bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
           marker: {
             visible: true,
             width: 6,
             height: 6,
-            fill: "rgb(130 223 215)",
-            border: { width: 1, color: "rgb(130 223 215)" },
+            fill: "rgb(43, 88, 143)",
+            border: { width: 1, color: "rgb(43, 88, 143)" },
             dataLabel: {
               visible: false,
               position: "Middle",
@@ -425,11 +425,11 @@ const labeltemplate2 = (args: any) => {
          ) : (
             <Row className='no-gutters h-100' style={{ "paddingTop": "62px" }}>
               <Col sm={8} className="h-100" >
-                <div className="business-table-section mx-2" >
-                  <Table responsive className="occupancy-table mt-3 mb-0">
+                <div className="occupancy-table-section mx-2 d-flex align-items-center" >
+                  <Table responsive striped hover className="occupancy-table mt-3 mb-0">
                     <thead>
                       <tr>
-                        <th></th>
+                        <th className="transparent-border"></th>
                         <th className="head-col">Mon</th>
                         <th className="head-col">Tue</th>
                         <th className="head-col">Wed</th>
@@ -490,11 +490,11 @@ const labeltemplate2 = (args: any) => {
                 </div>
               </Col>
               <Col sm={4} className="h-100" >
-                <div className="occupancy-table-section ml-0 mr-2"  >
-                <Table responsive className="occupancy-table o mt-3 mb-0">
+                <div className="occupancy-table-section ml-0 mr-2 d-flex align-items-center"  >
+                <Table responsive striped hover className="occupancy-table o mt-3 mb-0">
                   <thead>
                     <tr>
-                      <th></th>
+                      <th className="transparent-border"></th>
                       <th className="head-col">Midweek</th>
                       <th className="head-col">weekend</th>
                       <th className="head-col">Total</th>
