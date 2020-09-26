@@ -48,7 +48,7 @@ const KeyBusinessMetrics = ({ date }: Date|any) => {
     {
       id: "1",
       title: "OCC",
-      color: "url(#occ-chart)",
+      color: "#2e75b7",
       chartSettings: { 
         primaryXAxis: {
           valueType: "Category",
@@ -76,8 +76,7 @@ const KeyBusinessMetrics = ({ date }: Date|any) => {
     {
       id: "2",
       title: "ADR",
-      color: "url(#adr-chart)",
-      // color: "#5398d9",
+      color: "#5398d9",
       chartSettings: { 
         primaryXAxis: {
           valueType: "Category",
@@ -105,7 +104,7 @@ const KeyBusinessMetrics = ({ date }: Date|any) => {
     {
       id: "3",
       title: "RevPAR",
-      color: "url(#revnue-chart)",
+      color: "#1f4e79",
       chartSettings: { 
         primaryXAxis: {
           valueType: "Category",
@@ -134,7 +133,7 @@ const KeyBusinessMetrics = ({ date }: Date|any) => {
     {
       id: "4",
       title: "Revenue",
-      color: "url(#revpar-chart)",
+      color: "#6197ca",
       // color: "#9dc3e7",
       chartSettings: { 
         primaryXAxis: {
@@ -162,48 +161,7 @@ const KeyBusinessMetrics = ({ date }: Date|any) => {
     },
   ];
 
-  const SAMPLE_CSS = `
-    #occ-chart stop {
-		stop-color: #2e75b7;
-	}
-	#occ-chart stop[offset="0"] {
-		stop-opacity: 1;
-	}
-	#occ-chart stop[offset="1"] {
-		stop-opacity: 1;
-  }
-
-  #adr-chart stop {
-		stop-color: #5398d9;
-	}
-	#adr-chart stop[offset="0"] {
-		stop-opacity: 1;
-	}
-	#adr-chart stop[offset="1"] {
-    stop-opacity: 1;
-  }
-
-  #revnue-chart stop {
-		stop-color: #1f4e79;
-	}
-	#revnue-chart stop[offset="0"] {
-		stop-opacity: 1;
-	}
-	#revnue-chart stop[offset="1"] {
-		stop-opacity: 1;
-  }
-
-  #revpar-chart stop {
-		stop-color: #6197ca;
-	}
-	#revpar-chart stop[offset="0"] {
-		stop-opacity: 1;
-	}
-	#revpar-chart stop[offset="1"] {
-		stop-opacity: 1;
-  }
-  
-  `;
+ 
 
   const handleWidgetView = (str: ToggleType) => {
     setactiveToggle(str);
@@ -212,7 +170,7 @@ const KeyBusinessMetrics = ({ date }: Date|any) => {
   
   return (
     <>
-      <style>{SAMPLE_CSS}</style>
+     
       <div style={{  "position": "absolute", "left": "0px", "top": "0px", "width": "100%"}} >
         <WidgetHeader
           title={"Key Business Metrics"}
@@ -292,41 +250,7 @@ const KeyBusinessMetrics = ({ date }: Date|any) => {
         }
         
      
-      <svg style={{ height: "0" }}>
-        <defs>
-          <linearGradient id="occ-chart" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0" />
-            <stop offset="1" />
-          </linearGradient>
-        </defs>
-      </svg>
-
-      <svg style={{ height: "0" }}>
-        <defs>
-          <linearGradient id="adr-chart" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0" />
-            <stop offset="1" />
-          </linearGradient>
-        </defs>
-      </svg>
-
-      <svg style={{ height: "0" }}>
-        <defs>
-          <linearGradient id="revnue-chart" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0" />
-            <stop offset="1" />
-          </linearGradient>
-        </defs>
-      </svg>
-
-      <svg style={{ height: "0" }}>
-        <defs>
-          <linearGradient id="revpar-chart" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0" />
-            <stop offset="1" />
-          </linearGradient>
-        </defs>
-      </svg>
+      
     </>
   );
 };

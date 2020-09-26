@@ -72,7 +72,6 @@ const MixedCharts = ({ charts = [], id="mixed-map", chartSettings = {},legend= t
           majorTickLines={{ width: 0}}
           lineStyle={{ width: 0 } }
           visible={false}
-          
         >
         </AxisDirective>
         <AxisDirective 
