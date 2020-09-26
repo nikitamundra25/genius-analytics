@@ -134,7 +134,7 @@ const PickupSegment = ({ index, date = new Date() }: any) => {
       fill: "#4684bd",
       name: "Room Nts",
       width: 1,
-      yAxisName: "yAxis1",
+      yAxisName: "yAxis2",
       animation:{enable:false},
       cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {

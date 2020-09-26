@@ -36,18 +36,11 @@
     ],
     "grid": [
       {
-        "title": "STLY",
-        "OCC": 82.0,
-        "ADR": 168.5,
-        "revpar": 138.1,
-        "revenue": 1169687
-      },
-      {
-        "title": "LY",
-        "OCC": 68.5,
-        "ADR": 151.3,
-        "revpar": 103.6,
-        "revenue": 1201776
+        "title": "BOB",
+        "OCC": 85.2,
+        "ADR": 178.9,
+        "revpar": 152.4,
+        "revenue": 1453133
       },
       {
         "title": "BUD",
@@ -57,11 +50,18 @@
         "revenue": 1548760
       },
       {
-        "title": "BOB",
-        "OCC": 85.2,
-        "ADR": 178.9,
-        "revpar": 152.4,
-        "revenue": 1453133
+        "title": "LY",
+        "OCC": 68.5,
+        "ADR": 151.3,
+        "revpar": 103.6,
+        "revenue": 1201776
+      },
+      {
+        "title": "STLY",
+        "OCC": 82.0,
+        "ADR": 168.5,
+        "revpar": 138.1,
+        "revenue": 1169687
       }
     ]
   }

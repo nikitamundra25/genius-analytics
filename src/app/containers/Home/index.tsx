@@ -225,7 +225,6 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={1}
                 row={1}
                 col={2}
-                header={`<div class="panel-title">Occupancy Statistics</div>`}
                 content={() => getChart(widgets[3].name)}
               ></PanelDirective>
               <PanelDirective
@@ -241,7 +240,7 @@ const HomeComponent: FunctionComponent = () => {
                 sizeY={0}
                 row={2}
                 col={2}
-                header={`<div class="panel-title">Room Type Statistics</div>`}
+               // header={`<div class="panel-title">Room Type Statistics</div>`}
                 content={() => getChart(widgets[5].name)}
               ></PanelDirective>
               <PanelDirective

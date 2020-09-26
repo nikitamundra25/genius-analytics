@@ -84,3 +84,160 @@
 }
 
 
+.occupancy-table-section{
+  height: calc(100% - 15px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0px 0px;
+}
+.occupancy-table{
+  width:calc(100% - 2px);
+  border-collapse: collapse;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  th, td {
+    padding: 4px 3px;
+    border: 1px solid  #ddd;
+    font-size:11px;
+    text-align:center;
+    vertical-align: middle;
+   
+    @media only screen and (max-width: 1539px) {
+      padding: 4px 3px;
+    }
+    @media only screen and (max-width: 1485px) {
+      padding: 4px 3px;
+    }
+    @media only screen and (max-width: 1390px)  {
+      padding: 3px 3px;
+    }
+    @media only screen and (max-width: 1335px){
+      padding: 3px 2px;
+    }
+    @media only screen and (max-width: 1260px){
+      font-size: 10px;
+    }
+   }
+  thead{
+    th{
+      border:1px solid  #ddd;
+    }
+    
+  }
+  .transparent-border{
+    border-color: transparent !important;
+  }
+  
+  .head-col{
+    background: #0082b3;
+    text-align:center;
+    color:#fff;
+    font-weight: 500;
+    padding:8px 5px;
+    @media only screen and (max-width: 1540px) {
+      padding: 7px 6px;
+    }
+    @media only screen and (max-width: 1390px)  {
+      padding:  6px 6px;
+    }
+    
+  }
+  .title-col{
+    background: #334b77;
+    color: #fff;
+    text-align:left;
+    font-weight: 600;
+    &.bg-1{
+      background:#203763;
+    }
+  }
+  
+  .content-col{
+    // background: #e1eef4;
+    color:#000;
+    text-align:center;
+    font-weight: 500;
+    
+  }
+}
+
+
+.room-table-section{
+  // height: calc(100% - 70px);
+  height: calc(100% - 15px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin:0px 15px;
+  
+}
+
+
+.room-table{
+  width:calc(100% - 2px);
+  border-collapse: collapse;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  th, td {
+    padding: 9px 6px;
+    border: 1px solid  #ddd;
+    font-size:12px;
+    text-align:center;
+    vertical-align: middle;
+   
+    @media only screen and (max-width: 1539px) {
+      padding: 8px 6px;
+    }
+    @media only screen and (max-width: 1485px) {
+      padding: 6px 6px;
+    }
+    @media only screen and (max-width: 1390px)  {
+      padding: 5px 6px;
+    }
+    @media only screen and (max-width: 1335px){
+      padding: 3px 2px;
+    }
+    @media only screen and (max-width: 1260px){
+      font-size: 11px;
+    }
+   }
+  thead{
+    th{
+      border:1px solid  #ddd;
+    }
+    
+  }
+  .transparent-border{
+    border-color: transparent !important;
+  }
+  
+  .head-col{
+    background: #0082b3;
+    text-align:center;
+    color:#fff;
+    font-weight: 500;
+    padding:8px 5px;
+    @media only screen and (max-width: 1540px) {
+      padding: 7px 6px;
+    }
+    @media only screen and (max-width: 1390px)  {
+      padding:  6px 6px;
+    }
+    
+  }
+  .title-col{
+    background: #334b77;
+    color: #fff;
+    text-align:left;
+    font-weight: 600;
+    &.bg-1{
+      background:#203763;
+    }
+  }
+  
+  .content-col{
+    // background: #e1eef4;
+    color:#000;
+    text-align:center;
+    font-weight: 500;
+    
+  }
+}
+

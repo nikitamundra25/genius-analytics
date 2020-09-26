@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
+import { Table } from "react-bootstrap";
+import WidgetHeader from "../../../components/WidgetHeader";
 import { useDispatch, useSelector } from "react-redux";
-import { IRootState } from "../../../../interfaces";
+import { IRootState, ToggleType } from "../../../../interfaces";
 import { WidgetLoader } from "../../../components/Loader/WidgetLoader";
 import { ErrorComponent } from "../../../components/Error";
 import {
@@ -14,7 +16,8 @@ const MixedCharts = React.lazy(
   () => import("../../../components/Charts/MixedCharts")
 );
 
-const RoomTypeStatics =  ({date }:Date|any) => {
+const RoomTypeStatics = ({ date }: Date | any) => {
+  const [activeToggle, setactiveToggle] = React.useState<ToggleType>("grid");
   const dispatch = useDispatch();
   const { isLoading, data = [], isError } = useSelector(
     (state: IRootState) => state.RoomTypeStaticsReducer
@@ -33,13 +36,11 @@ const RoomTypeStatics =  ({date }:Date|any) => {
     } else if (selectedDate < currentDate) {
       dispatch(requestRoomTypeStaticsPastData());
     } else if (selectedDate === currentDate) {
-      
       dispatch(requestRoomTypeStaticsData());
     }
 
     // eslint-disable-next-line
   }, [date]);
-
 
   const labeltemplate = (args: any) => {
     return (
@@ -58,7 +59,7 @@ const RoomTypeStatics =  ({date }:Date|any) => {
 
   const Charts = [
     {
-      dataSource: data,
+      dataSource: data && data.graph && data.graph.length ? data.graph : [],
       xName: "name",
       yName: "OCCTY",
       type: "Column",
@@ -83,7 +84,7 @@ const RoomTypeStatics =  ({date }:Date|any) => {
       },
     },
     {
-      dataSource: data,
+      dataSource: data && data.graph && data.graph.length ? data.graph : [],
       xName: "name",
       yName: "OCCLY",
       type: "Column",
@@ -108,7 +109,7 @@ const RoomTypeStatics =  ({date }:Date|any) => {
       },
     },
     {
-      dataSource: data,
+      dataSource: data && data.graph && data.graph.length ? data.graph : [],
       xName: "name",
       yName: "ADRTY",
       type: "Spline",
@@ -133,7 +134,7 @@ const RoomTypeStatics =  ({date }:Date|any) => {
       },
     },
     {
-      dataSource: data,
+      dataSource: data && data.graph && data.graph.length ? data.graph : [],
       xName: "name",
       yName: "ADRLY",
       type: "Spline",
@@ -184,10 +185,24 @@ const RoomTypeStatics =  ({date }:Date|any) => {
 
     `;
 
+  const handleWidgetView = (str: ToggleType) => {
+    setactiveToggle(str);
+  };
+
   return (
     <>
       <style>{SAMPLE_CSS}</style>
- 
+      <div
+        style={{ position: "absolute", left: "0px", top: "0px", width: "100%" }}
+      >
+        <WidgetHeader
+          title={"Room Type Statistics"}
+          activeToggle={activeToggle}
+          onToggle={(str: ToggleType) => handleWidgetView(str)}
+        />
+      </div>
+      {activeToggle === "graph" ? (
+        <>
           {isLoading ? (
             <WidgetLoader />
           ) : isError ? (
@@ -202,32 +217,97 @@ const RoomTypeStatics =  ({date }:Date|any) => {
                 </div>
               }
             >
-              <MixedCharts
-                id="room-type"
-                charts={Charts}
-                chartSettings={{
-                  primaryXAxis: {
-                    valueType: "Category",
-                    interval: 1,
-                    majorGridLines: { width: 0 },
-                  },
-                  primaryYAxis: {
-                    labelFormat: "{value}",
-                    edgeLabelPlacement: "Shift",
-                    majorGridLines: { width: 0 },
-                    majorTickLines: { width: 0 },
-                    lineStyle: { width: 0 },
-                    labelStyle: {
-                      color: "transparent",
+              <div className="d-flex h-100" style={{ paddingTop: "62px" }}>
+                <MixedCharts
+                  id="room-type"
+                  charts={Charts}
+                  chartSettings={{
+                    primaryXAxis: {
+                      valueType: "Category",
+                      interval: 1,
+                      majorGridLines: { width: 0 },
                     },
-                    visible: false,
-                  },
-                  tooltip: { enable: true },
-                }}
-              />
+                    primaryYAxis: {
+                      labelFormat: "{value}",
+                      edgeLabelPlacement: "Shift",
+                      majorGridLines: { width: 0 },
+                      majorTickLines: { width: 0 },
+                      lineStyle: { width: 0 },
+                      labelStyle: {
+                        color: "transparent",
+                      },
+                      visible: false,
+                    },
+                    tooltip: { enable: true },
+                  }}
+                />
+              </div>
             </React.Suspense>
           )}
-    
+        </>
+      ) : (
+        <div className="room-table-section " style={{ paddingTop: "62px" }}>
+          <Table responsive striped hover className="room-table mt-3 mb-0">
+            <thead>
+              <tr>
+                <th className="transparent-border"></th>
+                <th className="head-col">0BRM</th>
+                <th className="head-col">1BRM</th>
+                <th className="head-col">2BRM</th>
+                <th className="head-col">3BRM</th>
+                <th className="head-col">4BRM</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data && data.grid && data.grid.length
+                ? data.grid.map((list: any, index: number) => {
+                    return (
+                      <tr key={index}>
+                        <td className="title-col">{list.title} </td>
+                        <td className="content-col">
+                          {list.data0BRM
+                            ? list.type === "occ"
+                              ? `${list.data0BRM}%`
+                              : list.data0BRM.toFixed(1)
+                            : "-"}
+                        </td>
+                        <td className="content-col">
+                          {list.data1BRM
+                            ? list.type === "occ"
+                              ? `${list.data1BRM}%`
+                              : list.data1BRM.toFixed(1)
+                            : "-"}{" "}
+                        </td>
+                        <td className="content-col">
+                          {list.data2BRM
+                            ? list.type === "occ"
+                              ? `${list.data2BRM}%`
+                              : list.data2BRM.toFixed(1)
+                            : "-"}{" "}
+                        </td>
+                        <td className="content-col">
+                          {list.data3BRM
+                            ? list.type === "occ"
+                              ? `${list.data3BRM}%`
+                              : list.data3BRM.toFixed(1)
+                            : "-"}{" "}
+                        </td>
+                        <td className="content-col">
+                          {list.data4BRM
+                            ? list.type === "occ"
+                              ? `${list.data4BRM}%`
+                              : list.data4BRM.toFixed(1)
+                            : "-"}{" "}
+                        </td>
+                      </tr>
+                    );
+                  })
+                : null}
+            </tbody>
+          </Table>
+        </div>
+      )}
+
       <svg style={{ height: "0" }}>
         <defs>
           <linearGradient id="roccty-chart" x1="0" x2="0" y1="0" y2="1">
@@ -249,4 +329,4 @@ const RoomTypeStatics =  ({date }:Date|any) => {
   );
 };
 
-export default RoomTypeStatics
+export default RoomTypeStatics;
