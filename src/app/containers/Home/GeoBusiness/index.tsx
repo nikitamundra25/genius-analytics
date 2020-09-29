@@ -7,7 +7,6 @@ import { ErrorComponent } from "../../../components/Error";
 import { requestGeographicOriginData, requestGeographicOriginFutureData, requestGeographicOriginPastData } from "../../../../actions";
 import moment from "moment";
 import { checkDateFormat } from "../../../../config";
-const NestedDoughnutComponent = React.lazy(()=> import("../../../components/Charts/NestedDoughnutChart") )
 const WorldMap = React.lazy(() =>
   import("../../../components/Charts/WorldMap")
 );
@@ -52,8 +51,7 @@ const GeoBusiness  =  ({ date }:Date|any) => {
             />
           ) : (
             <React.Suspense fallback={<div className="card-loader"><WidgetLoader /></div>}>
-            {/* <WorldMap data={data} /> */}
-            <NestedDoughnutComponent/>
+            <WorldMap data={data} />
             </React.Suspense>
             )}
 

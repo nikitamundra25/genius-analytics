@@ -11,49 +11,28 @@ import {
   AccumulationAnnotationsDirective,
   AccumulationAnnotationDirective,
 } from "@syncfusion/ej2-react-charts";
-import { Browser } from "@syncfusion/ej2-base";
 AccumulationChart.Inject(AccumulationDataLabel);
-const SAMPLE_CSS = `
-    .control-fluid {
-		padding: 0px !important;
-    }`;
-/**
- * Sample for annotation
- */
-const  getValue = (series:any, pointIndex:any, y:any) => {
-  let totalValue = 0;
-  for (let ser of series) {
-    totalValue += ser.points[pointIndex].y;
-  }
-  return Math.round((y / totalValue) * 100) + "%";
-}
+
+
 export let data1 = [
-  { x: "Labour", y: 18, text: "18%" },
-  { x: "Legal", y: 8, text: "8%" },
-  { x: "Production", y: 15, text: "15%" },
-  { x: "License", y: 11, text: "11%" },
-  { x: "Facilities", y: 18, text: "18%" },
-  { x: "Taxes", y: 14, text: "14%" },
-  { x: "Insurance", y: 16, text: "16%" },
+  { x: "Direct", y: 258, text: "258" },
+  { x: "GDS", y: 103, text: "103" },
+  { x: "OTA's", y: 292, text: "292" },
+  { x: "Brand.com", y: 202, text: "202" },
+  
 ];
 
- const NestedDoughnutComponent = () => {
+
+const NestedDoughnutComponent = ({setHeight }: any) => {
+  // console.log("nested chart comp" , setHeight);
   let isRender:boolean = false;
   let pie :any
-  let dataSource:any = [
-    { x: "2014", y0: 51, y1: 77, y2: 66, y3: 34 },
-    { x: "2015", y0: 67, y1: 49, y2: 19, y3: 38 },
-    { x: "2016", y0: 143, y1: 121, y2: 91, y3: 44 },
-    { x: "2017", y0: 19, y1: 28, y2: 65, y3: 51 },
-    { x: "2018", y0: 30, y1: 66, y2: 32, y3: 61 },
-    { x: "2019", y0: 189, y1: 128, y2: 122, y3: 76 },
-    { x: "2020", y0: 72, y1: 97, y2: 65, y3: 82 },
-  ];
+
   let pieDataSource:any = [
-    { x: "UK", y: 51, text: "22%" },
-    { x: "Germany", y: 77, text: "34%" },
-    { x: "France", y: 66, text: "29%" },
-    { x: "Italy", y: 34, text: "15%" },
+    { x: "Direct", y: 86, text: "86" },
+    { x: "GDS", y: 188, text: "188" },
+    { x: "OTA's", y: 210, text: "210" },
+    { x: "Brand.com", y: 216, text: "216" },
   ];
  const  onChartLoad = (args:any) => {
     let chart:any = document.getElementById('charts');
@@ -62,16 +41,18 @@ export let data1 = [
     pie = new AccumulationChart({
         background: 'transparent',
         series: [{
-                radius: '53%', innerRadius: '70%', animation: { enable: false },
+                palettes: ["#5b9bd5","#ed7d31","#a5a5a5","#ffc000" ],
+                radius: '100%', innerRadius: '75%', animation: { enable: false },
                 dataSource:pieDataSource,
-                xName: 'x', yName: 'y', dataLabel: { visible: false, position: 'Inside', font: { color: 'white' }, name: 'text' },
+                xName: 'x', yName: 'y', dataLabel: { visible: true, position: 'Inside',  font: { color: 'black' }, name: 'text' },
             }],
         load: (args:any) => {
             let selectedTheme = "Material";
             // selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
-        legendSettings: { visible: false }
+        legendSettings: { visible: true },
+        enableBorderOnMouseMove:false
     });
     pie.appendTo('#chart_annotation');
 }
@@ -84,28 +65,39 @@ const loaded = (args:any) => {
         pie = new AccumulationChart({
         background: 'transparent',
         series: [{
-                radius: '53%', innerRadius: '50%', animation: { enable: false },
+                palettes: ["#5b9bd5","#ed7d31","#a5a5a5","#ffc000" ],
+                radius: '100%', innerRadius: '75%', animation: { enable: false },
                 dataSource: pieDataSource,
-                xName: 'x', yName: 'y', dataLabel: { visible: false, position: 'Inside', font: { color: 'white' }, name: 'text' },
+                xName: 'x', yName: 'y', dataLabel: { visible: true, position: 'Inside', angle: 90, enableRotation: true , font: { color: 'black' }, name: 'text' },
+                
+               
             }],
         load: (args:any) => {
             let selectedTheme:any = 'Material';
             // selectedTheme = selectedTheme ? selectedTheme : 'Material';
             args.accumulation.theme = (selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1));
         },
-        legendSettings: { visible: false }
+        legendSettings: { visible: true },
+        enableBorderOnMouseMove:false
     });
     pie.appendTo('#chart_annotation');
     }
 }
   return (
     <AccumulationChartComponent id="charts" loaded={loaded} animationComplete={onChartLoad}  
-    // style={{ "height":"100%" ,"width":"100%"  }}
+     style={{ "height":"100%" ,"width":"100%"  }}
+     legendSettings={{
+      visible: true,
+      position: "Bottom",
+    }}
+    enableBorderOnMouseMove={false}
+    
     >
       <Inject services={[AccumulationAnnotation]} />
       <AccumulationAnnotationsDirective>
         <AccumulationAnnotationDirective
-          content='<div id="chart_annotation" style="width: 490px; height: 490px"></div>'
+         content={`<div id="chart_annotation" style="width: ${setHeight}; height: ${setHeight};"></div>`}
+         //content='<div id="chart_annotation" style="width: 195px; height: 195px;"></div>'
           x="50%"
           y="50%"
           coordinateUnits="Pixel"
@@ -114,11 +106,21 @@ const loaded = (args:any) => {
       </AccumulationAnnotationsDirective>
       <AccumulationSeriesCollectionDirective>
         <AccumulationSeriesDirective
-          dataLabel={{ visible: true, position: "Outside" }}
+          palettes={["#5b9bd5","#ed7d31","#a5a5a5","#ffc000" ]}
           dataSource={data1}
-          innerRadius="75%"
+          innerRadius="82%"
+          radius='100%'
           xName="x"
           yName="y"
+          dataLabel={{
+            visible: true,
+            position: "Inside",
+            name: "text",
+            font: {
+              fontWeight: "600",
+            },
+          }}
+         
         ></AccumulationSeriesDirective>
       </AccumulationSeriesCollectionDirective>
     </AccumulationChartComponent>
