@@ -27,7 +27,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
 
   const labeltemplate = (args: any) => {
     return (
-      <div style={{ fontSize: "9px" }}>
+      <div style={{ fontSize: "10px" }}>
         <span>{args.point.y}%</span>
       </div>
     );
@@ -104,7 +104,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
         fill: "rgb(226 180 196)",
         border: { width: 1, color: "rgb(226 180 196)" },
         dataLabel: {
-          visible: false,
+          visible: true,
           position: "Top",
           font: {
             fontWeight: "600",
@@ -134,8 +134,8 @@ const OccupencyStatitics = ({ date }: Date | any) => {
         fill: "rgb(94 193 185)",
         border: { width: 1, color: "rgb(94 193 185)" },
         dataLabel: {
-          visible: false,
-          position: "Top",
+          visible: true,
+          position: "Bottom",
           font: {
             fontWeight: "600",
             color: "#000000",
@@ -230,7 +230,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
         fill: "rgb(247 218 228)",
         border: { width: 1, color: "rgb(247 218 228)" },
         dataLabel: {
-          visible: false,
+          visible: true,
           position: "Top",
           template: labeltemplate,
           font: {
@@ -264,7 +264,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
         fill: "rgb(130 223 215)",
         border: { width: 1, color: "rgb(130 223 215)" },
         dataLabel: {
-          visible: false,
+          visible: true,
           position: "Bottom",
           template: labeltemplate,
           font: {
@@ -402,7 +402,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
                           color: "transparent",
                         },
                         visible: false,
-                        maximum: 100,
+                        maximum: 200,
                         interval: 1,
                       },
                       tooltip: { enable: true },
@@ -465,7 +465,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
                     <th className="head-col">Fri</th>
                     <th className="head-col">Sat</th>
                     <th className="head-col">Sun</th>
-                    <th className="head-col">Tot</th>
+                    <th className="head-col">Total</th>
                   </tr>
                 </thead>
                 <tbody>

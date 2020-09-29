@@ -12,6 +12,13 @@ import {
 } from "../../../../actions";
 import moment from "moment";
 import { checkDateFormat } from "../../../../config";
+
+import occty from "../../../../assets/img/bob.svg";
+import occly from "../../../../assets/img/occly.svg";
+import adrty from "../../../../assets/img/adrty.svg";
+import adrly from "../../../../assets/img/adrly.svg";
+
+
 const MixedCharts = React.lazy(
   () => import("../../../components/Charts/MixedCharts")
 );
@@ -263,7 +270,43 @@ const RoomTypeStatics = ({ date }: Date | any) => {
                 ? data.grid.map((list: any, index: number) => {
                     return (
                       <tr key={index}>
-                        <td className="title-col">{list.title} </td>
+                        <td className="title-col">
+                        <div className="d-flex align-items-center subtitle-section">
+                          {list.title ===
+                          "OCC TY" ? (
+                            <img
+                              src={occty}
+                              width="20px"
+                              alt={list.title}
+                            />
+                          ) : list.title ===
+                            "OCC LY" ? (
+                            <img
+                              src={occly}
+                              width="20px"
+                              alt={list.title}
+                            />
+                          ) : list.title ===
+                            "ADR TY" ? (
+                            <img
+                              src={adrty}
+                              width="20px"
+                              alt={list.title}
+                            />
+                          ) : list.title ===
+                            "ADR LY" ? (
+                            <img
+                              src={adrly}
+                              width="20px"
+                              alt={list.title}
+                            />
+                          ) : null}
+
+                          <span>{list.title}</span>
+                        </div>
+                          
+                          
+                        </td>
                         <td className="content-col">
                           {list.data0BRM
                             ? list.type === "occ"
