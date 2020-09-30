@@ -7,7 +7,6 @@ import { ErrorComponent } from "../../../components/Error";
 import { requestGeographicOriginData, requestGeographicOriginFutureData, requestGeographicOriginPastData } from "../../../../actions";
 import moment from "moment";
 import { checkDateFormat } from "../../../../config";
-
 const WorldMap = React.lazy(() =>
   import("../../../components/Charts/WorldMap")
 );

@@ -3,6 +3,7 @@ import { Form, FormGroup, FormControl, Button } from "react-bootstrap";
 import { useCookies } from "react-cookie";
 import { toast } from "react-toastify";
 import logo from "../../assets/img/logo150.png";
+import video1 from "../../assets/img/video-login.mp4";
 
 const PasswordProtection = () => {
   const [passcode, setPasscode] = useState("");
@@ -23,7 +24,12 @@ const PasswordProtection = () => {
   return (
     <>
       <div className='app-body overflow-hidden'>
+      {/* <video autoPlay playsInline muted src={video} /> */}
+     
         <div className='login-container'>
+          <video autoPlay muted loop className="login-video">
+            <source src={video1} type="video/mp4" />
+          </video>
           <div className='login-box'>
             <div className='login-logo'>
                 <img
