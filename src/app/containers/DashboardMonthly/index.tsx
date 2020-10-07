@@ -14,12 +14,12 @@ import DailyOccupacy from "./DailyOccupacy";
 import { createBrowserHistory } from "history";
 import { Store } from "redux";
 import configureStore from "../../../store";
-import BookingChannel from "./BookingChannel";
+import BookingChannel from "./BookingChannel/BookingDoughnut";
 import MarketSegmentation from "./MarketSegmentation";
 import RoomTypeStatistics from "./RoomTypeStatistics";
 const history = createBrowserHistory();
 
-let selectedDate: any =  new Date()
+let selectedDate: any = new Date();
 const DashboardMonthly: FunctionComponent = () => {
   const cellSpacing = [15, 20];
   let restoreModel: any = [];
@@ -36,8 +36,8 @@ const DashboardMonthly: FunctionComponent = () => {
   }, []);
 
   // To reset drag & drop when select date
-  const RestorePanel = (date:any) => {
-    selectedDate = date
+  const RestorePanel = (date: any) => {
+    selectedDate = date;
     dashboardObj.panels = restoreModel;
   };
 
@@ -46,19 +46,18 @@ const DashboardMonthly: FunctionComponent = () => {
     restoreModel = dashboardObj.serialize();
     restoreModel[0].content = () => getChart("Business on the Books");
     restoreModel[1].content = () => getChart("Monthly Daily Occupancy & ADR");
-    restoreModel[1].header =  `<div class="panel-title">Monthly Daily Occupancy & ADR</div>`
-   
+    restoreModel[1].header = `<div class="panel-title">Monthly Daily Occupancy & ADR</div>`;
+
     restoreModel[2].content = () => getChart("Daily Occupancy Vs. BUD Vs. LY");
-    
+
     restoreModel[3].content = () => getChart("Booking Channel");
-    restoreModel[3].header =  `<div class="panel-title">Booking Channel</div>`
+    restoreModel[3].header = `<div class="panel-title">Booking Channel</div>`;
 
     restoreModel[4].content = () => getChart("Market Segmentation");
-    restoreModel[4].header =  `<div class="panel-title">Market Segmentation</div>`
+    restoreModel[4].header = `<div class="panel-title">Market Segmentation</div>`;
 
     restoreModel[5].content = () => getChart("Room Type Statistics");
-    restoreModel[5].header =  `<div class="panel-title">Room Type Statistics</div>`
-
+    restoreModel[5].header = `<div class="panel-title">Room Type Statistics</div>`;
   };
 
   const getChart = (chartType: any) => {
@@ -66,31 +65,31 @@ const DashboardMonthly: FunctionComponent = () => {
       case "Business on the Books":
         return (
           <Provider store={store}>
-          <div className="template">
-              <BOB selectedDate={selectedDate}/>
+            <div className="template">
+              <BOB selectedDate={selectedDate} />
             </div>
           </Provider>
         );
       case "Monthly Daily Occupancy & ADR":
         return (
           <Provider store={store}>
-          <div className="template">
-              <MonthlyDailyOccupacy selectedDate={selectedDate}/>
+            <div className="template">
+              <MonthlyDailyOccupacy selectedDate={selectedDate} />
             </div>
           </Provider>
         );
       case "Daily Occupancy Vs. BUD Vs. LY":
         return (
           <Provider store={store}>
-          <div className="template">
-              <DailyOccupacy selectedDate={selectedDate}/>
+            <div className="template">
+              <DailyOccupacy selectedDate={selectedDate} />
             </div>
           </Provider>
         );
       case "Booking Channel":
         return (
           <Provider store={store}>
-          <div className="template">
+            <div className="template">
               <BookingChannel />
             </div>
           </Provider>
@@ -98,7 +97,7 @@ const DashboardMonthly: FunctionComponent = () => {
       case "Market Segmentation":
         return (
           <Provider store={store}>
-          <div className="template">
+            <div className="template">
               <MarketSegmentation />
             </div>
           </Provider>
@@ -106,7 +105,7 @@ const DashboardMonthly: FunctionComponent = () => {
       case "Room Type Statistics":
         return (
           <Provider store={store}>
-          <div className="template">
+            <div className="template">
               <RoomTypeStatistics />
             </div>
           </Provider>
@@ -155,7 +154,7 @@ const DashboardMonthly: FunctionComponent = () => {
                 col={0}
                 content={() => getChart(dashboardMonthlyList[0].name)}
               ></PanelDirective>
-                <PanelDirective
+              <PanelDirective
                 sizeX={6}
                 sizeY={0}
                 row={2}

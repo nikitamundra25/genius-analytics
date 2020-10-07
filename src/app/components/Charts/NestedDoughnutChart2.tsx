@@ -14,25 +14,25 @@ import {
 AccumulationChart.Inject(AccumulationDataLabel);
 
 export let data1 = [
-  { x: "Direct", y: 258, text: "258" },
-  { x: "GDS", y: 103, text: "103" },
-  { x: "OTA's", y: 292, text: "292" },
-  { x: "Brand.com", y: 202, text: "202" },
+  { x: "Direct", y: 284, text: "284" },
+  { x: "GDS", y: 412, text: "412" },
+  { x: "OTA's", y: 184, text: "184" },
+  { x: "Brand.com", y: 285, text: "285" },
 ];
 
-const NestedDoughnutComponent = ({ setHeight }: any) => {
+const NestedDoughnutComponent2 = ({ setHeight }: any) => {
   // console.log("nested chart comp" , setHeight);
   let isRender: boolean = false;
   let pie: any;
 
   let pieDataSource: any = [
-    { x: "Direct", y: 86, text: "86" },
-    { x: "GDS", y: 188, text: "188" },
-    { x: "OTA's", y: 201, text: "201" },
-    { x: "Brand.com", y: 216, text: "216" },
+    { x: "Direct", y: 430, text: "430" },
+    { x: "GDS", y: 207, text: "207" },
+    { x: "OTA's", y: 357, text: "357" },
+    { x: "Brand.com", y: 278, text: "278" },
   ];
   const onChartLoad = (args: any) => {
-    let chart: any = document.getElementById("charts");
+    let chart: any = document.getElementById("chartsnest");
     chart.setAttribute("title", "");
     isRender = true;
     pie = new AccumulationChart({
@@ -63,7 +63,7 @@ const NestedDoughnutComponent = ({ setHeight }: any) => {
       legendSettings: { visible: true },
       enableBorderOnMouseMove: false,
     });
-    pie.appendTo("#chart_annotation");
+    pie.appendTo("#chart_annotation_nest");
   };
   const loaded = (args: any) => {
     if (isRender) {
@@ -98,26 +98,27 @@ const NestedDoughnutComponent = ({ setHeight }: any) => {
         legendSettings: { visible: true },
         enableBorderOnMouseMove: false,
       });
-      pie.appendTo("#chart_annotation");
+      pie.appendTo("#chart_annotation_nest");
     }
   };
   return (
     <AccumulationChartComponent
-      id="charts"
+      id="chartsnest"
       loaded={loaded}
       animationComplete={onChartLoad}
-      style={{ height: "100%", width: "100%" }}
+      //style={{ height: "100%", width: "100%" }}
       legendSettings={{
         visible: true,
         position: "Bottom",
       }}
       enableBorderOnMouseMove={false}
+      style={{ height: "100%", width: "100%" }}
     >
       <Inject services={[AccumulationAnnotation]} />
       <AccumulationAnnotationsDirective>
         <AccumulationAnnotationDirective
-          content={`<div id="chart_annotation" style="width: ${setHeight}; height: ${setHeight};"></div>`}
-          //content='<div id="chart_annotation" style="width: 195px; height: 195px;"></div>'
+          content={`<div id="chart_annotation_nest" style="width: ${setHeight}; height: ${setHeight};"></div>`}
+          //content='<div id="chart_annotation_nest" style="width: 195px; height: 195px;"></div>'
           x="50%"
           y="50%"
           coordinateUnits="Pixel"
@@ -146,4 +147,4 @@ const NestedDoughnutComponent = ({ setHeight }: any) => {
   );
 };
 
-export default NestedDoughnutComponent;
+export default NestedDoughnutComponent2;
