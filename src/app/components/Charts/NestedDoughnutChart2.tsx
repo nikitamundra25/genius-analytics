@@ -60,7 +60,7 @@ const NestedDoughnutComponent2 = ({ setHeight }: any) => {
         args.accumulation.theme =
           selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1);
       },
-      legendSettings: { visible: true },
+      legendSettings: { visible: false },
       enableBorderOnMouseMove: false,
     });
     pie.appendTo("#chart_annotation_nest");
@@ -95,7 +95,7 @@ const NestedDoughnutComponent2 = ({ setHeight }: any) => {
           args.accumulation.theme =
             selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1);
         },
-        legendSettings: { visible: true },
+        legendSettings: { visible: false },
         enableBorderOnMouseMove: false,
       });
       pie.appendTo("#chart_annotation_nest");
@@ -108,7 +108,7 @@ const NestedDoughnutComponent2 = ({ setHeight }: any) => {
       animationComplete={onChartLoad}
       //style={{ height: "100%", width: "100%" }}
       legendSettings={{
-        visible: true,
+        visible: false,
         position: "Bottom",
       }}
       enableBorderOnMouseMove={false}
