@@ -108,7 +108,7 @@ const BookingDoughnut = ({ date }: Date | any) => {
         <div
           className="d-flex h-100"
           id="nested-chart"
-          style={{ display: "flex !important" }}
+          style={{ paddingBottom: "16px" }}
         >
           <Row className="row-inner h-100 w-100">
             <Col xs={12} md={6} className="h-100">
@@ -135,6 +135,33 @@ const BookingDoughnut = ({ date }: Date | any) => {
               </React.Suspense>
             </Col>
           </Row>
+          <div
+            style={{
+              position: "absolute",
+              left: "0px",
+              bottom: "8px",
+              width: "100%",
+              display: "flex",
+            }}
+            className="custom-legend"
+          >
+            <div className="legend-label">
+              <span className="square-box color1"></span>
+              <span>Direct</span>
+            </div>
+            <div className="legend-label">
+              <span className="square-box color2"></span>
+              <span>GDS</span>
+            </div>
+            <div className="legend-label">
+              <span className="square-box color3"></span>
+              <span>OTA's</span>
+            </div>
+            <div className="legend-label">
+              <span className="square-box color4"></span>
+              <span>Brand.com</span>
+            </div>
+          </div>
         </div>
       )}
     </>
