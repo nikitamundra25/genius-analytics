@@ -43,13 +43,16 @@ const BookingDoughnut = ({ date }: Date | any) => {
   }, [date]);
 
   useEffect(() => {
-    const nchartid: HTMLElement | any = document.getElementsByClassName(
-      `netsedcard`
-    );
+    // const nchartid: any = document.getElementsByClassName(
+    //   `netsedcard`
+    // )[0].height;
+    const nchartid:any = document.getElementsByClassName("netsedcard")[0]
+    console.log("nchartidnchartid",nchartid.offsetHeight);
+    
     if (nchartid) {
       setTimeout(() => {
-        const check = nchartid.getBoundingClientRect();
-        const getHeight = check.height;
+        const check = nchartid.offsetHeight;
+        const getHeight = check;
         const setgraphHeight = getHeight - 145;
         console.log(
           "hello chart height on load",
@@ -66,13 +69,16 @@ const BookingDoughnut = ({ date }: Date | any) => {
 
   useEffect(() => {
     const resizeListener = () => {
-      const modalbtn: HTMLElement | any = document.getElementsByClassName(
-        `netsedcard`
-      );
+      // const modalbtn: HTMLElement | any = document.getElementsByClassName(
+      //   `netsedcard`
+      // );
+    const modalbtn:any = document.getElementsByClassName("netsedcard")[0]
+
+    console.log("modalbtn",modalbtn);
 
       if (modalbtn) {
         setTimeout(() => {
-          const check = modalbtn.getBoundingClientRect();
+          const check = modalbtn.offsetHeight;
           const getHeight = check.height;
           const setgraphHeight = getHeight - 145;
           console.log(
