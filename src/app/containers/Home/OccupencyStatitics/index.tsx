@@ -95,7 +95,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
       opacity: 0.8,
       fill: "rgb(247 218 228)",
       name: "OCC TY",
-      
+
       cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         visible: true,
@@ -125,7 +125,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
       opacity: 0.4,
       fill: "rgb(130 223 215)",
       name: "OCC LY",
-      
+
       cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         visible: true,
@@ -218,7 +218,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
       //fill: "#8293b1",
       //fill: "url(#ty-chart)",
       name: "TY",
-     
+
       width: 3,
       opacity: 0.8,
       fill: "rgb(247 218 228)",
@@ -255,7 +255,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
       width: 3,
       opacity: 0.4,
       fill: "rgb(130 223 215)",
-     
+
       cornerRadius: { bottomLeft: 0, bottomRight: 0, topLeft: 4, topRight: 4 },
       marker: {
         visible: true,
@@ -438,7 +438,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
                           color: "transparent",
                         },
                         visible: false,
-                        maximum: 100,
+                        maximum: 200,
                         interval: 1,
                       },
                       tooltip: { enable: true },
@@ -453,8 +453,13 @@ const OccupencyStatitics = ({ date }: Date | any) => {
       ) : (
         <Row className="no-gutters h-100" style={{ paddingTop: "62px" }}>
           <Col sm={8} className="h-100">
-                  <div className="occupancy-table-section mx-2 " >
-                  <Table responsive striped hover className="occupancy-table mt-3 mb-0">
+            <div className="occupancy-table-section mx-2 ">
+              <Table
+                responsive
+                striped
+                hover
+                className="occupancy-table mt-3 mb-0"
+              >
                 <thead>
                   <tr>
                     <th className="transparent-border"></th>
@@ -542,9 +547,13 @@ const OccupencyStatitics = ({ date }: Date | any) => {
             </div>
           </Col>
           <Col sm={4} className="h-100">
-            
-            <div className="occupancy-table-section ml-0 mr-2 " >
-                <Table responsive striped hover className="occupancy-table mt-3 mb-0">
+            <div className="occupancy-table-section ml-0 mr-2 ">
+              <Table
+                responsive
+                striped
+                hover
+                className="occupancy-table mt-3 mb-0"
+              >
                 <thead>
                   <tr>
                     <th className="transparent-border"></th>

@@ -50,7 +50,7 @@ const BookingDoughnut = ({ date }: Date | any) => {
       setTimeout(() => {
         const check = nchartid.getBoundingClientRect();
         const getHeight = check.height;
-        const setgraphHeight = getHeight - 93;
+        const setgraphHeight = getHeight - 145;
         // console.log(
         //   "hello chart height on load",
         //   check,
@@ -74,7 +74,7 @@ const BookingDoughnut = ({ date }: Date | any) => {
         setTimeout(() => {
           const check = modalbtn.getBoundingClientRect();
           const getHeight = check.height;
-          const setgraphHeight = getHeight - 93;
+          const setgraphHeight = getHeight - 145;
           // console.log(
           //   "hello chart height on resize",
           //   check,
@@ -111,7 +111,24 @@ const BookingDoughnut = ({ date }: Date | any) => {
           style={{ paddingBottom: "16px" }}
         >
           <Row className="row-inner h-100 w-100">
-            <Col xs={12} md={6} className="h-100">
+            <Col
+              xs={12}
+              md={6}
+              className="h-100"
+              style={{ paddingTop: "45px" }}
+            >
+              <div
+                className="e-panel-header"
+                style={{
+                  position: "absolute",
+                  left: "7px",
+                  top: "0px",
+                  width: "100%",
+                }}
+              >
+                <div className="panel-title">Room Nights</div>
+              </div>
+
               <React.Suspense
                 fallback={
                   <div className="card-loader">
@@ -123,7 +140,24 @@ const BookingDoughnut = ({ date }: Date | any) => {
               </React.Suspense>
             </Col>
 
-            <Col xs={12} md={6} className="h-100">
+            <Col
+              xs={12}
+              md={6}
+              className="h-100"
+              style={{ paddingTop: "45px" }}
+            >
+              <div
+                className="e-panel-header"
+                style={{
+                  position: "absolute",
+                  left: "7px",
+                  top: "0px",
+                  width: "100%",
+                }}
+              >
+                <div className="panel-title">ADR</div>
+              </div>
+
               <React.Suspense
                 fallback={
                   <div className="card-loader">
