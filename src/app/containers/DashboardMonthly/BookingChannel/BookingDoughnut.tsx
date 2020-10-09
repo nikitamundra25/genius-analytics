@@ -43,20 +43,20 @@ const BookingDoughnut = ({ date }: Date | any) => {
   }, [date]);
 
   useEffect(() => {
-    const nchartid: HTMLElement | null = document.getElementById(
-      `nested-chart`
+    const nchartid: HTMLElement | any = document.getElementsByClassName(
+      `netsedcard`
     );
     if (nchartid) {
       setTimeout(() => {
         const check = nchartid.getBoundingClientRect();
         const getHeight = check.height;
         const setgraphHeight = getHeight - 145;
-        // console.log(
-        //   "hello chart height on load",
-        //   check,
-        //   getHeight,
-        //   setgraphHeight
-        // );
+        console.log(
+          "hello chart height on load",
+          check,
+          getHeight,
+          setgraphHeight
+        );
         if (setgraphHeight >= 0) {
           setsetHeight(`${setgraphHeight}px`);
         }
@@ -66,8 +66,8 @@ const BookingDoughnut = ({ date }: Date | any) => {
 
   useEffect(() => {
     const resizeListener = () => {
-      const modalbtn: HTMLElement | null = document.getElementById(
-        `nested-chart`
+      const modalbtn: HTMLElement | any = document.getElementsByClassName(
+        `netsedcard`
       );
 
       if (modalbtn) {
@@ -75,12 +75,12 @@ const BookingDoughnut = ({ date }: Date | any) => {
           const check = modalbtn.getBoundingClientRect();
           const getHeight = check.height;
           const setgraphHeight = getHeight - 145;
-          // console.log(
-          //   "hello chart height on resize",
-          //   check,
-          //   getHeight,
-          //   setgraphHeight
-          // );
+          console.log(
+            "hello chart height on resize",
+            check,
+            getHeight,
+            setgraphHeight
+          );
           if (setgraphHeight >= 0) {
             setsetHeight(`${setgraphHeight}px`);
           }
@@ -106,8 +106,8 @@ const BookingDoughnut = ({ date }: Date | any) => {
         <ErrorComponent message={"An error occured while fetching details "} />
       ) : (
         <div
-          className="d-flex h-100"
-          id="nested-chart"
+          className="d-flex h-100 netsedcard"
+          //id="nested-chart"
           style={{ paddingBottom: "16px" }}
         >
           <Row className="row-inner h-100 w-100">
