@@ -105,98 +105,109 @@ const BookingDoughnut = ({ date }: Date | any) => {
       ) : isError ? (
         <ErrorComponent message={"An error occured while fetching details "} />
       ) : (
-        <div
-          className="d-flex h-100"
-          id="nested-chart"
-          style={{ paddingBottom: "16px" }}
-        >
-          <Row className="row-inner h-100 w-100">
-            <Col
-              xs={12}
-              md={6}
-              className="h-100"
-              style={{ paddingTop: "45px" }}
-            >
-              <div
-                className="e-panel-header"
-                style={{
-                  position: "absolute",
-                  left: "7px",
-                  top: "0px",
-                  width: "100%",
-                }}
-              >
-                <div className="panel-title">Room Nights</div>
-              </div>
-
-              <React.Suspense
-                fallback={
-                  <div className="card-loader">
-                    <WidgetLoader />
-                  </div>
-                }
-              >
-                <NestedDoughnutComponent setHeight={setHeight} />
-              </React.Suspense>
-            </Col>
-
-            <Col
-              xs={12}
-              md={6}
-              className="h-100"
-              style={{ paddingTop: "45px" }}
-            >
-              <div
-                className="e-panel-header"
-                style={{
-                  position: "absolute",
-                  left: "7px",
-                  top: "0px",
-                  width: "100%",
-                }}
-              >
-                <div className="panel-title">ADR</div>
-              </div>
-
-              <React.Suspense
-                fallback={
-                  <div className="card-loader">
-                    <WidgetLoader />
-                  </div>
-                }
-              >
-                <NestedDoughnutComponent2 setHeight={setHeight} />
-              </React.Suspense>
-            </Col>
-          </Row>
-          <div
-            style={{
-              position: "absolute",
-              left: "0px",
-              bottom: "8px",
-              width: "100%",
-              display: "flex",
-            }}
-            className="custom-legend"
-          >
-            <div className="legend-label">
-              <span className="square-box color1"></span>
-              <span>Direct</span>
-            </div>
-            <div className="legend-label">
-              <span className="square-box color2"></span>
-              <span>GDS</span>
-            </div>
-            <div className="legend-label">
-              <span className="square-box color3"></span>
-              <span>OTA's</span>
-            </div>
-            <div className="legend-label">
-              <span className="square-box color4"></span>
-              <span>Brand.com</span>
-            </div>
+        <div className=" h-100">
+        <React.Suspense
+        fallback={
+          <div className="card-loader">
+            <WidgetLoader />
           </div>
-        </div>
+        }
+      >
+        <NestedDoughnutComponent setHeight={setHeight} />
+      </React.Suspense>
+      </div>
+        // <div
+        //   className="d-flex h-100"
+        //   id="nested-chart"
+        //   style={{ paddingBottom: "16px" }}
+        // >
+        //   <Row className="row-inner h-100 w-100">
+        //     <Col
+        //       xs={12}
+        //       md={6}
+        //       className="h-100"
+        //       style={{ paddingTop: "45px" }}
+        //     >
+        //       {/* <div
+        //         className="e-panel-header"
+        //         style={{
+        //           position: "absolute",
+        //           left: "7px",
+        //           top: "0px",
+        //           width: "100%",
+        //         }}
+        //       >
+        //         <div className="panel-title">Room Nights</div>
+        //       </div> */}
+
+        //       <React.Suspense
+        //         fallback={
+        //           <div className="card-loader">
+        //             <WidgetLoader />
+        //           </div>
+        //         }
+        //       >
+        //         <NestedDoughnutComponent setHeight={setHeight} />
+        //       </React.Suspense>
+        //     </Col>
+
+        //     <Col
+        //       xs={12}
+        //       md={6}
+        //       className="h-100"
+        //       style={{ paddingTop: "45px" }}
+        //     >
+        //       <div
+        //         className="e-panel-header"
+        //         style={{
+        //           position: "absolute",
+        //           left: "7px",
+        //           top: "0px",
+        //           width: "100%",
+        //         }}
+        //       >
+        //         <div className="panel-title">ADR</div>
+        //       </div>
+
+        //       <React.Suspense
+        //         fallback={
+        //           <div className="card-loader">
+        //             <WidgetLoader />
+        //           </div>
+        //         }
+        //       >
+        //         <NestedDoughnutComponent2 setHeight={setHeight} />
+        //       </React.Suspense>
+        //     </Col>
+        //   </Row>
+        //   <div
+        //     style={{
+        //       position: "absolute",
+        //       left: "0px",
+        //       bottom: "8px",
+        //       width: "100%",
+        //       display: "flex",
+        //     }}
+        //     className="custom-legend"
+        //   >
+        //     <div className="legend-label">
+        //       <span className="square-box color1"></span>
+        //       <span>Direct</span>
+        //     </div>
+        //     <div className="legend-label">
+        //       <span className="square-box color2"></span>
+        //       <span>GDS</span>
+        //     </div>
+        //     <div className="legend-label">
+        //       <span className="square-box color3"></span>
+        //       <span>OTA's</span>
+        //     </div>
+        //     <div className="legend-label">
+        //       <span className="square-box color4"></span>
+        //       <span>Brand.com</span>
+        //     </div>
+        //   </div>
+        // </div>
       )}
     </>
   );
