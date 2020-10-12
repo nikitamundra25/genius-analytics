@@ -723,25 +723,25 @@ body {
       text-align: center;
       color: #fff !important;
       border-radius: 50%;
-      background: rgb(119, 90, 90);
+      background: rgba(94, 193, 185, 0.45);
       display: inline-block;
       position: absolute;
       right: 22px;
       img {
         width: 28px;
       }
-      &.color1 {
-        background: rgba(94, 193, 185, 0.45);
-      }
-      &.color2 {
-        background: rgba(255, 108, 166, 0.45);
-      }
-      &.color3 {
-        background: rgba(255, 159, 67, 0.45);
-      }
-      &.color4 {
-        background: rgba(115, 103, 240, 0.45);
-      }
+      // &.color1 {
+      //   background: rgba(94, 193, 185, 0.45);
+      // }
+      // &.color2 {
+      //   background: rgba(255, 108, 166, 0.45);
+      // }
+      // &.color3 {
+      //   background: rgba(255, 159, 67, 0.45);
+      // }
+      // &.color4 {
+      //   background: rgba(115, 103, 240, 0.45);
+      // }
     }
     .mini-card-text {
       .text-title {

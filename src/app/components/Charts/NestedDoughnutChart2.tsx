@@ -62,6 +62,7 @@ const NestedDoughnutComponent2 = ({ setHeight }: any) => {
       },
       legendSettings: { visible: false },
       enableBorderOnMouseMove: false,
+      //tooltip:{ enable: true, format: "${point.x} : <b>${point.y}</b>",}
     });
     pie.appendTo("#chart_annotation_nest");
   };
@@ -97,6 +98,7 @@ const NestedDoughnutComponent2 = ({ setHeight }: any) => {
         },
         legendSettings: { visible: false },
         enableBorderOnMouseMove: false,
+        //tooltip:{ enable: true, format: "${point.x} : <b>${point.y}</b>",}
       });
       pie.appendTo("#chart_annotation_nest");
     }
@@ -112,6 +114,11 @@ const NestedDoughnutComponent2 = ({ setHeight }: any) => {
         position: "Bottom",
       }}
       enableBorderOnMouseMove={false}
+      tooltip={{
+        enable: true,
+        // eslint-disable-next-line
+        format: "${point.x} : <b>${point.y}</b>",
+      }}
       style={{ height: "100%", width: "100%" }}
     >
       <Inject services={[AccumulationAnnotation]} />

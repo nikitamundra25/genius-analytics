@@ -213,11 +213,11 @@ const OccupencyStatitics = ({ date }: Date | any) => {
           ? data.graph[1].data
           : [],
       xName: "name",
-      yName: "TY",
+      yName: "OCCTY",
       type: "SplineArea",
       //fill: "#8293b1",
       //fill: "url(#ty-chart)",
-      name: "TY",
+      name: "OCC TY",
 
       width: 3,
       opacity: 0.8,
@@ -246,11 +246,11 @@ const OccupencyStatitics = ({ date }: Date | any) => {
           ? data.graph[1].data
           : [],
       xName: "name",
-      yName: "LY",
+      yName: "OCCLY",
       //type: "Column",
       //fill: "#3269aa",
       // fill: "url(#ly-chart)",
-      name: "LY",
+      name: "OCC LY",
       type: "SplineArea",
       width: 3,
       opacity: 0.4,
@@ -280,10 +280,41 @@ const OccupencyStatitics = ({ date }: Date | any) => {
           ? data.graph[1].data
           : [],
       xName: "name",
-      yName: "Var",
+      yName: "ADRTY",
+      type: "Spline",
+      fill: "#2bb5ec",
+      name: "ADRTY",
+      dashArray: "5",
+      width: 2,
+      yAxisName: "yAxis1",
+      marker: {
+        visible: true,
+        width: 8,
+        height: 8,
+        fill: "#2bb5ec",
+        border: { width: 1, color: "#ddd" },
+        dataLabel: {
+          visible: true,
+          position: "Bottom",
+          //fill: "#26405d",
+          template: labeltemplate2,
+          font: {
+            fontWeight: "600",
+            color: "#ffffff",
+          },
+        },
+      },
+    },
+    {
+      dataSource:
+        data && data.graph && data.graph.length && data.graph[1]
+          ? data.graph[1].data
+          : [],
+      xName: "name",
+      yName: "ADRLY",
       type: "Spline",
       fill: "#2f5891",
-      name: "Var",
+      name: "ADR LY",
       dashArray: "5",
       width: 2,
       yAxisName: "yAxis1",
@@ -376,7 +407,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
             />
           ) : (
             <Row className="row-inner h-100" style={{ paddingTop: "62px" }}>
-              <Col sm={8} className="h-100">
+              <Col sm={7} className="h-100">
                 <React.Suspense
                   fallback={
                     <div className="card-loader">
@@ -411,7 +442,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
                   />
                 </React.Suspense>
               </Col>
-              <Col sm={4} className="h-100">
+              <Col sm={5} className="h-100">
                 <React.Suspense
                   fallback={
                     <div className="card-loader">
@@ -470,7 +501,7 @@ const OccupencyStatitics = ({ date }: Date | any) => {
                     <th className="head-col">Fri</th>
                     <th className="head-col">Sat</th>
                     <th className="head-col">Sun</th>
-                    <th className="head-col">Total</th>
+                    
                   </tr>
                 </thead>
                 <tbody>
@@ -531,13 +562,13 @@ const OccupencyStatitics = ({ date }: Date | any) => {
                                   : list.sun.toFixed(1)
                                 : "-"}{" "}
                             </td>
-                            <td className="content-col">
+                            {/* <td className="content-col">
                               {list.tot
                                 ? list.type === "occ"
                                   ? `${list.tot}%`
                                   : list.tot.toFixed(1)
                                 : "-"}{" "}
-                            </td>
+                            </td> */}
                           </tr>
                         );
                       })

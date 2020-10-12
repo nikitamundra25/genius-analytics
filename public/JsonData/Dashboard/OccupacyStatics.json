@@ -51,13 +51,6 @@
             "OCCLY": 68.0,
             "ADRLY": 144.0,
             "ADRTY": 145.2
-          },
-          {
-            "name": "Total",
-            "OCCTY": 80.7,
-            "OCCLY": 82.3,
-            "ADRLY": 171.4,
-            "ADRTY": 171.0
           }
         ]
       },
@@ -65,21 +58,24 @@
         "data": [
           {
             "name": "Midweek",
-            "TY": 87.0,
-            "LY": 90.0,
-            "Var": -3
+            "OCCTY": 80.8,
+            "OCCLY": 83.2,
+            "ADRLY": 182.4,
+            "ADRTY": 180.8
           },
           {
             "name": "Weekend",
-            "TY": 74.0,
-            "LY": 73.0,
-            "Var": 1
+            "OCCTY": 80.7,
+            "OCCLY": 81.0,
+            "ADRLY": 156.7,
+            "ADRTY": 157.9
           },
           {
             "name": "Total",
-            "TY": 80.5,
-            "LY": 81.5,
-            "Var": -1
+            "OCCTY": 80.7,
+            "OCCLY": 82.3,
+            "ADRLY": 171.4,
+            "ADRTY": 171.0
           }
         ]
       }
@@ -96,8 +92,8 @@
             "thu": 75.0,
             "fri": 79.0,
             "sat":99.0,
-            "sun":64.0,
-             "tot": 80.7
+            "sun":64.0
+            
           },
           {
             "type":"occ",
@@ -108,8 +104,8 @@
             "thu": 81.0,
             "fri": 86.0,
             "sat":89.0,
-            "sun":68.0,
-            "tot":82.3
+            "sun":68.0
+           
           },
           {
             "type":"adr",
@@ -120,8 +116,8 @@
             "thu": 183.2,
             "fri": 155.0,
             "sat":171.2,
-            "sun":144.0,
-            "tot":171.4
+            "sun":144.0
+            
           },
           {
             "type":"adr",
@@ -132,8 +128,8 @@
             "thu": 180.0,
             "fri":  158.3,
             "sat":170.2,
-            "sun": 145.2,
-            "tot":171.0
+            "sun": 145.2
+            
           }
         ]
       },
@@ -141,24 +137,31 @@
         "table2": [
           {
             "type":"occ",
-            "title": "TY",
-            "midweek": 87.0,
-            "weekend": 74.0,
-            "total": 80.5
+            "title": "OCC TY",
+            "midweek": 80.8,
+            "weekend": 80.7,
+            "total":  80.7
           },
           {
             "type":"occ",
-            "title": "LY",
-            "midweek": 90.0,
-            "weekend":  73.0,
-            "total": 81.5
+            "title": "OCC LY",
+            "midweek": 83.2,
+            "weekend":  81.0,
+            "total": 82.3
           },
           {
-            "type":"var",
-            "title": "Var",
-            "midweek": -3,
-            "weekend": 1,
-            "total": -1
+            "type":"adr",
+            "title": "ADR TY",
+            "midweek": 182.4,
+            "weekend": 156.7,
+            "total": 171.4
+          },
+          {
+            "type":"adr",
+            "title": "ADR LY",
+            "midweek": 180.8,
+            "weekend": 157.9,
+            "total": 171.0
           }
         ]
       }
