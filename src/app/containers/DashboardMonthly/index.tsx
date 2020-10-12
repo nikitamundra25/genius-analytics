@@ -17,7 +17,7 @@ import configureStore from "../../../store";
 import BookingChannel from "./BookingChannel/BookingDoughnut";
 import MarketSegmentation from "./MarketSegmentation";
 import RoomTypeStatistics from "./RoomTypeStatistics";
-import NestedDoughnutComponent from "../../components/Charts/NestedDoughnutChart";
+
 const history = createBrowserHistory();
 
 let selectedDate: any = new Date();
@@ -52,7 +52,7 @@ const DashboardMonthly: FunctionComponent = () => {
     restoreModel[2].content = () => getChart("Daily Occupancy Vs. BUD Vs. LY");
 
     restoreModel[3].content = () => getChart("Booking Channel");
-    // restoreModel[3].header = `<div class="panel-title">Booking Channel</div>`;
+    restoreModel[3].header = `<div class="panel-title">Booking Channel</div>`;
 
     restoreModel[4].content = () => getChart("Market Segmentation");
     restoreModel[4].header = `<div class="panel-title">Market Segmentation</div>`;
@@ -176,7 +176,7 @@ const DashboardMonthly: FunctionComponent = () => {
                 sizeY={0}
                 row={3}
                 col={4}
-                //header={`<div class="panel-title">${dashboardMonthlyList[3].name}</div>`}
+                header={`<div class="panel-title">${dashboardMonthlyList[3].name}</div>`}
                 content={() => getChart(dashboardMonthlyList[3].name)}
               ></PanelDirective>
               <PanelDirective

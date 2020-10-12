@@ -46,14 +46,14 @@ const BookingDoughnut = ({ date }: Date | any) => {
     // const nchartid: any = document.getElementsByClassName(
     //   `netsedcard`
     // )[0].height;
-    const nchartid:any = document.getElementsByClassName("netsedcard")[0]
-    console.log("nchartidnchartid",nchartid.offsetHeight);
-    
+    const nchartid: any = document.getElementsByClassName("netsedcard")[0];
+    console.log("nchartidnchartid", nchartid.offsetHeight);
+
     if (nchartid) {
       setTimeout(() => {
         const check = nchartid.offsetHeight;
         const getHeight = check;
-        const setgraphHeight = getHeight - 145;
+        const setgraphHeight = getHeight - 105;
         console.log(
           "hello chart height on load",
           check,
@@ -72,15 +72,16 @@ const BookingDoughnut = ({ date }: Date | any) => {
       // const modalbtn: HTMLElement | any = document.getElementsByClassName(
       //   `netsedcard`
       // );
-    const modalbtn:any = document.getElementsByClassName("netsedcard")[0]
+      const modalbtn: any = document.getElementsByClassName("netsedcard")[0];
+      // const modalbtn:any = document.getElementsByClassName("netsedcard")[0]
 
-    console.log("modalbtn",modalbtn);
+      console.log("modalbtn", modalbtn);
 
       if (modalbtn) {
         setTimeout(() => {
           const check = modalbtn.offsetHeight;
           const getHeight = check.height;
-          const setgraphHeight = getHeight - 145;
+          const setgraphHeight = getHeight - 105;
           console.log(
             "hello chart height on resize",
             check,
@@ -114,25 +115,31 @@ const BookingDoughnut = ({ date }: Date | any) => {
         <div
           className="d-flex h-100 netsedcard"
           //id="nested-chart"
-          style={{ paddingBottom: "16px" }}
+          style={{ paddingBottom: "25px" }}
         >
           <Row className="row-inner h-100 w-100">
             <Col
               xs={12}
               md={6}
               className="h-100"
-              style={{ paddingTop: "45px" }}
+              style={{ paddingTop: "20px" }}
             >
               <div
-                className="e-panel-header"
+                //className="e-panel-header"
                 style={{
                   position: "absolute",
-                  left: "7px",
-                  top: "0px",
+                  left: "0px",
+                  top: "-6px",
                   width: "100%",
+                  color:"#007db9",
+                  textAlign: "center",
                 }}
               >
-                <div className="panel-title">Room Nights</div>
+                <div className="panel-title" style={{
+                  fontSize: "16px",
+                  color:"#007db9",
+                  textAlign: "center",
+                }}>Room Nights</div>
               </div>
 
               <React.Suspense
@@ -150,18 +157,24 @@ const BookingDoughnut = ({ date }: Date | any) => {
               xs={12}
               md={6}
               className="h-100"
-              style={{ paddingTop: "45px" }}
+              style={{ paddingTop: "20px" }}
             >
               <div
-                className="e-panel-header"
+                //className="e-panel-header"
                 style={{
                   position: "absolute",
-                  left: "7px",
-                  top: "0px",
+                  left: "0px",
+                  top: "-6px",
                   width: "100%",
+                  color:"#007db9",
+                  textAlign: "center",
                 }}
               >
-                <div className="panel-title">ADR</div>
+                <div className="panel-title"  style={{
+                  fontSize: "16px",
+                  color:"#007db9",
+                  textAlign: "center",
+                }}>ADR</div>
               </div>
 
               <React.Suspense
