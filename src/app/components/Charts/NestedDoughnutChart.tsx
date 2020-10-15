@@ -61,7 +61,8 @@ const NestedDoughnutComponent = ({ setHeight }: any) => {
           selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1);
       },
       legendSettings: { visible: false },
-      enableBorderOnMouseMove: false,
+     // tooltip:{ enable: true, format: "${point.x} : <b>${point.y}</b>",}
+       enableBorderOnMouseMove: false,
     });
     pie.appendTo("#chart_annotation");
   };
@@ -96,20 +97,31 @@ const NestedDoughnutComponent = ({ setHeight }: any) => {
             selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1);
         },
         legendSettings: { visible: false },
-        enableBorderOnMouseMove: false,
-      });
+       enableBorderOnMouseMove: false,
+       //tooltip:{ enable: true, format: "${point.x} : <b>${point.y}</b>",}
+});
       pie.appendTo("#chart_annotation");
     }
   };
+  // const resized = (args: any) => {
+  //   location.reload();
+  // }
+ 
   return (
     <AccumulationChartComponent
       id="charts"
       loaded={loaded}
       animationComplete={onChartLoad}
+     // resized={resized} 
       style={{ height: "100%", width: "100%" }}
       legendSettings={{
         visible: false,
         position: "Bottom",
+      }}
+      tooltip={{
+        enable: true,
+        // eslint-disable-next-line
+        format: "${point.x} : <b>${point.y}</b>",
       }}
       enableBorderOnMouseMove={false}
     >
@@ -117,7 +129,7 @@ const NestedDoughnutComponent = ({ setHeight }: any) => {
       <AccumulationAnnotationsDirective>
         <AccumulationAnnotationDirective
           content={`<div id="chart_annotation" style="width: ${setHeight}; height: ${setHeight};"></div>`}
-          //content='<div id="chart_annotation" style="width: 195px; height: 195px;"></div>'
+         // content='<div id="chart_annotation" style="width: 195px; height: 195px;"></div>'
           x="50%"
           y="50%"
           coordinateUnits="Pixel"

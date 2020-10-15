@@ -1,86 +1,170 @@
 {
-    "data":  [
-        {
-          "data": [
-            {
-              "name": "Mon",
-              "OCCTY": 93.0,
-              "OCCLY": 80.0,
-              "ADRLY": 181.0,
-              "ADRTY": 171.0
-            },
-            {
-              "name": "Tue",
-              "OCCTY": 54.0,
-              "OCCLY": 93.0,
-              "ADRLY": 176.0,
-              "ADRTY": 198.0
-            },
-            {
-              "name": "Wed",
-              "OCCTY": 77.0,
-              "OCCLY": 70.0,
-              "ADRLY": 197.0,
-              "ADRTY": 198.0
-            },
-            {
-              "name": "Thu",
-              "OCCTY": 60.0,
-              "OCCLY": 61.0,
-              "ADRLY": 190.0,
-              "ADRTY": 169.0
-            },
-            {
-              "name": "Fri",
-              "OCCTY": 87.0,
-              "OCCLY": 61.0,
-              "ADRLY": 192.0,
-              "ADRTY": 178.0
-            },
-            {
-              "name": "Sat",
-              "OCCTY": 88.0,
-              "OCCLY": 73.0,
-              "ADRLY": 178.0,
-              "ADRTY": 175.0
-            },
-            {
-              "name": "Sun",
-              "OCCTY": 57.0,
-              "OCCLY": 79.0,
-              "ADRLY": 196.0,
-              "ADRTY": 170.0
-            },
-            {
-              "name": "Total",
-              "OCCTY": 73.7,
-              "OCCLY": 73.9,
-              "ADRLY": 187.1,
-              "ADRTY": 171.3
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "name": "Midweek",
-              "TY": 71.0,
-              "LY": 76.0,
-              "Var": -5
-            },
-            {
-              "name": "Weekend",
-              "TY": 77.3,
-              "LY": 71.0,
-              "Var": 6
-            },
-            {
-              "name": "Total",
-              "TY": 74.2,
-              "LY": 73.5,
-              "Var": 1
-            }
-          ]
-        }
-      ]
+  "data": {
+    "graph": [
+      {
+        "data": [
+          {
+            "name": "Mon",
+            "OCCTY": 93.0,
+            "OCCLY": 80.0,
+            "ADRLY": 181.0,
+            "ADRTY": 171.0
+          },
+          {
+            "name": "Tue",
+            "OCCTY": 54.0,
+            "OCCLY": 93.0,
+            "ADRLY": 176.0,
+            "ADRTY": 198.0
+          },
+          {
+            "name": "Wed",
+            "OCCTY": 77.0,
+            "OCCLY": 70.0,
+            "ADRLY": 197.0,
+            "ADRTY": 180.0
+          },
+          {
+            "name": "Thu",
+            "OCCTY": 60.0,
+            "OCCLY": 61.0,
+            "ADRLY": 190.0,
+            "ADRTY": 169.0
+          },
+          {
+            "name": "Fri",
+            "OCCTY": 87.0,
+            "OCCLY": 61.0,
+            "ADRLY": 192.0,
+            "ADRTY": 178.0
+          },
+          {
+            "name": "Sat",
+            "OCCTY": 88.0,
+            "OCCLY": 73.0,
+            "ADRLY": 178.0,
+            "ADRTY": 175.0
+          },
+          {
+            "name": "Sun",
+            "OCCTY": 57.0,
+            "OCCLY": 79.0,
+            "ADRLY": 196.0,
+            "ADRTY": 170.0
+          }
+        ]
+      },
+      {
+        "data": [
+          {
+            "name": "Midweek",
+            "OCCTY": 71.0,
+            "OCCLY": 76.0,
+            "ADRLY": 186.0,
+            "ADRTY": 179.5
+          },
+          {
+            "name": "Weekend",
+            "OCCTY": 77.3,
+            "OCCLY": 71.0,
+            "ADRLY": 188.7,
+            "ADRTY": 174.3
+          },
+          {
+            "name": "Total",
+            "OCCTY": 73.7,
+            "OCCLY": 73.9,
+            "ADRLY": 187.1,
+            "ADRTY": 177.3
+          }
+        ]
+      }
+    ],
+    "grid": [
+      {
+        "table1": [
+          {
+            "type":"occ",
+            "title": "OCC TY",
+            "mon": 93.0,
+            "tue": 54.0,
+            "wed": 77.0,
+            "thu": 60.0,
+            "fri": 87.0,
+            "sat":88.0,
+            "sun":57.0
+            
+          },
+          {
+            "type":"occ",
+            "title": "OCC LY",
+            "mon": 80.0,
+            "tue":  93.0,
+            "wed": 70.0,
+            "thu": 61.0,
+            "fri": 61.0,
+            "sat":73.0,
+            "sun":79.0
+           
+          },
+          {
+            "type":"adr",
+            "title": "ADR TY",
+            "mon": 181.0,
+            "tue": 176.0,
+            "wed": 197.0,
+            "thu": 190.0,
+            "fri": 192.0,
+            "sat":178.0,
+            "sun":196.0
+            
+          },
+          {
+            "type":"adr",
+            "title": "ADR LY",
+            "mon": 171.0,
+            "tue": 198.0,
+            "wed": 180.0,
+            "thu": 169.0,
+            "fri":  178.0,
+            "sat":175.0,
+            "sun": 170.0
+            
+          }
+        ]
+      },
+      {
+        "table2": [
+          {
+            "type":"occ",
+            "title": "OCC TY",
+            "midweek": 71.0,
+            "weekend": 77.3,
+            "total":  73.7
+          },
+          {
+            "type":"occ",
+            "title": "OCC LY",
+            "midweek": 76.0,
+            "weekend":  71.0,
+            "total": 73.9
+          },
+          {
+            "type":"adr",
+            "title": "ADR TY",
+            "midweek": 186.0,
+            "weekend": 188.7,
+            "total": 187.1
+          },
+          {
+            "type":"adr",
+            "title": "ADR LY",
+            "midweek": 179.5,
+            "weekend": 174.3,
+            "total": 177.3
+          }
+        ]
+      }
+    ]
+  }
 }
