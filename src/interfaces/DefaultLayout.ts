@@ -12,7 +12,7 @@ export interface IDefaultLayoutProps extends RouteComponentProps {
 
 export interface IDefaultLayoutState {
   isLoading: boolean;
-  isAuthenticated: boolean;
+  isAuthenticated?: boolean;
   userDetails: {};
 }
 
