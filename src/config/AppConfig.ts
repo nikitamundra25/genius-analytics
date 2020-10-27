@@ -15,10 +15,7 @@ export const API_ENDPOINT: string =
     ? "http://localhost:8080/api/v1"
     : "http://api.drpolly.com/v1";
 
-export const ImageURL: string =
-  Environment === ENVEnum.DEVELOPMENT
-    ? "http://localhost:8000"
-    : "http://images.drpolly.com";
+
 
 export const auth0Domain:any = Environment === ENVEnum.DEVELOPMENT ? process.env.REACT_APP_AUTH0_DOMAIN : "dev-2eewfo4f.au.auth0.com"
 export const auth0ClientId:any = Environment === ENVEnum.DEVELOPMENT ? process.env.REACT_APP_AUTH0_CLIENT_ID : "2Ut63UeNsoDIDsFvLmeWaeW1n90kmOU8"
