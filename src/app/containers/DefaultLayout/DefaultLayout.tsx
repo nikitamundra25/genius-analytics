@@ -25,7 +25,8 @@ const DefaultFooter = React.lazy(() => import("./DefaultFooter"));
 const DefaultHeader = React.lazy(() => import("./DefaultHeader"));
 
 const DefaultLayout = (props: any) => {
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated,error } = useAuth0();
+  console.log("errorerrorerror",error);
   
   return (
     <CookiesProvider>

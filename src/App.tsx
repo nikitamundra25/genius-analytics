@@ -5,7 +5,7 @@ import { createBrowserHistory } from "history";
 import { Store } from "redux";
 import { Router } from "react-router";
 import configureStore from "./store";
-import { ToastContainer, Slide, toast } from "react-toastify";
+import { ToastContainer, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { logger } from "./helper";
 import "./extend-definitions";
@@ -28,7 +28,7 @@ const App: React.FC = () => {
   const { error } = useAuth0();
 
   if (error) {
-    return <div>{toast.error("Something went wrong!!")} </div>;
+    return <div>auth0-spa-js must run on a secure origin. </div>;
   }
 
   return (
