@@ -5,11 +5,13 @@ import { createBrowserHistory } from "history";
 import { Store } from "redux";
 import { Router } from "react-router";
 import configureStore from "./store";
-import { ToastContainer, Slide } from "react-toastify";
+import { ToastContainer, Slide, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { logger } from "./helper";
 import "./extend-definitions";
 import FullPageLoader from "./app/components/Loader/FullPageLoader";
+import { useAuth0 } from "@auth0/auth0-react";
+
 const AppRoutesComponent = React.lazy(() => import("./routes"));
 
 const history = createBrowserHistory();
@@ -23,6 +25,12 @@ logger(
   ].group("key")
 );
 const App: React.FC = () => {
+  const { error } = useAuth0();
+
+  if (error) {
+    return <div>{toast.error("Something went wrong!!")} </div>;
+  }
+
   return (
     <>
       <Provider store={store}>
