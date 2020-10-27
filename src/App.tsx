@@ -27,7 +27,8 @@ logger(
 );
 const App: React.FC = () => {
   const { error } = useAuth0();
-
+  console.log("errorerrorerror",error);
+  
   if (error) {
     return <div>auth0-spa-js must run on a secure origin. </div>;
   }
