@@ -18,16 +18,17 @@ const onRedirectCallback = async(appState:any) => {
   );
 };
 
+
 ReactDOM.render(
-  <Auth0Provider
-    domain={auth0Domain}
-    clientId={auth0ClientId}
-    redirectUri={window.location.origin}
-    onRedirectCallback={onRedirectCallback}
-  >
-    {" "}
-    <App />{" "}
-  </Auth0Provider>,
+  // <Auth0Provider
+  //   domain={auth0Domain}
+  //   clientId={auth0ClientId}
+  //   redirectUri={window.location.origin}
+  //   onRedirectCallback={onRedirectCallback}
+  // >
+  //   {" "}
+    <App />,
+  // </Auth0Provider>,
   document.getElementById("root")
 );
 
