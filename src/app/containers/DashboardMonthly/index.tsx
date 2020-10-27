@@ -17,7 +17,6 @@ import configureStore from "../../../store";
 import BookingChannel from "./BookingChannel/BookingDoughnut";
 import MarketSegmentation from "./MarketSegmentation";
 import RoomTypeStatistics from "./RoomTypeStatistics";
-import NestedDoughnutComponent from "../../components/Charts/NestedDoughnutChart";
 const history = createBrowserHistory();
 
 let selectedDate: any = new Date();
