@@ -4,7 +4,7 @@ import { createBrowserHistory } from "history";
 import "./index.scss";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { Auth0Provider,useAuth0 } from "@auth0/auth0-react";
+import { Auth0Provider } from "@auth0/auth0-react";
 import { auth0Domain, auth0ClientId } from "./config/AppConfig";
 const history = createBrowserHistory();
 
@@ -18,23 +18,17 @@ const onRedirectCallback = async(appState:any) => {
   );
 };
 
-const { error } = useAuth0();
-console.log("errorerror mainnn",error);
-
-if (error) {
-  ReactDOM.render (<div>auth0-spa-js must run on a secure origin. </div>, document.getElementById("root"))
-}
 
 ReactDOM.render(
-  <Auth0Provider
-    domain={auth0Domain}
-    clientId={auth0ClientId}
-    redirectUri={window.location.origin}
-    onRedirectCallback={onRedirectCallback}
-  >
-    {" "}
-    <App />{" "}
-  </Auth0Provider>,
+  // <Auth0Provider
+  //   domain={auth0Domain}
+  //   clientId={auth0ClientId}
+  //   redirectUri={window.location.origin}
+  //   onRedirectCallback={onRedirectCallback}
+  // >
+  //   {" "}
+    <App />,
+  // </Auth0Provider>,
   document.getElementById("root")
 );
 

@@ -10,7 +10,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { logger } from "./helper";
 import "./extend-definitions";
 import FullPageLoader from "./app/components/Loader/FullPageLoader";
-import { useAuth0 } from "@auth0/auth0-react";
+import { useAuth0, Auth0Provider } from "@auth0/auth0-react";
+import { auth0Domain, auth0ClientId } from "./config/AppConfig";
 
 const AppRoutesComponent = React.lazy(() => import("./routes"));
 
@@ -31,12 +32,29 @@ const App: React.FC = () => {
     return <div>auth0-spa-js must run on a secure origin. </div>;
   }
 
+  const onRedirectCallback = async(appState:any) => {
+    
+    history.push(
+      appState && appState.returnTo
+        ? appState.returnTo
+        : window.location.pathname
+    );
+  };
+
   return (
     <>
       <Provider store={store}>
         <Router history={history}>
           <Suspense fallback={<FullPageLoader />}>
+          
+          <Auth0Provider
+    domain={auth0Domain}
+    clientId={auth0ClientId}
+    redirectUri={window.location.origin}
+    onRedirectCallback={onRedirectCallback}
+  >
             <AppRoutesComponent />
+            </Auth0Provider>
           </Suspense>
         </Router>
         <ToastContainer
