@@ -26,9 +26,38 @@ logger(
   ].group("key")
 );
 const App: React.FC = () => {
-  const { error } = useAuth0();
+  const { error,getAccessTokenSilently ,user } = useAuth0();
   console.log("errorerrorerror",error);
   
+  React.useEffect(() => {
+    const getUserMetadata = async () => {
+      const domain = "dev-2eewfo4f.au.auth0.com";
+  
+      try {
+        const accessToken = await getAccessTokenSilently({
+          audience: `https://${domain}/api/v2/`,
+          scope: "read:current_user",
+        });
+  
+        const userDetailsByIdUrl = `https://${domain}/api/v2/users/${user.sub}`;
+  
+        const metadataResponse = await fetch(userDetailsByIdUrl, {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        });
+  
+        const { user_metadata } = await metadataResponse.json();
+  
+      } catch (e) {
+
+        console.log("hhhhhhhhhhhhhhhhhhhhhhh",e.message);
+      }
+    };
+  
+    getUserMetadata();
+  }, []);
+
   if (error) {
     return <div>auth0-spa-js must run on a secure origin. </div>;
   }
