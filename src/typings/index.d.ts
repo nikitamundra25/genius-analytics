@@ -9,7 +9,7 @@ declare module "@font-awesome";
 declare module "@simple-line-icons";
 declare module 'js-object-validation';
 declare module 'react-datepicker';
-declare module '@auth0/auth0-react'
+// declare module '@auth0/auth0-react'
 // declare module '@syncfusion/ej2-react-layouts';
 
 declare interface Array<T> {
