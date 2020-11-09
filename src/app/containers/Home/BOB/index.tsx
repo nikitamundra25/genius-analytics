@@ -64,7 +64,7 @@ const BOB = () => {
                   <th></th>
                   <th className="head-col">BOB</th>
                   <th className="head-col">BUDGET</th>
-                  <th className="head-col">2016</th>
+                  <th className="head-col">LY</th>
                   <th className="head-col">STLY</th>
                   <th className="head-col">Vs. BUD</th>
                   <th className="head-col">Vs. LY</th>
